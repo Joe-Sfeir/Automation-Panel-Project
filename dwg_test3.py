@@ -85,6 +85,7 @@ def find_oda() -> str | None:
     import glob
     if platform.system() == "Windows":
         for pat in [r"C:\Program Files\ODA\ODAFileConverter*\ODAFileConverter.exe",
+                    r"C:\Program Files\ODA\ODAFileConverter 26.12.0\ODAFileConverter.exe",
                     r"C:\Program Files (x86)\ODA\ODAFileConverter*\ODAFileConverter.exe"]:
             hits = glob.glob(pat)
             if hits: return hits[0]
@@ -293,7 +294,6 @@ You are reviewing a Single Line Diagram (SLD). You have the DXF text data and th
 Extract TWO things only:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. ENCLOSURE SPECIFICATION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Look in the title block, drawing header, and notes for the panel enclosure details:
   ref          → Panel reference (e.g. "DB-B1", "MDB", "LP-01")
@@ -730,7 +730,7 @@ def main():
     parser.add_argument("--api-key",  required=True)
     parser.add_argument("--output",   default="sld_components.xlsx")
     parser.add_argument("--oda-path", default=None)
-    parser.add_argument("--dpi",      type=int, default=150)
+    parser.add_argument("--dpi",      type=int, default=300)
     parser.add_argument("--no-image", action="store_true")
     args = parser.parse_args()
 
