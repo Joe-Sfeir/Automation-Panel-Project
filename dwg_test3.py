@@ -49,7 +49,16 @@ from openpyxl.drawing.image import Image as XLImage
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
+from pathlib import Path
 
+def get_api_key() -> str:
+    env_file = Path(__file__).parent / "key.env"
+    for line in env_file.read_text().splitlines():
+        line = line.strip()
+        if line.startswith("GEMINI_API_KEY"):
+            return line.split("=", 1)[1].strip()
+    raise ValueError("GEMINI_API_KEY not found in key.env")
+api_key = get_api_key()
 # ─────────────────────────────────────────────────────────────────────────────
 #  TERMINAL MAP  — Phoenix Contact PT series
 #  Naming: "Terminal 2x{size}mm²" for ≤6mm², "Terminal {size}mm²" for ≥10mm²
@@ -727,10 +736,10 @@ def write_excel(components, terminals, enclosure, add_info, png_path, out_path, 
 def main():
     parser = argparse.ArgumentParser(description="SLD Extractor v4.2")
     parser.add_argument("dwg")
-    parser.add_argument("--api-key",  required=True)
+    parser.add_argument("--api-key",  required=False)
     parser.add_argument("--output",   default="sld_components.xlsx")
     parser.add_argument("--oda-path", default=None)
-    parser.add_argument("--dpi",      type=int, default=300)
+    parser.add_argument("--dpi",      type=int, default=10)
     parser.add_argument("--no-image", action="store_true")
     args = parser.parse_args()
 
@@ -762,12 +771,12 @@ def main():
 
         # 4a. Gemini: components
         print("\n🤖  Gemini extraction …")
-        components = call_gemini_components(text_payload, png_path, args.api_key, debug_dir)
+        components = call_gemini_components(text_payload, png_path, args.api_key or api_key, debug_dir)
         if not components:
             print("⚠  No components. Check sld_debug/gemini_components_raw.txt"); sys.exit(1)
 
         # 4b. Gemini: enclosure + extra info
-        extra     = call_gemini_extra(text_payload, png_path, args.api_key, debug_dir)
+        extra = call_gemini_extra(text_payload, png_path, args.api_key or api_key, debug_dir)
         enclosure = extra.get("enclosure", {})
         add_info  = extra.get("additional_info", [])
 
