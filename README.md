@@ -7,39 +7,33 @@
 
 ## 📁 Project Structure
 
-\```
-/
-├── dwg_test3.py                    # SLD Component Extractor (DWG/DXF → Excel BOM)
-├── import.py                       # Manufacturer PPL importer (Excel → SQLite DB)
-├── match-offer.py                  # BOM auto-pricer (offer Excel → priced Excel)
-├── PPL_2026_H1__SCHNEIDER.xlsx     # Schneider Electric 2026 H1 price list
-├── EatonPL2026.xlsx                # Eaton 2026 price list
-├── schema.sql                      # SQLite database schema (MISSING — needs creating)
-└── key.env / api.env               # API keys (Gemini + Anthropic)
-\```
+| File / Folder | Purpose |
+|---|---|
+| `Codes/dwg_test3.py` | SLD Component Extractor (DWG/DXF → Excel BOM) |
+| `Codes/import.py` | Manufacturer PPL Importer (Excel → SQLite DB) |
+| `Codes/match-offer.py` | BOM Auto-Pricer (offer Excel → priced Excel) |
+| `Price Lists/PPL_2026_H1__SCHNEIDER.xlsx` | Schneider Electric 2026 H1 price list |
+| `Price Lists/EatonPL2026.xlsx` | Eaton 2026 price list |
+| `schema.sql` | SQLite schema (**missing — needs creating**) |
+| `.venv/key_env` *(or `key.env`)* | API keys (Gemini + Anthropic) |
 
 ---
 
 ## ✅ What Has Been Built
 
-### 1. 🗂️ SLD Component Extractor — `dwg_test3.py` (v4.2)
+### 1) ⚡ SLD Component Extractor — `dwg_test3.py` (v4.2)
 
-Converts a client's electrical Single Line Diagram (`.dwg` or `.dxf`) into a
-fully structured Excel workbook.
+Converts a client electrical Single Line Diagram (`.dwg` / `.dxf`) into a structured Excel workbook.
 
-**Pipeline:**
-\```
-DWG file
-  ├─ Step 1 → ODA File Converter: DWG → DXF
-  ├─ Step 2 → ezdxf: DXF → structured text payload
-  │           (block inserts, attributes, text clusters, layer map)
-  ├─ Step 3 → matplotlib: DXF → PNG render (150 DPI)
-  ├─ Step 4a → Gemini (Call 1/2): extract all components (text + image)
-  ├─ Step 4b → Gemini (Call 2/2): enclosure + additional info
-  ├─ Step 5  → group identical rows, sum quantities
-  ├─ Step 6  → terminal calculator (Phoenix Contact PT series)
-  └─ Step 7  → Excel output (6 sheets)
-\```
+**Pipeline**
+1. Convert DWG → DXF *(ODA File Converter)*
+2. Parse DXF → structured text payload *(ezdxf: blocks, attributes, text clusters, layer map)*
+3. Render DXF → PNG *(matplotlib, 150 DPI)*
+4. Gemini call #1: extract components *(text + image)*
+5. Gemini call #2: enclosure + additional metadata
+6. Group identical rows & sum quantities
+7. Terminal calculator *(Phoenix Contact PT series)*
+8. Export Excel output *(6 sheets)*
 
 **Component categories:** MCB · MCCB · RCCB · RCBO · SWITCH · CONTACTOR · SPD · FUSE_HOLDER · PILOT_LAMP · METER (CTs) · OTHER
 
