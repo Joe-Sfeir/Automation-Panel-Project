@@ -12,8 +12,7 @@
 | `Codes/dwg_test3.py` | SLD Component Extractor (DWG/DXF → Excel BOM) |
 | `Codes/import.py` | Manufacturer PPL Importer (Excel → SQLite DB) |
 | `Codes/match-offer.py` | BOM Auto-Pricer (offer Excel → priced Excel) |
-| `Price Lists/PPL_2026_H1__SCHNEIDER.xlsx` | Schneider Electric 2026 H1 price list |
-| `Price Lists/EatonPL2026.xlsx` | Eaton 2026 price list |
+| `Price Lists` | Manufacturers price list |
 | `schema.sql` | SQLite schema (**missing — needs creating**) |
 | `.venv/key_env` *(or `key.env`)* | API keys (Gemini + Anthropic) |
 
@@ -94,7 +93,12 @@ Tier 1 → Keyword scoring ≥ 60%  → 🟢 GREEN  (fast, free)
 Tier 2 → Claude picks best from top-5 candidates (20–60%)  → 🟡 YELLOW
 Tier 3 → Claude suggests size substitution (< 20%)  → 🔵 BLUE
                                    nothing found  → ⬜ GREY
-\```
+
+| Tier 1  | → Keyword scoring ≥ 60%  → 🟢 GREEN  (fast, free) |
+| Tier 2  | → Claude picks best from top-5 candidates (20–60%)  → 🟡 YELLOW|
+| Tier 3  | → Claude suggests size substitution (< 20%)  → 🔵 BLUE |
+| nothing found |  → ⬜ GREY  |
+
 
 **Output:** Appends 4 columns to original offer file:
 `Matched Ref.` · `Unit Price` · `Total` · `Match Note`
