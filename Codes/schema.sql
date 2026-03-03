@@ -1,5 +1,5 @@
 -- ============================================================
---  TECHNELEC PRICING DATABASE  -  schema.sql
+--  TECHNICAT PRICING DATABASE  -  schema.sql
 --  SQLite  |  Created 2026
 -- ============================================================
 -- del pricing.db \\to delete database
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS ppl_editions (
     half            TEXT    NOT NULL CHECK(half IN ('H1','H2')),
     currency        TEXT    NOT NULL CHECK(currency IN ('EUR','USD')),
     imported_at     TEXT    NOT NULL DEFAULT (datetime('now')),
-    UNIQUE(manufacturer_id, year, half),
+    UNIQUE(manufacturer_id, year, half), 
     FOREIGN KEY (manufacturer_id) REFERENCES manufacturers(id)
 );
 

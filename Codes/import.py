@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 import_ppl.py  –  Import a manufacturer PPL Excel into the Technelec pricing DB.
                   Three-tier column mapping: rules → Gemini → data-type heuristic.
