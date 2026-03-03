@@ -1,263 +1,308 @@
-# Electrical BOM Generator — Project Summary
-### Date: February 2026 | For handoff / collaboration
+# Electrical Pricing & SLD Extraction Platform
+
+> AI-powered platform for extracting components from Single Line Diagrams,
+> managing manufacturer price lists, and auto-pricing Bills of Materials.
 
 ---
 
-## What This Project Does
+## 📁 Project Structure
 
-We are building an automated system that:
-1. Takes a Single Line Diagram (SLD) — an electrical drawing showing a panel's components
-2. Uses AI (Google Gemini) to read the drawing and identify every component
-3. Matches those components against a structured database of manufacturer products
-4. Outputs a complete Bill of Materials (BOM) in Excel — with reference numbers, quantities, and prices
-
-The end goal is that an electrical engineer drops an SLD image into the tool and gets back a
-ready-to-use BOM in under a minute, instead of doing it manually.
-
----
-
-## Current File Structure
-
-```
-project/
-│
-├── bom_gen.py              ← MAIN SCRIPT. Run this for every new project.
-├── database.py             ← All database logic (called by bom_gen.py, never run directly)
-├── parse_pricelist.py      ← ONE-TIME import tool. Loads manufacturer Excel price lists into DB.
-├── .env                    ← YOUR API KEY LIVES HERE. Never share this file.
-├── .env.example            ← Safe template showing what .env should look like
-├── electrical_bom.db       ← The SQLite database. Single file. Contains everything.
-└── README.md               ← Setup instructions
-```
+| File / Folder | Purpose |
+|---|---|
+| `Codes/dwg_test3.py` | SLD Component Extractor (DWG/DXF → Excel BOM) |
+| `Codes/import.py` | Manufacturer PPL Importer (Excel → SQLite DB) |
+| `Codes/match-offer.py` | BOM Auto-Pricer (offer Excel → priced Excel) |
+| `Price Lists` | Manufacturers price list |
+| `schema.sql` | SQLite schema (**missing — needs creating**) |
+| `.venv/key_env` *(or `key.env`)* | API keys (Gemini + Anthropic) |
 
 ---
 
-## The Database (electrical_bom.db)
+## ✅ What Has Been Built
 
-This is a single SQLite file — no server needed, just a file on disk.
-It contains 6 tables:
+### 1) ⚡ SLD Component Extractor — `dwg_test3.py` (v4.2)
 
-```
-electrical_bom.db
-│
-├── manufacturers              ← One row per manufacturer (Legrand, Schneider, ABB...)
-├── component_catalog          ← 13 MANUAL entries typed in by hand (OLD — to be retired)
-│
-├── price_list                 ← RAW price data from manufacturer Excel files
-│                                 columns: manufacturer, reference, description_raw, price_euro, price_date
-│
-├── product_attributes         ← STRUCTURED/PARSED version of price_list
-│                                 columns: category, poles, amps, curve, sensitivity,
-│                                          breaking_cap, voltage, product_line,
-│                                          parse_method, parse_confidence, needs_review
-│
-├── extracted_components       ← What Gemini reads from each SLD (written during each job)
-│
-└── bom_items                  ← Final BOM results per project (written at end of each job)
-```
+Converts a client electrical Single Line Diagram (`.dwg` / `.dxf`) into a structured Excel workbook.
 
-### Key design decisions:
-- `price_list` is SACRED — never modified after import. Raw data stays clean.
-- `product_attributes` is the parsed/structured version built on top of it.
-- When a new price list comes in (e.g. Schneider 2027), you add new rows with a new
-  price_date — old data stays for comparison. Nothing gets overwritten.
-- The `needs_review` flag (0 or 1) marks rows where the AI or regex wasn't confident.
-  Only review those rows instead of checking all 3,857 products.
+**Pipeline**
+1. Convert DWG → DXF *(ODA File Converter)*
+2. Parse DXF → structured text payload *(ezdxf: blocks, attributes, text clusters, layer map)*
+3. Render DXF → PNG *(matplotlib, 150 DPI)*
+4. Gemini call #1: extract components *(text + image)*
+5. Gemini call #2: enclosure + additional metadata
+6. Group identical rows & sum quantities
+7. Terminal calculator *(Phoenix Contact PT series)*
+8. Export Excel output *(6 sheets)*
 
----
+**Component categories:** MCB · MCCB · RCCB · RCBO · SWITCH · CONTACTOR · SPD · FUSE_HOLDER · PILOT_LAMP · METER (CTs) · OTHER
 
-## How Each Script Works
+**Excel output — 6 sheets:**
 
-### bom_gen.py — The Daily Tool
+| Sheet | Contents |
+|---|---|
+| `Components` | Full BOM: category, label, poles, amps, curve, B.C., cable size, qty, confidence |
+| `Terminal Schedule` | Phoenix Contact PT schedule per cable size |
+| `Enclosure` | Panel ref, size, manufacturer, catalog number |
+| `Additional Info` | AI-detected extras: load schedules, cable schedules, notes |
+| `Shop Drawing` | Full DXF render embedded as image |
+| `Summary` | Component count by category |
 
-```
-[Engineer runs bom_gen.py]
-        ↓
-1. EXTRACT   — Sends SLD image to Gemini API
-               Gemini returns JSON: [{category, poles, amps, curve, sensitivity, qty, confidence, notes}]
-
-2. RULES     — Engineering rules engine adds calculated components automatically:
-               - Pilot lamps (1 per phase)
-               - Fuses (1 per phase)
-               - Terminals (1 per outgoing circuit)
-               - Main line terminals (always 2)
-
-3. MATCH     — For each extracted component, queries the database to find the right product
-               Uses score-based matching (amps = 2pts, poles/curve/sensitivity = 1pt each)
-               If confidence ≥ 0.75 AND good match → auto-accepted
-               If confidence < 0.75 OR weak match → flagged for review
-
-4. REVIEW    — ALL flagged items presented TOGETHER at the end (not mid-process)
-               Engineer can: accept suggestion / enter different part number / skip
-               New part numbers can be saved to catalog permanently
-
-5. EXPORT    — Writes final BOM to Excel: description, manufacturer, part number, qty,
-               width in modules, AI confidence, source
-```
-
-### parse_pricelist.py — The One-Time Import Tool
-
-```
-[Run once per manufacturer price list Excel file]
-        ↓
-PASS 1 — REGEX
-  Scans each product description with pattern matching
-  Extracts: poles, amps, curve, sensitivity, breaking capacity, voltage
-  Fast, free, works on ~27% of Schneider's 3,857 products (the clean descriptions)
-
-PASS 2 — GEMINI AI (for everything regex couldn't parse confidently)
-  Sends descriptions in batches of 80 to Gemini
-  Gemini identifies: category, product line, all technical fields
-  ~35-40 API calls for the full Schneider catalog
-  Estimated cost: under $0.50 for entire 3,857-product catalog
-
-Result: every product is stored in product_attributes with structured fields + confidence score
-```
+**Key AI features:**
+- Dual-source cross-reference: DXF text **+** PNG image
+- Global note inheritance (e.g. "B.C. 6kA/400V" → all breakers)
+- CT ratio extraction ("40/5" format), confidence scoring, colour-coded rows
+- Automatic terminal calculation: 2 per outgoing circuit, matched to cable size
 
 ---
 
-## What We Did Today (Chronological)
+### 2. 📥 PPL Importer — `import.py`
 
-### 1. Started from a working prototype (bom_gen.py v1)
-The original script had the right idea but several serious problems:
-- API key written in plain text in the code
-- Database was just a local Excel file (Master_Database.xlsx)
-- Matching only checked Category + Poles + Amps (ignored Curve and Sensitivity)
-- Script paused mid-execution waiting for input() calls at random points
-- AI prompt was vague and didn't ask for confidence scores
-- No handling for unknown or uncertain components
+Imports any manufacturer's Excel price list into a local SQLite database.
 
-### 2. Fixed the API key security
-Created a `.env` file system using the `python-dotenv` library.
-The key now lives in `.env` which is never shared.
-`bom_gen.py` reads it with `os.getenv("GEMINI_API_KEY")`.
-If the key is missing, the script tells you clearly instead of crashing silently.
+**Three-tier column mapping:**
+\```
+Tier 1 → Rule-based keyword scan (fast, free — works 80%+ of files)
+    ↓ fails
+Tier 2 → Gemini AI reads first 10 rows (handles no-header, non-English)
+    ↓ fails
+Tier 3 → Data-type heuristic (price=floats, ref=short, desc=long strings)
+\```
 
-### 3. Replaced Excel database with SQLite
-`database.py` now manages a proper relational database with 6 tables.
-Relationships between tables (manufacturers → catalog → extracted → BOM).
-Score-based matching engine that weights Amps highest (2pts) and other fields 1pt each.
-`add_component_to_catalog()` function lets you add any new manufacturer's product
-in one call — it creates the manufacturer automatically if they don't exist yet.
+**Features:**
+- Reads all sheets automatically
+- Extracts both `reference` and `order_number` when they are separate columns
+- Price cleaning: strips currency symbols, handles comma-formatted numbers
+- Gemini validates a 25-row random sample before committing
+- Full-text keyword tokenisation with alias normalisation
+- Safe re-import: INSERT OR UPDATE (won't duplicate)
+- EUR and USD currency support
 
-### 4. Rewrote the Gemini prompt
-New prompt is a full engineering brief. It tells Gemini:
-- Exact list of valid categories
-- What to do with components it doesn't recognize (still include, explain in notes)
-- How to score its own confidence (1.0 = read clearly, 0.5 = significant guessing)
-- Return format must be strict JSON with no markdown wrapping
-- Flag anything outside known categories rather than silently forcing it into a wrong box
+**Manufacturers imported:** Schneider Electric (EUR), Eaton (USD)
 
-### 5. Fixed the review flow
-All flagged items now appear TOGETHER at the end of the process.
-Script no longer pauses randomly asking for input while processing.
-Each review item shows: component details, AI notes, reason for flagging, suggested part.
-Options: accept suggestion / enter manually / skip.
-Manual entries can optionally be saved to catalog for future projects.
-
-### 6. Discussed and designed the price list import system
-You have the Schneider PPL 2026 H1 Excel — 3,857 products, reference + description + price.
-Descriptions are inconsistent one-liners (not split by column).
-Designed a two-pass parser:
-  - Pass 1: Regex (free, instant, handles clean descriptions)
-  - Pass 2: Gemini batch processing (handles everything else)
-Two separate tables: price_list (raw, sacred) + product_attributes (parsed, queryable).
-Built to support ANY manufacturer — change 3 lines at the top of the file per new Excel.
-
-### 7. Discussed n8n
-Decided NOT to use n8n yet.
-n8n is useful for connecting working tools together — file watching, scheduling, notifications.
-But the core logic is not finished yet. Introducing n8n now adds complexity before the
-foundation is solid. Revisit after the matching engine is fixed and end-to-end flow works.
+**DB tables:** `manufacturers` · `ppl_editions` · `products` · `product_keywords` · `term_aliases`
 
 ---
 
-## THE CRITICAL PROBLEM THAT IS NOT FIXED YET
+### 3. 💰 Offer Matcher / Auto-Pricer — `match-offer.py`
 
-**This is the most important thing for your collaborator to understand.**
+Takes a BOM Excel and prices every line item against the PPL database.
 
-`bom_gen.py` and `parse_pricelist.py` are NOT connected yet.
+**Three-tier matching:**
+\```
+Tier 1 → Keyword scoring ≥ 60%  → 🟢 GREEN  (fast, free)
+Tier 2 → Claude picks best from top-5 candidates (20–60%)  → 🟡 YELLOW
+Tier 3 → Claude suggests size substitution (< 20%)  → 🔵 BLUE
+                                   nothing found  → ⬜ GREY
 
-They both write to the same `electrical_bom.db` file, but they use DIFFERENT tables:
+| Tier 1  | → Keyword scoring ≥ 60%  → 🟢 GREEN  (fast, free) |
+| Tier 2  | → Claude picks best from top-5 candidates (20–60%)  → 🟡 YELLOW|
+| Tier 3  | → Claude suggests size substitution (< 20%)  → 🔵 BLUE |
+| nothing found |  → ⬜ GREY  |
 
-```
-bom_gen.py  ──queries──→  component_catalog     (13 manual entries, OLD table)
 
-parse_pricelist.py  ──writes──→  product_attributes  (3,857 Schneider products, NEW table)
-                                 price_list
-```
+**Output:** Appends 4 columns to original offer file:
+`Matched Ref.` · `Unit Price` · `Total` · `Match Note`
 
-The matching engine in `bom_gen.py` has NEVER seen the Schneider data.
-All 3,857 Schneider products are sitting in the database completely invisible to the BOM generator.
-
-### What needs to be built to fix this:
-
-**Task 1 — Rewrite the matching engine in bom_gen.py**
-Change `find_best_match()` in `database.py` to query `product_attributes` JOIN `price_list`
-instead of the old `component_catalog` table.
-The query should filter by: category, poles, amps, curve, sensitivity, manufacturer.
-Return: reference number, manufacturer name, price, product line, confidence.
-
-**Task 2 — Add price to BOM output**
-Once the matching engine pulls from the right table, price comes with it automatically.
-Add a "Unit Price (€)" and "Total Price (€)" column to the Excel export.
-Add a subtotal row at the bottom.
-
-**Task 3 — Retire component_catalog**
-Once Task 1 is done, `component_catalog` is obsolete.
-The 13 manual Legrand entries should be migrated into `product_attributes` format
-or the Legrand price list Excel should be imported through `parse_pricelist.py` properly.
-
-**Task 4 — Manufacturer filter in matching**
-Right now matching finds ANY manufacturer's product that matches.
-Need to add a preferred manufacturer setting — either per project or per category —
-so it doesn't accidentally match a Schneider MCB when you specified Legrand.
+**Dynamic column detection:** Finds description, qty, manufacturer columns regardless of order.
 
 ---
 
-## Problems / Limitations Still Open
+## 🔧 What Still Needs To Be Done (Backend)
 
-| # | Problem | Priority | Notes |
-|---|---------|----------|-------|
-| 1 | Matching engine queries wrong table | CRITICAL | Blocks everything |
-| 2 | No price in BOM output | HIGH | Easy once #1 fixed |
-| 3 | component_catalog not retired | MEDIUM | Clean up after #1 |
-| 4 | No manufacturer filter in matching | MEDIUM | Prevents wrong-brand matches |
-| 5 | Engineering rules are hardcoded/simple | MEDIUM | Lamps/fuses/terminals logic too basic for complex panels |
-| 6 | No DXF support yet | LOW | Currently only works with PNG/image of SLD |
-| 7 | Single user, local only | LOW | Works fine for now, migrate to shared server later |
-| 8 | No OneDrive datasheet links yet | LOW | Column exists in DB, not populated |
-| 9 | parse_pricelist.py not tested end-to-end | MEDIUM | Needs a live run with real API key |
+### 🔴 High Priority
+
+- [ ] **`schema.sql` — create and commit to repo**
+  Referenced in `import.py` but the file doesn't exist. Needs full table
+  definitions with foreign keys, indexes, and the `term_aliases` seed data.
+
+- [ ] **`term_aliases` — populate with electrical abbreviations**
+  Seed file needed: `mcb → miniature circuit breaker`, `1p → 1 pole`,
+  `3p → 3 pole`, `mccb → moulded case`, `rccb → residual current`,
+  `ic60 → ic60n`, `dpx → dpx`, `ins → ins`, etc.
+
+- [ ] **SLD Extractor → Offer Matcher bridge**
+  The BOM Excel from `dwg_test3.py` has different column names than what
+  `match-offer.py` expects. Need a shared BOM format or an adapter function
+  so the pipeline can run end-to-end without manual column renaming.
+
+- [ ] **End-to-end pipeline runner**
+  Single entry point that chains: DWG → extract → price → final Excel,
+  with one command and clear progress output at each stage.
+
+- [ ] **Fix `args.file` bug in `match-offer.py`**
+  The last line references `args.file` which doesn't exist in argparse —
+  should be `args.offer`. This crashes every run.
+
+- [ ] **Multi-manufacturer matching**
+  Currently only one manufacturer searched at a time. Need to search all
+  imported PPLs and return cheapest / best match with manufacturer labelled.
+
+- [ ] **Verify Gemini model string in `dwg_test3.py`**
+  Currently calls `gemini-3-pro-preview` — confirm this is a valid model
+  identifier and update if needed.
+
+- [ ] **API retry / backoff logic**
+  Gemini and Claude calls have no retry. One timeout kills the entire job.
+  Add exponential backoff: 3 retries at 5s / 15s / 30s intervals.
+
+- [ ] **Currency normalisation**
+  Eaton is USD, Schneider is EUR. Cross-manufacturer comparison requires
+  FX conversion — store a rate per PPL edition or call a live FX API.
+
+- [ ] **PPL version archival**
+  When H2 is imported, H1 should be archived (not deleted) so historical
+  quotes still reference the correct price at time of issue.
+
+### 🟡 Medium Priority
+
+- [ ] **Better part number tokenisation**
+  `A9F73120` should match whether searched whole or split (`A9F 73120`).
+  Current tokeniser on punctuation-only breaks these references incorrectly.
+
+- [ ] **Configurable match thresholds**
+  60% (Tier 1) and 20% (Tier 2) are hardcoded. Make them CLI flags or
+  a config file so they can be tuned without touching code.
+
+- [ ] **Structured logging**
+  Replace all `print()` with Python `logging`. Add `--verbose` / `--quiet` flags.
+
+- [ ] **Duplicate product deduplication**
+  Same reference sometimes appears in multiple sheets of one PPL.
+  Need a "keep most-detailed description" deduplication pass on import.
+
+- [ ] **Test suite**
+  Unit tests for: column mapping (all 3 tiers), price cleaning, normalisation,
+  terminal size calculation, component grouping, keyword scoring.
 
 ---
 
-## Tech Stack
+## 🖥️ UI Work That Needs To Be Done
 
-| Tool | Purpose |
-|------|---------|
-| Python 3.x | Everything |
-| google-genai | Gemini API client |
-| python-dotenv | API key management |
-| pandas | Reading Excel files |
-| openpyxl | Writing Excel output |
-| sqlite3 | Database (built into Python, no install needed) |
-| Pillow (PIL) | Opening SLD images before sending to Gemini |
-| SQLite DB file | electrical_bom.db — single file, portable |
-
-Install all dependencies:
-```bash
-pip install google-genai python-dotenv pillow pandas openpyxl
-```
+The entire platform is currently CLI only. A full web UI is needed.
 
 ---
 
-## What a New Collaborator Should Work On First
+### 🏠 1. Dashboard
 
-1. Read `database.py` — understand the table structure
-2. Read `bom_gen.py` — specifically the `match_components()` and `find_best_match()` functions
-3. Read `parse_pricelist.py` — understand what data it puts into `product_attributes`
-4. **The job**: Rewrite `find_best_match()` in `database.py` to query
-   `product_attributes JOIN price_list` instead of `component_catalog`
-5. Then update `bom_gen.py`'s export step to include price columns
+- KPI cards: manufacturers in DB, total products, jobs this month, last import dates
+- Quick-action buttons: "Upload Drawing", "Price an Offer", "Import PPL"
+- Recent jobs table with download links
+- Alerts for failed jobs or results needing manual review
 
-That one fix connects the entire system end to end.
+---
+
+### 📤 2. SLD Extractor Page
+
+- Drag-and-drop upload for `.dwg` / `.dxf`
+- Step-by-step progress tracker with live status labels
+- Drawing preview: PNG render shown beside component table
+- Live results table — rows appear as Gemini streams output:
+  - Colour-coded by confidence (green ≥ 90%, yellow 75–90%, red < 75%)
+  - Inline cell editing to correct AI mistakes before export
+  - Filter by category, checkbox to include/exclude rows
+- Terminal schedule tab
+- Enclosure details panel
+- "Send to Pricer" button — passes BOM directly to Offer Pricer step
+- Download Excel button
+
+---
+
+### 💵 3. PPL Manager
+
+- Master table: Manufacturer · Year · Half · Currency · # Products · Imported · Actions
+- Import wizard (4 steps):
+  1. Upload Excel
+  2. Column preview — detected columns highlighted (ref=blue, desc=green, price=orange),
+     allow manual override
+  3. Gemini validation result — confidence %, sample rows, any warnings
+  4. Confirm → progress bar → import summary
+- Per-manufacturer product browser with search, price filter, pagination
+- PPL comparison view: select 2 manufacturers → side-by-side price table
+
+---
+
+### 🧾 4. Offer Pricer Page
+
+- Upload offer BOM Excel
+- Manufacturer selector (single or "Search All")
+- Column mapping confirmation step with visual preview
+- Live pricing progress: each row updates in real time as it's processed
+- Results summary panel: total lines, matched, AI, substituted, not found, grand total
+- Full colour-coded results table (green / yellow / blue / grey)
+- "Not Found" rows: click → search drawer to manually find and assign a product
+- "Substituted" rows: show original vs substituted product clearly
+- Download priced Excel button
+
+---
+
+### 🔍 5. Global Product Search
+
+- Search across all manufacturers and editions simultaneously
+- Filters: manufacturer, year, half, price range
+- Results: Reference · Description · Price · Manufacturer · Edition
+- "Add to BOM" button for building a manual quote line-by-line
+
+---
+
+### ⚙️ 6. Settings Page
+
+- API key management (Gemini, Anthropic) — masked, with test-connection button
+- Default currency selector
+- Match threshold sliders (Tier 1 and Tier 2 cutoffs)
+- Terminal brand selector (currently hardcoded to Phoenix Contact PT)
+- Alias dictionary table editor: add / edit / delete / bulk CSV import
+- User management: list users, assign roles (Admin / Estimator / Viewer)
+
+---
+
+### 🗃️ 7. Job History
+
+- Full log of every extraction and pricing job
+- Re-download output from any past job
+- Re-run a job with updated PPL prices
+- Delete jobs with confirmation
+
+---
+
+## 🛠️ Suggested Tech Stack for UI
+
+| Layer | Recommendation | Reason |
+|---|---|---|
+| Frontend | React + Tailwind CSS | Fast development, great ecosystem |
+| Backend API | FastAPI (Python) | Reuses existing Python logic as modules |
+| Database | SQLite → PostgreSQL | SQLite for solo use, Postgres for team |
+| File storage | Local → S3 | Easy upgrade path |
+| AI streaming | Server-Sent Events (SSE) | Live Gemini output in the browser |
+| Auth | JWT + bcrypt | Simple, stateless |
+| Deployment | Docker Compose | One command startup |
+
+---
+
+## 🚀 Quick Start (CLI)
+
+\```bash
+pip install ezdxf google-genai openpyxl matplotlib Pillow
+
+# 1. Extract drawing
+python dwg_test3.py drawing.dwg --output bom.xlsx
+
+# 2. Import price lists
+python import.py --file PPL_2026_H1__SCHNEIDER.xlsx --manufacturer SCHNEIDER --year 2026 --half H1 --db pricing.db
+python import.py --file EatonPL2026.xlsx --manufacturer EATON --year 2026 --half H1 --currency USD --db pricing.db
+
+# 3. Price the BOM
+python match-offer.py --offer bom.xlsx --db pricing.db --manufacturer SCHNEIDER --year 2026 --half H1 --out bom_priced.xlsx
+\```
+
+---
+
+## 🔑 API Keys Required
+
+| Key | Used In | Where to set |
+|---|---|---|
+| `GEMINI_API_KEY` | `dwg_test3.py`, `import.py` | `key.env` in project root |
+| `GEMINI_API_MODEL` | `import.py` | `key.env` in project root |
+| `ANTHROPIC_API_KEY` | `match-offer.py` | `api.env` or env variable |
+
+---
+*Last updated: March 2026*
