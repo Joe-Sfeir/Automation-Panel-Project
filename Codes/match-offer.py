@@ -80,8 +80,9 @@ def claude(system: str, user: str, max_tokens: int = 1000) -> str:
         method="POST",
     )
     with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read())["content"][0]["text"].strip()
-
+        result = json.loads(resp.read())["content"][0]["text"].strip()
+        print(f"\n  [CLAUDE RAW] {result[:500]}")   # ← add this
+        return result
 
 def claude_pick_best(offer_desc: str, candidates: list) -> dict | None:
     """Tier 2: Claude picks the correct match from top keyword candidates."""

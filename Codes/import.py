@@ -22,10 +22,20 @@ import openpyxl
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]   # goes up from /Codes to project root
+ENV_FILE     = PROJECT_ROOT / ".venv" / "key.env"
+
+def get_api_model() -> str:
+    for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line.startswith("GEMINI_API_MODEL"):
+            return line.split("=", 1)[1].strip()
+    raise ValueError("GEMINI_API_MODEL not found in key.env")
+
+GEMINI_MODEL = get_api_model()
 def get_config() -> dict:
-    env_file = Path(__file__).parent / "key.env"
-    config   = {"GEMINI_API_KEY": None, "GEMINI_MODEL": "gemini-2.0-flash"}
-    for line in env_file.read_text().splitlines():
+    config = {"GEMINI_API_KEY": None, "GEMINI_MODEL": GEMINI_MODEL}
+    for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         for key in config:
             if line.startswith(key):
@@ -33,14 +43,6 @@ def get_config() -> dict:
     if not config["GEMINI_API_KEY"]:
         raise ValueError("GEMINI_API_KEY not found in key.env")
     return config
-def get_api_model() -> str:
-    env_file = Path(__file__).parent / "key.env"
-    for line in env_file.read_text().splitlines():
-        line = line.strip()
-        if line.startswith("GEMINI_API_MODEL"): 
-            return line.split("=", 1)[1].strip()
-    raise ValueError("GEMINI_API_MODEL not found in key.env")
-GEMINI_MODEL = get_api_model()
 
 # ── GEMINI API ────────────────────────────────────────────────────────────────
 

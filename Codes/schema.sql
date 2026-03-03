@@ -2,7 +2,7 @@
 --  TECHNELEC PRICING DATABASE  -  schema.sql
 --  SQLite  |  Created 2026
 -- ============================================================
-
+-- del pricing.db \\to delete database
 PRAGMA foreign_keys = ON;
 PRAGMA journal_mode = WAL;
 
