@@ -306,3 +306,64 @@ python match-offer.py --offer bom.xlsx --db pricing.db --manufacturer SCHNEIDER 
 
 ---
 *Last updated: March 2026*
+
+---
+
+## Desktop App (first version)
+
+A first local desktop UI is now scaffolded with PySide6:
+
+- `run_app.py` -> app launcher
+- `app/main.py` -> main window, settings dialog, new project workflow
+- `app_config.json` -> saved automatically after first settings save
+
+### Features in this first build
+
+- Settings button in the top bar
+  - Gemini API key
+  - Gemini model
+  - Pricing DB path
+  - ODA converter path (optional)
+  - Python executable path
+- Main menu with **New Project**
+- Workflow form:
+  - Select `.dwg` / `.dxf`
+  - Select output folder
+  - Select one or more brands
+  - Choose year / half / pricing mode
+- Runs pipeline:
+  1. `Codes/dwg_test3.py` to generate raw components file
+  2. `Codes/match_offer.py` once per selected brand
+- Live logs + step progress in UI
+
+### Run locally
+
+```powershell
+pip install -r requirements-ui.txt
+python run_app.py
+```
+
+### Build Windows `.exe`
+
+```powershell
+pip install pyinstaller
+pyinstaller --noconfirm --windowed --name AutomationProjectApp run_app.py
+```
+
+The output app will be in:
+
+- `dist/AutomationProjectApp/AutomationProjectApp.exe`
+
+### Desktop app updates (iteration 2)
+
+- Added Gemini connection test in Settings
+- Added defaults in Settings (year / half / pricing mode)
+- Added dynamic brand loading from `manufacturers` table in `pricing.db`
+- Added custom brand entry (comma-separated)
+- Added safer workflow execution:
+  - masked API key in logs
+  - environment injection for `GEMINI_API_KEY` and `GEMINI_API_MODEL`
+  - command error tail in failure dialog
+- Added persistent job history (`app_history.json`)
+- Added History page with quick open-output-folder action
+- Added "Open Last Output" button in project screen
