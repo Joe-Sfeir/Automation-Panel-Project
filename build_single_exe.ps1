@@ -8,14 +8,7 @@ Set-Location $root
 
 Write-Host "Installing build/runtime dependencies..."
 & $Python -m pip install --upgrade pip
-& $Python -m pip install `
-    pyinstaller `
-    -r requirements-ui.txt `
-    openpyxl `
-    ezdxf[draw] `
-    matplotlib `
-    google-genai `
-    pillow
+& $Python -m pip install -r requirements.txt pyinstaller
 
 Write-Host "Building one-file executable..."
 & $Python -m PyInstaller --clean --noconfirm app/automation_onefile.spec

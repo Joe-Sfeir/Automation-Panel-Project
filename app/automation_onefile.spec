@@ -1,8 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 from pathlib import Path
+from PyInstaller.utils.hooks import collect_submodules
 
-project_root = Path(__file__).resolve().parents[1]
+project_root = Path(SPECPATH).resolve().parent
 
 datas = [
     (str(project_root / "Codes"), "Codes"),
@@ -12,24 +13,33 @@ pricing_db = project_root / "pricing.db"
 if pricing_db.exists():
     datas.append((str(pricing_db), "."))
 
-price_lists = project_root / "PriceLists"
-if price_lists.exists():
-    datas.append((str(price_lists), "PriceLists"))
+for folder_name in ("ODA", "assets"):
+    folder_path = project_root / folder_name
+    if folder_path.exists():
+        datas.append((str(folder_path), folder_name))
 
 for dwg in project_root.glob("*.dwg"):
     datas.append((str(dwg), "."))
 
+blocked_data_names = {"app_config.json", "app_history.json"}
+datas = [
+    item for item in datas
+    if Path(item[0]).name.lower() not in blocked_data_names
+]
+
 hiddenimports = [
     "openpyxl",
     "ezdxf",
+    "ezdxf.recover",
     "ezdxf.addons.drawing",
     "ezdxf.addons.drawing.matplotlib",
     "matplotlib",
     "matplotlib.pyplot",
     "google",
     "google.genai",
+    "google.genai.types",
     "PIL",
-]
+] + collect_submodules("google.genai")
 
 a = Analysis(
     [str(project_root / "run_app.py")],

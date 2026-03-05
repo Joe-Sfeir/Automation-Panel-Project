@@ -61,6 +61,7 @@ BUNDLED_CODES_DIR = BUNDLE_ROOT / "Codes"
 CONFIG_PATH = PROJECT_ROOT / "app_config.json"
 HISTORY_PATH = PROJECT_ROOT / "app_history.json"
 DEFAULT_BRANDS = ["SCHNEIDER", "EATON", "LEGRAND", "ABB", "SIEMENS"]
+DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview"
 
 
 def bootstrap_runtime_workspace() -> None:
@@ -99,6 +100,11 @@ def bootstrap_runtime_workspace() -> None:
     prices_dst = PROJECT_ROOT / "PriceLists"
     if prices_src.exists() and prices_src.is_dir() and not prices_dst.exists():
         shutil.copytree(prices_src, prices_dst)
+
+    oda_src = BUNDLE_ROOT / "ODA"
+    oda_dst = PROJECT_ROOT / "ODA"
+    if oda_src.exists() and oda_src.is_dir() and not oda_dst.exists():
+        shutil.copytree(oda_src, oda_dst)
 
 
 bootstrap_runtime_workspace()
@@ -419,9 +425,8 @@ QLabel#statusChip[state="running"] {
 @dataclass
 class AppConfig:
     gemini_api_key: str = ""
-    gemini_model: str = "gemini-2.0-flash"
+    gemini_model: str = DEFAULT_GEMINI_MODEL
     db_path: str = str(PROJECT_ROOT / "pricing.db")
-    oda_path: str = ""
     python_executable: str = sys.executable
     default_year: int = 2026
     default_half: str = "H1"
@@ -466,6 +471,8 @@ def load_config() -> AppConfig:
         for key, value in data.items():
             if hasattr(cfg, key):
                 setattr(cfg, key, value)
+    if not str(cfg.gemini_model or "").strip():
+        cfg.gemini_model = DEFAULT_GEMINI_MODEL
     return cfg
 
 
@@ -515,6 +522,25 @@ def fetch_brands(db_path: str) -> list[str]:
         return sorted({str(r[0]).strip().upper() for r in rows if r and r[0]})
     except Exception:
         return []
+
+
+def resolve_oda_converter_path() -> str:
+    env_path = (os.getenv("ODA_FILE_CONVERTER") or "").strip()
+    candidates: list[Path] = []
+    if env_path:
+        candidates.append(Path(env_path).expanduser())
+
+    candidates.extend(
+        [
+            PROJECT_ROOT / "ODA" / "ODAFileConverter.exe",
+            SOURCE_ROOT / "ODA" / "ODAFileConverter.exe",
+            BUNDLE_ROOT / "ODA" / "ODAFileConverter.exe",
+        ]
+    )
+    for path in candidates:
+        if path.exists():
+            return str(path)
+    return ""
 
 
 def quote_ident(value: str) -> str:
@@ -665,7 +691,6 @@ class SettingsDialog(QDialog):
         self.api_key.setEchoMode(QLineEdit.Password)
         self.model = QLineEdit(cfg.gemini_model)
         self.db = QLineEdit(cfg.db_path)
-        self.oda = QLineEdit(cfg.oda_path)
         self.py = QLineEdit(cfg.python_executable)
         self.default_year = QSpinBox()
         self.default_year.setRange(2024, 2050)
@@ -684,7 +709,6 @@ class SettingsDialog(QDialog):
         form.addRow("Gemini API Key", self._row_with_buttons(self.api_key, [self._btn("Toggle", self._toggle_key, "secondary")]))
         form.addRow("Gemini Model", self.model)
         form.addRow("Pricing DB", self._row_with_buttons(self.db, [self._btn("Browse", lambda: self._pick_file(self.db, "SQLite DB (*.db);;All Files (*)"), "secondary")]))
-        form.addRow("ODA Converter", self._row_with_buttons(self.oda, [self._btn("Browse", lambda: self._pick_file(self.oda, "Executable (*.exe);;All Files (*)"), "secondary")]))
         if not IS_FROZEN:
             form.addRow("Python Executable", self._row_with_buttons(self.py, [self._btn("Browse", lambda: self._pick_file(self.py, "Executable (*.exe);;All Files (*)"), "secondary")]))
         form.addRow("Default Year", self.default_year)
@@ -750,7 +774,7 @@ class SettingsDialog(QDialog):
         self.api_key.setEchoMode(mode)
 
     def _test(self) -> None:
-        ok, message = test_gemini(self.api_key.text().strip(), self.model.text().strip() or "gemini-2.0-flash")
+        ok, message = test_gemini(self.api_key.text().strip(), self.model.text().strip() or DEFAULT_GEMINI_MODEL)
         if ok:
             QMessageBox.information(self, "Success", message)
         else:
@@ -760,9 +784,8 @@ class SettingsDialog(QDialog):
         python_exec = sys.executable if IS_FROZEN else (self.py.text().strip() or sys.executable)
         return AppConfig(
             gemini_api_key=self.api_key.text().strip(),
-            gemini_model=self.model.text().strip() or "gemini-2.0-flash",
+            gemini_model=self.model.text().strip() or DEFAULT_GEMINI_MODEL,
             db_path=self.db.text().strip(),
-            oda_path=self.oda.text().strip(),
             python_executable=python_exec,
             default_year=int(self.default_year.value()),
             default_half=self.default_half.currentText(),
@@ -1130,8 +1153,9 @@ class ProjectWorker(QObject):
             ]
             if self.cfg.gemini_api_key:
                 cmd_extract += ["--api-key", self.cfg.gemini_api_key]
-            if self.cfg.oda_path:
-                cmd_extract += ["--oda-path", self.cfg.oda_path]
+            oda_path = resolve_oda_converter_path()
+            if oda_path:
+                cmd_extract += ["--oda-path", oda_path]
             self._run(cmd_extract, env)
 
             self.step.emit(2, total, "Preparing pricing input format")
@@ -1163,7 +1187,7 @@ class ProjectWorker(QObject):
 
     def _resolve_gemini_runtime_config(self) -> tuple[str, str]:
         cfg_model = (self.cfg.gemini_model or "").strip()
-        model = cfg_model or "gemini-2.0-flash"
+        model = cfg_model or DEFAULT_GEMINI_MODEL
         key = (self.cfg.gemini_api_key or "").strip()
 
         legacy_env = PROJECT_ROOT / ".venv" / "key.env"
@@ -1367,6 +1391,15 @@ class ProjectWorker(QObject):
         try:
             os.chdir(PROJECT_ROOT)
             sys.argv = [str(script_path), *script_args]
+            # PyInstaller can miss package attribute exports used by legacy imports
+            # like `from ezdxf import recover` in embedded scripts.
+            try:
+                import ezdxf  # type: ignore[import-not-found]
+                import ezdxf.recover as ezdxf_recover  # type: ignore[import-not-found]
+                if getattr(ezdxf, "recover", None) is None:
+                    setattr(ezdxf, "recover", ezdxf_recover)
+            except Exception:
+                pass
             with redirect_stdout(stream), redirect_stderr(stream):
                 try:
                     runpy.run_path(str(script_path), run_name="__main__")
@@ -2627,7 +2660,7 @@ class MainWindow(QMainWindow):
                 existing[key.strip()] = value.strip()
 
         key = (self.cfg.gemini_api_key or "").strip() or existing.get("GEMINI_API_KEY", "")
-        model = (self.cfg.gemini_model or "").strip() or existing.get("GEMINI_API_MODEL", "gemini-2.0-flash")
+        model = (self.cfg.gemini_model or "").strip() or existing.get("GEMINI_API_MODEL", DEFAULT_GEMINI_MODEL)
         if not key:
             return
 
