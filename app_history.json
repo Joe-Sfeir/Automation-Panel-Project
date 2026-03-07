@@ -1,0 +1,122 @@
+[
+  {
+    "finished_at": "2026-03-06T15:02:56",
+    "project_name": "Project_1",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "success",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\Project_1",
+    "error": ""
+  },
+  {
+    "finished_at": "2026-03-07T09:47:01",
+    "project_name": "Project_1",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\Project_1",
+    "error": "Process exited with code 1.\n    save_workbook(self, filename)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\.venv\\Lib\\site-packages\\openpyxl\\writer\\excel.py\", line 291, in save_workbook\n    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)\n  File \"C:\\Python314\\Lib\\zipfile\\__init__.py\", line 1453, in __init__\n    self.fp = io.open(file, filemode)\n              ~~~~~~~^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: 'C:\\\\Users\\\\Joe\\\\Desktop\\\\Automation-Panel-Project\\\\output\\\\Project_1\\\\Project_1_offer_SCHNEIDER.xlsx'"
+  },
+  {
+    "finished_at": "2026-03-07T17:03:16",
+    "project_name": "Test_DAOU",
+    "brands": [
+      "LEGRAND"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\Test_DAOU",
+    "error": "Process exited with code 1.\n   Payload: 475 chars\n\ud83d\uddbc  Rendering DXF \u2192 PNG at 150 DPI \u2026\n   \u2713 PNG  (3 KB)\n\n\ud83e\udd16  Gemini extraction \u2026\n  \u2192 Gemini: Components + image \u2026 (30\u201390 sec, please wait)\n  \u2713 Panel: UNKNOWN  |  0 component group(s)\n\u26a0  No components extracted. Check sld_debug/gemini_components_raw.txt"
+  },
+  {
+    "finished_at": "2026-03-07T17:22:35",
+    "project_name": "Test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\Test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-03-07T18:18:00",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Process exited with code 1.\n    save_workbook(self, filename)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\.venv\\Lib\\site-packages\\openpyxl\\writer\\excel.py\", line 291, in save_workbook\n    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)\n  File \"C:\\Python314\\Lib\\zipfile\\__init__.py\", line 1453, in __init__\n    self.fp = io.open(file, filemode)\n              ~~~~~~~^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: 'C:\\\\Users\\\\Joe\\\\Desktop\\\\Automation-Panel-Project\\\\output\\\\test_db2\\\\test_db2_rawcomponents.xlsx'"
+  },
+  {
+    "finished_at": "2026-03-07T18:21:20",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Process exited with code 1.\n    save_workbook(self, filename)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\.venv\\Lib\\site-packages\\openpyxl\\writer\\excel.py\", line 291, in save_workbook\n    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)\n  File \"C:\\Python314\\Lib\\zipfile\\__init__.py\", line 1453, in __init__\n    self.fp = io.open(file, filemode)\n              ~~~~~~~^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Joe\\\\Desktop\\\\Automation-Panel-Project\\\\output\\\\test_db2\\\\test_db2_rawcomponents.xlsx'"
+  },
+  {
+    "finished_at": "2026-03-07T18:24:12",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-03-07T18:27:45",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-03-07T18:33:57",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-03-07T19:42:29",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-03-07T19:49:05",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-03-07T19:55:49",
+    "project_name": "test_db2",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
+    "error": "Could not find expected components/terminals headers in extraction workbook."
+  }
+]

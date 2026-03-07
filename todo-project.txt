@@ -1,0 +1,45 @@
+this code takes the dwg (or multiple) and gives me the raw excel with manufacturers desired. what is worrying me the most is the extracting mechnaism. im not really comfortable with this code tbh. it doesnt feel universaliable and robust. in general with all availble tech, is that the single best way to extract the info from our sld.
+
+
+0. import price list
+
+1. sld extracter: (from multiple dwg files)
+	-speed up dxf to png \\
+	-add default manufacturer \\
+	-powermeter and CT 
+	
+
+---raw components---
+
+2. customize manufacturers (can call matching for several manufacturers at once)
+
+3. add items (from db for new and add to db)
+
+4. match with database
+	-the switch ins40 idk why it is still taking it as iSW
+
+	-maybe have the panel name horizontally to look easier
+	
+	-setting manufacturers i want to force for specific components (like CT and terminals)
+	
+	-okay now our code is matching the entire components to the manufacturer given. but in our app 	we will give the user the option to choose each components manufacturer. so we will have to 	tweak  our code. this will be done through the raw components excel given to us. will have a 	column that contains each items manufacturer's name. 
+	is it clear what we are doing? any questions?
+
+
+---detailed offer---
+5. edit components (maybe want to have a specific ref nb for components)
+	
+6. export (enitre project with all initially given dwgs)
+	-choose what to show to the client
+	-total price with conversions of currency
+	
+---final offer---
+saved on desktop (default)
+remember last path saved to
+
+=================
+
+
+AUTOCAD AUTOMATED DRAWING
+for the autocad drafter. i think i will do a code that takes the BOM with ref number. i create a seperate database that contains all components ref number and associated path to file containing its real autocad drawings. then the script will put the entire drawings side by side. and by hand the designer will move them and place them like he wants
+
