@@ -476,32 +476,55 @@ def extract_dxf(dxf_path: Path, block_counts: dict) -> str:
             pass
 
     for ent in msp:
-        if ent.dxftype() not in ("TEXT", "MTEXT"):
-            continue
-        try:
-            txt = (
-                ent.dxf.text
-                if ent.dxftype() == "TEXT"
-                else ent.plain_mtext()
-            ).strip()
-            if not txt:
+            if ent.dxftype() not in ("TEXT", "MTEXT"):
                 continue
-            pos = getattr(ent.dxf, "insert", (0, 0, 0))
-            texts.append({
-                "content": txt,
-                "x":       round(float(pos[0]), 1),
-                "y":       round(float(pos[1]), 1),
-                "layer":   ent.dxf.layer,
-            })
-        except Exception:
-            pass
-
+            try:
+                txt = (
+                    ent.dxf.text
+                    if ent.dxftype() == "TEXT"
+                    else ent.plain_mtext()
+                ).strip()
+                if not txt:
+                    continue
+                pos = getattr(ent.dxf, "insert", (0, 0, 0))
+                
+                # --- NEW: Grab the text height ---
+                height = getattr(ent.dxf, "height", getattr(ent.dxf, "char_height", 10.0))
+                
+                texts.append({
+                    "content": txt,
+                    "x":       round(float(pos[0]), 1),
+                    "y":       round(float(pos[1]), 1),
+                    "height":  float(height), # Save the height
+                    "layer":   ent.dxf.layer,
+                })
+            except Exception:
+                pass
     # ── Adaptive cluster radius — derived from the drawing's own block geometry ─
     # Uses the 25th-percentile nearest-neighbour spacing between repeating block
     # inserts so the radius tracks the actual panel grid, not a hardcoded constant.
-    radius   = _compute_cluster_radius(block_counts)
+    def _compute_text_cluster_radius(texts: list) -> float:
+        """
+        Derive text-clustering radius analytically from the drawing's median font size.
+        Words in a multi-line label are typically spaced 1.5x to 3x the text height.
+        """
+        if not texts: 
+            return 40.0
+            
+        # Get all text heights and find the median
+        heights = sorted([t.get("height", 10.0) for t in texts])
+        median_height = heights[len(heights) // 2]
+        
+        # 3x the text height safely groups multi-line labels without pulling in adjacent rows
+        radius = median_height * 3.0
+        
+        # Clamp to prevent extreme anomalies (e.g. giant title text skewing the median)
+        radius = max(15.0, min(radius, 80.0))
+        
+        print(f"   📐 Auto cluster radius: {round(radius, 1)} units (based on median text height: {round(median_height, 1)})")
+        return radius
+    radius   = _compute_text_cluster_radius(texts)
     clusters = _cluster(texts, radius)
-
     # ── Build BLOCK COUNTS section — authoritative ground truth for Gemini ───
     # Only show blocks that appear more than once (the repeating component symbols).
     repeating = {name: d for name, d in block_counts.items() if d["count"] > 1}
@@ -775,7 +798,9 @@ FIELD RULES:
                       (may appear anywhere — near supply line, title block, on the cable).
                       Common formats: "4Cx10mm²+1Cx10mm²", "3x10+N", "4x16mm²", "L=15m 4Cx10mm²".
                       Extract the phase conductor size and assign to the incomer's cable_size.
-  has_terminal      → true ONLY for outgoing circuits feeding real external loads.
+  has_terminal      → true ONLY for outgoing circuits feeding real external loads 
+                      (e.g., sockets, lighting, sub-panels, motors).
+                      CRITICAL: Set to true if it leaves the panel, EVEN IF the cable size is missing!
                       false for: SPD fuses, pilot lamp fuses, meter connections, CTs,
                       group RCCBs protecting other breakers, any panel-internal item.
   is_incomer        → true ONLY for the single main incomer (top-most device in the panel).
@@ -1218,26 +1243,40 @@ def calculate_terminals(
             )
 
         elif comp.get("has_terminal", False):
-            mm2   = parse_mm2(comp.get("cable_size", 0))
-            if mm2 <= 0:
-                # Cannot determine terminal size without cable info — skip
-                continue
-            poles = comp.get("poles", "1P")
+                    mm2 = parse_mm2(comp.get("cable_size", 0))
+                    is_assumed = False
+                    
+                    # If the drafter forgot the cable size, default to 4.0mm
+                    if mm2 <= 0:
+                        mm2 = 4.0
+                        is_assumed = True
+                        
+                        # ── NEW: Inject a warning into the AI Notes for the Excel output ──
+                        existing_notes = str(comp.get("ai_notes", "-")).strip()
+                        warning = "⚠️ Outgoing Cable required but size missing; terminal defaulted to 4mm²."
+                        if existing_notes == "-" or not existing_notes:
+                            comp["ai_notes"] = warning
+                        else:
+                            comp["ai_notes"] = f"{existing_notes} | {warning}"
+                            
+                    poles = comp.get("poles", "1P")
 
-            # _terminal_for_outgoing() applies the 4mm² floor, selects PTTB vs PT,
-            # and returns both the terminal dict AND how many blocks one circuit needs.
-            term, blocks_per_circuit = _terminal_for_outgoing(mm2, poles)
-            name = term["name"]
+                    # _terminal_for_outgoing() applies the 4mm² floor, selects PTTB vs PT
+                    term, blocks_per_circuit = _terminal_for_outgoing(mm2, poles)
+                    name = term["name"]
 
-            counts[name]["qty"]         += qty * blocks_per_circuit
-            counts[name]["description"]  = term["description"]
-            counts[name]["max_mm2"]      = term["max_mm2"]
-            counts[name]["circuits"].append(
-                f"{ll} {amp} {poles} @{mm2}mm² "
-                f"→ {blocks_per_circuit} block(s) × {qty} circuit(s) "
-                f"= {qty * blocks_per_circuit}"
-            )
-
+                    counts[name]["qty"]         += qty * blocks_per_circuit
+                    counts[name]["description"]  = term["description"]
+                    counts[name]["max_mm2"]      = term["max_mm2"]
+                    
+                    # ── NEW: Highlight the assumption in the Terminal Schedule ──
+                    mm2_str = "[ASSUMED 4.0]" if is_assumed else f"{mm2}"
+                    
+                    counts[name]["circuits"].append(
+                        f"{ll} {amp} {poles} @{mm2_str}mm² "
+                        f"→ {blocks_per_circuit} block(s) × {qty} circuit(s) "
+                        f"= {qty * blocks_per_circuit}"
+                    )
     return [
         {
             "name":        n,
