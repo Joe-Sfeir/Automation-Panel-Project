@@ -1,4 +1,4 @@
-# ⚡ Technelec: AI-Powered Electrical Panel Estimator & BOM Generator
+# ⚡ Technicat Group: AI-Powered Electrical Panel Estimator & BOM Generator
 
 Welcome to **Technelec**, an enterprise-grade automation pipeline built to solve the most painful bottleneck in electrical panel building: **turning messy Single Line Diagrams (SLDs) into perfectly priced Bills of Materials (BOMs).**
 
