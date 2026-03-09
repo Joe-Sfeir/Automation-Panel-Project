@@ -1,6 +1,7 @@
 """
 SLD Component Extractor  v4.3
 ==============================
+non spatial ig
 Pipeline:
   1. DWG → DXF  (ODA File Converter)
   2. DXF → structured text + spatial clusters

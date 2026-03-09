@@ -110,7 +110,13 @@ def get_config() -> dict:
 
 class Component(BaseModel):
     """Represents one row in the component extraction — one group of identical devices."""
-
+    cable_size: float = Field(
+            description=(
+                "Phase conductor cross-section in mm² as a number (e.g. 2.5, 10.0). "
+                "0 if not shown. CRITICAL: Outgoing switches/isolators (e.g. feeding sub-panels) "
+                "often have cable sizes. Look carefully for them."
+            )
+        )
     category: str = Field(
         description=(
             "One of: MCB | MCCB | RCCB | RCBO | SWITCH | CONTACTOR | SPD | "
@@ -144,12 +150,7 @@ class Component(BaseModel):
     spd_type: str = Field(
         description="SPD devices only: type, Up voltage, Imax. '-' for all other devices."
     )
-    cable_size: float = Field(
-        description=(
-            "Phase conductor cross-section in mm² as a number (e.g. 2.5, 10.0). "
-            "0 if not shown. For the incomer, scan the ENTIRE drawing for the supply cable annotation."
-        )
-    )
+
     load_label: str = Field(
         description="Circuit name(s). Comma-separated if this row groups multiple circuits."
     )
@@ -500,29 +501,9 @@ def extract_dxf(dxf_path: Path, block_counts: dict) -> str:
                 })
             except Exception:
                 pass
-    # ── Adaptive cluster radius — derived from the drawing's own block geometry ─
-    # Uses the 25th-percentile nearest-neighbour spacing between repeating block
-    # inserts so the radius tracks the actual panel grid, not a hardcoded constant.
-    def _compute_text_cluster_radius(texts: list) -> float:
-        """
-        Derive text-clustering radius analytically from the drawing's median font size.
-        Words in a multi-line label are typically spaced 1.5x to 3x the text height.
-        """
-        if not texts: 
-            return 40.0
-            
-        # Get all text heights and find the median
-        heights = sorted([t.get("height", 10.0) for t in texts])
-        median_height = heights[len(heights) // 2]
-        
-        # 3x the text height safely groups multi-line labels without pulling in adjacent rows
-        radius = median_height * 3.0
-        
-        # Clamp to prevent extreme anomalies (e.g. giant title text skewing the median)
-        radius = max(15.0, min(radius, 80.0))
-        
-        print(f"   📐 Auto cluster radius: {round(radius, 1)} units (based on median text height: {round(median_height, 1)})")
-        return radius
+    # ── Adaptive cluster radius — derived from the drawing's text height ────────
+    # Uses the median DXF text height so the radius scales with whatever font size
+    # the drafter used — completely immune to title block block-spacing pollution.
     radius   = _compute_text_cluster_radius(texts)
     clusters = _cluster(texts, radius)
     # ── Build BLOCK COUNTS section — authoritative ground truth for Gemini ───
@@ -598,86 +579,56 @@ def _cluster(texts: list, radius: float) -> list:
     return clusters
 
 
-def _compute_cluster_radius(block_counts: dict) -> float:
+
+
+
+
+def _compute_text_cluster_radius(texts: list) -> float:
     """
-    Derive a text-clustering radius analytically from the drawing's own geometry.
+    Derive the text-clustering radius from the drawing's median font height.
 
-    WHY PER-FAMILY, NOT GLOBAL
-    ──────────────────────────
-    Computing nearest-neighbour distances across ALL repeating blocks fails
-    because DXF drawings contain many non-component INSERT entities that repeat
-    across the full sheet: title block cells, revision tables, border corners,
-    north arrows, etc.  These have sheet-scale spacing (hundreds to thousands of
-    DXF units) and pollute any global percentile calculation — even the p25.
+    WHY TEXT HEIGHT BEATS BLOCK SPACING
+    ─────────────────────────────────────
+    Block-spacing approaches (our previous v5.2 attempt) are polluted by
+    title block INSERT entities that repeat across the full sheet at large
+    spacings.  Text height is immune to this: we're measuring the unit in
+    which labels are written, then using that unit to decide how far apart
+    two text strings can be and still belong to the same label group.
 
-    The correct approach is to compute nearest-neighbour spacing WITHIN each
-    block family separately (e.g. all positions of '2x10', all positions of
-    '2x16'), then take the MINIMUM p25 across all families.
+    MULTIPLIER  1.5×
+    ─────────────────
+    A typical two-line label (e.g. "Living Room" on one line, "16A" below)
+    has a line gap of ~1.5× the character height.  Using 1.5× as the radius
+    tightly clusters the two lines without reaching the next breaker row.
+    3× was too aggressive and pulled in adjacent circuit labels.
 
-    Why minimum?
-      • Component blocks (MCBs, RCCBs on the same busbar) have TIGHT internal
-        spacing — they sit next to each other on a DIN rail.
-      • Title-block / border blocks have LARGE internal spacing — they span the
-        sheet.
-      Taking the minimum automatically selects the panel grid and ignores sheet
-      noise without needing any heuristic to classify block types.
+    MEDIAN vs MEAN
+    ───────────────
+    The drawing contains a few large title/heading text entities (height 30–50)
+    alongside many small label entities (height 3–5).  The median stays anchored
+    to the dominant small-label population — the mean would be skewed upward.
 
-    EXAMPLE (DB-B2 drawing)
-    ────────────────────────
-      CB1   × 24  → internal p25 spacing ~400  (title block, sheet-scale)
-      2x10  × 11  → internal p25 spacing ~ 52  (MCB, panel grid)  ← selected
-      2x20  ×  7  → internal p25 spacing ~ 48  (MCB, panel grid)  ← selected
-      2x16  ×  5  → internal p25 spacing ~ 55  (MCB, panel grid)  ← selected
-      → minimum p25 = 48  → radius = 29  → clamped to 30 ✅
-
-    CLAMPING
-    ─────────
-    [30, 150] DXF units — prevents collapse on ultra-dense symbols and bloat on
-    very sparse drawings where even component spacing is large.
+    CLAMPING  [15, 80] DXF units
+    ─────────────────────────────
+    Prevents collapse on drawings with unusually tiny fonts and prevents
+    over-grouping on drawings where the only text is large heading text.
     """
-    # Collect per-family p25 nearest-neighbour spacings
-    family_p25s: list[float] = []
+    if not texts:
+        return 40.0
 
-    for block_name, d in block_counts.items():
-        positions = d.get("positions", [])
-        if len(positions) < 3:
-            # Need at least 3 instances to compute meaningful spacing
-            continue
+    # Median of all text heights — anchored to the small component-label population
+    heights       = sorted([t.get("height", 10.0) for t in texts])
+    median_height = heights[len(heights) // 2]
 
-        # Compute nearest-neighbour distance for every position in THIS family
-        nn: list[float] = []
-        for i, (x1, y1) in enumerate(positions):
-            best = float("inf")
-            for j, (x2, y2) in enumerate(positions):
-                if i == j:
-                    continue
-                dist = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
-                if dist < best:
-                    best = dist
-            if best < float("inf"):
-                nn.append(best)
+    # 1.5× matches typical DXF line spacing for multi-line labels
+    radius = median_height * 1.5
 
-        if not nn:
-            continue
+    # Clamp: [15, 80] DXF units
+    radius = max(15.0, min(radius, 80.0))
 
-        nn.sort()
-        p25_idx = max(0, len(nn) // 4)
-        family_p25s.append(nn[p25_idx])
-
-    if not family_p25s:
-        print("   📐 Auto cluster radius: 60.0 units  (fallback — no usable block families)")
-        return 60.0
-
-    # Take the MINIMUM p25 across all families — this is the panel component grid,
-    # not the sheet-scale title block spacing.
-    min_p25 = min(family_p25s)
-    radius  = round(min_p25 * 0.6, 1)
-    radius  = max(30.0, min(radius, 150.0))
-
-    print(f"   📐 Auto cluster radius: {radius} units  "
-          f"(min family p25: {round(min_p25, 1)}  across {len(family_p25s)} families)")
+    print(f"   📐 Auto cluster radius: {round(radius, 1)} units  "
+          f"(median text height: {round(median_height, 1)})")
     return radius
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  STEP 3  DXF → PNG
@@ -741,7 +692,9 @@ Identify before extracting:
     COUNT as the qty. Do not count from load labels.
   • Where a block entry shows "⚡ Implies XA", treat that as the rated current for
     every instance of that block unless the drawing overrides it for a specific circuit.
-
+  • COMBO DRAWINGS: If the drawing contains BOTH a schematic (SLD) on the left and a physical
+   panel layout (Shop Drawing) on the right, completely IGNORE the physical layout. Base your 
+   quantities and components ONLY on the schematic.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 STEP 2 — EXTRACT ALL COMPONENTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
