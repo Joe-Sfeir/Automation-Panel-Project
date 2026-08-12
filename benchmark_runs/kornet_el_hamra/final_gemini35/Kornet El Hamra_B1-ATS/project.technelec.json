@@ -1,0 +1,4055 @@
+{
+  "id": "project_ec3f97db69084b3aa3740f1e6c578ac3",
+  "name": "Kornet El Hamra_B1-ATS",
+  "reference": "Kornet El Hamra_B1-ATS",
+  "schema_version": 1,
+  "created_at": "2026-08-12T18:09:43+00:00",
+  "updated_at": "2026-08-12T18:10:53+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-ATS.dwg",
+      "sha256": "89342759044c8879d12460a4615a14fe4824df90765c7976f6cd6cc3ae119bbb",
+      "filename": "Kornet El Hamra_B1-ATS.dwg",
+      "added_at": "2026-08-12T18:09:45+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_8d992bc00ab65a77a0c566ce56e87cee",
+      "reference": "EDL SWITCHBOARD",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_839847b198cb57d3946bb9dbe8798c46",
+          "category": "MCCB",
+          "label": "EDL-1",
+          "poles": "4",
+          "amps": "100A",
+          "curve": "-",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 35.0,
+          "load_label": "KWH-1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Mapped from MCCB: AF=100A AT=100A and 4x100A with EDL-1/KWH-1 indications.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4DB",
+              "entity_handle": "4DB",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                25150.94502727847,
+                50462.34889594377,
+                25150.94502727847,
+                50462.34889594377
+              ],
+              "image_bbox": [
+                326.78,
+                67.74,
+                334.78,
+                75.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4DF",
+              "entity_handle": "4DF",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=100A",
+              "cad_bbox": [
+                23572.4608085946,
+                50960.45636183243,
+                23572.4608085946,
+                51114.459608142424
+              ],
+              "image_bbox": [
+                305.96,
+                61.04,
+                313.96,
+                69.04
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4E0",
+              "entity_handle": "4E0",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=100A",
+              "cad_bbox": [
+                24218.92188689387,
+                50754.7823042091,
+                24218.92188689387,
+                50908.78555051909
+              ],
+              "image_bbox": [
+                314.49,
+                63.81,
+                322.49,
+                71.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4E1",
+              "entity_handle": "4E1",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x100A",
+              "cad_bbox": [
+                25183.90201807545,
+                50359.31686398505,
+                25183.90201807545,
+                50513.32011029504
+              ],
+              "image_bbox": [
+                327.22,
+                69.13,
+                335.22,
+                77.13
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4E2",
+              "entity_handle": "4E2",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=36kA",
+              "cad_bbox": [
+                24113.20701365101,
+                50531.16160012137,
+                24113.20701365101,
+                50685.16484643136
+              ],
+              "image_bbox": [
+                313.09,
+                66.81,
+                321.09,
+                74.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4E5",
+              "entity_handle": "4E5",
+              "block_name": "",
+              "layer": "E-Panelboards-Text",
+              "text": "KWH-1",
+              "cad_bbox": [
+                24878.75064490173,
+                52459.42466965828,
+                24878.75064490173,
+                52580.34386874248
+              ],
+              "image_bbox": [
+                323.19,
+                40.87,
+                331.19,
+                48.87
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4E6",
+              "entity_handle": "4E6",
+              "block_name": "",
+              "layer": "E-Panelboards-Text",
+              "text": "EDL-1",
+              "cad_bbox": [
+                24874.29082027027,
+                52646.65080924651,
+                24874.29082027027,
+                52767.57000833071
+              ],
+              "image_bbox": [
+                323.13,
+                38.36,
+                331.13,
+                46.36
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4F9",
+              "entity_handle": "4F9",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x35mm2+E=1x16mm2)",
+              "cad_bbox": [
+                25067.32757188609,
+                42602.45388181439,
+                25067.32757188609,
+                42773.56859993661
+              ],
+              "image_bbox": [
+                325.68,
+                173.48,
+                333.68,
+                181.48
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_c055d266896d5cf2a2e32319680bcc90",
+          "category": "MCCB",
+          "label": "EDL-2",
+          "poles": "4",
+          "amps": "100A",
+          "curve": "-",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 35.0,
+          "load_label": "KWH-2",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Mapped from MCCB: AF=100A AT=100A and 4x100A with EDL-2/KWH-2 indications.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E8",
+              "entity_handle": "4E8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                27656.16964061554,
+                50462.34889594377,
+                27656.16964061554,
+                50462.34889594377
+              ],
+              "image_bbox": [
+                359.83,
+                67.74,
+                367.83,
+                75.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4EA",
+              "entity_handle": "4EA",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=100A",
+              "cad_bbox": [
+                26077.68542192842,
+                50960.45636183243,
+                26077.68542192842,
+                51114.459608142424
+              ],
+              "image_bbox": [
+                339.01,
+                61.04,
+                347.01,
+                69.04
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4EB",
+              "entity_handle": "4EB",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=100A",
+              "cad_bbox": [
+                26724.14650023444,
+                50754.7823042091,
+                26724.14650023444,
+                50908.78555051909
+              ],
+              "image_bbox": [
+                347.54,
+                63.81,
+                355.54,
+                71.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4EC",
+              "entity_handle": "4EC",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x100A",
+              "cad_bbox": [
+                27689.12663140927,
+                50359.31686398505,
+                27689.12663140927,
+                50513.32011029504
+              ],
+              "image_bbox": [
+                360.27,
+                69.13,
+                368.27,
+                77.13
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4ED",
+              "entity_handle": "4ED",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=36kA",
+              "cad_bbox": [
+                26618.43162698832,
+                50531.16160012137,
+                26618.43162698832,
+                50685.16484643136
+              ],
+              "image_bbox": [
+                346.14,
+                66.81,
+                354.14,
+                74.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4EF",
+              "entity_handle": "4EF",
+              "block_name": "",
+              "layer": "E-Panelboards-Text",
+              "text": "KWH-2",
+              "cad_bbox": [
+                27383.97525823904,
+                52459.42466965828,
+                27383.97525823904,
+                52580.34386874248
+              ],
+              "image_bbox": [
+                356.24,
+                40.87,
+                364.24,
+                48.87
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4F0",
+              "entity_handle": "4F0",
+              "block_name": "",
+              "layer": "E-Panelboards-Text",
+              "text": "EDL-2",
+              "cad_bbox": [
+                27379.51543360759,
+                52646.65080924651,
+                27379.51543360759,
+                52767.57000833071
+              ],
+              "image_bbox": [
+                356.18,
+                38.36,
+                364.18,
+                46.36
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4FF",
+              "entity_handle": "4FF",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x35mm2+E=1x16mm2)",
+              "cad_bbox": [
+                27572.25360607911,
+                42602.18070192855,
+                27572.25360607911,
+                42773.29542005077
+              ],
+              "image_bbox": [
+                358.72,
+                173.48,
+                366.72,
+                181.48
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4e8465f4137a524092d7e37ec061d833",
+          "category": "MCCB",
+          "label": "Main Incomer",
+          "poles": "4",
+          "amps": "200A",
+          "curve": "-",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "EDL Switchboard Bus",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Main incoming circuit breaker.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4F2",
+              "entity_handle": "4F2",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                26803.96552228994,
+                41291.74651060764,
+                26803.96552228994,
+                41291.74651060764
+              ],
+              "image_bbox": [
+                348.59,
+                191.11,
+                356.59,
+                199.11
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4F3",
+              "entity_handle": "4F3",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=250A",
+              "cad_bbox": [
+                24136.79556246543,
+                41457.52776772059,
+                24136.79556246543,
+                41714.19984490392
+              ],
+              "image_bbox": [
+                313.4,
+                188.88,
+                321.4,
+                196.88
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4F4",
+              "entity_handle": "4F4",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=200A",
+              "cad_bbox": [
+                25336.39058870638,
+                41110.96919393151,
+                25336.39058870638,
+                41367.64127111484
+              ],
+              "image_bbox": [
+                329.23,
+                193.54,
+                337.23,
+                201.54
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4F5",
+              "entity_handle": "4F5",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                27092.49259405353,
+                41618.9361557911,
+                27092.49259405353,
+                41868.524337980336
+              ],
+              "image_bbox": [
+                352.4,
+                186.71,
+                360.4,
+                194.71
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4F6",
+              "entity_handle": "4F6",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=36kA",
+              "cad_bbox": [
+                26998.64388302921,
+                41307.80318137382,
+                26998.64388302921,
+                41557.39136356305
+              ],
+              "image_bbox": [
+                351.16,
+                190.9,
+                359.16,
+                198.9
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_234f4182158d5c5b91c559e2b26e9f42",
+          "category": "PLC",
+          "label": "PLC",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "EDL Counters Power Control",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "BOTH",
+          "notes": "PLC control system.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:4FE",
+              "entity_handle": "4FE",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "PLC",
+              "cad_bbox": [
+                20591.36566159981,
+                46157.39445289835,
+                20591.36566159981,
+                46406.98263508758
+              ],
+              "image_bbox": [
+                266.63,
+                125.65,
+                274.63,
+                133.65
+              ],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4FC",
+              "entity_handle": "4FC",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "PLC SHOULD BE INSTALLED FOR THE EDL COUNTERS \nTO CONTROL THE POWER OUTLETS (VOLTAGE, FREQUENCY...)",
+              "cad_bbox": [
+                29790.72671636935,
+                48782.39309934329,
+                29790.72671636935,
+                48927.98620562034
+              ],
+              "image_bbox": [
+                387.99,
+                90.34,
+                395.99,
+                98.34
+              ],
+              "confidence": 0.85
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_c4d64bd26809590f9aa420dd306213bc",
+          "name": "PT 4",
+          "description": "Phoenix Contact feed-through terminal 4mm²",
+          "max_mm2": 4.0,
+          "quantity": 4,
+          "circuits": [
+            "EDL Switchboard Bus"
+          ],
+          "origin": "calculated",
+          "warnings": [
+            "EDL Switchboard Bus: cable size missing; defaulted to 4mm²"
+          ]
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    },
+    {
+      "id": "panel_f8c9890247895b34b8d1a9546ff2bcbf",
+      "reference": "TOTALIZING SWITCHBOARD",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_46a3d4f0a8405737b84f96428923fc3e",
+          "category": "MCCB",
+          "label": "TOTALIZING INCOMER",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 150.0,
+          "load_label": "TOTALIZING SWITCHBOARD BUS",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.8,
+          "origin": "deterministic_reconciled",
+          "notes": "Incomer MCCB with AT=250A AF=400A.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:516",
+              "entity_handle": "516",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                42745.11332097926,
+                41411.08108464226,
+                42745.11332097926,
+                41411.08108464226
+              ],
+              "image_bbox": [
+                558.89,
+                189.51,
+                566.89,
+                197.51
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:540",
+              "entity_handle": "540",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40605.2378706324,
+                41411.08108464226,
+                40605.2378706324,
+                41411.08108464226
+              ],
+              "image_bbox": [
+                530.66,
+                189.51,
+                538.66,
+                197.51
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:517",
+              "entity_handle": "517",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=400A",
+              "cad_bbox": [
+                40911.88797439633,
+                41815.75671323027,
+                40911.88797439633,
+                41986.87143135249
+              ],
+              "image_bbox": [
+                534.7,
+                184.06,
+                542.7,
+                192.06
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:518",
+              "entity_handle": "518",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=250A",
+              "cad_bbox": [
+                41711.6179918882,
+                41584.71766403749,
+                41711.6179918882,
+                41755.83238215971
+              ],
+              "image_bbox": [
+                545.25,
+                187.17,
+                553.25,
+                195.17
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:519",
+              "entity_handle": "519",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x400A",
+              "cad_bbox": [
+                43033.64039274516,
+                41738.2707298257,
+                43033.64039274516,
+                41904.66285128519
+              ],
+              "image_bbox": [
+                562.7,
+                185.1,
+                570.7,
+                193.1
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:51A",
+              "entity_handle": "51A",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=36ka",
+              "cad_bbox": [
+                42977.41333288312,
+                41530.84874688084,
+                42977.41333288312,
+                41697.24086834033
+              ],
+              "image_bbox": [
+                561.95,
+                187.9,
+                569.95,
+                195.9
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:550",
+              "entity_handle": "550",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x150mm2+E=1x70mm2)",
+              "cad_bbox": [
+                42454.06138541546,
+                36716.72301970508,
+                42454.06138541546,
+                36973.39509688841
+              ],
+              "image_bbox": [
+                555.05,
+                252.66,
+                563.05,
+                260.66
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [
+            "AI quantity 1 reconciled to 2 cited block instances in one representation"
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_26cbc83621e8555caf08c7609059f973",
+          "category": "MCCB",
+          "label": "GEN 200Kva Breaker",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "50kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 150.0,
+          "load_label": "GEN 200Kva",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Generator 200kVA feeder MCCB.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:534",
+              "entity_handle": "534",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.59519593181,
+                49249.33727621679,
+                40311.59519593181,
+                49249.33727621679
+              ],
+              "image_bbox": [
+                526.79,
+                84.06,
+                534.79,
+                92.06
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:536",
+              "entity_handle": "536",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=400A",
+              "cad_bbox": [
+                38733.11097724817,
+                49747.44474210545,
+                38733.11097724817,
+                49901.44798841544
+              ],
+              "image_bbox": [
+                505.96,
+                77.36,
+                513.96,
+                85.36
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:537",
+              "entity_handle": "537",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=250A",
+              "cad_bbox": [
+                39379.57205555071,
+                49541.77068448212,
+                39379.57205555071,
+                49695.773930792115
+              ],
+              "image_bbox": [
+                514.49,
+                80.13,
+                522.49,
+                88.13
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:538",
+              "entity_handle": "538",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x400A",
+              "cad_bbox": [
+                40344.55218672578,
+                49146.30524425796,
+                40344.55218672578,
+                49300.30849056795
+              ],
+              "image_bbox": [
+                527.22,
+                85.45,
+                535.22,
+                93.45
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:539",
+              "entity_handle": "539",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x150mm2+E=1x70mm2)",
+              "cad_bbox": [
+                40209.95555364197,
+                44525.86203409972,
+                40209.95555364197,
+                44696.97675222194
+              ],
+              "image_bbox": [
+                525.44,
+                147.6,
+                533.44,
+                155.6
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:53E",
+              "entity_handle": "53E",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=50ka",
+              "cad_bbox": [
+                39279.72397263695,
+                49318.14998039439,
+                39279.72397263695,
+                49472.15322670438
+              ],
+              "image_bbox": [
+                513.17,
+                83.13,
+                521.17,
+                91.13
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f22cda6b00ef54a3bc4dedd5a4441014",
+          "category": "MCCB",
+          "label": "GEN 100Kva Breaker",
+          "poles": "4",
+          "amps": "125A",
+          "curve": "-",
+          "breaking_capacity": "50kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 50.0,
+          "load_label": "GEN 100Kva",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Generator 100kVA feeder MCCB.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:549",
+              "entity_handle": "549",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.63265967529,
+                49249.25481822075,
+                43294.63265967529,
+                49249.25481822075
+              ],
+              "image_bbox": [
+                566.14,
+                84.06,
+                574.14,
+                92.06
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:54A",
+              "entity_handle": "54A",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=160A",
+              "cad_bbox": [
+                43392.75564986479,
+                49790.04295848643,
+                43392.75564986479,
+                49944.046204796425
+              ],
+              "image_bbox": [
+                567.43,
+                76.79,
+                575.43,
+                84.79
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:54B",
+              "entity_handle": "54B",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=125A",
+              "cad_bbox": [
+                44039.21672816733,
+                49584.368900863,
+                44039.21672816733,
+                49738.372147172995
+              ],
+              "image_bbox": [
+                575.96,
+                79.55,
+                583.96,
+                87.55
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:54C",
+              "entity_handle": "54C",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=50ka",
+              "cad_bbox": [
+                43939.36864525683,
+                49360.74819677525,
+                43939.36864525683,
+                49514.75144308524
+              ],
+              "image_bbox": [
+                574.64,
+                82.56,
+                582.64,
+                90.56
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:54D",
+              "entity_handle": "54D",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x160A",
+              "cad_bbox": [
+                43355.64498346288,
+                49134.51828582402,
+                43355.64498346288,
+                49288.521532134015
+              ],
+              "image_bbox": [
+                566.94,
+                85.6,
+                574.94,
+                93.6
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:553",
+              "entity_handle": "553",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x50mm2+E=1x25mm2)",
+              "cad_bbox": [
+                43217.45434561112,
+                44525.86203409972,
+                43217.45434561112,
+                44696.97675222194
+              ],
+              "image_bbox": [
+                565.12,
+                147.6,
+                573.12,
+                155.6
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_e68f936c074e58bab999c70b2e738da5",
+          "category": "FUSE_HOLDER",
+          "label": "FS=400A",
+          "poles": "4",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "CONTACTOR 1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "origin": "BOTH",
+          "notes": "Fused disconnect switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:524",
+              "entity_handle": "524",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.3132893033,
+                43720.21267557769,
+                40311.3132893033,
+                43720.21267557769
+              ],
+              "image_bbox": [
+                526.78,
+                158.44,
+                534.78,
+                166.44
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:522",
+              "entity_handle": "522",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x400A",
+              "cad_bbox": [
+                39297.65677955999,
+                43729.73404884519,
+                39297.65677955999,
+                43900.84876696741
+              ],
+              "image_bbox": [
+                513.41,
+                158.31,
+                521.41,
+                166.31
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:527",
+              "entity_handle": "527",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "FS=400A",
+              "cad_bbox": [
+                39497.04442697434,
+                43002.77933543195,
+                39497.04442697434,
+                43123.00165615789
+              ],
+              "image_bbox": [
+                516.04,
+                168.09,
+                524.04,
+                176.09
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_17bb311c3c8b5d5db40d07f8279170ad",
+          "category": "FUSE_HOLDER",
+          "label": "FS=160A",
+          "poles": "4",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "CONTACTOR 2",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "origin": "BOTH",
+          "notes": "Fused disconnect switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:504",
+              "entity_handle": "504",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.3507585148,
+                43720.22532632076,
+                43294.3507585148,
+                43720.22532632076
+              ],
+              "image_bbox": [
+                566.13,
+                158.44,
+                574.13,
+                166.44
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:502",
+              "entity_handle": "502",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x160A",
+              "cad_bbox": [
+                42347.22242956209,
+                43788.27053599038,
+                42347.22242956209,
+                43959.385254112596
+              ],
+              "image_bbox": [
+                553.64,
+                157.53,
+                561.64,
+                165.53
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:509",
+              "entity_handle": "509",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "FS=160A",
+              "cad_bbox": [
+                42411.75082343185,
+                42982.8294158813,
+                42411.75082343185,
+                43103.05173660724
+              ],
+              "image_bbox": [
+                554.49,
+                168.36,
+                562.49,
+                176.36
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_2cee2b2f79f55d0db61246470abd75f5",
+          "category": "CONTACTOR",
+          "label": "THREE-POLE CONTACTOR (AC3 400A)",
+          "poles": "3",
+          "amps": "400A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "BOTH",
+          "notes": "AC3 contactor downstream of 400A fuse switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:52D",
+              "entity_handle": "52D",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "THREE-POLE CONTACTOR",
+              "cad_bbox": [
+                38497.02748388491,
+                42580.41297708814,
+                38497.02748388491,
+                42660.561190905435
+              ],
+              "image_bbox": [
+                502.85,
+                173.78,
+                510.85,
+                181.78
+              ],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:526",
+              "entity_handle": "526",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                39484.86799065882,
+                42839.46202838836,
+                39484.86799065882,
+                42959.6843491143
+              ],
+              "image_bbox": [
+                515.88,
+                170.29,
+                523.88,
+                178.29
+              ],
+              "confidence": 0.85
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_b9b266c9b09c515bb36db024c6b85198",
+          "category": "CONTACTOR",
+          "label": "THREE-POLE CONTACTOR (AC3 160A)",
+          "poles": "3",
+          "amps": "160A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "BOTH",
+          "notes": "AC3 contactor downstream of 160A fuse switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:50F",
+              "entity_handle": "50F",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "THREE-POLE CONTACTOR",
+              "cad_bbox": [
+                41690.47606608338,
+                42580.4256278313,
+                41690.47606608338,
+                42660.57384164859
+              ],
+              "image_bbox": [
+                544.98,
+                173.78,
+                552.98,
+                181.78
+              ],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:508",
+              "entity_handle": "508",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                42399.57438711306,
+                42819.51210883771,
+                42399.57438711306,
+                42939.73442956365
+              ],
+              "image_bbox": [
+                554.33,
+                170.56,
+                562.33,
+                178.56
+              ],
+              "confidence": 0.85
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_4b7d731fa386580a955797338455faec",
+          "name": "PT 150",
+          "description": "Phoenix Contact feed-through terminal 150mm²",
+          "max_mm2": 150.0,
+          "quantity": 8,
+          "circuits": [
+            "TOTALIZING SWITCHBOARD BUS"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    },
+    {
+      "id": "panel_2b699d05e53f57f894cf235d5e0d0db6",
+      "reference": "ATS-1 250A",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_dc4f14d1319053b6b443321333accca6",
+          "category": "SWITCH",
+          "label": "IS 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 150.0,
+          "load_label": "FROM EDL",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Isolator switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:55B",
+              "entity_handle": "55B",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "IS",
+              "cad_bbox": [
+                32570.16352468166,
+                30283.37535769285,
+                32570.16352468166,
+                30449.98205660072
+              ],
+              "image_bbox": [
+                424.66,
+                339.21,
+                432.66,
+                347.21
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:55C",
+              "entity_handle": "55C",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                32282.04416382262,
+                29979.55021324077,
+                32282.04416382262,
+                30146.15691214864
+              ],
+              "image_bbox": [
+                420.86,
+                343.29,
+                428.86,
+                351.29
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:560",
+              "entity_handle": "560",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x150mm2+E=1x70mm2)",
+              "cad_bbox": [
+                28261.37898344659,
+                31311.86429229405,
+                28261.37898344659,
+                31478.470991201917
+              ],
+              "image_bbox": [
+                367.82,
+                325.37,
+                375.82,
+                333.37
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_b8bc9cddc92f50e19a8b01759f9b7f66",
+          "category": "CONTACTOR",
+          "label": "C1 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "AC3 interlocked contactor C1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:562",
+              "entity_handle": "562",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CONTACTOR",
+              "cad_bbox": [
+                31812.42251160062,
+                28674.44505062865,
+                31812.42251160062,
+                28841.051749536517
+              ],
+              "image_bbox": [
+                414.66,
+                360.85,
+                422.66,
+                368.85
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:563",
+              "entity_handle": "563",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "C1 4x250A",
+              "cad_bbox": [
+                31795.50939307242,
+                28329.76914732185,
+                31795.50939307242,
+                28496.37584622972
+              ],
+              "image_bbox": [
+                414.44,
+                365.49,
+                422.44,
+                373.49
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:596",
+              "entity_handle": "596",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                31795.50939307242,
+                28045.72072020079,
+                31795.50939307242,
+                28212.327419108657
+              ],
+              "image_bbox": [
+                414.44,
+                369.31,
+                422.44,
+                377.31
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_35930f3370775e288d9728878ed29e38",
+          "category": "CONTACTOR",
+          "label": "C2 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "AC3 interlocked contactor C2.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:565",
+              "entity_handle": "565",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CONTACTOR",
+              "cad_bbox": [
+                33678.21837142898,
+                28674.44505062865,
+                33678.21837142898,
+                28841.051749536517
+              ],
+              "image_bbox": [
+                439.28,
+                360.85,
+                447.28,
+                368.85
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:566",
+              "entity_handle": "566",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "C2 4x250A",
+              "cad_bbox": [
+                33661.30525289752,
+                28329.76914732185,
+                33661.30525289752,
+                28496.37584622972
+              ],
+              "image_bbox": [
+                439.05,
+                365.49,
+                447.05,
+                373.49
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:597",
+              "entity_handle": "597",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                33661.30525289752,
+                28045.72072020079,
+                33661.30525289752,
+                28212.327419108657
+              ],
+              "image_bbox": [
+                439.05,
+                369.31,
+                447.05,
+                377.31
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_c033835995165606a0063c3417a687a4",
+          "category": "SWITCH",
+          "label": "MTS1 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "3 POSITIONS",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Manual Transfer Switch 1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:570",
+              "entity_handle": "570",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MTS1",
+              "cad_bbox": [
+                33457.48644514053,
+                26373.16682724917,
+                33457.48644514053,
+                26539.773526157038
+              ],
+              "image_bbox": [
+                436.36,
+                391.81,
+                444.36,
+                399.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:571",
+              "entity_handle": "571",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                33457.48644514053,
+                26087.33229591584,
+                33457.48644514053,
+                26253.938994823708
+              ],
+              "image_bbox": [
+                436.36,
+                395.66,
+                444.36,
+                403.66
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5A0",
+              "entity_handle": "5A0",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "3 POSITIONS",
+              "cad_bbox": [
+                34800.60257789769,
+                25569.20254835424,
+                34800.60257789769,
+                25712.089289816715
+              ],
+              "image_bbox": [
+                454.08,
+                402.63,
+                462.08,
+                410.63
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_a5cd0d5d8afb5b15bcdad7672c76cb9b",
+          "category": "SWITCH",
+          "label": "MTS2 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "3 POSITIONS",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Manual Transfer Switch 2.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:57F",
+              "entity_handle": "57F",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MTS2",
+              "cad_bbox": [
+                33457.48644514053,
+                25108.45341930349,
+                33457.48644514053,
+                25275.060118211357
+              ],
+              "image_bbox": [
+                436.36,
+                408.82,
+                444.36,
+                416.82
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:580",
+              "entity_handle": "580",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                33457.48644514053,
+                24822.61888797007,
+                33457.48644514053,
+                24989.22558687794
+              ],
+              "image_bbox": [
+                436.36,
+                412.67,
+                444.36,
+                420.67
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:59D",
+              "entity_handle": "59D",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "3 POSITIONS",
+              "cad_bbox": [
+                34800.60257789769,
+                23817.13952949031,
+                34800.60257789769,
+                23960.026270952785
+              ],
+              "image_bbox": [
+                454.08,
+                426.2,
+                462.08,
+                434.2
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4bd2eb4685165558bc09196407611d2e",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Power monitoring meter.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5A6",
+              "entity_handle": "5A6",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "DIGITAL",
+              "cad_bbox": [
+                36665.71623927165,
+                30678.55959012876,
+                36665.71623927165,
+                30845.166289036628
+              ],
+              "image_bbox": [
+                478.69,
+                333.89,
+                486.69,
+                341.89
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5A7",
+              "entity_handle": "5A7",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "POWER",
+              "cad_bbox": [
+                36665.71623927165,
+                30392.72505879554,
+                36665.71623927165,
+                30559.331757703407
+              ],
+              "image_bbox": [
+                478.69,
+                337.74,
+                486.69,
+                345.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5A8",
+              "entity_handle": "5A8",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "METER",
+              "cad_bbox": [
+                36665.71623927165,
+                30172.12999177743,
+                36665.71623927165,
+                30338.7366906853
+              ],
+              "image_bbox": [
+                478.69,
+                340.7,
+                486.69,
+                348.7
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_5baa5ef37afa58c9a2791061b55940b5",
+          "category": "SPD",
+          "label": "SURGE ARRESTOR CLASS B&C",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "Class B & C",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Two Surge Arrestors (Class B&C) configured in ATS.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5AA",
+              "entity_handle": "5AA",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "SURGE",
+              "cad_bbox": [
+                35258.66283160561,
+                30678.55959012876,
+                35258.66283160561,
+                30845.166289036628
+              ],
+              "image_bbox": [
+                460.13,
+                333.89,
+                468.13,
+                341.89
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5AB",
+              "entity_handle": "5AB",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "ARRESTOR",
+              "cad_bbox": [
+                35035.62428084827,
+                30392.72505879554,
+                35035.62428084827,
+                30559.331757703407
+              ],
+              "image_bbox": [
+                457.18,
+                337.74,
+                465.18,
+                345.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5AC",
+              "entity_handle": "5AC",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CLASS B&C",
+              "cad_bbox": [
+                35014.3841843919,
+                30172.12999177743,
+                35014.3841843919,
+                30305.415350903724
+              ],
+              "image_bbox": [
+                456.9,
+                340.7,
+                464.9,
+                348.7
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5AE",
+              "entity_handle": "5AE",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "SURGE",
+              "cad_bbox": [
+                30433.90326751066,
+                30678.55959012876,
+                30433.90326751066,
+                30845.166289036628
+              ],
+              "image_bbox": [
+                396.48,
+                333.89,
+                404.48,
+                341.89
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5AF",
+              "entity_handle": "5AF",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "ARRESTOR",
+              "cad_bbox": [
+                30210.86471675309,
+                30392.72505879554,
+                30210.86471675309,
+                30559.331757703407
+              ],
+              "image_bbox": [
+                393.53,
+                337.74,
+                401.53,
+                345.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5B0",
+              "entity_handle": "5B0",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CLASS B&C",
+              "cad_bbox": [
+                30189.62462029672,
+                30172.12999177743,
+                30189.62462029672,
+                30305.415350903724
+              ],
+              "image_bbox": [
+                393.25,
+                340.7,
+                401.25,
+                348.7
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_12c4b41a83945ea7b24fba5c540f7dd1",
+          "category": "RELAY",
+          "label": "PHASE RELAY",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Phase failure monitoring relay.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5A2",
+              "entity_handle": "5A2",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "PHASE",
+              "cad_bbox": [
+                35979.44815170459,
+                31595.08905987277,
+                35979.44815170459,
+                31761.69575878064
+              ],
+              "image_bbox": [
+                469.63,
+                321.56,
+                477.63,
+                329.56
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5A3",
+              "entity_handle": "5A3",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "RELAY",
+              "cad_bbox": [
+                35979.44815170459,
+                31309.25452853965,
+                35979.44815170459,
+                31475.86122744752
+              ],
+              "image_bbox": [
+                469.63,
+                325.41,
+                477.63,
+                333.41
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    },
+    {
+      "id": "panel_f80cc7361a21502e9bf088958d873968",
+      "reference": "ATS-2 250A",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_0c0349279df55e32ac9ae569453b4aaf",
+          "category": "SWITCH",
+          "label": "IS 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 150.0,
+          "load_label": "FROM SUBSC",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Isolator switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5CE",
+              "entity_handle": "5CE",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "IS",
+              "cad_bbox": [
+                52707.35257960457,
+                30283.37535769285,
+                52707.35257960457,
+                30449.98205660072
+              ],
+              "image_bbox": [
+                690.31,
+                339.21,
+                698.31,
+                347.21
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5CF",
+              "entity_handle": "5CF",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                52419.23321874552,
+                29979.55021324077,
+                52419.23321874552,
+                30146.15691214864
+              ],
+              "image_bbox": [
+                686.51,
+                343.29,
+                694.51,
+                351.29
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5D2",
+              "entity_handle": "5D2",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x150mm2+E=1x70mm2)",
+              "cad_bbox": [
+                48398.56803836926,
+                31311.86429229405,
+                48398.56803836926,
+                31478.470991201917
+              ],
+              "image_bbox": [
+                633.47,
+                325.37,
+                641.47,
+                333.37
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f54b34949fbf59aeacfa0f7e771f44ea",
+          "category": "CONTACTOR",
+          "label": "C1 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "AC3 interlocked contactor C1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5D4",
+              "entity_handle": "5D4",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CONTACTOR",
+              "cad_bbox": [
+                51949.61156652003,
+                28674.44505062865,
+                51949.61156652003,
+                28841.051749536517
+              ],
+              "image_bbox": [
+                680.32,
+                360.85,
+                688.32,
+                368.85
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5D5",
+              "entity_handle": "5D5",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "C1 4x250A",
+              "cad_bbox": [
+                51932.69844799182,
+                28329.76914732185,
+                51932.69844799182,
+                28496.37584622972
+              ],
+              "image_bbox": [
+                680.09,
+                365.49,
+                688.09,
+                373.49
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:607",
+              "entity_handle": "607",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                51932.69844799182,
+                28045.72072020079,
+                51932.69844799182,
+                28212.327419108657
+              ],
+              "image_bbox": [
+                680.09,
+                369.31,
+                688.09,
+                377.31
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_30492cabd1df5d3092437e66cd93de99",
+          "category": "CONTACTOR",
+          "label": "C2 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "AC3 interlocked contactor C2.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5D7",
+              "entity_handle": "5D7",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CONTACTOR",
+              "cad_bbox": [
+                53815.40742635164,
+                28674.44505062865,
+                53815.40742635164,
+                28841.051749536517
+              ],
+              "image_bbox": [
+                704.93,
+                360.85,
+                712.93,
+                368.85
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5D8",
+              "entity_handle": "5D8",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "C2 4x250A",
+              "cad_bbox": [
+                53798.49430782344,
+                28329.76914732185,
+                53798.49430782344,
+                28496.37584622972
+              ],
+              "image_bbox": [
+                704.71,
+                365.49,
+                712.71,
+                373.49
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:608",
+              "entity_handle": "608",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                53798.49430782344,
+                28045.72072020079,
+                53798.49430782344,
+                28212.327419108657
+              ],
+              "image_bbox": [
+                704.71,
+                369.31,
+                712.71,
+                377.31
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_018c5a405063559da172221d945d3be4",
+          "category": "SWITCH",
+          "label": "MTS1 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "3 POSITIONS",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Manual Transfer Switch 1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5E2",
+              "entity_handle": "5E2",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MTS1",
+              "cad_bbox": [
+                53594.67550006319,
+                26373.16682724917,
+                53594.67550006319,
+                26539.773526157038
+              ],
+              "image_bbox": [
+                702.02,
+                391.81,
+                710.02,
+                399.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5E3",
+              "entity_handle": "5E3",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                53594.67550006319,
+                26087.33229591584,
+                53594.67550006319,
+                26253.938994823708
+              ],
+              "image_bbox": [
+                702.02,
+                395.66,
+                710.02,
+                403.66
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:611",
+              "entity_handle": "611",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "3 POSITIONS",
+              "cad_bbox": [
+                54937.79163282035,
+                25569.20254835424,
+                54937.79163282035,
+                25712.089289816715
+              ],
+              "image_bbox": [
+                719.74,
+                402.63,
+                727.74,
+                410.63
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_06f696c324b25a2f90eeffe4b2125912",
+          "category": "SWITCH",
+          "label": "MTS2 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "3 POSITIONS",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Manual Transfer Switch 2.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:5F1",
+              "entity_handle": "5F1",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MTS2",
+              "cad_bbox": [
+                53594.67550006319,
+                25108.45341930349,
+                53594.67550006319,
+                25275.060118211357
+              ],
+              "image_bbox": [
+                702.02,
+                408.82,
+                710.02,
+                416.82
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5F2",
+              "entity_handle": "5F2",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                53594.67550006319,
+                24822.61888797007,
+                53594.67550006319,
+                24989.22558687794
+              ],
+              "image_bbox": [
+                702.02,
+                412.67,
+                710.02,
+                420.67
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:60E",
+              "entity_handle": "60E",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "3 POSITIONS",
+              "cad_bbox": [
+                54937.79163282035,
+                23817.13952949031,
+                54937.79163282035,
+                23960.026270952785
+              ],
+              "image_bbox": [
+                719.74,
+                426.2,
+                727.74,
+                434.2
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_e2a85e089afe5ab6b9bbf51946ee0185",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Power monitoring meter.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:617",
+              "entity_handle": "617",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "DIGITAL",
+              "cad_bbox": [
+                56802.90529419106,
+                30678.55959012876,
+                56802.90529419106,
+                30845.166289036628
+              ],
+              "image_bbox": [
+                744.34,
+                333.89,
+                752.34,
+                341.89
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:618",
+              "entity_handle": "618",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "POWER",
+              "cad_bbox": [
+                56802.90529419106,
+                30392.72505879554,
+                56802.90529419106,
+                30559.331757703407
+              ],
+              "image_bbox": [
+                744.34,
+                337.74,
+                752.34,
+                345.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:619",
+              "entity_handle": "619",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "METER",
+              "cad_bbox": [
+                56802.90529419106,
+                30172.12999177743,
+                56802.90529419106,
+                30338.7366906853
+              ],
+              "image_bbox": [
+                744.34,
+                340.7,
+                752.34,
+                348.7
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_5acfa0d731245b7abe4de657794d6bac",
+          "category": "SPD",
+          "label": "SURGE ARRESTOR CLASS B&C",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "Class B & C",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Two Surge Arrestors (Class B&C).",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:61B",
+              "entity_handle": "61B",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "SURGE",
+              "cad_bbox": [
+                55395.85188652525,
+                30678.55959012876,
+                55395.85188652525,
+                30845.166289036628
+              ],
+              "image_bbox": [
+                725.78,
+                333.89,
+                733.78,
+                341.89
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:61C",
+              "entity_handle": "61C",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "ARRESTOR",
+              "cad_bbox": [
+                55172.81333576768,
+                30392.72505879554,
+                55172.81333576768,
+                30559.331757703407
+              ],
+              "image_bbox": [
+                722.84,
+                337.74,
+                730.84,
+                345.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:61D",
+              "entity_handle": "61D",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CLASS B&C",
+              "cad_bbox": [
+                55151.57323931457,
+                30172.12999177743,
+                55151.57323931457,
+                30305.415350903724
+              ],
+              "image_bbox": [
+                722.56,
+                340.7,
+                730.56,
+                348.7
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:61F",
+              "entity_handle": "61F",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "SURGE",
+              "cad_bbox": [
+                50571.09232243333,
+                30678.55959012876,
+                50571.09232243333,
+                30845.166289036628
+              ],
+              "image_bbox": [
+                662.13,
+                333.89,
+                670.13,
+                341.89
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:620",
+              "entity_handle": "620",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "ARRESTOR",
+              "cad_bbox": [
+                50348.05377167273,
+                30392.72505879554,
+                50348.05377167273,
+                30559.331757703407
+              ],
+              "image_bbox": [
+                659.19,
+                337.74,
+                667.19,
+                345.74
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:621",
+              "entity_handle": "621",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CLASS B&C",
+              "cad_bbox": [
+                50326.81367521962,
+                30172.12999177743,
+                50326.81367521962,
+                30305.415350903724
+              ],
+              "image_bbox": [
+                658.91,
+                340.7,
+                666.91,
+                348.7
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_b1cfb5fe6a6a58bf87d1d74e8b008fa0",
+          "category": "RELAY",
+          "label": "PHASE RELAY",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Phase failure monitoring relay.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:613",
+              "entity_handle": "613",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "PHASE",
+              "cad_bbox": [
+                56116.63720662749,
+                31595.08905987277,
+                56116.63720662749,
+                31761.69575878064
+              ],
+              "image_bbox": [
+                735.29,
+                321.56,
+                743.29,
+                329.56
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:614",
+              "entity_handle": "614",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "RELAY",
+              "cad_bbox": [
+                56116.63720662749,
+                31309.25452853965,
+                56116.63720662749,
+                31475.86122744752
+              ],
+              "image_bbox": [
+                735.29,
+                325.41,
+                743.29,
+                333.41
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    },
+    {
+      "id": "panel_e3d7b6dc4b2b5f6f8819d2be6907f554",
+      "reference": "ATS-3 250A",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_ba8f01f986a65933894912e87102d948",
+          "category": "SWITCH",
+          "label": "IS 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 150.0,
+          "load_label": "FROM ATS-1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Isolator switch.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:624",
+              "entity_handle": "624",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "IS",
+              "cad_bbox": [
+                42273.04124041946,
+                13994.5128691451,
+                42273.04124041946,
+                14161.119568052967
+              ],
+              "image_bbox": [
+                552.66,
+                558.34,
+                560.66,
+                566.34
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:625",
+              "entity_handle": "625",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                41984.92187956042,
+                13690.68772469293,
+                41984.92187956042,
+                13857.294423600799
+              ],
+              "image_bbox": [
+                548.86,
+                562.43,
+                556.86,
+                570.43
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:629",
+              "entity_handle": "629",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x150mm2+E=1x70mm2)",
+              "cad_bbox": [
+                37964.25669918439,
+                15023.0018037463,
+                37964.25669918439,
+                15189.608502654168
+              ],
+              "image_bbox": [
+                495.82,
+                544.5,
+                503.82,
+                552.5
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_dc2c80cce05d50a5a505d6befd21f94e",
+          "category": "CONTACTOR",
+          "label": "C1 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "AC3 interlocked contactor C1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:62B",
+              "entity_handle": "62B",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CONTACTOR",
+              "cad_bbox": [
+                41515.30022733515,
+                12385.58256208092,
+                41515.30022733515,
+                12552.189260988787
+              ],
+              "image_bbox": [
+                542.67,
+                579.98,
+                550.67,
+                587.98
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:62C",
+              "entity_handle": "62C",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "C1 4x250A",
+              "cad_bbox": [
+                41498.38710880695,
+                12040.90665877401,
+                41498.38710880695,
+                12207.513357681879
+              ],
+              "image_bbox": [
+                542.44,
+                584.62,
+                550.44,
+                592.62
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:660",
+              "entity_handle": "660",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                41498.38710880695,
+                11756.85823165304,
+                41498.38710880695,
+                11923.464930560907
+              ],
+              "image_bbox": [
+                542.44,
+                588.44,
+                550.44,
+                596.44
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4f7b10e0c6705aaaada744cb39e09177",
+          "category": "CONTACTOR",
+          "label": "C2 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "AC3 interlocked contactor C2.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:62E",
+              "entity_handle": "62E",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "CONTACTOR",
+              "cad_bbox": [
+                43381.09608716677,
+                12385.58256208092,
+                43381.09608716677,
+                12552.189260988787
+              ],
+              "image_bbox": [
+                567.28,
+                579.98,
+                575.28,
+                587.98
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:62F",
+              "entity_handle": "62F",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "C2 4x250A",
+              "cad_bbox": [
+                43364.18296863857,
+                12040.90665877401,
+                43364.18296863857,
+                12207.513357681879
+              ],
+              "image_bbox": [
+                567.06,
+                584.62,
+                575.06,
+                592.62
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:661",
+              "entity_handle": "661",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AC3",
+              "cad_bbox": [
+                43364.18296863857,
+                11756.85823165304,
+                43364.18296863857,
+                11923.464930560907
+              ],
+              "image_bbox": [
+                567.06,
+                588.44,
+                575.06,
+                596.44
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_34e1a898176e58fd94c90993e5f92135",
+          "category": "SWITCH",
+          "label": "MTS1 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "3 POSITIONS",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Manual Transfer Switch 1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:639",
+              "entity_handle": "639",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MTS1",
+              "cad_bbox": [
+                43160.36416087808,
+                10084.30433870131,
+                43160.36416087808,
+                10250.911037609178
+              ],
+              "image_bbox": [
+                564.37,
+                610.94,
+                572.37,
+                618.94
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:63A",
+              "entity_handle": "63A",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                43160.36416087808,
+                9798.46980736799,
+                43160.36416087808,
+                9965.076506275858
+              ],
+              "image_bbox": [
+                564.37,
+                614.79,
+                572.37,
+                622.79
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:66A",
+              "entity_handle": "66A",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "3 POSITIONS",
+              "cad_bbox": [
+                44503.48029363571,
+                9280.340059806498,
+                44503.48029363571,
+                9423.226801268975
+              ],
+              "image_bbox": [
+                582.09,
+                621.76,
+                590.09,
+                629.76
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_1c61d371b93e58ea9616483ff5df2cd2",
+          "category": "SWITCH",
+          "label": "MTS2 4x250A",
+          "poles": "4",
+          "amps": "250A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "3 POSITIONS",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Manual Transfer Switch 2.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:648",
+              "entity_handle": "648",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MTS2",
+              "cad_bbox": [
+                43160.36416087808,
+                8819.590930755745,
+                43160.36416087808,
+                8986.197629663613
+              ],
+              "image_bbox": [
+                564.37,
+                627.96,
+                572.37,
+                635.96
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:649",
+              "entity_handle": "649",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x250A",
+              "cad_bbox": [
+                43160.36416087808,
+                8533.756399422426,
+                43160.36416087808,
+                8700.363098330294
+              ],
+              "image_bbox": [
+                564.37,
+                631.8,
+                572.37,
+                639.8
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:667",
+              "entity_handle": "667",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "3 POSITIONS",
+              "cad_bbox": [
+                44503.48029363571,
+                7528.277040942572,
+                44503.48029363571,
+                7671.163782405049
+              ],
+              "image_bbox": [
+                582.09,
+                645.33,
+                590.09,
+                653.33
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_c6de65327bf959e8adfaa5e643341a84",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Power monitoring meter.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:670",
+              "entity_handle": "670",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "DIGITAL",
+              "cad_bbox": [
+                46368.59395500618,
+                14389.69710158092,
+                46368.59395500618,
+                14556.303800488788
+              ],
+              "image_bbox": [
+                606.69,
+                553.02,
+                614.69,
+                561.02
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:671",
+              "entity_handle": "671",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "POWER",
+              "cad_bbox": [
+                46368.59395500618,
+                14103.8625702478,
+                46368.59395500618,
+                14270.469269155668
+              ],
+              "image_bbox": [
+                606.69,
+                556.87,
+                614.69,
+                564.87
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:672",
+              "entity_handle": "672",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "METER",
+              "cad_bbox": [
+                46368.59395500618,
+                13883.26750322979,
+                46368.59395500618,
+                14049.874202137658
+              ],
+              "image_bbox": [
+                606.69,
+                559.84,
+                614.69,
+                567.84
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f60d094482855763974be93262a4da64",
+          "category": "RELAY",
+          "label": "PHASE RELAY",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Phase failure monitoring relay.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:66C",
+              "entity_handle": "66C",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "PHASE",
+              "cad_bbox": [
+                45682.32586744587,
+                15306.22657132504,
+                45682.32586744587,
+                15472.833270232908
+              ],
+              "image_bbox": [
+                597.64,
+                540.69,
+                605.64,
+                548.69
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:66D",
+              "entity_handle": "66D",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "RELAY",
+              "cad_bbox": [
+                45682.32586744587,
+                15020.39203999192,
+                45682.32586744587,
+                15186.998738899789
+              ],
+              "image_bbox": [
+                597.64,
+                544.54,
+                605.64,
+                552.54
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    },
+    {
+      "id": "panel_56a8d4e82f335695990c2487abb17d59",
+      "reference": "UTILITY FEEDERS",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_c49a323a6e6c5fdb804620fc9184d356",
+          "category": "MCCB",
+          "label": "GENERATOR SUBSCRIPTION",
+          "poles": "4",
+          "amps": "150A",
+          "curve": "-",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 70.0,
+          "load_label": "FROM GENERATOR SUBSCRIPTION",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Incomer protection for Gen subscription.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:5B8",
+              "entity_handle": "5B8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                52775.26985130409,
+                45454.37336864277,
+                52775.26985130409,
+                45454.37336864277
+              ],
+              "image_bbox": [
+                691.21,
+                135.11,
+                699.21,
+                143.11
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5BA",
+              "entity_handle": "5BA",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=160A",
+              "cad_bbox": [
+                51196.78563261719,
+                45952.48083453145,
+                51196.78563261719,
+                46106.484080841445
+              ],
+              "image_bbox": [
+                670.39,
+                128.41,
+                678.39,
+                136.41
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5BB",
+              "entity_handle": "5BB",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=150A",
+              "cad_bbox": [
+                51843.24671091972,
+                45746.80677690812,
+                51843.24671091972,
+                45900.81002321811
+              ],
+              "image_bbox": [
+                678.91,
+                131.18,
+                686.91,
+                139.18
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5BC",
+              "entity_handle": "5BC",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x160A",
+              "cad_bbox": [
+                52808.22684209456,
+                45351.34133668397,
+                52808.22684209456,
+                45505.34458299396
+              ],
+              "image_bbox": [
+                691.64,
+                136.5,
+                699.64,
+                144.5
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5BD",
+              "entity_handle": "5BD",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x70mm2+E=1x35mm2)",
+              "cad_bbox": [
+                52651.6097336928,
+                40743.02929340104,
+                52651.6097336928,
+                40914.14401152326
+              ],
+              "image_bbox": [
+                689.58,
+                198.49,
+                697.58,
+                206.49
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5C0",
+              "entity_handle": "5C0",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=36ka",
+              "cad_bbox": [
+                51743.39862800923,
+                45523.18607282038,
+                51743.39862800923,
+                45677.189319130375
+              ],
+              "image_bbox": [
+                677.6,
+                134.19,
+                685.6,
+                142.19
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_dfea2abfd22a5591a84724054a1e6d8c",
+          "category": "MCCB",
+          "label": "SOLAR INCOMER",
+          "poles": "4",
+          "amps": "70A",
+          "curve": "-",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 25.0,
+          "load_label": "FROM SOLAR",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER ELECTRIC",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Solar feeder MCCB.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:5C3",
+              "entity_handle": "5C3",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                54615.61909928681,
+                45454.27582247446,
+                54615.61909928681,
+                45454.27582247446
+              ],
+              "image_bbox": [
+                715.49,
+                135.11,
+                723.49,
+                143.11
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5C5",
+              "entity_handle": "5C5",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "MCCB: AF=80A",
+              "cad_bbox": [
+                53095.8027839561,
+                46174.51402939102,
+                53095.8027839561,
+                46328.517275701015
+              ],
+              "image_bbox": [
+                695.44,
+                125.42,
+                703.44,
+                133.42
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5C6",
+              "entity_handle": "5C6",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "AT=70A",
+              "cad_bbox": [
+                53742.2638622619,
+                45968.83997176758,
+                53742.2638622619,
+                46122.84321807757
+              ],
+              "image_bbox": [
+                703.97,
+                128.19,
+                711.97,
+                136.19
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5C7",
+              "entity_handle": "5C7",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x80A",
+              "cad_bbox": [
+                54707.24399343697,
+                45358.67160968574,
+                54707.24399343697,
+                45512.674855995734
+              ],
+              "image_bbox": [
+                716.7,
+                136.4,
+                724.7,
+                144.4
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5C8",
+              "entity_handle": "5C8",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "(4x25mm2+E=1x16mm2)",
+              "cad_bbox": [
+                54505.18744649548,
+                40730.96526348499,
+                54505.18744649548,
+                40902.07998160721
+              ],
+              "image_bbox": [
+                714.03,
+                198.66,
+                722.03,
+                206.66
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:5CB",
+              "entity_handle": "5CB",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "Icc=36ka",
+              "cad_bbox": [
+                53583.74787599521,
+                45745.21926767984,
+                53583.74787599521,
+                45899.22251398983
+              ],
+              "image_bbox": [
+                701.88,
+                131.2,
+                709.88,
+                139.2
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

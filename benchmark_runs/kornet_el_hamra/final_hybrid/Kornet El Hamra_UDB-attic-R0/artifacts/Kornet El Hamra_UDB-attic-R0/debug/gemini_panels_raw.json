@@ -1,0 +1,112 @@
+{
+  "panels": [
+    {
+      "panel_ref": "UDB-ATTIC",
+      "components": [
+        {
+          "category": "MCB",
+          "label": "4x25 Amp",
+          "poles": "4P",
+          "amps": "25",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "3x32",
+          "meter_accuracy": "CLASS C",
+          "cable_size": 6,
+          "load_label": "MAIN BREAKER",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Main incomer identified from both layout and schematic text.",
+          "evidence_ids": [
+            "text:11407DA",
+            "block:1140748"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "3x32",
+          "meter_accuracy": "CLASS C",
+          "cable_size": 2.5,
+          "load_label": "Lighting/Sockets",
+          "qty": 4,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Grouped from 2x10 layout blocks and schematic IDs.",
+          "evidence_ids": [
+            "block:1141ACC",
+            "block:1141ACD",
+            "block:1141B66",
+            "block:1141ADE"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "30mA",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "3x32",
+          "meter_accuracy": "CLASS C",
+          "cable_size": 2.5,
+          "load_label": "Sockets - Living/Family Room",
+          "qty": 4,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Grouped from 2x16 layout blocks and schematic IDs.",
+          "evidence_ids": [
+            "block:1141B13",
+            "block:1141B37",
+            "block:1141B50",
+            "block:1141B97"
+          ]
+        },
+        {
+          "category": "METER",
+          "label": "POWER METER",
+          "poles": "3P+N",
+          "amps": "63",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "3x32",
+          "meter_accuracy": "CLASS 1.0",
+          "cable_size": 6,
+          "load_label": "DIGITAL POWER METER",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Meter identified from layout block.",
+          "evidence_ids": [
+            "block:1140CE2"
+          ]
+        }
+      ]
+    }
+  ]
+}

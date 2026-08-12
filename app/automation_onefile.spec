@@ -3,6 +3,9 @@
 from pathlib import Path
 from PyInstaller.utils.hooks import collect_submodules
 
+# SPECPATH is the directory containing this spec (``app``), so its parent is
+# the repository root.  Using two parents incorrectly pointed release builds
+# at the Desktop and made ``run_app.py`` impossible to locate.
 project_root = Path(SPECPATH).resolve().parent
 
 datas = [
@@ -61,7 +64,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name="AutomationPlatform",
+    name="TechnicatAutomation",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

@@ -1,93 +1,113 @@
-# ⚡ Technicat Group: AI-Powered Electrical Panel Estimator & BOM Generator
+# Technicat Automation Platform
 
-Welcome to **Technelec**, an enterprise-grade automation pipeline built to solve the most painful bottleneck in electrical panel building: **turning messy Single Line Diagrams (SLDs) into perfectly priced Bills of Materials (BOMs).**
+Windows desktop tooling for extracting electrical-panel BOMs from DWG/DXF single-line diagrams, reviewing the evidence, matching each component against the correct manufacturer price-list edition, and exporting a client offer.
 
-If you've ever spent 4 hours squinting at a PDF, manually counting 16A MCBs, guessing if a line is a 3-phase circuit, and digging through a 10,000-row Excel price list just to build a quote... this project is for you.
+For the verified current state, benchmark interpretation, decisions, and next work, start with [`PROJECT-HANDOFF.md`](PROJECT-HANDOFF.md). The older `recap.txt` and `todo-project.txt` are archived historical notes.
 
-## 🧠 What does it do?
+## Canonical workflow
 
-Technelec uses a **Hybrid AI + Deterministic Geometry Architecture** to read engineering drawings like a Senior Estimator. 
-
-1. **Ingest:** Takes a client `.dwg`, `.dxf`, or `.pdf` drawing.
-2. **Extract (The Python part):** Uses `ezdxf` to rip out exact block counts, attributes, and font-scaled text clusters. (We don't let AI guess quantities!).
-3. **Analyze (The AI part):** Sends a rendered image + the structured CAD payload to Google's **Gemini 3.0 Pro Vision**. Gemini stitches the text to the symbols, understands the panel hierarchy, and outputs a strict, Pydantic-validated JSON array of components.
-4. **Engineer (The Rules Engine):** Automatically applies shop-floor physics—sizing Phoenix Contact terminal blocks (PT vs. PTTB) based on phase counts and cable `mm²`.
-5. **Price (The SQL Matcher):** Bounces the extracted components against a normalized, multi-vendor SQLite database (`pricing.db`), navigating vendor jargon (e.g., translating "TPN 6000A" to Eaton's "3P+N 6kA"), and spits out a final priced offer.
-
-## 🏗️ Architecture & Workflow
-
-This isn't a wrapper for a chatbot. It's a multi-stage pipeline:
+The application uses one versioned file per project:
 
 ```text
-[ DWG / PDF ]  →  (ODA Converter)  →  [ DXF ]
-                                         ↓
-                                 [ ezdxf Extractor ]
-                                   (Blocks, Text)
-                                         ↓[ Gemini Vision API ] ←── (Payload + PNG Render)
-         ↓
-[ Pydantic JSON ]  →  (Terminal Math / Rules Engine)
-         ↓
-[ Matcher.py ]  ←── (SQLite Price List DB + Term Aliases)
-         ↓
-[ Final Excel / JSON Offer ]
+DWG / DXF drawings
+      ↓
+CAD evidence graph + full-sheet render
+      ↓
+Gemini structured extraction
+      ↓
+project.technelec.json  ← engineer review and overrides
+      ↓
+pricing.json            ← deterministic candidates and selected products
+      ↓
+offer.xlsx              ← client-facing export
 ```
 
-## 🚀 Features
+`project.technelec.json` is the internal source of truth. Excel is used only at system boundaries; it is not an interchange format between extraction and pricing.
 
-*   **Immune to the "Lazy Drafter":** If the drafter used perfect CAD attributes (`<AMPS="16A">`), Python grabs it instantly. If they just dropped dumb line-art and wrote "16A" floating nearby, Gemini Vision connects the dots spatially.
-*   **Structured Outputs:** Uses Pydantic to force Gemini to return perfect JSON. No more regex-stripping markdown fences.
-*   **Smart Terminal Logic:** Knows the difference between a 1P+N 2.5mm² circuit (gets one space-saving double-level PTTB 4 block) and a 3P 10mm² circuit (gets three single-level PT 10 blocks).
-*   **The 3-Tier Matcher:**
-    *   *Tier 1:* Instant SQL Keyword Match (Fast & Free).
-    *   *Tier 2:* AI Disambiguation (Picks the best from top 5 tied SQL results).
-    *   *Tier 3:* AI Substitution (If 20A doesn't exist in the catalog, AI safely up-sizes to 25A).
-*   **Universal Price List Importer:** Throw a Schneider, Eaton, or ABB Excel price list at it. It uses data-type heuristics to map the columns and cleans the messy vendor data into a standardized SQL schema.
+Each project can contain multiple source drawings and panels. Drawing paths and SHA-256 hashes are stored in the project JSON; renders, evidence graphs, and debug output remain as files in the adjacent `artifacts` directory.
 
-## 🛠️ Installation & Setup
+## Desktop usage
 
-**1. Clone the repo and install dependencies:**
-```bash
-git clone https://github.com/yourusername/technelec-estimator.git
-cd technelec-estimator
-pip install -r requirements.txt
+1. Install Python 3.11+ and the runtime dependencies:
+
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
+
+2. For native DWG input, install ODA File Converter. DXF input does not require ODA.
+
+3. Add the Gemini key and model in Preferences. The legacy-compatible environment file is `.venv/key.env`:
+
+   ```env
+   GEMINI_API_KEY=your_key
+   GEMINI_API_MODEL=gemini-3.6-flash
+   GEMINI_FALLBACK_MODEL=gemini-3.1-flash-lite
+   ```
+
+4. Start the desktop application:
+
+   ```powershell
+   python run_app.py
+   ```
+
+   A packaged build can instead be started directly from `dist\TechnicatAutomation.exe`. For that build, enter the key under **Preferences**; it is stored in the current Windows user's application-data folder, not embedded in the executable.
+
+5. Add one or more drawings to the project manifest and select the available price-list editions. After extraction, open **Panel review** to edit specifications, quantities, manufacturers, and forced catalog references. Choose **Approve** or **Exclude** for every row. Relevant edits recalculate terminal schedules and return that row to review. **Price approved components** remains locked until every included row has an explicit engineer decision.
+
+The active UI calls the importable services in `app/` directly. The older scripts in `Codes/` remain only as extraction/import compatibility modules and are not used as workbook-to-workbook subprocess adapters.
+
+## Project schema
+
+Schema version 1 exposes these main records:
+
+- `ProjectDocument`: metadata, drawings, panels, pricing/export configuration, and match results.
+- `Panel`: stable ID, drawing relationship, extraction/review state, components, terminals, and artifact paths.
+- `Component`: stable ID, electrical specifications, quantity, manufacturer, forced reference, confidence, evidence, conflicts, and override history.
+- `MatchResult`: component ID, selected edition/product, alternatives, score/tier, price/currency, and review state.
+
+Writes are atomic. Legacy `.sld.json` extraction files can be loaded and migrated in memory through `app.persistence.load_project`; their component and terminal sections remain separate.
+
+## Benchmarking
+
+The repository includes a normalized Kornet El Hamra truth set derived from the user-designated final offer, plus an explicit tuning/holdout manifest. Run the whole-dataset comparison with:
+
+```powershell
+python Codes/benchmark_dataset.py benchmark_runs/kornet_el_hamra/expected-offer.json benchmark_runs/kornet_el_hamra/final_hybrid --manifest benchmark_runs/kornet_el_hamra/benchmark-manifest.json --out benchmark-report.json
 ```
-*(Requires `ezdxf`, `google-genai`, `pydantic`, `pandas`, `openpyxl`, `matplotlib`, `pillow`)*
 
-**2. ODA File Converter (Optional but highly recommended):**
-If you want to process native binary `.dwg` files, install the free [ODA File Converter](https://www.opendesign.com/guestfiles/oda_file_converter). The script auto-detects it.
+For canonical-project-to-project comparisons, use:
 
-**3. API Key Setup:**
-Create a `.venv/key.env` file in the project root:
-```env
-GEMINI_API_KEY=your_google_api_key_here
-GEMINI_API_MODEL=gemini-3.0-pro-preview  # Or gemini-2.5-flash for testing
+```powershell
+python Codes/benchmark.py predicted/project.technelec.json verified/project.technelec.json --out benchmark-report.json
 ```
 
-**4. Build the Database:**
-Import a vendor price list (e.g., Schneider, Eaton) into the SQLite DB:
-```bash
-python import.py --file "Schneider_PL.xlsx" --manufacturer SCHNEIDER --year 2026 --half H1 --currency EUR --db pricing.db
+The report includes specification-aware precision, recall, F1, exact quantity agreement, missing/extra quantities, and silent high-confidence contradictions. Release targets are:
+
+- 100% quantity agreement for block-backed devices.
+- At least 95% component/specification F1 on the holdout drawings.
+- Zero silent high-confidence contradictions.
+
+These are acceptance targets, not general production accuracy claims. The dataset report separates the tuning and untouched holdout subsets and reports category-only, exact-row, per-field, and block-backed quantity scores.
+
+The Kornet El Hamra report currently proves **100% quantity agreement across 100 evaluated block-backed rows**. Exact offer alignment is deliberately lower: the final commercial offer contains calculated/control accessories absent from the SLD and, in several cases, product ratings that differ from explicit drawing labels (for example an SLD isolator labelled `4x80 Amp`). The application preserves the drawing evidence and routes those differences through engineer review instead of silently changing extraction to match the commercial offer. A manually verified *extraction BOM* is therefore still required before the 95% holdout target can be treated as a valid release gate; the offer remains authoritative for pricing/export comparison.
+
+## Tests
+
+Install development dependencies and run the suite:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
 ```
 
-## 🎮 How to Use It
+The current tests cover schema persistence/migration, CAD spatial association, terminal rules, manufacturer/edition selection, forced references, configurable Excel export, and benchmark metrics. UI smoke and interaction tests can run offscreen with `QT_QPA_PLATFORM=offscreen` on CI.
 
-**Step 1: Extract the SLD to JSON**
-```bash
-python extract_spatial.py path/to/client_drawing.dwg --manufacturer SCHNEIDER
-```
-*Outputs: `client_drawing_rawcomponents.sld.json`*
+## Packaging
 
-**Step 2: Price the Offer**
-```bash
-python match_offer_json.py --inputs client_drawing_rawcomponents.sld.json --manufacturer SCHNEIDER --out Final_Quote.json
+Build the Windows one-file executable from the repository root:
+
+```powershell
+.\build_single_exe.ps1
 ```
 
-## 🔮 What's Next?
-*   **Streamlit Web UI:** Moving away from the CLI to a browser-based dashboard where engineers can visually review and override AI matches before exporting to Excel.
-*   **AutoCAD Kit-of-Parts Drafter:** A script that takes the final BOM, opens AutoCAD, and auto-generates dynamic 2D DIN-rail footprints (18mm per module) ready for the draftsman to arrange.
-
-## 🤝 Contributing
-Panel builders of the world, unite! If you have better Regex for Eaton catalogs, or want to add support for ABB/Siemens aliases, pull requests are welcome. 
-
----
-*Built with Python, SQL, and a deep hatred for manual data entry.*
+The PyInstaller specification uses `run_app.py`, includes the canonical `app` services, the extraction compatibility module, the pricing database, and required runtime assets.

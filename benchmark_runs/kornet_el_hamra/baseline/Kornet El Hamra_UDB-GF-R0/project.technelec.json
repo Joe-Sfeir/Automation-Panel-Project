@@ -1,0 +1,531 @@
+{
+  "id": "project_0350c6cff4e1487194c68d86fa79bd57",
+  "name": "Kornet El Hamra_UDB-GF-R0",
+  "reference": "Kornet El Hamra_UDB-GF-R0",
+  "schema_version": 1,
+  "created_at": "2026-08-12T15:46:25+00:00",
+  "updated_at": "2026-08-12T15:49:28+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_ee8728434c1755b2bb8fed0a611015e0",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_UDB-GF-R0.dwg",
+      "sha256": "ad9e6f6533a4f54641c8b81c5aaf184bb076f85dab8e24631a022b774a3d6c51",
+      "filename": "Kornet El Hamra_UDB-GF-R0.dwg",
+      "added_at": "2026-08-12T15:46:25+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_73917ed082ac5d7fa5f6467629925748",
+      "reference": "UDB-GF",
+      "source_drawing_id": "drawing_ee8728434c1755b2bb8fed0a611015e0",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_e4694d5e09be58adb06184bbbd8faf4a",
+          "category": "SWITCH",
+          "label": "ISOL.S.",
+          "poles": "4P",
+          "amps": "25A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 6.0,
+          "load_label": "MAIN INCOMER",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Main switch rating 25A and incoming cable 6mm² clearly identified in image and clusters 017-018.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_ece90caa74e65bd7986091665fe44476",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "3P",
+          "amps": "100A",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 0.0,
+          "load_label": "Panel Monitoring",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Sourced from cluster 019 and visual block.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_47c00b1d2a7751e7b59d260237d19b85",
+          "category": "CT",
+          "label": "CT",
+          "poles": "3P",
+          "amps": "40/5",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 0.0,
+          "load_label": "Panel Monitoring",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "IMAGE_ONLY",
+          "notes": "Standard CT requirement for 3-phase digital meter; ratio inferred as standard 40/5 or similar based on typical panel sizes.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_754d174d5c3d59eeb549bda240eb3187",
+          "category": "PILOT_LAMP",
+          "label": "INDICATOR LAMP",
+          "poles": "R/Y/B",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 0.0,
+          "load_label": "Phase Indication",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Three separate color blocks found in DXF and image.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_726fa194288355c8a9583e69409bfbf6",
+          "category": "SPD",
+          "label": "TYPE 2 / CLASS C",
+          "poles": "4P",
+          "amps": "20kA",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "Up<=1.2KV, 20KA Max",
+          "cable_size": 0.0,
+          "load_label": "Surge Protection",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Sourced from clusters 059, 060, 063.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_eece2c69b3aa5ad19a005f9a0e4977ae",
+          "category": "FUSE_HOLDER",
+          "label": "gG",
+          "poles": "3P",
+          "amps": "32A",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 0.0,
+          "load_label": "SPD protection",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Cluster 062 specifies 3x32A fuse protection for SPD.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_3ad22b1de5d251d48557198cc1ee7ea2",
+          "category": "RCCB",
+          "label": "ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "10A",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "300mA",
+          "spd_type": "0",
+          "cable_size": 0.0,
+          "load_label": "Lighting Group",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Internal group protection identified in clusters 011-013.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1142537",
+              "entity_handle": "1142537",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501133.963650577,
+                69781.11165540457,
+                1499785.088774931,
+                70419.18687477741
+              ],
+              "image_bbox": [],
+              "confidence": 0.877285
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1142545",
+              "entity_handle": "1142545",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501133.963650577,
+                68195.48088885596,
+                1499785.617906676,
+                68088.30665268021
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:114254A",
+              "entity_handle": "114254A",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501133.109644222,
+                67799.07319720917,
+                1499785.617906676,
+                68088.30665268021
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_cbf92e7072e95f128093e5b5ce990fdd",
+          "category": "RCCB",
+          "label": "ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "16A",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "30mA",
+          "spd_type": "0",
+          "cable_size": 0.0,
+          "load_label": "Sockets Group",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Internal group protection identified in clusters 041-043.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1142537",
+              "entity_handle": "1142537",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501133.963650577,
+                69781.11165540457,
+                1499785.088774931,
+                70419.18687477741
+              ],
+              "image_bbox": [],
+              "confidence": 0.877285
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1142545",
+              "entity_handle": "1142545",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501133.963650577,
+                68195.48088885596,
+                1499785.617906676,
+                68088.30665268021
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:114254A",
+              "entity_handle": "114254A",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501133.109644222,
+                67799.07319720917,
+                1499785.617906676,
+                68088.30665268021
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_491fe3345f3458de9891042a1e0d5519",
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 2.5,
+          "load_label": "Lighting - Living Room1/2/Bar Area/Entrance/Dining, Lighting - Family Room/Office Room/Bathrooms, Spare",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Qty 3 confirmed by SLD symbol count and clusters 004, 006, 014.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1140ADB",
+              "entity_handle": "1140ADB",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1526413.606857804,
+                65161.51524137823,
+                1529392.668750136,
+                68344.5004436997
+              ],
+              "image_bbox": [],
+              "confidence": 0.057143
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1140ADC",
+              "entity_handle": "1140ADC",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1528573.606857804,
+                65161.51524137823,
+                1529392.668750136,
+                68344.5004436997
+              ],
+              "image_bbox": [],
+              "confidence": 0.289187
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_34dfb06ad6145c809f2b77f3386b1236",
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "cable_size": 2.5,
+          "load_label": "Sockets - Living Room, Sockets - Family Room, Sockets - Office Room, Spare, Sockets - Office Room, Sockets - Dining Room",
+          "quantity": 6,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Qty 6 confirmed by SLD symbol count and clusters 036, 044, 054, 066, 079, 081.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1140B3C",
+              "entity_handle": "1140B3C",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1530733.606857803,
+                65161.51524138117,
+                1529392.668750136,
+                68344.5004436997
+              ],
+              "image_bbox": [],
+              "confidence": 0.253019
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B9C",
+              "entity_handle": "1141B9C",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1535053.606857802,
+                65161.51524138177,
+                1538032.668750025,
+                68344.50044369989
+              ],
+              "image_bbox": [],
+              "confidence": 0.057143
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B9D",
+              "entity_handle": "1141B9D",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1537213.606857802,
+                65161.51524138177,
+                1538032.668750025,
+                68344.50044369989
+              ],
+              "image_bbox": [],
+              "confidence": 0.289187
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B9E",
+              "entity_handle": "1141B9E",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1539373.606857801,
+                65161.51524138237,
+                1538032.668750025,
+                68344.50044369989
+              ],
+              "image_bbox": [],
+              "confidence": 0.253019
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_1c60ee6b631356c093aee84f6e733bec",
+          "name": "PT 6",
+          "description": "Phoenix Contact feed-through terminal 6mm²",
+          "max_mm2": 6.0,
+          "quantity": 4,
+          "circuits": [
+            "MAIN INCOMER"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_2240a54759ed56c1938e55b8832d0788",
+          "name": "PTTB 4",
+          "description": "Phoenix Contact double-level terminal 2x4mm²",
+          "max_mm2": 4.0,
+          "quantity": 9,
+          "circuits": [
+            "Lighting - Living Room1/2/Bar Area/Entrance/Dining, Lighting - Family Room/Office Room/Bathrooms, Spare",
+            "Sockets - Living Room, Sockets - Family Room, Sockets - Office Room, Spare, Sockets - Office Room, Sockets - Dining Room"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-GF-R0\\artifacts\\Kornet El Hamra_UDB-GF-R0\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-GF-R0\\artifacts\\Kornet El Hamra_UDB-GF-R0\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-GF-R0\\artifacts\\Kornet El Hamra_UDB-GF-R0\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

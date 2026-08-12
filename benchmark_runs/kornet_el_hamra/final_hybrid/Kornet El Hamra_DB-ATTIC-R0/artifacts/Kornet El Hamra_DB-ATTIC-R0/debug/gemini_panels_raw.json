@@ -1,0 +1,128 @@
+{
+  "panels": [
+    {
+      "panel_ref": "DB-ATTIC",
+      "components": [
+        {
+          "category": "MCB",
+          "label": "4x40A",
+          "poles": "4P",
+          "amps": "40",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "TYPE 2 / CLASS C",
+          "ct_ratio": "80/5",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 16,
+          "load_label": "MAIN BREAKER",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": true,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Main Incomer, assumed parameters based on schematic context.",
+          "evidence_ids": [
+            "text:11407DA",
+            "text:1140F11",
+            "text:114172B",
+            "text:1141724",
+            "text:1141729",
+            "text:114172C"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "300mA",
+          "ct_ratio": "3x2.5",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 2.5,
+          "load_label": "Lighting/Sockets",
+          "qty": 7,
+          "manufacturer": "LEGRAND",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Grouped based on layout and schematic cross-reference.",
+          "evidence_ids": [
+            "block:11416A2",
+            "block:11416A3",
+            "block:11416B4",
+            "block:11416E7",
+            "block:114175D",
+            "block:1141760",
+            "block:1141735"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "30mA",
+          "spd_type": "30mA",
+          "ct_ratio": "3x2.5",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 2.5,
+          "load_label": "Lighting/Sockets",
+          "qty": 9,
+          "manufacturer": "LEGRAND",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Grouped based on layout and schematic cross-reference.",
+          "evidence_ids": [
+            "block:11416F0",
+            "block:1141719",
+            "block:1141732",
+            "block:1141798",
+            "block:11417A9",
+            "block:11417B1",
+            "block:11417B9",
+            "block:11417C1",
+            "block:11417C9"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x20",
+          "poles": "1P+N",
+          "amps": "20",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "30mA",
+          "spd_type": "30mA",
+          "ct_ratio": "3x4",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 4,
+          "load_label": "Appliance Sockets",
+          "qty": 5,
+          "manufacturer": "LEGRAND",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Grouped based on layout and schematic cross-reference.",
+          "evidence_ids": [
+            "block:114174B",
+            "block:114174E",
+            "block:114177D",
+            "block:1140B98",
+            "block:1140B99"
+          ]
+        }
+      ]
+    }
+  ]
+}

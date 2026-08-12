@@ -1,0 +1,225 @@
+{
+  "id": "project_7b82b2dd8fb2480e9e9e1f1493bbbd51",
+  "name": "Kornet El Hamra_B1-ATS",
+  "reference": "Kornet El Hamra_B1-ATS",
+  "schema_version": 1,
+  "created_at": "2026-08-12T18:55:40+00:00",
+  "updated_at": "2026-08-12T18:55:42+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-ATS.dwg",
+      "sha256": "89342759044c8879d12460a4615a14fe4824df90765c7976f6cd6cc3ae119bbb",
+      "filename": "Kornet El Hamra_B1-ATS.dwg",
+      "added_at": "2026-08-12T18:55:42+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_c6060fbc9e415d38b1d0822d33f1154e",
+      "reference": "KWH-1",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_13179144b292568f9478b5a69ec76a6a",
+          "category": "MCCB",
+          "label": "4x100A",
+          "poles": "4",
+          "amps": "100A",
+          "curve": "C",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 35.0,
+          "load_label": "KWH-1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "origin": "BOTH",
+          "notes": "Associated via block 4DB and label 4E1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4DB",
+              "entity_handle": "4DB",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                25150.94502727847,
+                50462.34889594377,
+                25150.94502727847,
+                50462.34889594377
+              ],
+              "image_bbox": [
+                326.78,
+                67.74,
+                334.78,
+                75.74
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4E1",
+              "entity_handle": "4E1",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x100A",
+              "cad_bbox": [
+                25183.90201807545,
+                50359.31686398505,
+                25183.90201807545,
+                50513.32011029504
+              ],
+              "image_bbox": [
+                327.22,
+                69.13,
+                335.22,
+                77.13
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    },
+    {
+      "id": "panel_c4a79fa950635893a28933e496b0c711",
+      "reference": "KWH-2",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_69e30ce5547b5231833dfd3caed62d41",
+          "category": "MCCB",
+          "label": "4x100A",
+          "poles": "4",
+          "amps": "100A",
+          "curve": "C",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 35.0,
+          "load_label": "KWH-2",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "origin": "BOTH",
+          "notes": "Associated via block 4E8 and label 4EC.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E8",
+              "entity_handle": "4E8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                27656.16964061554,
+                50462.34889594377,
+                27656.16964061554,
+                50462.34889594377
+              ],
+              "image_bbox": [
+                359.83,
+                67.74,
+                367.83,
+                75.74
+              ],
+              "confidence": 0.8
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4EC",
+              "entity_handle": "4EC",
+              "block_name": "",
+              "layer": "E-TEXT",
+              "text": "4x100A",
+              "cad_bbox": [
+                27689.12663140927,
+                50359.31686398505,
+                27689.12663140927,
+                50513.32011029504
+              ],
+              "image_bbox": [
+                360.27,
+                69.13,
+                368.27,
+                77.13
+              ],
+              "confidence": 0.8
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_flash31_lite\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

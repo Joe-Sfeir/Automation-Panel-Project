@@ -51,6 +51,10 @@ from PySide6.QtWidgets import (
     QStyledItemDelegate,
 )
 
+from app.pipeline import ProjectPipeline
+from app.persistence import CANONICAL_FILENAME
+from app.review_ui import ProjectReviewDialog
+
 SOURCE_ROOT = Path(__file__).resolve().parents[1]
 IS_FROZEN = bool(getattr(sys, "frozen", False))
 BUNDLE_ROOT = Path(getattr(sys, "_MEIPASS", SOURCE_ROOT))
@@ -61,7 +65,7 @@ BUNDLED_CODES_DIR = BUNDLE_ROOT / "Codes"
 CONFIG_PATH = PROJECT_ROOT / "app_config.json"
 HISTORY_PATH = PROJECT_ROOT / "app_history.json"
 DEFAULT_BRANDS = ["SCHNEIDER", "EATON", "LEGRAND", "ABB", "SIEMENS"]
-DEFAULT_GEMINI_MODEL = "gemini-3-flash-preview"
+DEFAULT_GEMINI_MODEL = "gemini-3.6-flash"
 
 
 def bootstrap_runtime_workspace() -> None:
@@ -109,9 +113,9 @@ def bootstrap_runtime_workspace() -> None:
 
 bootstrap_runtime_workspace()
 
-# ==========================================
-# MODERN SAAS THEME STYLESHEET (BLUE PALETTE)
-# ==========================================
+# Revision-takeoff workbench visual system. The base declarations below remain
+# for compatibility with older pages; the authored engineering overrides that
+# follow are the canonical application styling.
 APP_STYLESHEET = """
 /* Base App Styling */
 QWidget {
@@ -419,6 +423,87 @@ QLabel#statusChip[state="running"] {
     background-color: #DBEAFE; /* Blue 100 */
     color: #1D4ED8; /* Blue 700 */
 }
+"""
+
+APP_STYLESHEET += """
+QWidget { font-family: "Segoe UI", sans-serif; font-size: 13px; color: #20282D; }
+QMainWindow, QDialog { background-color: #F2F4F3; }
+QFrame#sidebar { background-color: #20292F; border-right: 1px solid #11181C; }
+QLabel#appLogo { font-size: 16px; font-weight: 700; color: #F7F8F7; letter-spacing: 0.3px; }
+QLabel#appLogoMark { min-height: 58px; max-height: 58px; color: #F7F8F7; font-size: 20px; font-weight: 700; }
+QPushButton#navBtn { text-align: left; padding: 10px 12px; border: none; border-left: 2px solid transparent; border-radius: 2px; background: transparent; color: #C3CDD2; font-size: 13px; font-weight: 500; }
+QPushButton#navBtn:hover { background-color: #2A353C; color: #FFFFFF; }
+QPushButton#navBtn:checked { background-color: #143E52; color: #FFFFFF; border-left: 2px solid #4FB0D9; }
+QLabel#pageTitle { font-size: 24px; font-weight: 700; color: #182126; letter-spacing: -0.2px; }
+QLabel#pageSubtitle { font-size: 14px; color: #5C686E; }
+QLabel#sectionTitle { font-size: 12px; font-weight: 700; color: #334047; letter-spacing: 0.8px; }
+QLabel#sectionDesc { color: #657178; }
+QFrame#card, QFrame#actionTile, QFrame#miniStat { background-color: #FAFBFA; border: 1px solid #C9D0D3; border-radius: 3px; }
+QFrame#actionTile:hover { border-color: #137EAE; background-color: #F1F8FA; }
+QLabel#tileIconBubble { background-color: #E5F1F5; color: #176E95; border: 1px solid #B9D6E2; border-radius: 3px; min-width: 62px; max-width: 62px; min-height: 62px; max-height: 62px; font-size: 18px; }
+QLabel#tileIconBubble[tone="deep"] { background-color: #25353D; color: #FFFFFF; }
+QLabel#tileTitle { font-size: 15px; color: #20282D; }
+QLabel#tileSubtitle, QLabel#statLabel { color: #657178; }
+QLabel#statValue { font-size: 22px; color: #20282D; }
+QLabel#statMeta { color: #316B49; }
+QPushButton { border-radius: 3px; padding: 7px 13px; font-size: 13px; font-weight: 600; min-height: 20px; }
+QPushButton[variant="primary"] { background-color: #137EAE; color: white; border: 1px solid #0E6E99; }
+QPushButton[variant="primary"]:hover { background-color: #0F709C; }
+QPushButton[variant="primary"]:pressed { background-color: #0A5E84; }
+QPushButton[variant="primary"]:disabled { background-color: #D6DCDE; border-color: #C4CBCE; color: #7B858A; }
+QPushButton[variant="secondary"] { background-color: #FAFBFA; color: #303B41; border: 1px solid #AEB8BC; }
+QPushButton[variant="secondary"]:hover { background-color: #EEF2F3; border-color: #75858D; }
+QPushButton[variant="ghost"] { background: transparent; color: #126F9A; border: 1px solid transparent; }
+QPushButton[variant="ghost"]:hover { background-color: #E8F2F6; }
+QPushButton[variant="approve"] { background-color: #EDF7EF; color: #23673B; border: 1px solid #6FAD80; }
+QPushButton[variant="approve"]:hover { background-color: #DFF0E4; }
+QPushButton[variant="warning"] { background-color: #FFF7E4; color: #815500; border: 1px solid #D7A538; }
+QPushButton[variant="warning"]:hover { background-color: #FFEDC0; }
+QPushButton[variant="danger"] { background-color: #FFF5F3; color: #9A3C2D; border: 1px solid #D78B7E; }
+QPushButton[variant="danger"]:hover { background-color: #FCE6E2; }
+QLineEdit, QSpinBox, QComboBox, QListWidget, QTextEdit { background-color: #FFFFFF; border: 1px solid #B8C1C5; border-radius: 3px; padding: 6px 8px; color: #20282D; selection-background-color: #B9DCEB; }
+QPushButton:focus, QLineEdit:focus, QSpinBox:focus, QComboBox:focus, QListWidget:focus, QTableWidget:focus { border: 2px solid #137EAE; }
+QListWidget::item { padding: 8px; border-radius: 2px; }
+QListWidget::item:selected { background-color: #DCECF3; color: #143E52; }
+QTextEdit#terminal { background-color: #182126; color: #DDE5E8; border: 1px solid #11181C; border-radius: 3px; padding: 10px; }
+QTableWidget { background-color: #FAFBFA; alternate-background-color: #F2F4F3; border: 1px solid #C4CCCF; gridline-color: #D8DDDF; selection-background-color: #C9E3EE; selection-color: #182126; }
+QHeaderView::section { background-color: #E8ECEE; color: #3E4A50; font-weight: 700; font-size: 11px; padding: 8px 7px; border: none; border-right: 1px solid #CAD1D4; border-bottom: 1px solid #AEB8BC; }
+QTableWidget::item { padding: 6px; }
+QProgressBar { background-color: #D9DFE1; border: 1px solid #C0C8CB; border-radius: 2px; min-height: 7px; max-height: 7px; }
+QProgressBar::chunk { background-color: #137EAE; border-radius: 1px; }
+QLabel#statusChip { background-color: #E8ECEE; color: #4F5C62; padding: 4px 9px; border: 1px solid #CAD1D4; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; }
+QLabel#statusChip[state="running"] { background-color: #DCEEF5; color: #0E6289; border-color: #8AC0D7; }
+QLabel#statusChip[state="complete"] { background-color: #E7F4EA; color: #27683D; border-color: #9BC2A6; }
+QLabel#statusChip[state="blocked"] { background-color: #FFF3D3; color: #795300; border-color: #D7B45F; }
+QFrame#workflowStrip { background-color: #F9FAF9; border-bottom: 1px solid #AEB8BC; }
+QFrame#drawingRegister { background-color: #EEF2F3; border-bottom: 1px solid #BFC7CA; }
+QLabel#workbenchBrand { font-size: 14px; font-weight: 800; color: #1E292F; letter-spacing: 0.7px; }
+QLabel#workflowStage { padding: 7px 13px; border: 1px solid #CDD4D7; border-right: none; color: #667278; font-size: 11px; font-weight: 700; }
+QLabel#workflowStage[state="active"] { background-color: #137EAE; color: white; border-color: #137EAE; }
+QLabel#workflowStage[state="complete"] { background-color: #EDF4F1; color: #316B49; }
+QLabel#projectReference { color: #4E5B62; font-family: "Cascadia Mono", "Consolas", monospace; }
+QFrame#panelNavigator, QFrame#decisionRail { background-color: #F5F7F6; }
+QFrame#panelNavigator { border-right: 1px solid #BFC7CA; }
+QFrame#decisionRail { border-left: 1px solid #BFC7CA; }
+QLabel#railTitle, QLabel#railSection { color: #46535A; font-size: 11px; font-weight: 800; letter-spacing: 0.8px; }
+QLabel#railSection { border-top: 1px solid #C7CED1; padding-top: 9px; }
+QLabel#railSummary { color: #5C686E; font-size: 11px; }
+QLabel#decisionTitle { font-size: 15px; font-weight: 700; color: #182126; }
+QLabel#decisionMeta { color: #47545B; font-family: "Cascadia Mono", "Consolas", monospace; font-size: 11px; }
+QLabel#evidencePreview { background-color: #FFFFFF; border: 1px solid #BEC7CA; color: #6C777C; }
+QTextEdit#evidenceText { font-family: "Cascadia Mono", "Consolas", monospace; font-size: 10px; }
+QLabel#conflictText { color: #795300; background-color: #FFF8E8; border: 1px solid #E1C77D; padding: 7px; }
+QFrame#tableToolbar { background-color: #F5F7F6; border-bottom: 1px solid #BFC7CA; }
+QLabel#tableTitle { font-size: 12px; font-weight: 800; color: #334047; letter-spacing: 0.7px; }
+QTabWidget#reviewTabs::pane { border: 1px solid #BFC7CA; background: #FAFBFA; }
+QTabBar::tab { background: #E8ECEE; border: 1px solid #C4CCCF; border-bottom: none; padding: 7px 13px; }
+QTabBar::tab:selected { background: #FAFBFA; color: #126F9A; }
+QFrame#reviewFooter { background-color: #F9FAF9; border-top: 1px solid #AEB8BC; }
+QLabel#gateLabel { font-size: 11px; font-weight: 800; letter-spacing: 0.5px; }
+QLabel#gateLabel[state="ready"] { color: #27683D; }
+QLabel#gateLabel[state="blocked"] { color: #795300; }
+QLabel#saveState { color: #5F6C72; font-size: 11px; }
+QLabel#saveState[state="dirty"] { color: #8A5B00; }
 """
 
 
@@ -1102,13 +1187,14 @@ class ProjectWorker(QObject):
     step = Signal(int, int, str)
     finished = Signal(dict)
     failed = Signal(str, dict)
+    cancelled = Signal(dict)
 
-    def __init__(self, cfg: AppConfig, project_name: str, project_ref: str, drawing_path: Path, output_dir: Path, brands: list[str], year: int, half: str, pricing_mode: str) -> None:
+    def __init__(self, cfg: AppConfig, project_name: str, project_ref: str, drawing_paths: list[Path], output_dir: Path, brands: list[str], year: int, half: str, pricing_mode: str) -> None:
         super().__init__()
         self.cfg = cfg
         self.project_name = project_name
         self.project_ref = project_ref
-        self.drawing_path = drawing_path
+        self.drawing_paths = drawing_paths
         self.output_dir = output_dir
         self.brands = [b.upper() for b in brands]
         self.year = year
@@ -1129,58 +1215,38 @@ class ProjectWorker(QObject):
             run_dir = self.output_dir / sanitize_filename(self.project_name)
             run_dir.mkdir(parents=True, exist_ok=True)
             ctx["output_dir"] = str(run_dir)
-            raw_path = run_dir / f"{sanitize_filename(self.project_name)}_rawcomponents.xlsx"
-            ctx["raw_output"] = str(raw_path)
-
             api_key, model = self._resolve_gemini_runtime_config()
-            env = os.environ.copy()
-            env["GEMINI_API_KEY"] = api_key
-            env["GEMINI_API_MODEL"] = model
-            # Force UTF-8 for child Python processes to avoid Windows cp1252
-            # crashes when pipeline scripts print Unicode (emoji/arrows).
-            env["PYTHONUTF8"] = "1"
-            env["PYTHONIOENCODING"] = "utf-8"
-
-            total = 2 + len(self.brands)
-            self.step.emit(1, total, "Extracting components from Drawing")
-            
-            cmd_extract = [
-                self.cfg.python_executable,
-                str(RUNTIME_CODES_DIR / "dwg_test3.py"),
-                str(self.drawing_path),
-                "--output",
-                str(raw_path),
-            ]
-            if self.cfg.gemini_api_key:
-                cmd_extract += ["--api-key", self.cfg.gemini_api_key]
             oda_path = resolve_oda_converter_path()
-            if oda_path:
-                cmd_extract += ["--oda-path", oda_path]
-            self._run(cmd_extract, env)
-
-            self.step.emit(2, total, "Preparing pricing input format")
-            pricing_input = self._prepare_pricing_input(raw_path, run_dir)
-
-            for idx, brand in enumerate(self.brands, start=3):
-                offer_path = run_dir / f"{sanitize_filename(self.project_name)}_offer_{brand}.xlsx"
-                self.step.emit(idx, total, f"Pricing against {brand} database")
-                cmd_price = [
-                    self.cfg.python_executable,
-                    str(RUNTIME_CODES_DIR / "match_offer.py"),
-                    "--inputs", str(pricing_input),
-                    "--db", self.cfg.db_path,
-                    "--manufacturer", brand,
-                    "--year", str(self.year),
-                    "--half", self.half,
-                    "--ref", self.project_ref,
-                    "--pricing-mode", self.pricing_mode,
-                    "--out", str(offer_path),
-                ]
-                self._run(cmd_price, env)
-                ctx["offers"].append(str(offer_path))
+            self.step.emit(1, 1, "Extracting components into canonical project JSON")
+            editions = {
+                brand: {"year": self.year, "half": self.half}
+                for brand in self.brands
+            }
+            pipeline = ProjectPipeline(
+                database=self.cfg.db_path,
+                api_key=api_key,
+                oda_path=oda_path,
+                progress=self.log.emit,
+                should_cancel=lambda: QThread.currentThread().isInterruptionRequested(),
+            )
+            result = pipeline.run(
+                project_dir=run_dir,
+                project_name=self.project_name,
+                project_reference=self.project_ref,
+                drawings=self.drawing_paths,
+                default_manufacturer=self.brands[0],
+                editions=editions,
+                pricing_mode=self.pricing_mode,
+                price_after_extraction=False,
+            )
+            ctx["raw_output"] = result["project_path"]
+            ctx["pricing_output"] = ""
 
             ctx["finished_at"] = datetime.now().replace(microsecond=0).isoformat()
             self.finished.emit(ctx)
+        except InterruptedError:
+            ctx["finished_at"] = datetime.now().replace(microsecond=0).isoformat()
+            self.cancelled.emit(ctx)
         except Exception as exc:
             ctx["finished_at"] = datetime.now().replace(microsecond=0).isoformat()
             self.failed.emit(str(exc), ctx)
@@ -1209,7 +1275,8 @@ class ProjectWorker(QObject):
         # Keep legacy script expectations satisfied without modifying script code.
         legacy_env.parent.mkdir(parents=True, exist_ok=True)
         legacy_env.write_text(
-            f"GEMINI_API_KEY={key}\nGEMINI_API_MODEL={model}\n",
+            f"GEMINI_API_KEY={key}\nGEMINI_API_MODEL={model}\n"
+            "GEMINI_FALLBACK_MODEL=gemini-3.1-flash-lite\n",
             encoding="utf-8",
         )
         return key, model
@@ -1475,14 +1542,14 @@ class HomePage(QWidget):
     def __init__(self) -> None:
         super().__init__()
         lay = QVBoxLayout(self)
-        lay.setContentsMargins(40, 40, 40, 40)
-        lay.setSpacing(32)
+        lay.setContentsMargins(28, 28, 28, 28)
+        lay.setSpacing(24)
 
         header_lay = QVBoxLayout()
         header_lay.setSpacing(8)
-        title = QLabel("Welcome, Joe")
+        title = QLabel("Engineering workbench")
         title.setObjectName("pageTitle")
-        desc = QLabel("Streamline your estimation workflow. Extract bill of materials from drawings and generate polished, multi-brand pricing offers automatically.")
+        desc = QLabel("Register source drawings, review evidence-backed panel BOMs, then price only engineer-approved components.")
         desc.setObjectName("pageSubtitle")
         desc.setWordWrap(True)
         header_lay.addWidget(title)
@@ -1505,25 +1572,25 @@ class HomePage(QWidget):
         tile_row = QHBoxLayout()
         tile_row.setSpacing(24)
         new_tile = ActionTile(
-            "\u2795",
+            "NEW",
             "New Project",
             "Start workflow",
             "default",
         )
         history_tile = ActionTile(
-            "\U0001F5CE",
+            "RUNS",
             "Job History",
             "View past runs",
             "deep",
         )
         pricing_db_tile = ActionTile(
-            "\U0001F5C3",
+            "DB",
             "Pricing DB",
             "Read/edit database",
             "default",
         )
         import_excel_tile = ActionTile(
-            "\U0001F4E5",
+            "XLS",
             "Import Excel",
             "Convert Excel to DB",
             "default",
@@ -1600,6 +1667,7 @@ class ProjectPage(QWidget):
     back_requested = Signal()
     refresh_brands_requested = Signal()
     start_requested = Signal(dict)
+    review_requested = Signal()
 
     def __init__(self) -> None:
         super().__init__()
@@ -1608,19 +1676,19 @@ class ProjectPage(QWidget):
 
     def _build(self) -> None:
         root = QVBoxLayout(self)
-        root.setContentsMargins(40, 40, 40, 40)
-        root.setSpacing(24)
+        root.setContentsMargins(28, 24, 28, 28)
+        root.setSpacing(18)
 
         header_row = QHBoxLayout()
         title_box = QVBoxLayout()
-        title = QLabel("New Project Workflow")
+        title = QLabel("Project intake and extraction")
         title.setObjectName("pageTitle")
-        subtitle = QLabel("Configure inputs and monitor execution in real time.")
+        subtitle = QLabel("Add every source drawing now. Extraction creates a reviewable project; it does not price raw results.")
         subtitle.setObjectName("pageSubtitle")
         title_box.addWidget(title)
         title_box.addWidget(subtitle)
         
-        self.back_btn = QPushButton("← Back to Dashboard")
+        self.back_btn = QPushButton("Back to overview")
         set_button_variant(self.back_btn, "secondary")
         self.back_btn.clicked.connect(self.back_requested.emit)
         
@@ -1629,36 +1697,44 @@ class ProjectPage(QWidget):
         header_row.addWidget(self.back_btn, 0, Qt.AlignTop)
 
         body = QHBoxLayout()
-        body.setSpacing(24)
+        body.setSpacing(16)
 
         # LEFT COLUMN: FORM
         config_card = QFrame()
         config_card.setObjectName("card")
         config_layout = QVBoxLayout(config_card)
-        config_layout.setContentsMargins(24, 24, 24, 24)
-        config_layout.setSpacing(20)
+        config_layout.setContentsMargins(18, 18, 18, 18)
+        config_layout.setSpacing(14)
         
-        config_title = QLabel("Configuration")
+        config_title = QLabel("PROJECT MANIFEST")
         config_title.setObjectName("sectionTitle")
         
         form = QFormLayout()
         form.setHorizontalSpacing(16)
-        form.setVerticalSpacing(16)
+        form.setVerticalSpacing(12)
         
         self.project_name = QLineEdit("Project_1")
         self.project_ref = QLineEdit("Client Project")
-        self.drawing = QLineEdit()
+        self.drawing_list = QListWidget()
+        self.drawing_list.setObjectName("drawingManifest")
+        self.drawing_list.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.drawing_list.setMinimumHeight(126)
+        self.drawing_list.setAccessibleName("Source drawing manifest")
         self.output = QLineEdit(str(PROJECT_ROOT / "output"))
+        self.output.setCursorPosition(0)
 
-        draw_btn = QPushButton("Browse")
+        draw_btn = QPushButton("Add drawings")
         set_button_variant(draw_btn, "secondary")
         draw_btn.clicked.connect(self._pick_drawing)
+        remove_draw_btn = QPushButton("Remove selected")
+        set_button_variant(remove_draw_btn, "secondary")
+        remove_draw_btn.clicked.connect(self._remove_drawings)
         out_btn = QPushButton("Browse")
         set_button_variant(out_btn, "secondary")
         out_btn.clicked.connect(self._pick_output)
 
         self.brand_list = QListWidget()
-        self.brand_list.setSelectionMode(QAbstractItemView.MultiSelection)
+        self.brand_list.setSelectionMode(QAbstractItemView.NoSelection)
         self.brand_list.setMinimumHeight(120)
         
         self.custom_brands = QLineEdit()
@@ -1673,30 +1749,49 @@ class ProjectPage(QWidget):
 
         form.addRow("Project Name", self.project_name)
         form.addRow("Reference", self.project_ref)
-        form.addRow("DWG/DXF File", self._line_with_button(self.drawing, draw_btn))
+        drawing_box = QWidget()
+        drawing_layout = QVBoxLayout(drawing_box)
+        drawing_layout.setContentsMargins(0, 0, 0, 0)
+        drawing_layout.setSpacing(6)
+        drawing_layout.addWidget(self.drawing_list)
+        drawing_actions = QHBoxLayout()
+        drawing_actions.addWidget(draw_btn)
+        drawing_actions.addWidget(remove_draw_btn)
+        drawing_actions.addStretch(1)
+        self.drawing_count = QLabel("No drawings selected")
+        self.drawing_count.setObjectName("sectionDesc")
+        drawing_actions.addWidget(self.drawing_count)
+        drawing_layout.addLayout(drawing_actions)
+        form.addRow("Source drawings", drawing_box)
         form.addRow("Output Folder", self._line_with_button(self.output, out_btn))
         
         brand_row = QVBoxLayout()
         brand_row.setSpacing(8)
         brand_row.addWidget(self.brand_list)
-        refresh_link = QPushButton("↻ Refresh Brands from DB")
+        refresh_link = QPushButton("Refresh brands from database")
         set_button_variant(refresh_link, "ghost")
         refresh_link.setCursor(Qt.PointingHandCursor)
         refresh_link.clicked.connect(self.refresh_brands_requested.emit)
         brand_row.addWidget(refresh_link, 0, Qt.AlignRight)
         
-        form.addRow("Target Brands", brand_row)
-        form.addRow("Custom Brands", self.custom_brands)
+        form.addRow("Available brands", brand_row)
+        form.addRow("Additional brands", self.custom_brands)
         form.addRow("Year", self.year)
         form.addRow("Half", self.half)
         form.addRow("Pricing Mode", self.pricing_mode)
 
-        self.start_btn = QPushButton("Execute Pipeline")
+        self.start_btn = QPushButton("Start evidence extraction")
         set_button_variant(self.start_btn, "primary")
         self.start_btn.setMinimumHeight(36)
         self.start_btn.clicked.connect(self._emit_start)
 
         config_layout.addWidget(config_title)
+        catalog_note = QLabel(
+            "Catalog settings below constrain matching after engineer review. They cannot bypass the review gate."
+        )
+        catalog_note.setObjectName("sectionDesc")
+        catalog_note.setWordWrap(True)
+        config_layout.addWidget(catalog_note)
         config_layout.addLayout(form)
         config_layout.addStretch(1)
         config_layout.addWidget(self.start_btn)
@@ -1705,11 +1800,11 @@ class ProjectPage(QWidget):
         run_card = QFrame()
         run_card.setObjectName("card")
         run_layout = QVBoxLayout(run_card)
-        run_layout.setContentsMargins(24, 24, 24, 24)
-        run_layout.setSpacing(16)
+        run_layout.setContentsMargins(18, 18, 18, 18)
+        run_layout.setSpacing(12)
         
         run_header = QHBoxLayout()
-        run_title = QLabel("Execution Monitor")
+        run_title = QLabel("EXTRACTION RUN")
         run_title.setObjectName("sectionTitle")
         self.status_chip = QLabel("Idle")
         self.status_chip.setObjectName("statusChip")
@@ -1727,20 +1822,29 @@ class ProjectPage(QWidget):
         self.log = QTextEdit()
         self.log.setObjectName("terminal")
         self.log.setReadOnly(True)
-        self.log.setPlaceholderText("Awaiting pipeline execution...\nSystem ready.")
+        self.log.setPlaceholderText("Run details will appear here after extraction starts.")
 
         run_controls = QHBoxLayout()
-        self.clear_log_btn = QPushButton("Clear Console")
+        self.clear_log_btn = QPushButton("Clear details")
         set_button_variant(self.clear_log_btn, "secondary")
-        self.open_output_btn = QPushButton("Open Outputs")
+        self.open_output_btn = QPushButton("Open project folder")
         set_button_variant(self.open_output_btn, "secondary")
         self.open_output_btn.setEnabled(False)
+        self.review_btn = QPushButton("Open panel review")
+        set_button_variant(self.review_btn, "primary")
+        self.review_btn.setEnabled(False)
+        self.cancel_btn = QPushButton("Cancel after current drawing")
+        set_button_variant(self.cancel_btn, "secondary")
+        self.cancel_btn.setEnabled(False)
         
         self.clear_log_btn.clicked.connect(self.log.clear)
         self.open_output_btn.clicked.connect(self._open_last_output)
+        self.review_btn.clicked.connect(self.review_requested.emit)
         
         run_controls.addWidget(self.clear_log_btn)
+        run_controls.addWidget(self.cancel_btn)
         run_controls.addStretch(1)
+        run_controls.addWidget(self.review_btn)
         run_controls.addWidget(self.open_output_btn)
 
         run_layout.addLayout(run_header)
@@ -1766,9 +1870,24 @@ class ProjectPage(QWidget):
         return row
 
     def _pick_drawing(self) -> None:
-        path, _ = QFileDialog.getOpenFileName(self, "Choose drawing", str(PROJECT_ROOT), "Drawing Files (*.dwg *.dxf);;All Files (*)")
-        if path:
-            self.drawing.setText(path)
+        paths, _ = QFileDialog.getOpenFileNames(self, "Choose drawings", str(PROJECT_ROOT), "Drawing Files (*.dwg *.dxf);;All Files (*)")
+        if paths:
+            existing = {self.drawing_list.item(index).text() for index in range(self.drawing_list.count())}
+            for path in paths:
+                if path not in existing:
+                    self.drawing_list.addItem(path)
+            self._update_drawing_count()
+
+    def _remove_drawings(self) -> None:
+        for item in self.drawing_list.selectedItems():
+            self.drawing_list.takeItem(self.drawing_list.row(item))
+        self._update_drawing_count()
+
+    def _update_drawing_count(self) -> None:
+        count = self.drawing_list.count()
+        self.drawing_count.setText(
+            f"{count} drawing{'s' if count != 1 else ''} selected" if count else "No drawings selected"
+        )
 
     def _pick_output(self) -> None:
         folder = QFileDialog.getExistingDirectory(self, "Choose output folder", self.output.text())
@@ -1776,13 +1895,17 @@ class ProjectPage(QWidget):
             self.output.setText(folder)
 
     def _emit_start(self) -> None:
-        selected = [item.text() for item in self.brand_list.selectedItems()]
+        selected = [
+            self.brand_list.item(index).text()
+            for index in range(self.brand_list.count())
+            if self.brand_list.item(index).checkState() == Qt.Checked
+        ]
         custom = [x.strip().upper() for x in self.custom_brands.text().split(",") if x.strip()]
         self.start_requested.emit(
             {
                 "project_name": self.project_name.text().strip(),
                 "project_ref": self.project_ref.text().strip(),
-                "drawing": self.drawing.text().strip(),
+                "drawings": [self.drawing_list.item(index).text() for index in range(self.drawing_list.count())],
                 "output": self.output.text().strip(),
                 "brands": sorted(set(selected + custom)),
                 "year": int(self.year.value()),
@@ -1798,6 +1921,7 @@ class ProjectPage(QWidget):
     def set_running(self, running: bool) -> None:
         self.start_btn.setEnabled(not running)
         self.back_btn.setEnabled(not running)
+        self.cancel_btn.setEnabled(running)
         if running:
             self.status_chip.setText("Running")
             self.status_chip.setProperty("state", "running")
@@ -1815,7 +1939,10 @@ class ProjectPage(QWidget):
     def set_brands(self, brands: list[str]) -> None:
         self.brand_list.clear()
         for brand in brands:
-            self.brand_list.addItem(QListWidgetItem(brand))
+            item = QListWidgetItem(brand)
+            item.setFlags(item.flags() | Qt.ItemIsUserCheckable)
+            item.setCheckState(Qt.Checked if brand.upper() == "SCHNEIDER" else Qt.Unchecked)
+            self.brand_list.addItem(item)
 
     def apply_defaults(self, cfg: AppConfig) -> None:
         self.year.setValue(cfg.default_year)
@@ -2349,8 +2476,8 @@ class PricingDbPage(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
-        self.setWindowTitle("Technicat Group")
-        self.resize(1280, 840)
+        self.setWindowTitle("Technicat Automation")
+        self.resize(1360, 860)
 
         self.cfg = load_config()
         default_db = PROJECT_ROOT / "pricing.db"
@@ -2381,9 +2508,9 @@ class MainWindow(QMainWindow):
         # Build Sidebar
         sidebar = QFrame()
         sidebar.setObjectName("sidebar")
-        sidebar.setFixedWidth(240)
+        sidebar.setFixedWidth(216)
         sidebar_lay = QVBoxLayout(sidebar)
-        sidebar_lay.setContentsMargins(20, 24, 20, 24)
+        sidebar_lay.setContentsMargins(14, 18, 14, 18)
         sidebar_lay.setSpacing(8)
 
         logo_lay = QVBoxLayout()
@@ -2392,7 +2519,7 @@ class MainWindow(QMainWindow):
         logo_mark = QLabel()
         logo_mark.setObjectName("appLogoMark")
         logo_mark.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        logo_mark.setFixedSize(180, 84)
+        logo_mark.setFixedSize(164, 58)
         logo_pixmap = self._load_company_logo(logo_mark.size())
         if logo_pixmap is not None:
             logo_mark.setPixmap(logo_pixmap)
@@ -2400,7 +2527,7 @@ class MainWindow(QMainWindow):
             logo_mark.setText("TG")
             logo_mark.setObjectName("appLogo")
 
-        logo = QLabel("Technicat Group")
+        logo = QLabel("Technicat Automation")
         logo.setObjectName("appLogo")
         logo_sub = QLabel("")
         logo_sub.setObjectName("appLogoSubtitle")
@@ -2410,15 +2537,15 @@ class MainWindow(QMainWindow):
         logo_lay.addWidget(logo_sub)
 
         sidebar_lay.addLayout(logo_lay)
-        sidebar_lay.addSpacing(32)
+        sidebar_lay.addSpacing(24)
 
         self.nav_group = QButtonGroup(self)
         self.nav_group.setExclusive(True)
 
-        self.nav_home = self._create_nav_button("🏠  Dashboard", self.show_home)
-        self.nav_project = self._create_nav_button("⚡  New Project", self.show_project)
-        self.nav_history = self._create_nav_button("🗂️  History", self.show_history)
-        self.nav_pricing_db = self._create_nav_button("🗃️  Pricing DB", self.show_pricing_db)
+        self.nav_home = self._create_nav_button("Overview", self.show_home)
+        self.nav_project = self._create_nav_button("Project intake", self.show_project)
+        self.nav_history = self._create_nav_button("Run history", self.show_history)
+        self.nav_pricing_db = self._create_nav_button("Pricing database", self.show_pricing_db)
 
         sidebar_lay.addWidget(self.nav_home)
         sidebar_lay.addWidget(self.nav_project)
@@ -2426,7 +2553,7 @@ class MainWindow(QMainWindow):
         sidebar_lay.addWidget(self.nav_pricing_db)
         sidebar_lay.addStretch(1)
 
-        settings_btn = QPushButton("⚙️  Preferences")
+        settings_btn = QPushButton("Preferences")
         settings_btn.setObjectName("navBtn")
         settings_btn.setCursor(Qt.PointingHandCursor)
         settings_btn.clicked.connect(self.open_settings)
@@ -2456,6 +2583,8 @@ class MainWindow(QMainWindow):
         self.project_page.back_requested.connect(self._nav_to_home)
         self.project_page.refresh_brands_requested.connect(self.refresh_brands)
         self.project_page.start_requested.connect(self.start_project)
+        self.project_page.cancel_btn.clicked.connect(self.cancel_project)
+        self.project_page.review_requested.connect(self.open_project_review)
         self.pricing_db_page.db_changed.connect(self.refresh_brands)
         self.pricing_db_page.db_changed.connect(self._refresh_home_overview)
         self.pricing_db_page.import_excel_requested.connect(self.import_excel_to_db)
@@ -2516,6 +2645,15 @@ class MainWindow(QMainWindow):
     def show_pricing_db(self) -> None:
         self.pricing_db_page.refresh_tables()
         self.stack.setCurrentWidget(self.pricing_db_page)
+
+    def open_project_review(self) -> None:
+        if not self.project_page.last_output_dir:
+            return
+        project_path = Path(self.project_page.last_output_dir) / CANONICAL_FILENAME
+        if not project_path.exists():
+            QMessageBox.warning(self, "Review unavailable", f"Project file not found: {project_path}")
+            return
+        ProjectReviewDialog(project_path, self.cfg.db_path, self).exec()
 
     def _nav_to_project(self) -> None:
         self.nav_project.setChecked(True)
@@ -2733,7 +2871,7 @@ class MainWindow(QMainWindow):
                 cfg=self.cfg,
                 project_name=payload["project_name"],
                 project_ref=payload["project_ref"] or payload["project_name"],
-                drawing_path=Path(payload["drawing"]),
+                drawing_paths=[Path(value) for value in payload["drawings"]],
                 output_dir=Path(payload["output"]),
                 brands=payload["brands"],
                 year=payload["year"],
@@ -2746,8 +2884,10 @@ class MainWindow(QMainWindow):
             self.worker.step.connect(self.project_page.set_progress)
             self.worker.finished.connect(self.on_finished)
             self.worker.failed.connect(self.on_failed)
+            self.worker.cancelled.connect(self.on_cancelled)
             self.worker.finished.connect(self.worker_thread.quit)
             self.worker.failed.connect(self.worker_thread.quit)
+            self.worker.cancelled.connect(self.worker_thread.quit)
             self.worker_thread.finished.connect(self._cleanup_worker)
             self.worker_thread.start()
         except Exception as exc:
@@ -2756,21 +2896,14 @@ class MainWindow(QMainWindow):
     def _validate(self, payload: dict) -> None:
         if not payload["project_name"].strip():
             raise ValueError("Project name is required.")
-        if not Path(payload["drawing"]).exists():
-            raise ValueError("Select a valid DWG/DXF file.")
+        if not payload["drawings"] or any(not Path(value).exists() for value in payload["drawings"]):
+            raise ValueError("Select one or more valid DWG/DXF files.")
         if not Path(payload["output"]).exists():
             raise ValueError("Output folder does not exist.")
         if not payload["brands"]:
             raise ValueError("Select at least one brand.")
         if not Path(self.cfg.db_path).exists():
             raise ValueError(f"Pricing DB not found: {self.cfg.db_path}")
-        if not IS_FROZEN and not Path(self.cfg.python_executable).exists():
-            raise ValueError(f"Python executable not found: {self.cfg.python_executable}")
-        if not (RUNTIME_CODES_DIR / "dwg_test3.py").exists():
-            raise ValueError("Missing script: Codes/dwg_test3.py")
-        if not (RUNTIME_CODES_DIR / "match_offer.py").exists():
-            raise ValueError("Missing script: Codes/match_offer.py")
-
         legacy_env = PROJECT_ROOT / ".venv" / "key.env"
         has_cfg_key = bool((self.cfg.gemini_api_key or "").strip())
         if not has_cfg_key and not legacy_env.exists():
@@ -2819,10 +2952,11 @@ class MainWindow(QMainWindow):
 
     def on_finished(self, ctx: dict) -> None:
         self.project_page.set_running(False)
-        self.project_page.set_progress(1, 1, "Completed Successfully")
+        self.project_page.set_progress(1, 1, "Extraction ready for review")
         output_dir = str(Path(ctx["raw_output"]).parent)
         self.project_page.last_output_dir = output_dir
         self.project_page.open_output_btn.setEnabled(True)
+        self.project_page.review_btn.setEnabled(True)
 
         self.history.append(
             JobRecord(
@@ -2836,7 +2970,35 @@ class MainWindow(QMainWindow):
         save_history(self.history)
         self._refresh_home_overview()
         
-        self.project_page.log.append("\n=== WORKFLOW COMPLETED SUCCESSFULLY ===")
+        self.project_page.log.append("\n=== EXTRACTION COMPLETE — REVIEW REQUIRED BEFORE PRICING ===")
+
+    def cancel_project(self) -> None:
+        if self.worker_thread is None:
+            return
+        self.worker_thread.requestInterruption()
+        self.project_page.cancel_btn.setEnabled(False)
+        self.project_page.progress_label.setText(
+            "Cancellation requested — finishing the current drawing safely"
+        )
+        self.project_page.log.append(
+            "Cancellation requested. The current drawing will finish before the run stops."
+        )
+
+    def on_cancelled(self, ctx: dict) -> None:
+        self.project_page.set_running(False)
+        self.project_page.set_progress(0, 1, "Run cancelled safely")
+        self.project_page.log.append(
+            "\n=== EXTRACTION CANCELLED — COMPLETED DRAWINGS WERE SAVED ==="
+        )
+        self.history.append(JobRecord(
+            finished_at=ctx.get("finished_at", datetime.now().replace(microsecond=0).isoformat()),
+            project_name=ctx.get("project_name", ""),
+            brands=ctx.get("brands", []),
+            status="cancelled",
+            output_dir=ctx.get("output_dir", ""),
+        ))
+        save_history(self.history)
+        self._refresh_home_overview()
 
     def on_failed(self, error: str, ctx: dict) -> None:
         self.project_page.set_running(False)

@@ -1,0 +1,180 @@
+{
+  "schematic_layers": [
+    "E-Panels & Risers"
+  ],
+  "physical_layout_layers": [],
+  "block_label_associations": [
+    {
+      "block_id": "block:51D",
+      "handle": "51D",
+      "block_name": "Generator",
+      "layer": "E-Panels & Risers",
+      "x": 43294.63266517638,
+      "y": 51164.24412997028,
+      "label_id": "text:131",
+      "label": "G",
+      "label_x": 43196.60823476734,
+      "label_y": 51018.97360655583,
+      "confidence": 0.883904,
+      "nearby_texts": [
+        {
+          "id": "text:131",
+          "text": "G",
+          "distance": 589.292
+        },
+        {
+          "id": "text:152",
+          "text": "G",
+          "distance": 3135.388
+        }
+      ]
+    },
+    {
+      "block_id": "block:531",
+      "handle": "531",
+      "block_name": "Generator",
+      "layer": "E-Panels & Risers",
+      "x": 40311.59519597116,
+      "y": 51164.23147922712,
+      "label_id": "text:152",
+      "label": "G",
+      "label_x": 40213.570765562115,
+      "label_y": 51018.960955812676,
+      "confidence": 0.883904,
+      "nearby_texts": [
+        {
+          "id": "text:152",
+          "text": "G",
+          "distance": 589.292
+        },
+        {
+          "id": "text:131",
+          "text": "G",
+          "distance": 2942.94
+        }
+      ]
+    }
+  ],
+  "associated_label_counts": {
+    "G": 2
+  },
+  "unassociated_blocks": [
+    {
+      "id": "block:4DB",
+      "handle": "4DB",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 25150.94502727847,
+      "y": 50462.34889594377,
+      "attributes": {}
+    },
+    {
+      "id": "block:4E8",
+      "handle": "4E8",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 27656.16964061554,
+      "y": 50462.34889594377,
+      "attributes": {}
+    },
+    {
+      "id": "block:4F2",
+      "handle": "4F2",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 26803.96552228994,
+      "y": 41291.74651060764,
+      "attributes": {}
+    },
+    {
+      "id": "block:504",
+      "handle": "504",
+      "name": "D.S.",
+      "layer": "E-Panels & Risers",
+      "x": 43294.3507585148,
+      "y": 43720.22532632076,
+      "attributes": {}
+    },
+    {
+      "id": "block:516",
+      "handle": "516",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 42745.11332097926,
+      "y": 41411.08108464226,
+      "attributes": {}
+    },
+    {
+      "id": "block:524",
+      "handle": "524",
+      "name": "D.S.",
+      "layer": "E-Panels & Risers",
+      "x": 40311.3132893033,
+      "y": 43720.21267557769,
+      "attributes": {}
+    },
+    {
+      "id": "block:534",
+      "handle": "534",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 40311.59519593181,
+      "y": 49249.33727621679,
+      "attributes": {}
+    },
+    {
+      "id": "block:540",
+      "handle": "540",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 40605.2378706324,
+      "y": 41411.08108464226,
+      "attributes": {}
+    },
+    {
+      "id": "block:549",
+      "handle": "549",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 43294.63265967529,
+      "y": 49249.25481822075,
+      "attributes": {}
+    },
+    {
+      "id": "block:5B8",
+      "handle": "5B8",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 52775.26985130409,
+      "y": 45454.37336864277,
+      "attributes": {}
+    },
+    {
+      "id": "block:5C3",
+      "handle": "5C3",
+      "name": "C.B.",
+      "layer": "E-Panels & Risers",
+      "x": 54615.61909928681,
+      "y": 45454.27582247446,
+      "attributes": {}
+    }
+  ],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "texts": [
+    {
+      "id": "text:131",
+      "layer": "E-Panels & Risers",
+      "x": 43196.60823476734,
+      "y": 51018.97360655583,
+      "text": "G"
+    },
+    {
+      "id": "text:152",
+      "layer": "E-Panels & Risers",
+      "x": 40213.570765562115,
+      "y": 51018.960955812676,
+      "text": "G"
+    }
+  ]
+}

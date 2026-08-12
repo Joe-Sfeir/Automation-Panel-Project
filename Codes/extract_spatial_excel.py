@@ -254,20 +254,20 @@ TERMINAL_MAP = PT_MAP
 #    CT        → always MBS
 #    everything else → project default brand (set via --manufacturer arg)
 # ─────────────────────────────────────────────────────────────────────────────
-# BRAND_OVERRIDES = {
-#     "TERMINAL": "PHOENIX",
-#     "SPD":      "DEHN",
-# }
+BRAND_OVERRIDES = {
+    "TERMINAL": "PHOENIX",
+    "SPD":      "DEHN",
+}
 
-# def default_brand_for(comp: dict, project_brand: str) -> str:
-#     """Return the default manufacturer for a component row."""
-#     cat   = comp.get("category", "OTHER").upper()
-#     label = (comp.get("label") or "").lower()
-#     if cat in BRAND_OVERRIDES:
-#         return BRAND_OVERRIDES[cat]
-#     if cat == "CT" or (cat == "METER" and re.search(r"\bct\b", label)):
-#         return "MBS"
-#     return project_brand
+def default_brand_for(comp: dict, project_brand: str) -> str:
+    """Return the default manufacturer for a component row."""
+    cat   = comp.get("category", "OTHER").upper()
+    label = (comp.get("label") or "").lower()
+    if cat in BRAND_OVERRIDES:
+        return BRAND_OVERRIDES[cat]
+    if cat == "CT" or (cat == "METER" and re.search(r"\bct\b", label)):
+        return "MBS"
+    return project_brand
 
 
 def terminal_for_cable(mm2: float) -> dict:

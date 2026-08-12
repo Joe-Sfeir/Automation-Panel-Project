@@ -1,0 +1,142 @@
+ARCHIVED NOTE — 2026-08-12
+This recap describes an obsolete Excel-based generation of the application.
+Use PROJECT-HANDOFF.md as the canonical current state. Keep this file only as historical context.
+
+/
+recap me of what we are doing and what we have built so far and what we still have todo
+
+Looking at the project files, here's the recap:
+
+What this system does
+It's an end-to-end pipeline for Technelec to turn an electrical Single Line Diagram (SLD) drawing into a priced client offer. The flow is:
+
+DWG/DXF drawing → component extraction (AI) → price matching against manufacturer catalogs → client-facing offer Excel
+
+The pipeline, stage by stage
+1. Drawing extraction (dwg_test3.py, extract.py, extract_test.py — three iterations of the same tool)
+
+Converts a DWG file to DXF using ODA File Converter, falling back to direct ezdxf read if ODA isn't found.
+Pulls exact block (symbol) counts from the DXF geometry — used as ground truth so the AI doesn't miscount repeated breaker symbols.
+Extracts all text and clusters it spatially so labels near a symbol can be associated with it.
+Renders the DXF to a PNG (skipping hatches for speed) so Gemini can also look at the drawing visually.
+Sends both the structured text and the image to Gemini with a long, detailed prompt to extract every component (MCB, MCCB, RCCB, RCBO, switches, contactors, SPDs, fuse holders, pilot lamps, meters/CTs) with full specs (poles, amps, curve, breaking capacity, cable size, etc.), plus incomer/terminal logic.
+Groups identical components and computes how many terminal blocks are needed (Phoenix Contact PT series), split between incomer terminals and outgoing circuit terminals.
+Writes a raw components Excel with a Drawing tab containing the rendered image.
+Versions differ in how they call Gemini: dwg_test3.py/extract.py use a JSON-prompt + manual parsing/fence-stripping approach; extract_test.py upgrades to Gemini's native structured outputs (Pydantic schema, response_schema=SLDResponse), which is more reliable. extract.py and extract_test.py also add a Manufacturer column (auto-assigning DEHN for SPDs, MBS for CTs, Phoenix for terminals, and a project default for everything else) — a feature missing from dwg_test3.py.
+
+2. Price list import (import.py)
+
+Loads manufacturer price-list Excels (you've got Schneider, Legrand, and Eaton PPLs as sample files) into a SQLite DB (schema.sql).
+Three-tier column detection per sheet: keyword rules → Gemini fallback → data-type heuristic — since manufacturer PPLs have wildly inconsistent layouts.
+Tokenizes descriptions/references through an alias table (term_aliases) so shorthand like "1p+n", "ic60n", "tmd" normalizes consistently.
+Validates the extraction quality with a Gemini sanity check before committing.
+3. Matching & offer generation (match_offer.py)
+
+Reads one or more raw-components Excels (auto-detecting old multi-sheet format vs new single-sheet format).
+Builds a pure-spec search query per component (deliberately ignoring the arbitrary SLD block label) and matches it against the imported price list DB using a three-tier strategy: keyword score ≥60% → fast match; 20-59% or tied → Gemini picks from top candidates; <20%/not found → Gemini suggests a substitute rating.
+Outputs a "Pricing Detail" sheet (per-component pricing, brand, matched PPL reference, match tier, color-coded confidence).
+4. Client export (export.py)
+
+Reads that Pricing Detail sheet and re-exports just the columns the user picks (description, brand, qty, ref, prices, etc.), grouped by panel with subtotals — a clean client-deliverable version, stripping internal match-confidence info.
+Things that look unresolved or worth flagging
+Three near-duplicate extractor files (dwg_test3.py, extract.py, extract_test.py) — it looks like you're mid-migration toward structured outputs and the manufacturer column. extract_test.py is the most advanced; dwg_test3.py looks like the oldest/superseded version. Worth confirming which one is "current" before any of these accumulate more drift.
+match_offer.py's infer_brand() has a typo: returns "DHEN" instead of "DEHN" for SPDs — this would break matching against the DEHN price list/brand tagging, and it's inconsistent with extract.py's default_brand_for() which correctly says "DEHN".
+write_offer() in match_offer.py only writes the Pricing Detail sheet — the docstring/header comments mention a client-facing offer letter with HT/TTC totals per panel (the "Elie format") but that part isn't implemented in the code shown; it says that's export.py's job, but export.py only does column-filtered Pricing Detail exports, not the lump-sum HT/TTC layout described in match_offer.py's own module docstring.
+No PySide6 UI yet — export.py's docstring describes how a UI would call it, but I don't see the actual UI code in this project.
+Want me to dig into any of these — fix the DHEN/DEHN typo, reconcile the three extractor versions, or build out the missing offer-letter HT/TTC layout?
+
+im worried about the code for extracing the data of the sld from the cad/xdf file
+
+now its been a while we worked on this project. have any new features/ai functions been created that might help us extract data from the sld in a more accurate way?
+
+I'll check what's actually new since this is a fast-moving area (Gemini's structured extraction capabilities, vision models, CAD-specific tooling).
+
+
+Searched the web
+Searched the web
+Good, there's real signal here. Let me dig a bit deeper on two specific things that are directly relevant to your SLD problem: the pointing/grounding capability (could fix the spare-circuit/symbol-counting headaches) and what model you're actually pinned to right now.
+
+
+Ran a command
+Ran a command
+No key.env is present (it's outside the project export), so I can't see which model string you're actually pinned to. That's worth checking on your end — if you're still on gemini-1.5-flash or gemini-2.0-flash, you're leaving real accuracy on the table.
+
+
+Searched the web
+Searched the web
+This gives me a clear picture. Here's the recap of what's genuinely new and relevant to your extraction problem, separated from stuff that's just hype.
+
+What's actually new and useful for you
+1. Gemini 3 / 3.1 — you're very likely behind on model version. Your code in extract_test.py already uses structured outputs correctly, but GEMINI_MODEL comes from key.env which I can't see. If it's still pointing at gemini-2.0-flash or 1.5-pro, that alone is probably costing you accuracy — Gemini 3 Pro is a real step up specifically on document, spatial, screen and video understanding, with "derendering" — the ability to reverse-engineer a visual document back into structured code — which is essentially what an SLD extraction is. Worth checking that env file first, before anything else. 
+Google
+
+2. media_resolution parameter — directly fixes a problem you likely have. Gemini 3 lets you set the resolution to media_resolution_low, media_resolution_medium, media_resolution_high, or media_resolution_ultra_high per individual media part, where higher resolutions improve the model's ability to read fine text or identify small details, but increase token usage and latency. Your PNG render is already a deliberate workaround for this (150 DPI, hatches stripped). With media_resolution_high or ultra_high set explicitly on that image part, you could likely get away with lower-effort rendering, or get materially better reads on tiny breaker-rating text without re-engineering your renderer. None of your three extractor files set this parameter — they're relying on Gemini's default, which is not optimized for dense technical drawings. 
+Google AI
+Google AI
+
+3. Pointing / grounded coordinates — this is the big one for your "did it correctly count the spare circuits" problem. Gemini 3 Pro can point at specific locations in images by outputting pixel-precise coordinates, and is described as Google's strongest spatial understanding model so far... combined with its strong reasoning, this enables the model to make sense of the physical world. Concretely, you could ask Gemini to return {category, x, y} points for every breaker symbol it identifies, then cross-check that against your count_dxf_blocks() ground truth by spatial proximity — e.g. if Gemini points to 14 MCB symbols but your block-count table says 16, you know exactly where the 2 missing ones cluster, instead of just trusting a qty number with a confidence score. This turns your current "trust the JSON number" approach into something you can actually visually audit. 
+Google
+Google
+
+4. Code Execution as a tool — relevant to your "zoom in on tiny text" problem. Gemini 3 Flash/Pro can treat vision as an active investigation... formulates a plan, then writes and executes Python code to zoom in, crop, annotate, or otherwise manipulate images step-by-step to visually ground its answers, and explicitly implicitly detects when details are too small (e.g., reading a distant gauge or serial number) and writes code to crop and re-examine the area at higher resolution. For an SLD with a panel full of tiny breaker labels, this is close to a direct fix for the "Gemini misreads amp rating on a cramped breaker" failure mode — instead of you pre-cropping or upscaling, the model does it adaptively per-region. Enabling this just means adding the code-execution tool to the GenerateContentConfig. 
+Google AI
+Google AI
+
+5. Structured Outputs now compose with tools. Gemini 3 lets you combine Structured Outputs with built-in tools, including Grounding with Google Search, URL Context, Code Execution, File Search, and Function Calling. Previously structured-output mode and tool use were often mutually exclusive in practice — now you could potentially keep your SLDResponse Pydantic schema and let Gemini use code execution to zoom into illegible regions in the same call, rather than having to choose one or the other. 
+Google AI
+
+6. One real caveat, in your favor for keeping the block-count injection. Google's own docs admit a known weakness directly applicable to you: for information-dense or complicated graphs, tables, or charts, the model can sometimes incorrectly extract information or misinterpret the provided resources, and that the model may occasionally guess when information is missing or prioritize a satisfying answer over strict instructions. That validates the architecture you already built — feeding exact DXF block counts as "hard facts" to override Gemini's own counting — that's still the right call, not something to remove. 
+Google
+Google
+
+What I'd suggest concretely
+Check key.env — confirm GEMINI_API_MODEL is on a Gemini 3.x model, not 1.5/2.0.
+Add media_resolution="media_resolution_high" (or ultra_high) to the image part in your types.Part.from_bytes config — cheap change, likely immediate accuracy gain on small text.
+Consider adding Code Execution as a tool in the GenerateContentConfig alongside your existing response_schema — lets Gemini self-zoom on illegible breaker labels instead of guessing.
+The more involved one: add a parallel "pointing" pass that asks Gemini for (x, y) coordinates per detected symbol, then spatially match those against your count_dxf_blocks() positions data (you're already capturing positions there but not using them for cross-validation) — this would let you flag exactly which symbol Gemini missed or double-counted instead of just a qty mismatch number.
+Want me to implement any of these against extract_test.py (since that's your most current/correct version), or do you want to check the model string in key.env first?
+
+but what about the function of extracting data from the sld itself. (anw how are we extracting the data in the first place)
+
+Good question to slow down on — let's be precise about what your current extraction pipeline is actually doing mechanically, because that's the part worth scrutinizing before talking about which AI model to use.
+
+How you're currently extracting data (mechanically, no AI involved yet)
+Looking at extract_dxf() and count_dxf_blocks() in your code, the extraction has two completely separate data sources, both pulled with ezdxf, before Gemini ever sees anything:
+
+1. Block inserts (the symbols) — every INSERT entity in modelspace. For each one you grab:
+
+ent.dxf.name — the block's name (e.g. MCB_1PN)
+ent.dxf.insert — its (x, y) position
+ent.dxf.layer — which layer it's on
+ent.attribs — any attached attribute text (ATTRIB entities tied to the block, like a rating label that's part of the block definition)
+This is genuinely solid ground truth — a block INSERT is a deterministic, unambiguous fact in the DXF. count_dxf_blocks() then tallies how many times each block name repeats, which becomes your "BLOCK INSTANCE COUNTS" table fed to Gemini as a hard constraint.
+
+2. Free text (the labels) — every TEXT/MTEXT entity anywhere in modelspace, independent of any block. For each: content, (x,y) position, layer.
+
+3. Spatial clustering (_cluster) — this is the part doing real work to bridge 1 and 2. It groups text entities together if they're within 80 units of each other (brute-force O(n²) nearest-neighbor), producing "clusters" like a breaker's load label + its amp rating + its pole config, which often live as 2-3 separate TEXT entities near each other on the drawing but aren't otherwise linked in the DXF data model.
+
+4. PNG render — the whole DXF rendered to an image via matplotlib (hatches stripped for speed), so Gemini also gets a literal visual on top of the structured text.
+
+So the actual extraction is: structured block/text dump (exact) + spatial proximity grouping (heuristic) + a flattened image render (visual) — all three get handed to Gemini in one prompt, and Gemini does the semantic work of deciding "this MCB block + this nearby text cluster = a 10A breaker on circuit L1."
+
+Where this is fragile — the actual weak points
+The 80-unit cluster radius is a fixed, hardcoded number. It assumes a roughly consistent drawing scale across every SLD you'll ever process. If a drawing is drawn at a different scale (different DWG template, different units, zoomed differently when text was placed), 80 units might cluster three unrelated circuits together, or fail to cluster a label with its breaker at all. This is the single most likely source of "label got attached to wrong breaker" errors, and it's silent — nothing tells you when clustering picked badly.
+
+Block attribs vs. nearby loose text are two unconnected data paths. If a manufacturer's block definition has the amp rating baked in as an ATTRIB, you get it cleanly in attribs. If the same information is just floating TEXT next to the symbol (common when a drafter typed it manually instead of using the block's attribute field), it only reaches Gemini via the cluster, with no explicit (x,y)-to-block linkage — Gemini has to visually/contextually infer "this cluster belongs to that block" from the prompt and image alone, even though you have the coordinates of both already in Python.
+
+You're not actually using position to link text to its nearest block in code at all. You compute blocks (with x,y) and clusters (with cx,cy) completely independently and just dump both as parallel lists of text into the prompt. The nearest-block-to-cluster association is something Gemini has to do purely visually/contextually — you have all the coordinate data needed to do this deterministically in Python and hand Gemini pre-linked pairs instead, which would remove a whole class of "wrong label on wrong breaker" mistakes.
+
+Layer name isn't used as a signal at all, despite being captured. Real CAD drawings usually put breakers, text, and wiring on separate, meaningfully-named layers (e.g. MCB-SYMBOLS, TEXT-RATINGS). That's a free, deterministic disambiguation signal you're throwing away — for instance, you could filter "candidate label text for this block" to only text on a layer plausibly associated with annotations, before even doing distance clustering.
+
+So to directly answer "how are we extracting the data" — it's not one extraction step, it's: exact DXF geometry/attribute extraction (very reliable) → proximity-based text clustering (the heuristic, fragile part) → handing all of it plus an image to an LLM to do final semantic assembly (relies on the model to fix any clustering mistakes upstream).
+
+Want me to look at strengthening the deterministic linking step (block↔nearest-text-cluster pairing in Python, using layer + distance + maybe a dynamic radius based on drawing extents) before we even talk about which Gemini features to bolt on? That would likely fix more real-world misextractions than any model upgrade, since right now Gemini is doing a job Python could do more reliably.
+
+
+
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.

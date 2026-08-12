@@ -1,0 +1,139 @@
+{
+  "panels": [
+    {
+      "panel_ref": "UDB-GF",
+      "components": [
+        {
+          "category": "MCB",
+          "label": "4x25 Amp",
+          "poles": "4P",
+          "amps": "25",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6,
+          "load_label": "Main Breaker",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": true,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Main incomer MCCB confirmed via layout block.",
+          "evidence_ids": [
+            "text:11407DA",
+            "text:11424C1"
+          ]
+        },
+        {
+          "category": "METER",
+          "label": "POWER METER",
+          "poles": "3P+N",
+          "amps": "100",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "100/5",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 0,
+          "load_label": "Digital Power Meter",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Digital power meter identified.",
+          "evidence_ids": [
+            "block:1140CE2",
+            "text:1140CE2"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2.5,
+          "load_label": "UL1, UL2, UR1",
+          "qty": 3,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Groups 3x 1P+N 10A breakers.",
+          "evidence_ids": [
+            "block:11424AA",
+            "block:11424AB",
+            "block:11424BC"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2.5,
+          "load_label": "UR2, UR3, UR4, UR5, R1, R2, R3, R4, R5",
+          "qty": 6,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Grouping 6x 1P+N 16A MCBs.",
+          "evidence_ids": [
+            "block:11424F1",
+            "block:11424F2",
+            "block:114251E",
+            "block:1142537",
+            "block:114254A",
+            "block:1142545"
+          ]
+        },
+        {
+          "category": "SPD",
+          "label": "SPD",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6,
+          "load_label": "SPD",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "data_source": "BOTH",
+          "ai_notes": "Type 2 SPD protection.",
+          "evidence_ids": [
+            "text:1142529",
+            "text:114252E"
+          ]
+        }
+      ]
+    }
+  ]
+}

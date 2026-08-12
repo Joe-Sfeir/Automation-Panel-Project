@@ -1,0 +1,64 @@
+{
+  "panels": [
+    {
+      "panel_ref": "KWH-1",
+      "components": [
+        {
+          "category": "MCCB",
+          "label": "4x100A",
+          "poles": "4",
+          "amps": "100",
+          "curve": "C",
+          "breaking_capacity": "36kA",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 35,
+          "load_label": "KWH-1",
+          "qty": 1,
+          "manufacturer": "N/A",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "data_source": "BOTH",
+          "ai_notes": "Associated via block 4DB and label 4E1.",
+          "evidence_ids": [
+            "block:4DB",
+            "text:4E1"
+          ]
+        }
+      ]
+    },
+    {
+      "panel_ref": "KWH-2",
+      "components": [
+        {
+          "category": "MCCB",
+          "label": "4x100A",
+          "poles": "4",
+          "amps": "100",
+          "curve": "C",
+          "breaking_capacity": "36kA",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 35,
+          "load_label": "KWH-2",
+          "qty": 1,
+          "manufacturer": "N/A",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "data_source": "BOTH",
+          "ai_notes": "Associated via block 4E8 and label 4EC.",
+          "evidence_ids": [
+            "block:4E8",
+            "text:4EC"
+          ]
+        }
+      ]
+    }
+  ]
+}

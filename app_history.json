@@ -118,5 +118,25 @@
     "status": "failed",
     "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_db2",
     "error": "Could not find expected components/terminals headers in extraction workbook."
+  },
+  {
+    "finished_at": "2026-08-12T17:57:26",
+    "project_name": "Project_test_1",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "failed",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\Project_test_1",
+    "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}"
+  },
+  {
+    "finished_at": "2026-08-12T17:59:58",
+    "project_name": "test_Project_1",
+    "brands": [
+      "SCHNEIDER"
+    ],
+    "status": "success",
+    "output_dir": "C:\\Users\\Joe\\Desktop\\Automation-Panel-Project\\output\\test_Project_1",
+    "error": ""
   }
 ]

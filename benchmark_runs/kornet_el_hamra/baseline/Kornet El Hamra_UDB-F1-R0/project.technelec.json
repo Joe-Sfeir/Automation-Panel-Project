@@ -1,0 +1,983 @@
+{
+  "id": "project_d1272cd03ecc4e54863646e06bc0ace2",
+  "name": "Kornet El Hamra_UDB-F1-R0",
+  "reference": "Kornet El Hamra_UDB-F1-R0",
+  "schema_version": 1,
+  "created_at": "2026-08-12T15:42:23+00:00",
+  "updated_at": "2026-08-12T15:45:53+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_b5ad197606fc5607a7661c5ba6b4e214",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_UDB-F1-R0.dwg",
+      "sha256": "de2db0f95b657593d4d4e775aba856f7840d60a2131c1a26094e464ed812f890",
+      "filename": "Kornet El Hamra_UDB-F1-R0.dwg",
+      "added_at": "2026-08-12T15:42:23+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_4669270eae785ba7ba1863c1fbf90787",
+      "reference": "UDB-F1",
+      "source_drawing_id": "drawing_b5ad197606fc5607a7661c5ba6b4e214",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_9c56ca3ba95f56368bbd8c7b23ca9879",
+          "category": "SWITCH",
+          "label": "ISOL.S.",
+          "poles": "4P",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 6.0,
+          "load_label": "Main Incomer",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Cable size 6mm² found in schematic supply line annotation.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4ce23b240b3856cdaa0917d0f43ffa21",
+          "category": "PILOT_LAMP",
+          "label": "indicator lamp",
+          "poles": "R/Y/B",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "300mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Phase Indication",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Qty 3 lamps for 3-phase indication as per block instances.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_b791ea9027dd5454b8826662dad49adc",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "4P",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Power Monitoring",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Digital power meter identified in schematic and layout.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_05d2014cf9f752a483b63f63fc49f081",
+          "category": "CT",
+          "label": "CT",
+          "poles": "3P",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Metering Circuits",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "IMAGE_ONLY",
+          "notes": "CTs inferred from 3-phase digital meter presence per rule.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_fc9ec0c2c19c54899089ec6fff99d61e",
+          "category": "SPD",
+          "label": "SPD",
+          "poles": "4P",
+          "amps": "2.5",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Surge Protection",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "SPD Type 2 / Class C specified in clusters 059 and 062.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f060d169476d5cd8b2ee1362258f426f",
+          "category": "FUSE_HOLDER",
+          "label": "Fuse gG",
+          "poles": "3P",
+          "amps": "32A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "SPD Protection",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "3P fuse holder for SPD protection.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_908412116f86566b9691da833ba2ea11",
+          "category": "RCCB",
+          "label": "ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "300mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Lighting Circuits Group",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Group RCCB for lighting section.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F32",
+              "entity_handle": "1141F32",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                71866.90696438712,
+                1499770.296366329,
+                72490.02729580589
+              ],
+              "image_bbox": [],
+              "confidence": 0.877285
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F40",
+              "entity_handle": "1141F40",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                70318.4394189295,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F45",
+              "entity_handle": "1141F45",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                69931.32253255567,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F87",
+              "entity_handle": "1141F87",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                67335.90273011361,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F8B",
+              "entity_handle": "1141F8B",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                66948.78584373978,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_7862cbb8a38a57779afa1b49d2db1636",
+          "category": "RCCB",
+          "label": "ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Socket Circuits Group",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Two 4P RCCBs for power circuits as per block count 4X16.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F32",
+              "entity_handle": "1141F32",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                71866.90696438712,
+                1499770.296366329,
+                72490.02729580589
+              ],
+              "image_bbox": [],
+              "confidence": 0.877285
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F40",
+              "entity_handle": "1141F40",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                70318.4394189295,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F45",
+              "entity_handle": "1141F45",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                69931.32253255567,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F87",
+              "entity_handle": "1141F87",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                67335.90273011361,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F8B",
+              "entity_handle": "1141F8B",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                66948.78584373978,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f40f8d6be6ec594d9325f06b5bf1dc2d",
+          "category": "MCB",
+          "label": "CB1",
+          "poles": "1P+N",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 2.5,
+          "load_label": "UL1, UL2, Spare",
+          "quantity": 15,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "deterministic_reconciled",
+          "notes": "Qty 3 matches block count 2x10 and schematic symbols.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EA6",
+              "entity_handle": "1141EA6",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x10AMP",
+              "cad_bbox": [
+                1501086.5552666,
+                73771.46743575025,
+                1499759.130565334,
+                72920.06309248226
+              ],
+              "image_bbox": [],
+              "confidence": 0.850754
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EA7",
+              "entity_handle": "1141EA7",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x10AMP",
+              "cad_bbox": [
+                1501086.5552666,
+                73384.35054937642,
+                1499759.130565334,
+                72920.06309248226
+              ],
+              "image_bbox": [],
+              "confidence": 0.888564
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EB8",
+              "entity_handle": "1141EB8",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x10AMP",
+              "cad_bbox": [
+                1501086.5552666,
+                72997.23366302143,
+                1499759.130565334,
+                72920.06309248226
+              ],
+              "image_bbox": [],
+              "confidence": 0.90553
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EED",
+              "entity_handle": "1141EED",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                71092.67319167715,
+                1499759.647295554,
+                70643.81287559052
+              ],
+              "image_bbox": [],
+              "confidence": 0.889573
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EEE",
+              "entity_handle": "1141EEE",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                70705.55630530333,
+                1499759.647295554,
+                70643.81287559052
+              ],
+              "image_bbox": [],
+              "confidence": 0.905602
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F19",
+              "entity_handle": "1141F19",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                71479.79007803212,
+                1499759.647295554,
+                70643.81287559052
+              ],
+              "image_bbox": [],
+              "confidence": 0.852496
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F32",
+              "entity_handle": "1141F32",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                71866.90696438712,
+                1499770.296366329,
+                72490.02729580589
+              ],
+              "image_bbox": [],
+              "confidence": 0.877285
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F40",
+              "entity_handle": "1141F40",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                70318.4394189295,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F45",
+              "entity_handle": "1141F45",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                69931.32253255567,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F60",
+              "entity_handle": "1141F60",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                68110.13650286125,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.889573
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F61",
+              "entity_handle": "1141F61",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                67723.01961648744,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.905602
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F7E",
+              "entity_handle": "1141F7E",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                68497.25338921622,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.852496
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F85",
+              "entity_handle": "1141F85",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                68884.37027557123,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.800184
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F87",
+              "entity_handle": "1141F87",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                67335.90273011361,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F8B",
+              "entity_handle": "1141F8B",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                66948.78584373978,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            }
+          ],
+          "review_status": "conflict",
+          "conflicts": [
+            "AI quantity 3 contradicts deterministic block count 15"
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_b979fe81088d5d2fbec4c313e0a4a712",
+          "category": "MCB",
+          "label": "CB1",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 2.5,
+          "load_label": "Sockets - Master Bedroom, Sockets - Girls Bedroom, Sockets - Boys Bedroom, Sockets - Guest Bedroom, Spare, St-By",
+          "quantity": 15,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "deterministic_reconciled",
+          "notes": "Qty 12 matches block count 2X16 and schematic symbols.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EA6",
+              "entity_handle": "1141EA6",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x10AMP",
+              "cad_bbox": [
+                1501086.5552666,
+                73771.46743575025,
+                1499759.130565334,
+                72920.06309248226
+              ],
+              "image_bbox": [],
+              "confidence": 0.850754
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EA7",
+              "entity_handle": "1141EA7",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x10AMP",
+              "cad_bbox": [
+                1501086.5552666,
+                73384.35054937642,
+                1499759.130565334,
+                72920.06309248226
+              ],
+              "image_bbox": [],
+              "confidence": 0.888564
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EB8",
+              "entity_handle": "1141EB8",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x10AMP",
+              "cad_bbox": [
+                1501086.5552666,
+                72997.23366302143,
+                1499759.130565334,
+                72920.06309248226
+              ],
+              "image_bbox": [],
+              "confidence": 0.90553
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EED",
+              "entity_handle": "1141EED",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                71092.67319167715,
+                1499759.647295554,
+                70643.81287559052
+              ],
+              "image_bbox": [],
+              "confidence": 0.889573
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141EEE",
+              "entity_handle": "1141EEE",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                70705.55630530333,
+                1499759.647295554,
+                70643.81287559052
+              ],
+              "image_bbox": [],
+              "confidence": 0.905602
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F19",
+              "entity_handle": "1141F19",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                71479.79007803212,
+                1499759.647295554,
+                70643.81287559052
+              ],
+              "image_bbox": [],
+              "confidence": 0.852496
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F32",
+              "entity_handle": "1141F32",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                71866.90696438712,
+                1499770.296366329,
+                72490.02729580589
+              ],
+              "image_bbox": [],
+              "confidence": 0.877285
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F40",
+              "entity_handle": "1141F40",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                70318.4394189295,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F45",
+              "entity_handle": "1141F45",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                69931.32253255567,
+                1499770.813096548,
+                70213.77707891412
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F60",
+              "entity_handle": "1141F60",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                68110.13650286125,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.889573
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F61",
+              "entity_handle": "1141F61",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                67723.01961648744,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.905602
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F7E",
+              "entity_handle": "1141F7E",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                68497.25338921622,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.852496
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F85",
+              "entity_handle": "1141F85",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "4x16 AMP",
+              "cad_bbox": [
+                1501087.556987077,
+                68884.37027557123,
+                1499759.647295554,
+                67661.27618677463
+              ],
+              "image_bbox": [],
+              "confidence": 0.800184
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F87",
+              "entity_handle": "1141F87",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501087.556987077,
+                67335.90273011361,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.907472
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141F8B",
+              "entity_handle": "1141F8B",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1501086.722996497,
+                66948.78584373978,
+                1499770.813096548,
+                67231.24039009823
+              ],
+              "image_bbox": [],
+              "confidence": 0.901939
+            }
+          ],
+          "review_status": "conflict",
+          "conflicts": [
+            "AI quantity 12 contradicts deterministic block count 15"
+          ],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_4a195a3cbe4b58578940d9ada579794e",
+          "name": "PT 6",
+          "description": "Phoenix Contact feed-through terminal 6mm²",
+          "max_mm2": 6.0,
+          "quantity": 4,
+          "circuits": [
+            "Main Incomer"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_f02d46ff79e750d1b880e73a92a1e8a3",
+          "name": "PTTB 4",
+          "description": "Phoenix Contact double-level terminal 2x4mm²",
+          "max_mm2": 4.0,
+          "quantity": 30,
+          "circuits": [
+            "UL1, UL2, Spare",
+            "Sockets - Master Bedroom, Sockets - Girls Bedroom, Sockets - Boys Bedroom, Sockets - Guest Bedroom, Spare, St-By"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-F1-R0\\artifacts\\Kornet El Hamra_UDB-F1-R0\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-F1-R0\\artifacts\\Kornet El Hamra_UDB-F1-R0\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-F1-R0\\artifacts\\Kornet El Hamra_UDB-F1-R0\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

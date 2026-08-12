@@ -1,0 +1,116 @@
+{
+  "panels": [
+    {
+      "panel_ref": "ATS",
+      "components": [
+        {
+          "category": "MCCB",
+          "label": "C.B.",
+          "poles": "3P",
+          "amps": "250A",
+          "curve": "C",
+          "breaking_capacity": "36kA",
+          "sensitivity": "300mA",
+          "spd_type": "T2 / Up 1.5kV / Imax 40kA",
+          "ct_ratio": "250/5",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 120,
+          "load_label": "Distribution Board Feeders",
+          "qty": 9,
+          "manufacturer": "Schneider Electric",
+          "has_terminal": true,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Circuit breaker blocks extracted from drawing.",
+          "evidence_ids": [
+            "block:4DB",
+            "block:4E8",
+            "block:4F2",
+            "block:516",
+            "block:534",
+            "block:540",
+            "block:549",
+            "block:5B8",
+            "block:5C3"
+          ]
+        },
+        {
+          "category": "METER",
+          "label": "KWHM",
+          "poles": "3P+N",
+          "amps": "100A",
+          "curve": "B",
+          "breaking_capacity": "25kA",
+          "sensitivity": "30mA",
+          "spd_type": "T1+T2 / Up 2.5kV / Imax 50kA",
+          "ct_ratio": "100/5",
+          "meter_accuracy": "Class 0.5S",
+          "cable_size": 35,
+          "load_label": "Utility Metering Input",
+          "qty": 2,
+          "manufacturer": "ABB",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "KWHM energy meter blocks extracted from diagram.",
+          "evidence_ids": [
+            "block:4E4",
+            "block:4EE"
+          ]
+        },
+        {
+          "category": "SWITCH",
+          "label": "D.S.",
+          "poles": "4P",
+          "amps": "400A",
+          "curve": "D",
+          "breaking_capacity": "50kA",
+          "sensitivity": "500mA",
+          "spd_type": "T2 / Up 1.2kV / Imax 20kA",
+          "ct_ratio": "400/5",
+          "meter_accuracy": "Class 0.2",
+          "cable_size": 240,
+          "load_label": "Isolation Control Feed",
+          "qty": 2,
+          "manufacturer": "Hager",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Disconnect switch blocks extracted from diagram.",
+          "evidence_ids": [
+            "block:504",
+            "block:524"
+          ]
+        },
+        {
+          "category": "OTHER",
+          "label": "Generator",
+          "poles": "3P",
+          "amps": "630A",
+          "curve": "C",
+          "breaking_capacity": "65kA",
+          "sensitivity": "30mA",
+          "spd_type": "T3 / Up 1.0kV / Imax 10kA",
+          "ct_ratio": "600/5",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 300,
+          "load_label": "Emergency Power Supply Source",
+          "qty": 2,
+          "manufacturer": "Legrand",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Generator source connection blocks.",
+          "evidence_ids": [
+            "block:51D",
+            "block:531"
+          ]
+        }
+      ]
+    }
+  ]
+}

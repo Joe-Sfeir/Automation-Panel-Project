@@ -1,0 +1,24 @@
+{
+  "dataset": "Kornet El Hamra",
+  "truth_scope": "SLD-visible commercial offer rows only",
+  "source_drawings": {
+    "Kornet El Hamra_DB-ATTIC-R0.dwg": ["DB-ATTIC"],
+    "Kornet El Hamra_DB-B1-R0.dwg": ["DB-B1"],
+    "Kornet El Hamra_DB-B2-R0.dwg": ["DB-B2"],
+    "Kornet El Hamra_DB-F1-R0.dwg": ["DB-F1"],
+    "Kornet El Hamra_DB-GF-R1.dwg": ["DB-GF"],
+    "Kornet El Hamra_UDB-attic-R0.dwg": ["UDB-ATTIC"],
+    "Kornet El Hamra_UDB-B1-R0.dwg": ["UDB-B1"],
+    "Kornet El Hamra_UDB-F1-R0.dwg": ["UDB-F1"],
+    "Kornet El Hamra_UDB-GF-R0.dwg": ["UDB-GF"],
+    "Kornet El Hamra_B1-DB-MECH.dwg": ["DB-MECH"],
+    "Kornet El Hamra_B1-MDB.dwg": ["MDB-B1"],
+    "Kornet El Hamra_B1-UMDB.dwg": ["UMDB-B1"],
+    "Kornet El Hamra_B1-ATS.dwg": ["TOTALIZING SWITCHBOARD", "ATS-1", "ATS-2", "ATS-3", "EDL Totalizing Panel"]
+  },
+  "tuning_panels": [
+    "DB-ATTIC", "DB-B1", "DB-F1", "DB-GF", "UDB-ATTIC", "UDB-B1",
+    "UDB-GF", "DB-MECH", "MDB-B1", "UMDB-B1"
+  ],
+  "holdout_panels": ["DB-B2", "UDB-F1", "TOTALIZING SWITCHBOARD", "ATS-1", "ATS-2", "ATS-3", "EDL Totalizing Panel"]
+}

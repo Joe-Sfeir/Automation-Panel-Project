@@ -1,0 +1,172 @@
+{
+  "panels": [
+    {
+      "panel_ref": "UDB-F1",
+      "components": [
+        {
+          "category": "MCB",
+          "label": "4x25 Amp",
+          "poles": "4P",
+          "amps": "25",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0,
+          "load_label": "MAIN BREAKER",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.85,
+          "data_source": "BOTH",
+          "ai_notes": "Main incomer identified via label 4x25 Amp and schematic layout.",
+          "evidence_ids": [
+            "block:1141EBB",
+            "text:1141EBD"
+          ]
+        },
+        {
+          "category": "METER",
+          "label": "POWER METER",
+          "poles": "3P",
+          "amps": "32",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "Class 1.0",
+          "cable_size": 0,
+          "load_label": "DIGITAL POWER METER",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Meter integrated in panel design.",
+          "evidence_ids": [
+            "block:1140CE2",
+            "text:1141EC4"
+          ]
+        },
+        {
+          "category": "RCCB",
+          "label": "4x10AMP",
+          "poles": "4P",
+          "amps": "10",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0,
+          "load_label": "Lighting Circuits",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "RCCB 300mA for lighting sub-circuits.",
+          "evidence_ids": [
+            "block:1141EB8",
+            "text:1141EB1",
+            "text:1141EB2"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2,
+          "load_label": "Lighting Circuits",
+          "qty": 3,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Distributed lighting circuit MCBs.",
+          "evidence_ids": [
+            "block:1141EA6",
+            "block:1141EA7",
+            "block:1141EB6",
+            "text:1141E9F",
+            "text:1141EA1",
+            "text:1141EB6"
+          ]
+        },
+        {
+          "category": "RCBO",
+          "label": "4x16 AMP",
+          "poles": "4P",
+          "amps": "16",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "30mA",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0,
+          "load_label": "Socket outlet circuits",
+          "qty": 2,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "RCBO 30mA group heads for sockets.",
+          "evidence_ids": [
+            "block:1141EEE",
+            "block:1141F61",
+            "text:1141EFB",
+            "text:1141F6E"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2,
+          "load_label": "Socket outlet circuits",
+          "qty": 12,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Distributed socket circuit MCBs.",
+          "evidence_ids": [
+            "block:1141EED",
+            "block:1141F19",
+            "block:1141F32",
+            "block:1141F45",
+            "block:1141F60",
+            "block:1141F7E",
+            "block:1141F85",
+            "block:1141F8B"
+          ]
+        }
+      ]
+    }
+  ]
+}

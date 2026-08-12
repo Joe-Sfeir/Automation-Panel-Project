@@ -1,0 +1,866 @@
+{
+  "id": "project_5c23a287fddc45af96a5bc98434fb983",
+  "name": "Kornet El Hamra_B1-UMDB",
+  "reference": "Kornet El Hamra_B1-UMDB",
+  "schema_version": 1,
+  "created_at": "2026-08-12T18:12:42+00:00",
+  "updated_at": "2026-08-12T18:13:16+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_167fade27df956a2922e626c78ecbf06",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-UMDB.dwg",
+      "sha256": "6866e4b4b7b7a68f737bc626749c39eda0e30f7072b858e2c2ad7c2ce02257ef",
+      "filename": "Kornet El Hamra_B1-UMDB.dwg",
+      "added_at": "2026-08-12T18:12:42+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_c855109f9e31561f81ab49559cfa599b",
+      "reference": "UMDB-B1",
+      "source_drawing_id": "drawing_167fade27df956a2922e626c78ecbf06",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_410f56a949d15255b593215fdc73d0f4",
+          "category": "SWITCH",
+          "label": "Manual Transfer Switch",
+          "poles": "4P",
+          "amps": "63A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "By-Pass",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.75,
+          "origin": "IMAGE_ONLY",
+          "notes": "Manual Transfer Switch 2x63A AC23 For By-Pass",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_52af508b1f2352369f8532bb6c905616",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "_",
+          "cable_size": 0.0,
+          "load_label": "_",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "origin": "BOTH",
+          "notes": "_",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:426",
+              "entity_handle": "426",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "DIGITAL POWER",
+              "cad_bbox": [
+                44334.66909281829,
+                48255.6219255408,
+                44334.66909281829,
+                48674.65889057476
+              ],
+              "image_bbox": [
+                416.31,
+                264.59,
+                424.31,
+                272.59
+              ],
+              "confidence": 0.95
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:427",
+              "entity_handle": "427",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "METER",
+              "cad_bbox": [
+                45211.89826637752,
+                47598.41174216053,
+                45211.89826637752,
+                48017.4487071945
+              ],
+              "image_bbox": [
+                427.88,
+                273.43,
+                435.88,
+                281.43
+              ],
+              "confidence": 0.95
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_fc17069661285bacbe9ba4da5b93cc79",
+          "category": "FUSE_HOLDER",
+          "label": "Fuse gG",
+          "poles": "3P",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "SPD",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "origin": "BOTH",
+          "notes": "_",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:45E",
+              "entity_handle": "45E",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Fuse gG 3x32A",
+              "cad_bbox": [
+                48779.56475821243,
+                40958.17181194301,
+                48779.56475821243,
+                41280.750893409226
+              ],
+              "image_bbox": [
+                474.94,
+                362.76,
+                482.94,
+                370.76
+              ],
+              "confidence": 0.95
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_d0bd5e19712e5ee7aa468f9ad5bd65e4",
+          "category": "SPD",
+          "label": "TYPE 2 / CLASS C",
+          "poles": "_",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "Up<=1.2KV, 20KA Max",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "GND",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "origin": "BOTH",
+          "notes": "_",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:457",
+              "entity_handle": "457",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "SPD",
+              "cad_bbox": [
+                47098.16554726347,
+                39787.28660032113,
+                47098.16554726347,
+                40163.628862031714
+              ],
+              "image_bbox": [
+                452.76,
+                378.51,
+                460.76,
+                386.51
+              ],
+              "confidence": 0.95
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:45C",
+              "entity_handle": "45C",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "TYPE 2 / CLASS C",
+              "cad_bbox": [
+                48590.22148207075,
+                39766.37323289105,
+                48590.22148207075,
+                40088.952314357266
+              ],
+              "image_bbox": [
+                472.45,
+                378.8,
+                480.45,
+                386.8
+              ],
+              "confidence": 0.95
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:45D",
+              "entity_handle": "45D",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "GND",
+              "cad_bbox": [
+                47145.81100161339,
+                36648.73225316756,
+                47145.81100161339,
+                36971.31133463378
+              ],
+              "image_bbox": [
+                453.39,
+                420.74,
+                461.39,
+                428.74
+              ],
+              "confidence": 0.95
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:45F",
+              "entity_handle": "45F",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Up<=1.2KV, 20KA Max",
+              "cad_bbox": [
+                48590.22148207075,
+                39124.47794161236,
+                48590.22148207075,
+                39447.057023078574
+              ],
+              "image_bbox": [
+                472.45,
+                387.43,
+                480.45,
+                395.43
+              ],
+              "confidence": 0.95
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_5fce50b984315415bc527cff702effac",
+          "category": "MCB",
+          "label": "4x25",
+          "poles": "3P+N",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "UDB-B1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Outgoing feeder breaker to UDB-B1",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:41B",
+              "entity_handle": "41B",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                58613.29756309989,
+                43418.64770521287,
+                58613.29756309989,
+                43418.64770521287
+              ],
+              "image_bbox": [
+                604.67,
+                329.66,
+                612.67,
+                337.66
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:416",
+              "entity_handle": "416",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x25",
+              "cad_bbox": [
+                61054.72667391005,
+                43503.82720555708,
+                61054.72667391005,
+                43868.71281310618
+              ],
+              "image_bbox": [
+                636.88,
+                328.52,
+                644.88,
+                336.52
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:417",
+              "entity_handle": "417",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "(3P+N)",
+              "cad_bbox": [
+                62009.28851988342,
+                43528.82064880052,
+                62009.28851988342,
+                43844.72622736362
+              ],
+              "image_bbox": [
+                649.47,
+                328.18,
+                657.47,
+                336.18
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:412",
+              "entity_handle": "412",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x6+1x6",
+              "cad_bbox": [
+                67202.9784108646,
+                43210.01243965997,
+                67202.9784108646,
+                43574.89804720908
+              ],
+              "image_bbox": [
+                717.99,
+                332.47,
+                725.99,
+                340.47
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:463",
+              "entity_handle": "463",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "UDB-B1",
+              "cad_bbox": [
+                78894.27460518887,
+                43193.99870847103,
+                78894.27460518887,
+                43558.884316020136
+              ],
+              "image_bbox": [
+                872.23,
+                332.68,
+                880.23,
+                340.68
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_0f280877d8a95afd8fb7605df06b69ea",
+          "category": "MCB",
+          "label": "4x25",
+          "poles": "3P+N",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "UDB-GF",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Outgoing feeder breaker to UDB-GF",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:41C",
+              "entity_handle": "41C",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                58613.29756309989,
+                42855.56859776002,
+                58613.29756309989,
+                42855.56859776002
+              ],
+              "image_bbox": [
+                604.67,
+                337.24,
+                612.67,
+                345.24
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C1",
+              "entity_handle": "4C1",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x25",
+              "cad_bbox": [
+                61054.72667390959,
+                42940.74809811574,
+                61054.72667390959,
+                43305.63370566485
+              ],
+              "image_bbox": [
+                636.88,
+                336.09,
+                644.88,
+                344.09
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C2",
+              "entity_handle": "4C2",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "(3P+N)",
+              "cad_bbox": [
+                62009.28851988319,
+                42965.74154135918,
+                62009.28851988319,
+                43281.64711992228
+              ],
+              "image_bbox": [
+                649.47,
+                335.75,
+                657.47,
+                343.75
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4BE",
+              "entity_handle": "4BE",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x6+1x6",
+              "cad_bbox": [
+                67202.97841086413,
+                42646.93333221862,
+                67202.97841086413,
+                43011.81893976773
+              ],
+              "image_bbox": [
+                717.99,
+                340.04,
+                725.99,
+                348.04
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4B2",
+              "entity_handle": "4B2",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "UDB-GF",
+              "cad_bbox": [
+                78894.27460518887,
+                42641.5113826101,
+                78894.27460518887,
+                43006.396990159206
+              ],
+              "image_bbox": [
+                872.23,
+                340.12,
+                880.23,
+                348.12
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_6ff87e9260fc58ca8865af8365092983",
+          "category": "MCB",
+          "label": "4x25",
+          "poles": "3P+N",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "UDB-F1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Outgoing feeder breaker to UDB-F1",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:41F",
+              "entity_handle": "41F",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                58613.29756309989,
+                42292.48949033461,
+                58613.29756309989,
+                42292.48949033461
+              ],
+              "image_bbox": [
+                604.67,
+                344.81,
+                612.67,
+                352.81
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C3",
+              "entity_handle": "4C3",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x25",
+              "cad_bbox": [
+                61054.72667390912,
+                42377.66899067882,
+                61054.72667390912,
+                42742.55459822793
+              ],
+              "image_bbox": [
+                636.88,
+                343.67,
+                644.88,
+                351.67
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C4",
+              "entity_handle": "4C4",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "(3P+N)",
+              "cad_bbox": [
+                62009.28851988272,
+                42402.66243392226,
+                62009.28851988272,
+                42718.56801248536
+              ],
+              "image_bbox": [
+                649.47,
+                343.33,
+                657.47,
+                351.33
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4BF",
+              "entity_handle": "4BF",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x6+1x6",
+              "cad_bbox": [
+                67202.9784108646,
+                42083.8542247817,
+                67202.9784108646,
+                42448.73983233081
+              ],
+              "image_bbox": [
+                717.99,
+                347.62,
+                725.99,
+                355.62
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4B3",
+              "entity_handle": "4B3",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "UDB-F1",
+              "cad_bbox": [
+                78894.27460518887,
+                42078.43227517099,
+                78894.27460518887,
+                42443.3178827201
+              ],
+              "image_bbox": [
+                872.23,
+                347.69,
+                880.23,
+                355.69
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_83df50abd14751f5867f567f8ebfc057",
+          "category": "MCB",
+          "label": "4x25",
+          "poles": "3P+N",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 4.0,
+          "load_label": "UDB-ATTIC",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Outgoing feeder breaker to UDB-ATTIC",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:468",
+              "entity_handle": "468",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                58613.29756309989,
+                41729.41038288178,
+                58613.29756309989,
+                41729.41038288178
+              ],
+              "image_bbox": [
+                604.67,
+                352.39,
+                612.67,
+                360.39
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C5",
+              "entity_handle": "4C5",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x25",
+              "cad_bbox": [
+                61054.72667391005,
+                41814.58988322599,
+                61054.72667391005,
+                42179.4754907751
+              ],
+              "image_bbox": [
+                636.88,
+                351.24,
+                644.88,
+                359.24
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C6",
+              "entity_handle": "4C6",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "(3P+N)",
+              "cad_bbox": [
+                62009.28851988342,
+                41839.58332646943,
+                62009.28851988342,
+                42155.48890503253
+              ],
+              "image_bbox": [
+                649.47,
+                350.9,
+                657.47,
+                358.9
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4C0",
+              "entity_handle": "4C0",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x4+1x4",
+              "cad_bbox": [
+                67202.97841086413,
+                41520.77511734038,
+                67202.97841086413,
+                41885.66072488949
+              ],
+              "image_bbox": [
+                717.99,
+                355.19,
+                725.99,
+                363.19
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:4B4",
+              "entity_handle": "4B4",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "UDB-ATTIC",
+              "cad_bbox": [
+                78894.27460518887,
+                41515.35316773189,
+                78894.27460518887,
+                41880.238775280995
+              ],
+              "image_bbox": [
+                872.23,
+                355.27,
+                880.23,
+                363.27
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_57dc1a7a40e554b6b359871324207b3e",
+          "name": "PT 4",
+          "description": "Phoenix Contact feed-through terminal 4mm²",
+          "max_mm2": 4.0,
+          "quantity": 4,
+          "circuits": [
+            "By-Pass"
+          ],
+          "origin": "calculated",
+          "warnings": [
+            "By-Pass: cable size missing; defaulted to 4mm²"
+          ]
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-UMDB\\artifacts\\Kornet El Hamra_B1-UMDB\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-UMDB\\artifacts\\Kornet El Hamra_B1-UMDB\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-UMDB\\artifacts\\Kornet El Hamra_B1-UMDB\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-UMDB\\artifacts\\Kornet El Hamra_B1-UMDB\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-UMDB\\artifacts\\Kornet El Hamra_B1-UMDB\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

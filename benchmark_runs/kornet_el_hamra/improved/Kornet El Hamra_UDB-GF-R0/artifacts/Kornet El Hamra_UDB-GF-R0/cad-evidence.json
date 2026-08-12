@@ -1,0 +1,5911 @@
+{
+  "source_path": "C:\\Users\\Joe\\AppData\\Local\\Temp\\tmpnr27a1ko\\out\\Kornet El Hamra_UDB-GF-R0.dxf",
+  "entities": [
+    {
+      "id": "block:1140748",
+      "kind": "block",
+      "handle": "1140748",
+      "layer": "E0 - G - Panel",
+      "x": 1524253.606857804,
+      "y": 72599.85096859923,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "4x32",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11407D8",
+      "kind": "wire",
+      "handle": "11407D8",
+      "layer": "E_PanelBoard",
+      "x": 1522906.47472398,
+      "y": 60802.5,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1522906.47472398,
+          60802.5
+        ],
+        [
+          1553165.694944796,
+          60802.5
+        ],
+        [
+          1553165.694944796,
+          79499.89757076502
+        ],
+        [
+          1522906.47472398,
+          79499.89757076502
+        ]
+      ]
+    },
+    {
+      "id": "text:11407DA",
+      "kind": "text",
+      "handle": "11407DA",
+      "layer": "E_PanelBoard",
+      "x": 1524239.526662307,
+      "y": 78933.67846374876,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "MAIN BREAKER 4x25A",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11407EB",
+      "kind": "text",
+      "handle": "11407EB",
+      "layer": "E_PanelBoard",
+      "x": 1525070.672571211,
+      "y": 71045.2073449851,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UL1",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:114099C",
+      "kind": "block",
+      "handle": "114099C",
+      "layer": "E0 - G - Panel",
+      "x": 1528547.388832779,
+      "y": 72599.85096859923,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "indicator lamp red",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11409B4",
+      "kind": "block",
+      "handle": "11409B4",
+      "layer": "E0 - G - Panel",
+      "x": 1529627.388832779,
+      "y": 72599.85096859923,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "indicator lamp green",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11409BE",
+      "kind": "block",
+      "handle": "11409BE",
+      "layer": "E0 - G - Panel",
+      "x": 1530707.388832779,
+      "y": 72599.85096859923,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "indicator lamp blue",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1140ADA",
+      "kind": "block",
+      "handle": "1140ADA",
+      "layer": "E0 - G - Panel",
+      "x": 1524253.606857805,
+      "y": 65161.51524137823,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2x10",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1140ADB",
+      "kind": "block",
+      "handle": "1140ADB",
+      "layer": "E0 - G - Panel",
+      "x": 1526413.606857804,
+      "y": 65161.51524137823,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2x10",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1140ADC",
+      "kind": "block",
+      "handle": "1140ADC",
+      "layer": "E0 - G - Panel",
+      "x": 1528573.606857804,
+      "y": 65161.51524137823,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2x10",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1140ADF",
+      "kind": "text",
+      "handle": "1140ADF",
+      "layer": "E_PanelBoard",
+      "x": 1527230.67257121,
+      "y": 71045.2073449851,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UL2",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1140B3C",
+      "kind": "block",
+      "handle": "1140B3C",
+      "layer": "E0 - G - Panel",
+      "x": 1530733.606857803,
+      "y": 65161.51524138117,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1140B3D",
+      "kind": "block",
+      "handle": "1140B3D",
+      "layer": "E0 - G - Panel",
+      "x": 1532893.606857803,
+      "y": 65161.51524138117,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1140B9D",
+      "kind": "text",
+      "handle": "1140B9D",
+      "layer": "E_PanelBoard",
+      "x": 1531550.672571209,
+      "y": 71045.207344988,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UR1",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1140B9F",
+      "kind": "text",
+      "handle": "1140B9F",
+      "layer": "E_PanelBoard",
+      "x": 1533710.672571209,
+      "y": 71045.20734498801,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UR2",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1140BA1",
+      "kind": "text",
+      "handle": "1140BA1",
+      "layer": "E_PanelBoard",
+      "x": 1535870.672571208,
+      "y": 71045.207344988,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UR3",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1140BA5",
+      "kind": "text",
+      "handle": "1140BA5",
+      "layer": "E_PanelBoard",
+      "x": 1540190.672571207,
+      "y": 71045.207344988,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UR4",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1140BA7",
+      "kind": "text",
+      "handle": "1140BA7",
+      "layer": "E_PanelBoard",
+      "x": 1542350.672571206,
+      "y": 71045.207344988,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "UR5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1140BB6",
+      "kind": "wire",
+      "handle": "1140BB6",
+      "layer": "E0 - G - Panel",
+      "x": 1524253.606857805,
+      "y": 70561.51524137764,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1524253.606857805,
+          70561.51524137764
+        ],
+        [
+          1550173.606857582,
+          70561.51524137822
+        ],
+        [
+          1550173.606857582,
+          65161.51524137837
+        ],
+        [
+          1524253.606857805,
+          65161.51524138211
+        ]
+      ]
+    },
+    {
+      "id": "wire:1140C5E",
+      "kind": "wire",
+      "handle": "1140C5E",
+      "layer": "E0 - G - Panel",
+      "x": 1543693.606857801,
+      "y": 70561.51524138222,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1543693.606857801,
+          70561.51524138222
+        ],
+        [
+          1550173.606857582,
+          65161.51524137837
+        ]
+      ]
+    },
+    {
+      "id": "wire:1140C5F",
+      "kind": "wire",
+      "handle": "1140C5F",
+      "layer": "E0 - G - Panel",
+      "x": 1550173.606857582,
+      "y": 70561.51524137822,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1550173.606857582,
+          70561.51524137822
+        ],
+        [
+          1543693.606857801,
+          65161.51524137874
+        ]
+      ]
+    },
+    {
+      "id": "wire:1140C61",
+      "kind": "wire",
+      "handle": "1140C61",
+      "layer": "E0 - G - Panel",
+      "x": 1524253.606857805,
+      "y": 77999.85096859476,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1524253.606857805,
+          77999.85096859476
+        ],
+        [
+          1550173.606857582,
+          77999.8509685971
+        ],
+        [
+          1550173.606857582,
+          72599.85096859722
+        ],
+        [
+          1524253.606857805,
+          72599.85096859923
+        ]
+      ]
+    },
+    {
+      "id": "block:1140CE2",
+      "kind": "block",
+      "handle": "1140CE2",
+      "layer": "E0 - G - Panel",
+      "x": 1531787.388832779,
+      "y": 72599.85096859926,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "POWER METER",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1140D6E",
+      "kind": "block",
+      "handle": "1140D6E",
+      "layer": "E0 - G - Panel",
+      "x": 1536081.170807752,
+      "y": 72599.85096859696,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "FUSE 3X32",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1140D6F",
+      "kind": "wire",
+      "handle": "1140D6F",
+      "layer": "E0 - G - Panel",
+      "x": 1547931.737671562,
+      "y": 77999.85096859773,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1547931.737671562,
+          77999.85096859773
+        ],
+        [
+          1550173.606857582,
+          72599.85096859722
+        ]
+      ]
+    },
+    {
+      "id": "wire:1140D70",
+      "kind": "wire",
+      "handle": "1140D70",
+      "layer": "E0 - G - Panel",
+      "x": 1550173.606857582,
+      "y": 77999.8509685971,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1550173.606857582,
+          77999.8509685971
+        ],
+        [
+          1547931.737671562,
+          72599.85096859734
+        ]
+      ]
+    },
+    {
+      "id": "text:1140F11",
+      "kind": "text",
+      "handle": "1140F11",
+      "layer": "E_PanelBoard",
+      "x": 1521573.076662307,
+      "y": 83044.30201263994,
+      "width": 0.0,
+      "height": 1012.5,
+      "text": "UDB-GF ",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114100B",
+      "kind": "text",
+      "handle": "114100B",
+      "layer": "E_PanelBoard",
+      "x": 1521874.907348615,
+      "y": 81460.50672513596,
+      "width": 0.0,
+      "height": 1012.5,
+      "text": "2x24 Modules ( LEGRAND 337202)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1141278",
+      "kind": "wire",
+      "handle": "1141278",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1478668.550049315,
+      "y": 40383.5000005506,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1478668.550049315,
+          40383.5000005506
+        ],
+        [
+          1478668.550049647,
+          93133.50000055096
+        ],
+        [
+          1556818.550049648,
+          93133.5000000584
+        ],
+        [
+          1556818.550049315,
+          40383.50000005818
+        ]
+      ]
+    },
+    {
+      "id": "wire:114127C",
+      "kind": "wire",
+      "handle": "114127C",
+      "layer": "SAS-CMU",
+      "x": 1476668.550049303,
+      "y": 38383.50000056369,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1476668.550049303,
+          38383.50000056369
+        ],
+        [
+          1566068.550049303,
+          38383.5
+        ],
+        [
+          1566068.55004966,
+          95133.50000000007
+        ],
+        [
+          1476668.55004966,
+          95133.50000056376
+        ]
+      ]
+    },
+    {
+      "id": "wire:114127D",
+      "kind": "wire",
+      "handle": "114127D",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1477018.550049398,
+      "y": 38733.5000006545,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1477018.550049398,
+          38733.5000006545
+        ],
+        [
+          1565718.550049212,
+          38733.50000009529
+        ],
+        [
+          1565718.550049565,
+          94783.49999990925
+        ],
+        [
+          1477018.550049751,
+          94783.5000004685
+        ]
+      ]
+    },
+    {
+      "id": "wire:114127E",
+      "kind": "wire",
+      "handle": "114127E",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1477343.550049354,
+      "y": 39058.50000060593,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1477343.550049354,
+          39058.50000060593
+        ],
+        [
+          1565393.55004926,
+          39058.50000005077
+        ],
+        [
+          1565393.55004961,
+          94458.49999995778
+        ],
+        [
+          1477343.550049703,
+          94458.50000051306
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141282",
+      "kind": "wire",
+      "handle": "1141282",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558068.550049654,
+      "y": 94133.50000005074,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558068.550049654,
+          94133.50000005074
+        ],
+        [
+          1565068.550049654,
+          94133.5000000065
+        ],
+        [
+          1565068.550049403,
+          54359.00000000659
+        ],
+        [
+          1558068.550049403,
+          54359.00000005074
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141284",
+      "kind": "wire",
+      "handle": "1141284",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382566,
+      "y": 39550.16666667153,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382566,
+          39550.16666667153
+        ],
+        [
+          1562401.883382566,
+          39550.16666668731
+        ],
+        [
+          1562401.883382572,
+          40550.16666668725
+        ],
+        [
+          1564901.883382572,
+          40550.16666667148
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141285",
+      "kind": "wire",
+      "handle": "1141285",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558235.216715822,
+      "y": 39550.16666671359,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558235.216715822,
+          39550.16666671359
+        ],
+        [
+          1562235.216715822,
+          39550.1666666883
+        ],
+        [
+          1562235.216715828,
+          40550.1666666883
+        ],
+        [
+          1558235.216715828,
+          40550.16666671353
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141286",
+      "kind": "wire",
+      "handle": "1141286",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382573,
+      "y": 40716.83333333578,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382573,
+          40716.83333333578
+        ],
+        [
+          1562401.883382573,
+          40716.83333335155
+        ],
+        [
+          1562401.883382578,
+          41383.50000002295
+        ],
+        [
+          1564901.883382578,
+          41383.50000000718
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141287",
+      "kind": "wire",
+      "handle": "1141287",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558235.216715829,
+      "y": 40716.83333337783,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558235.216715829,
+          40716.83333337783
+        ],
+        [
+          1562235.216715829,
+          40716.83333335254
+        ],
+        [
+          1562235.216715833,
+          41383.50000002412
+        ],
+        [
+          1558235.216715833,
+          41383.50000004935
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141288",
+      "kind": "wire",
+      "handle": "1141288",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382603,
+      "y": 45550.16666667881,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382603,
+          45550.16666667881
+        ],
+        [
+          1558235.216715859,
+          45550.16666672086
+        ],
+        [
+          1558235.216715866,
+          46550.16666672092
+        ],
+        [
+          1564901.88338261,
+          46550.16666667875
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141289",
+      "kind": "wire",
+      "handle": "1141289",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1560235.216715839,
+      "y": 42383.50000003672,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1560235.216715839,
+          42383.50000003672
+        ],
+        [
+          1560235.216715858,
+          45383.50000003666
+        ]
+      ]
+    },
+    {
+      "id": "wire:114128A",
+      "kind": "wire",
+      "handle": "114128A",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1561735.216715839,
+      "y": 42383.50000002727,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1561735.216715839,
+          42383.50000002727
+        ],
+        [
+          1561735.216715858,
+          45383.50000002715
+        ]
+      ]
+    },
+    {
+      "id": "wire:114128B",
+      "kind": "wire",
+      "handle": "114128B",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382584,
+      "y": 42383.50000000729,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382584,
+          42383.50000000729
+        ],
+        [
+          1564901.883382603,
+          45383.50000000717
+        ]
+      ]
+    },
+    {
+      "id": "wire:114128C",
+      "kind": "wire",
+      "handle": "114128C",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382578,
+      "y": 41550.16666667148,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382578,
+          41550.16666667148
+        ],
+        [
+          1562401.883382578,
+          41550.16666668725
+        ],
+        [
+          1562401.883382582,
+          42216.83333335877
+        ],
+        [
+          1564901.883382583,
+          42216.83333334299
+        ]
+      ]
+    },
+    {
+      "id": "wire:114128D",
+      "kind": "wire",
+      "handle": "114128D",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558235.216715834,
+      "y": 41550.16666671365,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558235.216715834,
+          41550.16666671365
+        ],
+        [
+          1562235.216715834,
+          41550.16666668836
+        ],
+        [
+          1562235.216715838,
+          42216.83333335987
+        ],
+        [
+          1558235.216715838,
+          42216.83333338516
+        ]
+      ]
+    },
+    {
+      "id": "wire:114128E",
+      "kind": "wire",
+      "handle": "114128E",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382626,
+      "y": 49050.16666667875,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382626,
+          49050.16666667875
+        ],
+        [
+          1558235.216715881,
+          49050.16666672092
+        ],
+        [
+          1558235.216715888,
+          50050.16666672086
+        ],
+        [
+          1564901.883382632,
+          50050.16666667869
+        ]
+      ]
+    },
+    {
+      "id": "wire:114128F",
+      "kind": "wire",
+      "handle": "114128F",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558235.216715889,
+      "y": 50216.83333338516,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558235.216715889,
+          50216.83333338516
+        ],
+        [
+          1558235.216715912,
+          53983.00000004972
+        ],
+        [
+          1564901.883382657,
+          53983.00000000758
+        ],
+        [
+          1564901.883382633,
+          50216.83333334299
+        ],
+        [
+          1558235.216715889,
+          50216.83333338516
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141290",
+      "kind": "wire",
+      "handle": "1141290",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382611,
+      "y": 46716.83333334305,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382611,
+          46716.83333334305
+        ],
+        [
+          1558235.216715867,
+          46716.83333338505
+        ],
+        [
+          1558235.21671588,
+          48883.50000005662
+        ],
+        [
+          1564901.883382625,
+          48883.50000001445
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141291",
+      "kind": "wire",
+      "handle": "1141291",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558068.550049309,
+      "y": 39383.5000000504,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558068.550049309,
+          39383.5000000504
+        ],
+        [
+          1565068.550049309,
+          39383.50000000613
+        ],
+        [
+          1565068.550049402,
+          54176.00000000662
+        ],
+        [
+          1558068.550049403,
+          54176.00000005071
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141292",
+      "kind": "wire",
+      "handle": "1141292",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382903,
+      "y": 92966.83333333604,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382903,
+          92966.83333333604
+        ],
+        [
+          1558235.216716158,
+          92966.83333337806
+        ],
+        [
+          1558235.216716165,
+          93966.83333337806
+        ],
+        [
+          1564901.883382909,
+          93966.83333333604
+        ]
+      ]
+    },
+    {
+      "id": "wire:1141293",
+      "kind": "wire",
+      "handle": "1141293",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1477668.550049309,
+      "y": 39383.50000055721,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1477668.550049309,
+          39383.50000055721
+        ],
+        [
+          1477668.550049654,
+          94133.50000055756
+        ],
+        [
+          1557818.550049655,
+          94133.50000005229
+        ],
+        [
+          1557818.550049309,
+          39383.50000005191
+        ]
+      ]
+    },
+    {
+      "id": "text:114129B",
+      "kind": "text",
+      "handle": "114129B",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1562759.5698808,
+      "y": 44633.50000002126,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "NC",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114129F",
+      "kind": "text",
+      "handle": "114129F",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1559318.550049345,
+      "y": 45133.50000004288,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "Date",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412A1",
+      "kind": "text",
+      "handle": "11412A1",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1561318.550049345,
+      "y": 45133.50000003034,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "Rev #",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412A3",
+      "kind": "text",
+      "handle": "11412A3",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1560318.55004932,
+      "y": 41050.1666667009,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "Project Reference",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412A5",
+      "kind": "text",
+      "handle": "11412A5",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1563651.883382575,
+      "y": 41050.16666667983,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "Drawing #",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412A7",
+      "kind": "text",
+      "handle": "11412A7",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1559859.216715825,
+      "y": 40057.66666670371,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "UDB-GF",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412A9",
+      "kind": "text",
+      "handle": "11412A9",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1563651.883382569,
+      "y": 40050.16666667983,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "E054-R0",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412AB",
+      "kind": "text",
+      "handle": "11412AB",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1563651.88338258,
+      "y": 41883.50000001565,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "1/100",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412AD",
+      "kind": "text",
+      "handle": "11412AD",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1560318.550049325,
+      "y": 41883.50000003672,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "Plot Scale",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412B1",
+      "kind": "text",
+      "handle": "11412B1",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1561401.883382906,
+      "y": 93633.50000002298,
+      "width": 0.0,
+      "height": 500.0000000003769,
+      "text": "General Notes",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412B2",
+      "kind": "text",
+      "handle": "11412B2",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1561540.0698808,
+      "y": 44633.500000029,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "R0",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412C2",
+      "kind": "text",
+      "handle": "11412C2",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1563175.297850062,
+      "y": 45094.220519743,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "Issued by",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412CF",
+      "kind": "text",
+      "handle": "11412CF",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1561568.550049373,
+      "y": 49562.17887296833,
+      "width": 0.0,
+      "height": 333.3333333335846,
+      "text": "KORNET EL HAMRA",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412D0",
+      "kind": "text",
+      "handle": "11412D0",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1561568.550049362,
+      "y": 47847.36383175253,
+      "width": 0.0,
+      "height": 333.3333333335846,
+      "text": "MRS. JESSICA \n& \nMR. PATRICK TOHME",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412D1",
+      "kind": "text",
+      "handle": "11412D1",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1561568.550049351,
+      "y": 46050.16666670024,
+      "width": 0.0,
+      "height": 333.3333333335846,
+      "text": "GROUND FLOOR \nUDB-GF",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11412D2",
+      "kind": "text",
+      "handle": "11412D2",
+      "layer": "SAS-ANOTATION-01",
+      "x": 1559283.509370846,
+      "y": 44633.50000003145,
+      "width": 0.0,
+      "height": 266.6666666668676,
+      "text": "04/04/2025",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11412D4",
+      "kind": "wire",
+      "handle": "11412D4",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558235.216715858,
+      "y": 45383.50000004935,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558235.216715858,
+          45383.50000004935
+        ],
+        [
+          1558235.216715839,
+          42383.50000004935
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412D5",
+      "kind": "wire",
+      "handle": "11412D5",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382587,
+      "y": 42883.50000000718,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382587,
+          42883.50000000718
+        ],
+        [
+          1558235.216715842,
+          42883.50000004935
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412D6",
+      "kind": "wire",
+      "handle": "11412D6",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1558235.216715839,
+      "y": 42383.50000004935,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1558235.216715839,
+          42383.50000004935
+        ],
+        [
+          1564901.883382584,
+          42383.50000000729
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412D7",
+      "kind": "wire",
+      "handle": "11412D7",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382593,
+      "y": 43883.50000000729,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382593,
+          43883.50000000729
+        ],
+        [
+          1558235.216715849,
+          43883.50000004935
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412D8",
+      "kind": "wire",
+      "handle": "11412D8",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.88338259,
+      "y": 43383.50000000723,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.88338259,
+          43383.50000000723
+        ],
+        [
+          1558235.216715846,
+          43383.50000004929
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412D9",
+      "kind": "wire",
+      "handle": "11412D9",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382596,
+      "y": 44383.50000000718,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382596,
+          44383.50000000718
+        ],
+        [
+          1558235.216715852,
+          44383.50000004935
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412DA",
+      "kind": "wire",
+      "handle": "11412DA",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.8833826,
+      "y": 44883.50000000723,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.8833826,
+          44883.50000000723
+        ],
+        [
+          1558235.216715855,
+          44883.50000004929
+        ]
+      ]
+    },
+    {
+      "id": "wire:11412DB",
+      "kind": "wire",
+      "handle": "11412DB",
+      "layer": "SAS-PAPER FRAME",
+      "x": 1564901.883382603,
+      "y": 45383.50000000717,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1564901.883382603,
+          45383.50000000717
+        ],
+        [
+          1558235.216715858,
+          45383.50000004935
+        ]
+      ]
+    },
+    {
+      "id": "block:1141B9C",
+      "kind": "block",
+      "handle": "1141B9C",
+      "layer": "E0 - G - Panel",
+      "x": 1535053.606857802,
+      "y": 65161.51524138177,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1141B9D",
+      "kind": "block",
+      "handle": "1141B9D",
+      "layer": "E0 - G - Panel",
+      "x": 1537213.606857802,
+      "y": 65161.51524138177,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1141B9E",
+      "kind": "block",
+      "handle": "1141B9E",
+      "layer": "E0 - G - Panel",
+      "x": 1539373.606857801,
+      "y": 65161.51524138237,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1141B9F",
+      "kind": "block",
+      "handle": "1141B9F",
+      "layer": "E0 - G - Panel",
+      "x": 1541533.606857801,
+      "y": 65161.51524138237,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "2X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142202",
+      "kind": "text",
+      "handle": "1142202",
+      "layer": "E0 - G - Panel",
+      "x": 1529392.668750136,
+      "y": 68344.5004436997,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "SP",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114249E",
+      "kind": "text",
+      "handle": "114249E",
+      "layer": "E_PanelBoard",
+      "x": 1507337.650621539,
+      "y": 71553.01370435125,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114249F",
+      "kind": "text",
+      "handle": "114249F",
+      "layer": "E_PanelBoard",
+      "x": 1509905.835400728,
+      "y": 71553.0137053843,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "UL1",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A0",
+      "kind": "text",
+      "handle": "11424A0",
+      "layer": "E_PanelBoard",
+      "x": 1507337.650621539,
+      "y": 71164.06263324959,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424A1",
+      "kind": "wire",
+      "handle": "11424A1",
+      "layer": "E_PanelBoard",
+      "x": 1515312.147391545,
+      "y": 71689.91571051686,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1515312.147391545,
+          71689.91571051686
+        ],
+        [
+          1514113.329764093,
+          71689.91571051686
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424A2",
+      "kind": "wire",
+      "handle": "11424A2",
+      "layer": "E_PanelBoard",
+      "x": 1514113.327985723,
+      "y": 71300.96463311075,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1514113.327985723,
+          71300.96463311075
+        ],
+        [
+          1515312.145613175,
+          71300.96463311075
+        ]
+      ]
+    },
+    {
+      "id": "text:11424A3",
+      "kind": "text",
+      "handle": "11424A3",
+      "layer": "E_PanelBoard",
+      "x": 1502851.703627454,
+      "y": 71373.86898722008,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x10",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A4",
+      "kind": "text",
+      "handle": "11424A4",
+      "layer": "E_PanelBoard",
+      "x": 1503523.715166865,
+      "y": 71373.86898722008,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A5",
+      "kind": "text",
+      "handle": "11424A5",
+      "layer": "E_PanelBoard",
+      "x": 1502851.703982819,
+      "y": 71791.34794632271,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x10",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A6",
+      "kind": "text",
+      "handle": "11424A6",
+      "layer": "E_PanelBoard",
+      "x": 1503523.715522385,
+      "y": 71808.9433303661,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A7",
+      "kind": "text",
+      "handle": "11424A7",
+      "layer": "E_PanelBoard",
+      "x": 1509905.835400728,
+      "y": 71142.26203722117,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "UL2",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A8",
+      "kind": "text",
+      "handle": "11424A8",
+      "layer": "E_PanelBoard",
+      "x": 1508977.382414624,
+      "y": 71553.013729569,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "1",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424A9",
+      "kind": "text",
+      "handle": "11424A9",
+      "layer": "E_PanelBoard",
+      "x": 1508977.372313018,
+      "y": 71164.06265327314,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11424AA",
+      "kind": "block",
+      "handle": "11424AA",
+      "layer": "E_PanelBoard",
+      "x": 1501132.937888809,
+      "y": 71731.3815780804,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11424AB",
+      "kind": "block",
+      "handle": "11424AB",
+      "layer": "E_PanelBoard",
+      "x": 1501132.937888809,
+      "y": 71334.9738864336,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424AE",
+      "kind": "wire",
+      "handle": "11424AE",
+      "layer": "E_PanelBoard",
+      "x": 1500221.766937768,
+      "y": 71300.35057414972,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500221.766937768,
+          71300.35057414972
+        ],
+        [
+          1500251.395316407,
+          71300.35057414972
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424AF",
+      "kind": "wire",
+      "handle": "11424AF",
+      "layer": "E_PanelBoard",
+      "x": 1500023.104424321,
+      "y": 71237.62235306566,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500023.104424321,
+          71237.62235306566
+        ],
+        [
+          1500023.104424321,
+          71363.07879525304
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424B0",
+      "kind": "wire",
+      "handle": "11424B0",
+      "layer": "E_PanelBoard",
+      "x": 1500385.520549436,
+      "y": 71087.03452655824,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500385.520549436,
+          71087.03452655824
+        ],
+        [
+          1499804.827454484,
+          71087.03452655824
+        ],
+        [
+          1499804.827454484,
+          71513.66662175076
+        ],
+        [
+          1500385.520549436,
+          71513.66662175076
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424B1",
+      "kind": "wire",
+      "handle": "11424B1",
+      "layer": "E_PanelBoard",
+      "x": 1500221.766937768,
+      "y": 71300.35057414972,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500221.766937768,
+          71300.35057414972
+        ],
+        [
+          1500023.104424321,
+          71170.64677831701
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424B2",
+      "kind": "wire",
+      "handle": "11424B2",
+      "layer": "E_PanelBoard",
+      "x": 1500087.382183316,
+      "y": 71199.74832281086,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500087.382183316,
+          71199.74832281086
+        ],
+        [
+          1500289.554493213,
+          71199.74832281086
+        ]
+      ]
+    },
+    {
+      "id": "text:11424B5",
+      "kind": "text",
+      "handle": "11424B5",
+      "layer": "E_PanelBoard",
+      "x": 1499773.654994712,
+      "y": 70859.54353057401,
+      "width": 0.0,
+      "height": 136.8243445835576,
+      "text": "4x10AMP",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424B6",
+      "kind": "text",
+      "handle": "11424B6",
+      "layer": "E_PanelBoard",
+      "x": 1499773.758107751,
+      "y": 70631.03999119892,
+      "width": 0.0,
+      "height": 136.8243445835576,
+      "text": "300mA",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424B7",
+      "kind": "text",
+      "handle": "11424B7",
+      "layer": "E_PanelBoard",
+      "x": 1499785.088774931,
+      "y": 70419.18687477741,
+      "width": 0.0,
+      "height": 136.8243445835576,
+      "text": "ISOL.S.+RCD",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424B8",
+      "kind": "wire",
+      "handle": "11424B8",
+      "layer": "E_PanelBoard",
+      "x": 1500289.554493213,
+      "y": 71241.04352174855,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500289.554493213,
+          71241.04352174855
+        ],
+        [
+          1500289.554493213,
+          71199.74832284953
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424B9",
+      "kind": "wire",
+      "handle": "11424B9",
+      "layer": "E_PanelBoard",
+      "x": 1501133.434518832,
+      "y": 71319.17649425632,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1501133.434518832,
+          71319.17649425632
+        ],
+        [
+          1500385.520549436,
+          71319.17649425632
+        ]
+      ]
+    },
+    {
+      "id": "text:11424BA",
+      "kind": "text",
+      "handle": "11424BA",
+      "layer": "E_PanelBoard",
+      "x": 1502851.703627454,
+      "y": 70977.46129557322,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x10",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424BB",
+      "kind": "text",
+      "handle": "11424BB",
+      "layer": "E_PanelBoard",
+      "x": 1503523.715166865,
+      "y": 70977.46129557322,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11424BC",
+      "kind": "block",
+      "handle": "11424BC",
+      "layer": "E_PanelBoard",
+      "x": 1501132.937888809,
+      "y": 70938.56619480612,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424BD",
+      "kind": "wire",
+      "handle": "11424BD",
+      "layer": "E_PanelBoard",
+      "x": 1514113.327985723,
+      "y": 70904.55694147362,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1514113.327985723,
+          70904.55694147362
+        ],
+        [
+          1515312.145613175,
+          70904.55694147362
+        ]
+      ]
+    },
+    {
+      "id": "text:11424BE",
+      "kind": "text",
+      "handle": "11424BE",
+      "layer": "E_PanelBoard",
+      "x": 1508977.372313018,
+      "y": 70767.65496162634,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11424BF",
+      "kind": "block",
+      "handle": "11424BF",
+      "layer": "E_PanelBoard",
+      "x": 1487346.402437098,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "SW",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424C0",
+      "kind": "wire",
+      "handle": "11424C0",
+      "layer": "E_PanelBoard",
+      "x": 1488508.31618517,
+      "y": 69491.89596289866,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488508.31618517,
+          69491.89596289866
+        ],
+        [
+          1490392.669191688,
+          69491.89596289866
+        ],
+        [
+          1490392.669191688,
+          68447.04474120656
+        ],
+        [
+          1488508.31618517,
+          68447.04474120656
+        ]
+      ]
+    },
+    {
+      "id": "text:11424C1",
+      "kind": "text",
+      "handle": "11424C1",
+      "layer": "E_PanelBoard",
+      "x": 1488492.327417668,
+      "y": 67880.64704161341,
+      "width": 0.0,
+      "height": 383.3684514410795,
+      "text": "4x25 Amp",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424C2",
+      "kind": "text",
+      "handle": "11424C2",
+      "layer": "E_PanelBoard",
+      "x": 1488492.327417668,
+      "y": 67245.49087031391,
+      "width": 0.0,
+      "height": 383.3684514410795,
+      "text": "ISOL.S.",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424C3",
+      "kind": "wire",
+      "handle": "11424C3",
+      "layer": "E_PanelBoard",
+      "x": 1492849.588891147,
+      "y": 68969.47035122228,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1492849.588891147,
+          68969.47035122228
+        ],
+        [
+          1491448.173240442,
+          68969.47035122228
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424C4",
+      "kind": "wire",
+      "handle": "11424C4",
+      "layer": "E_PanelBoard",
+      "x": 1492203.578436205,
+      "y": 68969.47035197532,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1492203.578436205,
+          68969.47035197532
+        ],
+        [
+          1492203.578436205,
+          72135.90100707406
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424C5",
+      "kind": "wire",
+      "handle": "11424C5",
+      "layer": "E_PanelBoard",
+      "x": 1490981.851706049,
+      "y": 73265.99207322327,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490981.851706049,
+          73265.99207322327
+        ],
+        [
+          1493425.305166516,
+          73265.99207322327
+        ],
+        [
+          1493425.305166516,
+          72215.87886770979
+        ],
+        [
+          1490981.851706049,
+          72215.87886770979
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424C6",
+      "kind": "wire",
+      "handle": "11424C6",
+      "layer": "E_PanelBoard",
+      "x": 1490901.873845239,
+      "y": 73345.96993384932,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490901.873845239,
+          73345.96993384932
+        ],
+        [
+          1493505.283027171,
+          73345.96993384932
+        ],
+        [
+          1493505.283027171,
+          72135.90100707406
+        ],
+        [
+          1490901.873845239,
+          72135.90100707406
+        ]
+      ]
+    },
+    {
+      "id": "text:11424C7",
+      "kind": "text",
+      "handle": "11424C7",
+      "layer": "E_PanelBoard",
+      "x": 1491080.286815707,
+      "y": 72786.7408602693,
+      "width": 0.0,
+      "height": 295.0020233839113,
+      "text": "DIGITAL POWER",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424C8",
+      "kind": "text",
+      "handle": "11424C8",
+      "layer": "E_PanelBoard",
+      "x": 1491697.856153893,
+      "y": 72324.0648911696,
+      "width": 0.0,
+      "height": 295.0020233839113,
+      "text": "METER",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424C9",
+      "kind": "wire",
+      "handle": "11424C9",
+      "layer": "E_PanelBoard",
+      "x": 1487346.402350825,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1487346.402350825,
+          68969.47035205255
+        ],
+        [
+          1478831.86605294,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "text:11424CA",
+      "kind": "text",
+      "handle": "11424CA",
+      "layer": "E_PanelBoard",
+      "x": 1479302.52970387,
+      "y": 69321.39026896794,
+      "width": 0.0,
+      "height": 497.8610965316023,
+      "text": "TO UMDB-B1",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424CB",
+      "kind": "text",
+      "handle": "11424CB",
+      "layer": "E_PanelBoard",
+      "x": 1479302.52970387,
+      "y": 68789.1195382716,
+      "width": 0.0,
+      "height": 497.861096531602,
+      "text": "4Cx6mm²+1Cx6mm²",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424CC",
+      "kind": "wire",
+      "handle": "11424CC",
+      "layer": "E_PanelBoard",
+      "x": 1498352.963779925,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1498352.963779925,
+          68969.47035205255
+        ],
+        [
+          1491996.181305975,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "text:11424CD",
+      "kind": "text",
+      "handle": "11424CD",
+      "layer": "E_PanelBoard",
+      "x": 1498219.451736398,
+      "y": 74875.75410153758,
+      "width": 0.0,
+      "height": 435.054246278643,
+      "text": "MCB",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424CE",
+      "kind": "text",
+      "handle": "11424CE",
+      "layer": "E_PanelBoard",
+      "x": 1498213.814896742,
+      "y": 74327.36225089793,
+      "width": 0.0,
+      "height": 435.054246278643,
+      "text": "B.C.: 6KA/400V",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424CF",
+      "kind": "text",
+      "handle": "11424CF",
+      "layer": "E_PanelBoard",
+      "x": 1498213.814896742,
+      "y": 73740.92406550865,
+      "width": 0.0,
+      "height": 483.3936069762718,
+      "text": "IEC/EN 60898",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D0",
+      "kind": "text",
+      "handle": "11424D0",
+      "layer": "E_PanelBoard",
+      "x": 1512307.602582255,
+      "y": 75090.94855719992,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "Y",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D1",
+      "kind": "text",
+      "handle": "11424D1",
+      "layer": "E_PanelBoard",
+      "x": 1511314.366205272,
+      "y": 75090.94855719992,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "R",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D2",
+      "kind": "text",
+      "handle": "11424D2",
+      "layer": "E_PanelBoard",
+      "x": 1510096.074073034,
+      "y": 75350.60237734689,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "Ref.",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D3",
+      "kind": "text",
+      "handle": "11424D3",
+      "layer": "E_PanelBoard",
+      "x": 1509094.614415147,
+      "y": 75350.60237734689,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "Numb.",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D4",
+      "kind": "text",
+      "handle": "11424D4",
+      "layer": "E_PanelBoard",
+      "x": 1507662.002113426,
+      "y": 76779.00282248511,
+      "width": 0.0,
+      "height": 186.2731128377815,
+      "text": "size mm²",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D5",
+      "kind": "text",
+      "handle": "11424D5",
+      "layer": "E_PanelBoard",
+      "x": 1512167.457620531,
+      "y": 77070.32912583143,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "EFFECTIVE",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D6",
+      "kind": "text",
+      "handle": "11424D6",
+      "layer": "E_PanelBoard",
+      "x": 1511816.748518122,
+      "y": 76843.68087229655,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "LOAD",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D7",
+      "kind": "text",
+      "handle": "11424D7",
+      "layer": "E_PanelBoard",
+      "x": 1509451.834333116,
+      "y": 77056.59292298408,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "CIRCUIT",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D8",
+      "kind": "text",
+      "handle": "11424D8",
+      "layer": "E_PanelBoard",
+      "x": 1511466.039415712,
+      "y": 76701.4016410261,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "W",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424D9",
+      "kind": "text",
+      "handle": "11424D9",
+      "layer": "E_PanelBoard",
+      "x": 1507744.584122646,
+      "y": 77003.7421118385,
+      "width": 0.0,
+      "height": 186.2731128377816,
+      "text": "CONDUCTOR",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424DA",
+      "kind": "text",
+      "handle": "11424DA",
+      "layer": "E_PanelBoard",
+      "x": 1513298.544942622,
+      "y": 75090.94902390146,
+      "width": 0.0,
+      "height": 231.6228807187496,
+      "text": "B",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424DD",
+      "kind": "wire",
+      "handle": "11424DD",
+      "layer": "E_PanelBoard",
+      "x": 1491807.837017921,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1491807.837017921,
+          68969.47035205255
+        ],
+        [
+          1492988.547836039,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E2",
+      "kind": "wire",
+      "handle": "11424E2",
+      "layer": "E_PanelBoard",
+      "x": 1510685.61065996,
+      "y": 75806.81610795086,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1510685.61065996,
+          75806.81610795086
+        ],
+        [
+          1510611.179256582,
+          75999.31635680454
+        ],
+        [
+          1508605.662129422,
+          75999.31635680454
+        ],
+        [
+          1508496.436468635,
+          75812.72998528267
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E3",
+      "kind": "wire",
+      "handle": "11424E3",
+      "layer": "E_PanelBoard",
+      "x": 1510685.61065996,
+      "y": 75806.81610795086,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1510685.61065996,
+          75806.81610795086
+        ],
+        [
+          1510755.869148393,
+          75995.81346540178
+        ],
+        [
+          1514069.964487929,
+          75995.81346540178
+        ],
+        [
+          1514176.381583955,
+          75850.64255570895
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E4",
+      "kind": "wire",
+      "handle": "11424E4",
+      "layer": "E_PanelBoard",
+      "x": 1508609.069677187,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1508609.069677187,
+          75842.48201115278
+        ],
+        [
+          1508619.420040069,
+          61360.73577620164
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E5",
+      "kind": "wire",
+      "handle": "11424E5",
+      "layer": "E_PanelBoard",
+      "x": 1509490.402183516,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1509490.402183516,
+          75842.48201115278
+        ],
+        [
+          1509500.020560832,
+          61360.73577620164
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E6",
+      "kind": "wire",
+      "handle": "11424E6",
+      "layer": "E_PanelBoard",
+      "x": 1510758.169686857,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1510758.169686857,
+          75842.48201115278
+        ],
+        [
+          1510758.169686857,
+          60386.28759920332
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E7",
+      "kind": "wire",
+      "handle": "11424E7",
+      "layer": "E_PanelBoard",
+      "x": 1510625.687956096,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1510625.687956096,
+          75842.48201115278
+        ],
+        [
+          1510625.687956096,
+          60386.28759920332
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E8",
+      "kind": "wire",
+      "handle": "11424E8",
+      "layer": "E_PanelBoard",
+      "x": 1511884.650409302,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1511884.650409302,
+          75842.48201115278
+        ],
+        [
+          1511884.650409302,
+          61360.73577620164
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424E9",
+      "kind": "wire",
+      "handle": "11424E9",
+      "layer": "E_PanelBoard",
+      "x": 1512899.192299762,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1512899.192299762,
+          75842.48201115278
+        ],
+        [
+          1512899.192299684,
+          61360.73577620164
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424EA",
+      "kind": "wire",
+      "handle": "11424EA",
+      "layer": "E_PanelBoard",
+      "x": 1514068.120951247,
+      "y": 75842.48201115278,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1514068.120951247,
+          75842.48201115278
+        ],
+        [
+          1514068.120951247,
+          60386.28759920332
+        ]
+      ]
+    },
+    {
+      "id": "text:11424EB",
+      "kind": "text",
+      "handle": "11424EB",
+      "layer": "E_PanelBoard",
+      "x": 1509965.408044157,
+      "y": 69578.5604928688,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "R1",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424EC",
+      "kind": "wire",
+      "handle": "11424EC",
+      "layer": "E_PanelBoard",
+      "x": 1515313.173153313,
+      "y": 69708.00587734037,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1515313.173153313,
+          69708.00587734037
+        ],
+        [
+          1514114.355525861,
+          69708.00587734037
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424ED",
+      "kind": "wire",
+      "handle": "11424ED",
+      "layer": "E_PanelBoard",
+      "x": 1514114.35374749,
+      "y": 69319.05479993428,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1514114.35374749,
+          69319.05479993428
+        ],
+        [
+          1515313.171374943,
+          69319.05479993428
+        ]
+      ]
+    },
+    {
+      "id": "text:11424EE",
+      "kind": "text",
+      "handle": "11424EE",
+      "layer": "E_PanelBoard",
+      "x": 1502852.729744587,
+      "y": 69019.73475870496,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x16",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424EF",
+      "kind": "text",
+      "handle": "11424EF",
+      "layer": "E_PanelBoard",
+      "x": 1503524.741284152,
+      "y": 69019.73475870496,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424F0",
+      "kind": "text",
+      "handle": "11424F0",
+      "layer": "E_PanelBoard",
+      "x": 1509965.408044157,
+      "y": 69189.60942187332,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "R2",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11424F1",
+      "kind": "block",
+      "handle": "11424F1",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 68988.29627214956,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:11424F2",
+      "kind": "block",
+      "handle": "11424F2",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 68591.88858050277,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:11424F3",
+      "kind": "text",
+      "handle": "11424F3",
+      "layer": "E_PanelBoard",
+      "x": 1507338.676383307,
+      "y": 69211.30075981448,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424F4",
+      "kind": "wire",
+      "handle": "11424F4",
+      "layer": "E_PanelBoard",
+      "x": 1514114.35374749,
+      "y": 68922.64710829711,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1514114.35374749,
+          68922.64710829711
+        ],
+        [
+          1515313.171374943,
+          68922.64710829711
+        ]
+      ]
+    },
+    {
+      "id": "text:11424F5",
+      "kind": "text",
+      "handle": "11424F5",
+      "layer": "E_PanelBoard",
+      "x": 1509965.408044157,
+      "y": 68793.20173023616,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "R3",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:11424F8",
+      "kind": "wire",
+      "handle": "11424F8",
+      "layer": "E_PanelBoard",
+      "x": 1500222.296069512,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500222.296069512,
+          68969.47035205255
+        ],
+        [
+          1500251.924448152,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424F9",
+      "kind": "wire",
+      "handle": "11424F9",
+      "layer": "E_PanelBoard",
+      "x": 1500023.633556066,
+      "y": 68906.74213095891,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500023.633556066,
+          68906.74213095891
+        ],
+        [
+          1500023.633556066,
+          69032.19857314626
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424FA",
+      "kind": "wire",
+      "handle": "11424FA",
+      "layer": "E_PanelBoard",
+      "x": 1500386.04968118,
+      "y": 68756.15430446113,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500386.04968118,
+          68756.15430446113
+        ],
+        [
+          1499805.356586229,
+          68756.15430446113
+        ],
+        [
+          1499805.356586229,
+          69182.78639964404
+        ],
+        [
+          1500386.04968118,
+          69182.78639964404
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424FB",
+      "kind": "wire",
+      "handle": "11424FB",
+      "layer": "E_PanelBoard",
+      "x": 1500222.296069512,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500222.296069512,
+          68969.47035205255
+        ],
+        [
+          1500023.633556066,
+          68839.76655621995
+        ]
+      ]
+    },
+    {
+      "id": "wire:11424FC",
+      "kind": "wire",
+      "handle": "11424FC",
+      "layer": "E_PanelBoard",
+      "x": 1500087.911315061,
+      "y": 68868.86810070412,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500087.911315061,
+          68868.86810070412
+        ],
+        [
+          1500290.083624959,
+          68868.86810070412
+        ]
+      ]
+    },
+    {
+      "id": "text:11424FF",
+      "kind": "text",
+      "handle": "11424FF",
+      "layer": "E_PanelBoard",
+      "x": 1499774.184126457,
+      "y": 68528.66330847685,
+      "width": 0.0,
+      "height": 136.8243445835576,
+      "text": "4x16 AMP",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142500",
+      "kind": "text",
+      "handle": "1142500",
+      "layer": "E_PanelBoard",
+      "x": 1499774.287239496,
+      "y": 68300.15976909216,
+      "width": 0.0,
+      "height": 136.8243445835576,
+      "text": "30mA",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142501",
+      "kind": "text",
+      "handle": "1142501",
+      "layer": "E_PanelBoard",
+      "x": 1499785.617906676,
+      "y": 68088.30665268021,
+      "width": 0.0,
+      "height": 136.8243445835576,
+      "text": "ISOL.S.+RCD",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142502",
+      "kind": "wire",
+      "handle": "1142502",
+      "layer": "E_PanelBoard",
+      "x": 1500290.083624959,
+      "y": 68910.16329965144,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1500290.083624959,
+          68910.16329965144
+        ],
+        [
+          1500290.083624959,
+          68868.86810075241
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142503",
+      "kind": "wire",
+      "handle": "1142503",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 68988.29627214956,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1501133.963650577,
+          68988.29627214956
+        ],
+        [
+          1500386.04968118,
+          68988.29627214956
+        ]
+      ]
+    },
+    {
+      "id": "text:1142504",
+      "kind": "text",
+      "handle": "1142504",
+      "layer": "E_PanelBoard",
+      "x": 1502852.729744587,
+      "y": 68623.32706707744,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x16",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142505",
+      "kind": "text",
+      "handle": "1142505",
+      "layer": "E_PanelBoard",
+      "x": 1503524.741284152,
+      "y": 68623.32706707744,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142506",
+      "kind": "wire",
+      "handle": "1142506",
+      "layer": "E_PanelBoard",
+      "x": 1515313.173153313,
+      "y": 68518.78280242895,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1515313.173153313,
+          68518.78280242895
+        ],
+        [
+          1514114.355525861,
+          68518.78280242895
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142507",
+      "kind": "wire",
+      "handle": "1142507",
+      "layer": "E_PanelBoard",
+      "x": 1499805.356586229,
+      "y": 68969.47035205255,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1499805.356586229,
+          68969.47035205255
+        ],
+        [
+          1498352.963779925,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142508",
+      "kind": "wire",
+      "handle": "1142508",
+      "layer": "E_PanelBoard",
+      "x": 1506683.142201749,
+      "y": 60867.70241387637,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1506683.142201749,
+          60867.70241387637
+        ],
+        [
+          1514068.120951247,
+          60867.70241387637
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142509",
+      "kind": "wire",
+      "handle": "1142509",
+      "layer": "E_PanelBoard",
+      "x": 1506683.142201749,
+      "y": 60386.28759920332,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1506683.142201749,
+          60386.28759920332
+        ],
+        [
+          1514068.120951247,
+          60386.28759920332
+        ]
+      ]
+    },
+    {
+      "id": "text:114250A",
+      "kind": "text",
+      "handle": "114250A",
+      "layer": "E_PanelBoard",
+      "x": 1507028.466217402,
+      "y": 60992.1713465081,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "TOTAL CONNECTED LOAD",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:114250B",
+      "kind": "wire",
+      "handle": "114250B",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 69781.11165540457,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1501133.963650577,
+          69781.11165540457
+        ],
+        [
+          1501133.963650576,
+          67799.07319720916
+        ]
+      ]
+    },
+    {
+      "id": "wire:114250C",
+      "kind": "wire",
+      "handle": "114250C",
+      "layer": "E_PanelBoard",
+      "x": 1487307.46891939,
+      "y": 60385.71150519419,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1487307.46891939,
+          60385.71150519419
+        ],
+        [
+          1487311.420579888,
+          75842.48201115278
+        ]
+      ]
+    },
+    {
+      "id": "wire:114250D",
+      "kind": "wire",
+      "handle": "114250D",
+      "layer": "E_PanelBoard",
+      "x": 1506683.142201749,
+      "y": 61360.73577620164,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1506683.142201749,
+          61360.73577620164
+        ],
+        [
+          1514068.120951247,
+          61360.73577619198
+        ]
+      ]
+    },
+    {
+      "id": "wire:114250E",
+      "kind": "wire",
+      "handle": "114250E",
+      "layer": "E_PanelBoard",
+      "x": 1504297.485535463,
+      "y": 60385.71150519419,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1504297.485535463,
+          60385.71150519419
+        ],
+        [
+          1504302.987889543,
+          75837.56975594224
+        ]
+      ]
+    },
+    {
+      "id": "wire:114250F",
+      "kind": "wire",
+      "handle": "114250F",
+      "layer": "E_PanelBoard",
+      "x": 1504297.485535463,
+      "y": 60385.71150519419,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1504297.485535463,
+          60385.71150519419
+        ],
+        [
+          1487307.46891939,
+          60385.71150519419
+        ]
+      ]
+    },
+    {
+      "id": "text:1142512",
+      "kind": "text",
+      "handle": "1142512",
+      "layer": "E_PanelBoard",
+      "x": 1507044.576290151,
+      "y": 60498.20482115102,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "TOTAL DEMAND LOAD 70%%%",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142513",
+      "kind": "wire",
+      "handle": "1142513",
+      "layer": "E_PanelBoard",
+      "x": 1501132.937888809,
+      "y": 71731.3815780804,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1501132.937888809,
+          71731.3815780804
+        ],
+        [
+          1501132.937888809,
+          70938.56619480612
+        ]
+      ]
+    },
+    {
+      "id": "text:1142514",
+      "kind": "text",
+      "handle": "1142514",
+      "layer": "E_PanelBoard",
+      "x": 1508969.690601049,
+      "y": 68024.5696586772,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "8",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142515",
+      "kind": "text",
+      "handle": "1142515",
+      "layer": "E_PanelBoard",
+      "x": 1508969.690601049,
+      "y": 67640.94963631913,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "9",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142516",
+      "kind": "text",
+      "handle": "1142516",
+      "layer": "E_PanelBoard",
+      "x": 1512055.096360151,
+      "y": 69183.31343075473,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "1000",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142517",
+      "kind": "text",
+      "handle": "1142517",
+      "layer": "E_PanelBoard",
+      "x": 1513126.190864277,
+      "y": 68786.90573911754,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "1000",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142518",
+      "kind": "wire",
+      "handle": "1142518",
+      "layer": "E_PanelBoard",
+      "x": 1506681.925289161,
+      "y": 67837.50042432376,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1506681.925289161,
+          67837.50042432376
+        ],
+        [
+          1506681.925289161,
+          67441.09273268662
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142519",
+      "kind": "wire",
+      "handle": "1142519",
+      "layer": "E_PanelBoard",
+      "x": 1506683.653807372,
+      "y": 75837.56975594224,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1506683.653807372,
+          75837.56975594224
+        ],
+        [
+          1506681.962556156,
+          60386.28759920332
+        ]
+      ]
+    },
+    {
+      "id": "text:114251A",
+      "kind": "text",
+      "handle": "114251A",
+      "layer": "E_PanelBoard",
+      "x": 1515411.238799567,
+      "y": 69202.36777380119,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Sockets - Family Room",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114251B",
+      "kind": "text",
+      "handle": "114251B",
+      "layer": "E_PanelBoard",
+      "x": 1508969.690601049,
+      "y": 68420.97735032401,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "7",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114251C",
+      "kind": "text",
+      "handle": "114251C",
+      "layer": "E_PanelBoard",
+      "x": 1502852.729744587,
+      "y": 69416.14245035176,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x16",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114251D",
+      "kind": "text",
+      "handle": "114251D",
+      "layer": "E_PanelBoard",
+      "x": 1503524.741284152,
+      "y": 69416.14245035176,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:114251E",
+      "kind": "block",
+      "handle": "114251E",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 69384.70396377705,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114251F",
+      "kind": "text",
+      "handle": "114251F",
+      "layer": "E_PanelBoard",
+      "x": 1507338.676383307,
+      "y": 69607.70845145162,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142520",
+      "kind": "text",
+      "handle": "1142520",
+      "layer": "E_PanelBoard",
+      "x": 1510927.884185748,
+      "y": 69579.72112238221,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "800",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142521",
+      "kind": "text",
+      "handle": "1142521",
+      "layer": "E_PanelBoard",
+      "x": 1508969.690601049,
+      "y": 68806.64229705198,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "6",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142522",
+      "kind": "wire",
+      "handle": "1142522",
+      "layer": "E_PanelBoard",
+      "x": 1494001.064186571,
+      "y": 65122.70373005034,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1494001.064186571,
+          65122.70373005034
+        ],
+        [
+          1492851.233495193,
+          66272.53442148538
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142523",
+      "kind": "wire",
+      "handle": "1142523",
+      "layer": "E_PanelBoard",
+      "x": 1493426.14884092,
+      "y": 66748.82616917466,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493426.14884092,
+          66748.82616917466
+        ],
+        [
+          1493426.14884092,
+          65697.61907576784
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142524",
+      "kind": "wire",
+      "handle": "1142524",
+      "layer": "E_PanelBoard",
+      "x": 1493391.041453551,
+      "y": 65122.70373005034,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493391.041453551,
+          65122.70373005034
+        ],
+        [
+          1492851.233495193,
+          65662.51168840785
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142525",
+      "kind": "wire",
+      "handle": "1142525",
+      "layer": "E_PanelBoard",
+      "x": 1493797.723275667,
+      "y": 65122.70373005034,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493797.723275667,
+          65122.70373005034
+        ],
+        [
+          1492851.233495193,
+          66069.19351045635
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142526",
+      "kind": "wire",
+      "handle": "1142526",
+      "layer": "E_PanelBoard",
+      "x": 1493594.382364531,
+      "y": 65122.70373005034,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493594.382364531,
+          65122.70373005034
+        ],
+        [
+          1492851.233495193,
+          65865.85259941762
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142527",
+      "kind": "wire",
+      "handle": "1142527",
+      "layer": "E_PanelBoard",
+      "x": 1492984.359631512,
+      "y": 65122.70373005034,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1492984.359631512,
+          65122.70373005034
+        ],
+        [
+          1492851.233495193,
+          65255.82986634006
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142528",
+      "kind": "wire",
+      "handle": "1142528",
+      "layer": "E_PanelBoard",
+      "x": 1493187.700542493,
+      "y": 65122.70373005034,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493187.700542493,
+          65122.70373005034
+        ],
+        [
+          1492851.233495193,
+          65459.17077737875
+        ]
+      ]
+    },
+    {
+      "id": "text:1142529",
+      "kind": "text",
+      "handle": "1142529",
+      "layer": "E_PanelBoard",
+      "x": 1493025.788319637,
+      "y": 66825.03279131465,
+      "width": 0.0,
+      "height": 264.9449522442525,
+      "text": "SPD",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:114252A",
+      "kind": "wire",
+      "handle": "114252A",
+      "layer": "E_PanelBoard",
+      "x": 1493843.467507976,
+      "y": 66748.82616917466,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493843.467507976,
+          66748.82616917466
+        ],
+        [
+          1493008.830173788,
+          66748.82616917466
+        ],
+        [
+          1493008.830173788,
+          67186.204495764
+        ],
+        [
+          1493843.467507976,
+          67186.204495764
+        ]
+      ]
+    },
+    {
+      "id": "wire:114252B",
+      "kind": "wire",
+      "handle": "114252B",
+      "layer": "E_PanelBoard",
+      "x": 1493611.102560416,
+      "y": 67945.11997013725,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493611.102560416,
+          67945.11997013725
+        ],
+        [
+          1493426.14884092,
+          67703.12445979448
+        ]
+      ]
+    },
+    {
+      "id": "wire:114252C",
+      "kind": "wire",
+      "handle": "114252C",
+      "layer": "E_PanelBoard",
+      "x": 1493426.14884092,
+      "y": 67703.12445979448,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493426.14884092,
+          67703.12445979448
+        ],
+        [
+          1493426.14884092,
+          67186.204495764
+        ]
+      ]
+    },
+    {
+      "id": "text:114252E",
+      "kind": "text",
+      "handle": "114252E",
+      "layer": "E_PanelBoard",
+      "x": 1494076.195697741,
+      "y": 66810.30978064389,
+      "width": 0.0,
+      "height": 227.0956733522164,
+      "text": "TYPE 2 / CLASS C",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114252F",
+      "kind": "text",
+      "handle": "114252F",
+      "layer": "E_PanelBoard",
+      "x": 1493059.330719499,
+      "y": 64615.49053091853,
+      "width": 0.0,
+      "height": 227.0956733522164,
+      "text": "GND",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142530",
+      "kind": "text",
+      "handle": "1142530",
+      "layer": "E_PanelBoard",
+      "x": 1494209.493364145,
+      "y": 67649.33598029646,
+      "width": 0.0,
+      "height": 227.0956733522164,
+      "text": "Fuse gG 3x32A",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142531",
+      "kind": "text",
+      "handle": "1142531",
+      "layer": "E_PanelBoard",
+      "x": 1494076.195697741,
+      "y": 66358.41549558369,
+      "width": 0.0,
+      "height": 227.0956733522164,
+      "text": "Up<=1.2KV, 20KA Max",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142532",
+      "kind": "wire",
+      "handle": "1142532",
+      "layer": "E_PanelBoard",
+      "x": 1493426.14884092,
+      "y": 67865.31448835586,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1493426.14884092,
+          67865.31448835586
+        ],
+        [
+          1493426.14884092,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "text:1142533",
+      "kind": "text",
+      "handle": "1142533",
+      "layer": "E_PanelBoard",
+      "x": 1515411.242356463,
+      "y": 69591.31885119765,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Sockets - Living Room",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142534",
+      "kind": "text",
+      "handle": "1142534",
+      "layer": "E_PanelBoard",
+      "x": 1487858.870685686,
+      "y": 76160.08367075748,
+      "width": 0.0,
+      "height": 435.054246278643,
+      "text": "UDB-GF",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142535",
+      "kind": "text",
+      "handle": "1142535",
+      "layer": "E_PanelBoard",
+      "x": 1502852.729744587,
+      "y": 69812.55014197924,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x16",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142536",
+      "kind": "text",
+      "handle": "1142536",
+      "layer": "E_PanelBoard",
+      "x": 1503524.741284152,
+      "y": 69812.55014197924,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1142537",
+      "kind": "block",
+      "handle": "1142537",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 69781.11165540457,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142538",
+      "kind": "text",
+      "handle": "1142538",
+      "layer": "E_PanelBoard",
+      "x": 1509889.427781168,
+      "y": 70727.33810763093,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "--",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142539",
+      "kind": "wire",
+      "handle": "1142539",
+      "layer": "E_PanelBoard",
+      "x": 1510758.169686857,
+      "y": 61853.76913850965,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1510758.169686857,
+          61853.76913850965
+        ],
+        [
+          1514068.120951248,
+          61853.76913850965
+        ]
+      ]
+    },
+    {
+      "id": "wire:114253A",
+      "kind": "wire",
+      "handle": "114253A",
+      "layer": "E_PanelBoard",
+      "x": 1498352.963779925,
+      "y": 68866.29795108955,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1498352.963779925,
+          68866.29795108955
+        ],
+        [
+          1498352.963779925,
+          71316.8287157455
+        ],
+        [
+          1499804.827454484,
+          71316.8287157455
+        ]
+      ]
+    },
+    {
+      "id": "text:114253B",
+      "kind": "text",
+      "handle": "114253B",
+      "layer": "E_PanelBoard",
+      "x": 1510971.38468537,
+      "y": 71561.63095555869,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "400",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114253C",
+      "kind": "text",
+      "handle": "114253C",
+      "layer": "E_PanelBoard",
+      "x": 1512111.146820013,
+      "y": 71172.67987815259,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "300",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114253D",
+      "kind": "text",
+      "handle": "114253D",
+      "layer": "E_PanelBoard",
+      "x": 1515410.745726439,
+      "y": 71573.22868437413,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Lighting - Living Room1/2/Bar Area/Entrance/Dining",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114253E",
+      "kind": "text",
+      "handle": "114253E",
+      "layer": "E_PanelBoard",
+      "x": 1515410.745726439,
+      "y": 71184.27760696805,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Lighting - Family Room/Office Room/Bathrooms",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114253F",
+      "kind": "text",
+      "handle": "114253F",
+      "layer": "E_PanelBoard",
+      "x": 1507339.08026399,
+      "y": 70799.08336713334,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "St-By",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142540",
+      "kind": "text",
+      "handle": "1142540",
+      "layer": "E_PanelBoard",
+      "x": 1513253.066017929,
+      "y": 70733.91735453557,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "--",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142541",
+      "kind": "text",
+      "handle": "1142541",
+      "layer": "E_PanelBoard",
+      "x": 1510902.133437184,
+      "y": 60958.33863702694,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "4500W   ,  9 A/PH",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142542",
+      "kind": "text",
+      "handle": "1142542",
+      "layer": "E_PanelBoard",
+      "x": 1510902.133437184,
+      "y": 60465.30527470698,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3150W   ,  6 A/PH",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142543",
+      "kind": "text",
+      "handle": "1142543",
+      "layer": "E_PanelBoard",
+      "x": 1515410.743948069,
+      "y": 70787.86991533093,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Spare",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142544",
+      "kind": "text",
+      "handle": "1142544",
+      "layer": "E_PanelBoard",
+      "x": 1509965.408044157,
+      "y": 68010.23202713506,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "R4",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1142545",
+      "kind": "block",
+      "handle": "1142545",
+      "layer": "E_PanelBoard",
+      "x": 1501133.963650577,
+      "y": 68195.48088885596,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142546",
+      "kind": "text",
+      "handle": "1142546",
+      "layer": "E_PanelBoard",
+      "x": 1502852.729744587,
+      "y": 68226.91937543063,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x16",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142547",
+      "kind": "text",
+      "handle": "1142547",
+      "layer": "E_PanelBoard",
+      "x": 1503524.741284152,
+      "y": 68226.91937543063,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142548",
+      "kind": "wire",
+      "handle": "1142548",
+      "layer": "E_PanelBoard",
+      "x": 1515313.173153313,
+      "y": 68114.9184965608,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1515313.173153313,
+          68114.9184965608
+        ],
+        [
+          1514114.355525861,
+          68114.9184965608
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142549",
+      "kind": "wire",
+      "handle": "1142549",
+      "layer": "E_PanelBoard",
+      "x": 1504302.987889543,
+      "y": 75837.56975594224,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1504302.987889543,
+          75837.56975594224
+        ],
+        [
+          1487311.419324026,
+          75837.56975594224
+        ]
+      ]
+    },
+    {
+      "id": "block:114254A",
+      "kind": "block",
+      "handle": "114254A",
+      "layer": "E_PanelBoard",
+      "x": 1501133.109644222,
+      "y": 67799.07319720917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "CB1",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114254B",
+      "kind": "text",
+      "handle": "114254B",
+      "layer": "E_PanelBoard",
+      "x": 1502851.875738233,
+      "y": 67830.51168378384,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "2x16",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114254C",
+      "kind": "text",
+      "handle": "114254C",
+      "layer": "E_PanelBoard",
+      "x": 1503523.887277798,
+      "y": 67830.51168378384,
+      "width": 0.0,
+      "height": 222.3975273084204,
+      "text": "(1P+N)",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114254D",
+      "kind": "text",
+      "handle": "114254D",
+      "layer": "E_PanelBoard",
+      "x": 1507340.106025758,
+      "y": 68413.62217665555,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "St-By",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114254E",
+      "kind": "text",
+      "handle": "114254E",
+      "layer": "E_PanelBoard",
+      "x": 1509965.364654555,
+      "y": 67613.82433548827,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "R5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:114254F",
+      "kind": "wire",
+      "handle": "114254F",
+      "layer": "E_PanelBoard",
+      "x": 1515313.173153313,
+      "y": 67711.05419069262,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1515313.173153313,
+          67711.05419069262
+        ],
+        [
+          1514114.355525861,
+          67711.05419069262
+        ]
+      ]
+    },
+    {
+      "id": "text:1142550",
+      "kind": "text",
+      "handle": "1142550",
+      "layer": "E_PanelBoard",
+      "x": 1515411.771488208,
+      "y": 68423.43995343019,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Spare",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142551",
+      "kind": "text",
+      "handle": "1142551",
+      "layer": "E_PanelBoard",
+      "x": 1513208.557569448,
+      "y": 67609.4873478539,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "400",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142552",
+      "kind": "text",
+      "handle": "1142552",
+      "layer": "E_PanelBoard",
+      "x": 1512156.558933905,
+      "y": 68005.89503948137,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "600",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142553",
+      "kind": "text",
+      "handle": "1142553",
+      "layer": "E_PanelBoard",
+      "x": 1511136.78294814,
+      "y": 68380.6421184675,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "--",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142554",
+      "kind": "text",
+      "handle": "1142554",
+      "layer": "E_PanelBoard",
+      "x": 1509935.739128364,
+      "y": 68383.74344032416,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "--",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142555",
+      "kind": "text",
+      "handle": "1142555",
+      "layer": "E_PanelBoard",
+      "x": 1508977.328923415,
+      "y": 69597.96920563535,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "4",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142556",
+      "kind": "text",
+      "handle": "1142556",
+      "layer": "E_PanelBoard",
+      "x": 1515411.238799567,
+      "y": 68805.96008216403,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Sockets - Office Room",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142557",
+      "kind": "text",
+      "handle": "1142557",
+      "layer": "E_PanelBoard",
+      "x": 1515411.238799567,
+      "y": 67998.23147042774,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Sockets - Office Room",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142558",
+      "kind": "text",
+      "handle": "1142558",
+      "layer": "E_PanelBoard",
+      "x": 1515411.240577938,
+      "y": 67594.36716455958,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "Sockets - Dining Room",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142559",
+      "kind": "wire",
+      "handle": "1142559",
+      "layer": "E_PanelBoard",
+      "x": 1498352.963779925,
+      "y": 68866.29795108957,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1498352.963779925,
+          68866.29795108957
+        ],
+        [
+          1498352.963779925,
+          68969.47035205255
+        ]
+      ]
+    },
+    {
+      "id": "text:114255A",
+      "kind": "text",
+      "handle": "114255A",
+      "layer": "E_PanelBoard",
+      "x": 1507337.654176521,
+      "y": 67625.66999326587,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114255B",
+      "kind": "text",
+      "handle": "114255B",
+      "layer": "E_PanelBoard",
+      "x": 1507338.589604102,
+      "y": 68814.8930681966,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114255C",
+      "kind": "text",
+      "handle": "114255C",
+      "layer": "E_PanelBoard",
+      "x": 1507338.502824897,
+      "y": 68022.07768490301,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "3x2.5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114255D",
+      "kind": "text",
+      "handle": "114255D",
+      "layer": "E_PanelBoard",
+      "x": 1508969.690601049,
+      "y": 69203.0499886795,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "5",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114255E",
+      "kind": "text",
+      "handle": "114255E",
+      "layer": "E_PanelBoard",
+      "x": 1510971.881315393,
+      "y": 61491.36694186366,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "1200",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:114255F",
+      "kind": "text",
+      "handle": "114255F",
+      "layer": "E_PanelBoard",
+      "x": 1512098.362037838,
+      "y": 61491.36694186366,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "1900",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142560",
+      "kind": "text",
+      "handle": "1142560",
+      "layer": "E_PanelBoard",
+      "x": 1513112.903928223,
+      "y": 61491.36694185225,
+      "width": 0.0,
+      "height": 256.8794677145727,
+      "text": "1400",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142561",
+      "kind": "wire",
+      "handle": "1142561",
+      "layer": "PANEL BOARDS",
+      "x": 1489001.433981631,
+      "y": 70151.2077479047,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489001.433981631,
+          70151.2077479047
+        ],
+        [
+          1489073.46759335,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142562",
+      "kind": "wire",
+      "handle": "1142562",
+      "layer": "PANEL BOARDS",
+      "x": 1489073.46759335,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489073.46759335,
+          70540.47355896917
+        ],
+        [
+          1489025.848210069,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142563",
+      "kind": "wire",
+      "handle": "1142563",
+      "layer": "PANEL BOARDS",
+      "x": 1489025.848210069,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489025.848210069,
+          70430.00623417425
+        ],
+        [
+          1488978.228826788,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142564",
+      "kind": "wire",
+      "handle": "1142564",
+      "layer": "PANEL BOARDS",
+      "x": 1488978.228826788,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488978.228826788,
+          70540.47355896917
+        ],
+        [
+          1488930.609443077,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142565",
+      "kind": "wire",
+      "handle": "1142565",
+      "layer": "PANEL BOARDS",
+      "x": 1488930.609443077,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488930.609443077,
+          70430.00623417425
+        ],
+        [
+          1488882.990059795,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142566",
+      "kind": "wire",
+      "handle": "1142566",
+      "layer": "PANEL BOARDS",
+      "x": 1489796.956189795,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489796.956189795,
+          70430.00623417425
+        ],
+        [
+          1489844.575573506,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142567",
+      "kind": "wire",
+      "handle": "1142567",
+      "layer": "PANEL BOARDS",
+      "x": 1489749.336806085,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489749.336806085,
+          70540.47355896917
+        ],
+        [
+          1489796.956189795,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142568",
+      "kind": "wire",
+      "handle": "1142568",
+      "layer": "PANEL BOARDS",
+      "x": 1490035.053107061,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490035.053107061,
+          70540.47355896917
+        ],
+        [
+          1489987.43372378,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142569",
+      "kind": "wire",
+      "handle": "1142569",
+      "layer": "PANEL BOARDS",
+      "x": 1489987.43372378,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489987.43372378,
+          70430.00623417425
+        ],
+        [
+          1489939.814340069,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:114256A",
+      "kind": "wire",
+      "handle": "114256A",
+      "layer": "PANEL BOARDS",
+      "x": 1489939.814340069,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489939.814340069,
+          70540.47355896917
+        ],
+        [
+          1489892.194956788,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:114256B",
+      "kind": "wire",
+      "handle": "114256B",
+      "layer": "PANEL BOARDS",
+      "x": 1489892.194956788,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489892.194956788,
+          70430.00623417425
+        ],
+        [
+          1489844.575573506,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:114256C",
+      "kind": "wire",
+      "handle": "114256C",
+      "layer": "PANEL BOARDS",
+      "x": 1489963.019495342,
+      "y": 70151.2077479047,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489963.019495342,
+          70151.2077479047
+        ],
+        [
+          1490035.053107061,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:114256D",
+      "kind": "wire",
+      "handle": "114256D",
+      "layer": "PANEL BOARDS",
+      "x": 1490763.823625928,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490763.823625928,
+          70430.00623417425
+        ],
+        [
+          1490811.443009639,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:114256E",
+      "kind": "wire",
+      "handle": "114256E",
+      "layer": "PANEL BOARDS",
+      "x": 1490716.204242217,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490716.204242217,
+          70540.47355896917
+        ],
+        [
+          1490763.823625928,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:114256F",
+      "kind": "wire",
+      "handle": "114256F",
+      "layer": "PANEL BOARDS",
+      "x": 1490859.06239292,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490859.06239292,
+          70430.00623417425
+        ],
+        [
+          1490811.443009639,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142570",
+      "kind": "wire",
+      "handle": "1142570",
+      "layer": "PANEL BOARDS",
+      "x": 1490906.681776631,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490906.681776631,
+          70540.47355896917
+        ],
+        [
+          1490859.06239292,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142571",
+      "kind": "wire",
+      "handle": "1142571",
+      "layer": "PANEL BOARDS",
+      "x": 1490954.301159913,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490954.301159913,
+          70430.00623417425
+        ],
+        [
+          1490906.681776631,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142572",
+      "kind": "wire",
+      "handle": "1142572",
+      "layer": "PANEL BOARDS",
+      "x": 1491001.920543624,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1491001.920543624,
+          70540.47355896917
+        ],
+        [
+          1490954.301159913,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142573",
+      "kind": "wire",
+      "handle": "1142573",
+      "layer": "PANEL BOARDS",
+      "x": 1490929.886931475,
+      "y": 70151.2077479047,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490929.886931475,
+          70151.2077479047
+        ],
+        [
+          1491001.920543624,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142574",
+      "kind": "wire",
+      "handle": "1142574",
+      "layer": "PANEL BOARDS",
+      "x": 1488835.370675655,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488835.370675655,
+          70430.00623417425
+        ],
+        [
+          1488882.990059795,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142575",
+      "kind": "wire",
+      "handle": "1142575",
+      "layer": "PANEL BOARDS",
+      "x": 1488787.751292373,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488787.751292373,
+          70540.47355896917
+        ],
+        [
+          1488835.370675655,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "text:1142576",
+      "kind": "text",
+      "handle": "1142576",
+      "layer": "PANEL BOARDS",
+      "x": 1488306.210091006,
+      "y": 70236.82676127387,
+      "width": 0.0,
+      "height": 323.0132995347941,
+      "text": "R",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142577",
+      "kind": "wire",
+      "handle": "1142577",
+      "layer": "PANEL BOARDS",
+      "x": 1489654.098039092,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489654.098039092,
+          70540.47355896917
+        ],
+        [
+          1489701.717422373,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "text:1142578",
+      "kind": "text",
+      "handle": "1142578",
+      "layer": "PANEL BOARDS",
+      "x": 1489267.795604717,
+      "y": 70236.82676127387,
+      "width": 0.0,
+      "height": 323.0132995347941,
+      "text": "S",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:1142579",
+      "kind": "wire",
+      "handle": "1142579",
+      "layer": "PANEL BOARDS",
+      "x": 1489726.131651241,
+      "y": 70151.2077479047,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489726.131651241,
+          70151.2077479047
+        ],
+        [
+          1489654.098039092,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:114257A",
+      "kind": "wire",
+      "handle": "114257A",
+      "layer": "PANEL BOARDS",
+      "x": 1490620.965475225,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490620.965475225,
+          70540.47355896917
+        ],
+        [
+          1490668.584858936,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:114257B",
+      "kind": "wire",
+      "handle": "114257B",
+      "layer": "PANEL BOARDS",
+      "x": 1490692.999087373,
+      "y": 70151.2077479047,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490692.999087373,
+          70151.2077479047
+        ],
+        [
+          1490620.965475225,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "text:114257C",
+      "kind": "text",
+      "handle": "114257C",
+      "layer": "PANEL BOARDS",
+      "x": 1490234.66304085,
+      "y": 70236.82676127387,
+      "width": 0.0,
+      "height": 323.0132995347941,
+      "text": "T",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "wire:114257D",
+      "kind": "wire",
+      "handle": "114257D",
+      "layer": "PANEL BOARDS",
+      "x": 1488764.54613753,
+      "y": 70151.2077479047,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488764.54613753,
+          70151.2077479047
+        ],
+        [
+          1488692.512525381,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:114257E",
+      "kind": "wire",
+      "handle": "114257E",
+      "layer": "PANEL BOARDS",
+      "x": 1488692.512525381,
+      "y": 70540.47355896917,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488692.512525381,
+          70540.47355896917
+        ],
+        [
+          1488740.131909092,
+          70430.00623417425
+        ]
+      ]
+    },
+    {
+      "id": "wire:114257F",
+      "kind": "wire",
+      "handle": "114257F",
+      "layer": "PANEL BOARDS",
+      "x": 1489701.717422373,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1489701.717422373,
+          70430.00623417425
+        ],
+        [
+          1489749.336806085,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142581",
+      "kind": "wire",
+      "handle": "1142581",
+      "layer": "PANEL BOARDS",
+      "x": 1490668.584858936,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1490668.584858936,
+          70430.00623417425
+        ],
+        [
+          1490716.204242217,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "wire:1142584",
+      "kind": "wire",
+      "handle": "1142584",
+      "layer": "PANEL BOARDS",
+      "x": 1488740.131909092,
+      "y": 70430.00623417425,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": [
+        [
+          1488740.131909092,
+          70430.00623417425
+        ],
+        [
+          1488787.751292373,
+          70540.47355896917
+        ]
+      ]
+    },
+    {
+      "id": "text:1142585",
+      "kind": "text",
+      "handle": "1142585",
+      "layer": "E_POWERRISER",
+      "x": 1479481.661389914,
+      "y": 67857.51462642754,
+      "width": 0.0,
+      "height": 258.4849135750235,
+      "text": "L=35m",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1142759",
+      "kind": "block",
+      "handle": "1142759",
+      "layer": "E0 - G - Panel",
+      "x": 1539291.737671784,
+      "y": 72599.85096859766,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "4X10 300mA",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "block:1142812",
+      "kind": "block",
+      "handle": "1142812",
+      "layer": "E0 - G - Panel",
+      "x": 1543611.737671783,
+      "y": 72599.85096859848,
+      "width": 0.0,
+      "height": 0.0,
+      "text": "",
+      "block_name": "4X16",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    },
+    {
+      "id": "text:1142819",
+      "kind": "text",
+      "handle": "1142819",
+      "layer": "E0 - G - Panel",
+      "x": 1538032.668750025,
+      "y": 68344.50044369989,
+      "width": 0.0,
+      "height": 300.0,
+      "text": "SP",
+      "block_name": "",
+      "attributes": {},
+      "parent_id": "",
+      "points": []
+    }
+  ],
+  "associations": [
+    {
+      "block_id": "block:11424AA",
+      "label_id": "text:11424A5",
+      "distance": 1735.42281,
+      "normalized_distance": 0.375321,
+      "topology_bonus": 0.0,
+      "confidence": 0.624679
+    },
+    {
+      "block_id": "block:11424AB",
+      "label_id": "text:11424A3",
+      "distance": 1725.79284,
+      "normalized_distance": 0.373239,
+      "topology_bonus": 0.0,
+      "confidence": 0.626761
+    },
+    {
+      "block_id": "block:11424BC",
+      "label_id": "text:11424B5",
+      "distance": 1395.551249,
+      "normalized_distance": 0.301817,
+      "topology_bonus": 0.0,
+      "confidence": 0.698183
+    },
+    {
+      "block_id": "block:11424BF",
+      "label_id": "text:11424C1",
+      "distance": 4503.52343,
+      "normalized_distance": 0.973981,
+      "topology_bonus": 0.0,
+      "confidence": 0.026019
+    },
+    {
+      "block_id": "block:11424F1",
+      "label_id": "text:11424EE",
+      "distance": 1723.360363,
+      "normalized_distance": 0.372713,
+      "topology_bonus": 0.0,
+      "confidence": 0.627287
+    },
+    {
+      "block_id": "block:11424F2",
+      "label_id": "text:11424FF",
+      "distance": 1383.097724,
+      "normalized_distance": 0.299124,
+      "topology_bonus": 0.0,
+      "confidence": 0.700876
+    },
+    {
+      "block_id": "block:114251E",
+      "label_id": "text:114251C",
+      "distance": 1723.360363,
+      "normalized_distance": 0.372713,
+      "topology_bonus": 0.0,
+      "confidence": 0.627287
+    },
+    {
+      "block_id": "block:1142537",
+      "label_id": "text:1142535",
+      "distance": 1723.360363,
+      "normalized_distance": 0.372713,
+      "topology_bonus": 0.0,
+      "confidence": 0.627287
+    },
+    {
+      "block_id": "block:1142545",
+      "label_id": "text:1142501",
+      "distance": 1414.855935,
+      "normalized_distance": 0.305992,
+      "topology_bonus": 0.0,
+      "confidence": 0.694008
+    },
+    {
+      "block_id": "block:114254A",
+      "label_id": "text:114254B",
+      "distance": 1723.360363,
+      "normalized_distance": 0.372713,
+      "topology_bonus": 0.0,
+      "confidence": 0.627287
+    }
+  ],
+  "warnings": []
+}

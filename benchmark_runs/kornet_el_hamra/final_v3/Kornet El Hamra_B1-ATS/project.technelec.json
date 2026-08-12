@@ -1,0 +1,399 @@
+{
+  "id": "project_50054c7390b343b0a08ab70d3cbe1891",
+  "name": "Kornet El Hamra_B1-ATS",
+  "reference": "Kornet El Hamra_B1-ATS",
+  "schema_version": 1,
+  "created_at": "2026-08-12T18:02:06+00:00",
+  "updated_at": "2026-08-12T18:02:25+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-ATS.dwg",
+      "sha256": "89342759044c8879d12460a4615a14fe4824df90765c7976f6cd6cc3ae119bbb",
+      "filename": "Kornet El Hamra_B1-ATS.dwg",
+      "added_at": "2026-08-12T18:02:08+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_79084b201e625afa84d87a60797c18e9",
+      "reference": "ATS",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_aff5f88331a153b5840c465db30af863",
+          "category": "OTHER",
+          "label": "Generator (G)",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 2,
+          "manufacturer": "-",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Generator source blocks G",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:51D",
+              "entity_handle": "51D",
+              "block_name": "Generator",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.63266517638,
+                51164.24412997028,
+                43294.63266517638,
+                51164.24412997028
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:531",
+              "entity_handle": "531",
+              "block_name": "Generator",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.59519597116,
+                51164.23147922712,
+                40311.59519597116,
+                51164.23147922712
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:131",
+              "entity_handle": "",
+              "block_name": "",
+              "layer": "E-Panels & Risers",
+              "text": "G",
+              "cad_bbox": [
+                43196.60823476734,
+                51018.97360655583,
+                43196.60823476734,
+                51300.967960211914
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:152",
+              "entity_handle": "",
+              "block_name": "",
+              "layer": "E-Panels & Risers",
+              "text": "G",
+              "cad_bbox": [
+                40213.570765562115,
+                51018.960955812676,
+                40213.570765562115,
+                51300.95530946876
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f0165c59f7aa5266aa049f0a27aadaff",
+          "category": "SWITCH",
+          "label": "D.S.",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 2,
+          "manufacturer": "-",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "DXF_ONLY",
+          "notes": "Disconnector switch blocks D.S.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:504",
+              "entity_handle": "504",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.3507585148,
+                43720.22532632076,
+                43294.3507585148,
+                43720.22532632076
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:524",
+              "entity_handle": "524",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.3132893033,
+                43720.21267557769,
+                40311.3132893033,
+                43720.21267557769
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_143891c525c95a3c8a0abab106db7f37",
+          "category": "MCCB",
+          "label": "C.B.",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "-",
+          "quantity": 9,
+          "manufacturer": "-",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.85,
+          "origin": "DXF_ONLY",
+          "notes": "Circuit breaker blocks C.B.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4DB",
+              "entity_handle": "4DB",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                25150.94502727847,
+                50462.34889594377,
+                25150.94502727847,
+                50462.34889594377
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E8",
+              "entity_handle": "4E8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                27656.16964061554,
+                50462.34889594377,
+                27656.16964061554,
+                50462.34889594377
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4F2",
+              "entity_handle": "4F2",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                26803.96552228994,
+                41291.74651060764,
+                26803.96552228994,
+                41291.74651060764
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:516",
+              "entity_handle": "516",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                42745.11332097926,
+                41411.08108464226,
+                42745.11332097926,
+                41411.08108464226
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:534",
+              "entity_handle": "534",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.59519593181,
+                49249.33727621679,
+                40311.59519593181,
+                49249.33727621679
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:540",
+              "entity_handle": "540",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40605.2378706324,
+                41411.08108464226,
+                40605.2378706324,
+                41411.08108464226
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:549",
+              "entity_handle": "549",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.63265967529,
+                49249.25481822075,
+                43294.63265967529,
+                49249.25481822075
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:5B8",
+              "entity_handle": "5B8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                52775.26985130409,
+                45454.37336864277,
+                52775.26985130409,
+                45454.37336864277
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:5C3",
+              "entity_handle": "5C3",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                54615.61909928681,
+                45454.27582247446,
+                54615.61909928681,
+                45454.27582247446
+              ],
+              "image_bbox": [],
+              "confidence": 0.85
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_e60891864e615ed9a9ef0804c6ca4d85",
+          "name": "PT 4",
+          "description": "Phoenix Contact feed-through terminal 4mm²",
+          "max_mm2": 4.0,
+          "quantity": 2,
+          "circuits": [
+            "-"
+          ],
+          "origin": "calculated",
+          "warnings": [
+            "-: cable size missing; defaulted to 4mm²"
+          ]
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_v3\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_v3\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_v3\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_v3\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

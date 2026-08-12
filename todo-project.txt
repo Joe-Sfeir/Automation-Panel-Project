@@ -1,3 +1,7 @@
+ARCHIVED NOTE — 2026-08-12
+This TODO describes an obsolete Excel-based generation of the application.
+Use PROJECT-HANDOFF.md for current priorities and verified project state. Keep this file only as historical context.
+
 this code takes the dwg (or multiple) and gives me the raw excel with manufacturers desired. what is worrying me the most is the extracting mechnaism. im not really comfortable with this code tbh. it doesnt feel universaliable and robust. in general with all availble tech, is that the single best way to extract the info from our sld.
 
 --im thinking of instead of extracting to excel so that the user can change and modify it. i extract some temp type file that works same as excel which is easy to implement in my UI so that the user will have a better experience. and then this new modified file and type will then be sent to the matching code. what do you think.

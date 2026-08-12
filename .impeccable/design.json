@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T21:33:04+03:00",
+  "title": "Design System: Technicat Automation",
+  "extensions": {
+    "colorMeta": {
+      "technical-blue": {
+        "role": "primary",
+        "displayName": "Technical Blue",
+        "canonical": "#137EAE",
+        "tonalRamp": ["#0A5E84", "#0E6E99", "#0F709C", "#137EAE", "#4FB0D9", "#8AC0D7", "#B9DCEB", "#F1F8FA"]
+      },
+      "technical-blue-deep": {
+        "role": "primary",
+        "displayName": "Deep Technical Blue",
+        "canonical": "#143E52",
+        "tonalRamp": ["#11181C", "#143E52", "#176E95", "#137EAE", "#4FB0D9", "#8AC0D7", "#DCEEF5", "#F1F8FA"]
+      },
+      "drafting-canvas": {
+        "role": "neutral",
+        "displayName": "Drafting Canvas",
+        "canonical": "#F2F4F3",
+        "tonalRamp": ["#11181C", "#20282D", "#3E4A50", "#657178", "#AEB8BC", "#D8DDDF", "#F2F4F3", "#FAFBFA"]
+      },
+      "work-surface": {
+        "role": "neutral",
+        "displayName": "Work Surface",
+        "canonical": "#FAFBFA",
+        "tonalRamp": ["#182126", "#334047", "#657178", "#AEB8BC", "#D8DDDF", "#E8ECEE", "#F5F7F6", "#FAFBFA"]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#20282D",
+        "tonalRamp": ["#11181C", "#182126", "#20282D", "#334047", "#5C686E", "#AEB8BC", "#D8DDDF", "#F2F4F3"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Cool Rule",
+        "canonical": "#BFC7CA",
+        "tonalRamp": ["#334047", "#5C686E", "#75858D", "#AEB8BC", "#BFC7CA", "#CAD1D4", "#D8DDDF", "#EEF2F3"]
+      },
+      "approval-fill": {
+        "role": "secondary",
+        "displayName": "Approval Green",
+        "canonical": "#E7F4EA",
+        "tonalRamp": ["#23673B", "#27683D", "#316B49", "#6FAD80", "#9BC2A6", "#DFF0E4", "#E7F4EA", "#EDF7EF"]
+      },
+      "warning-fill": {
+        "role": "secondary",
+        "displayName": "Decision Amber",
+        "canonical": "#FFF3D3",
+        "tonalRamp": ["#795300", "#815500", "#8A5B00", "#D7A538", "#D7B45F", "#FFE8B0", "#FFF3D3", "#FFF8E8"]
+      },
+      "danger-fill": {
+        "role": "secondary",
+        "displayName": "Exclusion Red",
+        "canonical": "#FFF5F3",
+        "tonalRamp": ["#6F2A21", "#9A3C2D", "#B85848", "#D78B7E", "#EABAB2", "#FCE6E2", "#FFF0ED", "#FFF5F3"]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "Dark Sidebar",
+        "canonical": "#20292F",
+        "tonalRamp": ["#11181C", "#182126", "#20292F", "#2A353C", "#46535A", "#667278", "#C3CDD2", "#F7F8F7"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Page Display", "purpose": "Top-level workbench page titles." },
+      "title": { "displayName": "Local Title", "purpose": "Decision titles, action tiles, and local hierarchy anchors." },
+      "body": { "displayName": "Workbench Body", "purpose": "Controls, forms, tables, and working copy." },
+      "label": { "displayName": "Engineering Label", "purpose": "Uppercase rail, workflow, section, and status labels." },
+      "mono": { "displayName": "Evidence Mono", "purpose": "Identifiers, measurements, evidence handles, and logs." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "state-change", "value": "instant", "purpose": "The shipped UI changes selection, status, and gate state without authored decorative animation." }
+    ],
+    "breakpoints": [
+      { "name": "review-minimum", "value": "1080x680" },
+      { "name": "review-opening-size", "value": "1460x900" },
+      { "name": "main-opening-size", "value": "1360x860" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary workflow action, including extraction, review opening, saving, and pricing when its gate is ready.",
+      "html": "<button class=\"ds-btn-primary\">PRICE APPROVED COMPONENTS</button>",
+      "css": ".ds-btn-primary { min-height: 34px; padding: 7px 13px; border: 1px solid #0E6E99; border-radius: 3px; background: #137EAE; color: #FFFFFF; font: 600 13px 'Segoe UI', sans-serif; } .ds-btn-primary:hover { background: #0F709C; } .ds-btn-primary:active { background: #0A5E84; } .ds-btn-primary:focus-visible { outline: 2px solid #137EAE; outline-offset: 2px; } .ds-btn-primary:disabled { background: #D6DCDE; border-color: #C4CBCE; color: #7B858A; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting commands such as opening evidence, browsing, saving review, and closing.",
+      "html": "<button class=\"ds-btn-secondary\">OPEN SOURCE EVIDENCE</button>",
+      "css": ".ds-btn-secondary { min-height: 34px; padding: 7px 13px; border: 1px solid #AEB8BC; border-radius: 3px; background: #FAFBFA; color: #303B41; font: 600 13px 'Segoe UI', sans-serif; } .ds-btn-secondary:hover { background: #EEF2F3; border-color: #75858D; } .ds-btn-secondary:active { background: #E8ECEE; } .ds-btn-secondary:focus-visible { outline: 2px solid #137EAE; outline-offset: 2px; }"
+    },
+    {
+      "name": "Approval Decision Button",
+      "kind": "button",
+      "refersTo": "button-approve",
+      "description": "Explicitly records engineer approval for selected BOM rows.",
+      "html": "<button class=\"ds-btn-approve\">APPROVE SELECTED</button>",
+      "css": ".ds-btn-approve { min-height: 34px; padding: 7px 13px; border: 1px solid #6FAD80; border-radius: 3px; background: #EDF7EF; color: #23673B; font: 600 13px 'Segoe UI', sans-serif; } .ds-btn-approve:hover { background: #DFF0E4; } .ds-btn-approve:focus-visible { outline: 2px solid #137EAE; outline-offset: 2px; }"
+    },
+    {
+      "name": "Needs Review Button",
+      "kind": "button",
+      "refersTo": "button-warning",
+      "description": "Returns selected BOM rows to an unresolved review state.",
+      "html": "<button class=\"ds-btn-warning\">MARK NEEDS REVIEW</button>",
+      "css": ".ds-btn-warning { min-height: 34px; padding: 7px 13px; border: 1px solid #D7A538; border-radius: 3px; background: #FFF7E4; color: #815500; font: 600 13px 'Segoe UI', sans-serif; } .ds-btn-warning:hover { background: #FFEDC0; } .ds-btn-warning:focus-visible { outline: 2px solid #137EAE; outline-offset: 2px; }"
+    },
+    {
+      "name": "Exclusion Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Explicitly excludes selected BOM rows from pricing.",
+      "html": "<button class=\"ds-btn-danger\">EXCLUDE SELECTED</button>",
+      "css": ".ds-btn-danger { min-height: 34px; padding: 7px 13px; border: 1px solid #D78B7E; border-radius: 3px; background: #FFF5F3; color: #9A3C2D; font: 600 13px 'Segoe UI', sans-serif; } .ds-btn-danger:hover { background: #FCE6E2; } .ds-btn-danger:focus-visible { outline: 2px solid #137EAE; outline-offset: 2px; }"
+    },
+    {
+      "name": "Workbench Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Compact editable field for references, paths, filters, and engineering values.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-project-reference\">PROJECT REFERENCE</label><input class=\"ds-input\" id=\"ds-project-reference\" value=\"DB-L2-PANEL-04\">",
+      "css": ".ds-field-label { display: block; margin-bottom: 6px; color: #46535A; font: 800 11px 'Segoe UI', sans-serif; letter-spacing: .8px; } .ds-input { width: 260px; padding: 6px 8px; border: 1px solid #B8C1C5; border-radius: 3px; background: #FFFFFF; color: #20282D; font: 400 13px 'Segoe UI', sans-serif; } .ds-input:focus-visible { outline: none; border: 2px solid #137EAE; padding: 5px 7px; } .ds-input::selection { background: #B9DCEB; }"
+    },
+    {
+      "name": "Workflow Strip",
+      "kind": "nav",
+      "refersTo": "workflow-strip",
+      "description": "Connected numbered stages expose completed, active, and pending workflow position.",
+      "html": "<nav class=\"ds-workflow\" aria-label=\"Project workflow\"><span class=\"ds-stage ds-complete\">1 DRAWINGS</span><span class=\"ds-stage ds-complete\">2 EXTRACT</span><span class=\"ds-stage ds-active\" aria-current=\"step\">3 REVIEW</span><span class=\"ds-stage\">4 PRICE</span><span class=\"ds-stage\">5 EXPORT</span></nav>",
+      "css": ".ds-workflow { display: flex; align-items: center; background: #F9FAF9; font-family: 'Segoe UI', sans-serif; } .ds-stage { padding: 7px 13px; border: 1px solid #CDD4D7; border-right: 0; color: #667278; font-size: 11px; font-weight: 700; letter-spacing: .3px; } .ds-stage:last-child { border-right: 1px solid #CDD4D7; } .ds-stage.ds-complete { background: #EDF4F1; color: #316B49; } .ds-stage.ds-active { border-color: #137EAE; background: #137EAE; color: #FFFFFF; } .ds-stage:focus-visible { outline: 2px solid #137EAE; outline-offset: 2px; }"
+    },
+    {
+      "name": "Blocked Status Chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "Compact explicit label for a review or pricing state that remains unresolved.",
+      "html": "<span class=\"ds-status-blocked\">REVIEW REQUIRED</span>",
+      "css": ".ds-status-blocked { display: inline-block; padding: 4px 9px; border: 1px solid #D7B45F; border-radius: 2px; background: #FFF3D3; color: #795300; font: 700 11px 'Segoe UI', sans-serif; letter-spacing: .6px; }"
+    },
+    {
+      "name": "Review Table",
+      "kind": "custom",
+      "refersTo": "review-table",
+      "description": "Dense ruled engineering schedule with explicit selected, approved, and unresolved states.",
+      "html": "<table class=\"ds-review-table\"><thead><tr><th>LABEL</th><th>AMPS</th><th>QTY</th><th>DECISION</th></tr></thead><tbody><tr class=\"ds-row-approved\"><td>Lighting feeder</td><td>20 A</td><td>4</td><td>approved</td></tr><tr class=\"ds-row-conflict\"><td>Spare outgoing</td><td>—</td><td>1</td><td>needs review</td></tr><tr class=\"ds-row-selected\"><td>Main incomer</td><td>160 A</td><td>1</td><td>needs review</td></tr></tbody></table>",
+      "css": ".ds-review-table { width: 100%; border-collapse: collapse; border: 1px solid #C4CCCF; background: #FAFBFA; color: #20282D; font: 400 13px 'Segoe UI', sans-serif; } .ds-review-table th { padding: 8px 7px; border-right: 1px solid #CAD1D4; border-bottom: 1px solid #AEB8BC; background: #E8ECEE; color: #3E4A50; text-align: left; font-size: 11px; font-weight: 700; } .ds-review-table td { padding: 6px; border-right: 1px solid #D8DDDF; border-bottom: 1px solid #D8DDDF; } .ds-row-approved { background: #E7F4EA; } .ds-row-conflict { background: #FFE8B0; } .ds-row-selected { background: #C9E3EE; } .ds-review-table tr:focus-within { outline: 2px solid #137EAE; outline-offset: -2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Revision Takeoff Desk",
+    "overview": "Technicat Automation looks and behaves like an engineer's marked-up review surface: cool drafting-white workplanes, graphite rules, dense schedules, and compact controls. The visual hierarchy favors evidence, editable quantities, conflicts, and sign-off state over decoration. Technical blue identifies the current task and primary action; amber marks unresolved decisions; green appears only after explicit approval.\n\nThe interface is an Operate-mode Windows desktop tool. Familiar Qt navigation, persistent context rails, dense tables, and explicit pricing gates carry the experience. The system is planar and structural: depth comes from adjacent tones and one-pixel rules, not floating-card shadows. State changes are immediate, with no authored decorative animation.",
+    "keyCharacteristics": [
+      "Drafting-white work surfaces bounded by cool-gray and graphite rules.",
+      "Dense, scan-first tables with compact labels and persistent engineering context.",
+      "Technical blue reserved for selection, focus, the active workflow stage, and primary actions.",
+      "Amber, green, and exclusion gray paired with explicit text or decision labels.",
+      "Square-to-gently-curved geometry, mostly two- and three-pixel radii.",
+      "Segoe UI for the workbench; Cascadia Mono or Consolas for IDs, evidence, measurements, and logs."
+    ],
+    "rules": [
+      { "name": "The One Technical Voice Rule", "body": "Technical blue identifies interaction and current position; it is not decorative fill.", "section": "colors" },
+      { "name": "The Decision Color Rule", "body": "Green means approved, amber means unresolved, gray means excluded, and every use is reinforced by text, a decision column, or a status label.", "section": "colors" },
+      { "name": "The Evidence Type Rule", "body": "Monospace is for identifiers, measurements, evidence, and logs; prose and controls stay in Segoe UI.", "section": "typography" },
+      { "name": "The Three-Plane Review Rule", "body": "Panel context stays left, the active schedule stays central, and evidence plus decision actions stay right.", "section": "layout" },
+      { "name": "The Flat-by-Default Rule", "body": "Add depth with tonal separation and rules; do not introduce floating-card shadows, glass, blur, or gradient elevation.", "section": "elevation" },
+      { "name": "The Drafting Edge Rule", "body": "Reusable controls stay within the implemented 2-3px corner vocabulary; rounded capsules and oversized squircles do not belong in the workbench.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep evidence, conflicts, confidence, manufacturer, and the explicit decision adjacent in review flows.",
+      "Do use dense ruled tables for schedules and editable engineering data.",
+      "Do reserve technical blue for current position, focus, selection, and primary action.",
+      "Do pair every approval, warning, exclusion, error, and blocked state with words or another non-color cue.",
+      "Do preserve visible keyboard focus, native tab order, shortcuts, and Qt scaling behavior.",
+      "Do keep pricing visibly locked until the review gate passes."
+    ],
+    "donts": [
+      "Don't introduce floating-card shadows, glassmorphism, gradients, decorative blobs, or soft SaaS-style visual effects.",
+      "Don't replace the desktop workbench with generic metric-card dashboards or a console-first workflow.",
+      "Don't use green for generic success decoration or amber for neutral emphasis; these colors carry decision meaning.",
+      "Don't hide dense engineering data behind hover-only affordances or color-only status.",
+      "Don't add decorative motion; preserve the immediate state-change model and reduced-motion safety.",
+      "Don't round controls into pills or expand the established 2-3px radius vocabulary without a functional reason."
+    ]
+  }
+}

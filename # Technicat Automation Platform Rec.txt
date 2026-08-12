@@ -1,0 +1,103 @@
+ # Technicat Automation Platform Recovery Plan
+
+  ## Summary
+
+  - Build toward an internal Windows desktop release with a versioned JSON project file as the canonical format.
+  - First milestone: a measurable SLD extraction benchmark using the representative drawings and verified BOMs you will supply.
+  - Current app loads successfully and pricing.db is healthy, containing 9,999 products across Schneider, Legrand, and Eaton.
+  - The active workflow is broken: the extractor appends terminals to the component table, while the UI expects a separate terminal
+    section. Local history shows 11 failed runs and only 1 success.
+
+  - The README, UI, JSON pipeline, and Excel pipeline describe different application generations. There are no implemented tests; the
+    three test files are empty.
+
+  ## Implementation Changes
+
+  1. Stabilize the foundation
+      - Preserve existing uncommitted work and sample artifacts.
+      - Replace the duplicated extractor/matcher variants with one importable pipeline.
+      - Split the 2,873-line UI module into project, extraction, pricing, export, and persistence services.
+      - Update documentation and packaging to use the same canonical entrypoints.
+      - Fix the immediate terminal/component contract failure before broader development.
+
+  2. Introduce the canonical JSON project
+      - Store one project.technelec.json per project with atomic saves and schema_version: 1.
+      - Model projects as multiple panels/drawings, each with editable components, calculated terminals, extraction evidence, and
+        review state.
+
+      - Give every component a stable ID plus category, electrical specifications, quantity, manufacturer, optional forced catalog
+        reference, confidence, notes, and source evidence.
+
+      - Keep renders/debug artifacts as files beside the JSON; record source paths and SHA-256 hashes rather than embedding large
+        files.
+
+      - Treat Excel strictly as import/export, never as an internal API between stages.
+
+  3. Make extraction deterministic and measurable
+      - Build a labeled benchmark from the supplied DWG/DXF files and manually verified BOMs, with a separate holdout subset.
+      - Parse block handles, attributes, nested block contents, layers, text geometry, wires, and spatial relationships into an
+        explicit CAD evidence graph.
+
+      - Replace the current order-dependent text clustering with scale-aware nearest-neighbor and topology-based block↔label
+        associations.
+
+      - Render full-sheet and targeted panel/circuit crops; retain coordinate transforms between CAD space and image space.
+      - Ask Gemini for structured components plus evidence coordinates/IDs, then reconcile them against deterministic block counts and
+        associations.
+
+      - Never silently accept conflicts: mark unresolved quantities/specifications for UI review.
+      - Target 100% quantity agreement for block-backed devices, at least 95% component/specification F1 on the holdout set, and zero
+        silent high-confidence contradictions.
+
+  4. Complete the desktop workflow
+      - Support multiple drawings per project.
+      - Add a review table where users edit extracted components, manufacturers, quantities, and catalog overrides before matching.
+      - Recalculate terminal schedules after relevant edits and clearly distinguish AI-extracted, deterministic, calculated, and
+        manually overridden values.
+
+      - Match each row against its selected manufacturer/edition instead of pricing the entire project repeatedly against one brand.
+      - Respect forced references, expose candidate matches, and require review for substitutions or unmatched items.
+      - Generate detailed pricing JSON first, then export configurable client Excel offers with panel totals, TVA, currencies, and
+        selected visible columns.
+
+  ## Public Interfaces
+
+  - ProjectDocument: project metadata, source drawings, panels, pricing configuration, export configuration, and schema version.
+  - Panel: stable ID, panel reference, source drawing, extraction status, components, terminals, render/debug paths.
+  - Component: stable ID, electrical specs, quantity, manufacturer, forced reference, evidence, confidence, review status, and
+    override history.
+
+  - MatchResult: component ID, edition, chosen product, alternatives, score/tier, price/currency, and review status.
+  - Pipeline services expose Python APIs; the UI must not invoke scripts or transform workbooks through subprocess adapters.
+
+  ## Test Plan
+
+  - Benchmark reports comparing predicted and verified BOMs by category, quantity, and specification field.
+  - pytest-qt tests for editing, autosave, multi-panel navigation, worker signals, error recovery, and cancellation.
+  - SQLite integrity, edition-selection, currency, and unmatched-item tests using temporary databases.
+  - Offscreen PySide6 smoke tests plus manual Windows checks for keyboard access, scaling, reduced motion, long-running jobs, and
+    PyInstaller output.
+
+  ## Tooling Decision
+
+  - Install no third-party skill or MCP server now; the available local capabilities already cover Python, GitHub, spreadsheets, and
+    inspection.
+
+  - Reject the Foreman DWG extraction skill (https://skills.sh/mgoodman60/foreman-os-plugin/dwg-extraction): 27 installs, archived
+    source repository, no declared license, Linux/libredwg compilation, Civil 3D assumptions, and incompatible output schema.
+
+  - Do not install the PySide6 reviewer (https://skills.sh/akiselev/qt-llm-template/pyside6-reviewer): 157 installs and Apache-2.0
+    licensed, but its analyzer failed on this repository’s UTF-8 BOM and produced mostly false-positive ownership warnings.
+
+  - Do not install the PyQt testing skill (https://skills.sh/codeatcode/oss-ai-skills/pyqt-testing): it is documentation-only and
+    overlaps standard pytest knowledge. Add pytest and pytest-qt directly to development dependencies when implementation begins.
+
+  - Do not add SQLite or GitHub MCP servers: direct read-only SQLite access is safer and more precise here, while the existing GitHub
+    plugin already overlaps the official GitHub MCP server (https://github.com/github/github-mcp-server).
+
+  ## Assumptions
+
+  - You will provide the representative drawings and verified BOMs used for the extraction benchmark.
+  - Windows, PySide6, Gemini, ODA File Converter, SQLite, and local project files remain the v1 platform.
+  - Existing sample data and uncommitted changes remain untouched until their role is confirmed during implementation.
+  - Automatic AutoCAD drawing generation remains a later milestone after extraction, review, matching, and offer export are reliable.

@@ -1,0 +1,105 @@
+{
+  "panels": [
+    {
+      "panel_ref": "DB-F1",
+      "components": [
+        {
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "300mA",
+          "spd_type": "300mA",
+          "ct_ratio": "3x2.5",
+          "meter_accuracy": "300mA",
+          "cable_size": 2.5,
+          "load_label": "L1, L2, L3, L4, L5, L6, L7",
+          "qty": 18,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "data_source": "BOTH",
+          "ai_notes": "Counts derived from both schematic block associations and layout block groups.",
+          "evidence_ids": [
+            "block:11419DD",
+            "block:11419DE",
+            "block:11419EF",
+            "block:1141A22",
+            "block:1141A99",
+            "block:1141A9C",
+            "block:1141A9F",
+            "block:1141ACF",
+            "block:1141ADE",
+            "block:1141AEC",
+            "block:1141AF4",
+            "block:1141AFC",
+            "block:1141B04",
+            "block:1141B0C",
+            "block:1141B14",
+            "block:1141B24",
+            "block:1140ADA",
+            "block:1140ADB"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "30mA",
+          "spd_type": "30mA",
+          "ct_ratio": "3x2.5",
+          "meter_accuracy": "30mA",
+          "cable_size": 2.5,
+          "load_label": "R1-R7",
+          "qty": 8,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "data_source": "BOTH",
+          "ai_notes": "Counts derived from schematic association and layout grouping.",
+          "evidence_ids": [
+            "block:1141A2B",
+            "block:1141A55",
+            "block:1141A6E",
+            "block:1141A87",
+            "block:1141A8A",
+            "block:1141AC3",
+            "block:1141B1C",
+            "block:1141B3D"
+          ]
+        },
+        {
+          "category": "MCB",
+          "label": "4x50",
+          "poles": "3P+N",
+          "amps": "50A",
+          "curve": "C",
+          "breaking_capacity": "6KA",
+          "sensitivity": "30mA",
+          "spd_type": "30mA",
+          "ct_ratio": "3x4",
+          "meter_accuracy": "30mA",
+          "cable_size": 4,
+          "load_label": "M1-M11",
+          "qty": 1,
+          "manufacturer": "LEGRAND",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.8,
+          "data_source": "BOTH",
+          "ai_notes": "Extracted from schematic block 1141B35",
+          "evidence_ids": [
+            "block:1141B35"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "id": "project_8e41a0a170b54ddc9f14195377351228",
+  "name": "Kornet El Hamra_UDB-attic-R0",
+  "reference": "Kornet El Hamra_UDB-attic-R0",
+  "schema_version": 1,
+  "created_at": "2026-08-12T15:36:35+00:00",
+  "updated_at": "2026-08-12T15:40:21+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_58a481dc9db5567da0f5322a33e8474e",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_UDB-attic-R0.dwg",
+      "sha256": "fd0500546f14e0ca49062161aab77cdce737d06b1fdb106678544648401838c4",
+      "filename": "Kornet El Hamra_UDB-attic-R0.dwg",
+      "added_at": "2026-08-12T15:36:35+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_0a7dbd905bd759809c05e1fcaef67c7b",
+      "reference": "UDB-ATTIC",
+      "source_drawing_id": "drawing_58a481dc9db5567da0f5322a33e8474e",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_4a57fea17f485077b5efc4ab1985dda9",
+          "category": "SWITCH",
+          "label": "ISOL.S.",
+          "poles": "4P",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 6.0,
+          "load_label": "Main Incomer",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Main switch rating 25A per cluster 017; cable size 6mm² from image annotation next to supply line.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_a60fbf1b787b5d9ba465e2f6681d2fb7",
+          "category": "PILOT_LAMP",
+          "label": "Phase Indication",
+          "poles": "R/Y/B",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 0.0,
+          "load_label": "Phase Indication",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Lamps R, S, T identified from clusters 087-089 and schematic symbols.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4c2260c312935a1d8de484803c653d8c",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "3P",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 0.0,
+          "load_label": "Monitoring",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Digital power meter identified from clusters 019-020 and POWER METER block.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_d9b6b79bc776542fbd571645ab8c81e2",
+          "category": "FUSE_HOLDER",
+          "label": "gG",
+          "poles": "3P",
+          "amps": "32A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 0.0,
+          "load_label": "SPD Protection",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Fuse for SPD identified from cluster 055 and schematic.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_d9a8bff564125d3dae1c99c923519aa7",
+          "category": "SPD",
+          "label": "TYPE 2 / CLASS C",
+          "poles": "4P",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "Type 2, Up<=1.2kV, Imax=20kA",
+          "cable_size": 0.0,
+          "load_label": "Surge Protection",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "SPD specs from clusters 053 and 056.",
+          "evidence": [],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_272e9702d86c5fc088d114b0cca73a07",
+          "category": "RCCB",
+          "label": "ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "10A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "300mA",
+          "spd_type": "-",
+          "cable_size": 0.0,
+          "load_label": "Group RCD 1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Group RCCB for circuits 1-4. DXF text cluster 011 specifies 10A rating.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B68",
+              "entity_handle": "1141B68",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1502005.084722022,
+                72211.9868440221,
+                1500626.602673738,
+                72086.22040590424
+              ],
+              "image_bbox": [],
+              "confidence": 0.907289
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B97",
+              "entity_handle": "1141B97",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1502006.089420827,
+                69811.975647615,
+                1500627.143831204,
+                69702.36563330484
+              ],
+              "image_bbox": [],
+              "confidence": 0.907482
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_d7e540aeec1d5a179ec2d62be31376b4",
+          "category": "MCB",
+          "label": "2x10",
+          "poles": "1P+N",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 2.5,
+          "load_label": "Lighting - Cigar Cabinet/Entrance, Lighting - Bathroom/Living Room, Lighting - Stairs, Spare",
+          "quantity": 4,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Circuits 1-4. 3x2.5mm² cable size from clusters 001/003/081.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:11418C6",
+              "entity_handle": "11418C6",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1528573.606857804,
+                65625.01524137889,
+                1531552.668750135,
+                68808.00044370026
+              ],
+              "image_bbox": [],
+              "confidence": 0.078095
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:11418C7",
+              "entity_handle": "11418C7",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1530733.606857804,
+                65625.01524137889,
+                1531552.668750135,
+                68808.00044370026
+              ],
+              "image_bbox": [],
+              "confidence": 0.304983
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_8079f0d847ab58908994e77147627c0d",
+          "category": "RCCB",
+          "label": "ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "16A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "-",
+          "cable_size": 0.0,
+          "load_label": "Group RCD 2",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Group RCCB for circuits 5-8. DXF text cluster 040 specifies 16A rating.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B68",
+              "entity_handle": "1141B68",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1502005.084722022,
+                72211.9868440221,
+                1500626.602673738,
+                72086.22040590424
+              ],
+              "image_bbox": [],
+              "confidence": 0.907289
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:1141B97",
+              "entity_handle": "1141B97",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                1502006.089420827,
+                69811.975647615,
+                1500627.143831204,
+                69702.36563330484
+              ],
+              "image_bbox": [],
+              "confidence": 0.907482
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_70bf827bad7f5fa388b91496223d701c",
+          "category": "MCB",
+          "label": "2x16",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "cable_size": 2.5,
+          "load_label": "Sockets - Family Room, Sockets - Living Room, Sockets - Cigar Cabinet, Spare",
+          "quantity": 4,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Circuits 5-8. 3x2.5mm² cable size from clusters 049/039/092.",
+          "evidence": [
+            {
+              "source": "cad_association",
+              "source_id": "block:1140B3C",
+              "entity_handle": "1140B3C",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1532893.606857803,
+                65625.01524137855,
+                1531552.668750135,
+                68808.00044370026
+              ],
+              "image_bbox": [],
+              "confidence": 0.269619
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:11418FD",
+              "entity_handle": "11418FD",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1537213.606857802,
+                65625.01524137816,
+                1540192.668750133,
+                68808.00044370026
+              ],
+              "image_bbox": [],
+              "confidence": 0.078095
+            },
+            {
+              "source": "cad_association",
+              "source_id": "block:11418FE",
+              "entity_handle": "11418FE",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "SP",
+              "cad_bbox": [
+                1539373.606857802,
+                65625.01524137816,
+                1540192.668750133,
+                68808.00044370026
+              ],
+              "image_bbox": [],
+              "confidence": 0.304983
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_2277cb9f3db754c5938d12313a08649f",
+          "name": "PT 6",
+          "description": "Phoenix Contact feed-through terminal 6mm²",
+          "max_mm2": 6.0,
+          "quantity": 4,
+          "circuits": [
+            "Main Incomer"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_bd0120d513ab584fa2554d48afe8806c",
+          "name": "PTTB 4",
+          "description": "Phoenix Contact double-level terminal 2x4mm²",
+          "max_mm2": 4.0,
+          "quantity": 8,
+          "circuits": [
+            "Lighting - Cigar Cabinet/Entrance, Lighting - Bathroom/Living Room, Lighting - Stairs, Spare",
+            "Sockets - Family Room, Sockets - Living Room, Sockets - Cigar Cabinet, Spare"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-attic-R0\\artifacts\\Kornet El Hamra_UDB-attic-R0\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-attic-R0\\artifacts\\Kornet El Hamra_UDB-attic-R0\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\baseline\\Kornet El Hamra_UDB-attic-R0\\artifacts\\Kornet El Hamra_UDB-attic-R0\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

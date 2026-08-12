@@ -15,4 +15,4 @@ Write-Host "Building one-file executable..."
 
 Write-Host ""
 Write-Host "Build complete."
-Write-Host "Executable: $root\\dist\\AutomationPlatform.exe"
+Write-Host "Executable: $root\\dist\\TechnicatAutomation.exe"

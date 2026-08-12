@@ -1,0 +1,30 @@
+{
+  "enclosure": {
+    "ref": "DB-B1",
+    "size": "-",
+    "manufacturer": "-",
+    "catalog": "-"
+  },
+  "additional_info": [
+    {
+      "type": "LOAD_SCHEDULE",
+      "description": "Comprehensive load schedule listing 33 circuits with descriptions (Lighting/Sockets), conductor sizes (3x2.5mm², 3x4mm²), and phase distribution (R, Y, B)",
+      "value": "-"
+    },
+    {
+      "type": "CABLE_SCHEDULE",
+      "description": "Incoming feeder cable specification from MDB-B1",
+      "value": "4Cx10mm²+1Cx10mm², L=15m"
+    },
+    {
+      "type": "NOTE",
+      "description": "Technical specifications for panel components including MCB breaking capacity and SPD type",
+      "value": "MCB B.C.: 6KA/400V IEC/EN 60898; SPD TYPE 2 / CLASS C; Up<=1.2KV, 20KA Max"
+    },
+    {
+      "type": "OTHER",
+      "description": "Panel load demand summary",
+      "value": "Total Connected Load: 29200W; Total Demand Load (70%): 20440W"
+    }
+  ]
+}

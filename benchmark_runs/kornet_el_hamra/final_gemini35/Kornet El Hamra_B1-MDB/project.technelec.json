@@ -1,0 +1,1243 @@
+{
+  "id": "project_7fb84389d8b24e0f86b08865c833ab34",
+  "name": "Kornet El Hamra_B1-MDB",
+  "reference": "Kornet El Hamra_B1-MDB",
+  "schema_version": 1,
+  "created_at": "2026-08-12T18:11:54+00:00",
+  "updated_at": "2026-08-12T18:12:42+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_8a64a8c0a49356b3aab147a765d1a511",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-MDB.dwg",
+      "sha256": "fad3bff455ece73cf1fbd39d5e55ecc857d7fe7fe24a567afa21bd9feb20ae95",
+      "filename": "Kornet El Hamra_B1-MDB.dwg",
+      "added_at": "2026-08-12T18:11:54+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_ad8293af3e1955debe641e2c4b61cd29",
+      "reference": "MDB-B1",
+      "source_drawing_id": "drawing_8a64a8c0a49356b3aab147a765d1a511",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_bde3aec448ca56daa378473bce55d69d",
+          "category": "SWITCH",
+          "label": "ISOL.S.",
+          "poles": "4P",
+          "amps": "300A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 150.0,
+          "load_label": "TO ATS-PANEL",
+          "quantity": 1,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Main incoming switch isolator.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:755",
+              "entity_handle": "755",
+              "block_name": "SW",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                59111.67803623666,
+                48675.37974542299,
+                59111.67803623666,
+                48675.37974542299
+              ],
+              "image_bbox": [
+                194.91,
+                86.48,
+                202.91,
+                94.48
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:757",
+              "entity_handle": "757",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x300 Amp",
+              "cad_bbox": [
+                60413.86551415687,
+                47438.08052901487,
+                60413.86551415687,
+                47873.726496561554
+              ],
+              "image_bbox": [
+                200.75,
+                91.61,
+                208.75,
+                99.61
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:758",
+              "entity_handle": "758",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.",
+              "cad_bbox": [
+                60413.86551415687,
+                46716.3121525382,
+                60413.86551415687,
+                47151.958120084884
+              ],
+              "image_bbox": [
+                200.75,
+                94.61,
+                208.75,
+                102.61
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:892",
+              "entity_handle": "892",
+              "block_name": "4X300",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                27007.02559386263,
+                60679.62668741238,
+                27007.02559386263,
+                60679.62668741238
+              ],
+              "image_bbox": [
+                51.01,
+                36.66,
+                59.01,
+                44.66
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_8dac3a3589ba5646a8957c09745eadeb",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "MDB monitoring",
+          "quantity": 1,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Main incoming digital power meter.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:75D",
+              "entity_handle": "75D",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "DIGITAL POWER",
+              "cad_bbox": [
+                63354.72846647491,
+                53013.18714112387,
+                63354.72846647491,
+                53348.41671315104
+              ],
+              "image_bbox": [
+                213.93,
+                68.47,
+                221.93,
+                76.47
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:75E",
+              "entity_handle": "75E",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "METER",
+              "cad_bbox": [
+                64056.51180532225,
+                52487.41899441966,
+                64056.51180532225,
+                52822.648566446835
+              ],
+              "image_bbox": [
+                217.07,
+                70.66,
+                225.07,
+                78.66
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_22c0492b65695c5996cb9f372c545548",
+          "category": "SPD",
+          "label": "SPD TYPE 2 / CLASS C",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "TYPE 2 / CLASS C, Up<=1.2KV, 20KA Max",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "GND",
+          "quantity": 1,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Surge protection device.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:795",
+              "entity_handle": "795",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "SPD",
+              "cad_bbox": [
+                65565.52563003101,
+                46238.5188809481,
+                65565.52563003101,
+                46539.59269031657
+              ],
+              "image_bbox": [
+                223.84,
+                96.59,
+                231.84,
+                104.59
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:79A",
+              "entity_handle": "79A",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "TYPE 2 / CLASS C",
+              "cad_bbox": [
+                66759.17037787684,
+                46221.78818700406,
+                66759.17037787684,
+                46479.851452177034
+              ],
+              "image_bbox": [
+                229.19,
+                96.66,
+                237.19,
+                104.66
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:79D",
+              "entity_handle": "79D",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Up<=1.2KV, 20KA Max",
+              "cad_bbox": [
+                66759.17037787684,
+                45708.27195398112,
+                66759.17037787684,
+                45966.3352191541
+              ],
+              "image_bbox": [
+                229.19,
+                98.79,
+                237.19,
+                106.79
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_16c02aa4fc305cdfb9ac042f659224f9",
+          "category": "FUSE_HOLDER",
+          "label": "Fuse gG 3x120A",
+          "poles": "3P",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "SPD protection",
+          "quantity": 1,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Fuses upstream of the SPD.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:79C",
+              "entity_handle": "79C",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Fuse gG 3x120A",
+              "cad_bbox": [
+                66910.64499879023,
+                47175.22705024564,
+                66910.64499879023,
+                47433.29031541861
+              ],
+              "image_bbox": [
+                229.87,
+                92.7,
+                237.87,
+                100.7
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_1bf89a8cf06a58499bac81634fb1b3fe",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "4P",
+          "amps": "80A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 25.0,
+          "load_label": "DB-GF / DB-GUARD",
+          "quantity": 2,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "80A outgoing branch breakers.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:894",
+              "entity_handle": "894",
+              "block_name": "4X80A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24181.72675351682,
+                47588.15580751162,
+                24181.72675351682,
+                47588.15580751162
+              ],
+              "image_bbox": [
+                38.35,
+                90.99,
+                46.35,
+                98.99
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:896",
+              "entity_handle": "896",
+              "block_name": "4X80A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31738.78302947036,
+                47588.15580751054,
+                31738.78302947036,
+                47588.15580751054
+              ],
+              "image_bbox": [
+                72.22,
+                90.99,
+                80.22,
+                98.99
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_23a267a797dc56e68161ddd97148fcf0",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "4P",
+          "amps": "63A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 16.0,
+          "load_label": "DB-F1 / DB-ATTIC",
+          "quantity": 2,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "63A outgoing branch breakers.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:897",
+              "entity_handle": "897",
+              "block_name": "4X63A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24224.74827006948,
+                41042.42036755722,
+                24224.74827006948,
+                41042.42036755722
+              ],
+              "image_bbox": [
+                38.54,
+                118.16,
+                46.54,
+                126.16
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:899",
+              "entity_handle": "899",
+              "block_name": "4X63A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                28003.27640804578,
+                41042.42036755776,
+                28003.27640804578,
+                41042.42036755776
+              ],
+              "image_bbox": [
+                55.48,
+                118.16,
+                63.48,
+                126.16
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_8dd606ec9b1d5711b9e05dbc4779f058",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "4P",
+          "amps": "40A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 10.0,
+          "load_label": "DB-B2 / DB-MECH / DB-B1",
+          "quantity": 2,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "40A outgoing branch breakers.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:893",
+              "entity_handle": "893",
+              "block_name": "4X40A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                20403.19861554051,
+                47588.15580751162,
+                20403.19861554051,
+                47588.15580751162
+              ],
+              "image_bbox": [
+                21.41,
+                90.99,
+                29.41,
+                98.99
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:895",
+              "entity_handle": "895",
+              "block_name": "4X40A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                27960.25489149359,
+                47588.15580751054,
+                27960.25489149359,
+                47588.15580751054
+              ],
+              "image_bbox": [
+                55.28,
+                90.99,
+                63.28,
+                98.99
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4afaccda632c542794f2f9fcf84682ac",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "4P",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "EV CHARGER 1 / EV CHARGER 2 / LIFT / FREEZER / FRESH AIR OUTDOOR UNIT",
+          "quantity": 6,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "25A 4P outgoing branch breakers.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:898",
+              "entity_handle": "898",
+              "block_name": "4X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                20446.22013209271,
+                41042.42036755722,
+                20446.22013209271,
+                41042.42036755722
+              ],
+              "image_bbox": [
+                21.6,
+                118.16,
+                29.6,
+                126.16
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:89A",
+              "entity_handle": "89A",
+              "block_name": "4X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31781.80454602208,
+                41042.42036755722,
+                31781.80454602208,
+                41042.42036755722
+              ],
+              "image_bbox": [
+                72.41,
+                118.16,
+                80.41,
+                126.16
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:89B",
+              "entity_handle": "89B",
+              "block_name": "4X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                20446.22013209178,
+                34093.58836755394,
+                20446.22013209178,
+                34093.58836755394
+              ],
+              "image_bbox": [
+                21.6,
+                147.0,
+                29.6,
+                155.0
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:89C",
+              "entity_handle": "89C",
+              "block_name": "4X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24224.74827006808,
+                34093.58836755394,
+                24224.74827006808,
+                34093.58836755394
+              ],
+              "image_bbox": [
+                38.54,
+                147.0,
+                46.54,
+                155.0
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:89D",
+              "entity_handle": "89D",
+              "block_name": "4X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                28003.27640804485,
+                34093.58836755394,
+                28003.27640804485,
+                34093.58836755394
+              ],
+              "image_bbox": [
+                55.48,
+                147.0,
+                63.48,
+                155.0
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:89E",
+              "entity_handle": "89E",
+              "block_name": "4X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31781.80454602162,
+                34093.58836755394,
+                31781.80454602162,
+                34093.58836755394
+              ],
+              "image_bbox": [
+                72.41,
+                147.0,
+                80.41,
+                155.0
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_1e8de5cf916253b8971533c7994cd0ab",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "1P+N",
+          "amps": "25A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "COOLER / COLD ROOM",
+          "quantity": 1,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "25A 2P / 1P+N outgoing branch breaker for cooler load.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:89F",
+              "entity_handle": "89F",
+              "block_name": "2X25A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                35560.33268399792,
+                34093.58836755177,
+                35560.33268399792,
+                34093.58836755177
+              ],
+              "image_bbox": [
+                89.35,
+                147.0,
+                97.35,
+                155.0
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_5d8dc8f93b5b5982ab788eae5e65e250",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "4P",
+          "amps": "20A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 10.0,
+          "load_label": "UPS / BY PASS - UPS",
+          "quantity": 2,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "20A outgoing branch breakers.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A0",
+              "entity_handle": "8A0",
+              "block_name": "4x20A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                20446.22013209271,
+                27144.75636755459,
+                20446.22013209271,
+                27144.75636755459
+              ],
+              "image_bbox": [
+                21.6,
+                175.84,
+                29.6,
+                183.84
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A1",
+              "entity_handle": "8A1",
+              "block_name": "4x20A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24224.74827006948,
+                27144.75636755459,
+                24224.74827006948,
+                27144.75636755459
+              ],
+              "image_bbox": [
+                38.54,
+                175.84,
+                46.54,
+                183.84
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_46fa6977143650d98ea7c8c1d3ca8654",
+          "category": "MCB",
+          "label": "MCB",
+          "poles": "4P",
+          "amps": "10A",
+          "curve": "-",
+          "breaking_capacity": "6KA/400V",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 4.0,
+          "load_label": "FAAHU",
+          "quantity": 4,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "10A outgoing branch breakers for FAAHU ventilation units.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A2",
+              "entity_handle": "8A2",
+              "block_name": "4X10A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                28003.27640804578,
+                27144.7563675535,
+                28003.27640804578,
+                27144.7563675535
+              ],
+              "image_bbox": [
+                55.48,
+                175.84,
+                63.48,
+                183.84
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A3",
+              "entity_handle": "8A3",
+              "block_name": "4X10A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31781.80454602208,
+                27144.7563675535,
+                31781.80454602208,
+                27144.7563675535
+              ],
+              "image_bbox": [
+                72.41,
+                175.84,
+                80.41,
+                183.84
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A4",
+              "entity_handle": "8A4",
+              "block_name": "4X10A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                20446.22013209178,
+                20195.92436755414,
+                20446.22013209178,
+                20195.92436755414
+              ],
+              "image_bbox": [
+                21.6,
+                204.68,
+                29.6,
+                212.68
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A5",
+              "entity_handle": "8A5",
+              "block_name": "4X10A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24224.74827006808,
+                20195.92436755414,
+                24224.74827006808,
+                20195.92436755414
+              ],
+              "image_bbox": [
+                38.54,
+                204.68,
+                46.54,
+                212.68
+              ],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:764",
+              "entity_handle": "764",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B.C.: 6KA/400V",
+              "cad_bbox": [
+                74126.93037674087,
+                54763.8932668382,
+                74126.93037674087,
+                55258.273092154835
+              ],
+              "image_bbox": [
+                262.21,
+                61.21,
+                270.21,
+                69.21
+              ],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_c6748e4df4eb52c185554578b1412c56",
+          "category": "PILOT_LAMP",
+          "label": "Indicator Lamp",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "Phase indicators",
+          "quantity": 3,
+          "manufacturer": "LEGRAND",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Red, Green, Blue indicator run lamps.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:6F6",
+              "entity_handle": "6F6",
+              "block_name": "indicator lamp red",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                30785.5537318394,
+                60679.62668741208,
+                30785.5537318394,
+                60679.62668741208
+              ],
+              "image_bbox": [
+                67.95,
+                36.66,
+                75.95,
+                44.66
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:6F7",
+              "entity_handle": "6F7",
+              "block_name": "indicator lamp green",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31735.95373183931,
+                60679.62668741208,
+                31735.95373183931,
+                60679.62668741208
+              ],
+              "image_bbox": [
+                72.21,
+                36.66,
+                80.21,
+                44.66
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:6F8",
+              "entity_handle": "6F8",
+              "block_name": "indicator lamp blue",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                32686.35373183921,
+                60679.62668741208,
+                32686.35373183921,
+                60679.62668741208
+              ],
+              "image_bbox": [
+                76.47,
+                36.66,
+                84.47,
+                44.66
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts": [],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_242dde5355cb529d8751e5eb9e534f0d",
+          "name": "PT 150",
+          "description": "Phoenix Contact feed-through terminal 150mm²",
+          "max_mm2": 150.0,
+          "quantity": 4,
+          "circuits": [
+            "TO ATS-PANEL"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_3a3fc7a692a655b29544dcf9fa00c89a",
+          "name": "PT 4",
+          "description": "Phoenix Contact feed-through terminal 4mm²",
+          "max_mm2": 4.0,
+          "quantity": 1,
+          "circuits": [
+            "MDB monitoring"
+          ],
+          "origin": "calculated",
+          "warnings": [
+            "MDB monitoring: cable size missing; defaulted to 4mm²"
+          ]
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-MDB\\artifacts\\Kornet El Hamra_B1-MDB\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-MDB\\artifacts\\Kornet El Hamra_B1-MDB\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-MDB\\artifacts\\Kornet El Hamra_B1-MDB\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-MDB\\artifacts\\Kornet El Hamra_B1-MDB\\render-metadata.json",
+        "benchmark_runs\\kornet_el_hamra\\final_gemini35\\Kornet El Hamra_B1-MDB\\artifacts\\Kornet El Hamra_B1-MDB\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}
