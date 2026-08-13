@@ -51,13 +51,23 @@ EVIDENCE RULES
 - Use only devices physically supported by the supplied CAD evidence or rendered drawing.
 - Never add a device merely because it is customary or normally required. In particular,
   do not invent CTs, meters, fuses, terminals, control gear, or accessories.
+- `schematic_rating_groups` contains exact counts of explicit repeated rating labels from the
+  schematic. Use it to preserve the outgoing breaker specification split (for example 10A vs
+  16A vs 20A) when the image and per-instance associations show one label per outgoing symbol.
 - The drawing may also contain a physical panel-layout/elevation that duplicates devices.
-  `layout_block_groups` is an independent inventory/count cross-check. Use recognizable
-  rating/device block groups to confirm or correct schematic quantities, but never add the
-  layout and schematic counts together. Cite the representation supporting the final count.
+  `layout_block_groups` and `layout_device_groups` are independent total-inventory cross-checks.
+  Never use a layout block name to overwrite a rating, poles, sensitivity, category, or rating
+  split explicitly written on the schematic. If the two representations disagree, preserve the
+  schematic specification, use the layout only to check total quantity, lower confidence, and
+  explain the conflict. Never add layout and schematic quantities together.
+- `schematic_blocks`, `repeating_schematic_blocks`, `text_clusters`, and `texts` preserve the
+  richer CAD context. Cross-reference them with the image; do not treat a repeated generic block
+  such as CB1 as one rating group when its nearby labels differ.
 - `block_label_associations` links individual schematic block IDs to nearby labels. Include
   every supporting block/text ID in `evidence_ids`. For grouped rows include all physical
   instance block IDs. Do not reuse one block ID in two different component groups.
+- CAD handles and evidence identifiers belong only in `evidence_ids`. Never copy an entity ID
+  into poles, amps, curve, breaking_capacity, sensitivity, manufacturer, or any other field.
 - Association hints are geometric evidence, not infallible electrical topology. If text is
   ambiguous, lower confidence and explain it instead of guessing.
 - Do not use raw block-name totals as a rating-group quantity when a generic symbol such as
@@ -86,7 +96,7 @@ METER, CT, RELAY, SELECTOR_SWITCH, TIMER, PLC, POWER_SUPPLY, OTHER.
 Return one `DrawingExtraction` object conforming exactly to the response schema.
 """
 
-PROMPT_VERSION = "sld-evidence-v3"
+PROMPT_VERSION = "sld-evidence-v5-strict-provenance"
 
 
 def model_name() -> str:
@@ -117,14 +127,18 @@ def fallback_model_name() -> str:
     return "gemini-3.1-flash-lite"
 
 
-def call_gemini_panels(evidence: dict, image_path: Path | None, api_key: str, debug_dir: Path) -> list[dict]:
+def call_gemini_panels(
+    evidence: dict, image_path: Path | None, api_key: str, debug_dir: Path,
+    progress=None, allow_fallback: bool = True,
+) -> list[dict]:
     from google import genai
     from google.genai import types
 
     evidence_json = json.dumps(evidence, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     selected_model = model_name()
     fallback_model = fallback_model_name()
-    model_candidates = list(dict.fromkeys(model for model in (selected_model, fallback_model) if model))
+    configured_candidates = (selected_model, fallback_model) if allow_fallback else (selected_model,)
+    model_candidates = list(dict.fromkeys(model for model in configured_candidates if model))
     signature = hashlib.sha256()
     signature.update(PROMPT_VERSION.encode("utf-8"))
     signature.update(selected_model.encode("utf-8"))
@@ -137,9 +151,13 @@ def call_gemini_panels(evidence: dict, image_path: Path | None, api_key: str, de
     debug_dir.mkdir(parents=True, exist_ok=True)
     raw_path = debug_dir / "gemini_panels_raw.json"
     cache_path = debug_dir / "gemini_panels_cache.json"
+    log = progress or (lambda _message: None)
     if raw_path.exists() and cache_path.exists():
         cache = json.loads(cache_path.read_text(encoding="utf-8"))
         if cache.get("request_sha256") == request_hash:
+            cached_model = str(cache.get("model", selected_model))
+            if cached_model != selected_model:
+                log(f"WARNING: cached extraction used fallback model {cached_model}; requested {selected_model}")
             payload = json.loads(raw_path.read_text(encoding="utf-8"))
             return list(payload.get("panels", []))
 
@@ -154,19 +172,55 @@ def call_gemini_panels(evidence: dict, image_path: Path | None, api_key: str, de
         actual_model = candidate_model
         for attempt in range(4):
             try:
+                log(f"Gemini request: {candidate_model} (attempt {attempt + 1}/4)")
                 response = client.models.generate_content(
                     model=candidate_model,
                     contents=contents,
                     config=types.GenerateContentConfig(
                         response_mime_type="application/json",
                         response_schema=DrawingExtraction,
-                        http_options=types.HttpOptions(timeout=180_000),
+                        # The SDK's own retry loop is deliberately disabled here. This function
+                        # owns retries so the desktop UI can report every attempt instead of
+                        # appearing frozen during hidden backoff.
+                        http_options=types.HttpOptions(
+                            timeout=180_000,
+                            retry_options=types.HttpRetryOptions(attempts=1),
+                        ),
                     ),
                 )
                 break
             except Exception as exc:
                 last_error = exc
                 message = str(exc)
+                billing_exhausted = any(phrase in message.lower() for phrase in (
+                    "prepayment credits are depleted",
+                    "billing account",
+                    "billing is not enabled",
+                ))
+                if billing_exhausted:
+                    # A prior primary-model response for this same project is
+                    # still useful when prompt/reconciliation code changes.
+                    # Reuse only primary-model output (never a weak fallback),
+                    # and make the degraded mode explicit in the UI log.
+                    if raw_path.exists() and cache_path.exists():
+                        try:
+                            stale_cache = json.loads(cache_path.read_text(encoding="utf-8"))
+                            stale_model = str(stale_cache.get("model", ""))
+                            stale_payload = json.loads(raw_path.read_text(encoding="utf-8"))
+                            stale_panels = list(stale_payload.get("panels", []))
+                        except (OSError, ValueError, TypeError):
+                            stale_model = ""
+                            stale_panels = []
+                        if stale_model == selected_model and stale_panels:
+                            log(
+                                "WARNING: Gemini billing is depleted; reusing the last "
+                                f"{selected_model} response and applying current deterministic validation"
+                            )
+                            return stale_panels
+                    raise RuntimeError(
+                        "Gemini billing credits are depleted; extraction stopped before fallback "
+                        "because another model cannot bypass project billing."
+                    ) from exc
                 transient = (
                     "429" in message
                     or "RESOURCE_EXHAUSTED" in message
@@ -185,6 +239,10 @@ def call_gemini_panels(evidence: dict, image_path: Path | None, api_key: str, de
                     raise
                 retry = re.search(r"retryDelay[^0-9]*(\d+(?:\.\d+)?)s", message, re.I)
                 delay = min(55.0, max(2.0, float(retry.group(1)) + 1 if retry else 15.0 * (attempt + 1)))
+                log(
+                    f"Gemini is temporarily unavailable; retrying {candidate_model} "
+                    f"in {delay:.0f}s (attempt {attempt + 2}/4)"
+                )
                 time.sleep(delay)
         if response is not None:
             break
@@ -192,6 +250,8 @@ def call_gemini_panels(evidence: dict, image_path: Path | None, api_key: str, de
         if last_error is not None:
             raise last_error
         raise RuntimeError("Gemini extraction returned no response")
+    if actual_model != selected_model:
+        log(f"WARNING: Gemini fallback active: requested {selected_model}, used {actual_model}")
     raw = response.text.strip()
     raw_path.write_text(raw, encoding="utf-8")
     cache_path.write_text(json.dumps({
@@ -208,6 +268,14 @@ def sanitize_component(row: dict) -> dict:
     result = dict(row)
     category = str(result.get("category", "OTHER") or "OTHER").upper().strip()
     result["category"] = category
+    evidence_tokens = set()
+    for evidence_id in row.get("evidence_ids", []) or []:
+        value = str(evidence_id or "").strip().upper()
+        if not value:
+            continue
+        evidence_tokens.add(value)
+        if ":" in value:
+            evidence_tokens.add(value.rsplit(":", 1)[-1])
 
     def clean(field: str) -> None:
         value = str(result.get(field, "-") or "-").strip()
@@ -218,6 +286,15 @@ def sanitize_component(row: dict) -> dict:
         "spd_type", "ct_ratio", "meter_accuracy", "load_label", "manufacturer", "ai_notes",
     ):
         clean(field)
+    # Structured-output models occasionally copy a cited CAD handle into an
+    # adjacent engineering field. Evidence identifiers are provenance, never
+    # poles/ratings/curves or manufacturer values.
+    for field in (
+        "poles", "amps", "curve", "breaking_capacity", "sensitivity",
+        "spd_type", "ct_ratio", "meter_accuracy", "manufacturer",
+    ):
+        if str(result.get(field, "-")).strip().upper() in evidence_tokens:
+            result[field] = "-"
     amps = str(result.get("amps", "-")).strip()
     if re.fullmatch(r"\d+(?:\.\d+)?", amps):
         result["amps"] = f"{amps}A"
@@ -226,6 +303,8 @@ def sanitize_component(row: dict) -> dict:
         result["poles"] = "1P+N"
     elif re.fullmatch(r"[1-4]P", poles):
         result["poles"] = poles
+    else:
+        result["poles"] = "-"
     if category not in {"MCB", "MCCB", "RCBO"}:
         result["curve"] = "-"
         result["breaking_capacity"] = "-"
@@ -235,11 +314,19 @@ def sanitize_component(row: dict) -> dict:
         result["sensitivity"] = "-"
     if category != "SPD":
         result["spd_type"] = "-"
+    else:
+        spd_type = str(result.get("spd_type", "-") or "-")
+        type_match = re.search(r"(?:TYPE|CLASS)\s*([123])\b", spd_type, re.I)
+        if type_match:
+            result["spd_type"] = f"TYPE {type_match.group(1)}"
     if category != "CT":
         result["ct_ratio"] = "-"
     if category != "METER":
         result["meter_accuracy"] = "-"
-    if category in {"SPD", "CT", "METER", "PILOT_LAMP", "FUSE_HOLDER", "RELAY", "SELECTOR_SWITCH", "TIMER", "PLC", "POWER_SUPPLY"}:
+    # Keep fields that are meaningful for pricing while moving obvious
+    # category-specific notation to its proper field. In particular, fuse
+    # ratings/poles and SPD pole counts are observed values and must survive.
+    if category in {"SPD", "CT", "METER", "PILOT_LAMP", "RELAY", "SELECTOR_SWITCH", "TIMER", "PLC", "POWER_SUPPLY"}:
         result["amps"] = "-"
     if category in {"CT", "METER", "PILOT_LAMP", "RELAY", "SELECTOR_SWITCH", "TIMER", "PLC", "POWER_SUPPLY"}:
         result["poles"] = "-"

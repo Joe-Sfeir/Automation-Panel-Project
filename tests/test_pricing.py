@@ -15,7 +15,13 @@ def make_database(path):
         INSERT INTO ppl_editions VALUES (10, 1, 2026, 'H1', 'EUR'), (20, 2, 2026, 'H1', 'USD');
         INSERT INTO products VALUES
           (1, 10, 'A9F74116', NULL, 'MCB 1P 16A curve C 6kA', 10.0),
-          (2, 20, 'FAZ-C16/1', NULL, 'MCB 1P 16A curve C 10kA', 12.0);
+          (2, 20, 'FAZ-C16/1', NULL, 'MCB 1P 16A curve C 10kA', 12.0),
+          (3, 10, 'A9F74120', NULL, 'MCB 1P 20A curve C 6kA', 11.0),
+          (4, 10, 'ISW40', NULL, 'iSW switch 4P 40A', 20.0),
+          (5, 10, 'INS40', NULL, 'INS40 switch disconnector 4P 40A', 30.0),
+          (6, 10, 'RCCB25', NULL, 'RCCB 4P 25A 30mA AC', 40.0),
+          (7, 10, 'MCB-B16', NULL, 'MCB 1P 16A curve B 6kA', 9.0),
+          (8, 10, 'HANDLE40', NULL, 'Extended rotary handle INS 40A', 5.0);
     """)
     connection.commit()
     connection.close()
@@ -43,7 +49,7 @@ def test_component_manufacturer_and_forced_reference_are_respected(tmp_path):
     assert payload["currencies"] == ["EUR", "USD"]
 
 
-def test_pricing_requires_explicit_review_and_skips_excluded(tmp_path):
+def test_pricing_includes_extracted_rows_without_approval_and_skips_excluded(tmp_path):
     database = tmp_path / "pricing.db"
     make_database(database)
     project = ProjectDocument.create("Test")
@@ -52,13 +58,72 @@ def test_pricing_requires_explicit_review_and_skips_excluded(tmp_path):
     excluded = Component("c2", category="MCB", manufacturer="SCHNEIDER", review_status="excluded")
     project.panels.append(Panel("panel", "P1", "", components=[included, excluded]))
 
-    try:
-        PricingService(database).price_project(project, tmp_path / "pricing.json")
-    except ValueError as exc:
-        assert "blocked" in str(exc).lower()
-    else:
-        raise AssertionError("pricing should require review")
-
-    included.review_status = "approved"
     PricingService(database).price_project(project, tmp_path / "pricing.json")
     assert [item.component_id for item in project.match_results] == ["c1"]
+
+
+def test_single_selected_project_brand_overrides_stale_component_brand(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    project = ProjectDocument.create("Test")
+    project.pricing.default_manufacturer = "SCHNEIDER"
+    project.pricing.editions = {"SCHNEIDER": {"year": 2026, "half": "H1"}}
+    project.panels.append(Panel("panel", "P1", "", components=[
+        Component("c1", category="MCB", poles="1P", amps="16A", curve="C", manufacturer="LEGRAND"),
+    ]))
+
+    PricingService(database).price_project(project, tmp_path / "pricing.json")
+
+    assert project.match_results[0].manufacturer == "SCHNEIDER"
+    assert project.match_results[0].chosen_reference == "A9F74116"
+
+
+def test_structured_specs_reject_wrong_breaker_rating(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    service = PricingService(database)
+    with sqlite3.connect(database) as connection:
+        connection.row_factory = sqlite3.Row
+        aliases = {str(row["alias"]).lower(): str(row["canonical"]).lower() for row in connection.execute("SELECT alias, canonical FROM term_aliases")}
+        result = service._match(
+            connection, aliases,
+            Component("c", category="MCB", poles="1P", amps="16A", curve="C"),
+            "SCHNEIDER", 2026, "H1", {},
+        )
+    assert result.chosen_reference == "A9F74116"
+    assert all(item.reference != "A9F74120" for item in result.alternatives)
+    assert all(item.reference != "MCB-B16" for item in result.alternatives)
+
+
+def test_equivalent_switch_families_are_not_silently_auto_selected(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    service = PricingService(database)
+    with sqlite3.connect(database) as connection:
+        connection.row_factory = sqlite3.Row
+        aliases = {str(row["alias"]).lower(): str(row["canonical"]).lower() for row in connection.execute("SELECT alias, canonical FROM term_aliases")}
+        result = service._match(
+            connection, aliases,
+            Component("c", category="SWITCH", poles="4P", amps="40A"),
+            "SCHNEIDER", 2026, "H1", {},
+        )
+    assert result.review_status == "check_candidate"
+    assert "equivalent" in result.note.lower()
+    assert all(item.reference != "HANDLE40" for item in result.alternatives)
+
+
+def test_rccb_rating_is_never_upsized_during_pricing(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    service = PricingService(database)
+    with sqlite3.connect(database) as connection:
+        connection.row_factory = sqlite3.Row
+        aliases = {str(row["alias"]).lower(): str(row["canonical"]).lower() for row in connection.execute("SELECT alias, canonical FROM term_aliases")}
+        result = service._match(
+            connection, aliases,
+            Component("c", category="RCCB", poles="4P", amps="16A", sensitivity="30mA"),
+            "SCHNEIDER", 2026, "H1", {},
+        )
+    assert result.chosen_reference == ""
+    assert result.review_status == "unmatched"
+    assert all(item.reference != "RCCB25" for item in result.alternatives)

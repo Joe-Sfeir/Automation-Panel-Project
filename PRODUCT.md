@@ -16,7 +16,7 @@ Turn heterogeneous client DWG/DXF single-line diagrams into evidence-backed, eng
 
 ## Positioning
 
-Technicat combines deterministic CAD evidence, constrained AI interpretation, explicit engineer review, terminal calculation rules, and local multi-manufacturer pricing in one auditable desktop workflow.
+Technicat combines deterministic CAD evidence, constrained AI interpretation, optional estimator editing, and local multi-manufacturer pricing in one auditable desktop workflow.
 
 ## Operating Context
 
@@ -28,7 +28,8 @@ Projects may contain many drawings, multiple panels in one drawing, schematic an
 - One atomic `project.technelec.json` is the project source of truth; Excel is import/export only.
 - Extraction must support multiple drawings and multiple panels per drawing.
 - Matching is per component manufacturer and price-list edition.
-- Pricing/export is blocked until extraction conflicts and required review decisions are resolved.
+- Extraction and pricing must preserve observed SLD quantities and ratings. Cross-checks may annotate discrepancies but never redesign, normalize, or substitute the canonical BOM.
+- Extracted rows are included in pricing by default; users may edit or exclude any row before exporting or regenerate the offer afterward.
 - Client-specific filenames, block names, and known BOM answers must never be hardcoded into extraction logic.
 - The source drawings and reference offers are read-only benchmark evidence.
 
@@ -46,7 +47,8 @@ The product is an internal Technicat Group engineering tool. Existing Technicat 
 ## Product Principles
 
 - Evidence before confidence.
-- Engineer approval before pricing.
+- Price what is specified; do not design what is missing.
+- Direct pricing with optional engineer correction and exclusion.
 - Generalize across client drawing conventions.
 - Preserve traceability from offer row back to drawing evidence.
 - Make unresolved ambiguity visible and actionable.

@@ -40,20 +40,35 @@ def main() -> int:
     parser.add_argument("--oda-path", default="")
     parser.add_argument("--manufacturer", default="SCHNEIDER")
     parser.add_argument("--model", default="")
-    parser.add_argument("--only", default="", help="Case-insensitive filename substring")
+    parser.add_argument(
+        "--only", default="",
+        help="Exact filename/stem when one matches; otherwise a case-insensitive filename substring",
+    )
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument(
+        "--no-fallback", action="store_true",
+        help="Fail the accuracy run if the requested Gemini model is unavailable",
+    )
     arguments = parser.parse_args()
     source = Path(arguments.source_dir)
     output = Path(arguments.out)
     output.mkdir(parents=True, exist_ok=True)
     drawings = sorted([*source.glob("*.dwg"), *source.glob("*.dxf")], key=lambda path: path.name.lower())
     if arguments.only:
-        drawings = [path for path in drawings if arguments.only.lower() in path.name.lower()]
+        selector = arguments.only.casefold()
+        exact = [
+            path for path in drawings
+            if path.name.casefold() == selector or path.stem.casefold() == selector
+        ]
+        drawings = exact or [path for path in drawings if selector in path.name.casefold()]
     if not drawings:
         raise RuntimeError(f"No DWG/DXF drawings found in {source}")
     if arguments.model:
         os.environ["GEMINI_API_MODEL"] = arguments.model
-    service = ExtractionService(_api_key(), arguments.oda_path, progress=print)
+    service = ExtractionService(
+        _api_key(), arguments.oda_path, progress=print,
+        allow_model_fallback=not arguments.no_fallback,
+    )
     summary_path = output / "run-summary.json"
     summary = []
     if arguments.resume and summary_path.exists():

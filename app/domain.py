@@ -68,7 +68,7 @@ class Component:
     origin: str = "ai_extracted"
     notes: str = ""
     evidence: list[Evidence] = field(default_factory=list)
-    review_status: str = "needs_review"
+    review_status: str = "included"
     conflicts_acknowledged: bool = False
     manufacturer_override_confirmed: bool = False
     conflicts: list[str] = field(default_factory=list)
@@ -83,7 +83,8 @@ class Component:
         self.overrides.append(OverrideRecord(field_name, previous, value, reason=reason))
         setattr(self, field_name, value)
         self.origin = "manually_overridden"
-        self.review_status = "needs_review"
+        if self.review_status != "excluded":
+            self.review_status = "included"
         if self.conflicts:
             self.conflicts_acknowledged = False
         if field_name == "manufacturer":
@@ -103,6 +104,16 @@ class Terminal:
 
 
 @dataclass
+class CommercialAccessory:
+    id: str
+    description: str
+    quantity: int
+    manufacturer: str = ""
+    origin: str = "engineering_calculated"
+    notes: str = ""
+
+
+@dataclass
 class SourceDrawing:
     id: str
     path: str
@@ -119,9 +130,10 @@ class Panel:
     extraction_status: str = "pending"
     components: list[Component] = field(default_factory=list)
     terminals: list[Terminal] = field(default_factory=list)
+    commercial_accessories: list[CommercialAccessory] = field(default_factory=list)
     render_paths: list[str] = field(default_factory=list)
     debug_paths: list[str] = field(default_factory=list)
-    review_status: str = "needs_review"
+    review_status: str = "included"
     extraction_notes: list[str] = field(default_factory=list)
 
 
@@ -211,6 +223,8 @@ def project_from_dict(data: dict[str, Any]) -> ProjectDocument:
             normalized = dict(item)
             if "qty" in normalized and "quantity" not in normalized:
                 normalized["quantity"] = normalized.pop("qty")
+            if normalized.get("review_status") in {"needs_review", "approved", ""}:
+                normalized["review_status"] = "included"
             components.append(_construct(Component, normalized, evidence=evidence, overrides=overrides))
         terminals = []
         for item in row.get("terminals", []):
@@ -221,7 +235,17 @@ def project_from_dict(data: dict[str, Any]) -> ProjectDocument:
             if isinstance(circuits, str):
                 normalized["circuits"] = [value.strip() for value in circuits.split(",") if value.strip()]
             terminals.append(_construct(Terminal, normalized))
-        panels.append(_construct(Panel, row, components=components, terminals=terminals))
+        accessories = [
+            _construct(CommercialAccessory, item)
+            for item in row.get("commercial_accessories", [])
+        ]
+        normalized_panel = dict(row)
+        if normalized_panel.get("review_status") in {"needs_review", "approved", ""}:
+            normalized_panel["review_status"] = "included"
+        panels.append(_construct(
+            Panel, normalized_panel, components=components, terminals=terminals,
+            commercial_accessories=accessories,
+        ))
     results = []
     for row in data.get("match_results", []):
         alternatives = [_construct(CandidateMatch, item) for item in row.get("alternatives", [])]

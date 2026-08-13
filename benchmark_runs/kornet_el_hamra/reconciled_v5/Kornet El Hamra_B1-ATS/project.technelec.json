@@ -1,0 +1,702 @@
+{
+  "id": "project_f54e5633e1a44b3e858b8d78c2f06178",
+  "name": "Kornet El Hamra_B1-ATS",
+  "reference": "Kornet El Hamra_B1-ATS",
+  "schema_version": 1,
+  "created_at": "2026-08-12T17:56:08+00:00",
+  "updated_at": "2026-08-13T09:07:00+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-ATS.dwg",
+      "sha256": "89342759044c8879d12460a4615a14fe4824df90765c7976f6cd6cc3ae119bbb",
+      "filename": "Kornet El Hamra_B1-ATS.dwg",
+      "added_at": "2026-08-12T17:56:09+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_2e3630d78bc15864bd45ebdaac1a066e",
+      "reference": "ATS",
+      "source_drawing_id": "drawing_385e5c75e723591e9c9ef36a9982d1f1",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_2fbaa1d6d8a05cd98efb944d4790c36e",
+          "category": "MCCB",
+          "label": "C.B.",
+          "poles": "3P",
+          "amps": "250A",
+          "curve": "C",
+          "breaking_capacity": "36kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 120.0,
+          "load_label": "Distribution Board Feeders",
+          "quantity": 9,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Circuit breaker blocks extracted from drawing.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4DB",
+              "entity_handle": "4DB",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                25150.94502727847,
+                50462.34889594377,
+                25150.94502727847,
+                50462.34889594377
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E8",
+              "entity_handle": "4E8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                27656.16964061554,
+                50462.34889594377,
+                27656.16964061554,
+                50462.34889594377
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4F2",
+              "entity_handle": "4F2",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                26803.96552228994,
+                41291.74651060764,
+                26803.96552228994,
+                41291.74651060764
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:516",
+              "entity_handle": "516",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                42745.11332097926,
+                41411.08108464226,
+                42745.11332097926,
+                41411.08108464226
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:534",
+              "entity_handle": "534",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.59519593181,
+                49249.33727621679,
+                40311.59519593181,
+                49249.33727621679
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:540",
+              "entity_handle": "540",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40605.2378706324,
+                41411.08108464226,
+                40605.2378706324,
+                41411.08108464226
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:549",
+              "entity_handle": "549",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.63265967529,
+                49249.25481822075,
+                43294.63265967529,
+                49249.25481822075
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:5B8",
+              "entity_handle": "5B8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                52775.26985130409,
+                45454.37336864277,
+                52775.26985130409,
+                45454.37336864277
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:5C3",
+              "entity_handle": "5C3",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                54615.61909928681,
+                45454.27582247446,
+                54615.61909928681,
+                45454.27582247446
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_7571ad9f24e85472ab54c8dfae6d7ae6",
+          "category": "METER",
+          "label": "KWHM",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "Class 0.5S",
+          "cable_size": 35.0,
+          "load_label": "Utility Metering Input",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "KWHM energy meter blocks extracted from diagram.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E4",
+              "entity_handle": "4E4",
+              "block_name": "KWHM",
+              "layer": "E-Panelboards",
+              "text": "",
+              "cad_bbox": [
+                25150.94502731781,
+                52075.57419272912,
+                25150.94502731781,
+                52075.57419272912
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4EE",
+              "entity_handle": "4EE",
+              "block_name": "KWHM",
+              "layer": "E-Panelboards",
+              "text": "",
+              "cad_bbox": [
+                27656.16964065513,
+                52075.57419272912,
+                27656.16964065513,
+                52075.57419272912
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_51faa97d328454719ede749f32798918",
+          "category": "SWITCH",
+          "label": "D.S.",
+          "poles": "4P",
+          "amps": "400A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 240.0,
+          "load_label": "Isolation Control Feed",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Disconnect switch blocks extracted from diagram.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:504",
+              "entity_handle": "504",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.3507585148,
+                43720.22532632076,
+                43294.3507585148,
+                43720.22532632076
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:524",
+              "entity_handle": "524",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.3132893033,
+                43720.21267557769,
+                40311.3132893033,
+                43720.21267557769
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_7dbfe4e3eb7551778a6f5e46d8e9d467",
+          "category": "OTHER",
+          "label": "Generator",
+          "poles": "3P",
+          "amps": "630A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 300.0,
+          "load_label": "Emergency Power Supply Source",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.9,
+          "origin": "BOTH",
+          "notes": "Generator source connection blocks.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:51D",
+              "entity_handle": "51D",
+              "block_name": "Generator",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.63266517638,
+                51164.24412997028,
+                43294.63266517638,
+                51164.24412997028
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:531",
+              "entity_handle": "531",
+              "block_name": "Generator",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.59519597116,
+                51164.23147922712,
+                40311.59519597116,
+                51164.23147922712
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_8793c9a363455b13a0502ffc583c111f",
+          "category": "SWITCH",
+          "label": "Isolator 4P 160A",
+          "poles": "4P",
+          "amps": "160A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "deterministic_schematic",
+          "notes": "",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:504",
+              "entity_handle": "504",
+              "block_name": "D.S.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.3507585148,
+                43720.22532632076,
+                43294.3507585148,
+                43720.22532632076
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "Explicit isolator block was missing from structured extraction; verify its role."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_8608834051d55b7292961f43d48351b2",
+          "category": "CT",
+          "label": "Metering CT 250/5",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "250/5",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "origin": "engineering_calculated",
+          "notes": "Metering CT set calculated from the explicit three-phase power meter and 250A incomer using the next non-lower standard CT primary rating.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:4DB",
+              "entity_handle": "4DB",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                25150.94502727847,
+                50462.34889594377,
+                25150.94502727847,
+                50462.34889594377
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E8",
+              "entity_handle": "4E8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                27656.16964061554,
+                50462.34889594377,
+                27656.16964061554,
+                50462.34889594377
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4F2",
+              "entity_handle": "4F2",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                26803.96552228994,
+                41291.74651060764,
+                26803.96552228994,
+                41291.74651060764
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:516",
+              "entity_handle": "516",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                42745.11332097926,
+                41411.08108464226,
+                42745.11332097926,
+                41411.08108464226
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:534",
+              "entity_handle": "534",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40311.59519593181,
+                49249.33727621679,
+                40311.59519593181,
+                49249.33727621679
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:540",
+              "entity_handle": "540",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                40605.2378706324,
+                41411.08108464226,
+                40605.2378706324,
+                41411.08108464226
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:549",
+              "entity_handle": "549",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                43294.63265967529,
+                49249.25481822075,
+                43294.63265967529,
+                49249.25481822075
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:5B8",
+              "entity_handle": "5B8",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                52775.26985130409,
+                45454.37336864277,
+                52775.26985130409,
+                45454.37336864277
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:5C3",
+              "entity_handle": "5C3",
+              "block_name": "C.B.",
+              "layer": "E-Panels & Risers",
+              "text": "",
+              "cad_bbox": [
+                54615.61909928681,
+                45454.27582247446,
+                54615.61909928681,
+                45454.27582247446
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4E4",
+              "entity_handle": "4E4",
+              "block_name": "KWHM",
+              "layer": "E-Panelboards",
+              "text": "",
+              "cad_bbox": [
+                25150.94502731781,
+                52075.57419272912,
+                25150.94502731781,
+                52075.57419272912
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:4EE",
+              "entity_handle": "4EE",
+              "block_name": "KWHM",
+              "layer": "E-Panelboards",
+              "text": "",
+              "cad_bbox": [
+                27656.16964065513,
+                52075.57419272912,
+                27656.16964065513,
+                52075.57419272912
+              ],
+              "image_bbox": [],
+              "confidence": 0.9
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "CT ratio is an engineering selection derived from meter/incomer evidence."
+          ],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_e5a052383c045d849a8b676dbcbe18b4",
+          "name": "PT 150",
+          "description": "Phoenix Contact feed-through terminal 150mm²",
+          "max_mm2": 150.0,
+          "quantity": 33,
+          "circuits": [
+            "Distribution Board Feeders",
+            "Emergency Power Supply Source"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_71b5b850daef5ee88ae1d631d5c243fc",
+          "name": "PT 35",
+          "description": "Phoenix Contact feed-through terminal 35mm²",
+          "max_mm2": 35.0,
+          "quantity": 2,
+          "circuits": [
+            "Utility Metering Input"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-ATS\\artifacts\\Kornet El Hamra_B1-ATS\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Iterable
 
 
-CAD_PARSER_VERSION = 4
+CAD_PARSER_VERSION = 5
 
 
 @dataclass
@@ -243,6 +243,151 @@ def layout_device_groups(entities: list[CadEntity], layout_layers: Iterable[str]
     return sorted(groups.values(), key=lambda item: (item["layer"], item["category"], item["amps"], item["sensitivity"]))
 
 
+def schematic_rating_groups(entities: list[CadEntity]) -> list[dict]:
+    """Return exact, explicitly written schematic breaker-rating inventories.
+
+    A physical panel layout is useful for total inventory, but its library block
+    names can represent a commercial selection rather than the rating printed on
+    the SLD.  Repeated labels such as ``2x10`` beside outgoing symbols are the
+    stronger source for the specification split.  Unambiguous 2-conductor
+    notation is promoted to an MCB group.  RCCB groups are created only when an
+    explicit RCD/RCCB marker can be paired geometrically with both a 4-pole
+    rating and a sensitivity label.
+    """
+    selected_layers = schematic_layers(entities)
+    eligible_layers = {
+        entity.layer for entity in entities
+        if entity.layer in selected_layers
+        or (
+            entity.kind in {"text", "attribute"}
+            and any(_label_layer_compatible(layer, entity.layer) for layer in selected_layers)
+        )
+    }
+    groups: dict[tuple[str, str, str, str], dict] = {}
+    pattern = re.compile(r"^\s*2\s*[X×]\s*(\d+(?:\.\d+)?)\s*(?:A|AMP)?\s*$", re.I)
+    for entity in entities:
+        if entity.kind not in {"text", "attribute"} or entity.layer not in eligible_layers:
+            continue
+        match = pattern.fullmatch(entity.text or "")
+        if not match:
+            continue
+        amps = f"{match.group(1)}A"
+        key = ("MCB", "1P+N", amps, "-")
+        group = groups.setdefault(key, {
+            "category": "MCB", "poles": "1P+N", "amps": amps,
+            "sensitivity": "-", "count": 0, "label_ids": [], "labels": [], "layers": [],
+        })
+        group["count"] += 1
+        group["label_ids"].append(entity.id)
+        if entity.text not in group["labels"]:
+            group["labels"].append(entity.text)
+        if entity.layer not in group["layers"]:
+            group["layers"].append(entity.layer)
+
+    eligible_texts = [
+        entity for entity in entities
+        if entity.kind in {"text", "attribute"}
+        and entity.layer in eligible_layers and entity.text.strip()
+    ]
+    heights = [entity.height for entity in eligible_texts if entity.height > 0]
+    text_scale = statistics.median(heights) if heights else 1.0
+    xs = [entity.x for entity in eligible_texts]
+    ys = [entity.y for entity in eligible_texts]
+    diagonal = math.hypot(max(xs) - min(xs), max(ys) - min(ys)) if len(xs) > 1 else text_scale
+    search_radius = max(text_scale * 25.0, diagonal * 0.025, 1.0)
+    markers = [
+        entity for entity in eligible_texts
+        if re.search(r"\bRCC?B\b|\bRCD\b", entity.text, re.I)
+    ]
+    ratings = []
+    sensitivities = []
+    rating_pattern = re.compile(r"^\s*4\s*[X×]\s*(\d+(?:\.\d+)?)\s*(?:A|AMP)?\s*$", re.I)
+    sensitivity_pattern = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*MA\s*$", re.I)
+    for entity in eligible_texts:
+        if match := rating_pattern.fullmatch(entity.text):
+            ratings.append((entity, f"{match.group(1)}A"))
+        if match := sensitivity_pattern.fullmatch(entity.text):
+            sensitivities.append((entity, f"{match.group(1)}mA"))
+
+    used_ratings: set[str] = set()
+    used_sensitivities: set[str] = set()
+    for marker in sorted(markers, key=lambda item: item.id):
+        def nearest(candidates, used):
+            ranked = []
+            for entity, value in candidates:
+                if entity.id in used or not _label_layer_compatible(marker.layer, entity.layer):
+                    continue
+                distance = math.hypot(marker.x - entity.x, (marker.y - entity.y) * 2.0)
+                if distance <= search_radius:
+                    ranked.append((distance, entity.id, entity, value))
+            return min(ranked) if ranked else None
+
+        rating = nearest(ratings, used_ratings)
+        sensitivity = nearest(sensitivities, used_sensitivities)
+        if not rating or not sensitivity:
+            continue
+        _, _, rating_entity, amps = rating
+        _, _, sensitivity_entity, sensitivity_value = sensitivity
+        used_ratings.add(rating_entity.id)
+        used_sensitivities.add(sensitivity_entity.id)
+        key = ("RCCB", "4P", amps, sensitivity_value)
+        group = groups.setdefault(key, {
+            "category": "RCCB", "poles": "4P", "amps": amps,
+            "sensitivity": sensitivity_value, "count": 0,
+            "label_ids": [], "labels": [], "layers": [],
+        })
+        group["count"] += 1
+        group["label_ids"].extend([marker.id, rating_entity.id, sensitivity_entity.id])
+        group["labels"].append(
+            f"{rating_entity.text} {sensitivity_entity.text} {marker.text}"
+        )
+        for layer in (marker.layer, rating_entity.layer, sensitivity_entity.layer):
+            if layer not in group["layers"]:
+                group["layers"].append(layer)
+    return sorted(
+        groups.values(),
+        key=lambda item: (item["category"], item["poles"], item["amps"], item["sensitivity"]),
+    )
+
+
+def _text_clusters(entities: list[CadEntity]) -> tuple[float, list[dict]]:
+    texts = [
+        entity for entity in entities
+        if entity.kind in {"text", "attribute"} and entity.text.strip()
+    ]
+    heights = sorted(entity.height for entity in texts if entity.height > 0)
+    median_height = statistics.median(heights) if heights else 10.0
+    radius = max(15.0, min(median_height * 1.5, 80.0))
+    remaining = set(range(len(texts)))
+    clusters = []
+    while remaining:
+        seed = min(remaining)
+        remaining.remove(seed)
+        members = [seed]
+        frontier = [seed]
+        while frontier:
+            current = frontier.pop()
+            source = texts[current]
+            neighbours = [
+                index for index in sorted(remaining)
+                if texts[index].layer == source.layer
+                and math.hypot(source.x - texts[index].x, source.y - texts[index].y) <= radius
+            ]
+            for index in neighbours:
+                remaining.remove(index)
+                members.append(index)
+                frontier.append(index)
+        group = [texts[index] for index in members]
+        clusters.append({
+            "layer": group[0].layer,
+            "cx": round(sum(item.x for item in group) / len(group), 3),
+            "cy": round(sum(item.y for item in group) / len(group), 3),
+            "text_ids": [item.id for item in group],
+            "texts": [item.text for item in group],
+        })
+    return radius, clusters
+
+
 def build_ai_evidence(graph: CadEvidenceGraph) -> dict:
     selected_layers = schematic_layers(graph.entities)
     layout_layers = physical_layout_layers(graph.entities, selected_layers)
@@ -289,9 +434,28 @@ def build_ai_evidence(graph: CadEvidenceGraph) -> dict:
             ],
         })
         associated_counts[label.text.strip()] += 1
+    cluster_radius, clusters = _text_clusters(selected)
+    schematic_blocks = [
+        entity for entity in selected
+        if entity.kind == "block" and entity.layer in selected_layers
+    ]
+    repeating_blocks = Counter(entity.block_name for entity in schematic_blocks if entity.block_name)
     return {
         "schematic_layers": selected_layers,
         "physical_layout_layers": layout_layers,
+        "schematic_rating_groups": schematic_rating_groups(graph.entities),
+        "repeating_schematic_blocks": [
+            {"block_name": name, "count": count}
+            for name, count in sorted(repeating_blocks.items()) if count > 1
+        ],
+        "schematic_blocks": [
+            {
+                "id": entity.id, "handle": entity.handle, "block_name": entity.block_name,
+                "layer": entity.layer, "x": entity.x, "y": entity.y,
+                "attributes": entity.attributes,
+            }
+            for entity in schematic_blocks
+        ],
         "block_label_associations": association_rows,
         "associated_label_counts": dict(sorted(associated_counts.items())),
         "unassociated_blocks": [
@@ -324,8 +488,13 @@ def build_ai_evidence(graph: CadEvidenceGraph) -> dict:
             )
         ],
         "layout_device_groups": layout_device_groups(graph.entities, layout_layers),
+        "text_cluster_radius": cluster_radius,
+        "text_clusters": clusters,
         "texts": [
-            {"id": entity.id, "layer": entity.layer, "x": entity.x, "y": entity.y, "text": entity.text}
+            {
+                "id": entity.id, "layer": entity.layer, "x": entity.x, "y": entity.y,
+                "height": entity.height, "text": entity.text,
+            }
             for entity in selected if entity.kind in {"text", "attribute"}
         ],
     }

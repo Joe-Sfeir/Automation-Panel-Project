@@ -192,6 +192,7 @@ def evaluate_dataset(expected_offer: str | Path, predictions_dir: str | Path, ma
     source_files: dict[str, str] = {}
     block_backed_rows = 0
     block_backed_agreeing_rows = 0
+    layout_schematic_conflict_rows = 0
     manifest = json.loads(Path(manifest_path).read_text(encoding="utf-8")) if manifest_path else {}
     drawing_panels = manifest.get("source_drawings", {})
     for project_path in Path(predictions_dir).glob("*/project.technelec.json"):
@@ -239,6 +240,14 @@ def evaluate_dataset(expected_offer: str | Path, predictions_dir: str | Path, ma
                     if item.block_name and parse_layout_block_name(item.block_name)
                 ]
                 if layout_evidence:
+                    preserves_schematic = any(
+                        "schematic specification" in conflict.lower()
+                        and "preserved" in conflict.lower()
+                        for conflict in component.conflicts
+                    )
+                    if preserves_schematic:
+                        layout_schematic_conflict_rows += 1
+                        continue
                     by_layer: dict[str, dict[str, int]] = defaultdict(dict)
                     for item in layout_evidence:
                         identity = item.source_id or item.entity_handle
@@ -263,6 +272,7 @@ def evaluate_dataset(expected_offer: str | Path, predictions_dir: str | Path, ma
             "agreeing_rows": block_backed_agreeing_rows,
             "evaluated_rows": block_backed_rows,
             "exact_rate": round(block_backed_agreeing_rows / block_backed_rows, 6) if block_backed_rows else 1.0,
+            "layout_schematic_conflict_rows": layout_schematic_conflict_rows,
         },
         "tuning": _aggregate_for(tuning_keys, predicted_by_panel, expected_by_panel) if tuning_keys else {},
         "holdout": _aggregate_for(holdout_keys, predicted_by_panel, expected_by_panel) if holdout_keys else {},

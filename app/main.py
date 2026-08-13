@@ -1549,7 +1549,7 @@ class HomePage(QWidget):
         header_lay.setSpacing(8)
         title = QLabel("Engineering workbench")
         title.setObjectName("pageTitle")
-        desc = QLabel("Register source drawings, review evidence-backed panel BOMs, then price only engineer-approved components.")
+        desc = QLabel("Register source drawings, inspect or edit the evidence-backed BOM, then price and export all included components.")
         desc.setObjectName("pageSubtitle")
         desc.setWordWrap(True)
         header_lay.addWidget(title)
@@ -1683,7 +1683,7 @@ class ProjectPage(QWidget):
         title_box = QVBoxLayout()
         title = QLabel("Project intake and extraction")
         title.setObjectName("pageTitle")
-        subtitle = QLabel("Add every source drawing now. Extraction creates a reviewable project; it does not price raw results.")
+        subtitle = QLabel("Add every source drawing now. Extraction creates a source-preserved takeoff ready for pricing.")
         subtitle.setObjectName("pageSubtitle")
         title_box.addWidget(title)
         title_box.addWidget(subtitle)
@@ -1787,7 +1787,7 @@ class ProjectPage(QWidget):
 
         config_layout.addWidget(config_title)
         catalog_note = QLabel(
-            "Catalog settings below constrain matching after engineer review. They cannot bypass the review gate."
+            "Catalog settings below constrain matching. Extracted components flow directly to pricing unless you exclude them."
         )
         catalog_note.setObjectName("sectionDesc")
         catalog_note.setWordWrap(True)
@@ -1830,7 +1830,7 @@ class ProjectPage(QWidget):
         self.open_output_btn = QPushButton("Open project folder")
         set_button_variant(self.open_output_btn, "secondary")
         self.open_output_btn.setEnabled(False)
-        self.review_btn = QPushButton("Open panel review")
+        self.review_btn = QPushButton("Review or price project")
         set_button_variant(self.review_btn, "primary")
         self.review_btn.setEnabled(False)
         self.cancel_btn = QPushButton("Cancel after current drawing")

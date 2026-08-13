@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "project_id": "project_d3a0bd3c51394e479948844dd84ed41c",
+  "project_reference": "Client Project",
+  "generated_at": "2026-08-13T09:44:31+00:00",
+  "tva_rate": 0.11,
+  "currencies": [
+    "EUR"
+  ],
+  "grand_ht": 1379.46,
+  "tva": 151.74,
+  "grand_ttc": 1531.2,
+  "panels": [
+    {
+      "panel_id": "panel_26709108c6005f118c51ff7259a72250",
+      "panel_reference": "DB-B1",
+      "ht": 1379.46,
+      "items": [
+        {
+          "component_id": "component_25b420cd87f55940ace74586a89bb818",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9S65440",
+          "chosen_description": "ACTI9 ISW SWITCH 4P 40A 415VAC",
+          "alternatives": [
+            {
+              "reference": "28901",
+              "description": "INS40 4P 40A - SWITCH DISCONNECTOR",
+              "price": 97.27,
+              "currency": "EUR",
+              "score": 1.0
+            },
+            {
+              "reference": "A9S65463",
+              "description": "ACTI9 ISW SWITCH 4P 63A 415VAC",
+              "price": 49.76,
+              "currency": "EUR",
+              "score": 0.767
+            },
+            {
+              "reference": "28905",
+              "description": "INS80 4P 80A - SWITCH DISCONNECTOR",
+              "price": 113.14,
+              "currency": "EUR",
+              "score": 0.75
+            },
+            {
+              "reference": "A9S65491",
+              "description": "ACTI9 ISW SWITCH 4P 100A 415VAC",
+              "price": 79.13,
+              "currency": "EUR",
+              "score": 0.74
+            },
+            {
+              "reference": "A9S65492",
+              "description": "ACTI9 ISW SWITCH 4P 125A 415VAC",
+              "price": 90.44,
+              "currency": "EUR",
+              "score": 0.74
+            }
+          ],
+          "score": 1.0,
+          "tier": "T2",
+          "unit_price": 46.73,
+          "quantity": 1,
+          "total_price": 46.73,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "SWITCH 4P 40A",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_7e76519f6a5554b1acfe037521127f76",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9MEM2010",
+          "chosen_description": "ENERGY METER 40A PULSE OUTPUT",
+          "alternatives": [
+            {
+              "reference": "A9MEM3200",
+              "description": "iEM3200 CT operated Cl 0.5S Energy meter",
+              "price": 235.34,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "A9MEM3210",
+              "description": "iEM3210 CT op Cl 0.5S MID Energy meter",
+              "price": 246.0,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "METSEPM2110",
+              "description": "EASYLOGIC VAF P AND E METER THD POP CL 1",
+              "price": 249.22,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "A9MEM3250",
+              "description": "iEM3250 CT op Cl 0.5S Energy meter RS485",
+              "price": 257.27,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "A9MEM3215",
+              "description": "TRIPHASE KWH METER CT MULTI-TARIFF MID",
+              "price": 259.67,
+              "currency": "EUR",
+              "score": 0.9
+            }
+          ],
+          "score": 0.9,
+          "tier": "T2",
+          "unit_price": 170.74,
+          "quantity": 1,
+          "total_price": 170.74,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "METER",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_d206728837fa51d9a8e5f2fe49fe4b01",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "XB4BVM1",
+          "chosen_description": "PILOT LIGHT",
+          "alternatives": [
+            {
+              "reference": "XB4BVM3",
+              "description": "PILOT LIGHT",
+              "price": 18.3,
+              "currency": "EUR",
+              "score": 0.4667
+            },
+            {
+              "reference": "XB4BVM4",
+              "description": "PILOT LIGHT",
+              "price": 20.63,
+              "currency": "EUR",
+              "score": 0.4667
+            },
+            {
+              "reference": "XB4BVM5",
+              "description": "PILOT LIGHT",
+              "price": 20.63,
+              "currency": "EUR",
+              "score": 0.4667
+            },
+            {
+              "reference": "XA2EVB4LC",
+              "description": "Medium XA2 Pilot Light, 24v AC/DC, Red",
+              "price": 2.66,
+              "currency": "EUR",
+              "score": 0.45
+            },
+            {
+              "reference": "XA2EVB1LC",
+              "description": "Medium XA2 Pilot Light, 24v AC/DC, white",
+              "price": 2.84,
+              "currency": "EUR",
+              "score": 0.45
+            }
+          ],
+          "score": 0.4667,
+          "tier": "T2",
+          "unit_price": 18.3,
+          "quantity": 3,
+          "total_price": 54.9,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "PILOT_LAMP",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_6407a0bba5fc5951974168c1a86203ff",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "DF81",
+          "chosen_description": "FUSE HOLDER 1P 25A FUSE 8,5 X 31,5 MM",
+          "alternatives": [
+            {
+              "reference": "DF101",
+              "description": "FUSE HOLDER 1P 32A FOR FUSE 10 X 38 MM",
+              "price": 6.38,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "DF10N",
+              "description": "FUSE HOLDER N 32A FOR FUSE 10 X 38 MM",
+              "price": 7.22,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "DF101V",
+              "description": "FUSE HOLDER 1P 32A 10 X 38 MELTING INDIC",
+              "price": 10.44,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "DF82",
+              "description": "FUSE HOLDER 2P 25A FUSE 8,5 X 31,5 MM",
+              "price": 12.68,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "DF141",
+              "description": "FUSE HOLDER 1P 50A FOR FUSE 14 X 51 MM",
+              "price": 13.46,
+              "currency": "EUR",
+              "score": 0.9
+            }
+          ],
+          "score": 0.9,
+          "tier": "T2",
+          "unit_price": 5.59,
+          "quantity": 3,
+          "total_price": 16.77,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "FUSE_HOLDER",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_6af2733bc61754648c0d73299a4b4686",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "",
+          "chosen_description": "",
+          "alternatives": [
+            {
+              "reference": "XALE2",
+              "description": "EMPTY 2 HOLES",
+              "price": 10.33,
+              "currency": "EUR",
+              "score": 0.3167
+            },
+            {
+              "reference": "10205",
+              "description": "MICRO PRAGMA 2 MOD",
+              "price": 7.61,
+              "currency": "EUR",
+              "score": 0.3067
+            },
+            {
+              "reference": "LVS03581",
+              "description": "2 UNIVERSAL ANGLE BRACKETS",
+              "price": 13.9,
+              "currency": "EUR",
+              "score": 0.3067
+            },
+            {
+              "reference": "XALD02",
+              "description": "CAJA VACIA 2 TALADROS",
+              "price": 17.72,
+              "currency": "EUR",
+              "score": 0.3067
+            },
+            {
+              "reference": "LV432475",
+              "description": "2 SHORT REAR CONNECTIONS",
+              "price": 66.23,
+              "currency": "EUR",
+              "score": 0.3067
+            }
+          ],
+          "score": 0.0,
+          "tier": "NF",
+          "unit_price": 0.0,
+          "quantity": 1,
+          "total_price": 0.0,
+          "currency": "EUR",
+          "review_status": "unmatched",
+          "note": "No sufficiently similar catalog product",
+          "description": "SPD TYPE 2",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_882587dc9d715462a212a2d96c795f21",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9R44425",
+          "chosen_description": "Acti9 iID 4P 25A 300mA AC RCCB",
+          "alternatives": [
+            {
+              "reference": "A9R24425",
+              "description": "Acti9 iID 4P 25A 300mA A RCCB",
+              "price": 127.92,
+              "currency": "EUR",
+              "score": 1.0
+            },
+            {
+              "reference": "A9R75425",
+              "description": "ACTI9 IID K 4P 25A 300MA AC-TYPE RESIDUA",
+              "price": 77.88,
+              "currency": "EUR",
+              "score": 0.975
+            },
+            {
+              "reference": "A9R44440",
+              "description": "Acti9 iID 4P 40A 300mA AC RCCB",
+              "price": 94.62,
+              "currency": "EUR",
+              "score": 0.93
+            },
+            {
+              "reference": "16907",
+              "description": "Acti9 RCCB-ID 4P 125A 300mA AC",
+              "price": 512.59,
+              "currency": "EUR",
+              "score": 0.895
+            },
+            {
+              "reference": "A9R75440",
+              "description": "ACTI9 IID K 4P 40A 300MA AC-TYPE RESIDUA",
+              "price": 82.01,
+              "currency": "EUR",
+              "score": 0.705
+            }
+          ],
+          "score": 1.0,
+          "tier": "T2",
+          "unit_price": 89.91,
+          "quantity": 2,
+          "total_price": 179.82,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "RCCB 4P 25A 300mA",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_7eea5cd4ca745d5e8b51fbfae25dc8ea",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9R41425",
+          "chosen_description": "Acti9 iID 4P 25A 30mA AC RCCB",
+          "alternatives": [
+            {
+              "reference": "A9R50425",
+              "description": "ACTI9 IID K 4P 25A 30MA AC-TYPE RESIDUAL",
+              "price": 86.55,
+              "currency": "EUR",
+              "score": 0.975
+            },
+            {
+              "reference": "A9R21425",
+              "description": "ACTI9 IID 4P 25A 30MA A-TYPE RESIDUAL CU",
+              "price": 141.64,
+              "currency": "EUR",
+              "score": 0.975
+            },
+            {
+              "reference": "16763",
+              "description": "Acti9 RCCB-ID 4P 125A 30mA B",
+              "price": 3193.69,
+              "currency": "EUR",
+              "score": 0.895
+            },
+            {
+              "reference": "A9R50440",
+              "description": "ACTI9 IID K 4P 40A 30MA AC-TYPE RESIDUAL",
+              "price": 91.13,
+              "currency": "EUR",
+              "score": 0.705
+            },
+            {
+              "reference": "A9R41440",
+              "description": "ACTI9 IID 4P 40A 30MA AC-TYPE RESIDUAL C",
+              "price": 105.13,
+              "currency": "EUR",
+              "score": 0.705
+            }
+          ],
+          "score": 1.0,
+          "tier": "T1",
+          "unit_price": 99.87,
+          "quantity": 2,
+          "total_price": 199.74,
+          "currency": "EUR",
+          "review_status": "auto_matched",
+          "note": "Deterministic structured match",
+          "description": "RCCB 4P 25A 30mA",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_6f5492c0555a54539f98e7d26c3149b5",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9P52610",
+          "chosen_description": "ACTI 9 iC40 1PN C 10A MCB",
+          "alternatives": [
+            {
+              "reference": "A9P54610",
+              "description": "ACTI 9 IC40N 1PN C 10A 6000A/10KA MINIAT",
+              "price": 20.58,
+              "currency": "EUR",
+              "score": 0.99
+            },
+            {
+              "reference": "A9XPC612",
+              "description": "ACTI9 Comb busbar iC40 1PN 12 mod. 18mm",
+              "price": 20.28,
+              "currency": "EUR",
+              "score": 0.3222
+            },
+            {
+              "reference": "A9XPC624",
+              "description": "ACTI9 Comb busbar iC40 1PN 24 mod. 18mm",
+              "price": 27.54,
+              "currency": "EUR",
+              "score": 0.3222
+            },
+            {
+              "reference": "RUMC31BD",
+              "description": "REL# UNIV.3NANC 10A 24VDC",
+              "price": 12.75,
+              "currency": "EUR",
+              "score": 0.2733
+            },
+            {
+              "reference": "RUMC31FD",
+              "description": "REL# UNIV.3NANC 10A 110VDC",
+              "price": 13.18,
+              "currency": "EUR",
+              "score": 0.2733
+            }
+          ],
+          "score": 1.0,
+          "tier": "T2",
+          "unit_price": 18.2,
+          "quantity": 16,
+          "total_price": 291.2,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "MCB 1P+N 10A C 6kA",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_93550d2f39f551879112ad67d8e35f28",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9P52616",
+          "chosen_description": "ACTI 9 iC40 1PN C 16A MCB",
+          "alternatives": [
+            {
+              "reference": "A9P54616",
+              "description": "ACTI 9 IC40N 1PN C 16A 6000A/10KA MINIAT",
+              "price": 20.58,
+              "currency": "EUR",
+              "score": 0.99
+            },
+            {
+              "reference": "A9D31616",
+              "description": "ACTI 9 IDPN N VIGI C 16A 1PPN 30MA AC 60",
+              "price": 87.71,
+              "currency": "EUR",
+              "score": 0.44
+            },
+            {
+              "reference": "A9XPC612",
+              "description": "ACTI9 Comb busbar iC40 1PN 12 mod. 18mm",
+              "price": 20.28,
+              "currency": "EUR",
+              "score": 0.3222
+            },
+            {
+              "reference": "A9XPC624",
+              "description": "ACTI9 Comb busbar iC40 1PN 24 mod. 18mm",
+              "price": 27.54,
+              "currency": "EUR",
+              "score": 0.3222
+            },
+            {
+              "reference": "VCF01GE",
+              "description": "16A MAIN EMERG SWIT ENCLO",
+              "price": 55.47,
+              "currency": "EUR",
+              "score": 0.2733
+            }
+          ],
+          "score": 1.0,
+          "tier": "T2",
+          "unit_price": 18.2,
+          "quantity": 14,
+          "total_price": 254.8,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "MCB 1P+N 16A C 6kA",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_21d662dbbbdf5986ac89715d924be0b8",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "A9P52620",
+          "chosen_description": "ACTI 9 iC40 1PN C 20A MCB",
+          "alternatives": [
+            {
+              "reference": "A9P54620",
+              "description": "ACTI 9 IC40N 1PN C 20A 6000A/10KA MINIAT",
+              "price": 20.58,
+              "currency": "EUR",
+              "score": 0.99
+            },
+            {
+              "reference": "A9XPC612",
+              "description": "ACTI9 Comb busbar iC40 1PN 12 mod. 18mm",
+              "price": 20.28,
+              "currency": "EUR",
+              "score": 0.3222
+            },
+            {
+              "reference": "A9XPC624",
+              "description": "ACTI9 Comb busbar iC40 1PN 24 mod. 18mm",
+              "price": 27.54,
+              "currency": "EUR",
+              "score": 0.3222
+            },
+            {
+              "reference": "VCFN25GE",
+              "description": "20A MAIN EMERG SWIT ENCLO",
+              "price": 57.24,
+              "currency": "EUR",
+              "score": 0.2733
+            },
+            {
+              "reference": "VCF0GE",
+              "description": "20A MAIN EMERG SWIT ENCLO",
+              "price": 58.48,
+              "currency": "EUR",
+              "score": 0.2733
+            }
+          ],
+          "score": 1.0,
+          "tier": "T2",
+          "unit_price": 18.2,
+          "quantity": 3,
+          "total_price": 54.6,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "MCB 1P+N 20A C 6kA",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        },
+        {
+          "component_id": "component_95af31f94fb4548097623e8702bfef1a",
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "chosen_reference": "METSECT5CC005",
+          "chosen_description": "CT tropi. DIN 50 5 cables d. 21",
+          "alternatives": [
+            {
+              "reference": "METSECT5CC010",
+              "description": "CT tropi. DIN 100 5 cables d. 21",
+              "price": 36.72,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "METSECT5CC015",
+              "description": "CT tropi. DIN 150 5 cables d. 21",
+              "price": 36.72,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "METSECT5CC020",
+              "description": "CT tropi. DIN 200 5 cables d. 21",
+              "price": 36.72,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "METSECT5MB040",
+              "description": "CT Solid core 26mm dia or bar 400x5A CTR",
+              "price": 37.83,
+              "currency": "EUR",
+              "score": 0.9
+            },
+            {
+              "reference": "METSECT5MC040",
+              "description": "CT Solid core 32mm dia or bar 400x5A CTR",
+              "price": 40.88,
+              "currency": "EUR",
+              "score": 0.9
+            }
+          ],
+          "score": 0.9,
+          "tier": "T2",
+          "unit_price": 36.72,
+          "quantity": 3,
+          "total_price": 110.16,
+          "currency": "EUR",
+          "review_status": "needs_review",
+          "note": "Multiple electrically compatible catalog families have equivalent scores",
+          "description": "CT",
+          "panel_id": "panel_26709108c6005f118c51ff7259a72250"
+        }
+      ]
+    }
+  ]
+}

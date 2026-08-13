@@ -40,6 +40,6 @@ def test_component_edit_records_override_history():
     component.edit("quantity", 3, "engineer correction")
     assert component.quantity == 3
     assert component.origin == "manually_overridden"
-    assert component.review_status == "needs_review"
+    assert component.review_status == "included"
     assert component.overrides[0].previous == 1
     assert component.overrides[0].reason == "engineer correction"

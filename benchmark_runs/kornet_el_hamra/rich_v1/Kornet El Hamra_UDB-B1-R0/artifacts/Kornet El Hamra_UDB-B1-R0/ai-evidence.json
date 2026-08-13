@@ -1,0 +1,4871 @@
+{
+  "schematic_layers": [
+    "E_PanelBoard"
+  ],
+  "physical_layout_layers": [
+    "E0 - G - Panel"
+  ],
+  "schematic_rating_groups": [
+    {
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "10A",
+      "count": 4,
+      "label_ids": [
+        "text:1142A91",
+        "text:1142A93",
+        "text:1142AA8",
+        "text:1142B59"
+      ],
+      "labels": [
+        "2x10"
+      ],
+      "layers": [
+        "E_PanelBoard"
+      ]
+    },
+    {
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "16A",
+      "count": 13,
+      "label_ids": [
+        "text:1142ADC",
+        "text:1142AF2",
+        "text:1142B0B",
+        "text:1142B24",
+        "text:1142B35",
+        "text:1142B3A",
+        "text:1142B3D",
+        "text:1142B40",
+        "text:1142B43",
+        "text:1142B69",
+        "text:1142B6C",
+        "text:1142B7C",
+        "text:1142BC6"
+      ],
+      "labels": [
+        "2x16"
+      ],
+      "layers": [
+        "E_PanelBoard"
+      ]
+    }
+  ],
+  "repeating_schematic_blocks": [
+    {
+      "block_name": "CB1",
+      "count": 17
+    }
+  ],
+  "schematic_blocks": [
+    {
+      "id": "block:1142A98",
+      "handle": "1142A98",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 70434.45540979742,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142A99",
+      "handle": "1142A99",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 70038.04771815064,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142AAA",
+      "handle": "1142AAA",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 69641.64002652315,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142AAD",
+      "handle": "1142AAD",
+      "block_name": "SW",
+      "layer": "E_PanelBoard",
+      "x": 1487423.9524864,
+      "y": 67312.47035233435,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142ADF",
+      "handle": "1142ADF",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 67331.29627243134,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142AE0",
+      "handle": "1142AE0",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 66934.88858078455,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B0D",
+      "handle": "1142B0D",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 67727.70396405885,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B26",
+      "handle": "1142B26",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 68124.11165568636,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B34",
+      "handle": "1142B34",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 66538.48088913775,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B39",
+      "handle": "1142B39",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.659693525,
+      "y": 66142.07319749096,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B3C",
+      "handle": "1142B3C",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 65745.66550584415,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B3F",
+      "handle": "1142B3F",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 65349.25781419736,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B42",
+      "handle": "1142B42",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.529524717,
+      "y": 64952.85012255055,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B5B",
+      "handle": "1142B5B",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 69245.23233488445,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B68",
+      "handle": "1142B68",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 63498.650435133,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B6B",
+      "handle": "1142B6B",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.529524717,
+      "y": 63102.24274348621,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142B7B",
+      "handle": "1142B7B",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.36855915,
+      "y": 63878.67533890435,
+      "attributes": {}
+    },
+    {
+      "id": "block:1142BC5",
+      "handle": "1142BC5",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501209.545349556,
+      "y": 62705.83505183941,
+      "attributes": {}
+    }
+  ],
+  "block_label_associations": [
+    {
+      "block_id": "block:1142A98",
+      "handle": "1142A98",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 70434.45540979742,
+      "label_id": "text:1142A93",
+      "label": "2x10",
+      "label_x": 1502929.254032121,
+      "label_y": 70494.42177803974,
+      "confidence": 0.624679,
+      "nearby_texts": [
+        {
+          "id": "text:1142A93",
+          "text": "2x10",
+          "distance": 1735.423
+        },
+        {
+          "id": "text:1142A91",
+          "text": "2x10",
+          "distance": 2235.889
+        },
+        {
+          "id": "text:1142A94",
+          "text": "(1P+N)",
+          "distance": 2410.824
+        },
+        {
+          "id": "text:1142A92",
+          "text": "(1P+N)",
+          "distance": 2785.832
+        },
+        {
+          "id": "text:1142AA8",
+          "text": "2x10",
+          "distance": 3471.093
+        },
+        {
+          "id": "text:1142AA3",
+          "text": "4x10AMP",
+          "distance": 3742.897
+        },
+        {
+          "id": "text:1142AA9",
+          "text": "(1P+N)",
+          "distance": 3848.396
+        },
+        {
+          "id": "text:1142AA4",
+          "text": "300mA",
+          "distance": 4606.451
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142A99",
+      "handle": "1142A99",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 70038.04771815064,
+      "label_id": "text:1142A91",
+      "label": "2x10",
+      "label_x": 1502929.253676756,
+      "label_y": 70076.9428189371,
+      "confidence": 0.626761,
+      "nearby_texts": [
+        {
+          "id": "text:1142A91",
+          "text": "2x10",
+          "distance": 1725.793
+        },
+        {
+          "id": "text:1142AA8",
+          "text": "2x10",
+          "distance": 2235.889
+        },
+        {
+          "id": "text:1142AA3",
+          "text": "4x10AMP",
+          "distance": 2337.562
+        },
+        {
+          "id": "text:1142A92",
+          "text": "(1P+N)",
+          "distance": 2395.834
+        },
+        {
+          "id": "text:1142A93",
+          "text": "2x10",
+          "distance": 2507.308
+        },
+        {
+          "id": "text:1142AA9",
+          "text": "(1P+N)",
+          "distance": 2785.832
+        },
+        {
+          "id": "text:1142A94",
+          "text": "(1P+N)",
+          "distance": 3051.257
+        },
+        {
+          "id": "text:1142AA4",
+          "text": "300mA",
+          "distance": 3126.617
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142AAA",
+      "handle": "1142AAA",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 69641.64002652315,
+      "label_id": "text:1142AA3",
+      "label": "4x10AMP",
+      "label_x": 1499851.205044015,
+      "label_y": 69562.61736229103,
+      "confidence": 0.698183,
+      "nearby_texts": [
+        {
+          "id": "text:1142AA3",
+          "text": "4x10AMP",
+          "distance": 1395.551
+        },
+        {
+          "id": "text:1142AA8",
+          "text": "2x10",
+          "distance": 1725.793
+        },
+        {
+          "id": "text:1142AA4",
+          "text": "300mA",
+          "distance": 1833.174
+        },
+        {
+          "id": "text:1142B59",
+          "text": "2x10",
+          "distance": 2235.889
+        },
+        {
+          "id": "text:1142AA9",
+          "text": "(1P+N)",
+          "distance": 2395.834
+        },
+        {
+          "id": "text:1142A91",
+          "text": "2x10",
+          "distance": 2446.625
+        },
+        {
+          "id": "text:1142AA5",
+          "text": "ISOL.S.+RCD",
+          "distance": 2476.444
+        },
+        {
+          "id": "text:1142B5A",
+          "text": "(1P+N)",
+          "distance": 2785.832
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142AAD",
+      "handle": "1142AAD",
+      "block_name": "SW",
+      "layer": "E_PanelBoard",
+      "x": 1487423.9524864,
+      "y": 67312.47035233435,
+      "label_id": "text:1142AAF",
+      "label": "4x25 Amp",
+      "label_x": 1488569.87746697,
+      "label_y": 66223.64704189518,
+      "confidence": 0.026019,
+      "nearby_texts": [
+        {
+          "id": "text:1142AAF",
+          "text": "4x25 Amp",
+          "distance": 4503.523
+        },
+        {
+          "id": "text:1142AB0",
+          "text": "ISOL.S.",
+          "distance": 6990.481
+        },
+        {
+          "id": "text:1142AB9",
+          "text": "4Cx6mm²+1Cx6mm²",
+          "distance": 8076.157
+        },
+        {
+          "id": "text:1142AB8",
+          "text": "TO UMDB-B1",
+          "distance": 8166.116
+        },
+        {
+          "id": "text:1142B1F",
+          "text": "Fuse gG 3x32A",
+          "distance": 8659.451
+        },
+        {
+          "id": "text:1142B18",
+          "text": "SPD",
+          "distance": 10287.528
+        },
+        {
+          "id": "text:1142B1D",
+          "text": "TYPE 2 / CLASS C",
+          "distance": 10949.051
+        },
+        {
+          "id": "text:1142B20",
+          "text": "Up<=1.2KV, 20KA Max",
+          "distance": 12424.646
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142ADF",
+      "handle": "1142ADF",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 67331.29627243134,
+      "label_id": "text:1142ADC",
+      "label": "2x16",
+      "label_x": 1502930.279793889,
+      "label_y": 67362.73475898673,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142ADC",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142AF2",
+          "text": "2x16",
+          "distance": 2255.083
+        },
+        {
+          "id": "text:1142AED",
+          "text": "4x16 AMP",
+          "distance": 2286.744
+        },
+        {
+          "id": "text:1142ADD",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B0B",
+          "text": "2x16",
+          "distance": 2425.489
+        },
+        {
+          "id": "text:1142AF3",
+          "text": "(1P+N)",
+          "distance": 2801.26
+        },
+        {
+          "id": "text:1142B0C",
+          "text": "(1P+N)",
+          "distance": 2940.179
+        },
+        {
+          "id": "text:1142AEE",
+          "text": "30mA",
+          "distance": 3070.054
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142AE0",
+      "handle": "1142AE0",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 66934.88858078455,
+      "label_id": "text:1142AED",
+      "label": "4x16 AMP",
+      "label_x": 1499851.734175759,
+      "label_y": 66871.66330875864,
+      "confidence": 0.700876,
+      "nearby_texts": [
+        {
+          "id": "text:1142AED",
+          "text": "4x16 AMP",
+          "distance": 1383.098
+        },
+        {
+          "id": "text:1142AF2",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142AEE",
+          "text": "30mA",
+          "distance": 1791.762
+        },
+        {
+          "id": "text:1142B35",
+          "text": "2x16",
+          "distance": 2255.083
+        },
+        {
+          "id": "text:1142AF3",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142AEF",
+          "text": "ISOL.S.+RCD",
+          "distance": 2423.954
+        },
+        {
+          "id": "text:1142ADC",
+          "text": "2x16",
+          "distance": 2425.489
+        },
+        {
+          "id": "text:1142B36",
+          "text": "(1P+N)",
+          "distance": 2801.26
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B0D",
+      "handle": "1142B0D",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 67727.70396405885,
+      "label_id": "text:1142B0B",
+      "label": "2x16",
+      "label_x": 1502930.279793889,
+      "label_y": 67759.14245063355,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B0B",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142ADC",
+          "text": "2x16",
+          "distance": 2255.083
+        },
+        {
+          "id": "text:1142B0C",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B24",
+          "text": "2x16",
+          "distance": 2425.489
+        },
+        {
+          "id": "text:1142ADD",
+          "text": "(1P+N)",
+          "distance": 2801.26
+        },
+        {
+          "id": "text:1142B25",
+          "text": "(1P+N)",
+          "distance": 2940.179
+        },
+        {
+          "id": "text:1142AF2",
+          "text": "2x16",
+          "distance": 3497.038
+        },
+        {
+          "id": "text:1142AED",
+          "text": "4x16 AMP",
+          "distance": 3684.276
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B26",
+      "handle": "1142B26",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 68124.11165568636,
+      "label_id": "text:1142B24",
+      "label": "2x16",
+      "label_x": 1502930.279793889,
+      "label_y": 68155.55014226103,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B24",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B0B",
+          "text": "2x16",
+          "distance": 2255.083
+        },
+        {
+          "id": "text:1142B25",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B0C",
+          "text": "(1P+N)",
+          "distance": 2801.26
+        },
+        {
+          "id": "text:1142ADC",
+          "text": "2x16",
+          "distance": 3497.038
+        },
+        {
+          "id": "text:1142ADD",
+          "text": "(1P+N)",
+          "distance": 3871.813
+        },
+        {
+          "id": "text:1142AA5",
+          "text": "ISOL.S.+RCD",
+          "distance": 4214.296
+        },
+        {
+          "id": "text:1142AF2",
+          "text": "2x16",
+          "distance": 4939.797
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B34",
+      "handle": "1142B34",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 66538.48088913775,
+      "label_id": "text:1142AEF",
+      "label": "ISOL.S.+RCD",
+      "label_x": 1499863.167955978,
+      "label_y": 66431.30665296201,
+      "confidence": 0.694008,
+      "nearby_texts": [
+        {
+          "id": "text:1142AEF",
+          "text": "ISOL.S.+RCD",
+          "distance": 1414.856
+        },
+        {
+          "id": "text:1142AEE",
+          "text": "30mA",
+          "distance": 1422.689
+        },
+        {
+          "id": "text:1142B35",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142AED",
+          "text": "4x16 AMP",
+          "distance": 1903.988
+        },
+        {
+          "id": "text:1142B3A",
+          "text": "2x16",
+          "distance": 2254.432
+        },
+        {
+          "id": "text:1142B36",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142AF2",
+          "text": "2x16",
+          "distance": 2425.489
+        },
+        {
+          "id": "text:1142B3B",
+          "text": "(1P+N)",
+          "distance": 2800.531
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B39",
+      "handle": "1142B39",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.659693525,
+      "y": 66142.07319749096,
+      "label_id": "text:1142B3A",
+      "label": "2x16",
+      "label_x": 1502929.425787535,
+      "label_y": 66173.51168406563,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B3A",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142AEF",
+          "text": "ISOL.S.+RCD",
+          "distance": 1776.015
+        },
+        {
+          "id": "text:1142B3D",
+          "text": "2x16",
+          "distance": 2255.733
+        },
+        {
+          "id": "text:1142B3B",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142AEE",
+          "text": "30mA",
+          "distance": 2421.529
+        },
+        {
+          "id": "text:1142B35",
+          "text": "2x16",
+          "distance": 2426.094
+        },
+        {
+          "id": "text:1142B3E",
+          "text": "(1P+N)",
+          "distance": 2801.989
+        },
+        {
+          "id": "text:1142B36",
+          "text": "(1P+N)",
+          "distance": 2940.874
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B3C",
+      "handle": "1142B3C",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 65745.66550584415,
+      "label_id": "text:1142B3D",
+      "label": "2x16",
+      "label_x": 1502930.279793889,
+      "label_y": 65777.10399241884,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B3D",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B40",
+          "text": "2x16",
+          "distance": 2255.083
+        },
+        {
+          "id": "text:1142B3E",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B3A",
+          "text": "2x16",
+          "distance": 2424.883
+        },
+        {
+          "id": "text:1142B41",
+          "text": "(1P+N)",
+          "distance": 2801.26
+        },
+        {
+          "id": "text:1142B3B",
+          "text": "(1P+N)",
+          "distance": 2939.485
+        },
+        {
+          "id": "text:1142AEF",
+          "text": "ISOL.S.+RCD",
+          "distance": 3056.092
+        },
+        {
+          "id": "text:1142B43",
+          "text": "2x16",
+          "distance": 3496.554
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B3F",
+      "handle": "1142B3F",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 65349.25781419736,
+      "label_id": "text:1142B40",
+      "label": "2x16",
+      "label_x": 1502930.279793889,
+      "label_y": 65380.69630077204,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B40",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B43",
+          "text": "2x16",
+          "distance": 2254.333
+        },
+        {
+          "id": "text:1142B41",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B3D",
+          "text": "2x16",
+          "distance": 2425.489
+        },
+        {
+          "id": "text:1142B44",
+          "text": "(1P+N)",
+          "distance": 2800.42
+        },
+        {
+          "id": "text:1142B3E",
+          "text": "(1P+N)",
+          "distance": 2940.179
+        },
+        {
+          "id": "text:1142B3A",
+          "text": "2x16",
+          "distance": 3717.732
+        },
+        {
+          "id": "text:1142B3B",
+          "text": "(1P+N)",
+          "distance": 4072.106
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B42",
+      "handle": "1142B42",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.529524717,
+      "y": 64952.85012255055,
+      "label_id": "text:1142B43",
+      "label": "2x16",
+      "label_x": 1502929.295618728,
+      "label_y": 64984.28860912525,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B43",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B44",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B40",
+          "text": "2x16",
+          "distance": 2426.186
+        },
+        {
+          "id": "text:1142B41",
+          "text": "(1P+N)",
+          "distance": 2940.98
+        },
+        {
+          "id": "text:1142B3D",
+          "text": "2x16",
+          "distance": 3718.582
+        },
+        {
+          "id": "text:1142B3E",
+          "text": "(1P+N)",
+          "distance": 4073.185
+        },
+        {
+          "id": "text:1142B7C",
+          "text": "2x16",
+          "distance": 4511.14
+        },
+        {
+          "id": "text:1142B7D",
+          "text": "(1P+N)",
+          "distance": 4807.477
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B5B",
+      "handle": "1142B5B",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.487938111,
+      "y": 69245.23233488445,
+      "label_id": "text:1142AA4",
+      "label": "300mA",
+      "label_x": 1499851.308157054,
+      "label_y": 69334.11382291597,
+      "confidence": 0.696159,
+      "nearby_texts": [
+        {
+          "id": "text:1142AA4",
+          "text": "300mA",
+          "distance": 1404.909
+        },
+        {
+          "id": "text:1142AA5",
+          "text": "ISOL.S.+RCD",
+          "distance": 1434.799
+        },
+        {
+          "id": "text:1142B59",
+          "text": "2x10",
+          "distance": 1725.793
+        },
+        {
+          "id": "text:1142AA3",
+          "text": "4x10AMP",
+          "distance": 1859.941
+        },
+        {
+          "id": "text:1142B5A",
+          "text": "(1P+N)",
+          "distance": 2395.834
+        },
+        {
+          "id": "text:1142AA8",
+          "text": "2x10",
+          "distance": 2446.625
+        },
+        {
+          "id": "text:1142AA9",
+          "text": "(1P+N)",
+          "distance": 2957.64
+        },
+        {
+          "id": "text:1142A91",
+          "text": "2x10",
+          "distance": 3744.601
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B68",
+      "handle": "1142B68",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501211.513699879,
+      "y": 63498.650435133,
+      "label_id": "text:1142B94",
+      "label": "4x16 AMP",
+      "label_x": 1499851.734175759,
+      "label_y": 63256.04723738069,
+      "confidence": 0.638711,
+      "nearby_texts": [
+        {
+          "id": "text:1142B94",
+          "text": "4x16 AMP",
+          "distance": 1670.539
+        },
+        {
+          "id": "text:1142B69",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B6C",
+          "text": "2x16",
+          "distance": 2254.333
+        },
+        {
+          "id": "text:1142B95",
+          "text": "30mA",
+          "distance": 2323.744
+        },
+        {
+          "id": "text:1142B7C",
+          "text": "2x16",
+          "distance": 2378.877
+        },
+        {
+          "id": "text:1142B6A",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B6D",
+          "text": "(1P+N)",
+          "distance": 2800.42
+        },
+        {
+          "id": "text:1142B7D",
+          "text": "(1P+N)",
+          "distance": 2901.582
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B6B",
+      "handle": "1142B6B",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.529524717,
+      "y": 63102.24274348621,
+      "label_id": "text:1142B95",
+      "label": "30mA",
+      "label_x": 1499851.837288798,
+      "label_y": 63027.54369799601,
+      "confidence": 0.699133,
+      "nearby_texts": [
+        {
+          "id": "text:1142B95",
+          "text": "30mA",
+          "distance": 1391.159
+        },
+        {
+          "id": "text:1142B94",
+          "text": "4x16 AMP",
+          "distance": 1491.582
+        },
+        {
+          "id": "text:1142B6C",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B96",
+          "text": "ISOL.S.+RCD",
+          "distance": 1768.948
+        },
+        {
+          "id": "text:1142BC6",
+          "text": "2x16",
+          "distance": 2254.333
+        },
+        {
+          "id": "text:1142B6D",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B69",
+          "text": "2x16",
+          "distance": 2426.186
+        },
+        {
+          "id": "text:1142BC7",
+          "text": "(1P+N)",
+          "distance": 2800.42
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142B7B",
+      "handle": "1142B7B",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501210.36855915,
+      "y": 63878.67533890435,
+      "label_id": "text:1142B7C",
+      "label": "2x16",
+      "label_x": 1502929.13465316,
+      "label_y": 63910.11382547903,
+      "confidence": 0.627287,
+      "nearby_texts": [
+        {
+          "id": "text:1142B7C",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B69",
+          "text": "2x16",
+          "distance": 2214.113
+        },
+        {
+          "id": "text:1142B7D",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B6A",
+          "text": "(1P+N)",
+          "distance": 2768.663
+        },
+        {
+          "id": "text:1142B94",
+          "text": "4x16 AMP",
+          "distance": 2836.995
+        },
+        {
+          "id": "text:1142B6C",
+          "text": "2x16",
+          "distance": 3440.199
+        },
+        {
+          "id": "text:1142B95",
+          "text": "30mA",
+          "distance": 3665.571
+        },
+        {
+          "id": "text:1142B6D",
+          "text": "(1P+N)",
+          "distance": 3820.582
+        }
+      ]
+    },
+    {
+      "block_id": "block:1142BC5",
+      "handle": "1142BC5",
+      "block_name": "CB1",
+      "layer": "E_PanelBoard",
+      "x": 1501209.545349556,
+      "y": 62705.83505183941,
+      "label_id": "text:1142B96",
+      "label": "ISOL.S.+RCD",
+      "label_x": 1499863.167955978,
+      "label_y": 62815.69058158405,
+      "confidence": 0.693702,
+      "nearby_texts": [
+        {
+          "id": "text:1142B96",
+          "text": "ISOL.S.+RCD",
+          "distance": 1416.271
+        },
+        {
+          "id": "text:1142BC6",
+          "text": "2x16",
+          "distance": 1723.36
+        },
+        {
+          "id": "text:1142B95",
+          "text": "30mA",
+          "distance": 1870.645
+        },
+        {
+          "id": "text:1142BC7",
+          "text": "(1P+N)",
+          "distance": 2394.083
+        },
+        {
+          "id": "text:1142B6C",
+          "text": "2x16",
+          "distance": 2426.186
+        },
+        {
+          "id": "text:1142B94",
+          "text": "4x16 AMP",
+          "distance": 2585.998
+        },
+        {
+          "id": "text:1142B6D",
+          "text": "(1P+N)",
+          "distance": 2940.98
+        },
+        {
+          "id": "text:1142B69",
+          "text": "2x16",
+          "distance": 3719.037
+        }
+      ]
+    }
+  ],
+  "associated_label_counts": {
+    "2x10": 2,
+    "2x16": 8,
+    "300mA": 1,
+    "30mA": 1,
+    "4x10AMP": 1,
+    "4x16 AMP": 2,
+    "4x25 Amp": 1,
+    "ISOL.S.+RCD": 2
+  },
+  "unassociated_blocks": [],
+  "layout_block_groups": [
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "2X16",
+      "count": 13,
+      "block_ids": [
+        "block:1142CAF",
+        "block:1142CB0",
+        "block:1142CCE",
+        "block:1142CCF",
+        "block:1142CD0",
+        "block:1142CD1",
+        "block:1142CE1",
+        "block:1142CE3",
+        "block:1142CE4",
+        "block:1142D32",
+        "block:1142D37",
+        "block:1142D38",
+        "block:1142D3C"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "2x10",
+      "count": 4,
+      "block_ids": [
+        "block:1142CAB",
+        "block:1142CAC",
+        "block:1142CCD",
+        "block:1142D30"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "4X10 300mA",
+      "count": 1,
+      "block_ids": [
+        "block:1142CAA"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "4X16",
+      "count": 2,
+      "block_ids": [
+        "block:1142CA6",
+        "block:1142CD3"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "4X25",
+      "count": 1,
+      "block_ids": [
+        "block:1142CA2"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "FUSE 3X32",
+      "count": 1,
+      "block_ids": [
+        "block:1142CC4"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "POWER METER",
+      "count": 1,
+      "block_ids": [
+        "block:1142CC3"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "indicator lamp blue",
+      "count": 1,
+      "block_ids": [
+        "block:1142CA9"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "indicator lamp green",
+      "count": 1,
+      "block_ids": [
+        "block:1142CA8"
+      ]
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "indicator lamp red",
+      "count": 1,
+      "block_ids": [
+        "block:1142CA7"
+      ]
+    }
+  ],
+  "layout_device_groups": [
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "FUSE 3X32",
+      "block_names": [
+        "FUSE 3X32"
+      ],
+      "category": "FUSE_HOLDER",
+      "poles": "-",
+      "amps": "-",
+      "sensitivity": "-",
+      "quantity_multiplier": 3,
+      "block_ids": [
+        "block:1142CC4"
+      ],
+      "block_count": 1,
+      "commercial_quantity": 3
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "2x10",
+      "block_names": [
+        "2x10"
+      ],
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "10A",
+      "sensitivity": "-",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CAB",
+        "block:1142CAC",
+        "block:1142CCD",
+        "block:1142D30"
+      ],
+      "block_count": 4,
+      "commercial_quantity": 4
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "4X16",
+      "block_names": [
+        "4X16"
+      ],
+      "category": "MCB",
+      "poles": "4P",
+      "amps": "16A",
+      "sensitivity": "-",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CA6",
+        "block:1142CD3"
+      ],
+      "block_count": 2,
+      "commercial_quantity": 2
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "2X16",
+      "block_names": [
+        "2X16"
+      ],
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "16A",
+      "sensitivity": "-",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CAF",
+        "block:1142CB0",
+        "block:1142CCE",
+        "block:1142CCF",
+        "block:1142CD0",
+        "block:1142CD1",
+        "block:1142CE1",
+        "block:1142CE3",
+        "block:1142CE4",
+        "block:1142D32",
+        "block:1142D37",
+        "block:1142D38",
+        "block:1142D3C"
+      ],
+      "block_count": 13,
+      "commercial_quantity": 13
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "4X25",
+      "block_names": [
+        "4X25"
+      ],
+      "category": "MCB",
+      "poles": "4P",
+      "amps": "25A",
+      "sensitivity": "-",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CA2"
+      ],
+      "block_count": 1,
+      "commercial_quantity": 1
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "POWER METER",
+      "block_names": [
+        "POWER METER"
+      ],
+      "category": "METER",
+      "poles": "-",
+      "amps": "-",
+      "sensitivity": "-",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CC3"
+      ],
+      "block_count": 1,
+      "commercial_quantity": 1
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "indicator lamp red",
+      "block_names": [
+        "indicator lamp red",
+        "indicator lamp green",
+        "indicator lamp blue"
+      ],
+      "category": "PILOT_LAMP",
+      "poles": "-",
+      "amps": "-",
+      "sensitivity": "-",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CA7",
+        "block:1142CA8",
+        "block:1142CA9"
+      ],
+      "block_count": 3,
+      "commercial_quantity": 3
+    },
+    {
+      "layer": "E0 - G - Panel",
+      "block_name": "4X10 300mA",
+      "block_names": [
+        "4X10 300mA"
+      ],
+      "category": "RCCB",
+      "poles": "4P",
+      "amps": "10A",
+      "sensitivity": "300mA",
+      "quantity_multiplier": 1,
+      "block_ids": [
+        "block:1142CAA"
+      ],
+      "block_count": 1,
+      "commercial_quantity": 1
+    }
+  ],
+  "text_cluster_radius": 80.0,
+  "text_clusters": [
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507415.201,
+      "cy": 70256.088,
+      "text_ids": [
+        "text:1142A8C"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509929.082,
+      "cy": 70256.088,
+      "text_ids": [
+        "text:1142A8D"
+      ],
+      "texts": [
+        "UL1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507415.201,
+      "cy": 69867.136,
+      "text_ids": [
+        "text:1142A8E"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.254,
+      "cy": 70076.943,
+      "text_ids": [
+        "text:1142A91"
+      ],
+      "texts": [
+        "2x10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.265,
+      "cy": 70076.943,
+      "text_ids": [
+        "text:1142A92"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.254,
+      "cy": 70494.422,
+      "text_ids": [
+        "text:1142A93"
+      ],
+      "texts": [
+        "2x10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.266,
+      "cy": 70512.017,
+      "text_ids": [
+        "text:1142A94"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509929.082,
+      "cy": 69867.136,
+      "text_ids": [
+        "text:1142A95"
+      ],
+      "texts": [
+        "UL2"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509054.932,
+      "cy": 70256.088,
+      "text_ids": [
+        "text:1142A96"
+      ],
+      "texts": [
+        "1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509054.922,
+      "cy": 69867.136,
+      "text_ids": [
+        "text:1142A97"
+      ],
+      "texts": [
+        "2"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499851.205,
+      "cy": 69562.617,
+      "text_ids": [
+        "text:1142AA3"
+      ],
+      "texts": [
+        "4x10AMP"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499851.308,
+      "cy": 69334.114,
+      "text_ids": [
+        "text:1142AA4"
+      ],
+      "texts": [
+        "300mA"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499862.639,
+      "cy": 69122.261,
+      "text_ids": [
+        "text:1142AA5"
+      ],
+      "texts": [
+        "ISOL.S.+RCD"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.254,
+      "cy": 69680.535,
+      "text_ids": [
+        "text:1142AA8"
+      ],
+      "texts": [
+        "2x10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.265,
+      "cy": 69680.535,
+      "text_ids": [
+        "text:1142AA9"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509054.922,
+      "cy": 69470.729,
+      "text_ids": [
+        "text:1142AAC"
+      ],
+      "texts": [
+        "3"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1488569.877,
+      "cy": 66223.647,
+      "text_ids": [
+        "text:1142AAF"
+      ],
+      "texts": [
+        "4x25 Amp"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1488569.877,
+      "cy": 65588.491,
+      "text_ids": [
+        "text:1142AB0"
+      ],
+      "texts": [
+        "ISOL.S."
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1491157.837,
+      "cy": 71129.741,
+      "text_ids": [
+        "text:1142AB5"
+      ],
+      "texts": [
+        "DIGITAL POWER"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1491775.406,
+      "cy": 70667.065,
+      "text_ids": [
+        "text:1142AB6"
+      ],
+      "texts": [
+        "METER"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1479380.08,
+      "cy": 67664.39,
+      "text_ids": [
+        "text:1142AB8"
+      ],
+      "texts": [
+        "TO UMDB-B1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1479380.08,
+      "cy": 67132.12,
+      "text_ids": [
+        "text:1142AB9"
+      ],
+      "texts": [
+        "4Cx6mm²+1Cx6mm²"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1498297.002,
+      "cy": 73218.754,
+      "text_ids": [
+        "text:1142ABB"
+      ],
+      "texts": [
+        "MCB"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1498291.365,
+      "cy": 72670.362,
+      "text_ids": [
+        "text:1142ABC"
+      ],
+      "texts": [
+        "B.C.: 6KA/400V"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1498291.365,
+      "cy": 72083.924,
+      "text_ids": [
+        "text:1142ABD"
+      ],
+      "texts": [
+        "IEC/EN 60898"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512385.153,
+      "cy": 73433.949,
+      "text_ids": [
+        "text:1142ABE"
+      ],
+      "texts": [
+        "Y"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511391.916,
+      "cy": 73433.949,
+      "text_ids": [
+        "text:1142ABF"
+      ],
+      "texts": [
+        "R"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1510119.321,
+      "cy": 73693.602,
+      "text_ids": [
+        "text:1142AC0"
+      ],
+      "texts": [
+        "Ref."
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509172.164,
+      "cy": 73693.602,
+      "text_ids": [
+        "text:1142AC1"
+      ],
+      "texts": [
+        "Numb."
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507739.552,
+      "cy": 75122.003,
+      "text_ids": [
+        "text:1142AC2"
+      ],
+      "texts": [
+        "size mm²"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512245.008,
+      "cy": 75413.329,
+      "text_ids": [
+        "text:1142AC3"
+      ],
+      "texts": [
+        "EFFECTIVE"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511894.299,
+      "cy": 75186.681,
+      "text_ids": [
+        "text:1142AC4"
+      ],
+      "texts": [
+        "LOAD"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509529.384,
+      "cy": 75399.593,
+      "text_ids": [
+        "text:1142AC5"
+      ],
+      "texts": [
+        "CIRCUIT"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511543.589,
+      "cy": 75044.402,
+      "text_ids": [
+        "text:1142AC6"
+      ],
+      "texts": [
+        "W"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507822.134,
+      "cy": 75346.742,
+      "text_ids": [
+        "text:1142AC7"
+      ],
+      "texts": [
+        "CONDUCTOR"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513376.095,
+      "cy": 73433.949,
+      "text_ids": [
+        "text:1142AC8"
+      ],
+      "texts": [
+        "B"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.655,
+      "cy": 67980.106,
+      "text_ids": [
+        "text:1142AD9"
+      ],
+      "texts": [
+        "R1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 67362.735,
+      "text_ids": [
+        "text:1142ADC"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 67362.735,
+      "text_ids": [
+        "text:1142ADD"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.655,
+      "cy": 67591.155,
+      "text_ids": [
+        "text:1142ADE"
+      ],
+      "texts": [
+        "R2"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.226,
+      "cy": 67554.301,
+      "text_ids": [
+        "text:1142AE1"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.655,
+      "cy": 67194.747,
+      "text_ids": [
+        "text:1142AE3"
+      ],
+      "texts": [
+        "R3"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499851.734,
+      "cy": 66871.663,
+      "text_ids": [
+        "text:1142AED"
+      ],
+      "texts": [
+        "4x16 AMP"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499851.837,
+      "cy": 66643.16,
+      "text_ids": [
+        "text:1142AEE"
+      ],
+      "texts": [
+        "30mA"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499863.168,
+      "cy": 66431.307,
+      "text_ids": [
+        "text:1142AEF"
+      ],
+      "texts": [
+        "ISOL.S.+RCD"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 66966.327,
+      "text_ids": [
+        "text:1142AF2"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 66966.327,
+      "text_ids": [
+        "text:1142AF3"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507106.016,
+      "cy": 59335.171,
+      "text_ids": [
+        "text:1142AF8"
+      ],
+      "texts": [
+        "TOTAL CONNECTED LOAD"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507122.126,
+      "cy": 58841.205,
+      "text_ids": [
+        "text:1142B00"
+      ],
+      "texts": [
+        "TOTAL DEMAND LOAD 70%%%"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509047.284,
+      "cy": 66763.977,
+      "text_ids": [
+        "text:1142B02"
+      ],
+      "texts": [
+        "8"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509047.284,
+      "cy": 66380.357,
+      "text_ids": [
+        "text:1142B03"
+      ],
+      "texts": [
+        "9"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508982.004,
+      "cy": 65993.436,
+      "text_ids": [
+        "text:1142B04"
+      ],
+      "texts": [
+        "10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512193.929,
+      "cy": 67584.859,
+      "text_ids": [
+        "text:1142B05"
+      ],
+      "texts": [
+        "800"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513203.741,
+      "cy": 67188.451,
+      "text_ids": [
+        "text:1142B06"
+      ],
+      "texts": [
+        "1000"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.789,
+      "cy": 67603.913,
+      "text_ids": [
+        "text:1142B09"
+      ],
+      "texts": [
+        "Sockets - Gym"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509047.284,
+      "cy": 67160.385,
+      "text_ids": [
+        "text:1142B0A"
+      ],
+      "texts": [
+        "7"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 67759.142,
+      "text_ids": [
+        "text:1142B0B"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 67759.142,
+      "text_ids": [
+        "text:1142B0C"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.226,
+      "cy": 67950.708,
+      "text_ids": [
+        "text:1142B0E"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511049.431,
+      "cy": 67981.266,
+      "text_ids": [
+        "text:1142B0F"
+      ],
+      "texts": [
+        "800"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509047.284,
+      "cy": 67546.05,
+      "text_ids": [
+        "text:1142B10"
+      ],
+      "texts": [
+        "6"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1493103.338,
+      "cy": 65168.033,
+      "text_ids": [
+        "text:1142B18"
+      ],
+      "texts": [
+        "SPD"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1494153.746,
+      "cy": 65153.31,
+      "text_ids": [
+        "text:1142B1D"
+      ],
+      "texts": [
+        "TYPE 2 / CLASS C"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1493136.881,
+      "cy": 62958.491,
+      "text_ids": [
+        "text:1142B1E"
+      ],
+      "texts": [
+        "GND"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1494287.043,
+      "cy": 65992.336,
+      "text_ids": [
+        "text:1142B1F"
+      ],
+      "texts": [
+        "Fuse gG 3x32A"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1494153.746,
+      "cy": 64701.415,
+      "text_ids": [
+        "text:1142B20"
+      ],
+      "texts": [
+        "Up<=1.2KV, 20KA Max"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.792,
+      "cy": 67992.864,
+      "text_ids": [
+        "text:1142B22"
+      ],
+      "texts": [
+        "Sockets - Gym"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1487936.421,
+      "cy": 74503.084,
+      "text_ids": [
+        "text:1142B23"
+      ],
+      "texts": [
+        "UDB-B1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 68155.55,
+      "text_ids": [
+        "text:1142B24"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 68155.55,
+      "text_ids": [
+        "text:1142B25"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509912.675,
+      "cy": 69034.004,
+      "text_ids": [
+        "text:1142B27"
+      ],
+      "texts": [
+        "--"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511048.935,
+      "cy": 70264.705,
+      "text_ids": [
+        "text:1142B2A"
+      ],
+      "texts": [
+        "800"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512188.697,
+      "cy": 69875.754,
+      "text_ids": [
+        "text:1142B2B"
+      ],
+      "texts": [
+        "400"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.296,
+      "cy": 70276.303,
+      "text_ids": [
+        "text:1142B2C"
+      ],
+      "texts": [
+        "Lighting - Maids Rooms/Electrical Room/Parking"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.296,
+      "cy": 69887.351,
+      "text_ids": [
+        "text:1142B2D"
+      ],
+      "texts": [
+        "Lighting - Guest Living/Bedroom/Bathroom"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.63,
+      "cy": 69105.75,
+      "text_ids": [
+        "text:1142B2E"
+      ],
+      "texts": [
+        "St-By"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513330.616,
+      "cy": 69040.583,
+      "text_ids": [
+        "text:1142B2F"
+      ],
+      "texts": [
+        "--"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1510979.683,
+      "cy": 59301.339,
+      "text_ids": [
+        "text:1142B30"
+      ],
+      "texts": [
+        "9200W   ,  17 A/PH"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1510979.683,
+      "cy": 58808.305,
+      "text_ids": [
+        "text:1142B31"
+      ],
+      "texts": [
+        "6440W    ,  12 A/PH"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.294,
+      "cy": 69094.536,
+      "text_ids": [
+        "text:1142B32"
+      ],
+      "texts": [
+        "Spare"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.655,
+      "cy": 66798.339,
+      "text_ids": [
+        "text:1142B33"
+      ],
+      "texts": [
+        "R4"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 66569.919,
+      "text_ids": [
+        "text:1142B35"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 66569.919,
+      "text_ids": [
+        "text:1142B36"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.426,
+      "cy": 66173.512,
+      "text_ids": [
+        "text:1142B3A"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.437,
+      "cy": 66173.512,
+      "text_ids": [
+        "text:1142B3B"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 65777.104,
+      "text_ids": [
+        "text:1142B3D"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 65777.104,
+      "text_ids": [
+        "text:1142B3E"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 65380.696,
+      "text_ids": [
+        "text:1142B40"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 65380.696,
+      "text_ids": [
+        "text:1142B41"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.296,
+      "cy": 64984.289,
+      "text_ids": [
+        "text:1142B43"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.307,
+      "cy": 64984.289,
+      "text_ids": [
+        "text:1142B44"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507417.656,
+      "cy": 64828.747,
+      "text_ids": [
+        "text:1142B45"
+      ],
+      "texts": [
+        "St-By"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508982.004,
+      "cy": 65597.028,
+      "text_ids": [
+        "text:1142B46"
+      ],
+      "texts": [
+        "11"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508981.063,
+      "cy": 65200.621,
+      "text_ids": [
+        "text:1142B47"
+      ],
+      "texts": [
+        "12"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508981.02,
+      "cy": 64804.213,
+      "text_ids": [
+        "text:1142B48"
+      ],
+      "texts": [
+        "13"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.612,
+      "cy": 66401.932,
+      "text_ids": [
+        "text:1142B49"
+      ],
+      "texts": [
+        "R5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509989.466,
+      "cy": 66005.524,
+      "text_ids": [
+        "text:1142B4A"
+      ],
+      "texts": [
+        "R6"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.525,
+      "cy": 65609.116,
+      "text_ids": [
+        "text:1142B4B"
+      ],
+      "texts": [
+        "R7"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509989.466,
+      "cy": 65212.708,
+      "text_ids": [
+        "text:1142B4C"
+      ],
+      "texts": [
+        "R8"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515489.322,
+      "cy": 64790.596,
+      "text_ids": [
+        "text:1142B51"
+      ],
+      "texts": [
+        "Spare"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512101.43,
+      "cy": 66395.636,
+      "text_ids": [
+        "text:1142B52"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513203.741,
+      "cy": 65999.228,
+      "text_ids": [
+        "text:1142B53"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1510986.405,
+      "cy": 66792.043,
+      "text_ids": [
+        "text:1142B54"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512101.43,
+      "cy": 65184.043,
+      "text_ids": [
+        "text:1142B55"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513343.974,
+      "cy": 64787.635,
+      "text_ids": [
+        "text:1142B56"
+      ],
+      "texts": [
+        "--"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511049.431,
+      "cy": 65580.45,
+      "text_ids": [
+        "text:1142B57"
+      ],
+      "texts": [
+        "400"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509958.986,
+      "cy": 64787.635,
+      "text_ids": [
+        "text:1142B58"
+      ],
+      "texts": [
+        "--"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.254,
+      "cy": 69284.127,
+      "text_ids": [
+        "text:1142B59"
+      ],
+      "texts": [
+        "2x10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.265,
+      "cy": 69284.127,
+      "text_ids": [
+        "text:1142B5A"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507415.201,
+      "cy": 69470.729,
+      "text_ids": [
+        "text:1142B5D"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509054.922,
+      "cy": 69074.321,
+      "text_ids": [
+        "text:1142B5E"
+      ],
+      "texts": [
+        "4"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509929.082,
+      "cy": 69470.729,
+      "text_ids": [
+        "text:1142B5F"
+      ],
+      "texts": [
+        "UL3"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513317.837,
+      "cy": 69460.78,
+      "text_ids": [
+        "text:1142B60"
+      ],
+      "texts": [
+        "800"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.296,
+      "cy": 69490.944,
+      "text_ids": [
+        "text:1142B61"
+      ],
+      "texts": [
+        "Lighting - B2 "
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.789,
+      "cy": 66803.641,
+      "text_ids": [
+        "text:1142B63"
+      ],
+      "texts": [
+        "Sockets - Kids Playroom"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.791,
+      "cy": 65995.912,
+      "text_ids": [
+        "text:1142B64"
+      ],
+      "texts": [
+        "Sockets - Guests"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.791,
+      "cy": 65188.184,
+      "text_ids": [
+        "text:1142B65"
+      ],
+      "texts": [
+        "Sockets - Maids Room 1/2"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.791,
+      "cy": 62944.063,
+      "text_ids": [
+        "text:1142B66"
+      ],
+      "texts": [
+        "Sockets - Maids Laundry Room"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.791,
+      "cy": 62557.377,
+      "text_ids": [
+        "text:1142B67"
+      ],
+      "texts": [
+        "Sockets - Electrical Room"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502930.28,
+      "cy": 63530.089,
+      "text_ids": [
+        "text:1142B69"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503602.291,
+      "cy": 63530.089,
+      "text_ids": [
+        "text:1142B6A"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.296,
+      "cy": 63133.681,
+      "text_ids": [
+        "text:1142B6C"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.307,
+      "cy": 63133.681,
+      "text_ids": [
+        "text:1142B6D"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.239,
+      "cy": 63754.572,
+      "text_ids": [
+        "text:1142B6E"
+      ],
+      "texts": [
+        "St-By"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508981.02,
+      "cy": 62953.605,
+      "text_ids": [
+        "text:1142B6F"
+      ],
+      "texts": [
+        "16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508973.836,
+      "cy": 63730.038,
+      "text_ids": [
+        "text:1142B70"
+      ],
+      "texts": [
+        "14"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509989.466,
+      "cy": 63362.101,
+      "text_ids": [
+        "text:1142B71"
+      ],
+      "texts": [
+        "R9"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512192.722,
+      "cy": 63368.775,
+      "text_ids": [
+        "text:1142B74"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511164.798,
+      "cy": 63728.744,
+      "text_ids": [
+        "text:1142B75"
+      ],
+      "texts": [
+        "--"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509897.003,
+      "cy": 63713.46,
+      "text_ids": [
+        "text:1142B76"
+      ],
+      "texts": [
+        "--"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502929.135,
+      "cy": 63910.114,
+      "text_ids": [
+        "text:1142B7C"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503601.146,
+      "cy": 63910.114,
+      "text_ids": [
+        "text:1142B7D"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513206.417,
+      "cy": 62929.571,
+      "text_ids": [
+        "text:1142B80"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509989.466,
+      "cy": 62942.416,
+      "text_ids": [
+        "text:1142B81"
+      ],
+      "texts": [
+        "R10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.14,
+      "cy": 66761.485,
+      "text_ids": [
+        "text:1142B83"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.14,
+      "cy": 67157.893,
+      "text_ids": [
+        "text:1142B84"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.053,
+      "cy": 65968.67,
+      "text_ids": [
+        "text:1142B85"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.053,
+      "cy": 66365.078,
+      "text_ids": [
+        "text:1142B86"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.907,
+      "cy": 65175.855,
+      "text_ids": [
+        "text:1142B87"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.907,
+      "cy": 65572.262,
+      "text_ids": [
+        "text:1142B88"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509047.284,
+      "cy": 67942.458,
+      "text_ids": [
+        "text:1142B89"
+      ],
+      "texts": [
+        "5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508979.876,
+      "cy": 63350.013,
+      "text_ids": [
+        "text:1142B8A"
+      ],
+      "texts": [
+        "15"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.907,
+      "cy": 62981.27,
+      "text_ids": [
+        "text:1142B8B"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507416.907,
+      "cy": 63377.677,
+      "text_ids": [
+        "text:1142B8C"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499851.734,
+      "cy": 63256.047,
+      "text_ids": [
+        "text:1142B94"
+      ],
+      "texts": [
+        "4x16 AMP"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499851.837,
+      "cy": 63027.544,
+      "text_ids": [
+        "text:1142B95"
+      ],
+      "texts": [
+        "30mA"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1499863.168,
+      "cy": 62815.691,
+      "text_ids": [
+        "text:1142B96"
+      ],
+      "texts": [
+        "ISOL.S.+RCD"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511060.385,
+      "cy": 59821.917,
+      "text_ids": [
+        "text:1142BBC"
+      ],
+      "texts": [
+        "3200"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1512186.866,
+      "cy": 59821.917,
+      "text_ids": [
+        "text:1142BBD"
+      ],
+      "texts": [
+        "3000"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1513201.408,
+      "cy": 59821.917,
+      "text_ids": [
+        "text:1142BBE"
+      ],
+      "texts": [
+        "3000"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.789,
+      "cy": 67207.505,
+      "text_ids": [
+        "text:1142BC0"
+      ],
+      "texts": [
+        "Sockets - Gym"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.789,
+      "cy": 66399.777,
+      "text_ids": [
+        "text:1142BC2"
+      ],
+      "texts": [
+        "Sockets - Guests area"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.791,
+      "cy": 65592.048,
+      "text_ids": [
+        "text:1142BC3"
+      ],
+      "texts": [
+        "Sockets - Guests"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515488.791,
+      "cy": 63347.928,
+      "text_ids": [
+        "text:1142BC4"
+      ],
+      "texts": [
+        "Sockets - Maids "
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1502928.311,
+      "cy": 62737.274,
+      "text_ids": [
+        "text:1142BC6"
+      ],
+      "texts": [
+        "2x16"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1503600.323,
+      "cy": 62737.274,
+      "text_ids": [
+        "text:1142BC7"
+      ],
+      "texts": [
+        "(1P+N)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1508980.035,
+      "cy": 62557.198,
+      "text_ids": [
+        "text:1142BC8"
+      ],
+      "texts": [
+        "17"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1509988.482,
+      "cy": 62546.009,
+      "text_ids": [
+        "text:1142BC9"
+      ],
+      "texts": [
+        "R11"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1507415.923,
+      "cy": 62584.862,
+      "text_ids": [
+        "text:1142BCA"
+      ],
+      "texts": [
+        "3x2.5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1515473.525,
+      "cy": 63708.964,
+      "text_ids": [
+        "text:1142BD2"
+      ],
+      "texts": [
+        "Spare"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1511188.698,
+      "cy": 62562.892,
+      "text_ids": [
+        "text:1142BD3"
+      ],
+      "texts": [
+        "600"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1524885.95,
+      "cy": 81251.866,
+      "text_ids": [
+        "text:1142CA4"
+      ],
+      "texts": [
+        "MAIN BREAKER 4x25A"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1527877.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CAD"
+      ],
+      "texts": [
+        "UL2"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1534357.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CB1"
+      ],
+      "texts": [
+        "UR1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1536517.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CB3"
+      ],
+      "texts": [
+        "UR2"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1538677.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CB5"
+      ],
+      "texts": [
+        "UR3"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1540837.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CB7"
+      ],
+      "texts": [
+        "UR4"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1543177.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CB9"
+      ],
+      "texts": [
+        "UR5"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1522049.0,
+      "cy": 85362.49,
+      "text_ids": [
+        "text:1142CC5"
+      ],
+      "texts": [
+        "UDB-B1 "
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1522836.05,
+      "cy": 83244.1,
+      "text_ids": [
+        "text:1142CC7"
+      ],
+      "texts": [
+        "3x24 Modules ( LEGRAND 337203)"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1536541.54,
+      "cy": 65925.059,
+      "text_ids": [
+        "text:1142CDC"
+      ],
+      "texts": [
+        "UR9"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1538725.984,
+      "cy": 65925.059,
+      "text_ids": [
+        "text:1142CDE"
+      ],
+      "texts": [
+        "UR10"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1525717.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142CE5"
+      ],
+      "texts": [
+        "UL1"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1530037.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142D2D"
+      ],
+      "texts": [
+        "UL3"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1545337.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142D33"
+      ],
+      "texts": [
+        "UR6"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1547497.096,
+      "cy": 73363.395,
+      "text_ids": [
+        "text:1142D35"
+      ],
+      "texts": [
+        "UR7"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1525765.984,
+      "cy": 65925.059,
+      "text_ids": [
+        "text:1142D39"
+      ],
+      "texts": [
+        "UR8"
+      ]
+    },
+    {
+      "layer": "E_PanelBoard",
+      "cx": 1540910.428,
+      "cy": 65925.059,
+      "text_ids": [
+        "text:1142D3E"
+      ],
+      "texts": [
+        "UR11"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:1142A8C",
+      "layer": "E_PanelBoard",
+      "x": 1507415.200670841,
+      "y": 70256.08753606827,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142A8D",
+      "layer": "E_PanelBoard",
+      "x": 1509929.082470995,
+      "y": 70256.08753710135,
+      "height": 256.8794677145727,
+      "text": "UL1"
+    },
+    {
+      "id": "text:1142A8E",
+      "layer": "E_PanelBoard",
+      "x": 1507415.200670841,
+      "y": 69867.13646496664,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142A91",
+      "layer": "E_PanelBoard",
+      "x": 1502929.253676756,
+      "y": 70076.9428189371,
+      "height": 256.8794677145727,
+      "text": "2x10"
+    },
+    {
+      "id": "text:1142A92",
+      "layer": "E_PanelBoard",
+      "x": 1503601.265216167,
+      "y": 70076.9428189371,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142A93",
+      "layer": "E_PanelBoard",
+      "x": 1502929.254032121,
+      "y": 70494.42177803974,
+      "height": 256.8794677145727,
+      "text": "2x10"
+    },
+    {
+      "id": "text:1142A94",
+      "layer": "E_PanelBoard",
+      "x": 1503601.265571687,
+      "y": 70512.01716208314,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142A95",
+      "layer": "E_PanelBoard",
+      "x": 1509929.082470995,
+      "y": 69867.13646611552,
+      "height": 256.8794677145727,
+      "text": "UL2"
+    },
+    {
+      "id": "text:1142A96",
+      "layer": "E_PanelBoard",
+      "x": 1509054.932463927,
+      "y": 70256.08756128601,
+      "height": 256.8794677145727,
+      "text": "1"
+    },
+    {
+      "id": "text:1142A97",
+      "layer": "E_PanelBoard",
+      "x": 1509054.92236232,
+      "y": 69867.13648499017,
+      "height": 256.8794677145727,
+      "text": "2"
+    },
+    {
+      "id": "text:1142AA3",
+      "layer": "E_PanelBoard",
+      "x": 1499851.205044015,
+      "y": 69562.61736229103,
+      "height": 136.8243445835576,
+      "text": "4x10AMP"
+    },
+    {
+      "id": "text:1142AA4",
+      "layer": "E_PanelBoard",
+      "x": 1499851.308157054,
+      "y": 69334.11382291597,
+      "height": 136.8243445835576,
+      "text": "300mA"
+    },
+    {
+      "id": "text:1142AA5",
+      "layer": "E_PanelBoard",
+      "x": 1499862.638824233,
+      "y": 69122.26070649443,
+      "height": 136.8243445835576,
+      "text": "ISOL.S.+RCD"
+    },
+    {
+      "id": "text:1142AA8",
+      "layer": "E_PanelBoard",
+      "x": 1502929.253676756,
+      "y": 69680.53512729023,
+      "height": 256.8794677145727,
+      "text": "2x10"
+    },
+    {
+      "id": "text:1142AA9",
+      "layer": "E_PanelBoard",
+      "x": 1503601.265216167,
+      "y": 69680.53512729023,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142AAC",
+      "layer": "E_PanelBoard",
+      "x": 1509054.92236232,
+      "y": 69470.72879334337,
+      "height": 256.8794677145727,
+      "text": "3"
+    },
+    {
+      "id": "text:1142AAF",
+      "layer": "E_PanelBoard",
+      "x": 1488569.87746697,
+      "y": 66223.64704189518,
+      "height": 383.3684514410795,
+      "text": "4x25 Amp"
+    },
+    {
+      "id": "text:1142AB0",
+      "layer": "E_PanelBoard",
+      "x": 1488569.87746697,
+      "y": 65588.4908705957,
+      "height": 383.3684514410795,
+      "text": "ISOL.S."
+    },
+    {
+      "id": "text:1142AB5",
+      "layer": "E_PanelBoard",
+      "x": 1491157.83686501,
+      "y": 71129.7408605511,
+      "height": 295.0020233839113,
+      "text": "DIGITAL POWER"
+    },
+    {
+      "id": "text:1142AB6",
+      "layer": "E_PanelBoard",
+      "x": 1491775.406203195,
+      "y": 70667.06489145139,
+      "height": 295.0020233839113,
+      "text": "METER"
+    },
+    {
+      "id": "text:1142AB8",
+      "layer": "E_PanelBoard",
+      "x": 1479380.079753172,
+      "y": 67664.39026924972,
+      "height": 497.8610965316023,
+      "text": "TO UMDB-B1"
+    },
+    {
+      "id": "text:1142AB9",
+      "layer": "E_PanelBoard",
+      "x": 1479380.079753172,
+      "y": 67132.11953855336,
+      "height": 497.861096531602,
+      "text": "4Cx6mm²+1Cx6mm²"
+    },
+    {
+      "id": "text:1142ABB",
+      "layer": "E_PanelBoard",
+      "x": 1498297.0017857,
+      "y": 73218.75410181934,
+      "height": 435.054246278643,
+      "text": "MCB"
+    },
+    {
+      "id": "text:1142ABC",
+      "layer": "E_PanelBoard",
+      "x": 1498291.364946044,
+      "y": 72670.36225117971,
+      "height": 435.054246278643,
+      "text": "B.C.: 6KA/400V"
+    },
+    {
+      "id": "text:1142ABD",
+      "layer": "E_PanelBoard",
+      "x": 1498291.364946044,
+      "y": 72083.92406579046,
+      "height": 483.3936069762718,
+      "text": "IEC/EN 60898"
+    },
+    {
+      "id": "text:1142ABE",
+      "layer": "E_PanelBoard",
+      "x": 1512385.152631557,
+      "y": 73433.94855748172,
+      "height": 231.6228807187496,
+      "text": "Y"
+    },
+    {
+      "id": "text:1142ABF",
+      "layer": "E_PanelBoard",
+      "x": 1511391.916254575,
+      "y": 73433.94855748172,
+      "height": 231.6228807187496,
+      "text": "R"
+    },
+    {
+      "id": "text:1142AC0",
+      "layer": "E_PanelBoard",
+      "x": 1510119.3211433,
+      "y": 73693.60237762867,
+      "height": 231.6228807187496,
+      "text": "Ref."
+    },
+    {
+      "id": "text:1142AC1",
+      "layer": "E_PanelBoard",
+      "x": 1509172.164464449,
+      "y": 73693.60237762867,
+      "height": 231.6228807187496,
+      "text": "Numb."
+    },
+    {
+      "id": "text:1142AC2",
+      "layer": "E_PanelBoard",
+      "x": 1507739.552162729,
+      "y": 75122.00282276688,
+      "height": 186.2731128377815,
+      "text": "size mm²"
+    },
+    {
+      "id": "text:1142AC3",
+      "layer": "E_PanelBoard",
+      "x": 1512245.007669834,
+      "y": 75413.3291261132,
+      "height": 231.6228807187496,
+      "text": "EFFECTIVE"
+    },
+    {
+      "id": "text:1142AC4",
+      "layer": "E_PanelBoard",
+      "x": 1511894.298567424,
+      "y": 75186.68087257832,
+      "height": 231.6228807187496,
+      "text": "LOAD"
+    },
+    {
+      "id": "text:1142AC5",
+      "layer": "E_PanelBoard",
+      "x": 1509529.384382418,
+      "y": 75399.59292326585,
+      "height": 231.6228807187496,
+      "text": "CIRCUIT"
+    },
+    {
+      "id": "text:1142AC6",
+      "layer": "E_PanelBoard",
+      "x": 1511543.589465015,
+      "y": 75044.40164130788,
+      "height": 231.6228807187496,
+      "text": "W"
+    },
+    {
+      "id": "text:1142AC7",
+      "layer": "E_PanelBoard",
+      "x": 1507822.134171949,
+      "y": 75346.7421121203,
+      "height": 186.2731128377816,
+      "text": "CONDUCTOR"
+    },
+    {
+      "id": "text:1142AC8",
+      "layer": "E_PanelBoard",
+      "x": 1513376.094991925,
+      "y": 73433.94902418322,
+      "height": 231.6228807187496,
+      "text": "B"
+    },
+    {
+      "id": "text:1142AD9",
+      "layer": "E_PanelBoard",
+      "x": 1509988.655114424,
+      "y": 67980.1056631187,
+      "height": 256.8794677145727,
+      "text": "R1"
+    },
+    {
+      "id": "text:1142ADC",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 67362.73475898673,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142ADD",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 67362.73475898673,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142ADE",
+      "layer": "E_PanelBoard",
+      "x": 1509988.655114424,
+      "y": 67591.15459212323,
+      "height": 256.8794677145727,
+      "text": "R2"
+    },
+    {
+      "id": "text:1142AE1",
+      "layer": "E_PanelBoard",
+      "x": 1507416.226432609,
+      "y": 67554.30076009626,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142AE3",
+      "layer": "E_PanelBoard",
+      "x": 1509988.655114424,
+      "y": 67194.74690048608,
+      "height": 256.8794677145727,
+      "text": "R3"
+    },
+    {
+      "id": "text:1142AED",
+      "layer": "E_PanelBoard",
+      "x": 1499851.734175759,
+      "y": 66871.66330875864,
+      "height": 136.8243445835576,
+      "text": "4x16 AMP"
+    },
+    {
+      "id": "text:1142AEE",
+      "layer": "E_PanelBoard",
+      "x": 1499851.837288798,
+      "y": 66643.15976937397,
+      "height": 136.8243445835576,
+      "text": "30mA"
+    },
+    {
+      "id": "text:1142AEF",
+      "layer": "E_PanelBoard",
+      "x": 1499863.167955978,
+      "y": 66431.30665296201,
+      "height": 136.8243445835576,
+      "text": "ISOL.S.+RCD"
+    },
+    {
+      "id": "text:1142AF2",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 66966.32706735922,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142AF3",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 66966.32706735922,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142AF8",
+      "layer": "E_PanelBoard",
+      "x": 1507106.016266704,
+      "y": 59335.1713467899,
+      "height": 256.8794677145727,
+      "text": "TOTAL CONNECTED LOAD"
+    },
+    {
+      "id": "text:1142B00",
+      "layer": "E_PanelBoard",
+      "x": 1507122.126339453,
+      "y": 58841.20482143281,
+      "height": 256.8794677145727,
+      "text": "TOTAL DEMAND LOAD 70%%%"
+    },
+    {
+      "id": "text:1142B02",
+      "layer": "E_PanelBoard",
+      "x": 1509047.284039954,
+      "y": 66763.97735058652,
+      "height": 256.8794677145727,
+      "text": "8"
+    },
+    {
+      "id": "text:1142B03",
+      "layer": "E_PanelBoard",
+      "x": 1509047.284039954,
+      "y": 66380.35732822843,
+      "height": 256.8794677145727,
+      "text": "9"
+    },
+    {
+      "id": "text:1142B04",
+      "layer": "E_PanelBoard",
+      "x": 1508982.003801328,
+      "y": 65993.43593960552,
+      "height": 256.8794677145727,
+      "text": "10"
+    },
+    {
+      "id": "text:1142B05",
+      "layer": "E_PanelBoard",
+      "x": 1512193.92888562,
+      "y": 67584.85860100463,
+      "height": 256.8794677145727,
+      "text": "800"
+    },
+    {
+      "id": "text:1142B06",
+      "layer": "E_PanelBoard",
+      "x": 1513203.740913579,
+      "y": 67188.45090936747,
+      "height": 256.8794677145727,
+      "text": "1000"
+    },
+    {
+      "id": "text:1142B09",
+      "layer": "E_PanelBoard",
+      "x": 1515488.78884887,
+      "y": 67603.9129440511,
+      "height": 256.8794677145727,
+      "text": "Sockets - Gym"
+    },
+    {
+      "id": "text:1142B0A",
+      "layer": "E_PanelBoard",
+      "x": 1509047.284039954,
+      "y": 67160.3850422333,
+      "height": 256.8794677145727,
+      "text": "7"
+    },
+    {
+      "id": "text:1142B0B",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 67759.14245063355,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B0C",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 67759.14245063355,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B0E",
+      "layer": "E_PanelBoard",
+      "x": 1507416.226432609,
+      "y": 67950.70845173339,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B0F",
+      "layer": "E_PanelBoard",
+      "x": 1511049.431364695,
+      "y": 67981.26629263212,
+      "height": 256.8794677145727,
+      "text": "800"
+    },
+    {
+      "id": "text:1142B10",
+      "layer": "E_PanelBoard",
+      "x": 1509047.284039954,
+      "y": 67546.04998896127,
+      "height": 256.8794677145727,
+      "text": "6"
+    },
+    {
+      "id": "text:1142B18",
+      "layer": "E_PanelBoard",
+      "x": 1493103.338368939,
+      "y": 65168.03279159647,
+      "height": 264.9449522442525,
+      "text": "SPD"
+    },
+    {
+      "id": "text:1142B1D",
+      "layer": "E_PanelBoard",
+      "x": 1494153.745747043,
+      "y": 65153.30978092568,
+      "height": 227.0956733522164,
+      "text": "TYPE 2 / CLASS C"
+    },
+    {
+      "id": "text:1142B1E",
+      "layer": "E_PanelBoard",
+      "x": 1493136.880768801,
+      "y": 62958.49053120033,
+      "height": 227.0956733522164,
+      "text": "GND"
+    },
+    {
+      "id": "text:1142B1F",
+      "layer": "E_PanelBoard",
+      "x": 1494287.043413447,
+      "y": 65992.33598057824,
+      "height": 227.0956733522164,
+      "text": "Fuse gG 3x32A"
+    },
+    {
+      "id": "text:1142B20",
+      "layer": "E_PanelBoard",
+      "x": 1494153.745747043,
+      "y": 64701.41549586548,
+      "height": 227.0956733522164,
+      "text": "Up<=1.2KV, 20KA Max"
+    },
+    {
+      "id": "text:1142B22",
+      "layer": "E_PanelBoard",
+      "x": 1515488.792405765,
+      "y": 67992.86402144757,
+      "height": 256.8794677145727,
+      "text": "Sockets - Gym"
+    },
+    {
+      "id": "text:1142B23",
+      "layer": "E_PanelBoard",
+      "x": 1487936.420734989,
+      "y": 74503.08367103925,
+      "height": 435.054246278643,
+      "text": "UDB-B1"
+    },
+    {
+      "id": "text:1142B24",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 68155.55014226103,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B25",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 68155.55014226103,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B27",
+      "layer": "E_PanelBoard",
+      "x": 1509912.674851434,
+      "y": 69034.00424771084,
+      "height": 256.8794677145727,
+      "text": "--"
+    },
+    {
+      "id": "text:1142B2A",
+      "layer": "E_PanelBoard",
+      "x": 1511048.934734672,
+      "y": 70264.70478727574,
+      "height": 256.8794677145727,
+      "text": "800"
+    },
+    {
+      "id": "text:1142B2B",
+      "layer": "E_PanelBoard",
+      "x": 1512188.696869315,
+      "y": 69875.75370986963,
+      "height": 256.8794677145727,
+      "text": "400"
+    },
+    {
+      "id": "text:1142B2C",
+      "layer": "E_PanelBoard",
+      "x": 1515488.295775742,
+      "y": 70276.30251609118,
+      "height": 256.8794677145727,
+      "text": "Lighting - Maids Rooms/Electrical Room/Parking"
+    },
+    {
+      "id": "text:1142B2D",
+      "layer": "E_PanelBoard",
+      "x": 1515488.295775742,
+      "y": 69887.35143868509,
+      "height": 256.8794677145727,
+      "text": "Lighting - Guest Living/Bedroom/Bathroom"
+    },
+    {
+      "id": "text:1142B2E",
+      "layer": "E_PanelBoard",
+      "x": 1507416.630313293,
+      "y": 69105.74950721324,
+      "height": 256.8794677145727,
+      "text": "St-By"
+    },
+    {
+      "id": "text:1142B2F",
+      "layer": "E_PanelBoard",
+      "x": 1513330.616067231,
+      "y": 69040.5834946155,
+      "height": 256.8794677145727,
+      "text": "--"
+    },
+    {
+      "id": "text:1142B30",
+      "layer": "E_PanelBoard",
+      "x": 1510979.683486486,
+      "y": 59301.33863730873,
+      "height": 256.8794677145727,
+      "text": "9200W   ,  17 A/PH"
+    },
+    {
+      "id": "text:1142B31",
+      "layer": "E_PanelBoard",
+      "x": 1510979.683486486,
+      "y": 58808.30527498879,
+      "height": 256.8794677145727,
+      "text": "6440W    ,  12 A/PH"
+    },
+    {
+      "id": "text:1142B32",
+      "layer": "E_PanelBoard",
+      "x": 1515488.293997372,
+      "y": 69094.53605541083,
+      "height": 256.8794677145727,
+      "text": "Spare"
+    },
+    {
+      "id": "text:1142B33",
+      "layer": "E_PanelBoard",
+      "x": 1509988.655114424,
+      "y": 66798.33920884892,
+      "height": 256.8794677145727,
+      "text": "R4"
+    },
+    {
+      "id": "text:1142B35",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 66569.91937571243,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B36",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 66569.91937571243,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B3A",
+      "layer": "E_PanelBoard",
+      "x": 1502929.425787535,
+      "y": 66173.51168406563,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B3B",
+      "layer": "E_PanelBoard",
+      "x": 1503601.437327101,
+      "y": 66173.51168406563,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B3D",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 65777.10399241884,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B3E",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 65777.10399241884,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B40",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 65380.69630077204,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B41",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 65380.69630077204,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B43",
+      "layer": "E_PanelBoard",
+      "x": 1502929.295618728,
+      "y": 64984.28860912525,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B44",
+      "layer": "E_PanelBoard",
+      "x": 1503601.307158293,
+      "y": 64984.28860912525,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B45",
+      "layer": "E_PanelBoard",
+      "x": 1507417.65607506,
+      "y": 64828.74696944687,
+      "height": 256.8794677145727,
+      "text": "St-By"
+    },
+    {
+      "id": "text:1142B46",
+      "layer": "E_PanelBoard",
+      "x": 1508982.003801328,
+      "y": 65597.02824795064,
+      "height": 256.8794677145727,
+      "text": "11"
+    },
+    {
+      "id": "text:1142B47",
+      "layer": "E_PanelBoard",
+      "x": 1508981.06301577,
+      "y": 65200.62055630385,
+      "height": 256.8794677145727,
+      "text": "12"
+    },
+    {
+      "id": "text:1142B48",
+      "layer": "E_PanelBoard",
+      "x": 1508981.019626167,
+      "y": 64804.21286465706,
+      "height": 256.8794677145727,
+      "text": "13"
+    },
+    {
+      "id": "text:1142B49",
+      "layer": "E_PanelBoard",
+      "x": 1509988.611724822,
+      "y": 66401.93151720212,
+      "height": 256.8794677145727,
+      "text": "R5"
+    },
+    {
+      "id": "text:1142B4A",
+      "layer": "E_PanelBoard",
+      "x": 1509989.465731176,
+      "y": 66005.52382556342,
+      "height": 256.8794677145727,
+      "text": "R6"
+    },
+    {
+      "id": "text:1142B4B",
+      "layer": "E_PanelBoard",
+      "x": 1509988.524945617,
+      "y": 65609.11613390852,
+      "height": 256.8794677145727,
+      "text": "R7"
+    },
+    {
+      "id": "text:1142B4C",
+      "layer": "E_PanelBoard",
+      "x": 1509989.465731176,
+      "y": 65212.70844226174,
+      "height": 256.8794677145727,
+      "text": "R8"
+    },
+    {
+      "id": "text:1142B51",
+      "layer": "E_PanelBoard",
+      "x": 1515489.32153751,
+      "y": 64790.59558575064,
+      "height": 256.8794677145727,
+      "text": "Spare"
+    },
+    {
+      "id": "text:1142B52",
+      "layer": "E_PanelBoard",
+      "x": 1512101.430000239,
+      "y": 66395.63552609322,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142B53",
+      "layer": "E_PanelBoard",
+      "x": 1513203.740913579,
+      "y": 65999.22783445605,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142B54",
+      "layer": "E_PanelBoard",
+      "x": 1510986.404687583,
+      "y": 66792.0432177207,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142B55",
+      "layer": "E_PanelBoard",
+      "x": 1512101.430000239,
+      "y": 65184.04260848869,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142B56",
+      "layer": "E_PanelBoard",
+      "x": 1513343.97352116,
+      "y": 64787.63491685157,
+      "height": 256.8794677145727,
+      "text": "--"
+    },
+    {
+      "id": "text:1142B57",
+      "layer": "E_PanelBoard",
+      "x": 1511049.431364695,
+      "y": 65580.45030011621,
+      "height": 256.8794677145727,
+      "text": "400"
+    },
+    {
+      "id": "text:1142B58",
+      "layer": "E_PanelBoard",
+      "x": 1509958.986198631,
+      "y": 64787.63491685157,
+      "height": 256.8794677145727,
+      "text": "--"
+    },
+    {
+      "id": "text:1142B59",
+      "layer": "E_PanelBoard",
+      "x": 1502929.253676756,
+      "y": 69284.12743565154,
+      "height": 256.8794677145727,
+      "text": "2x10"
+    },
+    {
+      "id": "text:1142B5A",
+      "layer": "E_PanelBoard",
+      "x": 1503601.265216167,
+      "y": 69284.12743565154,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B5D",
+      "layer": "E_PanelBoard",
+      "x": 1507415.200670841,
+      "y": 69470.72877332792,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B5E",
+      "layer": "E_PanelBoard",
+      "x": 1509054.92236232,
+      "y": 69074.32110171589,
+      "height": 256.8794677145727,
+      "text": "4"
+    },
+    {
+      "id": "text:1142B5F",
+      "layer": "E_PanelBoard",
+      "x": 1509929.082470995,
+      "y": 69470.72877447681,
+      "height": 256.8794677145727,
+      "text": "UL3"
+    },
+    {
+      "id": "text:1142B60",
+      "layer": "E_PanelBoard",
+      "x": 1513317.837213448,
+      "y": 69460.77960245361,
+      "height": 256.8794677145727,
+      "text": "800"
+    },
+    {
+      "id": "text:1142B61",
+      "layer": "E_PanelBoard",
+      "x": 1515488.295775742,
+      "y": 69490.94374704796,
+      "height": 256.8794677145727,
+      "text": "Lighting - B2 "
+    },
+    {
+      "id": "text:1142B63",
+      "layer": "E_PanelBoard",
+      "x": 1515488.78884887,
+      "y": 66803.6409465458,
+      "height": 256.8794677145727,
+      "text": "Sockets - Kids Playroom"
+    },
+    {
+      "id": "text:1142B64",
+      "layer": "E_PanelBoard",
+      "x": 1515488.79062724,
+      "y": 65995.91233480949,
+      "height": 256.8794677145727,
+      "text": "Sockets - Guests"
+    },
+    {
+      "id": "text:1142B65",
+      "layer": "E_PanelBoard",
+      "x": 1515488.79062724,
+      "y": 65188.18372307311,
+      "height": 256.8794677145727,
+      "text": "Sockets - Maids Room 1/2"
+    },
+    {
+      "id": "text:1142B66",
+      "layer": "E_PanelBoard",
+      "x": 1515488.79062724,
+      "y": 62944.06341720495,
+      "height": 256.8794677145727,
+      "text": "Sockets - Maids Laundry Room"
+    },
+    {
+      "id": "text:1142B67",
+      "layer": "E_PanelBoard",
+      "x": 1515488.79062724,
+      "y": 62557.37671133677,
+      "height": 256.8794677145727,
+      "text": "Sockets - Electrical Room"
+    },
+    {
+      "id": "text:1142B69",
+      "layer": "E_PanelBoard",
+      "x": 1502930.279793889,
+      "y": 63530.08892170768,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B6A",
+      "layer": "E_PanelBoard",
+      "x": 1503602.291333455,
+      "y": 63530.08892170768,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B6C",
+      "layer": "E_PanelBoard",
+      "x": 1502929.295618728,
+      "y": 63133.68123006089,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B6D",
+      "layer": "E_PanelBoard",
+      "x": 1503601.307158293,
+      "y": 63133.68123006089,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B6E",
+      "layer": "E_PanelBoard",
+      "x": 1507416.239032801,
+      "y": 63754.57218579256,
+      "height": 256.8794677145727,
+      "text": "St-By"
+    },
+    {
+      "id": "text:1142B6F",
+      "layer": "E_PanelBoard",
+      "x": 1508981.019626167,
+      "y": 62953.6054855927,
+      "height": 256.8794677145727,
+      "text": "16"
+    },
+    {
+      "id": "text:1142B70",
+      "layer": "E_PanelBoard",
+      "x": 1508973.835876787,
+      "y": 63730.03808100275,
+      "height": 256.8794677145727,
+      "text": "14"
+    },
+    {
+      "id": "text:1142B71",
+      "layer": "E_PanelBoard",
+      "x": 1509989.465731176,
+      "y": 63362.10106319738,
+      "height": 256.8794677145727,
+      "text": "R9"
+    },
+    {
+      "id": "text:1142B74",
+      "layer": "E_PanelBoard",
+      "x": 1512192.721871227,
+      "y": 63368.77467777392,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142B75",
+      "layer": "E_PanelBoard",
+      "x": 1511164.798464289,
+      "y": 63728.74419386901,
+      "height": 256.8794677145727,
+      "text": "--"
+    },
+    {
+      "id": "text:1142B76",
+      "layer": "E_PanelBoard",
+      "x": 1509897.002619434,
+      "y": 63713.46013319726,
+      "height": 256.8794677145727,
+      "text": "--"
+    },
+    {
+      "id": "text:1142B7C",
+      "layer": "E_PanelBoard",
+      "x": 1502929.13465316,
+      "y": 63910.11382547903,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142B7D",
+      "layer": "E_PanelBoard",
+      "x": 1503601.146192726,
+      "y": 63910.11382547903,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142B80",
+      "layer": "E_PanelBoard",
+      "x": 1513206.417335919,
+      "y": 62929.57092355619,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142B81",
+      "layer": "E_PanelBoard",
+      "x": 1509989.465731176,
+      "y": 62942.41636824549,
+      "height": 256.8794677145727,
+      "text": "R10"
+    },
+    {
+      "id": "text:1142B83",
+      "layer": "E_PanelBoard",
+      "x": 1507416.139653404,
+      "y": 66761.48537684126,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B84",
+      "layer": "E_PanelBoard",
+      "x": 1507416.139653404,
+      "y": 67157.89306847837,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B85",
+      "layer": "E_PanelBoard",
+      "x": 1507416.052874199,
+      "y": 65968.66999354766,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B86",
+      "layer": "E_PanelBoard",
+      "x": 1507416.052874199,
+      "y": 66365.07768518478,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B87",
+      "layer": "E_PanelBoard",
+      "x": 1507416.906880553,
+      "y": 65175.85461025406,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B88",
+      "layer": "E_PanelBoard",
+      "x": 1507416.906880553,
+      "y": 65572.26230189118,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B89",
+      "layer": "E_PanelBoard",
+      "x": 1509047.284039954,
+      "y": 67942.45768058882,
+      "height": 256.8794677145727,
+      "text": "5"
+    },
+    {
+      "id": "text:1142B8A",
+      "layer": "E_PanelBoard",
+      "x": 1508979.87627865,
+      "y": 63350.01317723949,
+      "height": 256.8794677145727,
+      "text": "15"
+    },
+    {
+      "id": "text:1142B8B",
+      "layer": "E_PanelBoard",
+      "x": 1507416.906880553,
+      "y": 62981.26966743512,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B8C",
+      "layer": "E_PanelBoard",
+      "x": 1507416.906880553,
+      "y": 63377.67735907224,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142B94",
+      "layer": "E_PanelBoard",
+      "x": 1499851.734175759,
+      "y": 63256.04723738069,
+      "height": 136.8243445835576,
+      "text": "4x16 AMP"
+    },
+    {
+      "id": "text:1142B95",
+      "layer": "E_PanelBoard",
+      "x": 1499851.837288798,
+      "y": 63027.54369799601,
+      "height": 136.8243445835576,
+      "text": "30mA"
+    },
+    {
+      "id": "text:1142B96",
+      "layer": "E_PanelBoard",
+      "x": 1499863.167955978,
+      "y": 62815.69058158405,
+      "height": 136.8243445835576,
+      "text": "ISOL.S.+RCD"
+    },
+    {
+      "id": "text:1142BBC",
+      "layer": "E_PanelBoard",
+      "x": 1511060.38508668,
+      "y": 59821.91708278962,
+      "height": 256.8794677145727,
+      "text": "3200"
+    },
+    {
+      "id": "text:1142BBD",
+      "layer": "E_PanelBoard",
+      "x": 1512186.865809125,
+      "y": 59821.91708278962,
+      "height": 256.8794677145727,
+      "text": "3000"
+    },
+    {
+      "id": "text:1142BBE",
+      "layer": "E_PanelBoard",
+      "x": 1513201.40769951,
+      "y": 59821.9170827782,
+      "height": 256.8794677145727,
+      "text": "3000"
+    },
+    {
+      "id": "text:1142BC0",
+      "layer": "E_PanelBoard",
+      "x": 1515488.78884887,
+      "y": 67207.50525241395,
+      "height": 256.8794677145727,
+      "text": "Sockets - Gym"
+    },
+    {
+      "id": "text:1142BC2",
+      "layer": "E_PanelBoard",
+      "x": 1515488.78884887,
+      "y": 66399.77664067764,
+      "height": 256.8794677145727,
+      "text": "Sockets - Guests area"
+    },
+    {
+      "id": "text:1142BC3",
+      "layer": "E_PanelBoard",
+      "x": 1515488.79062724,
+      "y": 65592.04802894132,
+      "height": 256.8794677145727,
+      "text": "Sockets - Guests"
+    },
+    {
+      "id": "text:1142BC4",
+      "layer": "E_PanelBoard",
+      "x": 1515488.79062724,
+      "y": 63347.92772307312,
+      "height": 256.8794677145727,
+      "text": "Sockets - Maids "
+    },
+    {
+      "id": "text:1142BC6",
+      "layer": "E_PanelBoard",
+      "x": 1502928.311443566,
+      "y": 62737.27353841409,
+      "height": 256.8794677145727,
+      "text": "2x16"
+    },
+    {
+      "id": "text:1142BC7",
+      "layer": "E_PanelBoard",
+      "x": 1503600.322983132,
+      "y": 62737.27353841409,
+      "height": 222.3975273084204,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:1142BC8",
+      "layer": "E_PanelBoard",
+      "x": 1508980.035451006,
+      "y": 62557.1977939459,
+      "height": 256.8794677145727,
+      "text": "17"
+    },
+    {
+      "id": "text:1142BC9",
+      "layer": "E_PanelBoard",
+      "x": 1509988.481556014,
+      "y": 62546.0086765987,
+      "height": 256.8794677145727,
+      "text": "R11"
+    },
+    {
+      "id": "text:1142BCA",
+      "layer": "E_PanelBoard",
+      "x": 1507415.922705392,
+      "y": 62584.86197578832,
+      "height": 256.8794677145727,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:1142BD2",
+      "layer": "E_PanelBoard",
+      "x": 1515473.524837137,
+      "y": 63708.96418787498,
+      "height": 256.8794677145727,
+      "text": "Spare"
+    },
+    {
+      "id": "text:1142BD3",
+      "layer": "E_PanelBoard",
+      "x": 1511188.697813053,
+      "y": 62562.89200206426,
+      "height": 256.8794677145727,
+      "text": "600"
+    },
+    {
+      "id": "text:1142CA4",
+      "layer": "E_PanelBoard",
+      "x": 1524885.95,
+      "y": 81251.86604901479,
+      "height": 300.0,
+      "text": "MAIN BREAKER 4x25A"
+    },
+    {
+      "id": "text:1142CAD",
+      "layer": "E_PanelBoard",
+      "x": 1527877.095908904,
+      "y": 73363.394930255,
+      "height": 300.0,
+      "text": "UL2"
+    },
+    {
+      "id": "text:1142CB1",
+      "layer": "E_PanelBoard",
+      "x": 1534357.095908902,
+      "y": 73363.39493025083,
+      "height": 300.0,
+      "text": "UR1"
+    },
+    {
+      "id": "text:1142CB3",
+      "layer": "E_PanelBoard",
+      "x": 1536517.095908902,
+      "y": 73363.39493025084,
+      "height": 300.0,
+      "text": "UR2"
+    },
+    {
+      "id": "text:1142CB5",
+      "layer": "E_PanelBoard",
+      "x": 1538677.095908901,
+      "y": 73363.39493025083,
+      "height": 300.0,
+      "text": "UR3"
+    },
+    {
+      "id": "text:1142CB7",
+      "layer": "E_PanelBoard",
+      "x": 1540837.095908901,
+      "y": 73363.39493025084,
+      "height": 300.0,
+      "text": "UR4"
+    },
+    {
+      "id": "text:1142CB9",
+      "layer": "E_PanelBoard",
+      "x": 1543177.095908679,
+      "y": 73363.394930114,
+      "height": 300.0,
+      "text": "UR5"
+    },
+    {
+      "id": "text:1142CC5",
+      "layer": "E_PanelBoard",
+      "x": 1522049.0,
+      "y": 85362.48959790597,
+      "height": 1012.5,
+      "text": "UDB-B1 "
+    },
+    {
+      "id": "text:1142CC7",
+      "layer": "E_PanelBoard",
+      "x": 1522836.05,
+      "y": 83244.09957207897,
+      "height": 1012.5,
+      "text": "3x24 Modules ( LEGRAND 337203)"
+    },
+    {
+      "id": "text:1142CDC",
+      "layer": "E_PanelBoard",
+      "x": 1536541.539952289,
+      "y": 65925.05920302917,
+      "height": 300.0,
+      "text": "UR9"
+    },
+    {
+      "id": "text:1142CDE",
+      "layer": "E_PanelBoard",
+      "x": 1538725.983995672,
+      "y": 65925.05920302775,
+      "height": 300.0,
+      "text": "UR10"
+    },
+    {
+      "id": "text:1142CE5",
+      "layer": "E_PanelBoard",
+      "x": 1525717.095908904,
+      "y": 73363.39493025541,
+      "height": 300.0,
+      "text": "UL1"
+    },
+    {
+      "id": "text:1142D2D",
+      "layer": "E_PanelBoard",
+      "x": 1530037.095908903,
+      "y": 73363.394930255,
+      "height": 300.0,
+      "text": "UL3"
+    },
+    {
+      "id": "text:1142D33",
+      "layer": "E_PanelBoard",
+      "x": 1545337.0959089,
+      "y": 73363.394930114,
+      "height": 300.0,
+      "text": "UR6"
+    },
+    {
+      "id": "text:1142D35",
+      "layer": "E_PanelBoard",
+      "x": 1547497.0959089,
+      "y": 73363.39493025151,
+      "height": 300.0,
+      "text": "UR7"
+    },
+    {
+      "id": "text:1142D39",
+      "layer": "E_PanelBoard",
+      "x": 1525765.983995895,
+      "y": 65925.0592030282,
+      "height": 300.0,
+      "text": "UR8"
+    },
+    {
+      "id": "text:1142D3E",
+      "layer": "E_PanelBoard",
+      "x": 1540910.428039056,
+      "y": 65925.05920302779,
+      "height": 300.0,
+      "text": "UR11"
+    }
+  ]
+}

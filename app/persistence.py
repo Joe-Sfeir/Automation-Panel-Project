@@ -63,7 +63,7 @@ def _migrate_legacy_sld(data: dict[str, Any], source: Path) -> dict[str, Any]:
         normalized["quantity"] = int(normalized.pop("qty", normalized.get("quantity", 1)))
         normalized["origin"] = normalized.pop("data_source", "ai_extracted")
         normalized["notes"] = normalized.pop("ai_notes", "")
-        normalized["review_status"] = "needs_review"
+        normalized["review_status"] = "included"
         components.append(Component(**{
             key: value for key, value in normalized.items() if key in Component.__dataclass_fields__
         }))

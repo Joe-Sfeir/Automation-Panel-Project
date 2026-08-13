@@ -31,7 +31,7 @@ def main() -> int:
     dialog.resize(arguments.width, arguments.height)
     dialog.show()
     if arguments.focus:
-        dialog.approve_button.setFocus(Qt.TabFocusReason)
+        dialog.include_button.setFocus(Qt.TabFocusReason)
     app.processEvents()
     output = Path(arguments.out)
     output.parent.mkdir(parents=True, exist_ok=True)

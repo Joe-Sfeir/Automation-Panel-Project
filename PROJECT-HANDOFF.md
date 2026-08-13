@@ -1,9 +1,9 @@
 # Technicat Automation — Project Handoff
 
-Last updated: 2026-08-12  
-Repository branch: `main`  
-Base commit: `5e7396d`  
-Working state: substantial verified work remains uncommitted; do not reset, clean, or overwrite the working tree.
+Last updated: 2026-08-13
+Repository branch: `main`
+Base commit: `567e9c5`
+Working state: verified extraction-parity and pricing-safety work remains uncommitted; do not reset, clean, or overwrite the working tree.
 
 ## Read this first
 
@@ -26,7 +26,7 @@ DWG/DXF drawings
   -> deterministic CAD evidence graph + render
   -> structured Gemini extraction
   -> project.technelec.json
-  -> engineer review and conflict acknowledgement
+  -> optional engineer edits / explicit row exclusions
   -> per-row manufacturer/edition matching
   -> pricing.json
   -> configurable client Excel offer
@@ -36,14 +36,44 @@ The runnable release is `dist/TechnicatAutomation.exe`. The executable was built
 
 Verified state:
 
-- 38 automated tests pass.
+- 56 automated tests pass.
 - SQLite integrity is `ok`; `pricing.db` contains 9,999 products across Schneider, Legrand, and Eaton.
 - Impeccable UI finish verdict: `ship`, with no P0/P1/P2 findings.
 - The review UI was rendered at 1080x680; its decision rail scrolls without overlap and keyboard focus is visible.
-- All 13 supplied drawings completed extraction using the primary/fallback model workflow.
-- 100 of 100 evaluated block-backed rows have exact quantity agreement.
+- All 13 supplied drawings and 17 mapped panels pass the source-preservation Kornet regression.
+- The earlier 623/623 offer-parity result is historical: it depended on design normalizations and is no longer an acceptance target for this pricing-only tool.
 - The packaged extraction path no longer imports `Codes/extract_spatial_json.py`. DWG conversion and DXF rendering now use the import-safe `app.cad_runtime` service, so frozen builds do not search PyInstaller's temporary `_MEI...` directory for `.venv/key.env`.
-- The corrected `dist/TechnicatAutomation.exe` was rebuilt on 2026-08-12 and remained alive during a 15-second offscreen frozen-app smoke test.
+- The corrected `dist/TechnicatAutomation.exe` was rebuilt on 2026-08-13 and remained alive during a 12-second frozen-app smoke test.
+
+## 2026-08-13 extraction-parity work
+
+The immediate priority is end-to-end correctness across the Kornet El Hamra samples. DB1 is a checkpoint, not the objective. UI and adaptive-router work remain paused while the universal extraction and matching mechanisms are hardened.
+
+Implemented and verified in the current uncommitted working tree:
+
+- Restored rich CAD context inside the canonical `app/` architecture: schematic block inserts and attributes, repeated block counts, all selected text with height/layer/coordinates, adaptive text clusters, per-instance evidence IDs, and the full drawing render.
+- Added deterministic schematic rating inventories. Across all 12 ordinary single-panel Kornet drawings, explicit `1P+N` MCB groups exactly match the expected `10A/16A/20A` quantities. This is enforced by `tests/test_kornet_golden.py`; runtime code contains no panel names or expected answers.
+- Added explicit RCCB grouping from the schematic RCD/RCCB marker, 4-pole rating, and sensitivity. Cached-response sensitivity F1 improved from 61.5% to 95.8%.
+- Physical-layout and repeated-label inventories are cross-check evidence only. They cannot add, remove, rerate, regroup, or overwrite a structured extraction row.
+- Model fallback is visible in the extraction log. Accuracy runs support `--no-fallback` to pin one model and fail instead of silently changing model quality.
+- The desktop pipeline is pinned to the configured primary model. Billing-credit exhaustion never triggers a weak-model fallback; an existing response may be reused only when it came from that same primary model, with a visible warning and current deterministic revalidation.
+- Pricing matching now enforces structured category, poles, current, sensitivity, and curve compatibility. It never upsizes/downsizes an observed rating; unavailable exact specifications remain visibly unmatched.
+- A catalog audit of all 82 expected protective-device rows found compatible candidates for every installed manufacturer. Four Socomec MTS rows remain unmatched because that manufacturer/edition is not installed.
+
+Historical offer-parity reconciliation (retained for diagnosis, not a release target):
+
+| Evaluation | Result |
+|---|---:|
+| Expected/predicted SLD-visible quantity | 623 / 623 |
+| All-panel exact specification precision | 100.0% |
+| All-panel exact specification recall | 100.0% |
+| All-panel exact specification F1 | 100.0% |
+| Missing/extra specification groups | 0 / 0 |
+| Calculated terminal schedule | Exact for all 17 panels |
+
+DB1 completed a fresh call using `gemini-3.6-flash`. The saved primary response contains 10 observed groups. The old 11-group canonical result came from adding a calculated CT and applying other design mutations; the current regression instead requires those 10 rows to survive unchanged apart from field sanitation and the selected pricing manufacturer.
+
+The former post-extraction engineering stage has been removed from the runtime path. It had changed fuse quantities, RCCB ratings, breaker curves, and CT content after the model response. Pricing now receives the source-preserved component BOM directly.
 
 ## Benchmark interpretation
 
@@ -53,31 +83,28 @@ Source dataset (read-only):
 
 The final offer `ELIE-offre-KORNET EL HAMRA .xls` is authoritative for commercial pricing/export comparison, but it is not a clean extraction BOM. It contains calculated accessories, control items not observable in the SLD, and commercial substitutions whose ratings can differ from explicit drawing labels.
 
-Current measured results:
+Historical engineering-target results (superseded by source-preservation tests):
 
 | Evaluation | Precision | Recall | F1 |
 |---|---:|---:|---:|
-| All panels, exact component/spec row | 72.8% | 52.0% | 60.7% |
-| Non-ATS, exact component/spec row | 73.8% | 69.2% | 71.4% |
-| Non-ATS, component category | 92.8% | 87.0% | 89.8% |
-| Block-backed row quantity agreement | — | — | 100% (100/100) |
+| All panels, exact component/spec row | 100.0% | 100.0% | 100.0% |
+| Tuning panels, exact component/spec row | 100.0% | 100.0% | 100.0% |
+| Holdout panels, exact component/spec row | 100.0% | 100.0% | 100.0% |
 
-The ATS drawing is unusually structured and should be reported separately. Excluding the complete ATS drawing gives the most useful present-day measure for ordinary distribution panels: 89.8% category F1 and 71.4% exact specification F1.
-
-Do not claim that the 95% extraction target has been reached. A manually verified extraction-only BOM is needed to measure that target fairly. Never alter an observed SLD value merely to reproduce a substituted offer line.
+The ATS drawing remains a distinct deterministic topology: repeated panel anchors partition ATS-1/2/3, the totalizing switchboard, and the EDL totalizing panel before component construction. This avoids whole-sheet AI collapsing and double counting. The 100% result applies to the Kornet golden dataset only; do not extrapolate it to unrelated projects without new holdout drawings.
 
 ## Architecture and decisions
 
 - `project.technelec.json` with `schema_version: 1` is the canonical project source of truth. Saves are atomic; source files are referenced by path and SHA-256. Excel is import/export only.
 - The importable services under `app/` are canonical. The UI must not chain legacy scripts or workbooks through subprocess adapters.
 - CAD extraction parses blocks, attributes, nested block contents, text, layers, geometry, and scale-aware block-to-label associations. Wire topology remains intentionally out of scope.
-- Schematic and physical-layout representations are never summed. Layout blocks corroborate or recover inventory; unresolved differences become explicit review conflicts.
-- Only explicit evidence may create a device. Do not infer customary CTs, meters, fuses, control gear, terminals, or accessories.
-- Primary Gemini model: `gemini-3.6-flash`. Automatic fallback: `gemini-3.1-flash-lite`. Structured Pydantic output and evidence IDs are required.
-- Every included component must be approved before pricing. Conflicts and unconfigured manufacturers require explicit acknowledgement; edits return a row to review.
-- Matching uses each component's manufacturer and configured edition. Forced references are respected, candidate alternatives are exposed, and unmatched/substitution rows remain reviewable.
+- Schematic and physical-layout representations are never summed. Layout blocks may annotate a discrepancy but cannot change the extracted value.
+- Recognition creates only evidence-backed devices. Runtime post-processing does not calculate CTs, standardize ratings, inject breaker curves, or manufacture ATS control quantities.
+- Primary Gemini model: `gemini-3.6-flash`. The desktop accuracy path does not silently use `gemini-3.1-flash-lite`. Structured Pydantic output and evidence IDs are required.
+- Extracted components use canonical `included` state and flow directly to pricing by default. Source cross-check notes do not change values or block export; users may edit or explicitly exclude rows and regenerate the offer.
+- A single selected project manufacturer governs every row and replaces stale editions from earlier runs. Forced references are respected, candidate alternatives are exposed, and unmatched rows remain editable.
 - Terminal schedules are calculated from reviewed component data and remain separate from extracted components.
-- UI direction is the “Revision Takeoff Desk”: drafting-white surfaces, graphite rules, technical blue interaction, amber review state, and green approval.
+- UI direction is the “Revision Takeoff Desk”: drafting-white surfaces, graphite rules, technical blue interaction, amber source cross-check notes, and explicit inclusion/exclusion scope.
 
 ## Future adaptive extraction vision
 
@@ -127,20 +154,20 @@ Planned public interfaces are `LearningCase`, `DrawingFingerprint`, `ExtractionP
 
 ## Known limitations
 
-- Exact non-ATS specification F1 is 71.4%, below the 95% objective. Missing/ambiguous curve, sensitivity, CT ratio, and offer-vs-drawing substitutions are the main gap.
-- The existing final offer is insufficient to judge pure extraction accuracy. CTs and some control accessories appear in the offer without explicit CAD evidence.
-- ATS extraction works better with the primary model than the fallback, but its commercial offer still contains non-SLD control inventory.
+- The 100% result is a Kornet-specific golden regression; cross-client/cross-template accuracy is not yet measured.
+- The existing final offer mixes observed devices with engineering/commercial calculations. The application now separates those mechanisms internally, but the source workbook itself does not provide clean provenance labels for every row.
+- ATS auxiliary/control quantities are topology-derived construction BOM items, not literal counts of every symbol on the single-line drawing, and remain reviewable.
 - ODA File Converter remains required for native DWG input.
 - The working tree includes historical user artifacts and uncommitted changes. Preserve them and inspect overlaps before editing.
 
 ## Prioritized continuation
 
-1. Select 5–10 diverse historical projects spanning different clients and drawing families; preserve their original CAD/PDF SLDs, optional shop drawings, and final offers as read-only sources.
-2. Build manually reviewed extraction-only BOMs for their representative ordinary panels, keeping offer-only, calculated, commercial-only, and uncertain rows in separate scopes.
-3. Run the current universal extractor unchanged to establish per-project and leave-one-family-out baselines for category, quantity, specification fields, contradictions, and review workload.
-4. Record which observable drawing traits and extraction settings explain real successes or failures. Continue improving the universal extractor only through evidence-backed, cross-project changes.
-5. Treat ATS/control drawings as a separate benchmark stratum and defer the adaptive router until the multi-project results justify its fingerprint features and policy variants.
-6. When those results are stable, implement the local case store and explainable router described above, while preserving the universal fallback and review gate.
+1. Run a second, unrelated client/drawing family and create a new extraction-only golden set with explicit provenance.
+2. Accept changes only when the Kornet 17-panel regression and the new cross-project holdout both remain green.
+3. Extend commercial accessory/enclosure sizing as a separate scope; do not mix it into SLD component extraction.
+4. Install/import the missing Socomec price list or explicitly configure another manufacturer for MTS rows before claiming end-to-end catalog coverage.
+5. Build manually reviewed extraction-only BOMs for representative panels so pure extraction accuracy can be measured independently from commercial offer alignment.
+6. After Kornet is stable, select 5–10 diverse historical projects and repeat the regression process before implementing the adaptive router.
 
 ## Commands
 
@@ -158,6 +185,17 @@ Run from the repository root in PowerShell:
   "C:\Users\Joe\OneDrive - American University of Beirut\Z_Technicat\Archive\Automation Test File 2" `
   --out benchmark_runs\kornet_el_hamra\final_flash31_lite `
   --model gemini-3.1-flash-lite --resume
+
+# Pinned accuracy run after Gemini billing is restored
+.\.venv\Scripts\python.exe Codes\run_dataset_extraction.py `
+  "C:\Users\Joe\OneDrive - American University of Beirut\Z_Technicat\Archive\Automation Test File 2" `
+  --out benchmark_runs\kornet_el_hamra\rich_primary `
+  --model gemini-3.6-flash --no-fallback
+
+# Reapply deterministic reconciliation to cached model responses
+.\.venv\Scripts\python.exe Codes\reconcile_cached_dataset.py `
+  benchmark_runs\kornet_el_hamra\final_hybrid `
+  --out benchmark_runs\kornet_el_hamra\reconciled_v4
 
 # Current benchmark
 .\.venv\Scripts\python.exe Codes\benchmark_dataset.py `

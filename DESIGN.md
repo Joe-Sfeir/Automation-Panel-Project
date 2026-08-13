@@ -1,6 +1,6 @@
 ---
 name: "Technicat Automation"
-description: "An evidence-led revision takeoff desk for engineering review and pricing sign-off."
+description: "An evidence-led revision takeoff desk for optional estimator edits and direct pricing."
 colors:
   technical-blue: "#137EAE"
   technical-blue-hover: "#0F709C"
@@ -112,9 +112,9 @@ components:
 
 **Creative North Star: "The Revision Takeoff Desk"**
 
-Technicat Automation looks and behaves like an engineer's marked-up review surface: cool drafting-white workplanes, graphite rules, dense schedules, and compact controls. The visual hierarchy favors evidence, editable quantities, conflicts, and sign-off state over decoration. Technical blue identifies the current task and primary action; amber marks unresolved decisions; green appears only after explicit approval.
+Technicat Automation looks and behaves like an estimator's marked-up review surface: cool drafting-white workplanes, graphite rules, dense schedules, and compact controls. The visual hierarchy favors evidence, editable quantities, source cross-check notes, and pricing scope over decoration. Technical blue identifies the current task and primary action; amber marks source discrepancies; exclusion gray marks rows omitted from pricing.
 
-The interface is an Operate-mode Windows desktop tool. Familiar Qt navigation, persistent context rails, dense tables, and explicit pricing gates carry the experience. The system is planar and structural: depth comes from adjacent tones and one-pixel rules, not floating-card shadows. State changes are immediate, with no authored decorative animation.
+The interface is an Operate-mode Windows desktop tool. Familiar Qt navigation, persistent context rails, dense tables, and direct pricing actions carry the experience. The system is planar and structural: depth comes from adjacent tones and one-pixel rules, not floating-card shadows. State changes are immediate, with no authored decorative animation.
 
 **Key Characteristics:**
 
@@ -136,9 +136,9 @@ The palette is a cool drafting neutral system with one technical-blue interactio
 
 ### Secondary
 
-- **Approval Green:** Appears only for explicit approval, completed review, and ready-for-pricing states.
-- **Decision Amber:** Marks unresolved review work, conflicts, dirty save state, and a locked pricing gate.
-- **Exclusion Gray:** Separates intentionally excluded rows from both approved and unresolved rows.
+- **Ready Green:** Appears only for valid, ready-to-price state and completed export.
+- **Cross-check Amber:** Marks source discrepancies and dirty save state without implying a blocker or a changed value.
+- **Exclusion Gray:** Separates intentionally excluded rows from included rows.
 - **Danger Red:** Supports explicit exclusion or destructive intent; it is not a general accent.
 
 ### Neutral
@@ -154,7 +154,7 @@ The palette is a cool drafting neutral system with one technical-blue interactio
 
 **The One Technical Voice Rule.** Technical blue identifies interaction and current position; it is not decorative fill.
 
-**The Decision Color Rule.** Green means approved, amber means unresolved, gray means excluded, and every use is reinforced by text, a decision column, or a status label.
+**The Scope Color Rule.** Neutral means included, amber means a source cross-check note is present, and gray means excluded; every use is reinforced by text in the Pricing scope column or detail rail.
 
 ## Typography
 
@@ -205,7 +205,7 @@ The form language is square and technical. Major panels, inputs, buttons, progre
 - **Primary:** Technical-blue fill, white text, and a darker blue one-pixel border. Hover and pressed states darken; disabled state becomes neutral gray with muted graphite text.
 - **Secondary:** Work-surface fill, graphite text, and a cool-gray border. Hover increases tonal and border contrast.
 - **Ghost:** Transparent with technical-blue text; hover adds a pale blue field.
-- **Decision actions:** Approval uses green fill/border/text, needs-review uses amber, and exclusion uses pale red. Labels name the decision explicitly.
+- **Scope actions:** Include uses a neutral secondary action and exclusion uses pale red. Labels state the pricing effect explicitly.
 - **Focus:** Keyboard focus replaces the normal control edge with a clearly visible two-pixel technical-blue border.
 
 ### Status Chips
@@ -230,15 +230,15 @@ The form language is square and technical. Major panels, inputs, buttons, progre
 ### Tables
 
 - **Style:** Dense work-surface tables with 11px bold headers, compact 6-8px cell/header padding, cool-gray grid rules, interactive column widths, and visible row selection.
-- **Review states:** BOM rows use green, amber, stronger conflict amber, or exclusion gray. The Decision column, tooltips, and the decision rail provide non-color confirmation.
+- **Pricing scope:** BOM rows use neutral included, amber note, or exclusion gray. The Pricing scope column, tooltips, and detail rail provide non-color confirmation.
 - **Editing:** Review tables support row selection, multi-selection where actions apply in bulk, double-click/Edit-key editing, and read-only derived schedules.
 
 ### Navigation and Workflow
 
 - **Sidebar:** Fixed dark graphite rail; hovered items receive a darker surface and selected items receive a deep-blue field plus a two-pixel bright-blue left rule.
 - **Workflow strip:** Drawings → Extract → Review → Price → Export appears as a connected numbered sequence. Complete, active, and pending stages are labeled and color-coded.
-- **Decision rail:** Selecting a BOM row exposes its title, manufacturer, confidence, decision, evidence handles, render preview, conflicts, and approve/review/exclude actions in one scrollable place.
-- **Pricing gate:** The footer states either READY FOR PRICING or PRICING LOCKED with decision counts. The pricing action stays disabled until all required decisions are resolved.
+- **Detail rail:** Selecting a BOM row exposes its title, manufacturer, source confidence, pricing scope, evidence handles, render preview, source cross-check notes, and include/exclude actions in one scrollable place.
+- **Pricing readiness:** The footer states included, excluded, and cross-check-note counts. Pricing is immediately available whenever at least one valid row is included.
 
 ### Accessibility and Motion
 
@@ -250,12 +250,12 @@ The form language is square and technical. Major panels, inputs, buttons, progre
 
 ### Do:
 
-- **Do** keep evidence, conflicts, confidence, manufacturer, and the explicit decision adjacent in review flows.
+- **Do** keep evidence, source cross-check notes, source confidence, manufacturer, and pricing scope adjacent in review flows.
 - **Do** use dense ruled tables for schedules and editable engineering data.
 - **Do** reserve technical blue for current position, focus, selection, and primary action.
 - **Do** pair every approval, warning, exclusion, error, and blocked state with words or another non-color cue.
 - **Do** preserve visible keyboard focus, native tab order, shortcuts, and Qt scaling behavior.
-- **Do** keep pricing visibly locked until the review gate passes.
+- **Do** keep pricing directly available while making edits and exclusions easy to understand.
 
 ### Don't:
 

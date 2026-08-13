@@ -52,7 +52,7 @@ Each project can contain multiple source drawings and panels. Drawing paths and 
 
    A packaged build can instead be started directly from `dist\TechnicatAutomation.exe`. For that build, enter the key under **Preferences**; it is stored in the current Windows user's application-data folder, not embedded in the executable.
 
-5. Add one or more drawings to the project manifest and select the available price-list editions. After extraction, open **Panel review** to edit specifications, quantities, manufacturers, and forced catalog references. Choose **Approve** or **Exclude** for every row. Relevant edits recalculate terminal schedules and return that row to review. **Price approved components** remains locked until every included row has an explicit engineer decision.
+5. Add one or more drawings to the project manifest and select the available price-list editions. After extraction, open **Panel review** to inspect or edit specifications, quantities, manufacturers, and forced catalog references. Every extracted row is included automatically; use **Exclude selected** only when an item should not be priced. **Price & export offer** is immediately available and can be run again after any edits.
 
 The active UI calls the importable services in `app/` directly. The older scripts in `Codes/` remain only as extraction/import compatibility modules and are not used as workbook-to-workbook subprocess adapters.
 
@@ -72,7 +72,8 @@ Writes are atomic. Legacy `.sld.json` extraction files can be loaded and migrate
 The repository includes a normalized Kornet El Hamra truth set derived from the user-designated final offer, plus an explicit tuning/holdout manifest. Run the whole-dataset comparison with:
 
 ```powershell
-python Codes/benchmark_dataset.py benchmark_runs/kornet_el_hamra/expected-offer.json benchmark_runs/kornet_el_hamra/final_hybrid --manifest benchmark_runs/kornet_el_hamra/benchmark-manifest.json --out benchmark-report.json
+python Codes/reconcile_cached_dataset.py benchmark_runs/kornet_el_hamra/final --out benchmark_runs/kornet_el_hamra/reconciled_current
+python Codes/benchmark_dataset.py benchmark_runs/kornet_el_hamra/expected-offer.json benchmark_runs/kornet_el_hamra/reconciled_current --manifest benchmark_runs/kornet_el_hamra/benchmark-manifest.json --out benchmark-report.json
 ```
 
 For canonical-project-to-project comparisons, use:
@@ -89,7 +90,7 @@ The report includes specification-aware precision, recall, F1, exact quantity ag
 
 These are acceptance targets, not general production accuracy claims. The dataset report separates the tuning and untouched holdout subsets and reports category-only, exact-row, per-field, and block-backed quantity scores.
 
-The Kornet El Hamra report currently proves **100% quantity agreement across 100 evaluated block-backed rows**. Exact offer alignment is deliberately lower: the final commercial offer contains calculated/control accessories absent from the SLD and, in several cases, product ratings that differ from explicit drawing labels (for example an SLD isolator labelled `4x80 Amp`). The application preserves the drawing evidence and routes those differences through engineer review instead of silently changing extraction to match the commercial offer. A manually verified *extraction BOM* is therefore still required before the 95% holdout target can be treated as a valid release gate; the offer remains authoritative for pricing/export comparison.
+The current Kornet El Hamra regression covers all 13 drawings and 17 mapped panels. Its release invariant is now source preservation: deterministic cross-checks may annotate discrepancies but may not add, remove, resize, regroup, or rerate structured extraction rows. The designated final offer remains comparison evidence only because it includes design calculations and substitutions that are not necessarily printed in the SLD. DB1 specifically guards the raw 10-row model result against the former reconciliation mutations.
 
 ## Tests
 

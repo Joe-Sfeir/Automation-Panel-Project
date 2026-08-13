@@ -14,7 +14,11 @@ class ProjectPipeline:
         self.database = Path(database)
         self.progress = progress or (lambda message: None)
         self.should_cancel = should_cancel or (lambda: False)
-        self.extraction = ExtractionService(api_key, oda_path, progress=self.progress)
+        # Accuracy runs must stay on the configured primary model. A silent
+        # downgrade changes extraction behavior and invalidates golden results.
+        self.extraction = ExtractionService(
+            api_key, oda_path, progress=self.progress, allow_model_fallback=False
+        )
         self.pricing = PricingService(database, progress=self.progress)
 
     def run(
@@ -38,7 +42,10 @@ class ProjectPipeline:
         project.name = project_name
         project.reference = project_reference or project_name
         project.pricing.default_manufacturer = default_manufacturer.upper()
-        project.pricing.editions.update({key.upper(): value for key, value in editions.items()})
+        # The manifest is the user's current pricing choice, not an accumulating
+        # history. Re-running a project with Schneider selected must not retain
+        # a Legrand/Eaton edition from an earlier run.
+        project.pricing.editions = {key.upper(): value for key, value in editions.items()}
         project.pricing.tva_rate = tva_rate
         project.export.pricing_mode = pricing_mode
         for index, drawing in enumerate(drawings, 1):

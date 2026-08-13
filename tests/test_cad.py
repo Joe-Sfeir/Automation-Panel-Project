@@ -1,4 +1,4 @@
-from app.cad import CadEntity, associate_blocks_to_labels, build_ai_evidence, CadEvidenceGraph, parse_dxf_graph, parse_layout_block_name, schematic_layers
+from app.cad import CadEntity, associate_blocks_to_labels, build_ai_evidence, CadEvidenceGraph, parse_dxf_graph, parse_layout_block_name, schematic_layers, schematic_rating_groups
 
 
 def test_spatial_association_is_scale_aware_and_deterministic():
@@ -57,6 +57,35 @@ def test_physical_layout_counts_are_exposed_as_cross_check():
     assert evidence["physical_layout_layers"] == ["LAYOUT"]
     assert evidence["layout_block_groups"][0]["count"] == 3
     assert evidence["layout_device_groups"][0]["commercial_quantity"] == 3
+    assert "schematic_blocks" in evidence
+    assert "text_clusters" in evidence
+
+
+def test_explicit_schematic_rating_groups_preserve_rating_split():
+    entities = []
+    for index, amps in enumerate((10, 10, 16, 20)):
+        entities.extend([
+            CadEntity(f"b:{index}", "block", layer="SLD", x=index * 100, block_name="CB1"),
+            CadEntity(f"t:{index}", "text", layer="SLD", x=index * 100 + 3, height=2, text=f"2x{amps}"),
+        ])
+    groups = schematic_rating_groups(entities)
+    assert [(group["amps"], group["count"]) for group in groups] == [
+        ("10A", 2), ("16A", 1), ("20A", 1),
+    ]
+
+
+def test_explicit_rccb_marker_is_paired_with_rating_and_sensitivity():
+    entities = [
+        CadEntity("b:1", "block", layer="SLD", x=0, y=0, block_name="CB1"),
+        CadEntity("t:rating", "text", layer="SLD", x=2, y=0, height=1, text="4x25 AMP"),
+        CadEntity("t:sensitivity", "text", layer="SLD", x=2, y=1, height=1, text="30mA"),
+        CadEntity("t:marker", "text", layer="SLD", x=2, y=2, height=1, text="ISOL.S.+RCD"),
+    ]
+    groups = schematic_rating_groups(entities)
+    rccb = next(group for group in groups if group["category"] == "RCCB")
+    assert (rccb["poles"], rccb["amps"], rccb["sensitivity"], rccb["count"]) == (
+        "4P", "25A", "30mA", 1,
+    )
 
 
 def test_layout_block_names_become_general_device_evidence():

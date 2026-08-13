@@ -1,0 +1,3126 @@
+{
+  "id": "project_16ae248cc5c647f5b8e81418db87441d",
+  "name": "Kornet El Hamra_B1-DB-MECH",
+  "reference": "Kornet El Hamra_B1-DB-MECH",
+  "schema_version": 1,
+  "created_at": "2026-08-12T17:56:31+00:00",
+  "updated_at": "2026-08-13T09:07:00+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_e415e7d7fb8d50418553e8f91cd99ff5",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\Archive\\Automation Test File 2\\Kornet El Hamra_B1-DB-MECH.dwg",
+      "sha256": "bb043f40042e03a23720654fc4d1d968abd4547158ea6a27ce883cd2467d7c5d",
+      "filename": "Kornet El Hamra_B1-DB-MECH.dwg",
+      "added_at": "2026-08-12T17:56:31+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_adc2ae1a67d85eeb8feca69466cb8c58",
+      "reference": "DB-MECH",
+      "source_drawing_id": "drawing_e415e7d7fb8d50418553e8f91cd99ff5",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_ce3749281b925327a724c2688ef390f1",
+          "category": "SWITCH",
+          "label": "4x80 Amp ISOL.S.",
+          "poles": "4P",
+          "amps": "80A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 25.0,
+          "load_label": "TO MDB-B1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "4P 80A main isolator switch incomer",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:7F4",
+              "entity_handle": "7F4",
+              "block_name": "SW",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                65765.03795163857,
+                51912.82708596629,
+                65765.03795163857,
+                51912.82708596629
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7F6",
+              "entity_handle": "7F6",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x80 Amp",
+              "cad_bbox": [
+                67067.22542955878,
+                50675.52786955815,
+                67067.22542955878,
+                51111.173837104834
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7F7",
+              "entity_handle": "7F7",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.",
+              "cad_bbox": [
+                67067.22542955878,
+                49953.75949308148,
+                67067.22542955878,
+                50389.405460628164
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7FF",
+              "entity_handle": "7FF",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "TO MDB-B1",
+              "cad_bbox": [
+                55785.87358009874,
+                52312.73608246105,
+                55785.87358009874,
+                52878.48732851969
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:800",
+              "entity_handle": "800",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4Cx25mm²+1Cx16mm²",
+              "cad_bbox": [
+                55785.87358009874,
+                51707.88297939702,
+                55785.87358009874,
+                52273.63422545566
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A2F",
+              "entity_handle": "A2F",
+              "block_name": "4X80A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22635.55237705553,
+                61872.01244539593,
+                22635.55237705553,
+                61872.01244539593
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_640f8e6763bc5219900aca3b627e75f6",
+          "category": "SPD",
+          "label": "SPD TYPE 2 / CLASS C",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "---------",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Type 2 surge protective device, Up<=1.2kV, 20kA Max",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:838",
+              "entity_handle": "838",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "SPD",
+              "cad_bbox": [
+                72218.88554543315,
+                49475.9662214914,
+                72218.88554543315,
+                49777.04003085987
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:83D",
+              "entity_handle": "83D",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "TYPE 2 / CLASS C",
+              "cad_bbox": [
+                73412.53029327898,
+                49459.23552754735,
+                73412.53029327898,
+                49717.29879272033
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:840",
+              "entity_handle": "840",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Up<=1.2KV, 20KA Max",
+              "cad_bbox": [
+                73412.53029327898,
+                48945.7192945244,
+                73412.53029327898,
+                49203.78255969738
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_83bffe8aa1e651f081bcebff5258e6ad",
+          "category": "FUSE_HOLDER",
+          "label": "Fuse gG 3x80A",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "SPD Backup Protection",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "engineering_normalized",
+          "notes": "Fuse gG 3x80A backup fuse holder for SPD Quantity normalized to 3 individual holders from the explicit fused-phase notation.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:83F",
+              "entity_handle": "83F",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Fuse gG 3x80A",
+              "cad_bbox": [
+                73564.00491419213,
+                50412.67439078893,
+                73564.00491419213,
+                50670.73765596191
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:797",
+              "entity_handle": "797",
+              "block_name": "FUSE 3X32",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                34463.11632700253,
+                61872.01244539366,
+                34463.11632700253,
+                61872.01244539366
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "Physical-layout inventory 3 disagrees with extracted quantity 1; review against the schematic"
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_985b2bb899515013995f3ce04bc3fa0d",
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "---------",
+          "cable_size": 0.0,
+          "load_label": "Main Incomer Monitoring",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Digital power meter at main incomer",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:7FC",
+              "entity_handle": "7FC",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "DIGITAL POWER",
+              "cad_bbox": [
+                70008.08838187682,
+                56250.63448166716,
+                70008.08838187682,
+                56585.864053694335
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7FD",
+              "entity_handle": "7FD",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "METER",
+              "cad_bbox": [
+                70709.87172072439,
+                55724.86633496295,
+                70709.87172072439,
+                56060.09590699012
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:796",
+              "entity_handle": "796",
+              "block_name": "POWER METER",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                30169.33435202915,
+                61872.01244539596,
+                30169.33435202915,
+                61872.01244539596
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f575f6b91b815869a9a8eeeeb021e665",
+          "category": "PILOT_LAMP",
+          "label": "Indicator Lamp R, Y, B",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "Phase Presence Indication",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "3 phase indicator lamps (Red, Green, Blue)",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:805",
+              "entity_handle": "805",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "Y",
+              "cad_bbox": [
+                91600.83811658937,
+                58869.0523190883,
+                91600.83811658937,
+                59132.26013808688
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:806",
+              "entity_handle": "806",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "R",
+              "cad_bbox": [
+                90472.16041547304,
+                58869.0523190883,
+                90472.16041547304,
+                59132.26013808688
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:80F",
+              "entity_handle": "80F",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "B",
+              "cad_bbox": [
+                92726.90898064396,
+                58869.05284943094,
+                92726.90898064396,
+                59132.26066842952
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:776",
+              "entity_handle": "776",
+              "block_name": "indicator lamp red",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                26929.33435202915,
+                61872.01244539593,
+                26929.33435202915,
+                61872.01244539593
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:777",
+              "entity_handle": "777",
+              "block_name": "indicator lamp green",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                28009.33435202915,
+                61872.01244539593,
+                28009.33435202915,
+                61872.01244539593
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:778",
+              "entity_handle": "778",
+              "block_name": "indicator lamp blue",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                29089.33435202915,
+                61872.01244539593,
+                29089.33435202915,
+                61872.01244539593
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_416778fc6a745966a2e5faeacb9c60a1",
+          "category": "MCB",
+          "label": "2x10 (1P+N)",
+          "poles": "1P+N",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2.5,
+          "load_label": "PHP, BR, SHP, RWB, HWRP, DHWT, EAF, IU circuits",
+          "quantity": 38,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "engineering_normalized",
+          "notes": "38 single-phase 10A 1P+N 6kA MCBs for various mechanical/light loads",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:7EB",
+              "entity_handle": "7EB",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                52795.65700700427,
+                78902.35551040119,
+                52795.65700700427
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7EC",
+              "entity_handle": "7EC",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                52345.19372104201,
+                78902.35551040119,
+                52345.19372104201
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7EF",
+              "entity_handle": "7EF",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                51894.73043510168,
+                78902.35551040119,
+                51894.73043510168
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:822",
+              "entity_handle": "822",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                51432.2367330635,
+                78902.35551040119,
+                51432.2367330635
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:845",
+              "entity_handle": "845",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                50969.74303102537,
+                78902.35551040119,
+                50969.74303102537
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:853",
+              "entity_handle": "853",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                50507.24932898721,
+                78902.35551040119,
+                50507.24932898721
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:856",
+              "entity_handle": "856",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                50032.72521086395,
+                78902.35551040119,
+                50032.72521086395
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:85E",
+              "entity_handle": "85E",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                49558.20109274071,
+                78902.35551040119,
+                49558.20109274071
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:861",
+              "entity_handle": "861",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                49095.70739070252,
+                78902.35551040119,
+                49095.70739070252
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:864",
+              "entity_handle": "864",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                48621.18327257928,
+                78902.35551040119,
+                48621.18327257928
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:867",
+              "entity_handle": "867",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                48146.65915445605,
+                78902.35551040166,
+                48146.65915445605
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:86D",
+              "entity_handle": "86D",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                47209.6413342946,
+                78902.35551040166,
+                47209.6413342946
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:870",
+              "entity_handle": "870",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                46735.11721617136,
+                78902.35551040189,
+                46735.11721617136
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8CB",
+              "entity_handle": "8CB",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                44338.43579338488,
+                78902.35551040189,
+                44338.43579338488
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8CE",
+              "entity_handle": "8CE",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                43851.88125917652,
+                78902.35551040189,
+                43851.88125917652
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8E3",
+              "entity_handle": "8E3",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                43401.41797322345,
+                78902.35551040166,
+                43401.41797322345
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8F9",
+              "entity_handle": "8F9",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                42050.0281153642,
+                78902.35551040119,
+                42050.0281153642
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:91A",
+              "entity_handle": "91A",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                41599.56482941113,
+                78902.35551040119,
+                41599.56482941113
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:91D",
+              "entity_handle": "91D",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                41149.10154345805,
+                78902.35551040119,
+                41149.10154345805
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:920",
+              "entity_handle": "920",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                40690.75063600329,
+                78902.35551040119,
+                40690.75063600329
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:923",
+              "entity_handle": "923",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040072,
+                40248.1749715519,
+                78902.35551040072,
+                40248.1749715519
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:926",
+              "entity_handle": "926",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040072,
+                39789.82406409714,
+                78902.35551040072,
+                39789.82406409714
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:929",
+              "entity_handle": "929",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                39339.36077814404,
+                78902.35551040119,
+                39339.36077814404
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:92C",
+              "entity_handle": "92C",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040026,
+                38888.89749219097,
+                78902.35551040026,
+                38888.89749219097
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:92F",
+              "entity_handle": "92F",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040026,
+                38438.43420623789,
+                78902.35551040026,
+                38438.43420623789
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:963",
+              "entity_handle": "963",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551039956,
+                37987.97092028481,
+                78902.35551039956,
+                37987.97092028481
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:966",
+              "entity_handle": "966",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551039886,
+                37537.50763433172,
+                78902.35551039886,
+                37537.50763433172
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:969",
+              "entity_handle": "969",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040026,
+                37087.04434837864,
+                78902.35551040026,
+                37087.04434837864
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:96C",
+              "entity_handle": "96C",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.3555103998,
+                36636.58106242554,
+                78902.3555103998,
+                36636.58106242554
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:96F",
+              "entity_handle": "96F",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040026,
+                36186.11777647246,
+                78902.35551040026,
+                36186.11777647246
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:972",
+              "entity_handle": "972",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551039886,
+                35735.6544905194,
+                78902.35551039886,
+                35735.6544905194
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:975",
+              "entity_handle": "975",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551039956,
+                35285.19120456631,
+                78902.35551039956,
+                35285.19120456631
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:978",
+              "entity_handle": "978",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040026,
+                34834.72791861322,
+                78902.35551040026,
+                34834.72791861322
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:97B",
+              "entity_handle": "97B",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040026,
+                34384.26463266014,
+                78902.35551040026,
+                34384.26463266014
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:9B3",
+              "entity_handle": "9B3",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                33933.80134670703,
+                78902.35551040166,
+                33933.80134670703
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:9E9",
+              "entity_handle": "9E9",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                33483.33806075393,
+                78902.35551040166,
+                33483.33806075393
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:9EC",
+              "entity_handle": "9EC",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                33032.87477480082,
+                78902.35551040166,
+                33032.87477480082
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:9EF",
+              "entity_handle": "9EF",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                32582.41148884773,
+                78902.35551040166,
+                32582.41148884773
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7E4",
+              "entity_handle": "7E4",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                52389.39269920842,
+                80698.05839522497,
+                52681.301185247714
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7E6",
+              "entity_handle": "7E6",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05879904923,
+                52863.80060727964,
+                80698.05879904923,
+                53155.70909331893
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7ED",
+              "entity_handle": "7ED",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                51938.92941324609,
+                80698.05839522497,
+                52230.83789928538
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:820",
+              "entity_handle": "820",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                51476.43571121892,
+                80698.05839522497,
+                51768.34419725821
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:843",
+              "entity_handle": "843",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                51013.94200918081,
+                80698.05839522497,
+                51305.850495220104
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:851",
+              "entity_handle": "851",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                50551.44830714264,
+                80698.05839522497,
+                50843.35679318193
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:854",
+              "entity_handle": "854",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                50076.9241890194,
+                80698.05839522497,
+                50368.83267505869
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:85C",
+              "entity_handle": "85C",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952252,
+                49602.40007089615,
+                80698.0583952252,
+                49894.30855693544
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:85F",
+              "entity_handle": "85F",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952252,
+                49139.90636885796,
+                80698.0583952252,
+                49431.81485489725
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:862",
+              "entity_handle": "862",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952252,
+                48665.38225073472,
+                80698.0583952252,
+                48957.29073677401
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:865",
+              "entity_handle": "865",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                48190.85813261149,
+                80698.05839522567,
+                48482.76661865078
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:868",
+              "entity_handle": "868",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                47253.84031245005,
+                80698.05839522567,
+                47545.74879848934
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:86E",
+              "entity_handle": "86E",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952259,
+                46779.31619432681,
+                80698.0583952259,
+                47071.224680366104
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8C9",
+              "entity_handle": "8C9",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952259,
+                44382.63477154033,
+                80698.0583952259,
+                44674.54325757962
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8CC",
+              "entity_handle": "8CC",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952259,
+                43896.08023733195,
+                80698.0583952259,
+                44187.98872337124
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8E1",
+              "entity_handle": "8E1",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                43445.61695137889,
+                80698.05839522567,
+                43737.52543741818
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8F7",
+              "entity_handle": "8F7",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952252,
+                42094.22709351965,
+                80698.0583952252,
+                42386.13557955894
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:918",
+              "entity_handle": "918",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                41643.76380756658,
+                80698.05839522497,
+                41935.67229360587
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:91B",
+              "entity_handle": "91B",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                41193.30052161349,
+                80698.05839522497,
+                41485.20900765278
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:91E",
+              "entity_handle": "91E",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522497,
+                40734.94961415873,
+                80698.05839522497,
+                41026.85810019802
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:921",
+              "entity_handle": "921",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522474,
+                40292.37394970734,
+                80698.05839522474,
+                40584.28243574663
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:924",
+              "entity_handle": "924",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522474,
+                39834.02304225258,
+                80698.05839522474,
+                40125.93152829187
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:927",
+              "entity_handle": "927",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.0583952252,
+                39383.55975629948,
+                80698.0583952252,
+                39675.46824233877
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:92A",
+              "entity_handle": "92A",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522427,
+                38933.09647034641,
+                80698.05839522427,
+                39225.0049563857
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:92D",
+              "entity_handle": "92D",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522427,
+                38482.63318439333,
+                80698.05839522427,
+                38774.54167043262
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:961",
+              "entity_handle": "961",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522334,
+                38032.16989844025,
+                80698.05839522334,
+                38324.07838447954
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:964",
+              "entity_handle": "964",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522288,
+                37581.70661248717,
+                80698.05839522288,
+                37873.61509852646
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:967",
+              "entity_handle": "967",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522427,
+                37131.24332653408,
+                80698.05839522427,
+                37423.15181257337
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:96A",
+              "entity_handle": "96A",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522381,
+                36680.78004058099,
+                80698.05839522381,
+                36972.68852662028
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:96D",
+              "entity_handle": "96D",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522427,
+                36230.3167546279,
+                80698.05839522427,
+                36522.22524066719
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:970",
+              "entity_handle": "970",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522288,
+                35779.85346867483,
+                80698.05839522288,
+                36071.76195471412
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:973",
+              "entity_handle": "973",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522334,
+                35329.39018272175,
+                80698.05839522334,
+                35621.29866876104
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:976",
+              "entity_handle": "976",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522427,
+                34878.92689676867,
+                80698.05839522427,
+                35170.83538280796
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:979",
+              "entity_handle": "979",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522427,
+                34428.46361081559,
+                80698.05839522427,
+                34720.37209685488
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:9B1",
+              "entity_handle": "9B1",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                33978.00032486247,
+                80698.05839522567,
+                34269.90881090176
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:9E7",
+              "entity_handle": "9E7",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                33527.53703890938,
+                80698.05839522567,
+                33819.44552494867
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:9EA",
+              "entity_handle": "9EA",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                33077.07375295626,
+                80698.05839522567,
+                33368.98223899555
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:9ED",
+              "entity_handle": "9ED",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x10",
+              "cad_bbox": [
+                80698.05839522567,
+                32626.61046700316,
+                80698.05839522567,
+                32918.51895304245
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:779",
+              "entity_handle": "779",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                37673.68319103483,
+                61872.01244539162,
+                37673.68319103483,
+                61872.01244539162
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:77A",
+              "entity_handle": "77A",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                29115.5523768341,
+                54433.67671817503,
+                29115.5523768341,
+                54433.67671817503
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:77B",
+              "entity_handle": "77B",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31275.5523768334,
+                54433.67671817503,
+                31275.5523768334,
+                54433.67671817503
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:77C",
+              "entity_handle": "77C",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                33435.55237683294,
+                54433.67671817503,
+                33435.55237683294,
+                54433.67671817503
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:77D",
+              "entity_handle": "77D",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                35595.55237683247,
+                54433.67671817503,
+                35595.55237683247,
+                54433.67671817503
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:785",
+              "entity_handle": "785",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31324.44046404481,
+                39098.94099095428,
+                31324.44046404481,
+                39098.94099095428
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:786",
+              "entity_handle": "786",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                33484.44046404412,
+                39098.94099095428,
+                33484.44046404412,
+                39098.94099095428
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:787",
+              "entity_handle": "787",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                35644.44046404364,
+                39098.94099095346,
+                35644.44046404364,
+                39098.94099095346
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:788",
+              "entity_handle": "788",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                37804.44046404318,
+                39098.94099095304,
+                37804.44046404318,
+                39098.94099095304
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A07",
+              "entity_handle": "A07",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                39833.68319103436,
+                61872.01244538848,
+                39833.68319103436,
+                61872.01244538848
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A0A",
+              "entity_handle": "A0A",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                41993.6831910339,
+                61872.01244538532,
+                41993.6831910339,
+                61872.01244538532
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A0D",
+              "entity_handle": "A0D",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                44153.68319103343,
+                61872.01244538219,
+                44153.68319103343,
+                61872.01244538219
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A0E",
+              "entity_handle": "A0E",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22635.55237705553,
+                54433.67671817596,
+                22635.55237705553,
+                54433.67671817596
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A0F",
+              "entity_handle": "A0F",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24795.55237705483,
+                54433.67671817596,
+                24795.55237705483,
+                54433.67671817596
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A10",
+              "entity_handle": "A10",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                26955.55237705436,
+                54433.67671817596,
+                26955.55237705436,
+                54433.67671817596
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A33",
+              "entity_handle": "A33",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22684.44046404668,
+                39098.94099095428,
+                22684.44046404668,
+                39098.94099095428
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A34",
+              "entity_handle": "A34",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24844.44046404621,
+                39098.94099095397,
+                24844.44046404621,
+                39098.94099095397
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A35",
+              "entity_handle": "A35",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                27004.44046404575,
+                39098.94099095428,
+                27004.44046404575,
+                39098.94099095428
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A40",
+              "entity_handle": "A40",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                39964.44046404271,
+                39098.94099095409,
+                39964.44046404271,
+                39098.94099095409
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A41",
+              "entity_handle": "A41",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                42124.44046404225,
+                39098.94099095515,
+                42124.44046404225,
+                39098.94099095515
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A47",
+              "entity_handle": "A47",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31324.44046404481,
+                31202.5409909549,
+                31324.44046404481,
+                31202.5409909549
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A48",
+              "entity_handle": "A48",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                33484.44046404412,
+                31202.5409909549,
+                33484.44046404412,
+                31202.5409909549
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A49",
+              "entity_handle": "A49",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                35644.44046404364,
+                31202.54099095407,
+                35644.44046404364,
+                31202.54099095407
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A4A",
+              "entity_handle": "A4A",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                37804.44046404318,
+                31202.54099095365,
+                37804.44046404318,
+                31202.54099095365
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A51",
+              "entity_handle": "A51",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22684.44046404668,
+                31202.5409909549,
+                22684.44046404668,
+                31202.5409909549
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A52",
+              "entity_handle": "A52",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24844.44046404621,
+                31202.54099095458,
+                24844.44046404621,
+                31202.54099095458
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A53",
+              "entity_handle": "A53",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                27004.44046404575,
+                31202.5409909549,
+                27004.44046404575,
+                31202.5409909549
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A5E",
+              "entity_handle": "A5E",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                39964.44046404271,
+                31202.54099095471,
+                39964.44046404271,
+                31202.54099095471
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A5F",
+              "entity_handle": "A5F",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                42124.44046404225,
+                31202.54099095576,
+                42124.44046404225,
+                31202.54099095576
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A66",
+              "entity_handle": "A66",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                31324.44046404505,
+                23306.1409909513,
+                31324.44046404505,
+                23306.1409909513
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A67",
+              "entity_handle": "A67",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                33484.44046404435,
+                23306.1409909513,
+                33484.44046404435,
+                23306.1409909513
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A68",
+              "entity_handle": "A68",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                35644.44046404388,
+                23306.14099095048,
+                35644.44046404388,
+                23306.14099095048
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A6F",
+              "entity_handle": "A6F",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22684.44046404691,
+                23306.1409909513,
+                22684.44046404691,
+                23306.1409909513
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A70",
+              "entity_handle": "A70",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24844.44046404644,
+                23306.14099095099,
+                24844.44046404644,
+                23306.14099095099
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A71",
+              "entity_handle": "A71",
+              "block_name": "2x10",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                27004.44046404598,
+                23306.1409909513,
+                27004.44046404598,
+                23306.1409909513
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "Physical-layout inventory 35 disagrees with explicit schematic specification count 38; schematic specification preserved",
+            "Curve C is the configured outgoing-MCB commercial family; it is not printed beside each circuit."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_4d028973eb595d938c4077b391178c3c",
+          "category": "MCB",
+          "label": "2x16 (1P+N)",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2.5,
+          "load_label": "M46 Outgoing",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "engineering_normalized",
+          "notes": "1 single-phase 16A 1P+N 6kA MCB",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:A00",
+              "entity_handle": "A00",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                32131.94820289462,
+                78902.35551040166,
+                32131.94820289462
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:9FE",
+              "entity_handle": "9FE",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x16",
+              "cad_bbox": [
+                80698.05839522567,
+                32176.14718105006,
+                80698.05839522567,
+                32468.055667089346
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:9FF",
+              "entity_handle": "9FF",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "(1P+N)",
+              "cad_bbox": [
+                81461.70787182904,
+                32176.14718105006,
+                81461.70787182904,
+                32428.871643900537
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:77E",
+              "entity_handle": "77E",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22684.44046404691,
+                46995.34099095417,
+                22684.44046404691,
+                46995.34099095417
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:77F",
+              "entity_handle": "77F",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                24844.44046404644,
+                46995.34099095417,
+                24844.44046404644,
+                46995.34099095417
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:784",
+              "entity_handle": "784",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                37804.44046404341,
+                23306.14099095345,
+                37804.44046404341,
+                23306.14099095345
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A80",
+              "entity_handle": "A80",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                39964.44046404294,
+                23306.14099095345,
+                39964.44046404294,
+                23306.14099095345
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A81",
+              "entity_handle": "A81",
+              "block_name": "2X16",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                42124.44046404248,
+                23306.14099095345,
+                42124.44046404248,
+                23306.14099095345
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "Physical-layout inventory 5 disagrees with explicit schematic specification count 1; schematic specification preserved",
+            "Curve C is the configured outgoing-MCB commercial family; it is not printed beside each circuit."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_e82d981b2a775835b73870fa18683c27",
+          "category": "MCB",
+          "label": "2x20 (1P+N)",
+          "poles": "1P+N",
+          "amps": "20A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 4.0,
+          "load_label": "HRU-B1-01, M23",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "engineering_normalized",
+          "notes": "2 single-phase 20A 1P+N 6kA MCBs",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:8EB",
+              "entity_handle": "8EB",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                42950.95468727038,
+                78902.35551040119,
+                42950.95468727038
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8F1",
+              "entity_handle": "8F1",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040119,
+                42500.4914013173,
+                78902.35551040119,
+                42500.4914013173
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8E9",
+              "entity_handle": "8E9",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x20",
+              "cad_bbox": [
+                80698.0583952252,
+                42995.15366542583,
+                80698.0583952252,
+                43287.06215146512
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8EF",
+              "entity_handle": "8EF",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "2x20",
+              "cad_bbox": [
+                80698.0583952252,
+                42544.69037947274,
+                80698.0583952252,
+                42836.59886551203
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:783",
+              "entity_handle": "783",
+              "block_name": "2x20",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                29164.44046404528,
+                39098.94099094898,
+                29164.44046404528,
+                39098.94099094898
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A46",
+              "entity_handle": "A46",
+              "block_name": "2x20",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                29164.44046404528,
+                31202.54099094959,
+                29164.44046404528,
+                31202.54099094959
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A65",
+              "entity_handle": "A65",
+              "block_name": "2x20",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                29164.44046404551,
+                23306.140990946,
+                29164.44046404551,
+                23306.140990946
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "Physical-layout inventory 3 disagrees with explicit schematic specification count 2; schematic specification preserved",
+            "Curve C is the configured outgoing-MCB commercial family; it is not printed beside each circuit."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_c64a5d29116c575384d1e0853a9e0d93",
+          "category": "MCB",
+          "label": "4x20 (3P+N)",
+          "poles": "-",
+          "amps": "20A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 4.0,
+          "load_label": "M12, DHWT-01, DHWT-02, TWB-01",
+          "quantity": 4,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "4 three-phase 20A 3P+N 6kA MCBs",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:86A",
+              "entity_handle": "86A",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040166,
+                47684.16545241786,
+                78902.35551040166,
+                47684.16545241786
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:873",
+              "entity_handle": "873",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                46272.62351413321,
+                78902.35551040189,
+                46272.62351413321
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:874",
+              "entity_handle": "874",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                45798.09939600996,
+                78902.35551040189,
+                45798.09939600996
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8AD",
+              "entity_handle": "8AD",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                45311.54486180158,
+                78902.35551040189,
+                45311.54486180158
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:86B",
+              "entity_handle": "86B",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x20",
+              "cad_bbox": [
+                80698.05839522567,
+                47728.3644305733,
+                80698.05839522567,
+                48020.272916612594
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:871",
+              "entity_handle": "871",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x20",
+              "cad_bbox": [
+                80698.0583952259,
+                46316.82249228866,
+                80698.0583952259,
+                46608.73097832795
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:909",
+              "entity_handle": "909",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x20",
+              "cad_bbox": [
+                80698.0583952259,
+                45842.2983741654,
+                80698.0583952259,
+                46134.20686020469
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:90B",
+              "entity_handle": "90B",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x20",
+              "cad_bbox": [
+                80698.0583952259,
+                45355.74383995702,
+                80698.0583952259,
+                45647.65232599631
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_a87db60f13a9531590df7893496ca138",
+          "category": "MCB",
+          "label": "4x32 (3P+N)",
+          "poles": "-",
+          "amps": "32A",
+          "curve": "-",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "OU-1B-01",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": true,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "1 three-phase 32A 3P+N 6kA MCB for OU-1B-01",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:8C8",
+              "entity_handle": "8C8",
+              "block_name": "CB1",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                78902.35551040189,
+                44824.99032759325,
+                78902.35551040189,
+                44824.99032759325
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8C6",
+              "entity_handle": "8C6",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x32",
+              "cad_bbox": [
+                80698.0583952259,
+                44869.18930574869,
+                80698.0583952259,
+                45161.09779178798
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8C7",
+              "entity_handle": "8C7",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "(3P+N)",
+              "cad_bbox": [
+                81461.70787182951,
+                44869.18930574869,
+                81461.70787182951,
+                45121.913768599166
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8D0",
+              "entity_handle": "8D0",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "OU-1B-01",
+              "cad_bbox": [
+                95075.16220703686,
+                44737.66622780916,
+                95075.16220703686,
+                45029.57471384845
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_18268c2b7b6f58bf9ecb3c24df9b111e",
+          "category": "CT",
+          "label": "Metering CT 80/5",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "80/5",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "engineering_calculated",
+          "notes": "Metering CT set calculated from the explicit three-phase power meter and 80A incomer using the next non-lower standard CT primary rating.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:7F4",
+              "entity_handle": "7F4",
+              "block_name": "SW",
+              "layer": "E_PanelBoard",
+              "text": "",
+              "cad_bbox": [
+                65765.03795163857,
+                51912.82708596629,
+                65765.03795163857,
+                51912.82708596629
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7F6",
+              "entity_handle": "7F6",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4x80 Amp",
+              "cad_bbox": [
+                67067.22542955878,
+                50675.52786955815,
+                67067.22542955878,
+                51111.173837104834
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7F7",
+              "entity_handle": "7F7",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "ISOL.S.",
+              "cad_bbox": [
+                67067.22542955878,
+                49953.75949308148,
+                67067.22542955878,
+                50389.405460628164
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7FF",
+              "entity_handle": "7FF",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "TO MDB-B1",
+              "cad_bbox": [
+                55785.87358009874,
+                52312.73608246105,
+                55785.87358009874,
+                52878.48732851969
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:800",
+              "entity_handle": "800",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "4Cx25mm²+1Cx16mm²",
+              "cad_bbox": [
+                55785.87358009874,
+                51707.88297939702,
+                55785.87358009874,
+                52273.63422545566
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "layout_inventory",
+              "source_id": "block:A2F",
+              "entity_handle": "A2F",
+              "block_name": "4X80A",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                22635.55237705553,
+                61872.01244539593,
+                22635.55237705553,
+                61872.01244539593
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7FC",
+              "entity_handle": "7FC",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "DIGITAL POWER",
+              "cad_bbox": [
+                70008.08838187682,
+                56250.63448166716,
+                70008.08838187682,
+                56585.864053694335
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7FD",
+              "entity_handle": "7FD",
+              "block_name": "",
+              "layer": "E_PanelBoard",
+              "text": "METER",
+              "cad_bbox": [
+                70709.87172072439,
+                55724.86633496295,
+                70709.87172072439,
+                56060.09590699012
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:796",
+              "entity_handle": "796",
+              "block_name": "POWER METER",
+              "layer": "E0 - G - Panel",
+              "text": "",
+              "cad_bbox": [
+                30169.33435202915,
+                61872.01244539596,
+                30169.33435202915,
+                61872.01244539596
+              ],
+              "image_bbox": [],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "needs_review",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "conflicts": [
+            "CT ratio is an engineering selection derived from meter/incomer evidence."
+          ],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_144668a673595073892222d66843fd3b",
+          "name": "PT 35",
+          "description": "Phoenix Contact feed-through terminal 35mm²",
+          "max_mm2": 35.0,
+          "quantity": 4,
+          "circuits": [
+            "TO MDB-B1"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_2a632587639452eb8a518c3ffce627f0",
+          "name": "PT 4",
+          "description": "Phoenix Contact feed-through terminal 4mm²",
+          "max_mm2": 4.0,
+          "quantity": 4,
+          "circuits": [
+            "M12, DHWT-01, DHWT-02, TWB-01"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_79b87ff195f95ce08ef2036b5c5b74ea",
+          "name": "PT 6",
+          "description": "Phoenix Contact feed-through terminal 6mm²",
+          "max_mm2": 6.0,
+          "quantity": 1,
+          "circuits": [
+            "OU-1B-01"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_d2c5878dae8550509bfbba604a13caa1",
+          "name": "PTTB 4",
+          "description": "Phoenix Contact double-level terminal 2x4mm²",
+          "max_mm2": 4.0,
+          "quantity": 41,
+          "circuits": [
+            "PHP, BR, SHP, RWB, HWRP, DHWT, EAF, IU circuits",
+            "M46 Outgoing",
+            "HRU-B1-01, M23"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-DB-MECH\\artifacts\\Kornet El Hamra_B1-DB-MECH\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-DB-MECH\\artifacts\\Kornet El Hamra_B1-DB-MECH\\cad-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-DB-MECH\\artifacts\\Kornet El Hamra_B1-DB-MECH\\ai-evidence.json",
+        "benchmark_runs\\kornet_el_hamra\\final\\Kornet El Hamra_B1-DB-MECH\\artifacts\\Kornet El Hamra_B1-DB-MECH\\debug"
+      ],
+      "review_status": "needs_review",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": []
+}

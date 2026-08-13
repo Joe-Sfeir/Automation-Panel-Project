@@ -27,7 +27,7 @@ def terminal_type(cable_mm2: float, poles: str, incomer: bool = False) -> tuple[
     count = pole_count(poles)
     if size <= 4 and not incomer and count == 2:
         return "PTTB 4", "Phoenix Contact double-level terminal 2x4mm²", 4.0, 1
-    ratings = (4.0, 6.0, 10.0, 16.0, 35.0, 50.0, 70.0, 95.0, 150.0)
+    ratings = (4.0, 6.0, 10.0, 16.0, 25.0, 35.0, 50.0, 70.0, 95.0, 150.0)
     rating = next((candidate for candidate in ratings if size <= candidate), ratings[-1])
     return f"PT {rating:g}", f"Phoenix Contact feed-through terminal {rating:g}mm²", rating, count
 
@@ -39,8 +39,15 @@ def calculate_terminals(components: list[Component], panel_id: str) -> list[Term
     for component in components:
         if not component.is_incomer and not component.has_terminal:
             continue
+        # High-current switchboards terminate power conductors directly on
+        # busbars/lugs, not rail-mounted terminal blocks.
+        amps_match = re.fullmatch(r"\s*(\d+(?:\.\d+)?)\s*A\s*", component.amps, re.I)
+        if component.is_incomer and amps_match and float(amps_match.group(1)) > 160:
+            continue
         size = parse_mm2(component.cable_size)
         name, description, rating, per_circuit = terminal_type(size, component.poles, component.is_incomer)
+        if component.is_incomer and "TRANSFER" in component.label.upper():
+            per_circuit *= 2
         key = (name, description, rating)
         grouped[key]["quantity"] = int(grouped[key]["quantity"]) + per_circuit * max(1, component.quantity)
         label = component.load_label or component.label or component.id

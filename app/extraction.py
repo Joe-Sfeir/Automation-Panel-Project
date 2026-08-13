@@ -7,9 +7,11 @@ import struct
 from pathlib import Path
 
 from .ai_extraction import call_gemini_panels, sanitize_component
-from .cad import CAD_PARSER_VERSION, CadEvidenceGraph, build_ai_evidence, graph_from_dict, layout_device_groups, physical_layout_layers, schematic_layers, parse_dxf_graph
+from .accessories import calculate_commercial_accessories
+from .cad import CAD_PARSER_VERSION, CadEvidenceGraph, build_ai_evidence, graph_from_dict, layout_device_groups, physical_layout_layers, schematic_layers, schematic_rating_groups, parse_dxf_graph
 from .cad_runtime import convert_dwg_to_dxf, render_dxf_png
 from .domain import Component, Evidence, Panel, ProjectDocument, SourceDrawing, stable_id
+from .multi_panel import deterministic_multi_panel_extraction
 from .persistence import atomic_write_json, sha256_file
 from .terminals import calculate_terminals
 
@@ -48,11 +50,15 @@ def _image_bbox(entity, transform: dict) -> list[float]:
 
 
 class ExtractionService:
-    def __init__(self, api_key: str, oda_path: str = "", dpi: int = 150, progress=None):
+    def __init__(
+        self, api_key: str, oda_path: str = "", dpi: int = 150, progress=None,
+        allow_model_fallback: bool = True,
+    ):
         self.api_key = api_key
         self.oda_path = oda_path or None
         self.dpi = dpi
         self.progress = progress or (lambda message: None)
+        self.allow_model_fallback = allow_model_fallback
 
     def _log(self, message: str) -> None:
         self.progress(message)
@@ -107,8 +113,17 @@ class ExtractionService:
         atomic_write_json(artifact_dir / "ai-evidence.json", ai_evidence)
         transform = _render_transform(graph, render_path)
         atomic_write_json(artifact_dir / "render-metadata.json", transform)
-        self._log("Requesting structured multi-panel extraction")
-        extracted_panels = call_gemini_panels(ai_evidence, rendered, self.api_key, debug_dir)
+        extracted_panels = deterministic_multi_panel_extraction(graph)
+        if extracted_panels:
+            self._log(
+                f"Deterministically partitioned {len(extracted_panels)} repeated panel schematics"
+            )
+        else:
+            self._log("Requesting structured multi-panel extraction")
+            extracted_panels = call_gemini_panels(
+                ai_evidence, rendered, self.api_key, debug_dir, self._log,
+                self.allow_model_fallback,
+            )
         if not extracted_panels:
             raise RuntimeError("No panels were extracted; inspect the drawing debug artifacts")
 
@@ -132,9 +147,16 @@ class ExtractionService:
                     str(graph_path), str(artifact_dir / "ai-evidence.json"),
                     str(artifact_dir / "render-metadata.json"), str(debug_dir),
                 ],
-                review_status="needs_review",
+                review_status="included",
             )
             panel.terminals = calculate_terminals(panel.components, panel.id)
+            drawing_text = " ".join(
+                entity.text for entity in graph.entities if entity.kind in {"text", "attribute"}
+            )
+            panel.commercial_accessories = calculate_commercial_accessories(
+                panel.components, panel.id, drawing_text,
+                project.pricing.default_manufacturer,
+            )
             panels.append(panel)
         drawing_panel_ids = {panel.id for panel in panels}
         project.panels = [
@@ -156,19 +178,30 @@ class ExtractionService:
         supplement_layout: bool = False,
     ) -> list[Component]:
         entities = {item.id: item for item in graph.entities}
-        deterministic_groups = layout_device_groups(graph.entities, physical_layout_layers(graph.entities, schematic_layers(graph.entities)))
+        layout_layers = physical_layout_layers(graph.entities, schematic_layers(graph.entities))
+        deterministic_groups = layout_device_groups(graph.entities, layout_layers)
+        explicit_schematic_groups = schematic_rating_groups(graph.entities) if supplement_layout else []
         components = []
-        matched_layout_blocks: set[str] = set()
         for index, row in enumerate(rows):
             row = sanitize_component(row)
             label = str(row.get("label", "-") or "-")
             category = str(row.get("category", "OTHER") or "OTHER").upper()
+            evidence_ids = list(dict.fromkeys(str(value) for value in row.get("evidence_ids", []) if value))
+            schematic_match = next((
+                group for group in explicit_schematic_groups
+                if group["category"] == category
+                and group["poles"] == str(row.get("poles", "-"))
+                and group["amps"] == str(row.get("amps", "-"))
+                and (
+                    category != "RCCB"
+                    or group["sensitivity"] == str(row.get("sensitivity", "-"))
+                )
+            ), None)
             component_id = stable_id(
                 "component", panel_id, category, label, row.get("poles", "-"),
                 row.get("amps", "-"), row.get("curve", "-"), index,
             )
             evidence = []
-            evidence_ids = list(dict.fromkeys(str(value) for value in row.get("evidence_ids", []) if value))
             for evidence_id in evidence_ids:
                 entity = entities.get(evidence_id)
                 if not entity:
@@ -182,6 +215,17 @@ class ExtractionService:
                 ))
             quantity = max(1, int(row.get("qty", 1) or 1))
             conflicts = []
+            if schematic_match:
+                for label_id in schematic_match["label_ids"]:
+                    if label_id in evidence_ids or label_id not in entities:
+                        continue
+                    evidence.append(self._entity_evidence(entities[label_id], render_transform))
+                schematic_quantity = int(schematic_match["count"])
+                if schematic_quantity != quantity:
+                    conflicts.append(
+                        f"Cross-check only: extracted quantity {quantity} differs from "
+                        f"{schematic_quantity} repeated schematic rating labels; extracted value preserved"
+                    )
             matches = []
             for group in deterministic_groups:
                 category_matches = group["category"] == category
@@ -209,7 +253,6 @@ class ExtractionService:
                 matches.append(group)
             if len(matches) == 1:
                 group = matches[0]
-                matched_layout_blocks.update(group["block_ids"])
                 deterministic_quantity = int(group["commercial_quantity"])
                 for block_id in group["block_ids"]:
                     if block_id in evidence_ids:
@@ -222,24 +265,16 @@ class ExtractionService:
                         image_bbox=_image_bbox(entity, render_transform),
                         confidence=1.0,
                     ))
-                if deterministic_quantity != quantity:
+                if schematic_match and deterministic_quantity != quantity:
                     conflicts.append(
-                        f"AI quantity {quantity} reconciled to deterministic physical-layout inventory {deterministic_quantity}"
+                        f"Cross-check only: physical-layout inventory {deterministic_quantity} differs from "
+                        f"the extracted schematic quantity {quantity}; extracted value preserved"
                     )
-                    quantity = deterministic_quantity
-            cited_blocks = [entities[item.source_id] for item in evidence if entities[item.source_id].kind == "block"]
-            blocks_by_layer: dict[str, set[str]] = {}
-            for block in cited_blocks:
-                blocks_by_layer.setdefault(block.layer, set()).add(block.id)
-            # Schematic and physical-layout representations describe the same
-            # physical inventory. Never sum them; use the strongest cited
-            # per-layer instance count.
-            block_evidence_count = max((len(ids) for ids in blocks_by_layer.values()), default=0)
-            if not matches and block_evidence_count and block_evidence_count != quantity:
-                conflicts.append(
-                    f"AI quantity {quantity} reconciled to {block_evidence_count} cited block instances in one representation"
-                )
-                quantity = block_evidence_count
+                elif deterministic_quantity != quantity:
+                    conflicts.append(
+                        f"Cross-check only: physical-layout inventory {deterministic_quantity} differs from "
+                        f"the extracted quantity {quantity}; extracted value preserved"
+                    )
             confidence = float(row.get("confidence", 0) or 0)
             if not evidence and confidence >= 0.8:
                 conflicts.append("High-confidence extraction has no cited CAD evidence")
@@ -259,78 +294,25 @@ class ExtractionService:
                 cable_size=float(row.get("cable_size", 0) or 0),
                 load_label=str(row.get("load_label", "") or ""),
                 quantity=quantity,
-                manufacturer=(
-                    str(row.get("manufacturer")).upper()
-                    if str(row.get("manufacturer", "-")).strip() not in {"", "-"}
-                    else default_manufacturer.upper()
-                ),
+                # Manufacturer selection is a project/review pricing choice.
+                # Do not let the interpretation model override it from a logo,
+                # enclosure title, or general drawing note.
+                manufacturer=default_manufacturer.upper(),
                 has_terminal=bool(row.get("has_terminal", False)),
                 is_incomer=bool(row.get("is_incomer", False)),
                 confidence=confidence,
-                origin=(
-                    "deterministic_reconciled" if conflicts
-                    else str(row.get("data_source", "ai_extracted") or "ai_extracted")
-                ),
+                origin=str(row.get("data_source", "ai_extracted") or "ai_extracted"),
                 notes=str(row.get("ai_notes", "") or ""),
                 evidence=evidence,
-                review_status="needs_review",
+                review_status="included",
                 conflicts=conflicts,
             )
             components.append(component)
 
-        # A physical panel elevation is an independent, exact inventory of
-        # repeated block-backed devices.  For a single-panel drawing it is
-        # safe to add groups the vision model omitted; for a multi-panel sheet
-        # we leave them unresolved because geometry alone cannot assign a
-        # layout block to the correct panel.  Added rows always carry a review
-        # conflict, so deterministic presence never becomes an unreviewed
-        # commercial assumption.
-        if supplement_layout:
-            drawing_text = " ".join(
-                entity.text for entity in graph.entities if entity.kind in {"text", "attribute"}
-            )
-            capacity_match = re.search(r"B\.?C\.?:?\s*(\d+(?:\.\d+)?)\s*KA\b", drawing_text, re.I)
-            layout_breaking_capacity = f"{capacity_match.group(1)}kA" if capacity_match else "-"
-            for group_index, group in enumerate(deterministic_groups):
-                if any(block_id in matched_layout_blocks for block_id in group["block_ids"]):
-                    continue
-                category = group["category"]
-                label = str(group.get("block_name") or category)
-                evidence = []
-                for block_id in group["block_ids"]:
-                    entity = entities[block_id]
-                    evidence.append(Evidence(
-                        source="layout_inventory", source_id=entity.id,
-                        entity_handle=entity.handle, block_name=entity.block_name,
-                        layer=entity.layer,
-                        cad_bbox=[entity.x, entity.y, entity.x + entity.width, entity.y + entity.height],
-                        image_bbox=_image_bbox(entity, render_transform), confidence=1.0,
-                    ))
-                component_id = stable_id(
-                    "component", panel_id, "layout", category, group["poles"],
-                    group["amps"], group["sensitivity"], group_index,
-                )
-                components.append(Component(
-                    id=component_id,
-                    category=category,
-                    label=label,
-                    poles=group["poles"],
-                    amps=group["amps"],
-                    breaking_capacity=layout_breaking_capacity if category == "MCB" else "-",
-                    sensitivity=group["sensitivity"],
-                    quantity=max(1, int(group["commercial_quantity"])),
-                    manufacturer=default_manufacturer.upper(),
-                    confidence=1.0,
-                    origin="deterministic_layout",
-                    notes="Recovered from repeated device blocks in the physical panel layout.",
-                    evidence=evidence,
-                    review_status="needs_review",
-                    conflicts=["Physical-layout inventory was missing from structured extraction; verify its specifications."],
-                ))
-
-            self._supplement_explicit_schematic_devices(
-                panel_id, components, graph, default_manufacturer, render_transform,
-            )
+        # This is an observed pricing takeoff, not an electrical-design stage.
+        # Never rewrite extracted quantities/specifications or add customary
+        # devices here. Catalog substitutions belong only to PricingService
+        # and leave these source values intact.
         return components
 
     def _supplement_explicit_schematic_devices(
@@ -380,7 +362,7 @@ class ExtractionService:
                 id=stable_id("component", panel_id, "schematic-switch", poles, amps, index),
                 category="SWITCH", label=f"Isolator {poles} {amps}", poles=poles, amps=amps,
                 quantity=len(block_ids), manufacturer=default_manufacturer.upper(), confidence=1.0,
-                origin="deterministic_schematic", evidence=evidence, review_status="needs_review",
+                origin="deterministic_schematic", evidence=evidence, review_status="included",
                 conflicts=["Explicit isolator block was missing from structured extraction; verify its role."],
             ))
 
@@ -399,7 +381,7 @@ class ExtractionService:
                     quantity=1, manufacturer=default_manufacturer.upper(), confidence=1.0,
                     origin="deterministic_schematic",
                     evidence=[self._entity_evidence(spd_entities[0], render_transform)],
-                    review_status="needs_review",
+                    review_status="included",
                     conflicts=["Explicit SPD callout was missing from structured extraction; verify its type."],
                 ))
 

@@ -1,9 +1,9 @@
-"""Evidence-led component review for the canonical Technicat project.
+"""Evidence-led component editing and direct pricing for the Technicat project.
 
-THESIS: Review is an engineering sign-off sheet, not a generic dashboard or a raw data editor.
-OWN-WORLD: Drafting-white workplanes, graphite rules, technical blue selection, amber conflicts, green approvals.
-STORY: Choose a panel, inspect and edit a row, verify its evidence, then explicitly approve or exclude it.
-FIRST VIEWPORT: Panel index left, BOM and terminal tables center, evidence and decision rail right; pricing gate at the foot.
+THESIS: Review is an editable engineering takeoff, not an approval gate or a raw data editor.
+OWN-WORLD: Drafting-white workplanes, graphite rules, technical blue selection, amber source cross-check notes.
+STORY: Extracted rows flow directly to pricing; choose a panel to inspect, edit, include, or exclude a row.
+FIRST VIEWPORT: Panel index left, BOM and terminal tables center, evidence and detail rail right; pricing at the foot.
 FORM: Revision takeoff desk, assigned direction 7, seed 707d0947.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 """
@@ -12,8 +12,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QUrl
-from PySide6.QtGui import QColor, QDesktopServices, QPixmap
+from PySide6.QtCore import QObject, QSize, Qt, QThread, QTimer, QUrl, Signal
+from PySide6.QtGui import QColor, QDesktopServices, QImageReader, QPixmap
 from PySide6.QtWidgets import (
     QAbstractItemView,
     QComboBox,
@@ -38,8 +38,8 @@ from PySide6.QtWidgets import (
 
 from .exporting import export_pricing_json
 from .persistence import load_project, save_project
-from .pricing import PricingService
-from .review import manufacturer_is_configured, summarize_review
+from .pricing import PricingService, effective_component_manufacturer
+from .review import summarize_review
 from .terminals import calculate_terminals
 
 
@@ -51,29 +51,81 @@ COMPONENT_COLUMNS = [
     ("Qty", "quantity"), ("Cable mm²", "cable_size"),
     ("Terminal?", "has_terminal"), ("Incomer?", "is_incomer"),
     ("Manufacturer", "manufacturer"), ("Forced reference", "forced_reference"),
-    ("Decision", "review_status"),
+    ("Pricing scope", "review_status"),
 ]
 
 STATUS_COLORS = {
-    "approved": QColor("#E7F4EA"),
+    "included": QColor("#FFFFFF"),
+    "approved": QColor("#FFFFFF"),
     "excluded": QColor("#ECEFF1"),
-    "needs_review": QColor("#FFF4D6"),
+    "needs_review": QColor("#FFFFFF"),
 }
 
 
+class PricingExportWorker(QObject):
+    """Run catalog matching and Excel generation outside the GUI thread."""
+
+    progress = Signal(str)
+    finished = Signal(str)
+    failed = Signal(str)
+    cancelled = Signal()
+
+    def __init__(self, project_path: Path, database: Path):
+        super().__init__()
+        self.project_path = project_path
+        self.database = database
+
+    def run(self) -> None:
+        def should_cancel() -> bool:
+            return QThread.currentThread().isInterruptionRequested()
+
+        try:
+            project = load_project(self.project_path)
+            pricing_path = self.project_path.parent / "pricing.json"
+            service = PricingService(
+                self.database, progress=self.progress.emit, should_cancel=should_cancel
+            )
+            service.price_project(project, pricing_path)
+            if should_cancel():
+                raise InterruptedError("Pricing cancelled")
+            save_project(project, self.project_path)
+            self.progress.emit("Generating Excel offer")
+            offer_path = export_pricing_json(
+                pricing_path,
+                self.project_path.parent / "offer.xlsx",
+                project.export.visible_columns,
+                project.export.attention,
+            )
+            if should_cancel():
+                raise InterruptedError("Pricing cancelled")
+        except InterruptedError:
+            self.cancelled.emit()
+        except Exception as exc:
+            self.failed.emit(str(exc))
+        else:
+            self.finished.emit(str(offer_path))
+
+
 class ProjectReviewDialog(QDialog):
-    """Editable, keyboard-friendly sign-off surface for a canonical project."""
+    """Editable, keyboard-friendly pricing surface for a canonical project."""
 
     def __init__(self, project_path: str | Path, database: str | Path, parent=None):
         super().__init__(parent)
         self.project_path = Path(project_path)
         self.database = Path(database)
         self.project = load_project(self.project_path)
+        for panel in self.project.panels:
+            for component in panel.components:
+                component.manufacturer = effective_component_manufacturer(self.project, component)
         self._panel_index = 0
         self._loading = False
         self._dirty = False
+        self._pricing_thread: QThread | None = None
+        self._pricing_worker: PricingExportWorker | None = None
+        self._preview_cache: dict[tuple[str, int], QPixmap] = {}
+        self._preview_request = 0
         self.setObjectName("reviewDialog")
-        self.setWindowTitle(f"Panel review — {self.project.name}")
+        self.setWindowTitle(f"Review & price — {self.project.name}")
         self.resize(1460, 900)
         self.setMinimumSize(1080, 680)
         self._build()
@@ -162,8 +214,8 @@ class ProjectReviewDialog(QDialog):
         layout.addWidget(title)
 
         self.panel_filter = QComboBox()
-        self.panel_filter.addItems(["All panels", "Needs review", "Approved"])
-        self.panel_filter.setAccessibleName("Filter panels by review status")
+        self.panel_filter.addItems(["All panels", "Has cross-check notes", "Has exclusions"])
+        self.panel_filter.setAccessibleName("Filter panels by source cross-check notes or exclusions")
         self.panel_filter.currentIndexChanged.connect(self._refresh_panel_list)
         layout.addWidget(self.panel_filter)
 
@@ -234,26 +286,37 @@ class ProjectReviewDialog(QDialog):
         header_layout.insertWidget(1, self.column_view)
         split.addWidget(self.components)
 
-        lower = QTabWidget()
-        lower.setObjectName("reviewTabs")
+        self.lower_tabs = QTabWidget()
+        self.lower_tabs.setObjectName("reviewTabs")
         self.terminals = QTableWidget()
         self.terminals.setColumnCount(4)
         self.terminals.setHorizontalHeaderLabels(["Terminal", "Description", "Qty", "Circuits / warnings"])
         self.terminals.setEditTriggers(QTableWidget.NoEditTriggers)
         self.terminals.verticalHeader().setVisible(False)
         self.terminals.horizontalHeader().setStretchLastSection(True)
-        lower.addTab(self.terminals, "Calculated terminals")
+        self.lower_tabs.addTab(self.terminals, "Calculated terminals")
+
+        self.accessories = QTableWidget()
+        self.accessories.setColumnCount(5)
+        self.accessories.setHorizontalHeaderLabels([
+            "Commercial item", "Manufacturer", "Qty", "Origin", "Calculation note",
+        ])
+        self.accessories.setEditTriggers(QTableWidget.NoEditTriggers)
+        self.accessories.verticalHeader().setVisible(False)
+        self.accessories.horizontalHeader().setStretchLastSection(True)
+        self.lower_tabs.addTab(self.accessories, "Commercial accessories")
 
         self.matches = QTableWidget()
         self.matches.setColumnCount(8)
         self.matches.setHorizontalHeaderLabels([
-            "Component", "Edition", "Chosen reference", "Score", "Tier", "Price", "Review", "Alternatives",
+            "Component", "Edition", "Chosen reference", "Score", "Tier", "Price", "Match status", "Alternatives",
         ])
         self.matches.setEditTriggers(QTableWidget.NoEditTriggers)
         self.matches.verticalHeader().setVisible(False)
         self.matches.horizontalHeader().setStretchLastSection(True)
-        lower.addTab(self.matches, "Pricing candidates")
-        split.addWidget(lower)
+        self.lower_tabs.addTab(self.matches, "Pricing candidates")
+        self.lower_tabs.currentChanged.connect(self._load_active_lower_table)
+        split.addWidget(self.lower_tabs)
         split.setSizes([550, 240])
         layout.addWidget(split, 1)
         return container
@@ -270,7 +333,7 @@ class ProjectReviewDialog(QDialog):
         layout = QVBoxLayout(rail)
         layout.setContentsMargins(14, 14, 14, 14)
         layout.setSpacing(10)
-        title = QLabel("COMPONENT DECISION")
+        title = QLabel("COMPONENT DETAILS")
         title.setObjectName("railTitle")
         layout.addWidget(title)
 
@@ -279,7 +342,7 @@ class ProjectReviewDialog(QDialog):
         self.component_title.setWordWrap(True)
         layout.addWidget(self.component_title)
 
-        self.component_meta = QLabel("Evidence and conflicts will appear here.")
+        self.component_meta = QLabel("Source confidence and pricing scope will appear here.")
         self.component_meta.setObjectName("decisionMeta")
         self.component_meta.setWordWrap(True)
         self.component_meta.setTextInteractionFlags(Qt.TextSelectableByMouse)
@@ -308,7 +371,7 @@ class ProjectReviewDialog(QDialog):
         self.open_evidence_button.clicked.connect(self._open_component_evidence)
         layout.addWidget(self.open_evidence_button)
 
-        conflict_label = QLabel("CONFLICT / NOTES")
+        conflict_label = QLabel("SOURCE CROSS-CHECK NOTES")
         conflict_label.setObjectName("railSection")
         layout.addWidget(conflict_label)
         self.conflict_text = QLabel("No component selected")
@@ -317,23 +380,18 @@ class ProjectReviewDialog(QDialog):
         layout.addWidget(self.conflict_text)
         layout.addStretch(1)
 
-        self.approve_button = QPushButton("Approve selected")
-        self.approve_button.setShortcut("Alt+A")
-        self.approve_button.setToolTip("Approve selected rows (Alt+A). Conflicts require acknowledgement.")
-        self.approve_button.setProperty("variant", "approve")
-        self.review_button = QPushButton("Mark needs review")
-        self.review_button.setShortcut("Alt+R")
-        self.review_button.setToolTip("Return selected rows to review (Alt+R)")
-        self.review_button.setProperty("variant", "warning")
+        self.include_button = QPushButton("Include in pricing")
+        self.include_button.setShortcut("Alt+I")
+        self.include_button.setToolTip("Include selected rows in pricing (Alt+I)")
+        self.include_button.setProperty("variant", "secondary")
         self.exclude_button = QPushButton("Exclude selected")
         self.exclude_button.setShortcut("Alt+E")
         self.exclude_button.setToolTip("Exclude selected rows from pricing (Alt+E)")
         self.exclude_button.setProperty("variant", "danger")
-        for button in (self.approve_button, self.review_button, self.exclude_button):
+        for button in (self.include_button, self.exclude_button):
             button.setEnabled(False)
             layout.addWidget(button)
-        self.approve_button.clicked.connect(lambda: self._set_selected_status("approved"))
-        self.review_button.clicked.connect(lambda: self._set_selected_status("needs_review"))
+        self.include_button.clicked.connect(lambda: self._set_selected_status("included"))
         self.exclude_button.clicked.connect(lambda: self._set_selected_status("excluded"))
         scroll.setWidget(rail)
         return scroll
@@ -349,22 +407,28 @@ class ProjectReviewDialog(QDialog):
         self.save_state = QLabel("All changes saved")
         self.save_state.setObjectName("saveState")
         layout.addWidget(self.save_state)
-        self.save_button = QPushButton("Save review")
+        self.save_button = QPushButton("Save changes")
         self.save_button.setShortcut("Ctrl+S")
-        self.save_button.setToolTip("Save review edits (Ctrl+S)")
+        self.save_button.setToolTip("Save component edits (Ctrl+S)")
         self.save_button.setProperty("variant", "secondary")
         self.save_button.clicked.connect(self.save)
         layout.addWidget(self.save_button)
-        self.price_button = QPushButton("Price approved components")
+        self.price_button = QPushButton("Price & export offer")
         self.price_button.setShortcut("Ctrl+P")
-        self.price_button.setToolTip("Price approved components (Ctrl+P)")
+        self.price_button.setToolTip("Price all included components and export Excel (Ctrl+P)")
         self.price_button.setProperty("variant", "primary")
         self.price_button.clicked.connect(self.save_price_export)
         layout.addWidget(self.price_button)
-        close_button = QPushButton("Close")
-        close_button.setProperty("variant", "secondary")
-        close_button.clicked.connect(self.reject)
-        layout.addWidget(close_button)
+        self.cancel_price_button = QPushButton("Cancel pricing")
+        self.cancel_price_button.setToolTip("Request cancellation after the current catalog batch")
+        self.cancel_price_button.setProperty("variant", "secondary")
+        self.cancel_price_button.setEnabled(False)
+        self.cancel_price_button.clicked.connect(self.cancel_pricing)
+        layout.addWidget(self.cancel_price_button)
+        self.close_button = QPushButton("Close")
+        self.close_button.setProperty("variant", "secondary")
+        self.close_button.clicked.connect(self.reject)
+        layout.addWidget(self.close_button)
         return footer
 
     def _refresh_panel_list(self) -> None:
@@ -379,18 +443,19 @@ class ProjectReviewDialog(QDialog):
         for index, panel in enumerate(self.project.panels):
             if drawing_id and panel.source_drawing_id != drawing_id:
                 continue
-            approved = sum(item.review_status == "approved" for item in panel.components)
             excluded = sum(item.review_status == "excluded" for item in panel.components)
-            pending = len(panel.components) - approved - excluded
-            state = "approved" if pending == 0 and panel.components else "needs_review"
-            if filter_text == "Needs review" and state == "approved":
+            included = len(panel.components) - excluded
+            note_rows = sum(bool(item.conflicts or item.notes) for item in panel.components if item.review_status != "excluded")
+            if filter_text == "Has cross-check notes" and not note_rows:
                 continue
-            if filter_text == "Approved" and state != "approved":
+            if filter_text == "Has exclusions" and not excluded:
                 continue
-            suffix = "APPROVED" if state == "approved" else f"{pending} TO REVIEW"
+            suffix = f"{included} INCLUDED"
+            if note_rows:
+                suffix += f" · {note_rows} NOTES"
             item = QListWidgetItem(f"{panel.reference}\n{len(panel.components)} items · {suffix}")
             item.setData(Qt.UserRole, index)
-            item.setToolTip(f"{approved} approved, {excluded} excluded, {pending} need review")
+            item.setToolTip(f"{included} included, {excluded} excluded, {note_rows} with cross-check notes")
             self.panel_list.addItem(item)
             if panel.id == selected_id:
                 selected_item = item
@@ -402,7 +467,7 @@ class ProjectReviewDialog(QDialog):
         summary = summarize_review(self.project)
         self.panel_totals.setText(
             f"{len(self.project.panels)} panels\n"
-            f"{summary.approved} approved · {summary.needs_review} to review · {summary.excluded} excluded"
+            f"{summary.included} included · {summary.excluded} excluded · {summary.conflicts} cross-check notes"
         )
 
     def _panel_selected(self, current, previous) -> None:
@@ -433,20 +498,33 @@ class ProjectReviewDialog(QDialog):
         self.panel_reference_edit.setCurrentText(panel.reference)
         self.panel_reference_edit.blockSignals(False)
         self.panel_heading.setText(f"EXTRACTED BOM — {panel.reference}")
-        self.components.setRowCount(len(panel.components))
-        for row, component in enumerate(panel.components):
-            for column, (_, attribute) in enumerate(COMPONENT_COLUMNS):
-                item = QTableWidgetItem(str(getattr(component, attribute)))
-                if attribute == "review_status":
-                    item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-                self.components.setItem(row, column, item)
-            self._style_component_row(row, component)
-        widths = [92, 96, 62, 70, 58, 118, 92, 78, 82, 105, 52, 82, 72, 68, 112, 124, 100]
-        for column, width in enumerate(widths):
-            self.components.setColumnWidth(column, width)
+        self.components.setUpdatesEnabled(False)
+        self.components.blockSignals(True)
+        try:
+            self.components.setRowCount(len(panel.components))
+            for row, component in enumerate(panel.components):
+                for column, (_, attribute) in enumerate(COMPONENT_COLUMNS):
+                    value = getattr(component, attribute)
+                    if attribute == "review_status":
+                        value = "Excluded" if component.review_status == "excluded" else "Included"
+                    item = QTableWidgetItem(str(value))
+                    if attribute == "review_status":
+                        item.setFlags(item.flags() & ~Qt.ItemIsEditable)
+                    self.components.setItem(row, column, item)
+                self._style_component_row(row, component)
+        finally:
+            self.components.blockSignals(False)
+            self.components.setUpdatesEnabled(True)
+        if not getattr(self, "_component_widths_initialized", False):
+            widths = [92, 96, 62, 70, 58, 118, 92, 78, 82, 105, 52, 82, 72, 68, 112, 124, 100]
+            for column, width in enumerate(widths):
+                self.components.setColumnWidth(column, width)
+            self._component_widths_initialized = True
         self._set_column_view()
-        self._load_terminals(panel)
-        self._load_matches(panel)
+        self.terminals.setRowCount(0)
+        self.accessories.setRowCount(0)
+        self.matches.setRowCount(0)
+        self._load_active_lower_table(self.lower_tabs.currentIndex())
         self._loading = False
         if panel.components:
             self.components.selectRow(0)
@@ -494,7 +572,7 @@ class ProjectReviewDialog(QDialog):
         if panel.reference == reference:
             return
         panel.reference = reference
-        panel.review_status = "needs_review"
+        panel.review_status = "included"
         self._dirty = True
         self._save_quiet()
         self._refresh_panel_list()
@@ -502,7 +580,7 @@ class ProjectReviewDialog(QDialog):
 
     def _style_component_row(self, row: int, component) -> None:
         base = STATUS_COLORS.get(component.review_status, STATUS_COLORS["needs_review"])
-        if component.conflicts and component.review_status == "needs_review":
+        if component.conflicts and component.review_status != "excluded":
             base = QColor("#FFE8B0")
         for column in range(self.components.columnCount()):
             item = self.components.item(row, column)
@@ -551,15 +629,14 @@ class ProjectReviewDialog(QDialog):
                     self._dirty = True
         panel.terminals = calculate_terminals(panel.components, panel.id)
         self._update_panel_status(panel)
-        self._load_terminals(panel)
+        if self.lower_tabs.currentIndex() == 0:
+            self._load_terminals(panel)
 
     @staticmethod
     def _update_panel_status(panel) -> None:
-        panel.review_status = (
-            "approved"
-            if panel.components and all(item.review_status in {"approved", "excluded"} for item in panel.components)
-            else "needs_review"
-        )
+        panel.review_status = "included" if any(
+            item.review_status != "excluded" for item in panel.components
+        ) else "excluded"
 
     def _selected_rows(self) -> list[int]:
         return sorted({index.row() for index in self.components.selectionModel().selectedRows()})
@@ -576,38 +653,11 @@ class ProjectReviewDialog(QDialog):
         panel = self.project.panels[self._panel_index]
         for row in rows:
             component = panel.components[row]
-            if status == "approved" and component.conflicts and not component.conflicts_acknowledged:
-                answer = QMessageBox.question(
-                    self,
-                    "Acknowledge extraction conflict",
-                    f"{component.label or component.category} has an unresolved extraction conflict:\n\n"
-                    + "\n".join(component.conflicts)
-                    + "\n\nApprove this row and record that you reviewed the conflict?",
-                    QMessageBox.Yes | QMessageBox.No,
-                    QMessageBox.No,
-                )
-                if answer != QMessageBox.Yes:
-                    continue
-                component.conflicts_acknowledged = True
-            if status == "approved" and not manufacturer_is_configured(self.project, component):
-                answer = QMessageBox.question(
-                    self,
-                    "Confirm manufacturer override",
-                    f"{component.manufacturer or '(blank)'} has no configured price-list edition.\n\n"
-                    "Approve this row and record the manufacturer as an explicit manual override?",
-                    QMessageBox.Yes | QMessageBox.No,
-                    QMessageBox.No,
-                )
-                if answer != QMessageBox.Yes:
-                    continue
-                component.manufacturer_override_confirmed = True
             component.review_status = status
-            if status != "approved":
-                component.conflicts_acknowledged = False
             self._style_component_row(row, component)
             decision_item = self.components.item(row, len(COMPONENT_COLUMNS) - 1)
             if decision_item:
-                decision_item.setText(status)
+                decision_item.setText("Excluded" if status == "excluded" else "Included")
         self._update_panel_status(panel)
         self._dirty = True
         self._save_quiet()
@@ -618,12 +668,12 @@ class ProjectReviewDialog(QDialog):
     def _show_selected_component(self) -> None:
         rows = self._selected_rows()
         enabled = bool(rows)
-        for button in (self.approve_button, self.review_button, self.exclude_button):
+        for button in (self.include_button, self.exclude_button):
             button.setEnabled(enabled)
         self.open_evidence_button.setEnabled(enabled)
         if not rows or not self.project.panels:
             self.component_title.setText("Select a BOM row")
-            self.component_meta.setText("Evidence and conflicts will appear here.")
+            self.component_meta.setText("Source confidence and pricing scope will appear here.")
             self.evidence_text.clear()
             self.conflict_text.setText("No component selected")
             self.evidence_preview.setText("No render available")
@@ -636,8 +686,9 @@ class ProjectReviewDialog(QDialog):
         self.component_meta.setText(
             f"Quantity  {component.quantity}\n"
             f"Manufacturer  {manufacturer}\n"
-            f"Confidence  {component.confidence:.0%}\n"
-            f"Decision  {component.review_status.replace('_', ' ')}"
+            f"Source confidence  {component.confidence:.0%}\n"
+            f"Pricing scope  {'Excluded' if component.review_status == 'excluded' else 'Included'}\n"
+            f"Interpretation  {'Cross-checked; extracted value preserved' if component.conflicts else 'As extracted'}"
         )
         evidence_lines = []
         for evidence in component.evidence:
@@ -655,20 +706,61 @@ class ProjectReviewDialog(QDialog):
         conflict_lines = [*component.conflicts]
         if component.notes:
             conflict_lines.append(component.notes)
-        self.conflict_text.setText("\n".join(conflict_lines) if conflict_lines else "No unresolved extraction conflict.")
-        self._load_render_preview(panel)
+        self.conflict_text.setText("\n".join(conflict_lines) if conflict_lines else "No source discrepancy noted.")
+        self._queue_render_preview(panel)
 
-    def _load_render_preview(self, panel) -> None:
+    def _queue_render_preview(self, panel) -> None:
+        self._preview_request += 1
+        request = self._preview_request
+        panel_id = panel.id
+        render_paths = tuple(panel.render_paths)
+        self.evidence_preview.setPixmap(QPixmap())
+        self.evidence_preview.setText("Loading preview…")
+        QTimer.singleShot(
+            0, lambda: self._load_render_preview(panel_id, render_paths, request)
+        )
+
+    def _load_render_preview(
+        self, panel_id: str, render_paths: tuple[str, ...], request: int
+    ) -> None:
+        if request != self._preview_request:
+            return
+        if not self.project.panels or self.project.panels[self._panel_index].id != panel_id:
+            return
+        path = next((Path(value) for value in render_paths if Path(value).exists()), None)
         path = next((Path(value) for value in panel.render_paths if Path(value).exists()), None)
         if path is None:
             self.evidence_preview.setPixmap(QPixmap())
             self.evidence_preview.setText("No render available")
             return
-        pixmap = QPixmap(str(path))
+        cache_key = (str(path), path.stat().st_mtime_ns)
+        pixmap = self._preview_cache.get(cache_key)
+        if pixmap is None:
+            reader = QImageReader(str(path))
+            source_size = reader.size()
+            if source_size.isValid():
+                source_size.scale(QSize(530, 300), Qt.KeepAspectRatio)
+                reader.setScaledSize(source_size)
+            image = reader.read()
+            pixmap = QPixmap.fromImage(image)
+            if not pixmap.isNull():
+                self._preview_cache.clear()
+                self._preview_cache[cache_key] = pixmap
         if pixmap.isNull():
             self.evidence_preview.setText("Render could not be loaded")
             return
         self.evidence_preview.setPixmap(pixmap.scaled(265, 150, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+
+    def _load_active_lower_table(self, index: int) -> None:
+        if not self.project.panels or not hasattr(self, "lower_tabs"):
+            return
+        panel = self.project.panels[self._panel_index]
+        if index == 0:
+            self._load_terminals(panel)
+        elif index == 1:
+            self._load_accessories(panel)
+        elif index == 2:
+            self._load_matches(panel)
 
     def _load_terminals(self, panel) -> None:
         self.terminals.setRowCount(len(panel.terminals))
@@ -680,6 +772,17 @@ class ProjectReviewDialog(QDialog):
             for column, value in enumerate(values):
                 self.terminals.setItem(row, column, QTableWidgetItem(str(value)))
         self.terminals.resizeColumnsToContents()
+
+    def _load_accessories(self, panel) -> None:
+        self.accessories.setRowCount(len(panel.commercial_accessories))
+        for row, accessory in enumerate(panel.commercial_accessories):
+            values = [
+                accessory.description, accessory.manufacturer, accessory.quantity,
+                accessory.origin, accessory.notes,
+            ]
+            for column, value in enumerate(values):
+                self.accessories.setItem(row, column, QTableWidgetItem(str(value)))
+        self.accessories.resizeColumnsToContents()
 
     def _load_matches(self, panel) -> None:
         component_ids = {component.id: component for component in panel.components}
@@ -702,19 +805,20 @@ class ProjectReviewDialog(QDialog):
         summary = summarize_review(self.project)
         if summary.ready_for_pricing:
             self.gate_label.setText(
-                f"READY FOR PRICING · {summary.approved} approved · {summary.excluded} excluded"
+                f"READY TO PRICE · {summary.included} included · {summary.excluded} excluded · "
+                f"{summary.conflicts} with source cross-check notes"
             )
             self.gate_label.setProperty("state", "ready")
             self.price_button.setEnabled(True)
-            self.panel_status.setText("REVIEW COMPLETE")
+            self.panel_status.setText("READY TO PRICE")
             self.panel_status.setProperty("state", "complete")
         else:
             self.gate_label.setText(
-                f"PRICING LOCKED · {summary.needs_review} decisions remaining · {summary.conflicts} rows carry conflicts"
+                "NOTHING TO PRICE · include at least one component with a valid quantity"
             )
             self.gate_label.setProperty("state", "blocked")
             self.price_button.setEnabled(False)
-            self.panel_status.setText("REVIEW REQUIRED")
+            self.panel_status.setText("NO INCLUDED ITEMS")
             self.panel_status.setProperty("state", "blocked")
         for widget in (self.gate_label, self.panel_status):
             widget.style().unpolish(widget)
@@ -759,12 +863,13 @@ class ProjectReviewDialog(QDialog):
             )
             self._load_matches(self.project.panels[self._panel_index])
         except Exception as exc:
-            QMessageBox.critical(self, "Pricing blocked", str(exc))
+            QMessageBox.critical(self, "Pricing/export failed", str(exc))
             return
         QMessageBox.information(
             self,
-            "Offer updated",
-            f"Pricing JSON and the Excel offer were regenerated.\n\n{offer_path}",
+            "Offer exported",
+            f"All included components were priced and the Excel offer was regenerated.\n"
+            f"You can keep editing and export again whenever needed.\n\n{offer_path}",
         )
 
     def reject(self) -> None:
