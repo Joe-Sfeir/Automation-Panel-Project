@@ -55,9 +55,19 @@ def export_pricing_json(
             item["panel_reference"] = panel.get("panel_reference", "")
             sheet.append([item.get(COLUMNS[column][1], "") for column in columns])
     sheet.append([])
-    sheet.append(["Subtotal (HT)", payload.get("grand_ht", 0.0)])
-    sheet.append([f"TVA ({float(payload.get('tva_rate', 0)):.1%})", payload.get("tva", 0.0)])
-    sheet.append(["Total (TTC)", payload.get("grand_ttc", 0.0)])
+    totals_by_currency = payload.get("totals_by_currency", {})
+    if totals_by_currency:
+        for currency, totals in totals_by_currency.items():
+            sheet.append([f"Subtotal (HT) — {currency}", totals.get("grand_ht", 0.0)])
+            sheet.append([
+                f"TVA ({float(payload.get('tva_rate', 0)):.1%}) — {currency}",
+                totals.get("tva", 0.0),
+            ])
+            sheet.append([f"Total (TTC) — {currency}", totals.get("grand_ttc", 0.0)])
+    else:
+        sheet.append(["Subtotal (HT)", payload.get("grand_ht", 0.0)])
+        sheet.append([f"TVA ({float(payload.get('tva_rate', 0)):.1%})", payload.get("tva", 0.0)])
+        sheet.append(["Total (TTC)", payload.get("grand_ttc", 0.0)])
     for column_index, column in enumerate(columns, 1):
         width = 16
         if column in {"description", "reference"}:

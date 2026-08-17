@@ -62,6 +62,8 @@ class Component:
     quantity: int = 1
     manufacturer: str = ""
     forced_reference: str = ""
+    forced_unit_price: float | None = None
+    forced_currency: str = ""
     has_terminal: bool = False
     is_incomer: bool = False
     confidence: float = 0.0
@@ -71,6 +73,8 @@ class Component:
     review_status: str = "included"
     conflicts_acknowledged: bool = False
     manufacturer_override_confirmed: bool = False
+    ai_review_required: bool = False
+    ai_suggestion_note: str = ""
     conflicts: list[str] = field(default_factory=list)
     overrides: list[OverrideRecord] = field(default_factory=list)
 
@@ -144,6 +148,19 @@ class CandidateMatch:
     price: float
     currency: str
     score: float
+    manufacturer: str = ""
+    edition: str = ""
+    year: int = 0
+    half: str = ""
+    family: str = ""
+    category: str = ""
+    product_kind: str = ""
+    poles: str = "-"
+    amps: str = "-"
+    sensitivity: str = "-"
+    recommendation_kind: str = ""
+    reason: str = ""
+    requires_engineering_review: bool = False
 
 
 @dataclass
@@ -154,6 +171,7 @@ class MatchResult:
     chosen_reference: str = ""
     chosen_description: str = ""
     alternatives: list[CandidateMatch] = field(default_factory=list)
+    recommendations: list[CandidateMatch] = field(default_factory=list)
     score: float = 0.0
     tier: str = "NF"
     unit_price: float = 0.0
@@ -249,7 +267,12 @@ def project_from_dict(data: dict[str, Any]) -> ProjectDocument:
     results = []
     for row in data.get("match_results", []):
         alternatives = [_construct(CandidateMatch, item) for item in row.get("alternatives", [])]
-        results.append(_construct(MatchResult, row, alternatives=alternatives))
+        recommendations = [
+            _construct(CandidateMatch, item) for item in row.get("recommendations", [])
+        ]
+        results.append(_construct(
+            MatchResult, row, alternatives=alternatives, recommendations=recommendations
+        ))
     pricing = _construct(PricingConfiguration, data.get("pricing", {}))
     export = _construct(ExportConfiguration, data.get("export", {}))
     return _construct(

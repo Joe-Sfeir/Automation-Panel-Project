@@ -37,7 +37,6 @@ from PySide6.QtWidgets import (
     QMessageBox,
     QPushButton,
     QProgressBar,
-    QProgressDialog,
     QSpinBox,
     QStackedWidget,
     QTableWidget,
@@ -1033,9 +1032,101 @@ class ImportExcelDialog(QDialog):
         super().accept()
 
 
+class ImportRunDialog(QDialog):
+    """Live, terminal-style view of a price-list import."""
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        super().__init__(parent)
+        self._running = True
+        self.setWindowTitle("Import Excel to Pricing DB")
+        self.resize(900, 600)
+        self.setMinimumSize(700, 460)
+        self.setWindowModality(Qt.WindowModal)
+
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(18, 18, 18, 18)
+        layout.setSpacing(12)
+        header = QHBoxLayout()
+        title = QLabel("PRICE-LIST IMPORT")
+        title.setObjectName("sectionTitle")
+        self.status = QLabel("RUNNING")
+        self.status.setObjectName("statusChip")
+        self.status.setProperty("state", "running")
+        header.addWidget(title)
+        header.addStretch(1)
+        header.addWidget(self.status)
+        layout.addLayout(header)
+
+        self.summary = QLabel("Reading workbook and preparing catalog families…")
+        self.summary.setObjectName("sectionDesc")
+        self.summary.setWordWrap(True)
+        layout.addWidget(self.summary)
+        self.progress = QProgressBar()
+        self.progress.setRange(0, 0)
+        self.progress.setTextVisible(False)
+        layout.addWidget(self.progress)
+
+        self.terminal = QTextEdit()
+        self.terminal.setObjectName("terminal")
+        self.terminal.setReadOnly(True)
+        self.terminal.setAccessibleName("Live price-list import log")
+        self.terminal.setPlaceholderText("Import output will appear here…")
+        layout.addWidget(self.terminal, 1)
+
+        controls = QHBoxLayout()
+        self.copy_button = QPushButton("Copy log")
+        set_button_variant(self.copy_button, "secondary")
+        self.copy_button.clicked.connect(
+            lambda: QApplication.clipboard().setText(self.terminal.toPlainText())
+        )
+        self.close_button = QPushButton("Close")
+        set_button_variant(self.close_button, "primary")
+        self.close_button.setEnabled(False)
+        self.close_button.clicked.connect(self.accept)
+        controls.addWidget(self.copy_button)
+        controls.addStretch(1)
+        controls.addWidget(self.close_button)
+        layout.addLayout(controls)
+
+    def append_log(self, line: str) -> None:
+        self.terminal.append(str(line))
+        bar = self.terminal.verticalScrollBar()
+        bar.setValue(bar.maximum())
+
+    def finish_success(self, text: str) -> None:
+        self._running = False
+        self.progress.setRange(0, 1)
+        self.progress.setValue(1)
+        self.status.setText("COMPLETE")
+        self.status.setProperty("state", "complete")
+        self.summary.setText(text)
+        self.append_log("\n=== IMPORT COMPLETE ===")
+        self.close_button.setEnabled(True)
+        for widget in (self.status,):
+            widget.style().unpolish(widget)
+            widget.style().polish(widget)
+
+    def finish_failure(self, text: str) -> None:
+        self._running = False
+        self.progress.setRange(0, 1)
+        self.progress.setValue(0)
+        self.status.setText("FAILED")
+        self.status.setProperty("state", "blocked")
+        self.summary.setText("Import failed. The log below contains the recovery details.")
+        self.append_log(f"\n[ERROR] {text}")
+        self.close_button.setEnabled(True)
+        self.status.style().unpolish(self.status)
+        self.status.style().polish(self.status)
+
+    def reject(self) -> None:  # type: ignore[override]
+        if not self._running:
+            super().reject()
+
+
 class ExcelImportWorker(QObject):
     finished = Signal(dict)
     failed = Signal(str)
+    log = Signal(str)
 
     def __init__(
         self,
@@ -1089,7 +1180,7 @@ class ExcelImportWorker(QObject):
             return self._run_python_script_embedded()
 
         cmd = [self.python_executable, str(self.script_path), *self.script_args]
-        proc = subprocess.run(
+        proc = subprocess.Popen(
             cmd,
             cwd=str(PROJECT_ROOT),
             env=self.env,
@@ -1098,27 +1189,39 @@ class ExcelImportWorker(QObject):
             text=True,
             encoding="utf-8",
             errors="replace",
+            bufsize=1,
         )
-        return proc.returncode, proc.stdout or ""
+        lines: list[str] = []
+        assert proc.stdout is not None
+        for raw in proc.stdout:
+            line = raw.rstrip("\r\n")
+            lines.append(line)
+            self.log.emit(line)
+        return proc.wait(), "\n".join(lines)
 
     def _run_python_script_embedded(self) -> tuple[int, str]:
         lines: list[str] = []
 
         class _Stream(io.TextIOBase):
-            def __init__(self, sink: list[str]) -> None:
+            def __init__(self, sink: list[str], emit) -> None:
                 self._buf = ""
                 self._sink = sink
+                self._emit = emit
 
             def write(self, s: str) -> int:
                 self._buf += s
                 while "\n" in self._buf:
                     line, self._buf = self._buf.split("\n", 1)
-                    self._sink.append(line.rstrip("\r"))
+                    line = line.rstrip("\r")
+                    self._sink.append(line)
+                    self._emit(line)
                 return len(s)
 
             def flush(self) -> None:
                 if self._buf:
-                    self._sink.append(self._buf.rstrip("\r"))
+                    line = self._buf.rstrip("\r")
+                    self._sink.append(line)
+                    self._emit(line)
                     self._buf = ""
 
         overrides = {}
@@ -1132,7 +1235,7 @@ class ExcelImportWorker(QObject):
 
         old_argv = sys.argv[:]
         old_cwd = Path.cwd()
-        stream = _Stream(lines)
+        stream = _Stream(lines, self.log.emit)
         code = 0
 
         try:
@@ -1146,6 +1249,7 @@ class ExcelImportWorker(QObject):
         except Exception as exc:
             code = 1
             lines.append(str(exc))
+            self.log.emit(str(exc))
         finally:
             stream.flush()
             os.chdir(old_cwd)
@@ -1174,11 +1278,35 @@ class ExcelImportWorker(QObject):
                     (self.manufacturer.upper(), int(self.year), self.half),
                 ).fetchone()[0]
             )
+            product_columns = {
+                str(row[1]) for row in conn.execute("PRAGMA table_info(products)").fetchall()
+            }
+            if {"family_id", "classification_source"}.issubset(product_columns):
+                classified_products, ai_classified_products = conn.execute(
+                    """
+                    SELECT
+                        SUM(CASE WHEN p.family_id IS NOT NULL THEN 1 ELSE 0 END),
+                        SUM(CASE WHEN p.classification_source LIKE 'ai%' THEN 1 ELSE 0 END)
+                    FROM products p
+                    JOIN ppl_editions pe ON pe.id = p.ppl_edition_id
+                    JOIN manufacturers m ON m.id = pe.manufacturer_id
+                    WHERE UPPER(m.name) = ? AND pe.year = ? AND pe.half = ?
+                    """,
+                    (self.manufacturer.upper(), int(self.year), self.half),
+                ).fetchone()
+                classified_products = int(classified_products or 0)
+                ai_classified_products = int(ai_classified_products or 0)
+            else:
+                classified_products = 0
+                ai_classified_products = 0
         finally:
             conn.close()
         return {
             "total_products": total_products,
             "edition_products": edition_products,
+            "classified_products": classified_products,
+            "ai_classified_products": ai_classified_products,
+            "unclassified_products": max(0, edition_products - classified_products),
         }
 
 
@@ -1830,7 +1958,7 @@ class ProjectPage(QWidget):
         self.open_output_btn = QPushButton("Open project folder")
         set_button_variant(self.open_output_btn, "secondary")
         self.open_output_btn.setEnabled(False)
-        self.review_btn = QPushButton("Review or price project")
+        self.review_btn = QPushButton("Review & price offer")
         set_button_variant(self.review_btn, "primary")
         self.review_btn.setEnabled(False)
         self.cancel_btn = QPushButton("Cancel after current drawing")
@@ -2195,7 +2323,11 @@ class PricingDbPage(QWidget):
             self._set_status(f"Failed to read tables: {exc}")
             return
 
-        preferred = ["products", "ppl_editions", "manufacturers", "product_keywords", "term_aliases", "match_log"]
+        preferred = [
+            "products", "product_families", "family_patterns", "ppl_editions",
+            "manufacturers", "product_keywords", "term_aliases", "match_log",
+            "catalog_ai_cache", "ai_match_cache",
+        ]
         ordered = [name for name in preferred if name in names] + [name for name in names if name not in preferred]
 
         self.table_picker.blockSignals(True)
@@ -2489,7 +2621,7 @@ class MainWindow(QMainWindow):
         self.worker: ProjectWorker | None = None
         self.import_thread: QThread | None = None
         self.import_worker: ExcelImportWorker | None = None
-        self.import_progress: QProgressDialog | None = None
+        self.import_progress: ImportRunDialog | None = None
 
         self._build_ui()
         self.project_page.apply_defaults(self.cfg)
@@ -2653,6 +2785,10 @@ class MainWindow(QMainWindow):
         if not project_path.exists():
             QMessageBox.warning(self, "Review unavailable", f"Project file not found: {project_path}")
             return
+        if (self.cfg.gemini_api_key or "").strip():
+            os.environ["GEMINI_API_KEY"] = self.cfg.gemini_api_key.strip()
+        if (self.cfg.gemini_model or "").strip():
+            os.environ["GEMINI_API_MODEL"] = self.cfg.gemini_model.strip()
         ProjectReviewDialog(project_path, self.cfg.db_path, self).exec()
 
     def _nav_to_project(self) -> None:
@@ -2759,11 +2895,13 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "Import Failed", str(exc))
             return
 
-        self.import_progress = QProgressDialog("Importing Excel into database...", "", 0, 0, self)
-        self.import_progress.setWindowTitle("Import Running")
-        self.import_progress.setCancelButton(None)
-        self.import_progress.setMinimumDuration(0)
-        self.import_progress.setWindowModality(Qt.WindowModal)
+        self.import_progress = ImportRunDialog(self)
+        self.import_progress.append_log(
+            f"Workbook: {excel_path.name}\n"
+            f"Manufacturer: {str(payload['manufacturer']).upper()} · "
+            f"{payload['year']} {payload['half']} · {payload['currency']}\n"
+            f"Database: {db_path}\n"
+        )
         self.import_progress.show()
 
         self.import_thread = QThread()
@@ -2779,6 +2917,7 @@ class MainWindow(QMainWindow):
         )
         self.import_worker.moveToThread(self.import_thread)
         self.import_thread.started.connect(self.import_worker.run)
+        self.import_worker.log.connect(self.import_progress.append_log)
         self.import_worker.finished.connect(self.on_import_excel_finished)
         self.import_worker.failed.connect(self.on_import_excel_failed)
         self.import_worker.finished.connect(self.import_thread.quit)
@@ -2809,9 +2948,6 @@ class MainWindow(QMainWindow):
         legacy_env.write_text(body + "\n", encoding="utf-8")
 
     def on_import_excel_finished(self, payload: dict) -> None:
-        if self.import_progress is not None:
-            self.import_progress.close()
-
         db_path = payload.get("db_path", "")
         summary = payload.get("summary", {})
         self.cfg.db_path = str(db_path)
@@ -2822,28 +2958,28 @@ class MainWindow(QMainWindow):
         self.nav_pricing_db.setChecked(True)
         self.show_pricing_db()
 
-        QMessageBox.information(
-            self,
-            "Import Complete",
-            (
+        completion_text = (
                 "Excel was imported successfully.\n\n"
                 f"DB switched to: {db_path}\n"
                 f"Edition products imported: {summary.get('edition_products', 0)}\n"
+                f"Assigned to product families: {summary.get('classified_products', 0)} "
+                f"({summary.get('ai_classified_products', 0)} by AI)\n"
+                f"Unclassified: {summary.get('unclassified_products', 0)}\n"
                 f"Total products in DB: {summary.get('total_products', 0)}"
-            ),
         )
+        if self.import_progress is not None:
+            self.import_progress.finish_success(completion_text)
 
     def on_import_excel_failed(self, error: str) -> None:
         if self.import_progress is not None:
-            self.import_progress.close()
-        QMessageBox.warning(self, "Import Failed", error)
+            self.import_progress.finish_failure(error)
+        else:
+            QMessageBox.warning(self, "Import Failed", error)
 
     def _cleanup_import_worker(self) -> None:
         self.import_worker = None
         self.import_thread = None
-        if self.import_progress is not None:
-            self.import_progress.close()
-        self.import_progress = None
+        # Keep the completed terminal visible until the user closes it.
 
     def refresh_brands(self) -> None:
         brands = fetch_brands(self.cfg.db_path)
@@ -2971,6 +3107,7 @@ class MainWindow(QMainWindow):
         self._refresh_home_overview()
         
         self.project_page.log.append("\n=== EXTRACTION COMPLETE — REVIEW REQUIRED BEFORE PRICING ===")
+        QTimer.singleShot(0, self.open_project_review)
 
     def cancel_project(self) -> None:
         if self.worker_thread is None:

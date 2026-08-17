@@ -1,4 +1,5 @@
 import sqlite3
+import pytest
 
 from app.domain import Component, Panel, ProjectDocument
 from app.pricing import PricingService
@@ -47,6 +48,10 @@ def test_component_manufacturer_and_forced_reference_are_respected(tmp_path):
     assert by_id["c2"].manufacturer == "EATON"
     assert by_id["c2"].currency == "USD"
     assert payload["currencies"] == ["EUR", "USD"]
+    assert payload["grand_ht"] is None
+    assert payload["grand_ttc"] is None
+    assert payload["totals_by_currency"]["EUR"]["grand_ht"] == 20.0
+    assert payload["totals_by_currency"]["USD"]["grand_ht"] == 12.0
 
 
 def test_pricing_includes_extracted_rows_without_approval_and_skips_excluded(tmp_path):
@@ -62,7 +67,7 @@ def test_pricing_includes_extracted_rows_without_approval_and_skips_excluded(tmp
     assert [item.component_id for item in project.match_results] == ["c1"]
 
 
-def test_single_selected_project_brand_overrides_stale_component_brand(tmp_path):
+def test_component_manufacturer_remains_authoritative_with_one_project_edition(tmp_path):
     database = tmp_path / "pricing.db"
     make_database(database)
     project = ProjectDocument.create("Test")
@@ -74,8 +79,22 @@ def test_single_selected_project_brand_overrides_stale_component_brand(tmp_path)
 
     PricingService(database).price_project(project, tmp_path / "pricing.json")
 
-    assert project.match_results[0].manufacturer == "SCHNEIDER"
-    assert project.match_results[0].chosen_reference == "A9F74116"
+    assert project.match_results[0].manufacturer == "LEGRAND"
+    assert project.match_results[0].chosen_reference == ""
+    assert project.match_results[0].note == "Price-list edition is not installed"
+
+
+def test_pricing_can_be_cancelled_before_catalog_work(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    project = ProjectDocument.create("Test")
+    project.pricing.editions = {"SCHNEIDER": {"year": 2026, "half": "H1"}}
+    project.panels.append(Panel("panel", "P1", "", components=[Component("c1")]))
+
+    with pytest.raises(InterruptedError, match="cancelled"):
+        PricingService(database, should_cancel=lambda: True).price_project(
+            project, tmp_path / "pricing.json"
+        )
 
 
 def test_structured_specs_reject_wrong_breaker_rating(tmp_path):
@@ -112,6 +131,33 @@ def test_equivalent_switch_families_are_not_silently_auto_selected(tmp_path):
     assert all(item.reference != "HANDLE40" for item in result.alternatives)
 
 
+def test_breaker_only_curve_and_breaking_capacity_do_not_block_switch_matching(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    service = PricingService(database)
+    with sqlite3.connect(database) as connection:
+        connection.row_factory = sqlite3.Row
+        aliases = {
+            str(row["alias"]).lower(): str(row["canonical"]).lower()
+            for row in connection.execute("SELECT alias, canonical FROM term_aliases")
+        }
+        result = service._match(
+            connection,
+            aliases,
+            Component(
+                "c", category="SWITCH", poles="4P", amps="40A",
+                curve="C", breaking_capacity="6kA",
+            ),
+            "SCHNEIDER",
+            2026,
+            "H1",
+            {},
+        )
+
+    assert result.chosen_reference in {"ISW40", "INS40"}
+    assert result.review_status == "check_candidate"
+
+
 def test_rccb_rating_is_never_upsized_during_pricing(tmp_path):
     database = tmp_path / "pricing.db"
     make_database(database)
@@ -127,3 +173,69 @@ def test_rccb_rating_is_never_upsized_during_pricing(tmp_path):
     assert result.chosen_reference == ""
     assert result.review_status == "unmatched"
     assert all(item.reference != "RCCB25" for item in result.alternatives)
+
+
+def test_real_rccb_10a_case_recommends_25a_but_rejects_10a_rcbo(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    with sqlite3.connect(database) as connection:
+        connection.execute(
+            "INSERT INTO products VALUES (9, 10, 'A9D34610', NULL, ?, 91.17)",
+            ("IDPNA VIGI 10A C 30MA AC-TYPE RESIDUAL CIRCUIT BREAKER",),
+        )
+        connection.commit()
+
+    service = PricingService(database)
+    with sqlite3.connect(database) as connection:
+        connection.row_factory = sqlite3.Row
+        aliases = {
+            str(row["alias"]).lower(): str(row["canonical"]).lower()
+            for row in connection.execute("SELECT alias, canonical FROM term_aliases")
+        }
+        result = service._match(
+            connection,
+            aliases,
+            Component(
+                "c", category="RCCB", poles="4P", amps="10A", sensitivity="30mA"
+            ),
+            "SCHNEIDER",
+            2026,
+            "H1",
+            {},
+        )
+
+    assert result.review_status == "unmatched"
+    assert result.chosen_reference == ""
+    references = {item.reference for item in result.recommendations}
+    assert "RCCB25" in references
+    assert "A9D34610" not in references
+    candidate = next(item for item in result.recommendations if item.reference == "RCCB25")
+    assert candidate.recommendation_kind == "same_manufacturer_nearest"
+    assert candidate.requires_engineering_review
+
+
+def test_other_manufacturer_exact_rating_is_recommended_not_auto_selected(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    with sqlite3.connect(database) as connection:
+        connection.execute(
+            "INSERT INTO products VALUES (9, 20, 'PFIM-10/4/003', NULL, ?, 72.0)",
+            ("RCCB 4P 10A 30mA AC",),
+        )
+        connection.commit()
+    project = ProjectDocument.create("Cross-brand recommendations")
+    project.pricing.editions = {"SCHNEIDER": {"year": 2026, "half": "H1"}}
+    project.panels.append(Panel("panel", "P1", "", components=[
+        Component("c", category="RCCB", poles="4P", amps="10A", sensitivity="30mA")
+    ]))
+
+    PricingService(database).price_project(project, tmp_path / "pricing.json")
+
+    result = project.match_results[0]
+    assert result.review_status == "unmatched"
+    candidate = next(
+        item for item in result.recommendations if item.reference == "PFIM-10/4/003"
+    )
+    assert candidate.manufacturer == "EATON"
+    assert candidate.recommendation_kind == "other_manufacturer_exact"
+    assert not candidate.requires_engineering_review

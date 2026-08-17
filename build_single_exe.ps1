@@ -1,18 +1,8 @@
 param(
-    [string]$Python = "python"
+    [string]$Python = ".venv\Scripts\python.exe",
+    [switch]$InstallDependencies
 )
 
-$ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-Set-Location $root
-
-Write-Host "Installing build/runtime dependencies..."
-& $Python -m pip install --upgrade pip
-& $Python -m pip install -r requirements.txt pyinstaller
-
-Write-Host "Building one-file executable..."
-& $Python -m PyInstaller --clean --noconfirm app/automation_onefile.spec
-
-Write-Host ""
-Write-Host "Build complete."
-Write-Host "Executable: $root\\dist\\TechnicatAutomation.exe"
+Write-Warning "The one-file build is retired because it extracts 97 MB on every launch. Building the stable one-folder app instead."
+& "$root\build_app.ps1" -Python $Python -InstallDependencies:$InstallDependencies

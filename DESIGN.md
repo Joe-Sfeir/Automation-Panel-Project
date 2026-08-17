@@ -179,7 +179,7 @@ The palette is a cool drafting neutral system with one technical-blue interactio
 
 The main shell opens at 1360×860 with a fixed 216px dark sidebar and a flexible stacked work area. Primary pages use 24-40px outer margins, 18-24px section spacing, and bordered panels. The project intake surface keeps form configuration and the extraction log side by side at a 5:6 proportion; the home surface uses horizontal stat and action rows.
 
-The panel-review dialog opens at 1460×900 and enforces a 1080×680 minimum. Its horizontal splitter starts at approximately 235px / 930px / 295px for panel navigation, BOM work area, and decision rail. The center contains a vertical splitter for the editable BOM and the calculated-terminal/pricing-candidate tabs. Splitters are user-adjustable, the decision rail scrolls vertically, and dense tables retain horizontal scrolling when columns exceed the available width.
+The panel-review dialog opens at 1460×900 and enforces a 1080×680 minimum. Its horizontal splitter starts at approximately 235px / 930px / 295px for panel navigation, BOM work area, and decision rail. The center contains a vertical splitter for the editable BOM and the terminal/accessory/editable-offer tabs; selecting the offer expands it to roughly half the work area. Splitters are user-adjustable, the offer table uses per-row manufacturer dropdowns, the decision rail explains automatic constrained-AI review before source evidence, and dense tables retain horizontal scrolling when columns exceed the available width.
 
 This is an implemented desktop layout, not a mobile stack. Below the review minimum, the window does not collapse to a phone composition. Qt layouts redistribute flexible space, while fixed rails, horizontal control groups, and tables preserve the workstation workflow. Windows display scaling is supported through native Qt layout and font metrics; new screens must avoid absolute positioning that breaks that behavior.
 
@@ -239,6 +239,9 @@ The form language is square and technical. Major panels, inputs, buttons, progre
 - **Workflow strip:** Drawings → Extract → Review → Price → Export appears as a connected numbered sequence. Complete, active, and pending stages are labeled and color-coded.
 - **Detail rail:** Selecting a BOM row exposes its title, manufacturer, source confidence, pricing scope, evidence handles, render preview, source cross-check notes, and include/exclude actions in one scrollable place.
 - **Pricing readiness:** The footer states included, excluded, and cross-check-note counts. Pricing is immediately available whenever at least one valid row is included.
+- **Long-running pricing:** Matching and Excel generation stay off the UI thread. The footer reports the current catalog item, protects edits while the saved snapshot is processed, and keeps a dedicated cancel action in a stable layout position.
+- **Import terminal:** Price-list imports use a window-modal terminal surface with an indeterminate progress track, copyable live output, explicit running/complete/failed text, and a close action that unlocks only after the database transaction finishes.
+- **Preview performance:** Drawing previews are deferred, decoded near their display size, and cached per source revision. Lower schedule tables load only when their tab is opened.
 
 ### Accessibility and Motion
 

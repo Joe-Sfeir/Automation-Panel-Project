@@ -1,6 +1,6 @@
 # Technicat Automation — Project Handoff
 
-Last updated: 2026-08-13
+Last updated: 2026-08-17
 Repository branch: `main`
 Base commit: `567e9c5`
 Working state: verified extraction-parity and pricing-safety work remains uncommitted; do not reset, clean, or overwrite the working tree.
@@ -26,24 +26,48 @@ DWG/DXF drawings
   -> deterministic CAD evidence graph + render
   -> structured Gemini extraction
   -> project.technelec.json
-  -> optional engineer edits / explicit row exclusions
-  -> per-row manufacturer/edition matching
+  -> strict per-row manufacturer/edition matching
   -> pricing.json
+  -> editable offer review / recommendations / explicit row exclusions
   -> configurable client Excel offer
 ```
 
-The runnable release is `dist/TechnicatAutomation.exe`. The executable was built with PyInstaller and remained alive during a 15-second offscreen startup smoke test.
+The runnable release is `dist/TechnicatAutomation/TechnicatAutomation.exe`. It uses a PyInstaller one-folder layout to avoid per-launch self-extraction and remained alive during a 12-second frozen startup smoke test. `Technicat.lnk` points to this stable path.
 
 Verified state:
 
-- 56 automated tests pass.
+- 74 automated tests pass.
 - SQLite integrity is `ok`; `pricing.db` contains 9,999 products across Schneider, Legrand, and Eaton.
 - Impeccable UI finish verdict: `ship`, with no P0/P1/P2 findings.
 - The review UI was rendered at 1080x680; its decision rail scrolls without overlap and keyboard focus is visible.
 - All 13 supplied drawings and 17 mapped panels pass the source-preservation Kornet regression.
 - The earlier 623/623 offer-parity result is historical: it depended on design normalizations and is no longer an acceptance target for this pricing-only tool.
 - The packaged extraction path no longer imports `Codes/extract_spatial_json.py`. DWG conversion and DXF rendering now use the import-safe `app.cad_runtime` service, so frozen builds do not search PyInstaller's temporary `_MEI...` directory for `.venv/key.env`.
-- The corrected `dist/TechnicatAutomation.exe` was rebuilt on 2026-08-13 and remained alive during a 12-second frozen-app smoke test.
+- The stable `dist/TechnicatAutomation/TechnicatAutomation.exe` was rebuilt on 2026-08-17, reached Windows input-idle, and remained alive during the frozen-app startup smoke test.
+
+## 2026-08-17 pricing-review and catalog-taxonomy work
+
+- Extraction completion now opens the pricing review directly. Pricing runs in the background and stops at `pricing.json`; Excel export is a separate explicit action after review.
+- The offer preview mirrors the export rows and permits add, duplicate, specification, manufacturer, reference, quantity, and unit-price edits. Every edit makes the snapshot stale until **Apply & reprice** is run.
+- Legacy and newly imported catalogs gain persistent product-family and structured-spec columns. Known families are classified deterministically; Gemini is asked only about unresolved reference-prefix groups and the accepted group result is cached.
+- Strict matching treats category, standalone/add-on kind, poles, current, residual sensitivity, and category-relevant curve/breaking capacity as hard constraints. A Schneider 1P+N 10A iDPN Vigi RCBO can never satisfy a 4P 10A RCCB request.
+- Unmatched rows expose ranked same-manufacturer/different-rating, other-manufacturer/exact-rating, and other-manufacturer/nearest-rating recommendations. Rating changes are always marked for engineering review and never auto-applied.
+- Unpriced rows with deterministic recommendations automatically invoke the no-chat AI shortlist reviewer. It receives only the requested component plus at most eight supplied candidate records, must select one supplied ID or none, stores the structured response in `ai_match_cache`, and marks every applied result `ai_suggested` for explicit engineering review.
+- Offer manufacturer cells are database-backed dropdowns. Changing a manufacturer immediately clears stale references/prices and reprices against that manufacturer’s latest installed edition.
+- Business defaults are explicit and editable: Schneider meters use `METSEPM2220`, Eaton meters use `PXM2000`, CTs use MBS, SPDs use DEHN by default (Phoenix Contact remains selectable), multi-pole fuse holders expand to single-pole quantities, and R/Y/B pilot sets expand to individual round colored lamps.
+- Calculated terminals, enclosures, plastrons, rails, and doors remain separate from source extraction but are materialized into the editable offer as amber engineering-calculated rows.
+- Excel price-list imports stream their full live output in a modal terminal view. Header rows are rejected deterministically and reimports remove stale edition products.
+- Currency totals are grouped independently. Mixed currencies are never summed into a synthetic grand total.
+- Native Windows visual QA passed at 1460x900 and 1080x680 with the offer preview expanded and recommendations/AI controls above source evidence.
+
+## 2026-08-13 responsiveness work
+
+- Retired the 97 MB one-file release path in favor of the stable one-folder application.
+- Actual visible-window startup improved from 4.148 seconds (one-file) to 2.207 seconds (one-folder), a 46.8% reduction in the controlled confirmation run. Three-run GUI input-idle median improved from 2.608 seconds to 0.292 seconds.
+- Pricing, catalog matching, and project-result persistence run on a dedicated Qt worker thread. The review window remains responsive and exposes progress plus cooperative cancellation; Excel generation occurs only after the reviewed snapshot is explicitly exported.
+- Cancellation is checked between panels/components and every 250 catalog rows.
+- Drawing previews are deferred, decoded at a bounded size, and cached. Component table updates are batched, and lower schedule/candidate tables load only on tab activation.
+- Rendered review QA passed at 1460x900 and the supported 1080x680 minimum in both ready and active-pricing states.
 
 ## 2026-08-13 extraction-parity work
 
@@ -101,9 +125,9 @@ The ATS drawing remains a distinct deterministic topology: repeated panel anchor
 - Schematic and physical-layout representations are never summed. Layout blocks may annotate a discrepancy but cannot change the extracted value.
 - Recognition creates only evidence-backed devices. Runtime post-processing does not calculate CTs, standardize ratings, inject breaker curves, or manufacture ATS control quantities.
 - Primary Gemini model: `gemini-3.6-flash`. The desktop accuracy path does not silently use `gemini-3.1-flash-lite`. Structured Pydantic output and evidence IDs are required.
-- Extracted components use canonical `included` state and flow directly to pricing by default. Source cross-check notes do not change values or block export; users may edit or explicitly exclude rows and regenerate the offer.
-- A single selected project manufacturer governs every row and replaces stale editions from earlier runs. Forced references are respected, candidate alternatives are exposed, and unmatched rows remain editable.
-- Terminal schedules are calculated from reviewed component data and remain separate from extracted components.
+- Extracted components use canonical `included` state and flow directly to strict pricing by default. Source cross-check notes do not change values; users may edit, explicitly exclude rows, reprice, and then export the reviewed snapshot.
+- Each offer row’s selected manufacturer governs matching; the project manufacturer is only the fallback. Forced references are respected, exact alternatives and recommendation groups are exposed, and unmatched rows remain editable.
+- Terminal schedules remain separate from extracted evidence, but calculated terminal purchasing rows are synchronized into the editable commercial offer.
 - UI direction is the “Revision Takeoff Desk”: drafting-white surfaces, graphite rules, technical blue interaction, amber source cross-check notes, and explicit inclusion/exclusion scope.
 
 ## Future adaptive extraction vision

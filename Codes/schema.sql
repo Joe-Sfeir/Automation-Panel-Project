@@ -32,12 +32,61 @@ CREATE TABLE IF NOT EXISTS products (
     order_number   TEXT,                   -- manufacturer order/catalog number (optional)
     description    TEXT    NOT NULL,
     price          REAL    NOT NULL,
+    family_id      INTEGER,
+    category       TEXT,
+    product_kind   TEXT,
+    poles          TEXT,
+    rated_current_a REAL,
+    sensitivity_ma REAL,
+    curve          TEXT,
+    breaking_capacity_ka REAL,
+    classification_source TEXT,
+    classification_confidence REAL,
     UNIQUE(ppl_edition_id, reference),
-    FOREIGN KEY (ppl_edition_id) REFERENCES ppl_editions(id)
+    FOREIGN KEY (ppl_edition_id) REFERENCES ppl_editions(id),
+    FOREIGN KEY (family_id) REFERENCES product_families(id)
 );
 
 CREATE INDEX IF NOT EXISTS idx_products_reference ON products(reference);
 CREATE INDEX IF NOT EXISTS idx_products_edition   ON products(ppl_edition_id);
+
+-- Product families are the durable catalog taxonomy. The importer and migration
+-- code seed/extend these rows and classify each product once at import time.
+CREATE TABLE IF NOT EXISTS product_families (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    manufacturer TEXT NOT NULL,
+    family_code TEXT NOT NULL,
+    category TEXT NOT NULL,
+    product_kind TEXT NOT NULL,
+    description TEXT NOT NULL DEFAULT '',
+    UNIQUE(manufacturer, family_code)
+);
+
+CREATE TABLE IF NOT EXISTS family_patterns (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    family_id INTEGER NOT NULL,
+    pattern TEXT NOT NULL,
+    priority INTEGER NOT NULL DEFAULT 100,
+    UNIQUE(family_id, pattern),
+    FOREIGN KEY (family_id) REFERENCES product_families(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS catalog_ai_cache (
+    cache_kind TEXT NOT NULL,
+    manufacturer TEXT NOT NULL,
+    cache_key TEXT NOT NULL,
+    response_json TEXT NOT NULL,
+    model TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL DEFAULT (datetime('now')),
+    PRIMARY KEY(cache_kind, manufacturer, cache_key)
+);
+
+CREATE TABLE IF NOT EXISTS ai_match_cache (
+    cache_key TEXT PRIMARY KEY,
+    response_json TEXT NOT NULL,
+    model TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
 
 -- ── 4. PRODUCT KEYWORDS  (normalised tokens) ─────────────────
 CREATE TABLE IF NOT EXISTS product_keywords (

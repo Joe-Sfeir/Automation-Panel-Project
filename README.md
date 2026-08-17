@@ -15,11 +15,13 @@ CAD evidence graph + full-sheet render
       ↓
 Gemini structured extraction
       ↓
-project.technelec.json  ← engineer review and overrides
+project.technelec.json  ← editable source of truth
       ↓
-pricing.json            ← deterministic candidates and selected products
+pricing.json            ← strict matches + review recommendations
       ↓
-offer.xlsx              ← client-facing export
+editable offer preview  ← add, modify, exclude, or choose a recommendation
+      ↓
+offer.xlsx              ← explicit client-facing export
 ```
 
 `project.technelec.json` is the internal source of truth. Excel is used only at system boundaries; it is not an interchange format between extraction and pricing.
@@ -52,7 +54,9 @@ Each project can contain multiple source drawings and panels. Drawing paths and 
 
    A packaged build can instead be started directly from `dist\TechnicatAutomation.exe`. For that build, enter the key under **Preferences**; it is stored in the current Windows user's application-data folder, not embedded in the executable.
 
-5. Add one or more drawings to the project manifest and select the available price-list editions. After extraction, open **Panel review** to inspect or edit specifications, quantities, manufacturers, and forced catalog references. Every extracted row is included automatically; use **Exclude selected** only when an item should not be priced. **Price & export offer** is immediately available and can be run again after any edits.
+5. Add one or more drawings to the project manifest and select the available price-list editions. After extraction, the app opens **Price & review** and runs strict catalog pricing. The offer preview is editable: add or duplicate rows, change specifications, select manufacturers from the catalog dropdown, edit references or unit prices, and explicitly exclude anything outside the offer. Unmatched rows are automatically checked by AI against only their deterministic shortlist; an applied suggestion is amber, labeled for engineering review, and never hidden as an exact match. Calculated terminals and enclosure hardware appear in the same offer as amber calculated rows. Use **Apply & reprice** after changes, then **Export offer** when the snapshot is ready.
+
+Price-list imports open a live terminal-style progress window. It streams column detection, extracted counts, family-classification progress, API rate-limit retries, validation, and database commit results while the import runs.
 
 The active UI calls the importable services in `app/` directly. The older scripts in `Codes/` remain only as extraction/import compatibility modules and are not used as workbook-to-workbook subprocess adapters.
 
@@ -63,7 +67,7 @@ Schema version 1 exposes these main records:
 - `ProjectDocument`: metadata, drawings, panels, pricing/export configuration, and match results.
 - `Panel`: stable ID, drawing relationship, extraction/review state, components, terminals, and artifact paths.
 - `Component`: stable ID, electrical specifications, quantity, manufacturer, forced reference, confidence, evidence, conflicts, and override history.
-- `MatchResult`: component ID, selected edition/product, alternatives, score/tier, price/currency, and review state.
+- `MatchResult`: component ID, selected edition/product, strict-match alternatives, safe recommendations, score/tier, price/currency, and review state.
 
 Writes are atomic. Legacy `.sld.json` extraction files can be loaded and migrated in memory through `app.persistence.load_project`; their component and terminal sections remain separate.
 
@@ -105,10 +109,10 @@ The current tests cover schema persistence/migration, CAD spatial association, t
 
 ## Packaging
 
-Build the Windows one-file executable from the repository root:
+Build the Windows one-folder application from the repository root:
 
 ```powershell
-.\build_single_exe.ps1
+.\build_app.ps1
 ```
 
-The PyInstaller specification uses `run_app.py`, includes the canonical `app` services, the extraction compatibility module, the pricing database, and required runtime assets.
+The release uses a PyInstaller one-folder layout at `dist/TechnicatAutomation/`. This avoids unpacking the approximately 97 MB application on every launch while retaining the canonical Python services, pricing database, and runtime assets. Build it with `build_app.ps1`; the compatibility `build_single_exe.ps1` wrapper now delegates to the same fast-start build.
