@@ -1,7 +1,7 @@
 """
-import_ppl.py  –  Import a manufacturer PPL Excel into the Technelec pricing DB.
-                  Three-tier column mapping: rules → Gemini → data-type heuristic.
-                  Reads ALL sheets. Extracts both reference and order number when available.
+import_ppl.py  –  Import a manufacturer Excel/PDF PPL into the pricing DB.
+                  Excel uses three-tier column mapping. Supported born-digital PDFs
+                  use deterministic, coordinate-aware catalogue readers.
 
 Usage:
     python import.py --file "PPL_2026 _H1_-_SCHNEIDER.xlsx" --manufacturer SCHNEIDER --year 2026 --half H1 --db pricing.db
@@ -22,6 +22,11 @@ import urllib.request
 from pathlib import Path
 
 import openpyxl
+
+try:
+    from Codes.pdf_price_list import read_pdf_price_list
+except ModuleNotFoundError:  # direct execution: python Codes/import.py
+    from pdf_price_list import read_pdf_price_list
 
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
@@ -338,7 +343,7 @@ def clean_price(val) -> float | None:
 
 # ── PPL READER (multi-sheet) ──────────────────────────────────────────────────
 
-def read_ppl(filepath: Path) -> list:
+def read_excel_ppl(filepath: Path) -> list:
     print(f"  Loading workbook: {filepath.name} ...")
     wb  = openpyxl.load_workbook(str(filepath), data_only=True)
     out = []
@@ -417,6 +422,18 @@ def read_ppl(filepath: Path) -> list:
     wb.close()
     print(f"\n  Total extracted across all sheets: {len(out)}")
     return out
+
+
+def read_ppl(filepath: Path, manufacturer: str = "") -> list:
+    suffix = filepath.suffix.lower()
+    if suffix == ".pdf":
+        return read_pdf_price_list(filepath, manufacturer)
+    if suffix not in {".xlsx", ".xlsm", ".xls"}:
+        raise ValueError(
+            f"Unsupported price-list format '{suffix or '<none>'}'. "
+            "Use Excel (.xlsx/.xlsm/.xls) or a supported PDF."
+        )
+    return read_excel_ppl(filepath)
 
 
 # ── NORMALISATION ─────────────────────────────────────────────────────────────
@@ -684,7 +701,7 @@ def commit_to_db(conn, aliases, edition_id, products, manufacturer):
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
-def import_ppl(db_path: Path, xlsx_path: Path, manufacturer: str,
+def import_ppl(db_path: Path, price_list_path: Path, manufacturer: str,
                year: int, half: str, currency: str, force: bool = False):
 
     conn = sqlite3.connect(str(db_path))
@@ -706,8 +723,8 @@ def import_ppl(db_path: Path, xlsx_path: Path, manufacturer: str,
 
     aliases = load_aliases(conn)
 
-    print(f"Reading {xlsx_path.name} ...")
-    products = read_ppl(xlsx_path)
+    print(f"Reading {price_list_path.name} ...")
+    products = read_ppl(price_list_path, manufacturer)
 
     if not products:
         print("  ERROR: no products found — check file format")

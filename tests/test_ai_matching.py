@@ -91,3 +91,24 @@ def test_no_deterministic_candidates_returns_none_without_opening_database(tmp_p
     assert selected is None
     assert advice.candidate_id is None
     assert cached
+
+
+def test_ai_cannot_override_an_explicit_manufacturer_with_cross_brand_candidate(
+    tmp_path,
+):
+    component = Component(
+        "spd", category="SPD", manufacturer="PHOENIX CONTACT"
+    )
+    schneider = CandidateMatch(
+        reference="A9L15597", description="Schneider 3P SPD", price=148.5,
+        currency="EUR", score=0.9, manufacturer="SCHNEIDER", category="SPD",
+        product_kind="standalone", recommendation_kind="other_manufacturer_exact",
+    )
+
+    selected, advice, cached = ask_ai_for_recommendation(
+        tmp_path / "missing" / "pricing.db", component, [schneider]
+    )
+
+    assert selected is None
+    assert advice.candidate_id is None
+    assert cached

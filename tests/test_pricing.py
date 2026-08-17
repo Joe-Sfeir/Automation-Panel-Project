@@ -239,3 +239,49 @@ def test_other_manufacturer_exact_rating_is_recommended_not_auto_selected(tmp_pa
     assert candidate.manufacturer == "EATON"
     assert candidate.recommendation_kind == "other_manufacturer_exact"
     assert not candidate.requires_engineering_review
+
+
+def test_spd_type_is_a_hard_catalog_constraint(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    with sqlite3.connect(database) as connection:
+        connection.execute("INSERT INTO manufacturers VALUES (3, 'PHOENIX CONTACT')")
+        connection.execute("INSERT INTO ppl_editions VALUES (30, 3, 2026, 'H1', 'USD')")
+        connection.executemany(
+            "INSERT INTO products VALUES (?, 30, ?, NULL, ?, ?)",
+            [
+                (20, "T2", "Three phase surge voltage arrester Type 2", 100.0),
+                (21, "T12", "Three phase lightning current and surge arrester combination Type I + II", 90.0),
+                (22, "T3", "Three phase surge voltage arrester Type 3", 80.0),
+            ],
+        )
+        connection.commit()
+    project = ProjectDocument.create("SPD")
+    project.pricing.editions = {"PHOENIX CONTACT": {"year": 2026, "half": "H1"}}
+    project.panels.append(Panel("panel", "P1", "", components=[
+        Component("spd", category="SPD", spd_type="TYPE 2", manufacturer="PHOENIX CONTACT")
+    ]))
+
+    PricingService(database).price_project(project, tmp_path / "pricing.json")
+
+    result = project.match_results[0]
+    assert result.chosen_reference == "T2"
+    assert {item.reference for item in result.alternatives} <= {"T2"}
+    assert all(item.reference not in {"T12", "T3"} for item in result.recommendations)
+
+
+def test_configured_family_preference_breaks_an_exact_spec_tie(tmp_path):
+    database = tmp_path / "pricing.db"
+    make_database(database)
+    project = ProjectDocument.create("Preferred family")
+    project.pricing.editions = {"SCHNEIDER": {"year": 2026, "half": "H1"}}
+    project.pricing.family_preferences = {"SCHNEIDER:SWITCH": ["ISW", "INS"]}
+    project.panels.append(Panel("panel", "P1", "", components=[
+        Component("switch", category="SWITCH", poles="4P", amps="40A", manufacturer="SCHNEIDER")
+    ]))
+
+    PricingService(database).price_project(project, tmp_path / "pricing.json")
+
+    result = project.match_results[0]
+    assert result.chosen_reference == "ISW40"
+    assert result.review_status == "exact_match"

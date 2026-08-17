@@ -1,0 +1,4529 @@
+{
+  "schematic_layers": [
+    "0"
+  ],
+  "physical_layout_layers": [],
+  "schematic_rating_groups": [
+    {
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "10A",
+      "sensitivity": "-",
+      "count": 12,
+      "label_ids": [
+        "text:4BB",
+        "text:4EB",
+        "text:4F2",
+        "text:545",
+        "text:549",
+        "text:54B",
+        "text:5D7",
+        "text:5D9",
+        "text:5DE",
+        "text:60C",
+        "text:60E",
+        "text:613"
+      ],
+      "labels": [
+        "2x10"
+      ],
+      "layers": [
+        "0"
+      ]
+    },
+    {
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "16A",
+      "sensitivity": "-",
+      "count": 15,
+      "label_ids": [
+        "text:4C9",
+        "text:4CB",
+        "text:4CD",
+        "text:4DF",
+        "text:4E3",
+        "text:4E7",
+        "text:4FE",
+        "text:500",
+        "text:509",
+        "text:50B",
+        "text:50D",
+        "text:59D",
+        "text:637",
+        "text:63E",
+        "text:643"
+      ],
+      "labels": [
+        "2x16"
+      ],
+      "layers": [
+        "0"
+      ]
+    },
+    {
+      "category": "RCCB",
+      "poles": "4P",
+      "amps": "40A",
+      "sensitivity": "100mA",
+      "count": 1,
+      "label_ids": [
+        "text:560",
+        "text:55E",
+        "text:55F"
+      ],
+      "labels": [
+        "4x40 AMP 100mA ISOL.S.+RCD"
+      ],
+      "layers": [
+        "0"
+      ]
+    },
+    {
+      "category": "RCCB",
+      "poles": "4P",
+      "amps": "40A",
+      "sensitivity": "30mA",
+      "count": 2,
+      "label_ids": [
+        "text:577",
+        "text:575",
+        "text:576",
+        "text:588",
+        "text:586",
+        "text:587"
+      ],
+      "labels": [
+        "4x40 AMP 30mA ISOL.S.+RCD",
+        "4x40 AMP 30mA ISOL.S.+RCD"
+      ],
+      "layers": [
+        "0"
+      ]
+    }
+  ],
+  "repeating_schematic_blocks": [
+    {
+      "block_name": "CB1",
+      "count": 27
+    }
+  ],
+  "schematic_blocks": [
+    {
+      "id": "block:4BC",
+      "handle": "4BC",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 21.16615647502015,
+      "attributes": {}
+    },
+    {
+      "id": "block:4BE",
+      "handle": "4BE",
+      "block_name": "SW",
+      "layer": "0",
+      "x": 12.03496385194744,
+      "y": 19.32185310514881,
+      "attributes": {}
+    },
+    {
+      "id": "block:526",
+      "handle": "526",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 20.83082858734536,
+      "attributes": {}
+    },
+    {
+      "id": "block:527",
+      "handle": "527",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 20.49550069967056,
+      "attributes": {}
+    },
+    {
+      "id": "block:528",
+      "handle": "528",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 16.47156604745663,
+      "attributes": {}
+    },
+    {
+      "id": "block:529",
+      "handle": "529",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 16.13623815978183,
+      "attributes": {}
+    },
+    {
+      "id": "block:52A",
+      "handle": "52A",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 15.80091027210704,
+      "attributes": {}
+    },
+    {
+      "id": "block:52B",
+      "handle": "52B",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 15.46558238443225,
+      "attributes": {}
+    },
+    {
+      "id": "block:52C",
+      "handle": "52C",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 15.13025449675745,
+      "attributes": {}
+    },
+    {
+      "id": "block:52D",
+      "handle": "52D",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 14.79492660908266,
+      "attributes": {}
+    },
+    {
+      "id": "block:52E",
+      "handle": "52E",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 14.45959872140786,
+      "attributes": {}
+    },
+    {
+      "id": "block:52F",
+      "handle": "52F",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 14.12427083373307,
+      "attributes": {}
+    },
+    {
+      "id": "block:530",
+      "handle": "530",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 13.78894294605828,
+      "attributes": {}
+    },
+    {
+      "id": "block:531",
+      "handle": "531",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 13.45361505838348,
+      "attributes": {}
+    },
+    {
+      "id": "block:532",
+      "handle": "532",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 12.11230350768431,
+      "attributes": {}
+    },
+    {
+      "id": "block:533",
+      "handle": "533",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 11.77697562000952,
+      "attributes": {}
+    },
+    {
+      "id": "block:546",
+      "handle": "546",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 20.16017281199577,
+      "attributes": {}
+    },
+    {
+      "id": "block:54D",
+      "handle": "54D",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 19.82484492432098,
+      "attributes": {}
+    },
+    {
+      "id": "block:54E",
+      "handle": "54E",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 19.48951703664618,
+      "attributes": {}
+    },
+    {
+      "id": "block:5DB",
+      "handle": "5DB",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 19.15418914897139,
+      "attributes": {}
+    },
+    {
+      "id": "block:5DC",
+      "handle": "5DC",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 18.8188612612966,
+      "attributes": {}
+    },
+    {
+      "id": "block:5DD",
+      "handle": "5DD",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 18.4835333736218,
+      "attributes": {}
+    },
+    {
+      "id": "block:610",
+      "handle": "610",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 18.14820548594701,
+      "attributes": {}
+    },
+    {
+      "id": "block:611",
+      "handle": "611",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 17.81287759827222,
+      "attributes": {}
+    },
+    {
+      "id": "block:612",
+      "handle": "612",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 17.47754971059742,
+      "attributes": {}
+    },
+    {
+      "id": "block:63C",
+      "handle": "63C",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 13.118287173037,
+      "attributes": {}
+    },
+    {
+      "id": "block:642",
+      "handle": "642",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518398449207,
+      "y": 12.7829592853622,
+      "attributes": {}
+    },
+    {
+      "id": "block:647",
+      "handle": "647",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518398449207,
+      "y": 12.44763140001572,
+      "attributes": {}
+    }
+  ],
+  "block_label_associations": [
+    {
+      "block_id": "block:4BC",
+      "handle": "4BC",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 21.16615647502015,
+      "label_id": "text:4F2",
+      "label": "2x10",
+      "label_x": 18.69698542325209,
+      "label_y": 21.19968926353152,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:4F2",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:4BB",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:4F3",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:4BD",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:4EB",
+          "text": "2x10",
+          "distance": 2.904
+        },
+        {
+          "id": "text:4EC",
+          "text": "(1P+N)",
+          "distance": 3.221
+        },
+        {
+          "id": "text:54B",
+          "text": "2x10",
+          "distance": 4.131
+        },
+        {
+          "id": "text:54C",
+          "text": "(1P+N)",
+          "distance": 4.361
+        }
+      ]
+    },
+    {
+      "block_id": "block:4BE",
+      "handle": "4BE",
+      "block_name": "SW",
+      "layer": "0",
+      "x": 12.03496385194744,
+      "y": 19.32185310514881,
+      "label_id": "text:4C0",
+      "label": "4x40 Amp",
+      "label_x": 12.70512806080664,
+      "label_y": 18.69286108825593,
+      "confidence": 0.34685,
+      "nearby_texts": [
+        {
+          "id": "text:4C0",
+          "text": "4x40 Amp",
+          "distance": 2.604
+        },
+        {
+          "id": "text:4C1",
+          "text": "ISOL.S.",
+          "distance": 4.04
+        },
+        {
+          "id": "text:55E",
+          "text": "4x40 AMP",
+          "distance": 4.212
+        },
+        {
+          "id": "text:55F",
+          "text": "100mA",
+          "distance": 4.62
+        },
+        {
+          "id": "text:560",
+          "text": "ISOL.S.+RCD",
+          "distance": 5.137
+        },
+        {
+          "id": "text:51A",
+          "text": "L=95 m",
+          "distance": 5.919
+        },
+        {
+          "id": "text:652",
+          "text": "TO SMDB-B2",
+          "distance": 6.03
+        },
+        {
+          "id": "text:5D7",
+          "text": "2x10",
+          "distance": 6.684
+        }
+      ]
+    },
+    {
+      "block_id": "block:526",
+      "handle": "526",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 20.83082858734536,
+      "label_id": "text:4BB",
+      "label": "2x10",
+      "label_x": 18.69698542325209,
+      "label_y": 20.86436137608955,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:4BB",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:4EB",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:4BD",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:4F2",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:4EC",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:4F3",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:54B",
+          "text": "2x10",
+          "distance": 2.904
+        },
+        {
+          "id": "text:54C",
+          "text": "(1P+N)",
+          "distance": 3.222
+        }
+      ]
+    },
+    {
+      "block_id": "block:527",
+      "handle": "527",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 20.49550069967056,
+      "label_id": "text:4EB",
+      "label": "2x10",
+      "label_x": 18.69687303869436,
+      "label_y": 20.52903349074307,
+      "confidence": 0.649269,
+      "nearby_texts": [
+        {
+          "id": "text:4EB",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:54B",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:4EC",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:4BB",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:54C",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:4BD",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:545",
+          "text": "2x10",
+          "distance": 2.904
+        },
+        {
+          "id": "text:4F2",
+          "text": "2x10",
+          "distance": 3.142
+        }
+      ]
+    },
+    {
+      "block_id": "block:528",
+      "handle": "528",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 16.47156604745663,
+      "label_id": "text:4CD",
+      "label": "2x16",
+      "label_x": 18.69042408667887,
+      "label_y": 16.50509883852913,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:4CD",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:4CB",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:4CE",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4CC",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:4C9",
+          "text": "2x16",
+          "distance": 2.901
+        },
+        {
+          "id": "text:4CA",
+          "text": "(1P+N)",
+          "distance": 3.218
+        },
+        {
+          "id": "text:4DF",
+          "text": "2x16",
+          "distance": 4.129
+        },
+        {
+          "id": "text:4E0",
+          "text": "(1P+N)",
+          "distance": 4.358
+        }
+      ]
+    },
+    {
+      "block_id": "block:529",
+      "handle": "529",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 16.13623815978183,
+      "label_id": "text:4CB",
+      "label": "2x16",
+      "label_x": 18.69042377747978,
+      "label_y": 16.16977094549923,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:4CB",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:4C9",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:4CC",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4CD",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:4CA",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:4CE",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:4DF",
+          "text": "2x16",
+          "distance": 2.901
+        },
+        {
+          "id": "text:4E0",
+          "text": "(1P+N)",
+          "distance": 3.218
+        }
+      ]
+    },
+    {
+      "block_id": "block:52A",
+      "handle": "52A",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 15.80091027210704,
+      "label_id": "text:4C9",
+      "label": "2x16",
+      "label_x": 18.69042408667887,
+      "label_y": 15.83444306341237,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:4C9",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:4DF",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:4CA",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4CB",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:4E0",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:4CC",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:4E3",
+          "text": "2x16",
+          "distance": 2.901
+        },
+        {
+          "id": "text:4CD",
+          "text": "2x16",
+          "distance": 3.139
+        }
+      ]
+    },
+    {
+      "block_id": "block:52B",
+      "handle": "52B",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 15.46558238443225,
+      "label_id": "text:4DF",
+      "label": "2x16",
+      "label_x": 18.69042408667887,
+      "label_y": 15.49911517573758,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:4DF",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:4E3",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:4E0",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4C9",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:575",
+          "text": "4x40 AMP",
+          "distance": 2.289
+        },
+        {
+          "id": "text:4E4",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:4CA",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:4E7",
+          "text": "2x16",
+          "distance": 2.901
+        }
+      ]
+    },
+    {
+      "block_id": "block:52C",
+      "handle": "52C",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 15.13025449675745,
+      "label_id": "text:4E3",
+      "label": "2x16",
+      "label_x": 18.69045834072317,
+      "label_y": 15.16378728806279,
+      "confidence": 0.650871,
+      "nearby_texts": [
+        {
+          "id": "text:4E3",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:575",
+          "text": "4x40 AMP",
+          "distance": 1.512
+        },
+        {
+          "id": "text:4E7",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:576",
+          "text": "30mA",
+          "distance": 1.917
+        },
+        {
+          "id": "text:4E4",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4DF",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:4E8",
+          "text": "(1P+N)",
+          "distance": 2.305
+        },
+        {
+          "id": "text:4E0",
+          "text": "(1P+N)",
+          "distance": 2.457
+        }
+      ]
+    },
+    {
+      "block_id": "block:52D",
+      "handle": "52D",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 14.79492660908266,
+      "label_id": "text:4E7",
+      "label": "2x16",
+      "label_x": 18.6904484202751,
+      "label_y": 14.82845939829252,
+      "confidence": 0.650873,
+      "nearby_texts": [
+        {
+          "id": "text:4E7",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:576",
+          "text": "30mA",
+          "distance": 1.452
+        },
+        {
+          "id": "text:577",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.591
+        },
+        {
+          "id": "text:575",
+          "text": "4x40 AMP",
+          "distance": 1.711
+        },
+        {
+          "id": "text:59D",
+          "text": "2x16",
+          "distance": 1.842
+        },
+        {
+          "id": "text:4E8",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4E3",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:4FD",
+          "text": "(1P+N)",
+          "distance": 2.306
+        }
+      ]
+    },
+    {
+      "block_id": "block:52E",
+      "handle": "52E",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 14.45959872140786,
+      "label_id": "text:59D",
+      "label": "2x16",
+      "label_x": 18.69698734783019,
+      "label_y": 14.49313150991923,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:59D",
+          "text": "2x16",
+          "distance": 1.398
+        },
+        {
+          "id": "text:577",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.584
+        },
+        {
+          "id": "text:4FE",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:4FD",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4E7",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:576",
+          "text": "30mA",
+          "distance": 2.034
+        },
+        {
+          "id": "text:4FF",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:4E8",
+          "text": "(1P+N)",
+          "distance": 2.457
+        }
+      ]
+    },
+    {
+      "block_id": "block:52F",
+      "handle": "52F",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 14.12427083373307,
+      "label_id": "text:4FE",
+      "label": "2x16",
+      "label_x": 18.69045834072317,
+      "label_y": 14.15780362527124,
+      "confidence": 0.650871,
+      "nearby_texts": [
+        {
+          "id": "text:4FE",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:500",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:4FF",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:59D",
+          "text": "2x16",
+          "distance": 2.028
+        },
+        {
+          "id": "text:501",
+          "text": "(1P+N)",
+          "distance": 2.305
+        },
+        {
+          "id": "text:4FD",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:577",
+          "text": "ISOL.S.+RCD",
+          "distance": 2.467
+        },
+        {
+          "id": "text:509",
+          "text": "2x16",
+          "distance": 2.901
+        }
+      ]
+    },
+    {
+      "block_id": "block:530",
+      "handle": "530",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 13.78894294605828,
+      "label_id": "text:500",
+      "label": "2x16",
+      "label_x": 18.6904484202751,
+      "label_y": 13.82247573550097,
+      "confidence": 0.650873,
+      "nearby_texts": [
+        {
+          "id": "text:500",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:509",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:501",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:4FE",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:50A",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:4FF",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:637",
+          "text": "2x16",
+          "distance": 2.901
+        },
+        {
+          "id": "text:59D",
+          "text": "2x16",
+          "distance": 3.142
+        }
+      ]
+    },
+    {
+      "block_id": "block:531",
+      "handle": "531",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 13.45361505838348,
+      "label_id": "text:509",
+      "label": "2x16",
+      "label_x": 18.69042408667887,
+      "label_y": 13.48714784899033,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:509",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:637",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:50A",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:500",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:638",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:501",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:63E",
+          "text": "2x16",
+          "distance": 2.901
+        },
+        {
+          "id": "text:4FE",
+          "text": "2x16",
+          "distance": 3.139
+        }
+      ]
+    },
+    {
+      "block_id": "block:532",
+      "handle": "532",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 12.11230350768431,
+      "label_id": "text:50B",
+      "label": "2x16",
+      "label_x": 18.69045834072317,
+      "label_y": 12.14583629805832,
+      "confidence": 0.650871,
+      "nearby_texts": [
+        {
+          "id": "text:50B",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:588",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.439
+        },
+        {
+          "id": "text:587",
+          "text": "30mA",
+          "distance": 1.635
+        },
+        {
+          "id": "text:50D",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:50C",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:643",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:586",
+          "text": "4x40 AMP",
+          "distance": 2.145
+        },
+        {
+          "id": "text:50E",
+          "text": "(1P+N)",
+          "distance": 2.305
+        }
+      ]
+    },
+    {
+      "block_id": "block:533",
+      "handle": "533",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 11.77697562000952,
+      "label_id": "text:50D",
+      "label": "2x16",
+      "label_x": 18.6904484202751,
+      "label_y": 11.81050840852088,
+      "confidence": 0.650873,
+      "nearby_texts": [
+        {
+          "id": "text:50D",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:588",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.962
+        },
+        {
+          "id": "text:50E",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:50B",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:50C",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:587",
+          "text": "30mA",
+          "distance": 2.55
+        },
+        {
+          "id": "text:643",
+          "text": "2x16",
+          "distance": 3.139
+        },
+        {
+          "id": "text:586",
+          "text": "4x40 AMP",
+          "distance": 3.262
+        }
+      ]
+    },
+    {
+      "block_id": "block:546",
+      "handle": "546",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 20.16017281199577,
+      "label_id": "text:54B",
+      "label": "2x10",
+      "label_x": 18.69698542325209,
+      "label_y": 20.19370560050714,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:54B",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:545",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:54C",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:4EB",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:547",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:4EC",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:549",
+          "text": "2x10",
+          "distance": 2.904
+        },
+        {
+          "id": "text:4BB",
+          "text": "2x10",
+          "distance": 3.142
+        }
+      ]
+    },
+    {
+      "block_id": "block:54D",
+      "handle": "54D",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 19.82484492432098,
+      "label_id": "text:545",
+      "label": "2x10",
+      "label_x": 18.69698542325209,
+      "label_y": 19.85837771306517,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:545",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:549",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:547",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:54B",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:54A",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:54C",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:5D7",
+          "text": "2x10",
+          "distance": 2.904
+        },
+        {
+          "id": "text:4EB",
+          "text": "2x10",
+          "distance": 3.142
+        }
+      ]
+    },
+    {
+      "block_id": "block:54E",
+      "handle": "54E",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518066106747,
+      "y": 19.48951703664618,
+      "label_id": "text:549",
+      "label": "2x10",
+      "label_x": 18.69687303869436,
+      "label_y": 19.52304982771869,
+      "confidence": 0.649269,
+      "nearby_texts": [
+        {
+          "id": "text:549",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:5D7",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:54A",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:545",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:5D8",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:547",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:55E",
+          "text": "4x40 AMP",
+          "distance": 2.841
+        },
+        {
+          "id": "text:5D9",
+          "text": "2x10",
+          "distance": 2.904
+        }
+      ]
+    },
+    {
+      "block_id": "block:5DB",
+      "handle": "5DB",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 19.15418914897139,
+      "label_id": "text:5D7",
+      "label": "2x10",
+      "label_x": 18.69698553454514,
+      "label_y": 19.18772193771559,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:5D7",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:55E",
+          "text": "4x40 AMP",
+          "distance": 1.82
+        },
+        {
+          "id": "text:5D9",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:5D8",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:549",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:5DA",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:55F",
+          "text": "100mA",
+          "distance": 2.41
+        },
+        {
+          "id": "text:54A",
+          "text": "(1P+N)",
+          "distance": 2.462
+        }
+      ]
+    },
+    {
+      "block_id": "block:5DC",
+      "handle": "5DC",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 18.8188612612966,
+      "label_id": "text:5D9",
+      "label": "2x10",
+      "label_x": 18.69687314998741,
+      "label_y": 18.8523940523691,
+      "confidence": 0.649269,
+      "nearby_texts": [
+        {
+          "id": "text:5D9",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:55E",
+          "text": "4x40 AMP",
+          "distance": 1.469
+        },
+        {
+          "id": "text:55F",
+          "text": "100mA",
+          "distance": 1.562
+        },
+        {
+          "id": "text:5DE",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:5DA",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:560",
+          "text": "ISOL.S.+RCD",
+          "distance": 2.015
+        },
+        {
+          "id": "text:5D7",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:5DF",
+          "text": "(1P+N)",
+          "distance": 2.311
+        }
+      ]
+    },
+    {
+      "block_id": "block:5DD",
+      "handle": "5DD",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 18.4835333736218,
+      "label_id": "text:5DE",
+      "label": "2x10",
+      "label_x": 18.69698553454514,
+      "label_y": 18.51706616213317,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:5DE",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:560",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.44
+        },
+        {
+          "id": "text:55F",
+          "text": "100mA",
+          "distance": 1.635
+        },
+        {
+          "id": "text:60C",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:5DF",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:5D9",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:55E",
+          "text": "4x40 AMP",
+          "distance": 2.145
+        },
+        {
+          "id": "text:60D",
+          "text": "(1P+N)",
+          "distance": 2.311
+        }
+      ]
+    },
+    {
+      "block_id": "block:610",
+      "handle": "610",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 18.14820548594701,
+      "label_id": "text:60C",
+      "label": "2x10",
+      "label_x": 18.69698553454514,
+      "label_y": 18.18173827469121,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:60C",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:60E",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:560",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.921
+        },
+        {
+          "id": "text:60D",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:5DE",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:60F",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:5DF",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:55F",
+          "text": "100mA",
+          "distance": 2.55
+        }
+      ]
+    },
+    {
+      "block_id": "block:611",
+      "handle": "611",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 17.81287759827222,
+      "label_id": "text:60E",
+      "label": "2x10",
+      "label_x": 18.69687314998741,
+      "label_y": 17.84641038934472,
+      "confidence": 0.649269,
+      "nearby_texts": [
+        {
+          "id": "text:60E",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:613",
+          "text": "2x10",
+          "distance": 1.842
+        },
+        {
+          "id": "text:60F",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:60C",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:614",
+          "text": "(1P+N)",
+          "distance": 2.311
+        },
+        {
+          "id": "text:60D",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:560",
+          "text": "ISOL.S.+RCD",
+          "distance": 2.984
+        },
+        {
+          "id": "text:5DE",
+          "text": "2x10",
+          "distance": 3.142
+        }
+      ]
+    },
+    {
+      "block_id": "block:612",
+      "handle": "612",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518077236052,
+      "y": 17.47754971059742,
+      "label_id": "text:613",
+      "label": "2x10",
+      "label_x": 18.69698553454514,
+      "label_y": 17.51108249910879,
+      "confidence": 0.649241,
+      "nearby_texts": [
+        {
+          "id": "text:613",
+          "text": "2x10",
+          "distance": 1.398
+        },
+        {
+          "id": "text:614",
+          "text": "(1P+N)",
+          "distance": 1.975
+        },
+        {
+          "id": "text:60E",
+          "text": "2x10",
+          "distance": 2.028
+        },
+        {
+          "id": "text:60F",
+          "text": "(1P+N)",
+          "distance": 2.462
+        },
+        {
+          "id": "text:60C",
+          "text": "2x10",
+          "distance": 3.142
+        },
+        {
+          "id": "text:60D",
+          "text": "(1P+N)",
+          "distance": 3.438
+        },
+        {
+          "id": "text:4CD",
+          "text": "2x16",
+          "distance": 4.129
+        },
+        {
+          "id": "text:560",
+          "text": "ISOL.S.+RCD",
+          "distance": 4.209
+        }
+      ]
+    },
+    {
+      "block_id": "block:63C",
+      "handle": "63C",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518258564557,
+      "y": 13.118287173037,
+      "label_id": "text:637",
+      "label": "2x16",
+      "label_x": 18.69042408667887,
+      "label_y": 13.15181996364384,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:637",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:63E",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:638",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:509",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:63F",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:50A",
+          "text": "(1P+N)",
+          "distance": 2.457
+        },
+        {
+          "id": "text:586",
+          "text": "4x40 AMP",
+          "distance": 2.841
+        },
+        {
+          "id": "text:643",
+          "text": "2x16",
+          "distance": 2.901
+        }
+      ]
+    },
+    {
+      "block_id": "block:642",
+      "handle": "642",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518398449207,
+      "y": 12.7829592853622,
+      "label_id": "text:63E",
+      "label": "2x16",
+      "label_x": 18.69042548552538,
+      "label_y": 12.81649207596904,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:63E",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:586",
+          "text": "4x40 AMP",
+          "distance": 1.82
+        },
+        {
+          "id": "text:643",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:63F",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:637",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:644",
+          "text": "(1P+N)",
+          "distance": 2.306
+        },
+        {
+          "id": "text:587",
+          "text": "30mA",
+          "distance": 2.41
+        },
+        {
+          "id": "text:638",
+          "text": "(1P+N)",
+          "distance": 2.457
+        }
+      ]
+    },
+    {
+      "block_id": "block:647",
+      "handle": "647",
+      "block_name": "CB1",
+      "layer": "0",
+      "x": 17.30518398449207,
+      "y": 12.44763140001572,
+      "label_id": "text:643",
+      "label": "2x16",
+      "label_x": 18.69042548552538,
+      "label_y": 12.48116419062256,
+      "confidence": 0.65088,
+      "nearby_texts": [
+        {
+          "id": "text:643",
+          "text": "2x16",
+          "distance": 1.392
+        },
+        {
+          "id": "text:586",
+          "text": "4x40 AMP",
+          "distance": 1.469
+        },
+        {
+          "id": "text:587",
+          "text": "30mA",
+          "distance": 1.563
+        },
+        {
+          "id": "text:50B",
+          "text": "2x16",
+          "distance": 1.837
+        },
+        {
+          "id": "text:644",
+          "text": "(1P+N)",
+          "distance": 1.969
+        },
+        {
+          "id": "text:588",
+          "text": "ISOL.S.+RCD",
+          "distance": 1.972
+        },
+        {
+          "id": "text:63E",
+          "text": "2x16",
+          "distance": 2.024
+        },
+        {
+          "id": "text:50C",
+          "text": "(1P+N)",
+          "distance": 2.306
+        }
+      ]
+    }
+  ],
+  "associated_label_counts": {
+    "2x10": 12,
+    "2x16": 15,
+    "4x40 Amp": 1
+  },
+  "unassociated_blocks": [],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "text_cluster_radius": 15.0,
+  "text_clusters": [
+    {
+      "layer": "0",
+      "cx": 23.117,
+      "cy": 16.013,
+      "text_ids": [
+        "text:486",
+        "text:487",
+        "text:488",
+        "text:489",
+        "text:48A",
+        "text:48B",
+        "text:48C",
+        "text:48D",
+        "text:48E",
+        "text:48F",
+        "text:490",
+        "text:491",
+        "text:492",
+        "text:493",
+        "text:494",
+        "text:495",
+        "text:496",
+        "text:497",
+        "text:498",
+        "text:499",
+        "text:49A",
+        "text:49B",
+        "text:49C",
+        "text:49E",
+        "text:49F",
+        "text:4A0",
+        "text:4A2",
+        "text:4A3",
+        "text:4A6",
+        "text:4A7",
+        "text:4A8",
+        "text:4A9",
+        "text:4AA",
+        "text:4AC",
+        "text:4AD",
+        "text:4AE",
+        "text:4B1",
+        "text:4B2",
+        "text:4B3",
+        "text:4B4",
+        "text:4BB",
+        "text:4BD",
+        "text:4C0",
+        "text:4C1",
+        "text:4C2",
+        "text:4C3",
+        "text:4C4",
+        "text:4C7",
+        "text:4C8",
+        "text:4C9",
+        "text:4CA",
+        "text:4CB",
+        "text:4CC",
+        "text:4CD",
+        "text:4CE",
+        "text:4D0",
+        "text:4D1",
+        "text:4D6",
+        "text:4D7",
+        "text:4D8",
+        "text:4DC",
+        "text:4DD",
+        "text:4DE",
+        "text:4DF",
+        "text:4E0",
+        "text:4E1",
+        "text:4E2",
+        "text:4E3",
+        "text:4E4",
+        "text:4E5",
+        "text:4E6",
+        "text:4E7",
+        "text:4E8",
+        "text:4E9",
+        "text:4EA",
+        "text:4EB",
+        "text:4EC",
+        "text:4ED",
+        "text:4EF",
+        "text:4F0",
+        "text:4F1",
+        "text:4F2",
+        "text:4F3",
+        "text:4F4",
+        "text:4F5",
+        "text:4F6",
+        "text:4F7",
+        "text:4F8",
+        "text:4F9",
+        "text:4FA",
+        "text:4FB",
+        "text:4FC",
+        "text:4FD",
+        "text:4FE",
+        "text:4FF",
+        "text:500",
+        "text:501",
+        "text:502",
+        "text:503",
+        "text:504",
+        "text:505",
+        "text:506",
+        "text:507",
+        "text:508",
+        "text:509",
+        "text:50A",
+        "text:50B",
+        "text:50C",
+        "text:50D",
+        "text:50E",
+        "text:50F",
+        "text:510",
+        "text:511",
+        "text:512",
+        "text:53D",
+        "text:53E",
+        "text:53F",
+        "text:540",
+        "text:541",
+        "text:542",
+        "text:543",
+        "text:544",
+        "text:545",
+        "text:547",
+        "text:548",
+        "text:549",
+        "text:54A",
+        "text:54B",
+        "text:54C",
+        "text:554",
+        "text:555",
+        "text:55E",
+        "text:55F",
+        "text:560",
+        "text:575",
+        "text:576",
+        "text:577",
+        "text:586",
+        "text:587",
+        "text:588",
+        "text:599",
+        "text:59D",
+        "text:5D2",
+        "text:5D3",
+        "text:5D4",
+        "text:5D5",
+        "text:5D6",
+        "text:5D7",
+        "text:5D8",
+        "text:5D9",
+        "text:5DA",
+        "text:5DE",
+        "text:5DF",
+        "text:5E0",
+        "text:5E1",
+        "text:5E2",
+        "text:5E3",
+        "text:5E9",
+        "text:5EA",
+        "text:5EB",
+        "text:5EC",
+        "text:5ED",
+        "text:5EE",
+        "text:5EF",
+        "text:5F0",
+        "text:5F3",
+        "text:5F4",
+        "text:5F8",
+        "text:5F9",
+        "text:5FA",
+        "text:5FB",
+        "text:5FC",
+        "text:5FD",
+        "text:602",
+        "text:603",
+        "text:604",
+        "text:605",
+        "text:60C",
+        "text:60D",
+        "text:60E",
+        "text:60F",
+        "text:613",
+        "text:614",
+        "text:615",
+        "text:616",
+        "text:617",
+        "text:618",
+        "text:619",
+        "text:61A",
+        "text:61B",
+        "text:61C",
+        "text:620",
+        "text:621",
+        "text:622",
+        "text:623",
+        "text:624",
+        "text:625",
+        "text:626",
+        "text:627",
+        "text:628",
+        "text:629",
+        "text:62A",
+        "text:62B",
+        "text:62C",
+        "text:62D",
+        "text:62E",
+        "text:62F",
+        "text:630",
+        "text:631",
+        "text:632",
+        "text:633",
+        "text:634",
+        "text:635",
+        "text:636",
+        "text:637",
+        "text:638",
+        "text:639",
+        "text:63A",
+        "text:63D",
+        "text:63E",
+        "text:63F",
+        "text:640",
+        "text:641",
+        "text:643",
+        "text:644",
+        "text:645",
+        "text:646",
+        "text:64A",
+        "text:64B",
+        "text:64C",
+        "text:64D",
+        "text:64E",
+        "text:64F",
+        "text:650",
+        "text:651",
+        "text:4B8",
+        "text:4B9",
+        "text:4BA",
+        "text:4D4",
+        "text:4D5",
+        "text:4D9",
+        "text:4DA",
+        "text:4DB",
+        "text:53C",
+        "text:592",
+        "text:597",
+        "text:598",
+        "text:59A",
+        "text:59C",
+        "text:5D0",
+        "text:5D1",
+        "text:51A",
+        "text:5C6",
+        "text:5C7",
+        "text:5C8",
+        "text:5C9",
+        "text:5CA",
+        "text:5CC",
+        "text:5CD",
+        "text:652"
+      ],
+      "texts": [
+        "234",
+        "234",
+        "880",
+        "880",
+        "288",
+        "234",
+        "580",
+        "87",
+        "750",
+        "750",
+        "750",
+        "750",
+        "LIGHTING - RAMP, CAR PATHWAY",
+        "880",
+        "880",
+        "880",
+        "880",
+        "SOCKETS - PARKING RIGHT SIDE",
+        "880",
+        "880",
+        "3x4",
+        "EFFECTIVE",
+        "T",
+        "S",
+        "LOAD",
+        "R",
+        "Ref.",
+        "Numb.",
+        "CIRCUIT",
+        "1",
+        "L1",
+        "L2",
+        "2",
+        "VA.",
+        "R3",
+        "R1",
+        "4644",
+        "4240",
+        "3765",
+        "TOTAL CONNECTED LOAD",
+        "2x10",
+        "(1P+N)",
+        "4x40 Amp",
+        "ISOL.S.",
+        "MCB",
+        "B.C.: 6KA/400V",
+        "IEC/EN 60898",
+        "CONDUCTOR",
+        "size mm²",
+        "2x16",
+        "(1P+N)",
+        "2x16",
+        "(1P+N)",
+        "2x16",
+        "(1P+N)",
+        "3x2.5",
+        "3x2.5",
+        "12649 VA",
+        ",",
+        "19 A/PH",
+        "R2",
+        "13",
+        "R4",
+        "2x16",
+        "(1P+N)",
+        "14",
+        "R5",
+        "2x16",
+        "(1P+N)",
+        "R6",
+        "15",
+        "2x16",
+        "(1P+N)",
+        "L3",
+        "3",
+        "2x10",
+        "(1P+N)",
+        "3x2.5",
+        "16",
+        "17",
+        "18",
+        "2x10",
+        "(1P+N)",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "(1P+N)",
+        "2x16",
+        "(1P+N)",
+        "2x16",
+        "(1P+N)",
+        "R7",
+        "R8",
+        "R9",
+        "19",
+        "20",
+        "21",
+        "3x4",
+        "2x16",
+        "(1P+N)",
+        "2x16",
+        "(1P+N)",
+        "2x16",
+        "(1P+N)",
+        "R10",
+        "3x4",
+        "---",
+        "---",
+        "3x4",
+        "3x4",
+        "3x4",
+        "3x4",
+        "3x4",
+        "3x4",
+        "L4",
+        "L5",
+        "2x10",
+        "(1P+N)",
+        "3x2.5",
+        "2x10",
+        "(1P+N)",
+        "2x10",
+        "(1P+N)",
+        "St-by",
+        "SPARE",
+        "4x40 AMP",
+        "100mA",
+        "ISOL.S.+RCD",
+        "4x40 AMP",
+        "30mA",
+        "ISOL.S.+RCD",
+        "4x40 AMP",
+        "30mA",
+        "ISOL.S.+RCD",
+        "Fuse lL/gG 3x32A",
+        "2x16",
+        "St-by",
+        "3x4",
+        "DB-B2-CA2",
+        "SPARE",
+        "St-by",
+        "2x10",
+        "(1P+N)",
+        "2x10",
+        "(1P+N)",
+        "2x10",
+        "(1P+N)",
+        "---",
+        "36",
+        "36",
+        "---",
+        "3x2.5",
+        "3x2.5",
+        "3x2.5",
+        "LIGHTING - RAMP, CAR PATHWAY",
+        "LIGHTING - PARKING",
+        "LIGHTING - PARKING",
+        "SOCKETS - PARKING LEFT SIDE",
+        "SPARE",
+        "LC",
+        "c",
+        "LC",
+        "d",
+        "LC",
+        "e",
+        "LC",
+        "f",
+        "LC",
+        "a",
+        "LC",
+        "b",
+        "2x10",
+        "(1P+N)",
+        "2x10",
+        "(1P+N)",
+        "2x10",
+        "(1P+N)",
+        "3x2.5",
+        "EL1",
+        "EL2",
+        "EL3",
+        "---",
+        "---",
+        "---",
+        "---",
+        "LIGHTING - EMERGENCY PARKING & RAMP",
+        "LIGHTING - EXIT PARKING, EXIT STAIRS NEAR LIFT4",
+        "LIGHTING - EMERGENCY SAS LIFT 4, SAS STAIRS LEFT SIDE, CORRIDOR FOR DRIVERS ROOMS AREA",
+        "---",
+        "---",
+        "SPARE",
+        "SPARE",
+        "SPARE",
+        "St-by",
+        "St-by",
+        "St-by",
+        "LIGHTING - SAS LIFT 4, SAS STAIRS RIGHT SIDE, COMMUN SERVICES AREAS, ELECTRICAL ROOM, CORRIDOR FOR DRIVERS ROOMS AREA, STORAGE",
+        "SOCKETS - PARKING FOR DRIVERS ROOMS RIGHT SIDE",
+        "22",
+        "23",
+        "24",
+        "SOCKETS - CORRIDOR FOR DRIVERS ROOMS AREA",
+        "SOCKET - COMMUN SERVICES AREA IN DRIVERS ROOMS AREA",
+        "SOCKET - COMMUN SERVICES AREA NEAR DRIVERS ROOMS AREA",
+        "SOCKET - COMMUN SERVICES AREA NEAR RIGHT STAIRS",
+        "SOCKET - COMMUN SERVICES AREA NEAR RAMP",
+        "SOCKET - COMMUN SERVICES AREA NEAR ELECTRICAL ROOM",
+        "SOCKET - ELECTRICAL ROOM",
+        "2x16",
+        "(1P+N)",
+        "R11",
+        "3x4",
+        "OUTLET - RAMP AUTOMATIC DOOR ",
+        "2x16",
+        "(1P+N)",
+        "R12",
+        "3x4",
+        "2x16",
+        "(1P+N)",
+        "R13",
+        "3x4",
+        "880",
+        "---",
+        "---",
+        "SOCKET - STORAGE NEAR RIGHT STAIRS",
+        "SOCKET - STORAGE NEAR RIGHT STAIRS",
+        "25",
+        "26",
+        "27",
+        "2322",
+        "1883",
+        "TOTAL DEMAND LOAD 50%%%",
+        "TOTAL CONNECTED 3-PH LOAD",
+        "TOTAL DEMAND 3-PH LOAD 50%%%",
+        "6325 VA",
+        ",",
+        "10 A/PH",
+        "2120",
+        "SPD",
+        "TYPE 2 / CLASS C",
+        "GND",
+        "Up<=1.3KV",
+        "Imin=20KA IMax=40KA",
+        "Fuse gG",
+        "3x32A",
+        "L=95 m",
+        "COMBINED LIGHTNING",
+        "+ SURGE ARRESTERS",
+        "3-POLE+NEUTRAL 40KA",
+        "TYPE 2 / CLASS C,",
+        "FOR TN-S SYSTEM",
+        "SURGE PROTECTION",
+        "GND",
+        "TO SMDB-B2"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:486",
+      "layer": "0",
+      "x": 25.88043984366963,
+      "y": 21.06555815092991,
+      "height": 0.2214644866233395,
+      "text": "234"
+    },
+    {
+      "id": "text:487",
+      "layer": "0",
+      "x": 26.7688472211958,
+      "y": 20.72229121817048,
+      "height": 0.2214644866233395,
+      "text": "234"
+    },
+    {
+      "id": "text:488",
+      "layer": "0",
+      "x": 26.77132619746412,
+      "y": 14.02367253502137,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:489",
+      "layer": "0",
+      "x": 25.89910003558184,
+      "y": 13.35301673638872,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:48A",
+      "layer": "0",
+      "x": 27.67857227256904,
+      "y": 20.38669048487912,
+      "height": 0.2214644866233395,
+      "text": "288"
+    },
+    {
+      "id": "text:48B",
+      "layer": "0",
+      "x": 25.88044854967306,
+      "y": 20.05957449465762,
+      "height": 0.2214644866233395,
+      "text": "234"
+    },
+    {
+      "id": "text:48C",
+      "layer": "0",
+      "x": 26.7688472211958,
+      "y": 19.71630756213101,
+      "height": 0.2214644866233395,
+      "text": "580"
+    },
+    {
+      "id": "text:48D",
+      "layer": "0",
+      "x": 27.67857227256904,
+      "y": 19.38070682860683,
+      "height": 0.2214644866233395,
+      "text": "87"
+    },
+    {
+      "id": "text:48E",
+      "layer": "0",
+      "x": 25.89687271431471,
+      "y": 16.36275584663502,
+      "height": 0.2214644866233395,
+      "text": "750"
+    },
+    {
+      "id": "text:48F",
+      "layer": "0",
+      "x": 26.77130121939267,
+      "y": 16.03563985641352,
+      "height": 0.2214644866233395,
+      "text": "750"
+    },
+    {
+      "id": "text:490",
+      "layer": "0",
+      "x": 27.65969988346482,
+      "y": 15.69237292400333,
+      "height": 0.2214644866233395,
+      "text": "750"
+    },
+    {
+      "id": "text:491",
+      "layer": "0",
+      "x": 25.89687271431471,
+      "y": 15.35677219036273,
+      "height": 0.2214644866233395,
+      "text": "750"
+    },
+    {
+      "id": "text:492",
+      "layer": "0",
+      "x": 29.50209757654379,
+      "y": 21.09696592582161,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - RAMP, CAR PATHWAY"
+    },
+    {
+      "id": "text:493",
+      "layer": "0",
+      "x": 26.77118883483494,
+      "y": 15.02965620270236,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:494",
+      "layer": "0",
+      "x": 27.6595874989071,
+      "y": 14.68638927029217,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:495",
+      "layer": "0",
+      "x": 25.89676032975699,
+      "y": 14.35078853653516,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:496",
+      "layer": "0",
+      "x": 27.65925034523393,
+      "y": 13.68040561425271,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:497",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 16.3721955565806,
+      "height": 0.2214644866233395,
+      "text": "SOCKETS - PARKING RIGHT SIDE"
+    },
+    {
+      "id": "text:498",
+      "layer": "0",
+      "x": 26.77118883483494,
+      "y": 13.01768888782947,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:499",
+      "layer": "0",
+      "x": 27.6595874989071,
+      "y": 12.6744219555357,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:49A",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 16.37096768308668,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:49B",
+      "layer": "0",
+      "x": 26.45518512620042,
+      "y": 26.43117887671809,
+      "height": 0.2214644866233395,
+      "text": "EFFECTIVE"
+    },
+    {
+      "id": "text:49C",
+      "layer": "0",
+      "x": 27.88215862183283,
+      "y": 23.80109001026261,
+      "height": 0.2214644866233395,
+      "text": "T"
+    },
+    {
+      "id": "text:49E",
+      "layer": "0",
+      "x": 26.89431522755335,
+      "y": 23.80109001026261,
+      "height": 0.2214644866233395,
+      "text": "S"
+    },
+    {
+      "id": "text:49F",
+      "layer": "0",
+      "x": 26.11985724015544,
+      "y": 26.43117887671809,
+      "height": 0.2214644866233395,
+      "text": "LOAD"
+    },
+    {
+      "id": "text:4A0",
+      "layer": "0",
+      "x": 26.01705464689444,
+      "y": 23.80109001026261,
+      "height": 0.2214644866233395,
+      "text": "R"
+    },
+    {
+      "id": "text:4A2",
+      "layer": "0",
+      "x": 24.97836120395372,
+      "y": 24.0493560701679,
+      "height": 0.2214644866233395,
+      "text": "Ref."
+    },
+    {
+      "id": "text:4A3",
+      "layer": "0",
+      "x": 24.30770542813848,
+      "y": 24.0493560701679,
+      "height": 0.2214644866233395,
+      "text": "Numb."
+    },
+    {
+      "id": "text:4A6",
+      "layer": "0",
+      "x": 24.5438161675484,
+      "y": 26.43117887671809,
+      "height": 0.2214644866233395,
+      "text": "CIRCUIT"
+    },
+    {
+      "id": "text:4A7",
+      "layer": "0",
+      "x": 24.27786532758186,
+      "y": 21.06555810878756,
+      "height": 0.2214644866233395,
+      "text": "1"
+    },
+    {
+      "id": "text:4A8",
+      "layer": "0",
+      "x": 24.82908430291722,
+      "y": 21.06555810878756,
+      "height": 0.2214644866233395,
+      "text": "L1"
+    },
+    {
+      "id": "text:4A9",
+      "layer": "0",
+      "x": 24.82908430291722,
+      "y": 20.73023022111277,
+      "height": 0.2214644866233395,
+      "text": "L2"
+    },
+    {
+      "id": "text:4AA",
+      "layer": "0",
+      "x": 24.27786532758186,
+      "y": 20.73023022111277,
+      "height": 0.2214644866233395,
+      "text": "2"
+    },
+    {
+      "id": "text:4AC",
+      "layer": "0",
+      "x": 25.78452935038517,
+      "y": 26.43117887671809,
+      "height": 0.2214644866233395,
+      "text": "VA."
+    },
+    {
+      "id": "text:4AD",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 15.70031190866842,
+      "height": 0.2214644866233395,
+      "text": "R3"
+    },
+    {
+      "id": "text:4AE",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 16.37096768401801,
+      "height": 0.2214644866233395,
+      "text": "R1"
+    },
+    {
+      "id": "text:4B1",
+      "layer": "0",
+      "x": 25.82380185524384,
+      "y": 7.067515472585846,
+      "height": 0.2214644866233395,
+      "text": "4644"
+    },
+    {
+      "id": "text:4B2",
+      "layer": "0",
+      "x": 26.71450841488699,
+      "y": 7.067515472585846,
+      "height": 0.2214644866233395,
+      "text": "4240"
+    },
+    {
+      "id": "text:4B3",
+      "layer": "0",
+      "x": 27.60933109807233,
+      "y": 7.067515472353016,
+      "height": 0.2214644866233395,
+      "text": "3765"
+    },
+    {
+      "id": "text:4B4",
+      "layer": "0",
+      "x": 22.12825620422522,
+      "y": 7.072988610884686,
+      "height": 0.2071310200367934,
+      "text": "TOTAL CONNECTED LOAD"
+    },
+    {
+      "id": "text:4B8",
+      "layer": "0",
+      "x": 25.86268718788783,
+      "y": 5.691321956862275,
+      "height": 0.2230922825416639,
+      "text": "2322"
+    },
+    {
+      "id": "text:4B9",
+      "layer": "0",
+      "x": 27.65171302171807,
+      "y": 5.691321956629444,
+      "height": 0.2230922825416639,
+      "text": "1883"
+    },
+    {
+      "id": "text:4BA",
+      "layer": "0",
+      "x": 22.1349439310507,
+      "y": 5.696795095161114,
+      "height": 0.2071310200367934,
+      "text": "TOTAL DEMAND LOAD 50%%%"
+    },
+    {
+      "id": "text:4BB",
+      "layer": "0",
+      "x": 18.69698542325209,
+      "y": 20.86436137608955,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:4BD",
+      "layer": "0",
+      "x": 19.27585326103876,
+      "y": 20.86436137608955,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4C0",
+      "layer": "0",
+      "x": 12.70512806080664,
+      "y": 18.69286108825593,
+      "height": 0.2214644866233395,
+      "text": "4x40 Amp"
+    },
+    {
+      "id": "text:4C1",
+      "layer": "0",
+      "x": 12.70512806080664,
+      "y": 18.32594374048761,
+      "height": 0.2214644866233395,
+      "text": "ISOL.S."
+    },
+    {
+      "id": "text:4C2",
+      "layer": "0",
+      "x": 17.49873663081239,
+      "y": 22.99252322600926,
+      "height": 0.2214644866233395,
+      "text": "MCB"
+    },
+    {
+      "id": "text:4C3",
+      "layer": "0",
+      "x": 17.49873663081239,
+      "y": 22.71336420002165,
+      "height": 0.2214644866233395,
+      "text": "B.C.: 6KA/400V"
+    },
+    {
+      "id": "text:4C4",
+      "layer": "0",
+      "x": 17.49873663081239,
+      "y": 22.41483767661969,
+      "height": 0.2460716518037114,
+      "text": "IEC/EN 60898"
+    },
+    {
+      "id": "text:4C7",
+      "layer": "0",
+      "x": 23.29198197616647,
+      "y": 26.44180883286293,
+      "height": 0.1781036449349856,
+      "text": "CONDUCTOR"
+    },
+    {
+      "id": "text:4C8",
+      "layer": "0",
+      "x": 23.28631738169501,
+      "y": 26.43117887671809,
+      "height": 0.1781036449349856,
+      "text": "size mm²"
+    },
+    {
+      "id": "text:4C9",
+      "layer": "0",
+      "x": 18.69042408667887,
+      "y": 15.83444306341237,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4CA",
+      "layer": "0",
+      "x": 19.26978798412169,
+      "y": 15.83444306341237,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4CB",
+      "layer": "0",
+      "x": 18.69042377747978,
+      "y": 16.16977094549923,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4CC",
+      "layer": "0",
+      "x": 19.26978768237318,
+      "y": 16.16977094549923,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4CD",
+      "layer": "0",
+      "x": 18.69042408667887,
+      "y": 16.50509883852913,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4CE",
+      "layer": "0",
+      "x": 19.26978798412169,
+      "y": 16.50509883852913,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4D0",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 20.73023022320825,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:4D1",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 21.06555810878756,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:4D4",
+      "layer": "0",
+      "x": 22.12826292837421,
+      "y": 6.362924971089278,
+      "height": 0.2071310200367934,
+      "text": "TOTAL CONNECTED 3-PH LOAD"
+    },
+    {
+      "id": "text:4D5",
+      "layer": "0",
+      "x": 22.12825620422522,
+      "y": 5.032223658806224,
+      "height": 0.2071310200367934,
+      "text": "TOTAL DEMAND 3-PH LOAD 50%%%"
+    },
+    {
+      "id": "text:4D6",
+      "layer": "0",
+      "x": 25.88049586365382,
+      "y": 6.357806745620955,
+      "height": 0.2071310200367934,
+      "text": "12649 VA"
+    },
+    {
+      "id": "text:4D7",
+      "layer": "0",
+      "x": 27.08016602570574,
+      "y": 6.357807288116355,
+      "height": 0.2071310200367934,
+      "text": ","
+    },
+    {
+      "id": "text:4D8",
+      "layer": "0",
+      "x": 27.23633475477259,
+      "y": 6.357807288116355,
+      "height": 0.2071310200367934,
+      "text": "19 A/PH"
+    },
+    {
+      "id": "text:4D9",
+      "layer": "0",
+      "x": 25.89861035036306,
+      "y": 5.027105666168545,
+      "height": 0.2071310200367934,
+      "text": "6325 VA"
+    },
+    {
+      "id": "text:4DA",
+      "layer": "0",
+      "x": 27.08016663292806,
+      "y": 5.027106208896775,
+      "height": 0.2071310200367934,
+      "text": ","
+    },
+    {
+      "id": "text:4DB",
+      "layer": "0",
+      "x": 27.26511697532992,
+      "y": 5.027106208896775,
+      "height": 0.2071310200367934,
+      "text": "10 A/PH"
+    },
+    {
+      "id": "text:4DC",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 16.03563979634321,
+      "height": 0.2214644866233395,
+      "text": "R2"
+    },
+    {
+      "id": "text:4DD",
+      "layer": "0",
+      "x": 24.21701137503992,
+      "y": 16.37096769938483,
+      "height": 0.2214644866233395,
+      "text": "13"
+    },
+    {
+      "id": "text:4DE",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 15.36498402099362,
+      "height": 0.2214644866233395,
+      "text": "R4"
+    },
+    {
+      "id": "text:4DF",
+      "layer": "0",
+      "x": 18.69042408667887,
+      "y": 15.49911517573758,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4E0",
+      "layer": "0",
+      "x": 19.26978798412169,
+      "y": 15.49911517573758,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4E1",
+      "layer": "0",
+      "x": 24.2170456328095,
+      "y": 16.03563981194286,
+      "height": 0.2214644866233395,
+      "text": "14"
+    },
+    {
+      "id": "text:4E2",
+      "layer": "0",
+      "x": 24.82917234875644,
+      "y": 15.02965613355166,
+      "height": 0.2214644866233395,
+      "text": "R5"
+    },
+    {
+      "id": "text:4E3",
+      "layer": "0",
+      "x": 18.69045834072317,
+      "y": 15.16378728806279,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4E4",
+      "layer": "0",
+      "x": 19.26982224561657,
+      "y": 15.16378728806279,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4E5",
+      "layer": "0",
+      "x": 24.82918052204336,
+      "y": 14.69432824331573,
+      "height": 0.2214644866233395,
+      "text": "R6"
+    },
+    {
+      "id": "text:4E6",
+      "layer": "0",
+      "x": 24.2170456328095,
+      "y": 15.69844282342358,
+      "height": 0.2214644866233395,
+      "text": "15"
+    },
+    {
+      "id": "text:4E7",
+      "layer": "0",
+      "x": 18.6904484202751,
+      "y": 14.82845939829252,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4E8",
+      "layer": "0",
+      "x": 19.26931625806178,
+      "y": 14.82845939829252,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4E9",
+      "layer": "0",
+      "x": 24.82909301264594,
+      "y": 20.39490233576628,
+      "height": 0.2214644866233395,
+      "text": "L3"
+    },
+    {
+      "id": "text:4EA",
+      "layer": "0",
+      "x": 24.27787403731058,
+      "y": 20.39490233576628,
+      "height": 0.2214644866233395,
+      "text": "3"
+    },
+    {
+      "id": "text:4EB",
+      "layer": "0",
+      "x": 18.69687303869436,
+      "y": 20.52903349074307,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:4EC",
+      "layer": "0",
+      "x": 19.27574087648104,
+      "y": 20.52903349074307,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4ED",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 20.39490233786176,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:4EF",
+      "layer": "0",
+      "x": 24.21704572640742,
+      "y": 15.36311493458464,
+      "height": 0.2214644866233395,
+      "text": "16"
+    },
+    {
+      "id": "text:4F0",
+      "layer": "0",
+      "x": 24.21704605097334,
+      "y": 15.02778704574569,
+      "height": 0.2214644866233395,
+      "text": "17"
+    },
+    {
+      "id": "text:4F1",
+      "layer": "0",
+      "x": 24.21704605097334,
+      "y": 14.69245915690674,
+      "height": 0.2214644866233395,
+      "text": "18"
+    },
+    {
+      "id": "text:4F2",
+      "layer": "0",
+      "x": 18.69698542325209,
+      "y": 21.19968926353152,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:4F3",
+      "layer": "0",
+      "x": 19.27585326103876,
+      "y": 21.19968926353152,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4F4",
+      "layer": "0",
+      "x": 24.27786532758186,
+      "y": 20.05957445018696,
+      "height": 0.2214644866233395,
+      "text": "4"
+    },
+    {
+      "id": "text:4F5",
+      "layer": "0",
+      "x": 24.27787403731058,
+      "y": 19.72424656484048,
+      "height": 0.2214644866233395,
+      "text": "5"
+    },
+    {
+      "id": "text:4F6",
+      "layer": "0",
+      "x": 24.27788274331401,
+      "y": 19.38891867949399,
+      "height": 0.2214644866233395,
+      "text": "6"
+    },
+    {
+      "id": "text:4F7",
+      "layer": "0",
+      "x": 24.27789126491557,
+      "y": 19.05359079403109,
+      "height": 0.2214644866233395,
+      "text": "7"
+    },
+    {
+      "id": "text:4F8",
+      "layer": "0",
+      "x": 24.27788255518685,
+      "y": 18.71826290891743,
+      "height": 0.2214644866233395,
+      "text": "8"
+    },
+    {
+      "id": "text:4F9",
+      "layer": "0",
+      "x": 24.27789126491557,
+      "y": 18.38293502333811,
+      "height": 0.2214644866233395,
+      "text": "9"
+    },
+    {
+      "id": "text:4FA",
+      "layer": "0",
+      "x": 24.2185700099581,
+      "y": 18.04760713799163,
+      "height": 0.2214644866233395,
+      "text": "10"
+    },
+    {
+      "id": "text:4FB",
+      "layer": "0",
+      "x": 24.21856199965264,
+      "y": 17.71227925264514,
+      "height": 0.2214644866233395,
+      "text": "11"
+    },
+    {
+      "id": "text:4FC",
+      "layer": "0",
+      "x": 24.2185700099581,
+      "y": 17.37695136729865,
+      "height": 0.2214644866233395,
+      "text": "12"
+    },
+    {
+      "id": "text:4FD",
+      "layer": "0",
+      "x": 19.26978798412169,
+      "y": 14.4931315127132,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:4FE",
+      "layer": "0",
+      "x": 18.69045834072317,
+      "y": 14.15780362527124,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:4FF",
+      "layer": "0",
+      "x": 19.26982224561657,
+      "y": 14.15780362527124,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:500",
+      "layer": "0",
+      "x": 18.6904484202751,
+      "y": 13.82247573550097,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:501",
+      "layer": "0",
+      "x": 19.26931625806178,
+      "y": 13.82247573550097,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:502",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 14.35900035727075,
+      "height": 0.2214644866233395,
+      "text": "R7"
+    },
+    {
+      "id": "text:503",
+      "layer": "0",
+      "x": 24.82917234875644,
+      "y": 14.02367246936313,
+      "height": 0.2214644866233395,
+      "text": "R8"
+    },
+    {
+      "id": "text:504",
+      "layer": "0",
+      "x": 24.82918052204336,
+      "y": 13.68834457936003,
+      "height": 0.2214644866233395,
+      "text": "R9"
+    },
+    {
+      "id": "text:505",
+      "layer": "0",
+      "x": 24.21704605097334,
+      "y": 14.3571312703961,
+      "height": 0.2214644866233395,
+      "text": "19"
+    },
+    {
+      "id": "text:506",
+      "layer": "0",
+      "x": 24.21704605097334,
+      "y": 14.02180338178999,
+      "height": 0.2214644866233395,
+      "text": "20"
+    },
+    {
+      "id": "text:507",
+      "layer": "0",
+      "x": 24.21704605097334,
+      "y": 13.68647549295104,
+      "height": 0.2214644866233395,
+      "text": "21"
+    },
+    {
+      "id": "text:508",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 13.68834458098984,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:509",
+      "layer": "0",
+      "x": 18.69042408667887,
+      "y": 13.48714784899033,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:50A",
+      "layer": "0",
+      "x": 19.26978798412169,
+      "y": 13.48714784899033,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:50B",
+      "layer": "0",
+      "x": 18.69045834072317,
+      "y": 12.14583629805832,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:50C",
+      "layer": "0",
+      "x": 19.26982224561657,
+      "y": 12.14583629805832,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:50D",
+      "layer": "0",
+      "x": 18.6904484202751,
+      "y": 11.81050840852088,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:50E",
+      "layer": "0",
+      "x": 19.26931625806178,
+      "y": 11.81050840852088,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:50F",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 13.35301669308222,
+      "height": 0.2214644866233395,
+      "text": "R10"
+    },
+    {
+      "id": "text:510",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 13.35301669226731,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:511",
+      "layer": "0",
+      "x": 24.82917234875644,
+      "y": 12.01170514261587,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:512",
+      "layer": "0",
+      "x": 24.82918052204336,
+      "y": 11.67637725237994,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:51A",
+      "layer": "0",
+      "x": 6.274322920631718,
+      "y": 18.98141161730285,
+      "height": 0.2876046574480581,
+      "text": "L=95 m"
+    },
+    {
+      "id": "text:53C",
+      "layer": "0",
+      "x": 26.76684944020967,
+      "y": 5.691321956862275,
+      "height": 0.2230922825416639,
+      "text": "2120"
+    },
+    {
+      "id": "text:53D",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 15.36498402029513,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:53E",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 15.0296561315726,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:53F",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 14.69432824401422,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:540",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 14.02367246633633,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:541",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 16.03563979657604,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:542",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 15.70031190785351,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:543",
+      "layer": "0",
+      "x": 24.82908430291722,
+      "y": 20.05957444576318,
+      "height": 0.2214644866233395,
+      "text": "L4"
+    },
+    {
+      "id": "text:544",
+      "layer": "0",
+      "x": 24.82908430291722,
+      "y": 19.72424655808839,
+      "height": 0.2214644866233395,
+      "text": "L5"
+    },
+    {
+      "id": "text:545",
+      "layer": "0",
+      "x": 18.69698542325209,
+      "y": 19.85837771306517,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:547",
+      "layer": "0",
+      "x": 19.27585326103876,
+      "y": 19.85837771306517,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:548",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 20.05957444576318,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:549",
+      "layer": "0",
+      "x": 18.69687303869436,
+      "y": 19.52304982771869,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:54A",
+      "layer": "0",
+      "x": 19.27574087648104,
+      "y": 19.52304982771869,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:54B",
+      "layer": "0",
+      "x": 18.69698542325209,
+      "y": 20.19370560050714,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:54C",
+      "layer": "0",
+      "x": 19.27585326103876,
+      "y": 20.19370560050714,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:554",
+      "layer": "0",
+      "x": 22.56450371645774,
+      "y": 17.39248477277118,
+      "height": 0.2214644866233395,
+      "text": "St-by"
+    },
+    {
+      "id": "text:555",
+      "layer": "0",
+      "x": 29.50211118037264,
+      "y": 17.39371266698702,
+      "height": 0.2214644866233395,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:55E",
+      "layer": "0",
+      "x": 15.85608796045567,
+      "y": 18.87874701589583,
+      "height": 0.1233716475627864,
+      "text": "4x40 AMP"
+    },
+    {
+      "id": "text:55F",
+      "layer": "0",
+      "x": 15.85618093252565,
+      "y": 18.67271015740237,
+      "height": 0.1233716475627864,
+      "text": "100mA"
+    },
+    {
+      "id": "text:560",
+      "layer": "0",
+      "x": 15.86639755979563,
+      "y": 18.46635575120575,
+      "height": 0.1233716475627864,
+      "text": "ISOL.S.+RCD"
+    },
+    {
+      "id": "text:575",
+      "layer": "0",
+      "x": 15.85606279798235,
+      "y": 15.02247665979205,
+      "height": 0.1233716475627864,
+      "text": "4x40 AMP"
+    },
+    {
+      "id": "text:576",
+      "layer": "0",
+      "x": 15.85615577191497,
+      "y": 14.81643980129859,
+      "height": 0.1233716475627864,
+      "text": "30mA"
+    },
+    {
+      "id": "text:577",
+      "layer": "0",
+      "x": 15.86637239732231,
+      "y": 14.62541628063894,
+      "height": 0.1233716475627864,
+      "text": "ISOL.S.+RCD"
+    },
+    {
+      "id": "text:586",
+      "layer": "0",
+      "x": 15.85606279798235,
+      "y": 12.5075175022311,
+      "height": 0.1233716475627864,
+      "text": "4x40 AMP"
+    },
+    {
+      "id": "text:587",
+      "layer": "0",
+      "x": 15.85615577191497,
+      "y": 12.30148064373764,
+      "height": 0.1233716475627864,
+      "text": "30mA"
+    },
+    {
+      "id": "text:588",
+      "layer": "0",
+      "x": 15.86637239732231,
+      "y": 12.11045712307799,
+      "height": 0.1233716475627864,
+      "text": "ISOL.S.+RCD"
+    },
+    {
+      "id": "text:592",
+      "layer": "0",
+      "x": 15.32535728687803,
+      "y": 9.321805563576099,
+      "height": 0.2066918804860044,
+      "text": "SPD"
+    },
+    {
+      "id": "text:597",
+      "layer": "0",
+      "x": 16.35270349184434,
+      "y": 9.310319680541333,
+      "height": 0.1771644689880038,
+      "text": "TYPE 2 / CLASS C"
+    },
+    {
+      "id": "text:598",
+      "layer": "0",
+      "x": 15.35152476529042,
+      "y": 7.598072233430621,
+      "height": 0.1771644689880038,
+      "text": "GND"
+    },
+    {
+      "id": "text:599",
+      "layer": "0",
+      "x": 16.35270349184434,
+      "y": 9.964870376798835,
+      "height": 0.1771644689880038,
+      "text": "Fuse lL/gG 3x32A"
+    },
+    {
+      "id": "text:59A",
+      "layer": "0",
+      "x": 16.35270349184434,
+      "y": 8.957782752399844,
+      "height": 0.1771644689880038,
+      "text": "Up<=1.3KV"
+    },
+    {
+      "id": "text:59C",
+      "layer": "0",
+      "x": 16.35270349184434,
+      "y": 8.605245824258354,
+      "height": 0.1771644689880038,
+      "text": "Imin=20KA IMax=40KA"
+    },
+    {
+      "id": "text:59D",
+      "layer": "0",
+      "x": 18.69698734783019,
+      "y": 14.49313150991923,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:5C6",
+      "layer": "0",
+      "x": 6.633662216983836,
+      "y": 9.415037911438894,
+      "height": 0.1074966272447721,
+      "text": "COMBINED LIGHTNING"
+    },
+    {
+      "id": "text:5C7",
+      "layer": "0",
+      "x": 6.633662216983836,
+      "y": 9.234214889637705,
+      "height": 0.1074966272447721,
+      "text": "+ SURGE ARRESTERS"
+    },
+    {
+      "id": "text:5C8",
+      "layer": "0",
+      "x": 6.633662216983836,
+      "y": 9.053391867836517,
+      "height": 0.1074966272447721,
+      "text": "3-POLE+NEUTRAL 40KA"
+    },
+    {
+      "id": "text:5C9",
+      "layer": "0",
+      "x": 6.633662216983836,
+      "y": 8.872568846035328,
+      "height": 0.1074966272447721,
+      "text": "TYPE 2 / CLASS C,"
+    },
+    {
+      "id": "text:5CA",
+      "layer": "0",
+      "x": 6.633662216983836,
+      "y": 8.69174582423414,
+      "height": 0.1074966272447721,
+      "text": "FOR TN-S SYSTEM"
+    },
+    {
+      "id": "text:5CC",
+      "layer": "0",
+      "x": 8.077063492186468,
+      "y": 11.02946691034133,
+      "height": 0.1074966272447721,
+      "text": "SURGE PROTECTION"
+    },
+    {
+      "id": "text:5CD",
+      "layer": "0",
+      "x": 9.554363446928662,
+      "y": 8.114420518565503,
+      "height": 0.1074966272447721,
+      "text": "GND"
+    },
+    {
+      "id": "text:5D0",
+      "layer": "0",
+      "x": 9.881445272512835,
+      "y": 9.88966325908671,
+      "height": 0.0898764554503931,
+      "text": "Fuse gG"
+    },
+    {
+      "id": "text:5D1",
+      "layer": "0",
+      "x": 9.875866259135407,
+      "y": 9.739124228998598,
+      "height": 0.0898764554503931,
+      "text": "3x32A"
+    },
+    {
+      "id": "text:5D2",
+      "layer": "0",
+      "x": 22.56449250845621,
+      "y": 11.67637726320657,
+      "height": 0.2214644866233395,
+      "text": "St-by"
+    },
+    {
+      "id": "text:5D3",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 14.35900035633943,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:5D4",
+      "layer": "0",
+      "x": 12.2233603258283,
+      "y": 23.80526197846751,
+      "height": 0.465075421909013,
+      "text": "DB-B2-CA2"
+    },
+    {
+      "id": "text:5D5",
+      "layer": "0",
+      "x": 29.50210010787855,
+      "y": 11.67760512424405,
+      "height": 0.2214644866233395,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:5D6",
+      "layer": "0",
+      "x": 22.56449250845621,
+      "y": 12.01170515088136,
+      "height": 0.2214644866233395,
+      "text": "St-by"
+    },
+    {
+      "id": "text:5D7",
+      "layer": "0",
+      "x": 18.69698553454514,
+      "y": 19.18772193771559,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:5D8",
+      "layer": "0",
+      "x": 19.27585337233181,
+      "y": 19.18772193771559,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:5D9",
+      "layer": "0",
+      "x": 18.69687314998741,
+      "y": 18.8523940523691,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:5DA",
+      "layer": "0",
+      "x": 19.27574098777409,
+      "y": 18.8523940523691,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:5DE",
+      "layer": "0",
+      "x": 18.69698553454514,
+      "y": 18.51706616213317,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:5DF",
+      "layer": "0",
+      "x": 19.27585337233181,
+      "y": 18.51706616213317,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:5E0",
+      "layer": "0",
+      "x": 24.82910686467226,
+      "y": 17.39248479721839,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:5E1",
+      "layer": "0",
+      "x": 25.88044866096611,
+      "y": 19.05359083163324,
+      "height": 0.2214644866233395,
+      "text": "36"
+    },
+    {
+      "id": "text:5E2",
+      "layer": "0",
+      "x": 26.76884733248885,
+      "y": 18.71032389910663,
+      "height": 0.2214644866233395,
+      "text": "36"
+    },
+    {
+      "id": "text:5E3",
+      "layer": "0",
+      "x": 27.67858612459536,
+      "y": 17.38427295308332,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:5E9",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 19.38891867250907,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:5EA",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 19.72424655808839,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:5EB",
+      "layer": "0",
+      "x": 22.56449000133584,
+      "y": 19.05359078716258,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:5EC",
+      "layer": "0",
+      "x": 29.50209757654379,
+      "y": 20.76163803814682,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - RAMP, CAR PATHWAY"
+    },
+    {
+      "id": "text:5ED",
+      "layer": "0",
+      "x": 29.50209757654379,
+      "y": 20.42631015280033,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - PARKING"
+    },
+    {
+      "id": "text:5EE",
+      "layer": "0",
+      "x": 29.50209757654379,
+      "y": 20.09098226745385,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - PARKING"
+    },
+    {
+      "id": "text:5EF",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 16.03686767123411,
+      "height": 0.2214644866233395,
+      "text": "SOCKETS - PARKING LEFT SIDE"
+    },
+    {
+      "id": "text:5F0",
+      "layer": "0",
+      "x": 29.50210010787855,
+      "y": 12.01293300947412,
+      "height": 0.2214644866233395,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:5F3",
+      "layer": "0",
+      "x": 35.72562531440872,
+      "y": 21.11018581103976,
+      "height": 0.1144,
+      "text": "LC"
+    },
+    {
+      "id": "text:5F4",
+      "layer": "0",
+      "x": 36.11085768756467,
+      "y": 21.1417886133769,
+      "height": 0.1144,
+      "text": "c"
+    },
+    {
+      "id": "text:5F8",
+      "layer": "0",
+      "x": 35.72562531440872,
+      "y": 20.77414191255788,
+      "height": 0.1144,
+      "text": "LC"
+    },
+    {
+      "id": "text:5F9",
+      "layer": "0",
+      "x": 36.11085768756467,
+      "y": 20.80574471489503,
+      "height": 0.1144,
+      "text": "d"
+    },
+    {
+      "id": "text:5FA",
+      "layer": "0",
+      "x": 35.72562531440872,
+      "y": 20.43881402721139,
+      "height": 0.1144,
+      "text": "LC"
+    },
+    {
+      "id": "text:5FB",
+      "layer": "0",
+      "x": 36.11085768756467,
+      "y": 20.47041682954854,
+      "height": 0.1144,
+      "text": "e"
+    },
+    {
+      "id": "text:5FC",
+      "layer": "0",
+      "x": 35.72562531440872,
+      "y": 20.10348614186491,
+      "height": 0.1144,
+      "text": "LC"
+    },
+    {
+      "id": "text:5FD",
+      "layer": "0",
+      "x": 36.12148054470754,
+      "y": 20.13508894420205,
+      "height": 0.1144,
+      "text": "f"
+    },
+    {
+      "id": "text:602",
+      "layer": "0",
+      "x": 35.72562531440872,
+      "y": 21.78084158406104,
+      "height": 0.1144,
+      "text": "LC"
+    },
+    {
+      "id": "text:603",
+      "layer": "0",
+      "x": 36.11085768756467,
+      "y": 21.81244438639818,
+      "height": 0.1144,
+      "text": "a"
+    },
+    {
+      "id": "text:604",
+      "layer": "0",
+      "x": 35.72562531440872,
+      "y": 21.44479768557916,
+      "height": 0.1144,
+      "text": "LC"
+    },
+    {
+      "id": "text:605",
+      "layer": "0",
+      "x": 36.10731673518372,
+      "y": 21.47640048791631,
+      "height": 0.1144,
+      "text": "b"
+    },
+    {
+      "id": "text:60C",
+      "layer": "0",
+      "x": 18.69698553454514,
+      "y": 18.18173827469121,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:60D",
+      "layer": "0",
+      "x": 19.27585337233181,
+      "y": 18.18173827469121,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:60E",
+      "layer": "0",
+      "x": 18.69687314998741,
+      "y": 17.84641038934472,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:60F",
+      "layer": "0",
+      "x": 19.27574098777409,
+      "y": 17.84641038934472,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:613",
+      "layer": "0",
+      "x": 18.69698553454514,
+      "y": 17.51108249910879,
+      "height": 0.2214644866233395,
+      "text": "2x10"
+    },
+    {
+      "id": "text:614",
+      "layer": "0",
+      "x": 19.27585337233181,
+      "y": 17.51108249910879,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:615",
+      "layer": "0",
+      "x": 22.56448185738559,
+      "y": 18.71826289506401,
+      "height": 0.2214644866233395,
+      "text": "3x2.5"
+    },
+    {
+      "id": "text:616",
+      "layer": "0",
+      "x": 24.82907615896697,
+      "y": 19.38891866808529,
+      "height": 0.2214644866233395,
+      "text": "EL1"
+    },
+    {
+      "id": "text:617",
+      "layer": "0",
+      "x": 24.82907615896697,
+      "y": 19.0535907804105,
+      "height": 0.2214644866233395,
+      "text": "EL2"
+    },
+    {
+      "id": "text:618",
+      "layer": "0",
+      "x": 24.82908486869569,
+      "y": 18.71826289506401,
+      "height": 0.2214644866233395,
+      "text": "EL3"
+    },
+    {
+      "id": "text:619",
+      "layer": "0",
+      "x": 24.82907627026002,
+      "y": 17.71227923203963,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:61A",
+      "layer": "0",
+      "x": 27.67857647003989,
+      "y": 18.37472315883036,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:61B",
+      "layer": "0",
+      "x": 25.88045274714391,
+      "y": 18.04760716860886,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:61C",
+      "layer": "0",
+      "x": 26.76885141866664,
+      "y": 17.70434023608225,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:620",
+      "layer": "0",
+      "x": 29.50209768783684,
+      "y": 19.42032648511934,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - EMERGENCY PARKING & RAMP"
+    },
+    {
+      "id": "text:621",
+      "layer": "0",
+      "x": 29.50209768783684,
+      "y": 19.08499859977285,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - EXIT PARKING, EXIT STAIRS NEAR LIFT4"
+    },
+    {
+      "id": "text:622",
+      "layer": "0",
+      "x": 29.50209768783684,
+      "y": 18.74967071442637,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - EMERGENCY SAS LIFT 4, SAS STAIRS LEFT SIDE, CORRIDOR FOR DRIVERS ROOMS AREA"
+    },
+    {
+      "id": "text:623",
+      "layer": "0",
+      "x": 24.82910686467226,
+      "y": 18.06314056791137,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:624",
+      "layer": "0",
+      "x": 24.82907627026002,
+      "y": 18.3829350027326,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:625",
+      "layer": "0",
+      "x": 29.50209732834632,
+      "y": 17.71350711344979,
+      "height": 0.2214644866233395,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:626",
+      "layer": "0",
+      "x": 29.50209732834632,
+      "y": 18.04883499879627,
+      "height": 0.2214644866233395,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:627",
+      "layer": "0",
+      "x": 29.50209732834632,
+      "y": 18.38416288414276,
+      "height": 0.2214644866233395,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:628",
+      "layer": "0",
+      "x": 22.56450371645774,
+      "y": 17.72781266044597,
+      "height": 0.2214644866233395,
+      "text": "St-by"
+    },
+    {
+      "id": "text:629",
+      "layer": "0",
+      "x": 22.56450371645774,
+      "y": 18.06314054812076,
+      "height": 0.2214644866233395,
+      "text": "St-by"
+    },
+    {
+      "id": "text:62A",
+      "layer": "0",
+      "x": 22.56450371645774,
+      "y": 18.39846843579556,
+      "height": 0.2214644866233395,
+      "text": "St-by"
+    },
+    {
+      "id": "text:62B",
+      "layer": "0",
+      "x": 29.50209768783684,
+      "y": 19.75565437279413,
+      "height": 0.2214644866233395,
+      "text": "LIGHTING - SAS LIFT 4, SAS STAIRS RIGHT SIDE, COMMUN SERVICES AREAS, ELECTRICAL ROOM, CORRIDOR FOR DRIVERS ROOMS AREA, STORAGE"
+    },
+    {
+      "id": "text:62C",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 15.70153978588763,
+      "height": 0.2214644866233395,
+      "text": "SOCKETS - PARKING FOR DRIVERS ROOMS RIGHT SIDE"
+    },
+    {
+      "id": "text:62D",
+      "layer": "0",
+      "x": 24.21702782778452,
+      "y": 13.35114760737172,
+      "height": 0.2214644866233395,
+      "text": "22"
+    },
+    {
+      "id": "text:62E",
+      "layer": "0",
+      "x": 24.21702782778452,
+      "y": 13.01581971876561,
+      "height": 0.2214644866233395,
+      "text": "23"
+    },
+    {
+      "id": "text:62F",
+      "layer": "0",
+      "x": 24.21702782778452,
+      "y": 12.68049182992666,
+      "height": 0.2214644866233395,
+      "text": "24"
+    },
+    {
+      "id": "text:630",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 15.36621190054114,
+      "height": 0.2214644866233395,
+      "text": "SOCKETS - CORRIDOR FOR DRIVERS ROOMS AREA"
+    },
+    {
+      "id": "text:631",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 15.03088401519465,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - COMMUN SERVICES AREA IN DRIVERS ROOMS AREA"
+    },
+    {
+      "id": "text:632",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 14.69555612949892,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - COMMUN SERVICES AREA NEAR DRIVERS ROOMS AREA"
+    },
+    {
+      "id": "text:633",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 14.36022824182412,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - COMMUN SERVICES AREA NEAR RIGHT STAIRS"
+    },
+    {
+      "id": "text:634",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 14.02490035647764,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - COMMUN SERVICES AREA NEAR RAMP"
+    },
+    {
+      "id": "text:635",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 13.35424458578466,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - COMMUN SERVICES AREA NEAR ELECTRICAL ROOM"
+    },
+    {
+      "id": "text:636",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 13.68957247113115,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - ELECTRICAL ROOM"
+    },
+    {
+      "id": "text:637",
+      "layer": "0",
+      "x": 18.69042408667887,
+      "y": 13.15181996364384,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:638",
+      "layer": "0",
+      "x": 19.26978798412169,
+      "y": 13.15181996364384,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:639",
+      "layer": "0",
+      "x": 24.82913809098686,
+      "y": 13.01768880773573,
+      "height": 0.2214644866233395,
+      "text": "R11"
+    },
+    {
+      "id": "text:63A",
+      "layer": "0",
+      "x": 22.56449192591394,
+      "y": 13.01768880692082,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:63D",
+      "layer": "0",
+      "x": 29.50209938982884,
+      "y": 13.0490966537572,
+      "height": 0.2214644866233395,
+      "text": "OUTLET - RAMP AUTOMATIC DOOR "
+    },
+    {
+      "id": "text:63E",
+      "layer": "0",
+      "x": 18.69042548552538,
+      "y": 12.81649207596904,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:63F",
+      "layer": "0",
+      "x": 19.2697893829682,
+      "y": 12.81649207596904,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:640",
+      "layer": "0",
+      "x": 24.82913948983337,
+      "y": 12.68236092006094,
+      "height": 0.2214644866233395,
+      "text": "R12"
+    },
+    {
+      "id": "text:641",
+      "layer": "0",
+      "x": 22.56449332476045,
+      "y": 12.68236091924603,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:643",
+      "layer": "0",
+      "x": 18.69042548552538,
+      "y": 12.48116419062256,
+      "height": 0.2214644866233395,
+      "text": "2x16"
+    },
+    {
+      "id": "text:644",
+      "layer": "0",
+      "x": 19.2697893829682,
+      "y": 12.48116419062256,
+      "height": 0.1917364382987053,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:645",
+      "layer": "0",
+      "x": 24.82913948983337,
+      "y": 12.34703303471445,
+      "height": 0.2214644866233395,
+      "text": "R13"
+    },
+    {
+      "id": "text:646",
+      "layer": "0",
+      "x": 22.56449332476045,
+      "y": 12.34703303389954,
+      "height": 0.2214644866233395,
+      "text": "3x4"
+    },
+    {
+      "id": "text:64A",
+      "layer": "0",
+      "x": 25.89910003558184,
+      "y": 12.34703308034926,
+      "height": 0.2214644866233395,
+      "text": "880"
+    },
+    {
+      "id": "text:64B",
+      "layer": "0",
+      "x": 26.77118883483494,
+      "y": 12.01170523179001,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:64C",
+      "layer": "0",
+      "x": 27.6595874989071,
+      "y": 11.66843829949624,
+      "height": 0.2214644866233395,
+      "text": "---"
+    },
+    {
+      "id": "text:64D",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 12.68358881509169,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - STORAGE NEAR RIGHT STAIRS"
+    },
+    {
+      "id": "text:64E",
+      "layer": "0",
+      "x": 29.50209950112189,
+      "y": 12.3482609297452,
+      "height": 0.2214644866233395,
+      "text": "SOCKET - STORAGE NEAR RIGHT STAIRS"
+    },
+    {
+      "id": "text:64F",
+      "layer": "0",
+      "x": 24.21702782825018,
+      "y": 12.34516394900395,
+      "height": 0.2214644866233395,
+      "text": "25"
+    },
+    {
+      "id": "text:650",
+      "layer": "0",
+      "x": 24.21702782825018,
+      "y": 12.00983606039784,
+      "height": 0.2214644866233395,
+      "text": "26"
+    },
+    {
+      "id": "text:651",
+      "layer": "0",
+      "x": 24.21702782825018,
+      "y": 11.67450817155889,
+      "height": 0.2214644866233395,
+      "text": "27"
+    },
+    {
+      "id": "text:652",
+      "layer": "0",
+      "x": 6.032393191162598,
+      "y": 19.46510387252322,
+      "height": 0.465075421909013,
+      "text": "TO SMDB-B2"
+    }
+  ]
+}

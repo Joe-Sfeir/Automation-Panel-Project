@@ -1,0 +1,256 @@
+{
+  "schematic_layers": [],
+  "physical_layout_layers": [],
+  "schematic_rating_groups": [],
+  "repeating_schematic_blocks": [],
+  "schematic_blocks": [],
+  "block_label_associations": [],
+  "associated_label_counts": {},
+  "unassociated_blocks": [],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "text_cluster_radius": 15.0,
+  "text_clusters": [
+    {
+      "layer": "E-Text",
+      "cx": 22.361,
+      "cy": 17.874,
+      "text_ids": [
+        "text:33A",
+        "text:358",
+        "text:35E",
+        "text:3B0",
+        "text:3B6",
+        "text:3B7",
+        "text:3B8",
+        "text:3BB",
+        "text:3B5",
+        "text:391",
+        "text:392",
+        "text:39B",
+        "text:39C",
+        "text:3AF",
+        "text:3B1",
+        "text:3B3",
+        "text:3B4",
+        "text:37D",
+        "text:3AD",
+        "text:3B2",
+        "text:386",
+        "text:343",
+        "text:35B"
+      ],
+      "texts": [
+        "FUSES",
+        "from MDB-B1",
+        "SMDB-B1",
+        "IS\n4x100A",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "4X35mm2+1x16mm2 \n ",
+        "MCCB BREAKER\n4x40A",
+        "DB-B1-CA2",
+        "Con.: 23.95kVA\nDem.: 11.95kVA",
+        "DB-B1-CA1",
+        "Con.: 17.7kVA\nDem.: 8.91kVA",
+        "spare",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "spare",
+        "DB-B1-ctrl",
+        "MCCB BREAKER\n4x32A",
+        "DB-irrigation",
+        "UPS-20KVA ",
+        "Con.: 22.32kVA\nDem.: 22.32kVA"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:33A",
+      "layer": "E-Text",
+      "x": 6.832376008217778,
+      "y": 10.83010501776408,
+      "height": 0.2,
+      "text": "FUSES"
+    },
+    {
+      "id": "text:343",
+      "layer": "E-Text",
+      "x": 9.345914781389382,
+      "y": 30.36332732742704,
+      "height": 0.4,
+      "text": "UPS-20KVA "
+    },
+    {
+      "id": "text:358",
+      "layer": "E-Text",
+      "x": 13.15567958757057,
+      "y": 6.800506924638114,
+      "height": 0.2,
+      "text": "from MDB-B1"
+    },
+    {
+      "id": "text:35B",
+      "layer": "E-Text",
+      "x": 9.796678249554333,
+      "y": 28.6273261526465,
+      "height": 0.2,
+      "text": "Con.: 22.32kVA\nDem.: 22.32kVA"
+    },
+    {
+      "id": "text:35E",
+      "layer": "E-Text",
+      "x": 5.33634337719306,
+      "y": 6.438334996472634,
+      "height": 0.5,
+      "text": "SMDB-B1"
+    },
+    {
+      "id": "text:37D",
+      "layer": "E-Text",
+      "x": 41.82052408328056,
+      "y": 16.91068147764128,
+      "height": 0.4,
+      "text": "spare"
+    },
+    {
+      "id": "text:386",
+      "layer": "E-Text",
+      "x": 18.60647297121361,
+      "y": 30.36332732742704,
+      "height": 0.4,
+      "text": "DB-irrigation"
+    },
+    {
+      "id": "text:391",
+      "layer": "E-Text",
+      "x": 27.86703116103783,
+      "y": 27.25007919455931,
+      "height": 0.4,
+      "text": "DB-B1-CA2"
+    },
+    {
+      "id": "text:392",
+      "layer": "E-Text",
+      "x": 23.55748576840162,
+      "y": 26.49126207328919,
+      "height": 0.2,
+      "text": "Con.: 23.95kVA\nDem.: 11.95kVA"
+    },
+    {
+      "id": "text:39B",
+      "layer": "E-Text",
+      "x": 23.34322864405587,
+      "y": 27.70885037981026,
+      "height": 0.4,
+      "text": "DB-B1-CA1"
+    },
+    {
+      "id": "text:39C",
+      "layer": "E-Text",
+      "x": 28.18776486284807,
+      "y": 26.02083459008537,
+      "height": 0.2,
+      "text": "Con.: 17.7kVA\nDem.: 8.91kVA"
+    },
+    {
+      "id": "text:3AD",
+      "layer": "E-Text",
+      "x": 32.49731025594994,
+      "y": 27.25007919455931,
+      "height": 0.4,
+      "text": "DB-B1-ctrl"
+    },
+    {
+      "id": "text:3AF",
+      "layer": "E-Text",
+      "x": 37.19024498836845,
+      "y": 16.91068147566222,
+      "height": 0.4,
+      "text": "spare"
+    },
+    {
+      "id": "text:3B0",
+      "layer": "E-Text",
+      "x": 14.87206533022001,
+      "y": 9.208710466521381,
+      "height": 0.2,
+      "text": "IS\n4x100A"
+    },
+    {
+      "id": "text:3B1",
+      "layer": "E-Text",
+      "x": 37.69950300438106,
+      "y": 14.20893682307616,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3B2",
+      "layer": "E-Text",
+      "x": 42.32978209929317,
+      "y": 14.20893682517163,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3B3",
+      "layer": "E-Text",
+      "x": 33.06922390946895,
+      "y": 14.20893682319257,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3B4",
+      "layer": "E-Text",
+      "x": 28.43894481455683,
+      "y": 14.20893682319257,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3B5",
+      "layer": "E-Text",
+      "x": 23.80866571964472,
+      "y": 14.20893682319257,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x40A"
+    },
+    {
+      "id": "text:3B6",
+      "layer": "E-Text",
+      "x": 19.17838662473261,
+      "y": 14.20893682319257,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3B7",
+      "layer": "E-Text",
+      "x": 14.5481075298205,
+      "y": 14.20893682319257,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3B8",
+      "layer": "E-Text",
+      "x": 9.917828434908387,
+      "y": 14.20893682319257,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:3BB",
+      "layer": "E-Text",
+      "x": 12.90282663220316,
+      "y": 6.259872965757324,
+      "height": 0.2,
+      "text": "4X35mm2+1x16mm2 \n "
+    }
+  ]
+}

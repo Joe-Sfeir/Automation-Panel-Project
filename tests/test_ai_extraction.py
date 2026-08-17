@@ -42,6 +42,12 @@ def test_device_labels_are_not_accepted_as_manufacturers():
     assert phoenix["manufacturer"] == "PHOENIX CONTACT"
 
 
+def test_dehn_spd_name_maps_to_installed_phoenix_catalog():
+    spd = sanitize_component({"category": "SPD", "manufacturer": "DEHN"})
+
+    assert spd["manufacturer"] == "PHOENIX CONTACT"
+
+
 def test_evidence_handles_cannot_leak_into_engineering_fields():
     row = sanitize_component({
         "category": "SPD", "poles": "1142701", "spd_type": "1142706",

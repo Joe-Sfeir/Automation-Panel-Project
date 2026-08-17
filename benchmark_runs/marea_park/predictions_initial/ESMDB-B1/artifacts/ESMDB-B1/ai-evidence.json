@@ -1,0 +1,176 @@
+{
+  "schematic_layers": [],
+  "physical_layout_layers": [],
+  "schematic_rating_groups": [],
+  "repeating_schematic_blocks": [],
+  "schematic_blocks": [],
+  "block_label_associations": [],
+  "associated_label_counts": {},
+  "unassociated_blocks": [],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "text_cluster_radius": 15.0,
+  "text_clusters": [
+    {
+      "layer": "E-Text",
+      "cx": 21.372,
+      "cy": 15.379,
+      "text_ids": [
+        "text:2EF",
+        "text:30E",
+        "text:310",
+        "text:316",
+        "text:320",
+        "text:321",
+        "text:322",
+        "text:323",
+        "text:325",
+        "text:31E",
+        "text:324",
+        "text:307",
+        "text:317",
+        "text:2F8",
+        "text:312"
+      ],
+      "texts": [
+        "FUSES",
+        "spare",
+        "from EMDB-B1",
+        "ESMDB-B1",
+        "4X25mm2+1x16mm2 \nFire rated ",
+        "MCCB BREAKER\n4x63A",
+        "MCCB BREAKER\n4x63A",
+        "MCCB BREAKER\n4x63A",
+        "IS\n4x100A",
+        "spare",
+        "MCCB BREAKER\n4x63A",
+        "DB-B1-FAN2",
+        "Con.: 3.42kVA\nDem.:3.42kVA",
+        "DB-B1-FAN1",
+        "Con.: 22.32kVA\nDem.: 22.32kVA"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:2EF",
+      "layer": "E-Text",
+      "x": 14.36169364035277,
+      "y": 10.29106020394324,
+      "height": 0.2,
+      "text": "FUSES"
+    },
+    {
+      "id": "text:2F8",
+      "layer": "E-Text",
+      "x": 16.87523241352437,
+      "y": 27.23856677827502,
+      "height": 0.4,
+      "text": "DB-B1-FAN1"
+    },
+    {
+      "id": "text:307",
+      "layer": "E-Text",
+      "x": 21.50551150843648,
+      "y": 27.23856677827502,
+      "height": 0.4,
+      "text": "DB-B1-FAN2"
+    },
+    {
+      "id": "text:30E",
+      "layer": "E-Text",
+      "x": 26.19844624085499,
+      "y": 16.37163666393685,
+      "height": 0.4,
+      "text": "spare"
+    },
+    {
+      "id": "text:310",
+      "layer": "E-Text",
+      "x": 20.95424377929567,
+      "y": 6.562417488219985,
+      "height": 0.2,
+      "text": "from EMDB-B1"
+    },
+    {
+      "id": "text:312",
+      "layer": "E-Text",
+      "x": 17.32599588168932,
+      "y": 25.50256560349448,
+      "height": 0.2,
+      "text": "Con.: 22.32kVA\nDem.: 22.32kVA"
+    },
+    {
+      "id": "text:316",
+      "layer": "E-Text",
+      "x": 9.619633896855248,
+      "y": 6.214074545331137,
+      "height": 0.5,
+      "text": "ESMDB-B1"
+    },
+    {
+      "id": "text:317",
+      "layer": "E-Text",
+      "x": 21.95627497660143,
+      "y": 25.50256560349448,
+      "height": 0.2,
+      "text": "Con.: 3.42kVA\nDem.:3.42kVA"
+    },
+    {
+      "id": "text:31E",
+      "layer": "E-Text",
+      "x": 30.8287253357671,
+      "y": 16.37163666603232,
+      "height": 0.4,
+      "text": "spare"
+    },
+    {
+      "id": "text:320",
+      "layer": "E-Text",
+      "x": 20.98281711723803,
+      "y": 6.037257993850695,
+      "height": 0.2,
+      "text": "4X25mm2+1x16mm2 \nFire rated "
+    },
+    {
+      "id": "text:321",
+      "layer": "E-Text",
+      "x": 17.44714606704338,
+      "y": 13.66989200937173,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x63A"
+    },
+    {
+      "id": "text:322",
+      "layer": "E-Text",
+      "x": 22.07742516195549,
+      "y": 13.66989200937173,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x63A"
+    },
+    {
+      "id": "text:323",
+      "layer": "E-Text",
+      "x": 26.7077042568676,
+      "y": 13.66989200937173,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x63A"
+    },
+    {
+      "id": "text:324",
+      "layer": "E-Text",
+      "x": 31.33798335177971,
+      "y": 13.6698920114672,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x63A"
+    },
+    {
+      "id": "text:325",
+      "layer": "E-Text",
+      "x": 22.401382962355,
+      "y": 8.669665652700537,
+      "height": 0.2,
+      "text": "IS\n4x100A"
+    }
+  ]
+}

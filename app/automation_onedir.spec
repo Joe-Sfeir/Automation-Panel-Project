@@ -38,6 +38,7 @@ hiddenimports = [
     "google.genai",
     "google.genai.types",
     "PIL",
+    "pymupdf",
 ] + collect_submodules("google.genai")
 
 a = Analysis(

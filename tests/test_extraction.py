@@ -1,7 +1,7 @@
 import builtins
 
 from app.cad import CadEntity, CadEvidenceGraph
-from app.domain import ProjectDocument
+from app.domain import Component, ProjectDocument
 from app.extraction import ExtractionService
 
 
@@ -140,6 +140,79 @@ def test_post_processing_does_not_add_devices_missing_from_model_result():
     )
 
     assert components == []
+
+
+def test_explicit_group_headers_fill_missing_curve_and_capacity():
+    graph = CadEvidenceGraph("panel.dxf", [
+        CadEntity("curve", "text", text="CURVE TYPE C", x=1, y=1),
+        CadEntity("capacity", "text", text="B.C.: 6KA/400V", x=2, y=1),
+    ])
+    component = Component("mcb", category="MCB", poles="1P+N", amps="16A")
+
+    rows = ExtractionService("unused")._apply_explicit_graph_rules(
+        "panel", "DB-1", [component], graph, "SCHNEIDER",
+        {"cad_bbox": [0, 0, 10, 10], "image_size": [100, 100]},
+    )
+
+    assert rows[0].curve == "C"
+    assert rows[0].breaking_capacity == "6kA"
+    assert any("inherited explicit group header" in rows[0].notes.lower() for _ in [0])
+
+
+def test_mcb_label_with_residual_stage_is_decomposed_without_inventing_current():
+    graph = CadEvidenceGraph("panel.dxf", [])
+    component = Component(
+        "combined", category="RCBO", label="MCB", poles="1P+N",
+        amps="20A", sensitivity="300mA", quantity=3,
+    )
+
+    rows = ExtractionService("unused")._apply_explicit_graph_rules(
+        "panel", "DB-FANS", [component], graph, "SCHNEIDER",
+        {"cad_bbox": [0, 0, 1, 1], "image_size": [0, 0]},
+    )
+
+    assert [(row.category, row.quantity) for row in rows] == [("MCB", 3), ("RCCB", 3)]
+    assert rows[0].sensitivity == "-"
+    assert rows[1].sensitivity == "300mA"
+    assert rows[1].amps == "-"
+
+
+def test_repeated_ats_topology_recovers_one_reviewable_assembly_per_branch():
+    graph = CadEvidenceGraph("panel.dxf", [
+        *[
+            CadEntity(f"mccb-{index}", "text", text="MCCB BREAKER\n4x63A,")
+            for index in range(4)
+        ],
+    ])
+
+    rows = ExtractionService("unused")._apply_explicit_graph_rules(
+        "panel", "MDB-ATS TENANTS", [], graph, "SCHNEIDER",
+        {"cad_bbox": [0, 0, 1, 1], "image_size": [0, 0]},
+    )
+
+    assert len(rows) == 1
+    assert (rows[0].category, rows[0].quantity, rows[0].poles, rows[0].amps) == (
+        "CONTACTOR", 4, "4P", "63A"
+    )
+    assert rows[0].origin == "topology_recognized"
+
+
+def test_explicit_spd_callouts_are_recovered_with_grouped_quantity():
+    graph = CadEvidenceGraph("panel.dxf", [
+        CadEntity("spd-1", "text", text="SPD"),
+        CadEntity("type-1", "text", text="TYPE 2 / CLASS C"),
+        CadEntity("spd-2", "text", text="SPD"),
+        CadEntity("type-2", "text", text="TYPE 2 / CLASS C"),
+    ])
+
+    rows = ExtractionService("unused")._apply_explicit_graph_rules(
+        "panel", "DB-1", [], graph, "SCHNEIDER",
+        {"cad_bbox": [0, 0, 1, 1], "image_size": [0, 0]},
+    )
+
+    assert [(row.category, row.quantity, row.spd_type) for row in rows] == [
+        ("SPD", 2, "TYPE 2")
+    ]
 
 
 def test_dwg_extraction_does_not_import_legacy_credential_module(tmp_path, monkeypatch):

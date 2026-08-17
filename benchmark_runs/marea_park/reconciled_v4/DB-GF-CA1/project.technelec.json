@@ -1,0 +1,4022 @@
+{
+  "id": "project_3d8cf9b547f645eba40818286007de49",
+  "name": "DB-GF-CA1",
+  "reference": "DB-GF-CA1",
+  "schema_version": 1,
+  "created_at": "2026-08-17T13:10:15+00:00",
+  "updated_at": "2026-08-17T16:28:41+00:00",
+  "source_drawings": [
+    {
+      "id": "drawing_237024ef7a64586eb4df4f94e4cd3db5",
+      "path": "C:\\Users\\Joe\\OneDrive - American University of Beirut\\Z_Technicat\\1. Sample Projects\\marea park batroun\\dwgs\\DB-GF-CA1.dwg",
+      "sha256": "1dd2ba1a44855548a4d8da986cae642b8b538db6197e0a8bfdc04277928d751a",
+      "filename": "DB-GF-CA1.dwg",
+      "added_at": "2026-08-17T13:10:15+00:00"
+    }
+  ],
+  "panels": [
+    {
+      "id": "panel_ffa51f2e43a2566786b4152b87c02864",
+      "reference": "DB-GF-CA1",
+      "source_drawing_id": "drawing_237024ef7a64586eb4df4f94e4cd3db5",
+      "extraction_status": "complete",
+      "components": [
+        {
+          "id": "component_22515623d6965c689d7134c111d61698",
+          "category": "SWITCH",
+          "label": "4x40 Amp ISOL.S.",
+          "poles": "4P",
+          "amps": "40A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "MAIN INCOMER FROM MDB-B1",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Main 4-pole 40A isolator switch on incomer from MDB-B1.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:6D9",
+              "entity_handle": "6D9",
+              "block_name": "SW",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                33.40451251424344,
+                34.38133342389989,
+                33.40451251424344,
+                34.38133342389989
+              ],
+              "image_bbox": [
+                325.5,
+                234.59,
+                333.5,
+                242.59
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6DB",
+              "entity_handle": "6DB",
+              "block_name": "",
+              "layer": "0",
+              "text": "4x40 Amp",
+              "cad_bbox": [
+                34.07467672310264,
+                33.75234140700701,
+                34.07467672310264,
+                33.97380589363035
+              ],
+              "image_bbox": [
+                345.73,
+                251.02,
+                353.73,
+                259.02
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6DC",
+              "entity_handle": "6DC",
+              "block_name": "",
+              "layer": "0",
+              "text": "ISOL.S.",
+              "cad_bbox": [
+                34.07467672310264,
+                33.38542405923869,
+                34.07467672310264,
+                33.60688854586203
+              ],
+              "image_bbox": [
+                345.73,
+                260.61,
+                353.73,
+                268.61
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_d8fcbe736d5551b892a9c6c1aec7791c",
+          "category": "RCCB",
+          "label": "4x40 AMP 100mA ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "40A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "100mA",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "LIGHTING SUB-GROUP",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "4-pole 40A 100mA residual current circuit breaker feeding lighting sub-group.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:75C",
+              "entity_handle": "75C",
+              "block_name": "",
+              "layer": "0",
+              "text": "4x40 AMP",
+              "cad_bbox": [
+                37.22563662275167,
+                33.93822733464691,
+                37.22563662275167,
+                34.061598982209695
+              ],
+              "image_bbox": [
+                440.89,
+                246.17,
+                448.89,
+                254.17
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:75D",
+              "entity_handle": "75D",
+              "block_name": "",
+              "layer": "0",
+              "text": "100mA",
+              "cad_bbox": [
+                37.22572959482164,
+                33.73219047615345,
+                37.22572959482164,
+                33.85556212371623
+              ],
+              "image_bbox": [
+                440.9,
+                251.55,
+                448.9,
+                259.55
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:75E",
+              "entity_handle": "75E",
+              "block_name": "",
+              "layer": "0",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                37.23594622209163,
+                33.52583606995682,
+                37.23594622209163,
+                33.6492077175196
+              ],
+              "image_bbox": [
+                441.2,
+                256.94,
+                449.2,
+                264.94
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_d87ef9b9fb11543d97a373c7978979a4",
+          "category": "RCCB",
+          "label": "4x40 AMP 30mA ISOL.S.+RCD",
+          "poles": "4P",
+          "amps": "40A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "30mA",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "SOCKETS SUB-GROUP",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "4-pole 40A 30mA residual current circuit breaker feeding power sockets sub-group.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:773",
+              "entity_handle": "773",
+              "block_name": "",
+              "layer": "0",
+              "text": "4x40 AMP",
+              "cad_bbox": [
+                37.22560113517062,
+                28.23765359633177,
+                37.22560113517062,
+                28.36102524389456
+              ],
+              "image_bbox": [
+                440.89,
+                395.1,
+                448.89,
+                403.1
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:774",
+              "entity_handle": "774",
+              "block_name": "",
+              "layer": "0",
+              "text": "30mA",
+              "cad_bbox": [
+                37.22569410910324,
+                28.03161673783831,
+                37.22569410910324,
+                28.154988385401097
+              ],
+              "image_bbox": [
+                440.89,
+                400.49,
+                448.89,
+                408.49
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:775",
+              "entity_handle": "775",
+              "block_name": "",
+              "layer": "0",
+              "text": "ISOL.S.+RCD",
+              "cad_bbox": [
+                37.23591073451058,
+                27.84059321717865,
+                37.23591073451058,
+                27.96396486474144
+              ],
+              "image_bbox": [
+                441.2,
+                405.48,
+                449.2,
+                413.48
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_dcd44ffc93765865bd853c8b215506d4",
+          "category": "SPD",
+          "label": "SPD TYPE 2 / CLASS C",
+          "poles": "-",
+          "amps": "-",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "TYPE 2",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "SURGE PROTECTION",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "Type 2 surge protection device rated Up<=1.3kV Imax=40kA.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:77F",
+              "entity_handle": "77F",
+              "block_name": "",
+              "layer": "0",
+              "text": "SPD",
+              "cad_bbox": [
+                36.69487162388356,
+                26.4216324142231,
+                36.69487162388356,
+                26.628324294709106
+              ],
+              "image_bbox": [
+                424.86,
+                442.55,
+                432.86,
+                450.55
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:784",
+              "entity_handle": "784",
+              "block_name": "",
+              "layer": "0",
+              "text": "TYPE 2 / CLASS C",
+              "cad_bbox": [
+                37.72221782884986,
+                26.41014653118833,
+                37.72221782884986,
+                26.587311000176335
+              ],
+              "image_bbox": [
+                455.89,
+                442.85,
+                463.89,
+                450.85
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:787",
+              "entity_handle": "787",
+              "block_name": "",
+              "layer": "0",
+              "text": "Up<=1.3KV",
+              "cad_bbox": [
+                37.72221782884986,
+                26.05760960304684,
+                37.72221782884986,
+                26.234774072034842
+              ],
+              "image_bbox": [
+                455.89,
+                452.06,
+                463.89,
+                460.06
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:789",
+              "entity_handle": "789",
+              "block_name": "",
+              "layer": "0",
+              "text": "Imin=20KA IMax=40KA",
+              "cad_bbox": [
+                37.72221782884986,
+                25.70507267490535,
+                37.72221782884986,
+                25.882237143893352
+              ],
+              "image_bbox": [
+                455.89,
+                461.27,
+                463.89,
+                469.27
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7B2",
+              "entity_handle": "7B2",
+              "block_name": "",
+              "layer": "0",
+              "text": "COMBINED LIGHTNING",
+              "cad_bbox": [
+                28.00317854329438,
+                26.51486476208589,
+                28.00317854329438,
+                26.62236138933066
+              ],
+              "image_bbox": [
+                162.38,
+                440.11,
+                170.38,
+                448.11
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7B3",
+              "entity_handle": "7B3",
+              "block_name": "",
+              "layer": "0",
+              "text": "+ SURGE ARRESTERS",
+              "cad_bbox": [
+                28.00317854329438,
+                26.3340417402847,
+                28.00317854329438,
+                26.44153836752947
+              ],
+              "image_bbox": [
+                162.38,
+                444.84,
+                170.38,
+                452.84
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7B4",
+              "entity_handle": "7B4",
+              "block_name": "",
+              "layer": "0",
+              "text": "3-POLE+NEUTRAL 40KA",
+              "cad_bbox": [
+                28.00317854329438,
+                26.15321871848352,
+                28.00317854329438,
+                26.26071534572829
+              ],
+              "image_bbox": [
+                162.38,
+                449.56,
+                170.38,
+                457.56
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7B5",
+              "entity_handle": "7B5",
+              "block_name": "",
+              "layer": "0",
+              "text": "TYPE 2 / CLASS C,",
+              "cad_bbox": [
+                28.00317854329438,
+                25.97239569668233,
+                28.00317854329438,
+                26.0798923239271
+              ],
+              "image_bbox": [
+                162.38,
+                454.29,
+                170.38,
+                462.29
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7B6",
+              "entity_handle": "7B6",
+              "block_name": "",
+              "layer": "0",
+              "text": "FOR TN-S SYSTEM",
+              "cad_bbox": [
+                28.00317854329438,
+                25.79157267488114,
+                28.00317854329438,
+                25.899069302125913
+              ],
+              "image_bbox": [
+                162.38,
+                459.01,
+                170.38,
+                467.01
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_88a3c315d18e5fd98179717700e1e08f",
+          "category": "FUSE_HOLDER",
+          "label": "Fuse 3x32A",
+          "poles": "3P",
+          "amps": "32A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "SPD BACKUP FUSE",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "3-pole 32A backup fuses gG for SPD protection.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "text:786",
+              "entity_handle": "786",
+              "block_name": "",
+              "layer": "0",
+              "text": "Fuse lL/gG 3x32A",
+              "cad_bbox": [
+                37.72221782884986,
+                27.06469722744583,
+                37.72221782884986,
+                27.241861696433833
+              ],
+              "image_bbox": [
+                455.89,
+                425.75,
+                463.89,
+                433.75
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7BC",
+              "entity_handle": "7BC",
+              "block_name": "",
+              "layer": "0",
+              "text": "Fuse gG",
+              "cad_bbox": [
+                31.25096159882338,
+                26.98949010973371,
+                31.25096159882338,
+                27.079366565184102
+              ],
+              "image_bbox": [
+                260.46,
+                427.71,
+                268.46,
+                435.71
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7BD",
+              "entity_handle": "7BD",
+              "block_name": "",
+              "layer": "0",
+              "text": "3x32A",
+              "cad_bbox": [
+                31.24538258544595,
+                26.8389510796456,
+                31.24538258544595,
+                26.928827535095994
+              ],
+              "image_bbox": [
+                260.29,
+                431.65,
+                268.29,
+                439.65
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_4200df2eb3f750928d5e12b9ff0496db",
+          "category": "MCB",
+          "label": "2x10 (1P+N)",
+          "poles": "1P+N",
+          "amps": "10A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2.5,
+          "load_label": "LIGHTING / EMERGENCY LIGHTING CIRCUITS",
+          "quantity": 25,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "25 off 10A 1P+N MCBs for outgoing lighting and emergency lighting circuits.\nCommercial MCB default: curve C; verify because the drawing does not print a curve.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:6D7",
+              "entity_handle": "6D7",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473377089442,
+                38.23760411981999,
+                38.67473377089442,
+                38.23760411981999
+              ],
+              "image_bbox": [
+                484.65,
+                133.84,
+                492.65,
+                141.84
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:72B",
+              "entity_handle": "72B",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473377089442,
+                37.9022762321452,
+                38.67473377089442,
+                37.9022762321452
+              ],
+              "image_bbox": [
+                484.65,
+                142.6,
+                492.65,
+                150.6
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:72C",
+              "entity_handle": "72C",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473377089442,
+                37.5669483444704,
+                38.67473377089442,
+                37.5669483444704
+              ],
+              "image_bbox": [
+                484.65,
+                151.36,
+                492.65,
+                159.36
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:741",
+              "entity_handle": "741",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473377089442,
+                37.23162045679561,
+                38.67473377089442,
+                37.23162045679561
+              ],
+              "image_bbox": [
+                484.65,
+                160.12,
+                492.65,
+                168.12
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:748",
+              "entity_handle": "748",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473377089442,
+                36.89629256912082,
+                38.67473377089442,
+                36.89629256912082
+              ],
+              "image_bbox": [
+                484.65,
+                168.88,
+                492.65,
+                176.88
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:749",
+              "entity_handle": "749",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473377089442,
+                36.56096468144602,
+                38.67473377089442,
+                36.56096468144602
+              ],
+              "image_bbox": [
+                484.65,
+                177.64,
+                492.65,
+                185.64
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7C7",
+              "entity_handle": "7C7",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                36.22563679377123,
+                38.67473388218747,
+                36.22563679377123
+              ],
+              "image_bbox": [
+                484.65,
+                186.4,
+                492.65,
+                194.4
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7C8",
+              "entity_handle": "7C8",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                35.89030890609644,
+                38.67473388218747,
+                35.89030890609644
+              ],
+              "image_bbox": [
+                484.65,
+                195.16,
+                492.65,
+                203.16
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7C9",
+              "entity_handle": "7C9",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                35.55498101842164,
+                38.67473388218747,
+                35.55498101842164
+              ],
+              "image_bbox": [
+                484.65,
+                203.92,
+                492.65,
+                211.92
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:809",
+              "entity_handle": "809",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                35.21965313074685,
+                38.67473388218747,
+                35.21965313074685
+              ],
+              "image_bbox": [
+                484.65,
+                212.69,
+                492.65,
+                220.69
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:817",
+              "entity_handle": "817",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                34.88432524307206,
+                38.67473388218747,
+                34.88432524307206
+              ],
+              "image_bbox": [
+                484.65,
+                221.45,
+                492.65,
+                229.45
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:818",
+              "entity_handle": "818",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                34.54899735539726,
+                38.67473388218747,
+                34.54899735539726
+              ],
+              "image_bbox": [
+                484.65,
+                230.21,
+                492.65,
+                238.21
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:81B",
+              "entity_handle": "81B",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                34.21366946772247,
+                38.67473388218747,
+                34.21366946772247
+              ],
+              "image_bbox": [
+                484.65,
+                238.97,
+                492.65,
+                246.97
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:822",
+              "entity_handle": "822",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                33.87834158004767,
+                38.67473388218747,
+                33.87834158004767
+              ],
+              "image_bbox": [
+                484.65,
+                247.73,
+                492.65,
+                255.73
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:823",
+              "entity_handle": "823",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473388218747,
+                33.54301369237288,
+                38.67473388218747,
+                33.54301369237288
+              ],
+              "image_bbox": [
+                484.65,
+                256.49,
+                492.65,
+                264.49
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:828",
+              "entity_handle": "828",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473399348052,
+                33.20768580469809,
+                38.67473399348052,
+                33.20768580469809
+              ],
+              "image_bbox": [
+                484.65,
+                265.25,
+                492.65,
+                273.25
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:829",
+              "entity_handle": "829",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473399348052,
+                32.87235791702329,
+                38.67473399348052,
+                32.87235791702329
+              ],
+              "image_bbox": [
+                484.65,
+                274.01,
+                492.65,
+                282.01
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:82A",
+              "entity_handle": "82A",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473399348052,
+                32.5370300293485,
+                38.67473399348052,
+                32.5370300293485
+              ],
+              "image_bbox": [
+                484.65,
+                282.77,
+                492.65,
+                290.77
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:84C",
+              "entity_handle": "84C",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473410477356,
+                32.20170214167371,
+                38.67473410477356,
+                32.20170214167371
+              ],
+              "image_bbox": [
+                484.65,
+                291.54,
+                492.65,
+                299.54
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:84D",
+              "entity_handle": "84D",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473410477356,
+                31.86637425399891,
+                38.67473410477356,
+                31.86637425399891
+              ],
+              "image_bbox": [
+                484.65,
+                300.3,
+                492.65,
+                308.3
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:84E",
+              "entity_handle": "84E",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67473410477356,
+                31.53104636632412,
+                38.67473410477356,
+                31.53104636632412
+              ],
+              "image_bbox": [
+                484.65,
+                309.06,
+                492.65,
+                317.06
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7DF",
+              "entity_handle": "7DF",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472487676383,
+                31.19571847864933,
+                38.67472487676383,
+                31.19571847864933
+              ],
+              "image_bbox": [
+                484.65,
+                317.82,
+                492.65,
+                325.82
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7E3",
+              "entity_handle": "7E3",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472487676383,
+                30.86039059097453,
+                38.67472487676383,
+                30.86039059097453
+              ],
+              "image_bbox": [
+                484.65,
+                326.58,
+                492.65,
+                334.58
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:7E8",
+              "entity_handle": "7E8",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472487676383,
+                30.52506270329974,
+                38.67472487676383,
+                30.52506270329974
+              ],
+              "image_bbox": [
+                484.65,
+                335.34,
+                492.65,
+                343.34
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:8B5",
+              "entity_handle": "8B5",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475315264852,
+                22.37975980423431,
+                38.67475315264852,
+                22.37975980423431
+              ],
+              "image_bbox": [
+                484.66,
+                548.15,
+                492.66,
+                556.15
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6D6",
+              "entity_handle": "6D6",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653853307904,
+                37.93580902088939,
+                40.06653853307904,
+                38.15727350751273
+              ],
+              "image_bbox": [
+                526.69,
+                141.72,
+                534.69,
+                149.72
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:703",
+              "entity_handle": "703",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642614852132,
+                37.60048113554291,
+                40.06642614852132,
+                37.82194562216625
+              ],
+              "image_bbox": [
+                526.68,
+                150.48,
+                534.68,
+                158.48
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:70A",
+              "entity_handle": "70A",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653853307904,
+                38.27113690833136,
+                40.06653853307904,
+                38.4926013949547
+              ],
+              "image_bbox": [
+                526.69,
+                132.96,
+                534.69,
+                140.96
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:740",
+              "entity_handle": "740",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653853307904,
+                36.92982535786501,
+                40.06653853307904,
+                37.15128984448835
+              ],
+              "image_bbox": [
+                526.69,
+                168.0,
+                534.69,
+                176.0
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:744",
+              "entity_handle": "744",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642614852132,
+                36.59449747251853,
+                40.06642614852132,
+                36.81596195914187
+              ],
+              "image_bbox": [
+                526.68,
+                176.77,
+                534.68,
+                184.77
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:746",
+              "entity_handle": "746",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653853307904,
+                37.26515324530698,
+                40.06653853307904,
+                37.48661773193032
+              ],
+              "image_bbox": [
+                526.69,
+                159.24,
+                534.69,
+                167.24
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7C3",
+              "entity_handle": "7C3",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653864437209,
+                36.25916958251543,
+                40.06653864437209,
+                36.48063406913877
+              ],
+              "image_bbox": [
+                526.69,
+                185.53,
+                534.69,
+                193.53
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7C5",
+              "entity_handle": "7C5",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642625981436,
+                35.92384169716894,
+                40.06642625981436,
+                36.14530618379228
+              ],
+              "image_bbox": [
+                526.68,
+                194.29,
+                534.68,
+                202.29
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7CA",
+              "entity_handle": "7CA",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653864437209,
+                35.58851380693301,
+                40.06653864437209,
+                35.80997829355635
+              ],
+              "image_bbox": [
+                526.69,
+                203.05,
+                534.69,
+                211.05
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7E0",
+              "entity_handle": "7E0",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06652963894845,
+                31.22925126716069,
+                40.06652963894845,
+                31.45071575378403
+              ],
+              "image_bbox": [
+                526.69,
+                316.94,
+                534.69,
+                324.94
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7E4",
+              "entity_handle": "7E4",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06652963894845,
+                30.8939233794859,
+                40.06652963894845,
+                31.11538786610924
+              ],
+              "image_bbox": [
+                526.69,
+                325.7,
+                534.69,
+                333.7
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:7E9",
+              "entity_handle": "7E9",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06652963894845,
+                30.5585954918111,
+                40.06652963894845,
+                30.78005997843444
+              ],
+              "image_bbox": [
+                526.69,
+                334.46,
+                534.69,
+                342.46
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:808",
+              "entity_handle": "808",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653864437209,
+                34.91785803181625,
+                40.06653864437209,
+                35.13932251843959
+              ],
+              "image_bbox": [
+                526.69,
+                220.57,
+                534.69,
+                228.57
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:80F",
+              "entity_handle": "80F",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642625981436,
+                34.58253014646976,
+                40.06642625981436,
+                34.8039946330931
+              ],
+              "image_bbox": [
+                526.68,
+                229.33,
+                534.68,
+                237.33
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:812",
+              "entity_handle": "812",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653864437209,
+                35.25318591925821,
+                40.06653864437209,
+                35.47465040588155
+              ],
+              "image_bbox": [
+                526.69,
+                211.81,
+                534.69,
+                219.81
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:81A",
+              "entity_handle": "81A",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653864437209,
+                33.91187436879187,
+                40.06653864437209,
+                34.13333885541521
+              ],
+              "image_bbox": [
+                526.69,
+                246.85,
+                534.69,
+                254.85
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:81E",
+              "entity_handle": "81E",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642625981436,
+                33.57654648344538,
+                40.06642625981436,
+                33.79801097006872
+              ],
+              "image_bbox": [
+                526.68,
+                255.62,
+                534.68,
+                263.62
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:820",
+              "entity_handle": "820",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653864437209,
+                34.24720225623383,
+                40.06653864437209,
+                34.46866674285717
+              ],
+              "image_bbox": [
+                526.69,
+                238.09,
+                534.69,
+                246.09
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:824",
+              "entity_handle": "824",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653875566514,
+                33.24121859344228,
+                40.06653875566514,
+                33.46268308006562
+              ],
+              "image_bbox": [
+                526.69,
+                264.38,
+                534.69,
+                272.38
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:826",
+              "entity_handle": "826",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642637110741,
+                32.9058907080958,
+                40.06642637110741,
+                33.12735519471914
+              ],
+              "image_bbox": [
+                526.68,
+                273.14,
+                534.68,
+                281.14
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:82B",
+              "entity_handle": "82B",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653875566514,
+                32.57056281785987,
+                40.06653875566514,
+                32.79202730448321
+              ],
+              "image_bbox": [
+                526.69,
+                281.9,
+                534.69,
+                289.9
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:848",
+              "entity_handle": "848",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653886695818,
+                32.2352349304179,
+                40.06653886695818,
+                32.45669941704124
+              ],
+              "image_bbox": [
+                526.69,
+                290.66,
+                534.69,
+                298.66
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:84A",
+              "entity_handle": "84A",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06642648240046,
+                31.89990704507142,
+                40.06642648240046,
+                32.121371531694756
+              ],
+              "image_bbox": [
+                526.68,
+                299.42,
+                534.68,
+                307.42
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:84F",
+              "entity_handle": "84F",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06653886695818,
+                31.56457915483549,
+                40.06653886695818,
+                31.78604364145883
+              ],
+              "image_bbox": [
+                526.69,
+                308.18,
+                534.69,
+                316.18
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8B6",
+              "entity_handle": "8B6",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x10",
+              "cad_bbox": [
+                40.06655774393545,
+                22.41329259297851,
+                40.06655774393545,
+                22.63475707960185
+              ],
+              "image_bbox": [
+                526.69,
+                547.28,
+                534.69,
+                555.28
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [
+            "Curve C is a commercial default, not an explicit drawing rating."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_06d45a3865fa58d8bfd204c0b8440b7c",
+          "category": "MCB",
+          "label": "2x16 (1P+N)",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 2.5,
+          "load_label": "SOCKETS - LOBBY - GF",
+          "quantity": 8,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "8 off 16A 1P+N MCBs for socket outlets.\nCommercial MCB default: curve C; verify because the drawing does not print a curve.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:72D",
+              "entity_handle": "72D",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472092376516,
+                29.51907904015894,
+                38.67472092376516,
+                29.51907904015894
+              ],
+              "image_bbox": [
+                484.65,
+                361.62,
+                492.65,
+                369.62
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:72E",
+              "entity_handle": "72E",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472092376516,
+                29.18375115248415,
+                38.67472092376516,
+                29.18375115248415
+              ],
+              "image_bbox": [
+                484.65,
+                370.39,
+                492.65,
+                378.39
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:72F",
+              "entity_handle": "72F",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472092376516,
+                28.84842326480936,
+                38.67472092376516,
+                28.84842326480936
+              ],
+              "image_bbox": [
+                484.65,
+                379.15,
+                492.65,
+                387.15
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:730",
+              "entity_handle": "730",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472092376516,
+                28.51309537713456,
+                38.67472092376516,
+                28.51309537713456
+              ],
+              "image_bbox": [
+                484.65,
+                387.91,
+                492.65,
+                395.91
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:731",
+              "entity_handle": "731",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472092376516,
+                28.17776748945977,
+                38.67472092376516,
+                28.17776748945977
+              ],
+              "image_bbox": [
+                484.65,
+                396.67,
+                492.65,
+                404.67
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:732",
+              "entity_handle": "732",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67472092376516,
+                27.84243960178497,
+                38.67472092376516,
+                27.84243960178497
+              ],
+              "image_bbox": [
+                484.65,
+                405.43,
+                492.65,
+                413.43
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:87E",
+              "entity_handle": "87E",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475315590815,
+                21.70910405123647,
+                38.67475315590815,
+                21.70910405123647
+              ],
+              "image_bbox": [
+                484.66,
+                565.67,
+                492.66,
+                573.67
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:880",
+              "entity_handle": "880",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475315264852,
+                22.04443191655952,
+                38.67475315264852,
+                22.04443191655952
+              ],
+              "image_bbox": [
+                484.66,
+                556.91,
+                492.66,
+                564.91
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6E4",
+              "entity_handle": "6E4",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.05996242479847,
+                28.88195605611469,
+                40.05996242479847,
+                29.10342054273803
+              ],
+              "image_bbox": [
+                526.49,
+                378.27,
+                534.49,
+                386.27
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6E6",
+              "entity_handle": "6E6",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.05996211559938,
+                29.21728393820155,
+                40.05996211559938,
+                29.43874842482489
+              ],
+              "image_bbox": [
+                526.49,
+                369.51,
+                534.49,
+                377.51
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6E8",
+              "entity_handle": "6E8",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.05996242479847,
+                29.55261183123145,
+                40.05996242479847,
+                29.77407631785479
+              ],
+              "image_bbox": [
+                526.49,
+                360.75,
+                534.49,
+                368.75
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6F9",
+              "entity_handle": "6F9",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.05996242479847,
+                28.5466281684399,
+                40.05996242479847,
+                28.76809265506324
+              ],
+              "image_bbox": [
+                526.49,
+                387.03,
+                534.49,
+                395.03
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6FC",
+              "entity_handle": "6FC",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.05999667884277,
+                28.2113002807651,
+                40.05999667884277,
+                28.43276476738844
+              ],
+              "image_bbox": [
+                526.49,
+                395.79,
+                534.49,
+                403.79
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:6FF",
+              "entity_handle": "6FF",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.0599867583947,
+                27.87597239099483,
+                40.0599867583947,
+                28.09743687761817
+              ],
+              "image_bbox": [
+                526.49,
+                404.55,
+                534.49,
+                412.55
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:881",
+              "entity_handle": "881",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.05999434774236,
+                21.74263682577799,
+                40.05999434774236,
+                21.96410131240133
+              ],
+              "image_bbox": [
+                526.49,
+                564.8,
+                534.49,
+                572.8
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:886",
+              "entity_handle": "886",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655774393545,
+                22.07796470530371,
+                40.06655774393545,
+                22.29942919192705
+              ],
+              "image_bbox": [
+                526.69,
+                556.04,
+                534.69,
+                564.04
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:87C",
+              "entity_handle": "87C",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655791483314,
+                23.41927625018212,
+                40.06655791483314,
+                23.64074073680546
+              ],
+              "image_bbox": [
+                526.69,
+                520.99,
+                534.69,
+                528.99
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:883",
+              "entity_handle": "883",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655791483314,
+                22.74862047518178,
+                40.06655791483314,
+                22.97008496180512
+              ],
+              "image_bbox": [
+                526.69,
+                538.52,
+                534.69,
+                546.52
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:89D",
+              "entity_handle": "89D",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655820074917,
+                23.08309619955759,
+                40.06655820074917,
+                23.30456068618093
+              ],
+              "image_bbox": [
+                526.69,
+                529.78,
+                534.69,
+                537.78
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [
+            "Cross-check only: extracted quantity 8 differs from 11 repeated schematic rating labels; extracted value preserved",
+            "Curve C is a commercial default, not an explicit drawing rating."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_a23f6848d2205b59aafac4da007a5a60",
+          "category": "RCBO",
+          "label": "2x16 30mA (1P+N)",
+          "poles": "1P+N",
+          "amps": "16A",
+          "curve": "C",
+          "breaking_capacity": "6kA",
+          "sensitivity": "30mA",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 4.0,
+          "load_label": "UPS SOCKETS - LOBBY - GF",
+          "quantity": 3,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "3 off 16A 1P+N 30mA RCBOs (CB1D blocks) protecting UPS socket circuits U1, U2, U3.\nCommercial MCB default: curve C; verify because the drawing does not print a curve.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:894",
+              "entity_handle": "894",
+              "block_name": "CB1D",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475315264852,
+                23.38489129278383,
+                38.67475315264852,
+                23.38489129278383
+              ],
+              "image_bbox": [
+                484.66,
+                521.89,
+                492.66,
+                529.89
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:896",
+              "entity_handle": "896",
+              "block_name": "CB1D",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475323041396,
+                22.71508768632117,
+                38.67475323041396,
+                22.71508768632117
+              ],
+              "image_bbox": [
+                484.66,
+                539.39,
+                492.66,
+                547.39
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:89E",
+              "entity_handle": "89E",
+              "block_name": "CB1D",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475351632999,
+                23.04956341069698,
+                38.67475351632999,
+                23.04956341069698
+              ],
+              "image_bbox": [
+                484.66,
+                530.65,
+                492.66,
+                538.65
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:87C",
+              "entity_handle": "87C",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655791483314,
+                23.41927625018212,
+                40.06655791483314,
+                23.64074073680546
+              ],
+              "image_bbox": [
+                526.69,
+                520.99,
+                534.69,
+                528.99
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:883",
+              "entity_handle": "883",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655791483314,
+                22.74862047518178,
+                40.06655791483314,
+                22.97008496180512
+              ],
+              "image_bbox": [
+                526.69,
+                538.52,
+                534.69,
+                546.52
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:89D",
+              "entity_handle": "89D",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x16",
+              "cad_bbox": [
+                40.06655820074917,
+                23.08309619955759,
+                40.06655820074917,
+                23.30456068618093
+              ],
+              "image_bbox": [
+                526.69,
+                529.78,
+                534.69,
+                537.78
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:895",
+              "entity_handle": "895",
+              "block_name": "",
+              "layer": "0",
+              "text": "30mA",
+              "cad_bbox": [
+                41.41649784508587,
+                23.4177366411364,
+                41.41649784508587,
+                23.609468241754033
+              ],
+              "image_bbox": [
+                567.46,
+                521.03,
+                575.46,
+                529.03
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:897",
+              "entity_handle": "897",
+              "block_name": "",
+              "layer": "0",
+              "text": "30mA",
+              "cad_bbox": [
+                41.41649792285131,
+                22.74793303467374,
+                41.41649792285131,
+                22.939664635291372
+              ],
+              "image_bbox": [
+                567.46,
+                538.53,
+                575.46,
+                546.53
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:89F",
+              "entity_handle": "89F",
+              "block_name": "",
+              "layer": "0",
+              "text": "30mA",
+              "cad_bbox": [
+                41.41649820876734,
+                23.08240875904954,
+                41.41649820876734,
+                23.27414035966717
+              ],
+              "image_bbox": [
+                567.46,
+                529.79,
+                575.46,
+                537.79
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [
+            "Curve C is a commercial default, not an explicit drawing rating."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_36eee68eaf365575be0fcd4d813a4808",
+          "category": "SWITCH",
+          "label": "2x20Amp ISOL.S.",
+          "poles": "1P+N",
+          "amps": "20A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 6.0,
+          "load_label": "TO UMDB-B1 / UPS SECTION",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "BOTH",
+          "notes": "20A 1P+N isolator switch on sub-incomer/feed for UPS section.",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A7",
+              "entity_handle": "8A7",
+              "block_name": "SW",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                35.98866647656502,
+                22.54699767206836,
+                35.98866647656502,
+                22.54699767206836
+              ],
+              "image_bbox": [
+                403.54,
+                543.78,
+                411.54,
+                551.78
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8A5",
+              "entity_handle": "8A5",
+              "block_name": "",
+              "layer": "0",
+              "text": "2x20Amp",
+              "cad_bbox": [
+                36.76229895034299,
+                22.01204196666873,
+                36.76229895034299,
+                22.135408731428658
+              ],
+              "image_bbox": [
+                426.9,
+                557.76,
+                434.9,
+                565.76
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "text:8A6",
+              "entity_handle": "8A6",
+              "block_name": "",
+              "layer": "0",
+              "text": "ISOL.S.",
+              "cad_bbox": [
+                36.76229895034299,
+                21.74190797005355,
+                36.76229895034299,
+                21.86527473481348
+              ],
+              "image_bbox": [
+                426.9,
+                564.82,
+                434.9,
+                572.82
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [],
+          "overrides": []
+        },
+        {
+          "id": "component_f4282314b90051d3b654b085003efa8b",
+          "category": "SWITCH",
+          "label": "Isolator 2P 16A",
+          "poles": "2P",
+          "amps": "16A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "",
+          "quantity": 2,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "deterministic_schematic",
+          "notes": "",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:87E",
+              "entity_handle": "87E",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475315590815,
+                21.70910405123647,
+                38.67475315590815,
+                21.70910405123647
+              ],
+              "image_bbox": [
+                484.66,
+                565.67,
+                492.66,
+                573.67
+              ],
+              "confidence": 1.0
+            },
+            {
+              "source": "cad_entity",
+              "source_id": "block:880",
+              "entity_handle": "880",
+              "block_name": "CB1",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                38.67475315264852,
+                22.04443191655952,
+                38.67475315264852,
+                22.04443191655952
+              ],
+              "image_bbox": [
+                484.66,
+                556.91,
+                492.66,
+                564.91
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [
+            "Explicit isolator block was missing from structured extraction; verify its role."
+          ],
+          "overrides": []
+        },
+        {
+          "id": "component_2f4d5a487b625bc6880c00581310e6e7",
+          "category": "SWITCH",
+          "label": "Isolator 2P 20A",
+          "poles": "2P",
+          "amps": "20A",
+          "curve": "-",
+          "breaking_capacity": "-",
+          "sensitivity": "-",
+          "spd_type": "-",
+          "ct_ratio": "-",
+          "meter_accuracy": "-",
+          "cable_size": 0.0,
+          "load_label": "",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "forced_reference": "",
+          "forced_unit_price": null,
+          "forced_currency": "",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "origin": "deterministic_schematic",
+          "notes": "",
+          "evidence": [
+            {
+              "source": "cad_entity",
+              "source_id": "block:8A7",
+              "entity_handle": "8A7",
+              "block_name": "SW",
+              "layer": "0",
+              "text": "",
+              "cad_bbox": [
+                35.98866647656502,
+                22.54699767206836,
+                35.98866647656502,
+                22.54699767206836
+              ],
+              "image_bbox": [
+                403.54,
+                543.78,
+                411.54,
+                551.78
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "review_status": "included",
+          "conflicts_acknowledged": false,
+          "manufacturer_override_confirmed": false,
+          "ai_review_required": false,
+          "ai_suggestion_note": "",
+          "conflicts": [
+            "Explicit isolator block was missing from structured extraction; verify its role."
+          ],
+          "overrides": []
+        }
+      ],
+      "terminals": [
+        {
+          "id": "terminal_475cb23902955e11b67e28fe65ca70df",
+          "name": "PT 6",
+          "description": "Phoenix Contact feed-through terminal 6mm²",
+          "max_mm2": 6.0,
+          "quantity": 4,
+          "circuits": [
+            "MAIN INCOMER FROM MDB-B1"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        },
+        {
+          "id": "terminal_57235291fe8c5a4fa093312a1cf0bb44",
+          "name": "PTTB 4",
+          "description": "Phoenix Contact double-level terminal 2x4mm²",
+          "max_mm2": 4.0,
+          "quantity": 36,
+          "circuits": [
+            "LIGHTING / EMERGENCY LIGHTING CIRCUITS",
+            "SOCKETS - LOBBY - GF",
+            "UPS SOCKETS - LOBBY - GF"
+          ],
+          "origin": "calculated",
+          "warnings": []
+        }
+      ],
+      "commercial_accessories": [
+        {
+          "id": "accessory_23a6ccaf9d045a2daa7553b97b86dca7",
+          "description": "Panel 15 MOD (PRISMA)",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "origin": "engineering_calculated",
+          "notes": "Commercial enclosure/accessory schedule calculated from panel topology and capacity."
+        },
+        {
+          "id": "accessory_e41b4c433cab5044a3d0f1b01925a951",
+          "description": "Plastron",
+          "quantity": 5,
+          "manufacturer": "SCHNEIDER",
+          "origin": "calculated_internal_accessory",
+          "notes": "Commercial enclosure/accessory schedule calculated from panel topology and capacity."
+        },
+        {
+          "id": "accessory_d783814b7f6f53fbb561cb3e19eebeb8",
+          "description": "Rail",
+          "quantity": 5,
+          "manufacturer": "SCHNEIDER",
+          "origin": "calculated_internal_accessory",
+          "notes": "Commercial enclosure/accessory schedule calculated from panel topology and capacity."
+        },
+        {
+          "id": "accessory_363889286e4555e2bba225acfb7c8850",
+          "description": "Door 15M",
+          "quantity": 1,
+          "manufacturer": "SCHNEIDER",
+          "origin": "calculated_internal_accessory",
+          "notes": "Commercial enclosure/accessory schedule calculated from panel topology and capacity."
+        }
+      ],
+      "render_paths": [
+        "benchmark_runs\\marea_park\\predictions_initial\\DB-GF-CA1\\artifacts\\DB-GF-CA1\\full-sheet.png"
+      ],
+      "debug_paths": [
+        "benchmark_runs\\marea_park\\predictions_initial\\DB-GF-CA1\\artifacts\\DB-GF-CA1\\cad-evidence.json",
+        "benchmark_runs\\marea_park\\predictions_initial\\DB-GF-CA1\\artifacts\\DB-GF-CA1\\ai-evidence.json",
+        "benchmark_runs\\marea_park\\predictions_initial\\DB-GF-CA1\\artifacts\\DB-GF-CA1\\render-metadata.json",
+        "benchmark_runs\\marea_park\\predictions_initial\\DB-GF-CA1\\artifacts\\DB-GF-CA1\\debug"
+      ],
+      "review_status": "included",
+      "extraction_notes": []
+    }
+  ],
+  "pricing": {
+    "default_manufacturer": "SCHNEIDER",
+    "editions": {},
+    "family_preferences": {},
+    "tva_rate": 0.11,
+    "currency": "USD"
+  },
+  "export": {
+    "pricing_mode": "itemized",
+    "visible_columns": [
+      "panel",
+      "description",
+      "manufacturer",
+      "reference",
+      "quantity",
+      "unit_price",
+      "total_price",
+      "currency",
+      "status"
+    ],
+    "attention": ""
+  },
+  "match_results": [
+    {
+      "component_id": "component_22515623d6965c689d7134c111d61698",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "28901",
+      "chosen_description": "INS40 4P 40A - SWITCH DISCONNECTOR",
+      "alternatives": [
+        {
+          "reference": "A9S65440",
+          "description": "ACTI9 ISW SWITCH 4P 40A 415VAC",
+          "price": 46.73,
+          "currency": "EUR",
+          "score": 0.5471,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ISW",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        }
+      ],
+      "recommendations": [
+        {
+          "reference": "A9S65440",
+          "description": "ACTI9 ISW SWITCH 4P 40A 415VAC",
+          "price": 46.73,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ISW",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9S60432",
+          "description": "ACTI9 ISW SWITCH 4P 32A 415V",
+          "price": 33.07,
+          "currency": "EUR",
+          "score": 0.606,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ISW",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "32A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (40A → 32A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "A9S60420",
+          "description": "ACTI9 ISW SWITCH 4P 20A 415V",
+          "price": 29.83,
+          "currency": "EUR",
+          "score": 0.57,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ISW",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "20A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (40A → 20A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "DMM-125/4",
+          "description": "DIN Rail industrial Switch Dumeco,with mounted knob, 125 A 4P",
+          "price": 306.99,
+          "currency": "USD",
+          "score": 0.24,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "SWITCH",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "125A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering review: higher current (40A → 125A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "DMV-250N/4",
+          "description": "Surface Mounted Industrial Switch Dumeco 250 A 4P",
+          "price": 457.73,
+          "currency": "USD",
+          "score": 0.24,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "SWITCH",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "250A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering review: higher current (40A → 250A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.56,
+      "tier": "T2",
+      "unit_price": 97.27,
+      "quantity": 1,
+      "total_price": 97.27,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Multiple exact compatible catalog families have equivalent scores"
+    },
+    {
+      "component_id": "component_d8fcbe736d5551b892a9c6c1aec7791c",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "A9R12440",
+      "chosen_description": "ACTI9 IID 4P 40A 100MA AC-TYPE RESIDUAL",
+      "alternatives": [],
+      "recommendations": [
+        {
+          "reference": "mRCM-40/4/01-A",
+          "description": "RCCB 40A 4P 100mA DC-Type",
+          "price": 128.23,
+          "currency": "USD",
+          "score": 0.8,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "RCCB",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "100mA",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9R12463",
+          "description": "ACTI9 IID 4P 63A 100MA AC-TYPE RESIDUAL",
+          "price": 112.53,
+          "currency": "EUR",
+          "score": 0.561,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "63A",
+          "sensitivity": "100mA",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering review: higher current (40A → 63A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "A9R12491",
+          "description": "ACTI9 IID 4P 100A 100MA AC-TYPE RESIDUAL",
+          "price": 227.04,
+          "currency": "EUR",
+          "score": 0.45,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "100A",
+          "sensitivity": "100mA",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering review: higher current (40A → 100A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "mRCM-25/4/01-A",
+          "description": "RCCB 25A 4P 100mA DC-Type",
+          "price": 128.23,
+          "currency": "USD",
+          "score": 0.425,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "RCCB",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "25A",
+          "sensitivity": "100mA",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering rating change (40A → 25A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "mRCM-25/4/01",
+          "description": "RCCB 25A 4P 100mA AC-Type",
+          "price": 88.37,
+          "currency": "USD",
+          "score": 0.415,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "RCCB",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "25A",
+          "sensitivity": "100mA",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering rating change (40A → 25A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.63,
+      "tier": "T2",
+      "unit_price": 104.94,
+      "quantity": 1,
+      "total_price": 104.94,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Exact candidate requires review"
+    },
+    {
+      "component_id": "component_d87ef9b9fb11543d97a373c7978979a4",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "A9R21440",
+      "chosen_description": "ACTI9 IID 4P 40A 30MA A-TYPE RESIDUAL CU",
+      "alternatives": [
+        {
+          "reference": "A9R50440",
+          "description": "ACTI9 IID K 4P 40A 30MA AC-TYPE RESIDUAL",
+          "price": 91.13,
+          "currency": "EUR",
+          "score": 0.624,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9R41440",
+          "description": "ACTI9 IID 4P 40A 30MA AC-TYPE RESIDUAL C",
+          "price": 105.13,
+          "currency": "EUR",
+          "score": 0.624,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        }
+      ],
+      "recommendations": [
+        {
+          "reference": "A9R50440",
+          "description": "ACTI9 IID K 4P 40A 30MA AC-TYPE RESIDUAL",
+          "price": 91.13,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9R41440",
+          "description": "ACTI9 IID 4P 40A 30MA AC-TYPE RESIDUAL C",
+          "price": 105.13,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "40A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9R41425",
+          "description": "Acti9 iID 4P 25A 30mA AC RCCB",
+          "price": 99.87,
+          "currency": "EUR",
+          "score": 0.595,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "25A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (40A → 25A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "A9R21425",
+          "description": "ACTI9 IID 4P 25A 30MA A-TYPE RESIDUAL CU",
+          "price": 141.64,
+          "currency": "EUR",
+          "score": 0.595,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IID",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "25A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (40A → 25A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "FBHMV-80/4/003-A",
+          "description": "Add-on RCD unit for mMCT 80A 4P 30mA A type",
+          "price": 510.41,
+          "currency": "USD",
+          "score": 0.34,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "RCCB",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "80A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering review: higher current (40A → 80A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "FBHMV-80/4/003",
+          "description": "Add-on RCD unit for mMCT 80A 4P 30mA AC type",
+          "price": 443.84,
+          "currency": "USD",
+          "score": 0.33,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "RCCB",
+          "category": "RCCB",
+          "product_kind": "standalone",
+          "poles": "4P",
+          "amps": "80A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering review: higher current (40A → 80A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.6987,
+      "tier": "T2",
+      "unit_price": 149.26,
+      "quantity": 1,
+      "total_price": 149.26,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Exact candidate requires review"
+    },
+    {
+      "component_id": "component_dcd44ffc93765865bd853c8b215506d4",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "",
+      "chosen_description": "",
+      "alternatives": [
+        {
+          "reference": "A9L16339",
+          "description": "Acti9 IPRI 48V SPD",
+          "price": 302.72,
+          "currency": "EUR",
+          "score": 0.2693,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "SPD",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "-",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9L16337",
+          "description": "IPRC FOR TELECOM NETWORK SURGE ARRESTER",
+          "price": 164.66,
+          "currency": "EUR",
+          "score": 0.2633,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ACTI9 IPRD / IPF",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "-",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9L40281",
+          "description": "IPRD 40R 1000PV 2P SURGE ARRESTER",
+          "price": 179.67,
+          "currency": "EUR",
+          "score": 0.2633,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ACTI9 IPRD / IPF",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "2P",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9L15686",
+          "description": "IPF 40 40 KA 340V 1P SURGE ARRESTER",
+          "price": 60.04,
+          "currency": "EUR",
+          "score": 0.259,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ACTI9 IPRD / IPF",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "1P",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9L40100",
+          "description": "IPRD 40 40 KA 350V 1P SURGE ARRESTER",
+          "price": 73.16,
+          "currency": "EUR",
+          "score": 0.259,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ACTI9 IPRD / IPF",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "1P",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        }
+      ],
+      "recommendations": [
+        {
+          "reference": "A9L15686",
+          "description": "IPF 40 40 KA 340V 1P SURGE ARRESTER",
+          "price": 60.04,
+          "currency": "EUR",
+          "score": 0.94,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ACTI9 IPRD / IPF",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "1P",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9L40100",
+          "description": "IPRD 40 40 KA 350V 1P SURGE ARRESTER",
+          "price": 73.16,
+          "currency": "EUR",
+          "score": 0.94,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "ACTI9 IPRD / IPF",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "1P",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "PHC-PLT-SEC-T3-3S-230-FM",
+          "description": "Class D Protection *PlugTrab*; Plug-in device protection, according to type 3/class III, for 3-phase power supply networks with separate N and PE (5- conductor system: L1, L2, L3, N, PE), with integrated surge-proof fuse and remote indication contact; Housing width 35 mm (2 div.) Nom. Voltage Un: 230/400 V AC (TN-S) Maximum Continuous Voltage Uc: 264 V AC Max. Discharge Surge (8/20) Imax: 10 kA Category: III (IEC) / Class D (VDE); Pluggable device protection, according to type 3/class III, for 1-phase power supply networks with separate N and PE (3-conductor system: L1, N, PE), with integrated surge- proof fuse and remote indication contact. Also suitable for DC applications",
+          "price": 352.0,
+          "currency": "USD",
+          "score": 0.8,
+          "manufacturer": "PHOENIX CONTACT",
+          "edition": "PHOENIX CONTACT 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "PHOENIX_SPD",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "3P",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "PHC-VAL-MS-EE-T2-3+1-385-FM",
+          "description": "Surge Arrester ESSENTIAL EDITION (New); Type 2 surge arrester, consisting of base element and protective connectors, for mounting on NS 35/7.5, execution: 230 V AC - IT system, 3 + 1 circuit.; Type 2 surge arrester, in accordance with Type 2/Class II, for 1- phase power supply networks with separate N and PE (3- conductor system: L1, N, PE), with remote indication contact.",
+          "price": 60.0,
+          "currency": "USD",
+          "score": 0.79,
+          "manufacturer": "PHOENIX CONTACT",
+          "edition": "PHOENIX CONTACT 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "PHOENIX_SPD",
+          "category": "SPD",
+          "product_kind": "standalone",
+          "poles": "-",
+          "amps": "-",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        }
+      ],
+      "score": 0.0,
+      "tier": "NF",
+      "unit_price": 0.0,
+      "quantity": 1,
+      "total_price": 0.0,
+      "currency": "EUR",
+      "review_status": "unmatched",
+      "note": "No exact compatible catalog product"
+    },
+    {
+      "component_id": "component_88a3c315d18e5fd98179717700e1e08f",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "DF103",
+      "chosen_description": "FUSE HOLDER 3P 32A FOR FUSE 10 X 38 MM",
+      "alternatives": [
+        {
+          "reference": "DF103V",
+          "description": "FUSE HOLDER 3P 32A 10 X 38 MM MELT.INDIC",
+          "price": 31.61,
+          "currency": "EUR",
+          "score": 0.754,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "FUSE_HOLDER",
+          "category": "FUSE_HOLDER",
+          "product_kind": "standalone",
+          "poles": "3P",
+          "amps": "32A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        }
+      ],
+      "recommendations": [
+        {
+          "reference": "DF103V",
+          "description": "FUSE HOLDER 3P 32A 10 X 38 MM MELT.INDIC",
+          "price": 31.61,
+          "currency": "EUR",
+          "score": 0.97,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "FUSE_HOLDER",
+          "category": "FUSE_HOLDER",
+          "product_kind": "standalone",
+          "poles": "3P",
+          "amps": "32A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "DF83",
+          "description": "FUSE HOLDER 3P 25A FUSE 8,5 X 31,5 MM",
+          "price": 17.5,
+          "currency": "EUR",
+          "score": 0.6138,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "FUSE_HOLDER",
+          "category": "FUSE_HOLDER",
+          "product_kind": "standalone",
+          "poles": "3P",
+          "amps": "25A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (32A → 25A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "DF83V",
+          "description": "FUSE HOLDER 3P 25A 8,5 X 31,5 MELT.INDIC",
+          "price": 27.06,
+          "currency": "EUR",
+          "score": 0.6138,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "FUSE_HOLDER",
+          "category": "FUSE_HOLDER",
+          "product_kind": "standalone",
+          "poles": "3P",
+          "amps": "25A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (32A → 25A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.7606,
+      "tier": "T2",
+      "unit_price": 25.64,
+      "quantity": 1,
+      "total_price": 25.64,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Multiple exact compatible catalog families have equivalent scores"
+    },
+    {
+      "component_id": "component_4200df2eb3f750928d5e12b9ff0496db",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "A9P44610",
+      "chosen_description": "Acti9 iC40N 1PN B 10A MCB",
+      "alternatives": [
+        {
+          "reference": "A9P52610",
+          "description": "ACTI 9 iC40 1PN C 10A MCB",
+          "price": 18.2,
+          "currency": "EUR",
+          "score": 0.6225,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P42610",
+          "description": "ACTI 9 iC40 1PN B 10A MCB",
+          "price": 21.43,
+          "currency": "EUR",
+          "score": 0.6225,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P54610",
+          "description": "ACTI 9 IC40N 1PN C 10A 6000A/10KA MINIAT",
+          "price": 20.58,
+          "currency": "EUR",
+          "score": 0.609,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        }
+      ],
+      "recommendations": [
+        {
+          "reference": "A9P52610",
+          "description": "ACTI 9 iC40 1PN C 10A MCB",
+          "price": 18.2,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P54610",
+          "description": "ACTI 9 IC40N 1PN C 10A 6000A/10KA MINIAT",
+          "price": 20.58,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "PLN6-C10/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  C 10A",
+          "price": 15.24,
+          "currency": "USD",
+          "score": 0.79,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "PLN6-B10/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  B 10A",
+          "price": 15.25,
+          "currency": "USD",
+          "score": 0.79,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P44606",
+          "description": "Acti9 iC40N 1PN B 6A 6000A/10kA MCB",
+          "price": 27.15,
+          "currency": "EUR",
+          "score": 0.592,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "6A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (10A → 6A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "A9P42606",
+          "description": "ACTI 9 iC40 1PN B 6A MCB",
+          "price": 19.71,
+          "currency": "EUR",
+          "score": 0.582,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "6A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (10A → 6A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "PLN6-C6/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  C 6A",
+          "price": 15.24,
+          "currency": "USD",
+          "score": 0.412,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "6A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering rating change (10A → 6A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "PLN6-B6/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  B 6A",
+          "price": 15.25,
+          "currency": "USD",
+          "score": 0.412,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "6A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering rating change (10A → 6A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.6321,
+      "tier": "T2",
+      "unit_price": 24.74,
+      "quantity": 25,
+      "total_price": 618.5,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Multiple exact compatible catalog families have equivalent scores"
+    },
+    {
+      "component_id": "component_06d45a3865fa58d8bfd204c0b8440b7c",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "A9P44616",
+      "chosen_description": "Acti9 iC40N 1PN B 16A MCB",
+      "alternatives": [
+        {
+          "reference": "A9P52616",
+          "description": "ACTI 9 iC40 1PN C 16A MCB",
+          "price": 18.2,
+          "currency": "EUR",
+          "score": 0.6225,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P42616",
+          "description": "ACTI 9 iC40 1PN B 16A MCB",
+          "price": 25.85,
+          "currency": "EUR",
+          "score": 0.6225,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P54616",
+          "description": "ACTI 9 IC40N 1PN C 16A 6000A/10KA MINIAT",
+          "price": 20.58,
+          "currency": "EUR",
+          "score": 0.609,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "exact",
+          "reason": "Exact structured specification",
+          "requires_engineering_review": false
+        }
+      ],
+      "recommendations": [
+        {
+          "reference": "A9P52616",
+          "description": "ACTI 9 iC40 1PN C 16A MCB",
+          "price": 18.2,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P54616",
+          "description": "ACTI 9 IC40N 1PN C 16A 6000A/10KA MINIAT",
+          "price": 20.58,
+          "currency": "EUR",
+          "score": 0.96,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_exact",
+          "reason": "Same manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "PLN6-C16/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  C 16A",
+          "price": 15.24,
+          "currency": "USD",
+          "score": 0.79,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "PLN6-B16/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  B 16A",
+          "price": 15.25,
+          "currency": "USD",
+          "score": 0.79,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "16A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_exact",
+          "reason": "Different manufacturer; requested current",
+          "requires_engineering_review": false
+        },
+        {
+          "reference": "A9P52620",
+          "description": "ACTI 9 iC40 1PN C 20A MCB",
+          "price": 18.2,
+          "currency": "EUR",
+          "score": 0.6,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "20A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (16A → 20A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "A9P54620",
+          "description": "ACTI 9 IC40N 1PN C 20A 6000A/10KA MINIAT",
+          "price": 20.58,
+          "currency": "EUR",
+          "score": 0.6,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IC40",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "20A",
+          "sensitivity": "-",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (16A → 20A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "PLN6-C20/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  C 20A",
+          "price": 15.24,
+          "currency": "USD",
+          "score": 0.43,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "20A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering rating change (16A → 20A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "PLN6-B20/1N",
+          "description": "MCB 1P+N (1 module unit) 6KA  B 20A",
+          "price": 15.25,
+          "currency": "USD",
+          "score": 0.43,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "MCB",
+          "category": "MCB",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "20A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering rating change (16A → 20A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.6321,
+      "tier": "T2",
+      "unit_price": 24.74,
+      "quantity": 8,
+      "total_price": 197.92,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Multiple exact compatible catalog families have equivalent scores"
+    },
+    {
+      "component_id": "component_a23f6848d2205b59aafac4da007a5a60",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "A9DE2616",
+      "chosen_description": "ACTI 9 iCV40 1PN C 16A 30mA AC RCBO",
+      "alternatives": [],
+      "recommendations": [
+        {
+          "reference": "A9DE2610",
+          "description": "ACTI 9 iCV40 1PN C 10A 30mA AC RCBO",
+          "price": 96.81,
+          "currency": "EUR",
+          "score": 0.595,
+          "manufacturer": "SCHNEIDER",
+          "edition": "SCHNEIDER 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "IDPN_VIGI",
+          "category": "RCBO",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "10A",
+          "sensitivity": "30mA",
+          "recommendation_kind": "same_manufacturer_nearest",
+          "reason": "Same manufacturer; engineering rating change (16A → 10A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.744,
+      "tier": "T2",
+      "unit_price": 96.81,
+      "quantity": 3,
+      "total_price": 290.43,
+      "currency": "EUR",
+      "review_status": "check_candidate",
+      "note": "Exact candidate requires review"
+    },
+    {
+      "component_id": "component_36eee68eaf365575be0fcd4d813a4808",
+      "manufacturer": "SCHNEIDER",
+      "edition": "SCHNEIDER 2026 H1",
+      "chosen_reference": "",
+      "chosen_description": "",
+      "alternatives": [],
+      "recommendations": [
+        {
+          "reference": "VLCE14-1P+N",
+          "description": "Fuse switch-disconnector, 50A, 1p, 22x51 size",
+          "price": 29.89,
+          "currency": "USD",
+          "score": 0.27,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "SWITCH",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "50A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering review: higher current (20A → 50A)",
+          "requires_engineering_review": true
+        },
+        {
+          "reference": "VLCE22-1P+N",
+          "description": "Fuse switch-disconnector, 100A, 1p, 22x51 size",
+          "price": 66.75,
+          "currency": "USD",
+          "score": 0.23,
+          "manufacturer": "EATON",
+          "edition": "EATON 2026 H1",
+          "year": 2026,
+          "half": "H1",
+          "family": "SWITCH",
+          "category": "SWITCH",
+          "product_kind": "standalone",
+          "poles": "1PN",
+          "amps": "100A",
+          "sensitivity": "-",
+          "recommendation_kind": "other_manufacturer_nearest",
+          "reason": "Different manufacturer; engineering review: higher current (20A → 100A)",
+          "requires_engineering_review": true
+        }
+      ],
+      "score": 0.0,
+      "tier": "NF",
+      "unit_price": 0.0,
+      "quantity": 1,
+      "total_price": 0.0,
+      "currency": "EUR",
+      "review_status": "unmatched",
+      "note": "No exact compatible catalog product"
+    }
+  ]
+}

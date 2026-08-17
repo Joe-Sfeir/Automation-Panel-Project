@@ -1,0 +1,1519 @@
+{
+  "aggregate": {
+    "panel_reference": "AGGREGATE",
+    "true_positive_quantity": 984,
+    "predicted_quantity": 1187,
+    "expected_quantity": 1418,
+    "precision": 0.828981,
+    "recall": 0.693935,
+    "f1": 0.75547,
+    "missing": {
+      "SWITCH|4P|40A": 4,
+      "SPD|TYPE2": 52,
+      "RCCB|4P|40A|30MA": 12,
+      "RCCB|4P|40A|300MA": 8,
+      "MCB|1PN|10A|C|6KA": 17,
+      "MCB|1PN|16A|C|6KA": 77,
+      "CONTACTOR|2P|25A": 26,
+      "OTHER": 29,
+      "RCCB|-|25A|30MA": 9,
+      "RCCB|-|25A|300MA": 9,
+      "MCB|1PN|20A|C|-": 12,
+      "MCB|3P|20A|C|6KA": 25,
+      "CONTACTOR|3P|12A": 13,
+      "SWITCH|3P|40A": 8,
+      "MCB|1PN|10A|C|-": 8,
+      "MCB|1PN|16A|C|-": 12,
+      "SWITCH|4P|63A": 2,
+      "MCB|3P|40A|C|6KA": 2,
+      "CONTACTOR|3P|32A": 1,
+      "SWITCH|4P|160A": 3,
+      "CT|2005": 3,
+      "METER": 12,
+      "MCB|4P|80A|C|10KA": 1,
+      "CT|405": 18,
+      "CT|805": 9,
+      "CONTACTOR|4P|265A": 1,
+      "SWITCH|4P|250A": 1,
+      "CT|2505": 3,
+      "MCCB|4P|100A|-|-": 1,
+      "SWITCH|4P|100A": 1,
+      "MCCB|4P|63A|-|-": 2,
+      "SWITCH|4P|630A": 2,
+      "CT|4005": 3,
+      "CT|6005": 6,
+      "MCCB|4P|400A|-|-": 2,
+      "MCCB|4P|250A|-|-": 1,
+      "MCCB|4P|160A|-|-": 3,
+      "CONTACTOR|4P|63A": 2,
+      "MCB|4P|20A|C|10KA": 1,
+      "MCCB|4P|200A|-|-": 1,
+      "CT|1005": 3,
+      "CT|1505": 9,
+      "CONTACTOR|4P|115A": 1,
+      "CONTACTOR|4P|150A": 3,
+      "CONTACTOR|4P|225A": 1,
+      "RCCB|2P|25A|30MA": 4,
+      "CONTACTOR|3P|630A": 1,
+      "SWITCH|4P|800A": 3,
+      "CONTACTOR|3P|800A": 3,
+      "MCCB|4P|630A|-|-": 1,
+      "MCCB|4P|1000A|-|-": 1,
+      "MCB|1PN|10A|B|6KA": 2
+    },
+    "extra": {
+      "RCCB|4P|40A|100MA": 8,
+      "FUSEHOLDER": 22,
+      "RCBO|1PN|16A|C|6KA|30MA": 7,
+      "SWITCH|2P|10A": 1,
+      "SWITCH|2P|16A": 3,
+      "SWITCH|2P|25A": 1,
+      "MCB|3PN|20A|C|6KA": 12,
+      "SWITCH|4P|25A": 1,
+      "RCBO|-|20A|C|6KA|300MA": 13,
+      "RCBO|1PN|20A|C|6KA|300MA": 12,
+      "CONTACTOR|4P|32A": 3,
+      "MCB|3PN|40A|C|6KA": 1,
+      "CONTACTOR|-|10A": 6,
+      "RCBO|-|40A|C|6KA|300MA": 1,
+      "CONTACTOR|-|32A": 4,
+      "MCB|4P|80A|C|6KA": 1,
+      "SWITCH|4P|20A": 3,
+      "CONTACTOR|4P|250A": 1,
+      "SPD|TYPE1": 42,
+      "MCCB|4P|350A|-|35KA": 1,
+      "MCB|4P|32A|C|10KA": 50,
+      "SWITCH|2P|32A": 3,
+      "SWITCH|1PN|40A": 1,
+      "RCBO|1PN|10A|B|6KA|30MA": 2,
+      "SWITCH|2P|40A": 1,
+      "RCCB|4P|20A|100MA": 1,
+      "SWITCH|1PN|32A": 2
+    }
+  },
+  "category_aggregate": {
+    "panel_reference": "AGGREGATE_CATEGORIES",
+    "true_positive_quantity": 1130,
+    "predicted_quantity": 1187,
+    "expected_quantity": 1418,
+    "precision": 0.95198,
+    "recall": 0.796897,
+    "f1": 0.867562,
+    "missing": {
+      "SWITCH": 8,
+      "SPD": 10,
+      "RCCB": 33,
+      "MCB": 93,
+      "CONTACTOR": 38,
+      "OTHER": 29,
+      "CT": 54,
+      "METER": 12,
+      "MCCB": 11
+    },
+    "extra": {
+      "FUSEHOLDER": 22,
+      "RCBO": 35
+    }
+  },
+  "field_aggregate": {
+    "poles": {
+      "true_positive_quantity": 726,
+      "predicted_quantity": 833,
+      "expected_quantity": 984,
+      "precision": 0.871549,
+      "recall": 0.737805,
+      "f1": 0.799119
+    },
+    "amps": {
+      "true_positive_quantity": 744,
+      "predicted_quantity": 876,
+      "expected_quantity": 1021,
+      "precision": 0.849315,
+      "recall": 0.728697,
+      "f1": 0.784396
+    },
+    "curve": {
+      "true_positive_quantity": 464,
+      "predicted_quantity": 549,
+      "expected_quantity": 607,
+      "precision": 0.845173,
+      "recall": 0.764415,
+      "f1": 0.802768
+    },
+    "breaking_capacity": {
+      "true_positive_quantity": 457,
+      "predicted_quantity": 636,
+      "expected_quantity": 569,
+      "precision": 0.718553,
+      "recall": 0.803163,
+      "f1": 0.758506
+    },
+    "sensitivity": {
+      "true_positive_quantity": 24,
+      "predicted_quantity": 80,
+      "expected_quantity": 78,
+      "precision": 0.3,
+      "recall": 0.307692,
+      "f1": 0.303797
+    },
+    "spd_type": {
+      "true_positive_quantity": 24,
+      "predicted_quantity": 75,
+      "expected_quantity": 85,
+      "precision": 0.32,
+      "recall": 0.282353,
+      "f1": 0.3
+    },
+    "ct_ratio": {
+      "true_positive_quantity": 156,
+      "predicted_quantity": 156,
+      "expected_quantity": 210,
+      "precision": 1.0,
+      "recall": 0.742857,
+      "f1": 0.852459
+    }
+  },
+  "layer_aggregates": {
+    "calculated_terminal": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 1217,
+        "predicted_quantity": 1224,
+        "expected_quantity": 1217,
+        "precision": 0.994281,
+        "recall": 1.0,
+        "f1": 0.997132,
+        "missing": {},
+        "extra": {
+          "TERMINAL": 7
+        }
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 1217,
+        "predicted_quantity": 1224,
+        "expected_quantity": 1217,
+        "precision": 0.994281,
+        "recall": 1.0,
+        "f1": 0.997132,
+        "missing": {},
+        "extra": {
+          "TERMINAL": 7
+        }
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "amps": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "curve": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sensitivity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spd_type": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "commercial_accessory": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 47,
+        "predicted_quantity": 47,
+        "expected_quantity": 62,
+        "precision": 1.0,
+        "recall": 0.758065,
+        "f1": 0.862385,
+        "missing": {
+          "ENCLOSUREACCESSORY": 15
+        },
+        "extra": {}
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 47,
+        "predicted_quantity": 47,
+        "expected_quantity": 62,
+        "precision": 1.0,
+        "recall": 0.758065,
+        "f1": 0.862385,
+        "missing": {
+          "ENCLOSUREACCESSORY": 15
+        },
+        "extra": {}
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "amps": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "curve": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sensitivity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spd_type": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "control_engineering": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 74,
+        "predicted_quantity": 74,
+        "expected_quantity": 368,
+        "precision": 1.0,
+        "recall": 0.201087,
+        "f1": 0.334842,
+        "missing": {
+          "RELAY": 31,
+          "PILOTLAMP": 188,
+          "TIMER": 30,
+          "SELECTORSWITCH": 45
+        },
+        "extra": {}
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 74,
+        "predicted_quantity": 74,
+        "expected_quantity": 368,
+        "precision": 1.0,
+        "recall": 0.201087,
+        "f1": 0.334842,
+        "missing": {
+          "RELAY": 31,
+          "PILOTLAMP": 188,
+          "TIMER": 30,
+          "SELECTORSWITCH": 45
+        },
+        "extra": {}
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "amps": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "curve": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sensitivity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spd_type": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "metering": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 212,
+        "predicted_quantity": 212,
+        "expected_quantity": 280,
+        "precision": 1.0,
+        "recall": 0.757143,
+        "f1": 0.861789,
+        "missing": {
+          "CT|2005": 3,
+          "METER": 14,
+          "CT|405": 18,
+          "CT|805": 9,
+          "CT|2505": 3,
+          "CT|4005": 3,
+          "CT|6005": 6,
+          "CT|1005": 3,
+          "CT|1505": 9
+        },
+        "extra": {}
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 212,
+        "predicted_quantity": 212,
+        "expected_quantity": 280,
+        "precision": 1.0,
+        "recall": 0.757143,
+        "f1": 0.861789,
+        "missing": {
+          "CT": 54,
+          "METER": 14
+        },
+        "extra": {}
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "amps": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "curve": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sensitivity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spd_type": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 156,
+          "predicted_quantity": 156,
+          "expected_quantity": 210,
+          "precision": 1.0,
+          "recall": 0.742857,
+          "f1": 0.852459
+        }
+      }
+    },
+    "other": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 0,
+        "predicted_quantity": 0,
+        "expected_quantity": 29,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "missing": {
+          "OTHER": 29
+        },
+        "extra": {}
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 0,
+        "predicted_quantity": 0,
+        "expected_quantity": 29,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "missing": {
+          "OTHER": 29
+        },
+        "extra": {}
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "amps": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "curve": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sensitivity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spd_type": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "protection_auxiliary": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 161,
+        "predicted_quantity": 203,
+        "expected_quantity": 310,
+        "precision": 0.793103,
+        "recall": 0.519355,
+        "f1": 0.62768,
+        "missing": {
+          "SPD|TYPE2": 52,
+          "FUSEHOLDER": 97
+        },
+        "extra": {
+          "SPD|TYPE1": 42
+        }
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 203,
+        "predicted_quantity": 203,
+        "expected_quantity": 310,
+        "precision": 1.0,
+        "recall": 0.654839,
+        "f1": 0.791423,
+        "missing": {
+          "SPD": 10,
+          "FUSEHOLDER": 97
+        },
+        "extra": {}
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "amps": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "curve": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sensitivity": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "spd_type": {
+          "true_positive_quantity": 24,
+          "predicted_quantity": 75,
+          "expected_quantity": 85,
+          "precision": 0.32,
+          "recall": 0.282353,
+          "f1": 0.3
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "source_power": {
+      "specification": {
+        "panel_reference": "AGGREGATE",
+        "true_positive_quantity": 737,
+        "predicted_quantity": 876,
+        "expected_quantity": 1024,
+        "precision": 0.841324,
+        "recall": 0.719727,
+        "f1": 0.775789,
+        "missing": {
+          "SWITCH|4P|40A": 4,
+          "RCCB|4P|40A|30MA": 12,
+          "RCCB|4P|40A|300MA": 8,
+          "MCB|1PN|10A|C|6KA": 17,
+          "MCB|1PN|16A|C|6KA": 77,
+          "CONTACTOR|2P|25A": 26,
+          "RCCB|-|25A|30MA": 9,
+          "RCCB|-|25A|300MA": 9,
+          "MCB|1PN|20A|C|-": 12,
+          "MCB|3P|20A|C|6KA": 25,
+          "CONTACTOR|3P|12A": 13,
+          "SWITCH|3P|40A": 8,
+          "MCB|1PN|10A|C|-": 8,
+          "MCB|1PN|16A|C|-": 12,
+          "SWITCH|4P|63A": 2,
+          "MCB|3P|40A|C|6KA": 2,
+          "CONTACTOR|3P|32A": 1,
+          "SWITCH|4P|160A": 3,
+          "MCB|4P|80A|C|10KA": 1,
+          "CONTACTOR|4P|265A": 1,
+          "SWITCH|4P|250A": 1,
+          "MCCB|4P|100A|-|-": 1,
+          "SWITCH|4P|100A": 1,
+          "MCCB|4P|63A|-|-": 2,
+          "SWITCH|4P|630A": 2,
+          "MCCB|4P|400A|-|-": 2,
+          "MCCB|4P|250A|-|-": 1,
+          "MCCB|4P|160A|-|-": 3,
+          "CONTACTOR|4P|63A": 2,
+          "MCB|4P|20A|C|10KA": 1,
+          "MCCB|4P|200A|-|-": 1,
+          "CONTACTOR|4P|115A": 1,
+          "CONTACTOR|4P|150A": 3,
+          "CONTACTOR|4P|225A": 1,
+          "RCCB|2P|25A|30MA": 4,
+          "CONTACTOR|3P|630A": 1,
+          "SWITCH|4P|800A": 3,
+          "CONTACTOR|3P|800A": 3,
+          "MCCB|4P|630A|-|-": 1,
+          "MCCB|4P|1000A|-|-": 1,
+          "MCB|1PN|10A|B|6KA": 2
+        },
+        "extra": {
+          "RCCB|4P|40A|100MA": 8,
+          "RCBO|1PN|16A|C|6KA|30MA": 7,
+          "SWITCH|2P|10A": 1,
+          "SWITCH|2P|16A": 3,
+          "SWITCH|2P|25A": 1,
+          "MCB|3PN|20A|C|6KA": 12,
+          "SWITCH|4P|25A": 1,
+          "RCBO|-|20A|C|6KA|300MA": 13,
+          "RCBO|1PN|20A|C|6KA|300MA": 12,
+          "CONTACTOR|4P|32A": 3,
+          "MCB|3PN|40A|C|6KA": 1,
+          "CONTACTOR|-|10A": 6,
+          "RCBO|-|40A|C|6KA|300MA": 1,
+          "CONTACTOR|-|32A": 4,
+          "MCB|4P|80A|C|6KA": 1,
+          "SWITCH|4P|20A": 3,
+          "CONTACTOR|4P|250A": 1,
+          "MCCB|4P|350A|-|35KA": 1,
+          "MCB|4P|32A|C|10KA": 50,
+          "SWITCH|2P|32A": 3,
+          "SWITCH|1PN|40A": 1,
+          "RCBO|1PN|10A|B|6KA|30MA": 2,
+          "SWITCH|2P|40A": 1,
+          "RCCB|4P|20A|100MA": 1,
+          "SWITCH|1PN|32A": 2
+        }
+      },
+      "category": {
+        "panel_reference": "AGGREGATE_CATEGORIES",
+        "true_positive_quantity": 841,
+        "predicted_quantity": 876,
+        "expected_quantity": 1024,
+        "precision": 0.960046,
+        "recall": 0.821289,
+        "f1": 0.885263,
+        "missing": {
+          "SWITCH": 8,
+          "RCCB": 33,
+          "MCB": 93,
+          "CONTACTOR": 38,
+          "MCCB": 11
+        },
+        "extra": {
+          "RCBO": 35
+        }
+      },
+      "fields": {
+        "poles": {
+          "true_positive_quantity": 726,
+          "predicted_quantity": 833,
+          "expected_quantity": 984,
+          "precision": 0.871549,
+          "recall": 0.737805,
+          "f1": 0.799119
+        },
+        "amps": {
+          "true_positive_quantity": 744,
+          "predicted_quantity": 876,
+          "expected_quantity": 1021,
+          "precision": 0.849315,
+          "recall": 0.728697,
+          "f1": 0.784396
+        },
+        "curve": {
+          "true_positive_quantity": 464,
+          "predicted_quantity": 549,
+          "expected_quantity": 607,
+          "precision": 0.845173,
+          "recall": 0.764415,
+          "f1": 0.802768
+        },
+        "breaking_capacity": {
+          "true_positive_quantity": 457,
+          "predicted_quantity": 636,
+          "expected_quantity": 569,
+          "precision": 0.718553,
+          "recall": 0.803163,
+          "f1": 0.758506
+        },
+        "sensitivity": {
+          "true_positive_quantity": 24,
+          "predicted_quantity": 80,
+          "expected_quantity": 78,
+          "precision": 0.3,
+          "recall": 0.307692,
+          "f1": 0.303797
+        },
+        "spd_type": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ct_ratio": {
+          "true_positive_quantity": 0,
+          "predicted_quantity": 0,
+          "expected_quantity": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    }
+  },
+  "block_backed_quantity": {
+    "agreeing_rows": 0,
+    "evaluated_rows": 0,
+    "exact_rate": 1.0,
+    "layout_schematic_conflict_rows": 0
+  },
+  "tuning": {},
+  "holdout": {},
+  "panels": [
+    {
+      "panel_reference": "DB-B1-CA1",
+      "true_positive_quantity": 35,
+      "predicted_quantity": 37,
+      "expected_quantity": 42,
+      "precision": 0.945946,
+      "recall": 0.833333,
+      "f1": 0.886076,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "CONTACTOR|2P|25A": 2,
+        "OTHER": 4
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B1-CA2",
+      "true_positive_quantity": 25,
+      "predicted_quantity": 27,
+      "expected_quantity": 32,
+      "precision": 0.925926,
+      "recall": 0.78125,
+      "f1": 0.847458,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "CONTACTOR|2P|25A": 2,
+        "OTHER": 4
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B1-CTRL",
+      "true_positive_quantity": 13,
+      "predicted_quantity": 22,
+      "expected_quantity": 23,
+      "precision": 0.590909,
+      "recall": 0.565217,
+      "f1": 0.577778,
+      "missing": {
+        "SWITCH|2P|32A": 1,
+        "MCB|1PN|16A|C|6KA": 4,
+        "RCCB|-|25A|30MA": 4,
+        "RCCB|-|25A|300MA": 1
+      },
+      "extra": {
+        "SWITCH|1PN|25A": 1,
+        "SWITCH|1PN|20A": 1,
+        "RCBO|1PN|16A|C|6KA|30MA": 4,
+        "SWITCH|2P|10A": 1,
+        "SWITCH|2P|16A": 1,
+        "SWITCH|2P|25A": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B1-FANS1",
+      "true_positive_quantity": 13,
+      "predicted_quantity": 19,
+      "expected_quantity": 16,
+      "precision": 0.684211,
+      "recall": 0.8125,
+      "f1": 0.742857,
+      "missing": {
+        "MCB|3P|20A|C|6KA": 3
+      },
+      "extra": {
+        "MCB|3PN|20A|C|6KA": 3,
+        "RCCB|-|25A|300MA": 3
+      }
+    },
+    {
+      "panel_reference": "DB-B1-FANS2",
+      "true_positive_quantity": 0,
+      "predicted_quantity": 10,
+      "expected_quantity": 16,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "missing": {
+        "SWITCH|4P|40A": 1,
+        "MCB|1PN|20A|C|-": 3,
+        "RCCB|-|25A|300MA": 3,
+        "CONTACTOR|2P|25A": 3,
+        "MCB|3P|20A|C|6KA": 3,
+        "CONTACTOR|3P|12A": 3
+      },
+      "extra": {
+        "SWITCH|4P|25A": 1,
+        "RCBO|-|20A|C|6KA|300MA": 3,
+        "RCBO|1PN|20A|C|6KA|300MA": 3,
+        "CONTACTOR|4P|32A": 3
+      }
+    },
+    {
+      "panel_reference": "DB-B2-CA1",
+      "true_positive_quantity": 34,
+      "predicted_quantity": 36,
+      "expected_quantity": 41,
+      "precision": 0.944444,
+      "recall": 0.829268,
+      "f1": 0.883117,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "CONTACTOR|2P|25A": 2,
+        "OTHER": 4
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B2-CA2",
+      "true_positive_quantity": 31,
+      "predicted_quantity": 33,
+      "expected_quantity": 41,
+      "precision": 0.939394,
+      "recall": 0.756098,
+      "f1": 0.837838,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "CONTACTOR|2P|25A": 3,
+        "OTHER": 6
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B2-FANS1",
+      "true_positive_quantity": 14,
+      "predicted_quantity": 23,
+      "expected_quantity": 18,
+      "precision": 0.608696,
+      "recall": 0.777778,
+      "f1": 0.682927,
+      "missing": {
+        "MCB|3P|20A|C|6KA": 3,
+        "MCB|3P|40A|C|6KA": 1
+      },
+      "extra": {
+        "METER": 1,
+        "MCB|3PN|20A|C|6KA": 3,
+        "RCCB|-|25A|300MA": 4,
+        "MCB|3PN|40A|C|6KA": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B2-FANS2",
+      "true_positive_quantity": 1,
+      "predicted_quantity": 20,
+      "expected_quantity": 33,
+      "precision": 0.05,
+      "recall": 0.030303,
+      "f1": 0.037736,
+      "missing": {
+        "MCB|1PN|20A|C|-": 6,
+        "RCCB|-|25A|300MA": 6,
+        "CONTACTOR|2P|25A": 6,
+        "MCB|3P|20A|C|6KA": 7,
+        "CONTACTOR|3P|12A": 7
+      },
+      "extra": {
+        "RCBO|-|20A|C|6KA|300MA": 7,
+        "RCBO|1PN|20A|C|6KA|300MA": 6,
+        "CONTACTOR|-|10A": 6
+      }
+    },
+    {
+      "panel_reference": "DB-B2-STAFF",
+      "true_positive_quantity": 27,
+      "predicted_quantity": 28,
+      "expected_quantity": 29,
+      "precision": 0.964286,
+      "recall": 0.931034,
+      "f1": 0.947368,
+      "missing": {
+        "SPD|TYPE2": 1,
+        "RCCB|4P|40A|300MA": 1
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B3-CA1",
+      "true_positive_quantity": 47,
+      "predicted_quantity": 49,
+      "expected_quantity": 54,
+      "precision": 0.959184,
+      "recall": 0.87037,
+      "f1": 0.912621,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "CONTACTOR|2P|25A": 2,
+        "OTHER": 4
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B3-CA2",
+      "true_positive_quantity": 28,
+      "predicted_quantity": 30,
+      "expected_quantity": 38,
+      "precision": 0.933333,
+      "recall": 0.736842,
+      "f1": 0.823529,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "CONTACTOR|2P|25A": 3,
+        "OTHER": 6
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B3-FANS1",
+      "true_positive_quantity": 1,
+      "predicted_quantity": 11,
+      "expected_quantity": 15,
+      "precision": 0.090909,
+      "recall": 0.066667,
+      "f1": 0.076923,
+      "missing": {
+        "MCB|1PN|20A|C|-": 2,
+        "RCCB|-|25A|300MA": 2,
+        "CONTACTOR|2P|25A": 2,
+        "MCB|3P|20A|C|6KA": 3,
+        "MCB|3P|40A|C|6KA": 1,
+        "CONTACTOR|3P|12A": 3,
+        "CONTACTOR|3P|32A": 1
+      },
+      "extra": {
+        "RCBO|-|20A|C|6KA|300MA": 3,
+        "RCBO|-|40A|C|6KA|300MA": 1,
+        "RCBO|1PN|20A|C|6KA|300MA": 2,
+        "CONTACTOR|-|32A": 4
+      }
+    },
+    {
+      "panel_reference": "DB-B3-FANS2",
+      "true_positive_quantity": 8,
+      "predicted_quantity": 20,
+      "expected_quantity": 16,
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.444444,
+      "missing": {
+        "MCB|1PN|20A|C|-": 1,
+        "CONTACTOR|2P|25A": 1,
+        "MCB|3P|20A|C|6KA": 6
+      },
+      "extra": {
+        "MCB|3PN|20A|C|6KA": 6,
+        "RCCB|-|25A|300MA": 5,
+        "RCBO|1PN|20A|C|6KA|300MA": 1
+      }
+    },
+    {
+      "panel_reference": "DB-B3-MEC",
+      "true_positive_quantity": 10,
+      "predicted_quantity": 13,
+      "expected_quantity": 38,
+      "precision": 0.769231,
+      "recall": 0.263158,
+      "f1": 0.392157,
+      "missing": {
+        "CT|2005": 3,
+        "METER": 6,
+        "MCB|4P|80A|C|10KA": 1,
+        "CT|405": 15,
+        "CT|805": 3
+      },
+      "extra": {
+        "MCB|4P|80A|C|6KA": 1,
+        "SWITCH|4P|20A": 2
+      }
+    },
+    {
+      "panel_reference": "DB-GF-CA1",
+      "true_positive_quantity": 37,
+      "predicted_quantity": 45,
+      "expected_quantity": 44,
+      "precision": 0.822222,
+      "recall": 0.840909,
+      "f1": 0.831461,
+      "missing": {
+        "RCCB|4P|40A|300MA": 1,
+        "MCB|1PN|16A|C|6KA": 3,
+        "RCCB|-|25A|30MA": 3
+      },
+      "extra": {
+        "RCCB|4P|40A|100MA": 1,
+        "FUSEHOLDER": 1,
+        "RCBO|1PN|16A|C|6KA|30MA": 3,
+        "SWITCH|1PN|20A": 1,
+        "SWITCH|2P|16A": 2
+      }
+    },
+    {
+      "panel_reference": "EMDB-1",
+      "true_positive_quantity": 10,
+      "predicted_quantity": 12,
+      "expected_quantity": 11,
+      "precision": 0.833333,
+      "recall": 0.909091,
+      "f1": 0.869565,
+      "missing": {
+        "CONTACTOR|4P|265A": 1
+      },
+      "extra": {
+        "CONTACTOR|4P|250A": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "ESMDB-B1",
+      "true_positive_quantity": 6,
+      "predicted_quantity": 6,
+      "expected_quantity": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "missing": {},
+      "extra": {}
+    },
+    {
+      "panel_reference": "ESMDB-B2",
+      "true_positive_quantity": 6,
+      "predicted_quantity": 7,
+      "expected_quantity": 6,
+      "precision": 0.857143,
+      "recall": 1.0,
+      "f1": 0.923077,
+      "missing": {},
+      "extra": {
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "ESMDB-B3",
+      "true_positive_quantity": 6,
+      "predicted_quantity": 7,
+      "expected_quantity": 6,
+      "precision": 0.857143,
+      "recall": 1.0,
+      "f1": 0.923077,
+      "missing": {},
+      "extra": {
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "MDB-1",
+      "true_positive_quantity": 24,
+      "predicted_quantity": 27,
+      "expected_quantity": 31,
+      "precision": 0.888889,
+      "recall": 0.774194,
+      "f1": 0.827586,
+      "missing": {
+        "CT|4005": 3,
+        "CT|6005": 3,
+        "MCCB|4P|400A|-|-": 1
+      },
+      "extra": {
+        "MCCB|4P|350A|-|35KA": 1,
+        "FUSEHOLDER": 2
+      }
+    },
+    {
+      "panel_reference": "MDB-ATS TENANTS",
+      "true_positive_quantity": 489,
+      "predicted_quantity": 590,
+      "expected_quantity": 540,
+      "precision": 0.828814,
+      "recall": 0.905556,
+      "f1": 0.865487,
+      "missing": {
+        "SPD|TYPE2": 51
+      },
+      "extra": {
+        "MCB|4P|32A|C|10KA": 50,
+        "SPD|TYPE1": 51
+      }
+    },
+    {
+      "panel_reference": "SMDB-B1",
+      "true_positive_quantity": 10,
+      "predicted_quantity": 11,
+      "expected_quantity": 10,
+      "precision": 0.909091,
+      "recall": 1.0,
+      "f1": 0.952381,
+      "missing": {},
+      "extra": {
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "SMDB-B2",
+      "true_positive_quantity": 6,
+      "predicted_quantity": 7,
+      "expected_quantity": 6,
+      "precision": 0.857143,
+      "recall": 1.0,
+      "f1": 0.923077,
+      "missing": {},
+      "extra": {
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "SMDB-B3",
+      "true_positive_quantity": 6,
+      "predicted_quantity": 7,
+      "expected_quantity": 6,
+      "precision": 0.857143,
+      "recall": 1.0,
+      "f1": 0.923077,
+      "missing": {},
+      "extra": {
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "UDB-B1-CA1",
+      "true_positive_quantity": 12,
+      "predicted_quantity": 14,
+      "expected_quantity": 13,
+      "precision": 0.857143,
+      "recall": 0.923077,
+      "f1": 0.888889,
+      "missing": {
+        "SWITCH|3P|40A": 1
+      },
+      "extra": {
+        "SWITCH|2P|32A": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "UDB-B1-CA2",
+      "true_positive_quantity": 8,
+      "predicted_quantity": 13,
+      "expected_quantity": 13,
+      "precision": 0.615385,
+      "recall": 0.615385,
+      "f1": 0.615385,
+      "missing": {
+        "SWITCH|3P|40A": 1,
+        "MCB|1PN|10A|B|6KA": 2,
+        "RCCB|-|25A|30MA": 2
+      },
+      "extra": {
+        "SWITCH|1PN|40A": 1,
+        "RCBO|1PN|10A|B|6KA|30MA": 2,
+        "FUSEHOLDER": 1,
+        "SWITCH|2P|40A": 1
+      }
+    },
+    {
+      "panel_reference": "UDB-B2-CA1",
+      "true_positive_quantity": 12,
+      "predicted_quantity": 14,
+      "expected_quantity": 13,
+      "precision": 0.857143,
+      "recall": 0.923077,
+      "f1": 0.888889,
+      "missing": {
+        "SWITCH|3P|40A": 1
+      },
+      "extra": {
+        "SWITCH|2P|32A": 1,
+        "FUSEHOLDER": 1
+      }
+    },
+    {
+      "panel_reference": "UDB-B2-CA2",
+      "true_positive_quantity": 8,
+      "predicted_quantity": 12,
+      "expected_quantity": 9,
+      "precision": 0.666667,
+      "recall": 0.888889,
+      "f1": 0.761905,
+      "missing": {
+        "SWITCH|3P|40A": 1
+      },
+      "extra": {
+        "RCCB|4P|20A|100MA": 1,
+        "METER": 1,
+        "FUSEHOLDER": 1,
+        "SWITCH|4P|20A": 1
+      }
+    },
+    {
+      "panel_reference": "UDB-B3-CA1",
+      "true_positive_quantity": 9,
+      "predicted_quantity": 12,
+      "expected_quantity": 10,
+      "precision": 0.75,
+      "recall": 0.9,
+      "f1": 0.818182,
+      "missing": {
+        "SWITCH|3P|40A": 1
+      },
+      "extra": {
+        "SWITCH|1PN|32A": 1,
+        "FUSEHOLDER": 1,
+        "SWITCH|2P|32A": 1
+      }
+    },
+    {
+      "panel_reference": "UDB-B3-CA2",
+      "true_positive_quantity": 8,
+      "predicted_quantity": 11,
+      "expected_quantity": 9,
+      "precision": 0.727273,
+      "recall": 0.888889,
+      "f1": 0.8,
+      "missing": {
+        "SWITCH|3P|40A": 1
+      },
+      "extra": {
+        "SWITCH|1PN|32A": 1,
+        "FUSEHOLDER": 1,
+        "SWITCH|2P|32A": 1
+      }
+    },
+    {
+      "panel_reference": "UMDB-B1",
+      "true_positive_quantity": 12,
+      "predicted_quantity": 14,
+      "expected_quantity": 15,
+      "precision": 0.857143,
+      "recall": 0.8,
+      "f1": 0.827586,
+      "missing": {
+        "CT|405": 3
+      },
+      "extra": {
+        "SWITCH|4P|40A": 1,
+        "FUSEHOLDER": 1
+      }
+    }
+  ],
+  "mapped_panels": [
+    "DB-B1-CA1",
+    "DB-B1-CA2",
+    "DB-B1-CTRL",
+    "DB-B1-FANS1",
+    "DB-B1-FANS2",
+    "DB-B2-CA1",
+    "DB-B2-CA2",
+    "DB-B2-FANS1",
+    "DB-B2-FANS2",
+    "DB-B2-STAFF",
+    "DB-B3-CA1",
+    "DB-B3-CA2",
+    "DB-B3-FANS1",
+    "DB-B3-FANS2",
+    "DB-B3-MEC",
+    "DB-GF-CA1",
+    "EMDB-1",
+    "ESMDB-B1",
+    "ESMDB-B2",
+    "ESMDB-B3",
+    "MDB-1",
+    "MDB-ATS TENANTS",
+    "SMDB-B1",
+    "SMDB-B2",
+    "SMDB-B3",
+    "UDB-B1-CA1",
+    "UDB-B1-CA2",
+    "UDB-B2-CA1",
+    "UDB-B2-CA2",
+    "UDB-B3-CA1",
+    "UDB-B3-CA2",
+    "UMDB-B1"
+  ],
+  "missing_prediction_panels": [
+    "DB-B1-LC1",
+    "DB-B2-LC1/LC2",
+    "MDB-RECREATION",
+    "PB-G11",
+    "PB-L104",
+    "PB-L112",
+    "PB-L211",
+    "TOTALIZING (WITHOUT SYNCHRO)"
+  ],
+  "unexpected_prediction_panels": [
+    "DBB2"
+  ],
+  "prediction_sources": {
+    "DBB1CA1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B1-CA1\\project.technelec.json",
+    "DBB1CA2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B1-CA2\\project.technelec.json",
+    "DBB1CTRL": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B1-CTRL\\project.technelec.json",
+    "DBB1FANS1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B1-FANS1\\project.technelec.json",
+    "DBB1FANS2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B1-FANS2\\project.technelec.json",
+    "DBB2CA1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B2-CA1\\project.technelec.json",
+    "DBB2CA2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B2-CA2\\project.technelec.json",
+    "DBB2FANS1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B2-FANS1\\project.technelec.json",
+    "DBB2FANS2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B2-FANS2\\project.technelec.json",
+    "DBB2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B2-L101-to-L308\\project.technelec.json",
+    "DBB2STAFF": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B2-STAFF\\project.technelec.json",
+    "DBB3CA1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B3-CA1\\project.technelec.json",
+    "DBB3CA2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B3-CA2\\project.technelec.json",
+    "DBB3FANS1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B3-FANS1\\project.technelec.json",
+    "DBB3FANS2": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B3-FANS2\\project.technelec.json",
+    "DBB3MEC": "benchmark_runs\\marea_park\\reconciled_v5\\DB-B3-MEC\\project.technelec.json",
+    "DBGFCA1": "benchmark_runs\\marea_park\\reconciled_v5\\DB-GF-CA1\\project.technelec.json",
+    "EMDB1": "benchmark_runs\\marea_park\\reconciled_v5\\EMDB-B1\\project.technelec.json",
+    "ESMDBB1": "benchmark_runs\\marea_park\\reconciled_v5\\ESMDB-B1\\project.technelec.json",
+    "ESMDBB2": "benchmark_runs\\marea_park\\reconciled_v5\\ESMDB-B2\\project.technelec.json",
+    "ESMDBB3": "benchmark_runs\\marea_park\\reconciled_v5\\ESMDB-B3\\project.technelec.json",
+    "MDBATSTENANTS": "benchmark_runs\\marea_park\\reconciled_v5\\MDB-ATS-TENANTS\\project.technelec.json",
+    "MDB1": "benchmark_runs\\marea_park\\reconciled_v5\\MDB-B1\\project.technelec.json",
+    "SMDBB1": "benchmark_runs\\marea_park\\reconciled_v5\\SMDB-B1\\project.technelec.json",
+    "SMDBB2": "benchmark_runs\\marea_park\\reconciled_v5\\SMDB-B2\\project.technelec.json",
+    "SMDBB3": "benchmark_runs\\marea_park\\reconciled_v5\\SMDB-B3\\project.technelec.json",
+    "UDBB1CA1": "benchmark_runs\\marea_park\\reconciled_v5\\UDB-B1-CA1\\project.technelec.json",
+    "UDBB1CA2": "benchmark_runs\\marea_park\\reconciled_v5\\UDB-B1-CA2\\project.technelec.json",
+    "UDBB2CA1": "benchmark_runs\\marea_park\\reconciled_v5\\UDB-B2-CA1\\project.technelec.json",
+    "UDBB2CA2": "benchmark_runs\\marea_park\\reconciled_v5\\UDB-B2-CA2\\project.technelec.json",
+    "UDBB3CA1": "benchmark_runs\\marea_park\\reconciled_v5\\UDB-B3-CA1\\project.technelec.json",
+    "UDBB3CA2": "benchmark_runs\\marea_park\\reconciled_v5\\UDB-B3-CA2\\project.technelec.json",
+    "UMDBB1": "benchmark_runs\\marea_park\\reconciled_v5\\UMDB-B1\\project.technelec.json"
+  }
+}

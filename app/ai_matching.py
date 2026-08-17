@@ -11,10 +11,11 @@ from pydantic import BaseModel, Field
 from .ai_extraction import model_name
 from .catalog import ensure_catalog_schema
 from .domain import CandidateMatch, Component
+from .offer_defaults import canonical_manufacturer
 from .pricing import component_description
 
 
-AI_MATCH_PROMPT_VERSION = "catalog-reranker-v1"
+AI_MATCH_PROMPT_VERSION = "catalog-reranker-v2-manufacturer-locked"
 
 
 class MatchAdvice(BaseModel):
@@ -95,7 +96,16 @@ def ask_ai_for_recommendation(
     candidates: list[CandidateMatch],
 ) -> tuple[CandidateMatch | None, MatchAdvice, bool]:
     """Rerank a deterministic shortlist; never search or invent catalog products."""
-    shortlist = candidates[:8]
+    requested_manufacturer = canonical_manufacturer(component.manufacturer)
+    allowed = (
+        [
+            candidate for candidate in candidates
+            if canonical_manufacturer(candidate.manufacturer) == requested_manufacturer
+        ]
+        if requested_manufacturer and requested_manufacturer != "-"
+        else list(candidates)
+    )
+    shortlist = allowed[:8]
     if not shortlist:
         return None, MatchAdvice(
             candidate_id=None,

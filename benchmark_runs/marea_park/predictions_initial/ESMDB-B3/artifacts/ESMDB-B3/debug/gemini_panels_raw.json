@@ -1,0 +1,162 @@
+{
+  "panels": [
+    {
+      "panel_ref": "ESMDB-B3",
+      "components": [
+        {
+          "category": "SWITCH",
+          "label": "IS",
+          "poles": "4P",
+          "amps": "100",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "100",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 25,
+          "load_label": "from EMDB-B1",
+          "qty": 1,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1,
+          "data_source": "BOTH",
+          "ai_notes": "Main incomer isolator switch rated 4x100A fed from EMDB-B1 with 4X25mm2+1x16mm2 fire rated cable.",
+          "evidence_ids": [
+            "text:310",
+            "text:324",
+            "text:325"
+          ]
+        },
+        {
+          "category": "FUSE_HOLDER",
+          "label": "100",
+          "poles": "100",
+          "amps": "100",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "100",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 0,
+          "load_label": "100",
+          "qty": 1,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Fuses upstream of surge protection device.",
+          "evidence_ids": [
+            "text:2EF"
+          ]
+        },
+        {
+          "category": "SPD",
+          "label": "100",
+          "poles": "100",
+          "amps": "100",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "Type 1+2",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 0,
+          "load_label": "100",
+          "qty": 1,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Type 1+2 / Class B+C surge protective device connected to main busbar.",
+          "evidence_ids": [
+            "text:2EF"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "100",
+          "poles": "4P",
+          "amps": "63",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "100",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 16,
+          "load_label": "DB-B3-FAN1",
+          "qty": 1,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1,
+          "data_source": "BOTH",
+          "ai_notes": "4x63A MCCB feeding DB-B3-FAN1 with 4cx16mm2+1cx16mm2 cable.",
+          "evidence_ids": [
+            "text:2F8",
+            "text:313",
+            "text:314"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "100",
+          "poles": "4P",
+          "amps": "63",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "100",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 25,
+          "load_label": "DB-B3-FAN2",
+          "qty": 1,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1,
+          "data_source": "BOTH",
+          "ai_notes": "4x63A MCCB feeding DB-B3-FAN2 with 4cx25mm2+1cx16mm2 cable.",
+          "evidence_ids": [
+            "text:307",
+            "text:317",
+            "text:321"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "100",
+          "poles": "4P",
+          "amps": "63",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "100",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 0,
+          "load_label": "spare",
+          "qty": 2,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1,
+          "data_source": "BOTH",
+          "ai_notes": "2x 4x63A MCCB spare outgoing breakers.",
+          "evidence_ids": [
+            "text:30E",
+            "text:320",
+            "text:322",
+            "text:323"
+          ]
+        }
+      ]
+    }
+  ]
+}

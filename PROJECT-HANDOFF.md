@@ -36,13 +36,40 @@ The runnable release is `dist/TechnicatAutomation/TechnicatAutomation.exe`. It u
 
 Verified state:
 
-- 74 automated tests pass.
-- SQLite integrity is `ok`; `pricing.db` contains 9,999 products across Schneider, Legrand, and Eaton.
+- 87 automated tests pass.
+- SQLite integrity is `ok`; the active `pricing.db` contains 10,703 products across Schneider, Legrand, Eaton, Socomec, MBS, and Phoenix Contact.
 - Impeccable UI finish verdict: `ship`, with no P0/P1/P2 findings.
 - The review UI was rendered at 1080x680; its decision rail scrolls without overlap and keyboard focus is visible.
 - All 13 supplied drawings and 17 mapped panels pass the source-preservation Kornet regression.
 - The earlier 623/623 offer-parity result is historical: it depended on design normalizations and is no longer an acceptance target for this pricing-only tool.
 - The packaged extraction path no longer imports `Codes/extract_spatial_json.py`. DWG conversion and DXF rendering now use the import-safe `app.cad_runtime` service, so frozen builds do not search PyInstaller's temporary `_MEI...` directory for `.venv/key.env`.
+
+## Marea Park tuning pass — 2026-08-17
+
+Current commit at the start of this pass: `7f5e76c`; all changes remain uncommitted in the existing dirty worktree.
+
+The 33 cached Marea drawings were reconciled without new Gemini calls. Current artifacts are:
+
+- `benchmark_runs/marea_park/reconciled_v6`
+- `benchmark_runs/marea_park/benchmark-v6.json`
+- `benchmark_runs/marea_park/review_priced_v8`
+
+Measured against the supplied final offer:
+
+- mapped visible specification F1: 75.55% (up from 35.23%);
+- mapped category F1: 86.76%;
+- source-power specification/category F1: 77.58% / 88.53%;
+- terminal aggregate F1: 92.21%;
+- enclosure assembly aggregate F1: 86.24%;
+- metering aggregate F1: 86.18%;
+- Phoenix SPD pricing: 0 unmatched and no Schneider fallback;
+- final pricing statuses across 448 review rows: 16 exact, 241 check-candidate, 66 forced/manual, 125 unmatched.
+
+Implemented repeatable rules include explicit SPD recovery, strict SPD type compatibility, Phoenix `1+1` / `3+1` pole parsing, direct Phoenix references for supported PT/PTTB terminal families, cable-callout terminal schedules, reviewable MCB defaults, spatial CT-ratio association, repeated-ATS branch/control defaults, fan-starter contactor selection, and separation of internal enclosure hardware from the priced enclosure assembly.
+
+Do not claim 100% Marea parity. The supplied ATS drawing explicitly contains 100 × 4P 32A MCBs and repeated Type 1+2 SPDs, while the offer contains 50 × 4P 32A MCBs and calls those SPDs Type 2. Other rows are offer-only engineering additions or commercial substitutions. The application must flag these conflicts rather than rewrite source evidence to imitate the offer.
+
+Verification: 89 non-UI tests pass. The Qt offscreen subset currently has one pre-existing behavioral failure: `test_review_dialog_allows_direct_pricing_and_optional_exclusion` expects the price button to disable after excluding the only row, while the current review UI leaves it enabled. No review-UI code was changed in this pass.
 - The stable `dist/TechnicatAutomation/TechnicatAutomation.exe` was rebuilt on 2026-08-17, reached Windows input-idle, and remained alive during the frozen-app startup smoke test.
 
 ## 2026-08-17 pricing-review and catalog-taxonomy work
@@ -54,9 +81,11 @@ Verified state:
 - Unmatched rows expose ranked same-manufacturer/different-rating, other-manufacturer/exact-rating, and other-manufacturer/nearest-rating recommendations. Rating changes are always marked for engineering review and never auto-applied.
 - Unpriced rows with deterministic recommendations automatically invoke the no-chat AI shortlist reviewer. It receives only the requested component plus at most eight supplied candidate records, must select one supplied ID or none, stores the structured response in `ai_match_cache`, and marks every applied result `ai_suggested` for explicit engineering review.
 - Offer manufacturer cells are database-backed dropdowns. Changing a manufacturer immediately clears stale references/prices and reprices against that manufacturer’s latest installed edition.
-- Business defaults are explicit and editable: Schneider meters use `METSEPM2220`, Eaton meters use `PXM2000`, CTs use MBS, SPDs use DEHN by default (Phoenix Contact remains selectable), multi-pole fuse holders expand to single-pole quantities, and R/Y/B pilot sets expand to individual round colored lamps.
+- Business defaults are explicit and editable: Schneider meters use `METSEPM2220`, Eaton PXM2000 meters use catalog reference `EAT-F500`, CTs use MBS, and SPDs use the installed `PHOENIX CONTACT` catalog name (legacy DEHN labels alias to it without creating a separate manufacturer). Multi-pole fuse holders expand to single-pole quantities, and R/Y/B pilot sets expand to individual round colored lamps.
 - Calculated terminals, enclosures, plastrons, rails, and doors remain separate from source extraction but are materialized into the editable offer as amber engineering-calculated rows.
-- Excel price-list imports stream their full live output in a modal terminal view. Header rows are rejected deterministically and reimports remove stale edition products.
+- Excel and supported born-digital PDF price-list imports stream their full live output in a modal terminal view. MBS and Phoenix Contact PDFs use layout-aware deterministic readers; header rows are rejected and reimports remove stale edition products.
+- The live catalog now includes Socomec 2026 H1 (147 products, EUR), MBS 2025 H2 (46 products, EUR), and Phoenix Contact 2026 H1 (510 products, USD). All MBS rows classify as CTs; Phoenix complete mains arresters are separated from replacement-plug accessories.
+- Phoenix `1-phase`/`3-phase` descriptions normalize to structured poles for strict SPD matching. An explicit manufacturer selection constrains automatic AI selection to that manufacturer; cross-brand alternatives remain visible but require a manual user choice.
 - Currency totals are grouped independently. Mixed currencies are never summed into a synthetic grand total.
 - Native Windows visual QA passed at 1460x900 and 1080x680 with the offer preview expanded and recommendations/AI controls above source evidence.
 
@@ -189,7 +218,7 @@ Planned public interfaces are `LearningCase`, `DrawingFingerprint`, `ExtractionP
 1. Run a second, unrelated client/drawing family and create a new extraction-only golden set with explicit provenance.
 2. Accept changes only when the Kornet 17-panel regression and the new cross-project holdout both remain green.
 3. Extend commercial accessory/enclosure sizing as a separate scope; do not mix it into SLD component extraction.
-4. Install/import the missing Socomec price list or explicitly configure another manufacturer for MTS rows before claiming end-to-end catalog coverage.
+4. Re-run representative mixed-brand offers against the newly installed Socomec, MBS, and Phoenix Contact editions and approve any rating-based recommendations in the review window.
 5. Build manually reviewed extraction-only BOMs for representative panels so pure extraction accuracy can be measured independently from commercial offer alignment.
 6. After Kornet is stable, select 5–10 diverse historical projects and repeat the regression process before implementing the adaptive router.
 

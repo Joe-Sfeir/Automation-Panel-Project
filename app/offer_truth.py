@@ -14,6 +14,7 @@ class OfferTruthRow:
     quantity: int
     scope: str
     category: str
+    evaluation_layer: str = "source_power"
     poles: str = "-"
     amps: str = "-"
     curve: str = "-"
@@ -63,6 +64,10 @@ def _category(text: str) -> str:
         return "CT"
     if "POWER METER" in value:
         return "METER"
+    if re.search(r"\bKWH\s*M(?:ETER)?\b", value):
+        return "METER"
+    if value.startswith("ELCB"):
+        return "RCCB"
     if "PILOT LAMP" in value:
         return "PILOT_LAMP"
     if "FUSE HOLDER" in value:
@@ -84,17 +89,35 @@ def _category(text: str) -> str:
     return "OTHER"
 
 
+def _evaluation_layer(category: str) -> str:
+    if category in {"MCB", "MCCB", "RCCB", "RCBO", "SWITCH", "CONTACTOR"}:
+        return "source_power"
+    if category in {"SPD", "FUSE_HOLDER"}:
+        return "protection_auxiliary"
+    if category in {"METER", "CT"}:
+        return "metering"
+    if category in {"PILOT_LAMP", "RELAY", "SELECTOR_SWITCH", "TIMER", "PLC", "POWER_SUPPLY"}:
+        return "control_engineering"
+    return "other"
+
+
 def parse_offer_description(panel_reference: str, description: str, manufacturer: str, quantity: int) -> OfferTruthRow:
     text = " ".join(str(description).split())
+    category = _category(text)
     if TERMINAL.search(text):
         scope = "calculated_terminal"
         category = "TERMINAL"
+        layer = "calculated_terminal"
     elif PANEL_ACCESSORY.search(text):
         scope = "commercial_accessory"
         category = "ENCLOSURE_ACCESSORY"
+        layer = "commercial_accessory"
+    elif category in {"PILOT_LAMP", "FUSE_HOLDER", "RELAY", "SELECTOR_SWITCH", "TIMER", "PLC", "POWER_SUPPLY"}:
+        scope = "engineering_standard"
+        layer = _evaluation_layer(category)
     else:
         scope = "sld_visible"
-        category = _category(text)
+        layer = _evaluation_layer(category)
     normalized = text.upper()
     curve = "-"
     curve_match = re.search(r"(?:,|\bCURVE)\s*([BCD])\s*(?:,|$)", normalized)
@@ -120,6 +143,7 @@ def parse_offer_description(panel_reference: str, description: str, manufacturer
         quantity=max(0, int(quantity)),
         scope=scope,
         category=category,
+        evaluation_layer=layer,
         poles=_poles(text),
         amps=_amps(text, category),
         curve=curve,

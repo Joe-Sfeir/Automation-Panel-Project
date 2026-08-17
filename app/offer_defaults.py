@@ -6,11 +6,19 @@ import math
 from .domain import Component, Panel, ProjectDocument, stable_id
 
 
-SPECIAL_MANUFACTURERS = ("MBS", "DEHN", "PHOENIX CONTACT")
+SPECIAL_MANUFACTURERS = ("MBS", "PHOENIX CONTACT")
+
+MANUFACTURER_ALIASES = {
+    "PHOENIX": "PHOENIX CONTACT",
+    # Commercially, this application uses the installed Phoenix Contact list
+    # for the DEHN/Phoenix surge-arrester default. Do not create a phantom DEHN
+    # catalog/manufacturer entry when opening older projects.
+    "DEHN": "PHOENIX CONTACT",
+}
 
 METER_DEFAULT_REFERENCES = {
     "SCHNEIDER": "METSEPM2220",
-    "EATON": "PXM2000",
+    "EATON": "EAT-F500",
 }
 
 PILOT_LAMP_DEFAULT_REFERENCES = {
@@ -36,6 +44,13 @@ CALCULATED_COMPONENT_ORIGINS = {
     "calculated_accessory_offer",
 }
 
+TERMINAL_DEFAULT_REFERENCES = {
+    "PTTB 4": "PHC-PTTB 4",
+    "PT 4": "PHC-PT 4",
+    "PT 6": "PHC-PT 6",
+    "PT 10": "PHC-PT 10",
+}
+
 
 def _was_manually_changed(component: Component, field_name: str) -> bool:
     return any(
@@ -55,13 +70,18 @@ def pilot_reference(manufacturer: str, color: str) -> str:
     ).get(str(color or "").strip().upper(), "")
 
 
+def canonical_manufacturer(manufacturer: str) -> str:
+    selected = str(manufacturer or "").strip().upper()
+    return MANUFACTURER_ALIASES.get(selected, selected)
+
+
 def default_manufacturer(component: Component, project_default: str) -> str:
     category = component.category.upper()
     if category == "CT":
         return "MBS"
     if category == "SPD":
-        return "DEHN"
-    return (component.manufacturer or project_default).strip().upper()
+        return "PHOENIX CONTACT"
+    return canonical_manufacturer(component.manufacturer or project_default)
 
 
 def _apply_component_defaults(component: Component, project_default: str) -> None:
@@ -130,10 +150,11 @@ def sync_calculated_offer_components(panel: Panel) -> None:
         component_id = stable_id("offer-terminal", terminal.id)
         desired[component_id] = Component(
             id=component_id,
-            category="OTHER",
+            category="ACCESSORY",
             label=f"{terminal.name} — {terminal.description}",
             quantity=max(1, int(terminal.quantity)),
             manufacturer="PHOENIX CONTACT",
+            forced_reference=TERMINAL_DEFAULT_REFERENCES.get(terminal.name, ""),
             origin="calculated_terminal_offer",
             notes=_append_note(
                 "; ".join(terminal.warnings),
@@ -144,7 +165,7 @@ def sync_calculated_offer_components(panel: Panel) -> None:
         component_id = stable_id("offer-accessory", accessory.id)
         desired[component_id] = Component(
             id=component_id,
-            category="OTHER",
+            category="ACCESSORY",
             label=accessory.description,
             quantity=max(1, int(accessory.quantity)),
             manufacturer=accessory.manufacturer,
@@ -187,7 +208,7 @@ def apply_offer_defaults(project: ProjectDocument) -> None:
 
 
 def apply_manufacturer_change(component: Component, manufacturer: str) -> None:
-    selected = str(manufacturer or "").strip().upper()
+    selected = canonical_manufacturer(manufacturer)
     component.edit("manufacturer", selected, "offer manufacturer dropdown")
     component.edit("forced_reference", "", "offer manufacturer dropdown")
     component.edit("forced_unit_price", None, "offer manufacturer dropdown")

@@ -72,11 +72,21 @@ def main() -> int:
                     project.pricing.default_manufacturer, transform,
                     supplement_layout=False,
                 )
+                components = service._apply_explicit_graph_rules(
+                    panel_id, reference, components, graph,
+                    project.pricing.default_manufacturer, transform,
+                )
                 rebuilt_panels.append(Panel(
                     id=panel_id, reference=reference,
                     source_drawing_id=source_drawing_id,
                     extraction_status="complete", components=components,
-                    terminals=calculate_terminals(components, panel_id),
+                    terminals=calculate_terminals(
+                        components, panel_id,
+                        " ".join(
+                            entity.text for entity in graph.entities
+                            if entity.kind in {"text", "attribute"}
+                        ),
+                    ),
                     commercial_accessories=calculate_commercial_accessories(
                         components, panel_id,
                         " ".join(
@@ -115,7 +125,17 @@ def main() -> int:
                 transform,
                 supplement_layout=len(raw_panels) == 1,
             )
-            panel.terminals = calculate_terminals(panel.components, panel.id)
+            panel.components = service._apply_explicit_graph_rules(
+                panel.id, panel.reference, panel.components, graph,
+                project.pricing.default_manufacturer, transform,
+            )
+            panel.terminals = calculate_terminals(
+                panel.components, panel.id,
+                " ".join(
+                    entity.text for entity in graph.entities
+                    if entity.kind in {"text", "attribute"}
+                ),
+            )
             panel.commercial_accessories = calculate_commercial_accessories(
                 panel.components, panel.id,
                 " ".join(

@@ -14,6 +14,9 @@ if ($InstallDependencies) {
 
 Write-Host "Building fast-start one-folder application..."
 & $Python -m PyInstaller --clean --noconfirm app/automation_onedir.spec
+if ($LASTEXITCODE -ne 0) {
+    throw "PyInstaller failed with exit code $LASTEXITCODE."
+}
 
 Write-Host ""
 Write-Host "Build complete."

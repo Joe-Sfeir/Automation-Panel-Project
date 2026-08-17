@@ -56,7 +56,7 @@ Each project can contain multiple source drawings and panels. Drawing paths and 
 
 5. Add one or more drawings to the project manifest and select the available price-list editions. After extraction, the app opens **Price & review** and runs strict catalog pricing. The offer preview is editable: add or duplicate rows, change specifications, select manufacturers from the catalog dropdown, edit references or unit prices, and explicitly exclude anything outside the offer. Unmatched rows are automatically checked by AI against only their deterministic shortlist; an applied suggestion is amber, labeled for engineering review, and never hidden as an exact match. Calculated terminals and enclosure hardware appear in the same offer as amber calculated rows. Use **Apply & reprice** after changes, then **Export offer** when the snapshot is ready.
 
-Price-list imports open a live terminal-style progress window. It streams column detection, extracted counts, family-classification progress, API rate-limit retries, validation, and database commit results while the import runs.
+Price-list imports open a live terminal-style progress window. Excel files and the supported text-based MBS/Phoenix Contact PDFs stream column or page extraction, product counts, family-classification progress, API rate-limit retries, validation, and database commit results while the import runs. Scanned PDFs are rejected for review instead of being imported speculatively.
 
 The active UI calls the importable services in `app/` directly. The older scripts in `Codes/` remain only as extraction/import compatibility modules and are not used as workbook-to-workbook subprocess adapters.
 
@@ -68,6 +68,12 @@ Schema version 1 exposes these main records:
 - `Panel`: stable ID, drawing relationship, extraction/review state, components, terminals, and artifact paths.
 - `Component`: stable ID, electrical specifications, quantity, manufacturer, forced reference, confidence, evidence, conflicts, and override history.
 - `MatchResult`: component ID, selected edition/product, strict-match alternatives, safe recommendations, score/tier, price/currency, and review state.
+
+`pricing.family_preferences` can provide ordered, project-specific catalog-family
+tie-breaks without weakening electrical compatibility. Keys may be
+`MANUFACTURER:CATEGORY`, `CATEGORY`, or `*`; for example
+`{"SCHNEIDER:SWITCH": ["ISW", "INS"]}`. Ratings, poles, curve, residual
+sensitivity, breaking capacity, and SPD type remain hard constraints.
 
 Writes are atomic. Legacy `.sld.json` extraction files can be loaded and migrated in memory through `app.persistence.load_project`; their component and terminal sections remain separate.
 
@@ -91,6 +97,11 @@ The report includes specification-aware precision, recall, F1, exact quantity ag
 - 100% quantity agreement for block-backed devices.
 - At least 95% component/specification F1 on the holdout drawings.
 - Zero silent high-confidence contradictions.
+
+Dataset reports also expose separate `layer_aggregates` for source power,
+protection auxiliaries, metering, control/engineering additions, calculated
+terminals, and commercial enclosure accessories. This prevents undrawn offer
+defaults from being reported as CAD-extraction failures.
 
 These are acceptance targets, not general production accuracy claims. The dataset report separates the tuning and untouched holdout subsets and reports category-only, exact-row, per-field, and block-backed quantity scores.
 

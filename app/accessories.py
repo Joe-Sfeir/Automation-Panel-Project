@@ -39,16 +39,32 @@ def calculate_commercial_accessories(
         and any((_current(component.amps) or 0) >= 250 for component in switches)
         and sum(component.quantity for component in mcbs if component.poles in {"3P", "4P"}) >= 8
     )
+    repeated_ats_branches = max(
+        (component.quantity for component in contactors), default=0
+    ) if any(component.quantity >= 5 for component in mccbs) else 0
 
-    descriptions: list[tuple[str, int]]
+    descriptions: list[tuple[str, int, str]]
     if ats_topology:
-        descriptions = [("Panel 200x100x60", 1), ("Side Panel 200x60", 1)]
+        descriptions = [
+            ("Panel 200x100x60", 1, "engineering_calculated"),
+            ("Side Panel 200x60", 1, "engineering_calculated"),
+        ]
+    elif repeated_ats_branches:
+        descriptions = [
+            ("Panel 200x60x60", 1, "engineering_calculated"),
+            (
+                "Panel 200x100x60",
+                1 + (repeated_ats_branches + 4) // 5,
+                "engineering_calculated",
+            ),
+            ("Side Panel 200x60", 1, "engineering_calculated"),
+        ]
     elif totalizing_topology:
-        descriptions = [("Panel 160x120x40", 1)]
+        descriptions = [("Panel 160x120x40", 1, "engineering_calculated")]
     elif edl_topology:
-        descriptions = [("Panel 140x80x30", 1)]
+        descriptions = [("Panel 140x80x30", 1, "engineering_calculated")]
     elif large_distribution_topology:
-        descriptions = [("Panel 200x80x40", 1)]
+        descriptions = [("Panel 200x80x40", 1, "engineering_calculated")]
     else:
         module_match = re.search(r"\b(\d+)\s*[X×]\s*24\s+MODULES?\b", drawing_text, re.I)
         installed_rows = int(module_match.group(1)) if module_match else 3
@@ -60,10 +76,10 @@ def calculate_commercial_accessories(
         construction_rows = max(4, installed_rows + residual_reserve)
         module_height = construction_rows * 3
         descriptions = [
-            (f"Panel {module_height} MOD (PRISMA)", 1),
-            ("Plastron", construction_rows),
-            ("Rail", construction_rows),
-            (f"Door {module_height}M", 1),
+            (f"Panel {module_height} MOD (PRISMA)", 1, "engineering_calculated"),
+            ("Plastron", construction_rows, "calculated_internal_accessory"),
+            ("Rail", construction_rows, "calculated_internal_accessory"),
+            (f"Door {module_height}M", 1, "calculated_internal_accessory"),
         ]
 
     return [
@@ -72,8 +88,8 @@ def calculate_commercial_accessories(
             description=description,
             quantity=quantity,
             manufacturer=manufacturer.upper(),
-            origin="engineering_calculated",
+            origin=origin,
             notes="Commercial enclosure/accessory schedule calculated from panel topology and capacity.",
         )
-        for description, quantity in descriptions
+        for description, quantity, origin in descriptions
     ]

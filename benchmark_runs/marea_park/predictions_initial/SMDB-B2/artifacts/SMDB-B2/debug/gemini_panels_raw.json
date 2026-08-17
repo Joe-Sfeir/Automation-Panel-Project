@@ -1,0 +1,185 @@
+{
+  "panels": [
+    {
+      "panel_ref": "SMDB-B2",
+      "components": [
+        {
+          "category": "SWITCH",
+          "label": "IS",
+          "poles": "4P",
+          "amps": "100",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "x",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 0,
+          "load_label": "from EMDB-B1",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4-pole 100A main isolator switch from EMDB-B1",
+          "evidence_ids": [
+            "text:335",
+            "text:301"
+          ]
+        },
+        {
+          "category": "FUSE_HOLDER",
+          "label": "x",
+          "poles": "x",
+          "amps": "x",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "x",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 0,
+          "load_label": "x",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Fuses protecting the SPD branch",
+          "evidence_ids": [
+            "text:2F9"
+          ]
+        },
+        {
+          "category": "SPD",
+          "label": "x",
+          "poles": "x",
+          "amps": "x",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "TYPE 1+2 / CLASS B+C",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 0,
+          "load_label": "x",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Surge protective device Type 1+2 / Class B+C",
+          "evidence_ids": [
+            "text:2F9"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "x",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "x",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 10,
+          "load_label": "DB-B2-CA1",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4P 32A MCCB feeding DB-B2-CA1 via 4cx10mm2+1cx10mm2 cable",
+          "evidence_ids": [
+            "text:336",
+            "text:319",
+            "text:31A"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "x",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "x",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 10,
+          "load_label": "DB-B2-CA2",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4P 32A MCCB feeding DB-B2-CA2 via 4cx10mm2+1cx10mm2 cable",
+          "evidence_ids": [
+            "text:337",
+            "text:325",
+            "text:334"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "x",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "x",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 10,
+          "load_label": "DB-B2-STAFF",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4P 32A MCCB feeding DB-B2-STAFF via 4cx10mm2+1cx10mm2 cable",
+          "evidence_ids": [
+            "text:338",
+            "text:330",
+            "text:331"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "x",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "x",
+          "breaking_capacity": "x",
+          "sensitivity": "x",
+          "spd_type": "x",
+          "ct_ratio": "x",
+          "meter_accuracy": "x",
+          "cable_size": 0,
+          "load_label": "spare",
+          "qty": 1,
+          "manufacturer": "x",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4P 32A MCCB spare",
+          "evidence_ids": [
+            "text:339",
+            "text:310"
+          ]
+        }
+      ]
+    }
+  ]
+}

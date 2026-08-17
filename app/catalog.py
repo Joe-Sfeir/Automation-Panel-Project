@@ -35,6 +35,7 @@ class ProductSpec:
     sensitivity_ma: float | None = None
     curve: str = "-"
     breaking_capacity_ka: float | None = None
+    spd_type: str = "-"
     source: str = "unclassified"
     confidence: float = 0.0
 
@@ -43,6 +44,8 @@ class ProductSpec:
 # persists them in pricing.db, where they can be inspected and extended without
 # changing matcher code. Higher priority wins.
 DEFAULT_FAMILY_RULES: tuple[FamilyRule, ...] = (
+    FamilyRule("PHOENIX CONTACT", "PHOENIX_SPD_ACCESSORY", "ACCESSORY", "accessory", r"\b(?:REPLACEMENT|PROTECTION|PROTECTIVE)\s+(?:CONNECTOR|PLUG)\b|\bBASE ELEMENT FOR\b|\bPHC-[A-Z0-9+ ./-]*-BE(?:-|\b)|\bPHC-[A-Z0-9+ ./-]+(?:-|\s)ST\b", 1210, "Phoenix Contact replaceable surge-protection element or base"),
+    FamilyRule("PHOENIX CONTACT", "PHOENIX_SPD", "SPD", "standalone", r"^(?!.*\b(?:REPLACEMENT|PROTECTION|PROTECTIVE)\s+(?:CONNECTOR|PLUG)\b)(?=.*\b(?:SURGE|LIGHTNING)\b)(?=.*\b(?:SURGE(?: VOLTAGE)? ARRESTER|ARRESTER COMBINATION|POWER SUPPLY NETWORK|POWER SUPPLY SYSTEM|[13]-PHASE)\b).*$", 1200, "Phoenix Contact complete mains surge-protection device"),
     FamilyRule("*", "ACCESSORY", "ACCESSORY", "accessory", r"\b(HANDLE|PADLOCK|AUXILIARY|AUX CONTACT|SHUNT|UNDERVOLTAGE|COIL|COVER|TERMINAL|SEALING|SPACER|PLATINE|FRONT PL|M\.PL)\b", 1000, "Commercial accessory"),
     FamilyRule("SCHNEIDER", "IDPN_VIGI", "RCBO", "standalone", r"\b(IDPNA?\s+VIGI|IDPN\s+N\s+VIGI|ICV40)\b", 950, "Acti9 combined residual/overcurrent breaker"),
     FamilyRule("SCHNEIDER", "VIGI", "RCCB", "residual_add_on", r"\bVIGI\b", 900, "Residual-current add-on module"),
@@ -56,6 +59,9 @@ DEFAULT_FAMILY_RULES: tuple[FamilyRule, ...] = (
     FamilyRule("SCHNEIDER", "C120", "MCB", "standalone", r"\bC120[NLH]?\b", 805, "Acti9 C120 miniature circuit breaker"),
     FamilyRule("SCHNEIDER", "ISW", "SWITCH", "standalone", r"\bISW\d*\b", 800, "Acti9 switch disconnector"),
     FamilyRule("SCHNEIDER", "INS", "SWITCH", "standalone", r"\bINS\d+\b", 790, "Compact switch disconnector"),
+    FamilyRule("EATON", "EATON_METER_ACCESSORY", "ACCESSORY", "accessory", r"\b(?:EAT-A5[A-Z0-9]+|EAT-DIFET4851)\b", 780, "Eaton meter communications or I/O accessory"),
+    FamilyRule("EATON", "A22_PILOT_LAMP", "PILOT_LAMP", "standalone", r"\bA22-LCLED", 770, "Eaton A22 compact indicator light"),
+    FamilyRule("EATON", "CONTROL_SELECTOR", "SELECTOR_SWITCH", "standalone", r"\b(?:A22-RWK|C22S-W(?:R)?K)", 760, "Eaton A22/C22 selector switch"),
     FamilyRule("*", "RCBO", "RCBO", "standalone", r"\bRCBO\b", 700, "Residual-current breaker with overcurrent protection"),
     FamilyRule("*", "RCCB", "RCCB", "standalone", r"\b(RCCB|RCD)\b", 690, "Residual-current circuit breaker"),
     FamilyRule("*", "MCCB", "MCCB", "standalone", r"\bMCCB\b", 680, "Molded-case circuit breaker"),
@@ -67,7 +73,8 @@ DEFAULT_FAMILY_RULES: tuple[FamilyRule, ...] = (
     FamilyRule("*", "PILOT_LAMP", "PILOT_LAMP", "standalone", r"\b(PILOT LAMP|INDICATOR LAMP)\b", 620, "Pilot lamp"),
     FamilyRule("*", "POWER_SUPPLY", "POWER_SUPPLY", "standalone", r"\bPOWER SUPP(?:LY)?\b", 610, "Power supply"),
     FamilyRule("*", "SELECTOR_SWITCH", "SELECTOR_SWITCH", "standalone", r"\bSELECTOR SWITCH\b", 600, "Selector switch"),
-    FamilyRule("*", "METER", "METER", "standalone", r"\b(POWER METER|ENERGY METER|MULTIMETER)\b", 590, "Electrical meter"),
+    FamilyRule("*", "CT", "CT", "standalone", r"\b(CURRENT TRANSFORMER|CURRENT TRANSFORMERS)\b", 595, "Current transformer"),
+    FamilyRule("*", "METER", "METER", "standalone", r"\b(POWER METER|ENERGY METER|MULTIMETER|KWH METER|(?:POWER(?: QUALITY)?|DIN RAIL POWER) ANALYS(?:ER|OR))\b", 590, "Electrical meter"),
     FamilyRule("*", "RELAY", "RELAY", "standalone", r"\bRELAY\b", 580, "Relay"),
 )
 
@@ -202,10 +209,17 @@ def family_id_for(
 def _poles(value: str) -> str:
     text = str(value or "").upper()
     compact = re.sub(r"\s+", "", text)
+    if re.search(r"(?:T[12]-|/)1\+1(?!\d)", compact):
+        return "1PN"
+    if re.search(r"(?:T[12]-|/)3\+1(?!\d)", compact):
+        return "3PN"
     if re.search(r"1P(?:\+?N)|1PN", compact):
         return "1PN"
     if re.search(r"3P(?:\+?N)|3PN", compact):
         return "3PN"
+    phase_match = re.search(r"(?:^|[^A-Z0-9])([1-4])[- ]?PHASE\b", text)
+    if phase_match:
+        return f"{phase_match.group(1)}P"
     match = re.search(r"(?:^|[^A-Z0-9])([1-4])P(?:$|[^A-Z0-9+])", text)
     return f"{match.group(1)}P" if match else "-"
 
@@ -240,6 +254,22 @@ def _breaking_capacity(value: str) -> float | None:
         return float(match.group(1))
     match = re.search(r"\b(3000|4500|6000|10000|15000|25000|36000)\s*A\b", text)
     return float(match.group(1)) / 1000.0 if match else None
+
+
+def _spd_type(value: str) -> str:
+    text = str(value or "").upper().replace("CLASS B+C", "TYPE 1+2")
+    combined = re.search(r"\bTYPE\s*(?:I|1)\s*(?:\+|&|AND)\s*(?:II|2)\b", text)
+    if combined:
+        return "TYPE 1+2"
+    match = re.search(r"\b(?:TYPE|CLASS|CATEGORY)\s*:?\s*(I{1,3}|[123])\b", text)
+    if not match:
+        legacy_class = re.search(r"\bCLASS\s*([BCD])\b", text)
+        if legacy_class:
+            return {"B": "TYPE 1", "C": "TYPE 2", "D": "TYPE 3"}[legacy_class.group(1)]
+    if not match:
+        return "-"
+    value = {"I": "1", "II": "2", "III": "3"}.get(match.group(1), match.group(1))
+    return f"TYPE {value}"
 
 
 def classify_product(
@@ -278,6 +308,7 @@ def classify_product(
         sensitivity_ma=_sensitivity(text),
         curve=_curve(text),
         breaking_capacity_ka=_breaking_capacity(text),
+        spd_type=_spd_type(text),
         source=source,
         confidence=confidence,
     )
@@ -298,6 +329,7 @@ def merge_ai_family(spec: ProductSpec, ai_row: dict) -> ProductSpec:
         sensitivity_ma=spec.sensitivity_ma,
         curve=spec.curve,
         breaking_capacity_ka=spec.breaking_capacity_ka,
+        spd_type=spec.spd_type,
         source="ai_family",
         confidence=confidence,
     )
@@ -352,8 +384,8 @@ def classify_products_in_database(
         params.append(int(edition_id))
     if only_unclassified:
         where.append(
-            "(COALESCE(p.classification_source, '')='' "
-            "OR COALESCE(p.category, '') IN ('', 'OTHER'))"
+            "(p.family_id IS NULL AND (COALESCE(p.classification_source, '')='' "
+            "OR COALESCE(p.category, '') IN ('', 'OTHER')))"
         )
     sql = """
         SELECT p.id, p.reference, p.description, m.name
@@ -382,17 +414,25 @@ def classify_products_in_database(
 
 def row_product_spec(row: sqlite3.Row, manufacturer: str = "") -> ProductSpec:
     keys = set(row.keys())
+    product_text = (
+        f"{row['reference'] if 'reference' in keys else ''} "
+        f"{row['description'] if 'description' in keys else ''}"
+    )
     category = str(row["category"] or "") if "category" in keys else ""
     if category:
+        stored_poles = str(row["poles"] or "-") if "poles" in keys else "-"
+        if stored_poles == "-":
+            stored_poles = _poles(product_text)
         return ProductSpec(
             family=str(row["family_code"] or "") if "family_code" in keys else "",
             category=category,
             product_kind=str(row["product_kind"] or "other") if "product_kind" in keys else "other",
-            poles=str(row["poles"] or "-") if "poles" in keys else "-",
+            poles=stored_poles,
             rated_current_a=float(row["rated_current_a"]) if "rated_current_a" in keys and row["rated_current_a"] is not None else None,
             sensitivity_ma=float(row["sensitivity_ma"]) if "sensitivity_ma" in keys and row["sensitivity_ma"] is not None else None,
             curve=str(row["curve"] or "-") if "curve" in keys else "-",
             breaking_capacity_ka=float(row["breaking_capacity_ka"]) if "breaking_capacity_ka" in keys and row["breaking_capacity_ka"] is not None else None,
+            spd_type=_spd_type(product_text),
             source=str(row["classification_source"] or "stored") if "classification_source" in keys else "stored",
             confidence=float(row["classification_confidence"] or 0.0) if "classification_confidence" in keys else 0.0,
         )

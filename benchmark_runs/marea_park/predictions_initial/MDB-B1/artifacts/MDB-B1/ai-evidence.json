@@ -1,0 +1,625 @@
+{
+  "schematic_layers": [],
+  "physical_layout_layers": [],
+  "schematic_rating_groups": [],
+  "repeating_schematic_blocks": [],
+  "schematic_blocks": [],
+  "block_label_associations": [],
+  "associated_label_counts": {},
+  "unassociated_blocks": [],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "text_cluster_radius": 15.0,
+  "text_clusters": [
+    {
+      "layer": "E-Text",
+      "cx": 69.726,
+      "cy": 29.875,
+      "text_ids": [
+        "text:3EF",
+        "text:402",
+        "text:408",
+        "text:40B",
+        "text:412",
+        "text:419",
+        "text:44E",
+        "text:44F",
+        "text:455",
+        "text:48E",
+        "text:3FF",
+        "text:464",
+        "text:510",
+        "text:507",
+        "text:50A",
+        "text:50F",
+        "text:521",
+        "text:52A",
+        "text:531",
+        "text:53A",
+        "text:51A",
+        "text:4EF",
+        "text:4F0",
+        "text:4F5",
+        "text:4EC",
+        "text:4E6",
+        "text:4E9",
+        "text:500",
+        "text:489",
+        "text:48A",
+        "text:48B",
+        "text:48C",
+        "text:4FE",
+        "text:4FF",
+        "text:4FD",
+        "text:47C",
+        "text:483",
+        "text:4FB",
+        "text:4FC",
+        "text:473",
+        "text:47E",
+        "text:4D7",
+        "text:4E2",
+        "text:4FA",
+        "text:4D3",
+        "text:4D5",
+        "text:4DC",
+        "text:4DF",
+        "text:4F8",
+        "text:4F9",
+        "text:4D1",
+        "text:4D9",
+        "text:4F7",
+        "text:400",
+        "text:4CC",
+        "text:4CF",
+        "text:4F6"
+      ],
+      "texts": [
+        "DIGITAL\nPOWER\nMETER",
+        "FROM EDL METER",
+        "SWITCH DISCONNECTOR\n4x630A, Icw=20kA",
+        "FUSES",
+        "MCCB BREAKER\n4x350A, Ics=35kA\nTRIP UNIT (ECODIAL)",
+        "MCCB BREAKER\n4x250A, ",
+        "ATS FEATURING TWO\nCONTACTORS, 4x400A\nAC3 EACH WITH ELECTRICAL\nAND MECHANICAL INTERLOCKS",
+        "MANUAL TRANSFER SWITCH\n4x400A, AC23",
+        "DIGITAL\nPOWER\nMETER",
+        "SWITCH DISCONNECTOR\n4x400A, ",
+        "FROM TOTALIZING\nPANEL",
+        "FUSES",
+        "4X240mm2+1X120mm2",
+        "MCCB BREAKER\n4x100A",
+        "MCCB BREAKER\n4x160A",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "VRV-CA",
+        "MCCB BREAKER\n4x32A",
+        "VRV-CA",
+        "VRV-CA",
+        "DB-B2-Pool",
+        "Con.: 91.77kVA\nDem.: 91.77kVA",
+        "DB-B3-MEC",
+        "SMDB-B3",
+        "SMDB-B1",
+        "SMDB-B2",
+        "MCCB BREAKER\n4x80A",
+        "MDB-B1 (NORMAL & EMERGENCY SECTIONS)",
+        "Dem.: 299,06kVA (WITH UTILIZATION FACTORS)",
+        "F.Dem.: 269,15kVA (WITH UTILIZATION FACTORS\n& SIMULTANEITY FACTORS)",
+        "Con.: 589,36kVA",
+        "MCCB BREAKER\n4x100A",
+        "MCCB BREAKER\n4x100A",
+        "MCCB BREAKER\n4x32A",
+        "DB-GF-\nEXTERNAL",
+        "Con.: 15.00kVA\nDem.: 15.005kVA\n(ESTIMATED)",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "DB-GF-CA1",
+        "Con.: 10.81kVA\nDem.: 5.41kVA",
+        "LIFT-5",
+        "Con.: 15.00kVA\nDem.: 15.00kVA",
+        "MCCB BREAKER\n4x32A",
+        "LIFT-3",
+        "LIFT-4",
+        "Con.: 15.00kVA\nDem.: 15.00kVA",
+        "Con.: 15.00kVA\nDem.: 15.00kVA",
+        "MCCB BREAKER\n4x32A",
+        "MCCB BREAKER\n4x32A",
+        "LIFT-2",
+        "Con.: 15.00kVA\nDem.: 15.00kVA",
+        "MCCB BREAKER\n4x32A",
+        "MDB-B1 (NORMAL SECTION)",
+        "Con.: 15.00kVA\nDem.: 15.00kVA",
+        "LIFT-1",
+        "MDB-B1"
+      ]
+    },
+    {
+      "layer": "E-Text",
+      "cx": 144.315,
+      "cy": 19.38,
+      "text_ids": [
+        "text:486",
+        "text:488"
+      ],
+      "texts": [
+        "EMDB-B1",
+        "(EMERGENCY SECTION)"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:3EF",
+      "layer": "E-Text",
+      "x": 111.6128690297,
+      "y": 12.77956498261469,
+      "height": 0.3,
+      "text": "DIGITAL\nPOWER\nMETER"
+    },
+    {
+      "id": "text:3FF",
+      "layer": "E-Text",
+      "x": 97.61543502316172,
+      "y": 5.36633960482127,
+      "height": 0.15,
+      "text": "FROM TOTALIZING\nPANEL"
+    },
+    {
+      "id": "text:400",
+      "layer": "E-Text",
+      "x": 11.92090638058554,
+      "y": 26.15029253832459,
+      "height": 0.5,
+      "text": "MDB-B1 (NORMAL SECTION)"
+    },
+    {
+      "id": "text:402",
+      "layer": "E-Text",
+      "x": 108.8181775015063,
+      "y": 5.15751892815738,
+      "height": 0.15,
+      "text": "FROM EDL METER"
+    },
+    {
+      "id": "text:408",
+      "layer": "E-Text",
+      "x": 109.3462934869557,
+      "y": 11.14281140848457,
+      "height": 0.2,
+      "text": "SWITCH DISCONNECTOR\n4x630A, Icw=20kA"
+    },
+    {
+      "id": "text:40B",
+      "layer": "E-Text",
+      "x": 106.8331795486837,
+      "y": 11.95134077766838,
+      "height": 0.2,
+      "text": "FUSES"
+    },
+    {
+      "id": "text:412",
+      "layer": "E-Text",
+      "x": 103.4223348920449,
+      "y": 16.11454739571477,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x350A, Ics=35kA\nTRIP UNIT (ECODIAL)"
+    },
+    {
+      "id": "text:419",
+      "layer": "E-Text",
+      "x": 112.5409811933741,
+      "y": 16.11454739292081,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x250A, "
+    },
+    {
+      "id": "text:44E",
+      "layer": "E-Text",
+      "x": 103.5916900861293,
+      "y": 19.34357451192032,
+      "height": 0.2,
+      "text": "ATS FEATURING TWO\nCONTACTORS, 4x400A\nAC3 EACH WITH ELECTRICAL\nAND MECHANICAL INTERLOCKS"
+    },
+    {
+      "id": "text:44F",
+      "layer": "E-Text",
+      "x": 103.2816209758847,
+      "y": 22.96533524627726,
+      "height": 0.2,
+      "text": "MANUAL TRANSFER SWITCH\n4x400A, AC23"
+    },
+    {
+      "id": "text:455",
+      "layer": "E-Text",
+      "x": 104.1625379154674,
+      "y": 25.58841498776733,
+      "height": 0.3,
+      "text": "DIGITAL\nPOWER\nMETER"
+    },
+    {
+      "id": "text:464",
+      "layer": "E-Text",
+      "x": 98.11914581230204,
+      "y": 24.76019078235536,
+      "height": 0.2,
+      "text": "FUSES"
+    },
+    {
+      "id": "text:473",
+      "layer": "E-Text",
+      "x": 50.25408520998727,
+      "y": 43.41661031449608,
+      "height": 0.4,
+      "text": "DB-GF-CA1"
+    },
+    {
+      "id": "text:47C",
+      "layer": "E-Text",
+      "x": 57.06925336674149,
+      "y": 43.76126387527606,
+      "height": 0.4,
+      "text": "DB-GF-\nEXTERNAL"
+    },
+    {
+      "id": "text:47E",
+      "layer": "E-Text",
+      "x": 50.57481891133185,
+      "y": 42.18736571002214,
+      "height": 0.2,
+      "text": "Con.: 10.81kVA\nDem.: 5.41kVA"
+    },
+    {
+      "id": "text:483",
+      "layer": "E-Text",
+      "x": 57.38998706808607,
+      "y": 42.18736571002214,
+      "height": 0.2,
+      "text": "Con.: 15.00kVA\nDem.: 15.005kVA\n(ESTIMATED)"
+    },
+    {
+      "id": "text:486",
+      "layer": "E-Text",
+      "x": 147.0599772067025,
+      "y": 19.92238022106162,
+      "height": 0.4,
+      "text": "EMDB-B1"
+    },
+    {
+      "id": "text:488",
+      "layer": "E-Text",
+      "x": 141.5693530461967,
+      "y": 18.83776770623795,
+      "height": 0.5,
+      "text": "(EMERGENCY SECTION)"
+    },
+    {
+      "id": "text:489",
+      "layer": "E-Text",
+      "x": 80.08133541869293,
+      "y": 16.48706108970496,
+      "height": 0.5,
+      "text": "MDB-B1 (NORMAL & EMERGENCY SECTIONS)"
+    },
+    {
+      "id": "text:48A",
+      "layer": "E-Text",
+      "x": 80.08133541869293,
+      "y": 15.19128968483697,
+      "height": 0.3,
+      "text": "Dem.: 299,06kVA (WITH UTILIZATION FACTORS)"
+    },
+    {
+      "id": "text:48B",
+      "layer": "E-Text",
+      "x": 80.08133541869293,
+      "y": 14.34529222197293,
+      "height": 0.3,
+      "text": "F.Dem.: 269,15kVA (WITH UTILIZATION FACTORS\n& SIMULTANEITY FACTORS)"
+    },
+    {
+      "id": "text:48C",
+      "layer": "E-Text",
+      "x": 80.08133541869293,
+      "y": 15.78080647751617,
+      "height": 0.3,
+      "text": "Con.: 589,36kVA"
+    },
+    {
+      "id": "text:48E",
+      "layer": "E-Text",
+      "x": 98.18492941728155,
+      "y": 12.44843467719316,
+      "height": 0.2,
+      "text": "SWITCH DISCONNECTOR\n4x400A, "
+    },
+    {
+      "id": "text:4CC",
+      "layer": "E-Text",
+      "x": 16.49897812523241,
+      "y": 40.86790814971014,
+      "height": 0.2,
+      "text": "Con.: 15.00kVA\nDem.: 15.00kVA"
+    },
+    {
+      "id": "text:4CF",
+      "layer": "E-Text",
+      "x": 16.17824442388783,
+      "y": 41.91661029924567,
+      "height": 0.4,
+      "text": "LIFT-1"
+    },
+    {
+      "id": "text:4D1",
+      "layer": "E-Text",
+      "x": 22.99341258110772,
+      "y": 41.9166103328897,
+      "height": 0.4,
+      "text": "LIFT-2"
+    },
+    {
+      "id": "text:4D3",
+      "layer": "E-Text",
+      "x": 29.80858073832761,
+      "y": 41.91661030110831,
+      "height": 0.4,
+      "text": "LIFT-3"
+    },
+    {
+      "id": "text:4D5",
+      "layer": "E-Text",
+      "x": 36.62374889554749,
+      "y": 41.9166103328897,
+      "height": 0.4,
+      "text": "LIFT-4"
+    },
+    {
+      "id": "text:4D7",
+      "layer": "E-Text",
+      "x": 43.43891705276738,
+      "y": 41.91661030308737,
+      "height": 0.4,
+      "text": "LIFT-5"
+    },
+    {
+      "id": "text:4D9",
+      "layer": "E-Text",
+      "x": 23.3141462824523,
+      "y": 40.86790818335417,
+      "height": 0.2,
+      "text": "Con.: 15.00kVA\nDem.: 15.00kVA"
+    },
+    {
+      "id": "text:4DC",
+      "layer": "E-Text",
+      "x": 30.12931443967219,
+      "y": 40.86790815157278,
+      "height": 0.2,
+      "text": "Con.: 15.00kVA\nDem.: 15.00kVA"
+    },
+    {
+      "id": "text:4DF",
+      "layer": "E-Text",
+      "x": 36.94448259689207,
+      "y": 40.86790818335417,
+      "height": 0.2,
+      "text": "Con.: 15.00kVA\nDem.: 15.00kVA"
+    },
+    {
+      "id": "text:4E2",
+      "layer": "E-Text",
+      "x": 43.75965075411196,
+      "y": 40.86790815355184,
+      "height": 0.2,
+      "text": "Con.: 15.00kVA\nDem.: 15.00kVA"
+    },
+    {
+      "id": "text:4E6",
+      "layer": "E-Text",
+      "x": 63.88442152396138,
+      "y": 43.76126387830286,
+      "height": 0.4,
+      "text": "SMDB-B1"
+    },
+    {
+      "id": "text:4E9",
+      "layer": "E-Text",
+      "x": 70.69958968118127,
+      "y": 43.76126388132966,
+      "height": 0.4,
+      "text": "SMDB-B2"
+    },
+    {
+      "id": "text:4EC",
+      "layer": "E-Text",
+      "x": 77.51475783840115,
+      "y": 43.76126388435646,
+      "height": 0.4,
+      "text": "SMDB-B3"
+    },
+    {
+      "id": "text:4EF",
+      "layer": "E-Text",
+      "x": 84.32992599562104,
+      "y": 43.76126388738326,
+      "height": 0.4,
+      "text": "DB-B2-Pool"
+    },
+    {
+      "id": "text:4F0",
+      "layer": "E-Text",
+      "x": 91.46582785511683,
+      "y": 42.40746964629202,
+      "height": 0.2,
+      "text": "Con.: 91.77kVA\nDem.: 91.77kVA"
+    },
+    {
+      "id": "text:4F5",
+      "layer": "E-Text",
+      "x": 91.14509415284093,
+      "y": 43.76126389041006,
+      "height": 0.4,
+      "text": "DB-B3-MEC"
+    },
+    {
+      "id": "text:4F6",
+      "layer": "E-Text",
+      "x": 10.7246920380957,
+      "y": 14.19182360217369,
+      "height": 2.0,
+      "text": "MDB-B1"
+    },
+    {
+      "id": "text:4F7",
+      "layer": "E-Text",
+      "x": 16.75015807740684,
+      "y": 28.94417966819297,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4F8",
+      "layer": "E-Text",
+      "x": 23.56532623462672,
+      "y": 28.94417966819297,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4F9",
+      "layer": "E-Text",
+      "x": 30.38049439184661,
+      "y": 28.94417966819297,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4FA",
+      "layer": "E-Text",
+      "x": 37.1956625490665,
+      "y": 28.94417966819297,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4FB",
+      "layer": "E-Text",
+      "x": 44.01083070628638,
+      "y": 28.94417966819297,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4FC",
+      "layer": "E-Text",
+      "x": 50.82599886397193,
+      "y": 28.94417967121976,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4FD",
+      "layer": "E-Text",
+      "x": 57.64116702072616,
+      "y": 28.94417967424656,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:4FE",
+      "layer": "E-Text",
+      "x": 64.45633517794604,
+      "y": 28.94417967727336,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x100A"
+    },
+    {
+      "id": "text:4FF",
+      "layer": "E-Text",
+      "x": 71.27150333516593,
+      "y": 28.94417968030016,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x100A"
+    },
+    {
+      "id": "text:500",
+      "layer": "E-Text",
+      "x": 78.08667149238582,
+      "y": 28.94417968332696,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x80A"
+    },
+    {
+      "id": "text:507",
+      "layer": "E-Text",
+      "x": 84.9018396496057,
+      "y": 28.94417968635376,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x100A"
+    },
+    {
+      "id": "text:50A",
+      "layer": "E-Text",
+      "x": 91.71700780682559,
+      "y": 28.94417968938055,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x160A"
+    },
+    {
+      "id": "text:50F",
+      "layer": "E-Text",
+      "x": 98.90085930826436,
+      "y": 28.94417968635376,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:510",
+      "layer": "E-Text",
+      "x": 97.61543502316172,
+      "y": 4.86633960482127,
+      "height": 0.15,
+      "text": "4X240mm2+1X120mm2"
+    },
+    {
+      "id": "text:51A",
+      "layer": "E-Text",
+      "x": 97.96026230959515,
+      "y": 43.76126389041006,
+      "height": 0.4,
+      "text": "VRV-CA"
+    },
+    {
+      "id": "text:521",
+      "layer": "E-Text",
+      "x": 105.7160274645529,
+      "y": 28.94417968938055,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:52A",
+      "layer": "E-Text",
+      "x": 104.7754304658837,
+      "y": 43.76126389343685,
+      "height": 0.4,
+      "text": "VRV-CA"
+    },
+    {
+      "id": "text:531",
+      "layer": "E-Text",
+      "x": 112.5311956213071,
+      "y": 28.94417969240735,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x32A"
+    },
+    {
+      "id": "text:53A",
+      "layer": "E-Text",
+      "x": 111.5905986226379,
+      "y": 43.76126389646365,
+      "height": 0.4,
+      "text": "VRV-CA"
+    }
+  ]
+}

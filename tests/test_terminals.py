@@ -18,3 +18,15 @@ def test_pole_count_understands_neutral():
     assert pole_count("1P+N") == 2
     assert pole_count("3P+N") == 4
     assert pole_count("3P") == 3
+
+
+def test_repeated_explicit_cable_callouts_drive_large_board_terminal_schedule():
+    drawing_text = " ".join(
+        ["4cx4mm²+1cx4mm²"] * 5
+        + ["2cx10mm²+1cx10mm²"] * 5
+    )
+
+    terminals = calculate_terminals([], "ats-panel", drawing_text)
+    by_name = {item.name: item.quantity for item in terminals}
+
+    assert by_name == {"PT 4": 20, "PT 10": 10}

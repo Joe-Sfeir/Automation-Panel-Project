@@ -18,6 +18,7 @@ from .catalog import (
 from .domain import CandidateMatch, Component, MatchResult, ProjectDocument
 from .persistence import atomic_write_json
 from .review import assert_ready_for_pricing
+from .offer_defaults import canonical_manufacturer
 
 
 STRUCTURED_CATEGORIES = {
@@ -71,6 +72,17 @@ def _breaking_capacity(value: str) -> float | None:
     return float(match.group(1)) if match else None
 
 
+def _spd_type(value: str) -> str:
+    text = str(value or "").upper().replace("CLASS B+C", "TYPE 1+2")
+    if re.search(r"\bTYPE\s*(?:I|1)\s*(?:\+|&|AND)\s*(?:II|2)\b", text):
+        return "TYPE 1+2"
+    match = re.search(r"\b(?:TYPE|CLASS|CATEGORY)\s*(I{1,3}|[123])\b", text)
+    if not match:
+        return "-"
+    value = {"I": "1", "II": "2", "III": "3"}.get(match.group(1), match.group(1))
+    return f"TYPE {value}"
+
+
 def _category(value: str) -> str:
     return classify_product("", "", value).category
 
@@ -85,6 +97,7 @@ def _component_spec(component: Component) -> ProductSpec:
         sensitivity_ma=_sensitivity(component.sensitivity),
         curve=_curve(component.curve),
         breaking_capacity_ka=_breaking_capacity(component.breaking_capacity),
+        spd_type=_spd_type(component.spd_type),
         source="component",
         confidence=1.0,
     )
@@ -110,7 +123,13 @@ def _exact_compatibility(
             return False, 0.0, notes
         bonus += 0.12
     if required.poles != "-":
-        if candidate.poles != required.poles:
+        pole_match = candidate.poles == required.poles
+        if required.category == "SPD":
+            pole_match = pole_match or (required.poles, candidate.poles) in {
+                ("4P", "3PN"), ("3PN", "4P"),
+                ("2P", "1PN"), ("1PN", "2P"),
+            }
+        if not pole_match:
             return False, 0.0, notes
         bonus += 0.08
     if required.rated_current_a is not None:
@@ -119,6 +138,10 @@ def _exact_compatibility(
         bonus += 0.10
     if required.category in RESIDUAL_CATEGORIES and required.sensitivity_ma is not None:
         if candidate.sensitivity_ma != required.sensitivity_ma:
+            return False, 0.0, notes
+        bonus += 0.10
+    if required.category == "SPD" and required.spd_type != "-":
+        if candidate.spd_type != required.spd_type:
             return False, 0.0, notes
         bonus += 0.10
     if required.category in CURVE_CATEGORIES and required.curve != "-":
@@ -148,7 +171,9 @@ def component_description(component: Component) -> str:
 
 def effective_component_manufacturer(project: ProjectDocument, component: Component) -> str:
     """The component selection is authoritative; the project brand is only a fallback."""
-    return (component.manufacturer or project.pricing.default_manufacturer).strip().upper()
+    return canonical_manufacturer(
+        component.manufacturer or project.pricing.default_manufacturer
+    )
 
 
 class PricingService:
@@ -212,6 +237,7 @@ class PricingService:
                     results.append(self._match(
                         connection, aliases, component, manufacturer, year, half,
                         product_cache, recommendation_editions=available_editions,
+                        family_preferences=project.pricing.family_preferences,
                     ))
         project.match_results = results
         payload = self._pricing_payload(project, results)
@@ -277,7 +303,7 @@ class PricingService:
 
     def _match(
         self, connection, aliases, component, manufacturer, year, half,
-        product_cache, recommendation_editions=None,
+        product_cache, recommendation_editions=None, family_preferences=None,
     ) -> MatchResult:
         ensure_catalog_schema(connection)
         if not self._catalog_ready and not product_cache:
@@ -316,6 +342,7 @@ class PricingService:
                 connection, aliases, component, manufacturer,
                 recommendation_editions or [dict(edition)], product_cache,
                 exclude_reference=component.forced_reference,
+                family_preferences=family_preferences,
             )
             return MatchResult(
                 component.id, manufacturer, edition_name,
@@ -354,16 +381,27 @@ class PricingService:
             recall = len(overlap) / max(1, len(query_tokens))
             precision = len(overlap) / max(1, min(len(product_tokens), len(query_tokens) * 2))
             score = min(1.0, 0.68 * recall + 0.18 * precision + structured_bonus)
+            score += self._family_preference_bonus(
+                family_preferences, manufacturer, required.category, spec.family
+            )
             candidates.append(self._candidate(
-                row, spec, dict(edition), score=round(score, 4),
+                row, spec, dict(edition), score=round(min(1.0, score), 4),
                 recommendation_kind="exact", reason="Exact structured specification",
             ))
-        candidates.sort(key=lambda item: (-item.score, item.price, item.reference))
+        candidates.sort(key=lambda item: (
+            -item.score,
+            -self._family_preference_bonus(
+                family_preferences, manufacturer, required.category, item.family
+            ),
+            item.price,
+            item.reference,
+        ))
         top = candidates[:6]
         recommendations = self._recommendations(
             connection, aliases, component, manufacturer,
             recommendation_editions or [dict(edition)], product_cache,
             exclude_reference=top[0].reference if top else "",
+            family_preferences=family_preferences,
         )
         if not top or top[0].score < 0.35:
             return MatchResult(
@@ -373,7 +411,20 @@ class PricingService:
                 review_status="unmatched", note="No exact compatible catalog product",
             )
         chosen = top[0]
-        ambiguous = len(top) > 1 and top[1].score >= chosen.score - 0.02
+        preferred_over_runner_up = bool(
+            len(top) > 1
+            and self._family_preference_bonus(
+                family_preferences, manufacturer, required.category, chosen.family
+            )
+            > self._family_preference_bonus(
+                family_preferences, manufacturer, required.category, top[1].family
+            )
+        )
+        ambiguous = (
+            len(top) > 1
+            and top[1].score >= chosen.score - 0.02
+            and not preferred_over_runner_up
+        )
         tier = "T1" if chosen.score >= 0.75 and not ambiguous else "T2"
         status = "exact_match" if tier == "T1" else "check_candidate"
         note = (
@@ -393,7 +444,7 @@ class PricingService:
 
     def _recommendations(
         self, connection, aliases, component, requested_manufacturer,
-        editions, product_cache, exclude_reference="",
+        editions, product_cache, exclude_reference="", family_preferences=None,
     ) -> list[CandidateMatch]:
         required = _component_spec(component)
         if required.category not in STRUCTURED_CATEGORIES:
@@ -410,6 +461,12 @@ class PricingService:
                 if spec.category != required.category or spec.product_kind != "standalone":
                     continue
                 if required.poles != "-" and spec.poles != required.poles:
+                    continue
+                if (
+                    required.category == "SPD"
+                    and required.spd_type != "-"
+                    and spec.spd_type != required.spd_type
+                ):
                     continue
                 if (
                     required.category in RESIDUAL_CATEGORIES
@@ -472,6 +529,9 @@ class PricingService:
                 overlap = len(query_tokens.intersection(product_tokens))
                 score = 0.55 + (0.18 if same_manufacturer else 0.0) + (0.20 if current_exact else 0.0)
                 score += min(0.06, overlap * 0.01)
+                score += self._family_preference_bonus(
+                    family_preferences, manufacturer, required.category, spec.family
+                )
                 if required.rated_current_a and spec.rated_current_a and not current_exact:
                     score -= min(0.22, abs(current_delta) / max(required.rated_current_a, 1) * 0.12)
                 if engineering_review:
@@ -512,6 +572,37 @@ class PricingService:
             if len(selected) >= 8:
                 break
         return selected
+
+    @staticmethod
+    def _family_preference_bonus(
+        preferences: dict[str, list[str]] | None,
+        manufacturer: str,
+        category: str,
+        family: str,
+    ) -> float:
+        """Apply a small, explicit tie-break without weakening spec checks.
+
+        Keys may be ``MANUFACTURER:CATEGORY`` (preferred), ``CATEGORY``, or
+        ``*``. Values are ordered catalog family codes. The preference only
+        orders already-compatible products; it can never make an incompatible
+        rating, curve, residual sensitivity, or SPD type eligible.
+        """
+        if not preferences or not family:
+            return 0.0
+        normalized = {
+            str(key).strip().upper(): [str(value).strip().upper() for value in values]
+            for key, values in preferences.items()
+        }
+        selected = (
+            normalized.get(f"{manufacturer.upper()}:{category.upper()}")
+            or normalized.get(category.upper())
+            or normalized.get("*")
+            or []
+        )
+        family_name = family.upper()
+        if family_name not in selected:
+            return 0.0
+        return max(0.01, 0.10 - selected.index(family_name) * 0.03)
 
     @staticmethod
     def _candidate(

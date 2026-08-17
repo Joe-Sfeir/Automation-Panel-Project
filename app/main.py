@@ -877,13 +877,13 @@ class SettingsDialog(QDialog):
         )
 
 
-class ImportExcelDialog(QDialog):
+class ImportPriceListDialog(QDialog):
     def __init__(self, cfg: AppConfig, parent: QWidget | None = None) -> None:
         super().__init__(parent)
-        self.setWindowTitle("Import Excel to Pricing DB")
+        self.setWindowTitle("Import Price List to Pricing DB")
         self.resize(760, 420)
 
-        self.excel_path = QLineEdit()
+        self.price_list_path = QLineEdit()
         self.db_path = QLineEdit(cfg.db_path or str(PROJECT_ROOT / "pricing.db"))
         self.manufacturer = QLineEdit()
         self.year = QSpinBox()
@@ -901,10 +901,10 @@ class ImportExcelDialog(QDialog):
         form.setHorizontalSpacing(24)
         form.setVerticalSpacing(16)
         form.addRow(
-            "Excel File",
+            "Price List",
             self._row_with_buttons(
-                self.excel_path,
-                [self._btn("Browse", self._pick_excel, "secondary")],
+                self.price_list_path,
+                [self._btn("Browse", self._pick_price_list, "secondary")],
             ),
         )
         form.addRow(
@@ -938,7 +938,7 @@ class ImportExcelDialog(QDialog):
         title = QLabel("Import Manufacturer Price List")
         title.setObjectName("pageTitle")
         subtitle = QLabel(
-            "Select an Excel file and import it into a SQLite DB. "
+            "Select an Excel or supported PDF price list and import it into a SQLite DB. "
             "The app will automatically switch Preferences to the imported DB."
         )
         subtitle.setObjectName("pageSubtitle")
@@ -972,25 +972,31 @@ class ImportExcelDialog(QDialog):
             lay.addWidget(btn)
         return row
 
-    def _pick_excel(self) -> None:
+    def _pick_price_list(self) -> None:
         path, _ = QFileDialog.getOpenFileName(
             self,
-            "Select Excel file",
+            "Select price list",
             str(PROJECT_ROOT),
-            "Excel Files (*.xlsx *.xlsm *.xls);;All Files (*)",
+            "Price Lists (*.xlsx *.xlsm *.xls *.pdf);;Excel Files (*.xlsx *.xlsm *.xls);;PDF Files (*.pdf);;All Files (*)",
         )
         if not path:
             return
-        self.excel_path.setText(path)
-        xlsx = Path(path)
+        self.price_list_path.setText(path)
+        price_list = Path(path)
         if not self.db_path.text().strip():
-            self.db_path.setText(str(xlsx.with_suffix(".db")))
+            self.db_path.setText(str(price_list.with_suffix(".db")))
         if not self.manufacturer.text().strip():
-            stem_upper = xlsx.stem.upper()
+            stem_upper = price_list.stem.upper()
             for brand in DEFAULT_BRANDS:
                 if brand in stem_upper:
                     self.manufacturer.setText(brand)
                     break
+            if "PHOENIX" in stem_upper:
+                self.manufacturer.setText("PHOENIX CONTACT")
+                self.currency.setCurrentText("USD")
+            elif "MBS" in stem_upper:
+                self.manufacturer.setText("MBS")
+                self.currency.setCurrentText("EUR")
 
     def _pick_db(self) -> None:
         start = self.db_path.text().strip() or str(PROJECT_ROOT / "pricing_import.db")
@@ -1005,7 +1011,7 @@ class ImportExcelDialog(QDialog):
 
     def payload(self) -> dict:
         return {
-            "excel_file": self.excel_path.text().strip(),
+            "price_list_file": self.price_list_path.text().strip(),
             "db_path": self.db_path.text().strip(),
             "manufacturer": self.manufacturer.text().strip().upper(),
             "year": int(self.year.value()),
@@ -1016,12 +1022,18 @@ class ImportExcelDialog(QDialog):
 
     def accept(self) -> None:  # type: ignore[override]
         data = self.payload()
-        excel = Path(data["excel_file"])
-        if not data["excel_file"]:
-            QMessageBox.warning(self, "Missing Excel File", "Please select an Excel file to import.")
+        price_list = Path(data["price_list_file"])
+        if not data["price_list_file"]:
+            QMessageBox.warning(self, "Missing Price List", "Please select a price list to import.")
             return
-        if not excel.exists():
-            QMessageBox.warning(self, "Excel Not Found", f"File not found:\n{excel}")
+        if not price_list.exists():
+            QMessageBox.warning(self, "Price List Not Found", f"File not found:\n{price_list}")
+            return
+        if price_list.suffix.lower() not in {".xlsx", ".xlsm", ".xls", ".pdf"}:
+            QMessageBox.warning(
+                self, "Unsupported Format",
+                "Choose an Excel file or a supported MBS/Phoenix Contact PDF.",
+            )
             return
         if not data["manufacturer"]:
             QMessageBox.warning(self, "Missing Manufacturer", "Please enter a manufacturer name.")
@@ -1038,7 +1050,7 @@ class ImportRunDialog(QDialog):
     def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)
         self._running = True
-        self.setWindowTitle("Import Excel to Pricing DB")
+        self.setWindowTitle("Import Price List to Pricing DB")
         self.resize(900, 600)
         self.setMinimumSize(700, 460)
         self.setWindowModality(Qt.WindowModal)
@@ -1057,7 +1069,7 @@ class ImportRunDialog(QDialog):
         header.addWidget(self.status)
         layout.addLayout(header)
 
-        self.summary = QLabel("Reading workbook and preparing catalog families…")
+        self.summary = QLabel("Reading price list and preparing catalog families…")
         self.summary.setObjectName("sectionDesc")
         self.summary.setWordWrap(True)
         layout.addWidget(self.summary)
@@ -1123,7 +1135,7 @@ class ImportRunDialog(QDialog):
             super().reject()
 
 
-class ExcelImportWorker(QObject):
+class PriceListImportWorker(QObject):
     finished = Signal(dict)
     failed = Signal(str)
     log = Signal(str)
@@ -1719,8 +1731,8 @@ class HomePage(QWidget):
         )
         import_excel_tile = ActionTile(
             "XLS",
-            "Import Excel",
-            "Convert Excel to DB",
+            "Import Price List",
+            "Excel or supported PDF",
             "default",
         )
         tile_row.addWidget(new_tile, 1)
@@ -2256,7 +2268,7 @@ class PricingDbPage(QWidget):
         self.delete_btn.clicked.connect(self.delete_selected_rows)
         row2.addWidget(self.delete_btn)
 
-        self.import_excel_btn = QPushButton("Import Excel")
+        self.import_excel_btn = QPushButton("Import Price List")
         set_button_variant(self.import_excel_btn, "primary")
         self.import_excel_btn.clicked.connect(self.import_excel_requested.emit)
         row2.addWidget(self.import_excel_btn)
@@ -2620,7 +2632,7 @@ class MainWindow(QMainWindow):
         self.worker_thread: QThread | None = None
         self.worker: ProjectWorker | None = None
         self.import_thread: QThread | None = None
-        self.import_worker: ExcelImportWorker | None = None
+        self.import_worker: PriceListImportWorker | None = None
         self.import_progress: ImportRunDialog | None = None
 
         self._build_ui()
@@ -2711,7 +2723,7 @@ class MainWindow(QMainWindow):
         self.home_page.new_project_requested.connect(self._nav_to_project)
         self.home_page.history_requested.connect(self._nav_to_history)
         self.home_page.pricing_db_requested.connect(self._nav_to_pricing_db)
-        self.home_page.import_excel_requested.connect(self.import_excel_to_db)
+        self.home_page.import_excel_requested.connect(self.import_price_list_to_db)
         self.project_page.back_requested.connect(self._nav_to_home)
         self.project_page.refresh_brands_requested.connect(self.refresh_brands)
         self.project_page.start_requested.connect(self.start_project)
@@ -2719,7 +2731,7 @@ class MainWindow(QMainWindow):
         self.project_page.review_requested.connect(self.open_project_review)
         self.pricing_db_page.db_changed.connect(self.refresh_brands)
         self.pricing_db_page.db_changed.connect(self._refresh_home_overview)
-        self.pricing_db_page.import_excel_requested.connect(self.import_excel_to_db)
+        self.pricing_db_page.import_excel_requested.connect(self.import_price_list_to_db)
         self.history_page.delete_requested.connect(self.delete_history_entry)
 
     def _load_company_logo(self, target_size: QSize) -> QPixmap | None:
@@ -2848,25 +2860,25 @@ class MainWindow(QMainWindow):
         self.pricing_db_page.refresh_tables()
         self._refresh_home_overview()
 
-    def import_excel_to_db(self) -> None:
+    def import_price_list_to_db(self) -> None:
         if self.import_thread is not None:
-            QMessageBox.information(self, "Import In Progress", "An Excel import is already running.")
+            QMessageBox.information(self, "Import In Progress", "A price-list import is already running.")
             return
 
-        dlg = ImportExcelDialog(self.cfg, self)
+        dlg = ImportPriceListDialog(self.cfg, self)
         if dlg.exec() != QDialog.Accepted:
             return
 
         payload = dlg.payload()
-        excel_path = Path(payload["excel_file"]).expanduser()
+        price_list_path = Path(payload["price_list_file"]).expanduser()
         db_path = Path(payload["db_path"]).expanduser()
         script_path = RUNTIME_CODES_DIR / "import.py"
 
         try:
             if not script_path.exists():
                 raise ValueError(f"Missing script: {script_path}")
-            if not excel_path.exists():
-                raise ValueError(f"Excel file not found: {excel_path}")
+            if not price_list_path.exists():
+                raise ValueError(f"Price-list file not found: {price_list_path}")
             if not IS_FROZEN and not Path(self.cfg.python_executable).exists():
                 raise ValueError(f"Python executable not found: {self.cfg.python_executable}")
 
@@ -2882,7 +2894,7 @@ class MainWindow(QMainWindow):
             env["PYTHONIOENCODING"] = "utf-8"
 
             script_args = [
-                "--file", str(excel_path),
+                "--file", str(price_list_path),
                 "--manufacturer", str(payload["manufacturer"]),
                 "--year", str(payload["year"]),
                 "--half", str(payload["half"]),
@@ -2897,7 +2909,7 @@ class MainWindow(QMainWindow):
 
         self.import_progress = ImportRunDialog(self)
         self.import_progress.append_log(
-            f"Workbook: {excel_path.name}\n"
+            f"Price list: {price_list_path.name}\n"
             f"Manufacturer: {str(payload['manufacturer']).upper()} · "
             f"{payload['year']} {payload['half']} · {payload['currency']}\n"
             f"Database: {db_path}\n"
@@ -2905,7 +2917,7 @@ class MainWindow(QMainWindow):
         self.import_progress.show()
 
         self.import_thread = QThread()
-        self.import_worker = ExcelImportWorker(
+        self.import_worker = PriceListImportWorker(
             python_executable=self.cfg.python_executable,
             script_path=script_path,
             script_args=script_args,
@@ -2918,8 +2930,8 @@ class MainWindow(QMainWindow):
         self.import_worker.moveToThread(self.import_thread)
         self.import_thread.started.connect(self.import_worker.run)
         self.import_worker.log.connect(self.import_progress.append_log)
-        self.import_worker.finished.connect(self.on_import_excel_finished)
-        self.import_worker.failed.connect(self.on_import_excel_failed)
+        self.import_worker.finished.connect(self.on_import_price_list_finished)
+        self.import_worker.failed.connect(self.on_import_price_list_failed)
         self.import_worker.finished.connect(self.import_thread.quit)
         self.import_worker.failed.connect(self.import_thread.quit)
         self.import_thread.finished.connect(self._cleanup_import_worker)
@@ -2947,7 +2959,7 @@ class MainWindow(QMainWindow):
         body = "\n".join(f"{k}={v}" for k, v in existing.items()).strip()
         legacy_env.write_text(body + "\n", encoding="utf-8")
 
-    def on_import_excel_finished(self, payload: dict) -> None:
+    def on_import_price_list_finished(self, payload: dict) -> None:
         db_path = payload.get("db_path", "")
         summary = payload.get("summary", {})
         self.cfg.db_path = str(db_path)
@@ -2959,7 +2971,7 @@ class MainWindow(QMainWindow):
         self.show_pricing_db()
 
         completion_text = (
-                "Excel was imported successfully.\n\n"
+                "Price list was imported successfully.\n\n"
                 f"DB switched to: {db_path}\n"
                 f"Edition products imported: {summary.get('edition_products', 0)}\n"
                 f"Assigned to product families: {summary.get('classified_products', 0)} "
@@ -2970,7 +2982,7 @@ class MainWindow(QMainWindow):
         if self.import_progress is not None:
             self.import_progress.finish_success(completion_text)
 
-    def on_import_excel_failed(self, error: str) -> None:
+    def on_import_price_list_failed(self, error: str) -> None:
         if self.import_progress is not None:
             self.import_progress.finish_failure(error)
         else:
@@ -3050,20 +3062,21 @@ class MainWindow(QMainWindow):
         if IS_FROZEN:
             try:
                 __import__("openpyxl")
+                __import__("pymupdf")
                 __import__("ezdxf")
                 __import__("matplotlib")
                 __import__("google.genai")
             except Exception as exc:
                 raise ValueError(
                     "Bundled runtime is missing pipeline dependencies "
-                    f"(openpyxl, ezdxf, matplotlib, google-genai). Details: {exc}"
+                    f"(openpyxl, pymupdf, ezdxf, matplotlib, google-genai). Details: {exc}"
                 ) from exc
             return
 
         cmd = [
             self.cfg.python_executable,
             "-c",
-            "import openpyxl, ezdxf, matplotlib, google.genai; print('ok')",
+            "import openpyxl, pymupdf, ezdxf, matplotlib, google.genai; print('ok')",
         ]
         try:
             proc = subprocess.run(
@@ -3083,7 +3096,7 @@ class MainWindow(QMainWindow):
             tail = details[-1] if details else "unknown dependency error"
             raise ValueError(
                 "Configured Python is missing pipeline dependencies "
-                f"(openpyxl, ezdxf, matplotlib, google-genai). Details: {tail}"
+                f"(openpyxl, pymupdf, ezdxf, matplotlib, google-genai). Details: {tail}"
             )
 
     def on_finished(self, ctx: dict) -> None:

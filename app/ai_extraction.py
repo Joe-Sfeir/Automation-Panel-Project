@@ -347,7 +347,7 @@ def sanitize_component(row: dict) -> dict:
         "SIEMENS": "SIEMENS",
         "PHOENIX CONTACT": "PHOENIX CONTACT",
         "PHOENIX": "PHOENIX CONTACT",
-        "DEHN": "DEHN",
+        "DEHN": "PHOENIX CONTACT",
         "SOCOMEC": "SOCOMEC",
         "LOVATO": "LOVATO",
         "FINDER": "FINDER",

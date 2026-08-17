@@ -1,0 +1,4703 @@
+{
+  "schematic_layers": [
+    "0"
+  ],
+  "physical_layout_layers": [],
+  "schematic_rating_groups": [
+    {
+      "category": "MCB",
+      "poles": "1P+N",
+      "amps": "20A",
+      "sensitivity": "-",
+      "count": 6,
+      "label_ids": [
+        "text:657",
+        "text:6F3",
+        "text:710",
+        "text:72D",
+        "text:74A",
+        "text:767"
+      ],
+      "labels": [
+        "2x20"
+      ],
+      "layers": [
+        "0"
+      ]
+    }
+  ],
+  "repeating_schematic_blocks": [
+    {
+      "block_name": "A$C0B96147B",
+      "count": 7
+    },
+    {
+      "block_name": "A$C17AA2362",
+      "count": 7
+    },
+    {
+      "block_name": "A$C4FCF2A0A",
+      "count": 2
+    },
+    {
+      "block_name": "SSS",
+      "count": 6
+    },
+    {
+      "block_name": "a",
+      "count": 5
+    },
+    {
+      "block_name": "cb3ph",
+      "count": 2
+    },
+    {
+      "block_name": "ds2x25",
+      "count": 2
+    }
+  ],
+  "schematic_blocks": [
+    {
+      "id": "block:5BC",
+      "handle": "5BC",
+      "block_name": "SW",
+      "layer": "0",
+      "x": 14.50093974325218,
+      "y": 19.3314956050177,
+      "attributes": {}
+    },
+    {
+      "id": "block:5CD",
+      "handle": "5CD",
+      "block_name": "A$C316535B4",
+      "layer": "0",
+      "x": 24.79495435034268,
+      "y": 26.33758426872519,
+      "attributes": {}
+    },
+    {
+      "id": "block:5CE",
+      "handle": "5CE",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 23.336280075791,
+      "attributes": {}
+    },
+    {
+      "id": "block:5E4",
+      "handle": "5E4",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55192926398821,
+      "y": 23.33885328665347,
+      "attributes": {}
+    },
+    {
+      "id": "block:5E8",
+      "handle": "5E8",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55195865839131,
+      "y": 22.67138689018757,
+      "attributes": {}
+    },
+    {
+      "id": "block:5F3",
+      "handle": "5F3",
+      "block_name": "cb3ph",
+      "layer": "0",
+      "x": 36.20557101362728,
+      "y": 25.74839689752989,
+      "attributes": {}
+    },
+    {
+      "id": "block:62B",
+      "handle": "62B",
+      "block_name": "a",
+      "layer": "0",
+      "x": 40.0868249015265,
+      "y": 26.04310181918991,
+      "attributes": {}
+    },
+    {
+      "id": "block:62C",
+      "handle": "62C",
+      "block_name": "a",
+      "layer": "0",
+      "x": 40.0868249015265,
+      "y": 25.4061025834686,
+      "attributes": {}
+    },
+    {
+      "id": "block:644",
+      "handle": "644",
+      "block_name": "A$C4FCF2A0A",
+      "layer": "0",
+      "x": 24.72295925219886,
+      "y": 23.50004949591094,
+      "attributes": {}
+    },
+    {
+      "id": "block:645",
+      "handle": "645",
+      "block_name": "a",
+      "layer": "0",
+      "x": 24.31354979391553,
+      "y": 23.91391329730832,
+      "attributes": {}
+    },
+    {
+      "id": "block:646",
+      "handle": "646",
+      "block_name": "A$C388C5F75",
+      "layer": "0",
+      "x": 26.36685682752513,
+      "y": 32.12693693903712,
+      "attributes": {}
+    },
+    {
+      "id": "block:647",
+      "handle": "647",
+      "block_name": "A$C3AA72A87",
+      "layer": "0",
+      "x": 15.91063850106083,
+      "y": 19.64629763383855,
+      "attributes": {}
+    },
+    {
+      "id": "block:651",
+      "handle": "651",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55198805279441,
+      "y": 20.66898770055705,
+      "attributes": {}
+    },
+    {
+      "id": "block:653",
+      "handle": "653",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 22.66881367920869,
+      "attributes": {}
+    },
+    {
+      "id": "block:654",
+      "handle": "654",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77542362234898,
+      "y": 20.66641448957817,
+      "attributes": {}
+    },
+    {
+      "id": "block:66D",
+      "handle": "66D",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55179051275708,
+      "y": 15.3292565283642,
+      "attributes": {}
+    },
+    {
+      "id": "block:66F",
+      "handle": "66F",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539543587126,
+      "y": 15.32668331750174,
+      "attributes": {}
+    },
+    {
+      "id": "block:679",
+      "handle": "679",
+      "block_name": "ds2x25",
+      "layer": "0",
+      "x": 41.87629140599974,
+      "y": 26.14431387507793,
+      "attributes": {}
+    },
+    {
+      "id": "block:67A",
+      "handle": "67A",
+      "block_name": "ds2x25",
+      "layer": "0",
+      "x": 41.87629140553408,
+      "y": 25.50731463935663,
+      "attributes": {}
+    },
+    {
+      "id": "block:67B",
+      "handle": "67B",
+      "block_name": "cb3ph",
+      "layer": "0",
+      "x": 36.20529804903425,
+      "y": 17.76808888169908,
+      "attributes": {}
+    },
+    {
+      "id": "block:691",
+      "handle": "691",
+      "block_name": "a",
+      "layer": "0",
+      "x": 40.08655193693347,
+      "y": 17.76808888169908,
+      "attributes": {}
+    },
+    {
+      "id": "block:6A6",
+      "handle": "6A6",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.5518767555558,
+      "y": 19.33405490692676,
+      "attributes": {}
+    },
+    {
+      "id": "block:6A8",
+      "handle": "6A8",
+      "block_name": "A$C4FCF2A0A",
+      "layer": "0",
+      "x": 24.72287470813252,
+      "y": 20.08342012875219,
+      "attributes": {}
+    },
+    {
+      "id": "block:6A9",
+      "handle": "6A9",
+      "block_name": "a",
+      "layer": "0",
+      "x": 24.31533654000022,
+      "y": 19.94575841592596,
+      "attributes": {}
+    },
+    {
+      "id": "block:6B1",
+      "handle": "6B1",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 22.00134728250996,
+      "attributes": {}
+    },
+    {
+      "id": "block:6B7",
+      "handle": "6B7",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55192926398821,
+      "y": 22.00392049337243,
+      "attributes": {}
+    },
+    {
+      "id": "block:6BB",
+      "handle": "6BB",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55195865839131,
+      "y": 21.33645409690653,
+      "attributes": {}
+    },
+    {
+      "id": "block:6C1",
+      "handle": "6C1",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 21.33388088592765,
+      "attributes": {}
+    },
+    {
+      "id": "block:6C8",
+      "handle": "6C8",
+      "block_name": "ds4x25",
+      "layer": "0",
+      "x": 41.77480638551869,
+      "y": 17.76808888169908,
+      "attributes": {}
+    },
+    {
+      "id": "block:6E8",
+      "handle": "6E8",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55197919405408,
+      "y": 20.00152130420756,
+      "attributes": {}
+    },
+    {
+      "id": "block:6EA",
+      "handle": "6EA",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77541476360865,
+      "y": 19.99894809322868,
+      "attributes": {}
+    },
+    {
+      "id": "block:6FA",
+      "handle": "6FA",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 18.66658850964595,
+      "attributes": {}
+    },
+    {
+      "id": "block:717",
+      "handle": "717",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 17.99912211236515,
+      "attributes": {}
+    },
+    {
+      "id": "block:734",
+      "handle": "734",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 17.33165571496793,
+      "attributes": {}
+    },
+    {
+      "id": "block:751",
+      "handle": "751",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 16.66418931768712,
+      "attributes": {}
+    },
+    {
+      "id": "block:76E",
+      "handle": "76E",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 15.99672292040632,
+      "attributes": {}
+    }
+  ],
+  "block_label_associations": [
+    {
+      "block_id": "block:5BC",
+      "handle": "5BC",
+      "block_name": "SW",
+      "layer": "0",
+      "x": 14.50093974325218,
+      "y": 19.3314956050177,
+      "label_id": "text:5BE",
+      "label": "4x63Amp",
+      "label_x": 15.33326946537353,
+      "label_y": 18.67539494678349,
+      "confidence": 0.337875,
+      "nearby_texts": [
+        {
+          "id": "text:5BE",
+          "text": "4x63Amp",
+          "distance": 2.753
+        },
+        {
+          "id": "text:5BF",
+          "text": "ISOL.S.",
+          "distance": 4.238
+        },
+        {
+          "id": "text:657",
+          "text": "2x20",
+          "distance": 6.637
+        },
+        {
+          "id": "text:6AB",
+          "text": "TO ESMDB-B2",
+          "distance": 6.671
+        },
+        {
+          "id": "text:6E9",
+          "text": "MAGNETIC CIRCUIT BREAKER",
+          "distance": 6.867
+        },
+        {
+          "id": "text:6F3",
+          "text": "2x20",
+          "distance": 7.098
+        },
+        {
+          "id": "text:6AE",
+          "text": "4cx16mm²+1cx16mm²",
+          "distance": 7.148
+        },
+        {
+          "id": "text:6E5",
+          "text": "4x20",
+          "distance": 7.209
+        }
+      ]
+    },
+    {
+      "block_id": "block:5CE",
+      "handle": "5CE",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 23.336280075791,
+      "label_id": "text:5CF",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96661943116568,
+      "label_y": 23.32081735490792,
+      "confidence": 0.951666,
+      "nearby_texts": [
+        {
+          "id": "text:5CF",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.201
+        },
+        {
+          "id": "text:675",
+          "text": "32A",
+          "distance": 1.116
+        },
+        {
+          "id": "text:5F1",
+          "text": "FIRE RATED ",
+          "distance": 1.363
+        },
+        {
+          "id": "text:5AF",
+          "text": "1",
+          "distance": 2.154
+        },
+        {
+          "id": "text:5E3",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:674",
+          "text": "32A",
+          "distance": 2.326
+        },
+        {
+          "id": "text:5C9",
+          "text": "IF1",
+          "distance": 2.676
+        },
+        {
+          "id": "text:64D",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.739
+        }
+      ]
+    },
+    {
+      "block_id": "block:5E4",
+      "handle": "5E4",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55192926398821,
+      "y": 23.33885328665347,
+      "label_id": "text:5CF",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96661943116568,
+      "label_y": 23.32081735490792,
+      "confidence": 0.898773,
+      "nearby_texts": [
+        {
+          "id": "text:5CF",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.421
+        },
+        {
+          "id": "text:675",
+          "text": "32A",
+          "distance": 0.922
+        },
+        {
+          "id": "text:5F1",
+          "text": "FIRE RATED ",
+          "distance": 1.399
+        },
+        {
+          "id": "text:5E3",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:674",
+          "text": "32A",
+          "distance": 2.252
+        },
+        {
+          "id": "text:5AF",
+          "text": "1",
+          "distance": 2.378
+        },
+        {
+          "id": "text:64D",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.774
+        },
+        {
+          "id": "text:5E2",
+          "text": "(3P+N)",
+          "distance": 2.815
+        }
+      ]
+    },
+    {
+      "block_id": "block:5E8",
+      "handle": "5E8",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55195865839131,
+      "y": 22.67138689018757,
+      "label_id": "text:64D",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96895173902966,
+      "label_y": 22.65335096263298,
+      "confidence": 0.898227,
+      "nearby_texts": [
+        {
+          "id": "text:64D",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.423
+        },
+        {
+          "id": "text:674",
+          "text": "32A",
+          "distance": 0.922
+        },
+        {
+          "id": "text:5E7",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:6C7",
+          "text": "32A",
+          "distance": 2.252
+        },
+        {
+          "id": "text:5CA",
+          "text": "2",
+          "distance": 2.378
+        },
+        {
+          "id": "text:5CF",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.631
+        },
+        {
+          "id": "text:6B2",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.773
+        },
+        {
+          "id": "text:5E6",
+          "text": "(3P+N)",
+          "distance": 2.815
+        }
+      ]
+    },
+    {
+      "block_id": "block:5F3",
+      "handle": "5F3",
+      "block_name": "cb3ph",
+      "layer": "0",
+      "x": 36.20557101362728,
+      "y": 25.74839689752989,
+      "label_id": "text:626",
+      "label": "3xXY",
+      "label_x": 37.44825623476289,
+      "label_y": 25.78012143758097,
+      "confidence": 0.699592,
+      "nearby_texts": [
+        {
+          "id": "text:626",
+          "text": "3xXY",
+          "distance": 1.249
+        },
+        {
+          "id": "text:627",
+          "text": "(3P)",
+          "distance": 1.708
+        },
+        {
+          "id": "text:616",
+          "text": "Th",
+          "distance": 4.442
+        },
+        {
+          "id": "text:5F9",
+          "text": "C",
+          "distance": 4.539
+        },
+        {
+          "id": "text:637",
+          "text": "A1",
+          "distance": 4.679
+        },
+        {
+          "id": "text:611",
+          "text": "C",
+          "distance": 4.697
+        },
+        {
+          "id": "text:635",
+          "text": "A1",
+          "distance": 4.833
+        },
+        {
+          "id": "text:5FE",
+          "text": "Th",
+          "distance": 4.836
+        }
+      ]
+    },
+    {
+      "block_id": "block:62B",
+      "handle": "62B",
+      "block_name": "a",
+      "layer": "0",
+      "x": 40.0868249015265,
+      "y": 26.04310181918991,
+      "label_id": "text:5F9",
+      "label": "C",
+      "label_x": 40.63560622523882,
+      "label_y": 25.99516680064117,
+      "confidence": 0.8602,
+      "nearby_texts": [
+        {
+          "id": "text:5F9",
+          "text": "C",
+          "distance": 0.581
+        },
+        {
+          "id": "text:637",
+          "text": "A1",
+          "distance": 0.718
+        },
+        {
+          "id": "text:5FE",
+          "text": "Th",
+          "distance": 0.967
+        },
+        {
+          "id": "text:470",
+          "text": "25",
+          "distance": 1.75
+        },
+        {
+          "id": "text:469",
+          "text": "2",
+          "distance": 1.799
+        },
+        {
+          "id": "text:616",
+          "text": "Th",
+          "distance": 1.814
+        },
+        {
+          "id": "text:608",
+          "text": "C",
+          "distance": 1.874
+        },
+        {
+          "id": "text:623",
+          "text": "With overload relay",
+          "distance": 2.22
+        }
+      ]
+    },
+    {
+      "block_id": "block:62C",
+      "handle": "62C",
+      "block_name": "a",
+      "layer": "0",
+      "x": 40.0868249015265,
+      "y": 25.4061025834686,
+      "label_id": "text:611",
+      "label": "C",
+      "label_x": 40.63560622523882,
+      "label_y": 25.35816756491986,
+      "confidence": 0.8602,
+      "nearby_texts": [
+        {
+          "id": "text:611",
+          "text": "C",
+          "distance": 0.581
+        },
+        {
+          "id": "text:635",
+          "text": "A1",
+          "distance": 0.718
+        },
+        {
+          "id": "text:616",
+          "text": "Th",
+          "distance": 0.967
+        },
+        {
+          "id": "text:476",
+          "text": "25",
+          "distance": 1.75
+        },
+        {
+          "id": "text:475",
+          "text": "2",
+          "distance": 1.799
+        },
+        {
+          "id": "text:5F9",
+          "text": "C",
+          "distance": 2.419
+        },
+        {
+          "id": "text:637",
+          "text": "A1",
+          "distance": 2.456
+        },
+        {
+          "id": "text:63D",
+          "text": "MONITORING",
+          "distance": 2.463
+        }
+      ]
+    },
+    {
+      "block_id": "block:644",
+      "handle": "644",
+      "block_name": "A$C4FCF2A0A",
+      "layer": "0",
+      "x": 24.72295925219886,
+      "y": 23.50004949591094,
+      "label_id": "text:5F1",
+      "label": "FIRE RATED ",
+      "label_x": 24.95217542316176,
+      "label_y": 23.67407176453126,
+      "confidence": 0.823755,
+      "nearby_texts": [
+        {
+          "id": "text:5F1",
+          "text": "FIRE RATED ",
+          "distance": 0.733
+        },
+        {
+          "id": "text:5CF",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.757
+        },
+        {
+          "id": "text:675",
+          "text": "32A",
+          "distance": 0.921
+        },
+        {
+          "id": "text:5E3",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:5AF",
+          "text": "1",
+          "distance": 2.325
+        },
+        {
+          "id": "text:5C9",
+          "text": "IF1",
+          "distance": 2.795
+        },
+        {
+          "id": "text:674",
+          "text": "32A",
+          "distance": 2.918
+        },
+        {
+          "id": "text:5E2",
+          "text": "(3P+N)",
+          "distance": 3.025
+        }
+      ]
+    },
+    {
+      "block_id": "block:645",
+      "handle": "645",
+      "block_name": "a",
+      "layer": "0",
+      "x": 24.31354979391553,
+      "y": 23.91391329730832,
+      "label_id": "text:5F1",
+      "label": "FIRE RATED ",
+      "label_x": 24.95217542316176,
+      "label_y": 23.67407176453126,
+      "confidence": 0.722838,
+      "nearby_texts": [
+        {
+          "id": "text:5F1",
+          "text": "FIRE RATED ",
+          "distance": 1.152
+        },
+        {
+          "id": "text:675",
+          "text": "32A",
+          "distance": 1.828
+        },
+        {
+          "id": "text:5CF",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.461
+        },
+        {
+          "id": "text:5D5",
+          "text": "CTRL PANEL ",
+          "distance": 2.756
+        },
+        {
+          "id": "text:5E3",
+          "text": " 300mA",
+          "distance": 2.812
+        },
+        {
+          "id": "text:5E2",
+          "text": "(3P+N)",
+          "distance": 3.361
+        },
+        {
+          "id": "text:5D4",
+          "text": "COP",
+          "distance": 3.429
+        },
+        {
+          "id": "text:5AF",
+          "text": "1",
+          "distance": 3.543
+        }
+      ]
+    },
+    {
+      "block_id": "block:647",
+      "handle": "647",
+      "block_name": "A$C3AA72A87",
+      "layer": "0",
+      "x": 15.91063850106083,
+      "y": 19.64629763383855,
+      "label_id": "text:5BE",
+      "label": "4x63Amp",
+      "label_x": 15.33326946537353,
+      "label_y": 18.67539494678349,
+      "confidence": 0.055763,
+      "nearby_texts": [
+        {
+          "id": "text:5BE",
+          "text": "4x63Amp",
+          "distance": 3.926
+        },
+        {
+          "id": "text:6E9",
+          "text": "MAGNETIC CIRCUIT BREAKER",
+          "distance": 5.25
+        },
+        {
+          "id": "text:657",
+          "text": "2x20",
+          "distance": 5.342
+        },
+        {
+          "id": "text:5BF",
+          "text": "ISOL.S.",
+          "distance": 5.445
+        },
+        {
+          "id": "text:6E5",
+          "text": "4x20",
+          "distance": 5.453
+        },
+        {
+          "id": "text:658",
+          "text": "(1P+N)",
+          "distance": 5.935
+        },
+        {
+          "id": "text:6E6",
+          "text": "(3P+N)",
+          "distance": 6.035
+        },
+        {
+          "id": "text:652",
+          "text": "MAGNETIC CIRCUIT BREAKER",
+          "distance": 6.117
+        }
+      ]
+    },
+    {
+      "block_id": "block:651",
+      "handle": "651",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55198805279441,
+      "y": 20.66898770055705,
+      "label_id": "text:65A",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96891513386153,
+      "label_y": 20.61885810499516,
+      "confidence": 0.888739,
+      "nearby_texts": [
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.463
+        },
+        {
+          "id": "text:673",
+          "text": "32A",
+          "distance": 0.922
+        },
+        {
+          "id": "text:650",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:6F0",
+          "text": "32A",
+          "distance": 2.252
+        },
+        {
+          "id": "text:64A",
+          "text": "5",
+          "distance": 2.386
+        },
+        {
+          "id": "text:6C0",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.631
+        },
+        {
+          "id": "text:64F",
+          "text": "(3P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:65D",
+          "text": "SFAF1",
+          "distance": 2.9
+        }
+      ]
+    },
+    {
+      "block_id": "block:653",
+      "handle": "653",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 22.66881367920869,
+      "label_id": "text:64D",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96895173902966,
+      "label_y": 22.65335096263298,
+      "confidence": 0.951132,
+      "nearby_texts": [
+        {
+          "id": "text:64D",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.203
+        },
+        {
+          "id": "text:674",
+          "text": "32A",
+          "distance": 1.116
+        },
+        {
+          "id": "text:5CA",
+          "text": "2",
+          "distance": 2.154
+        },
+        {
+          "id": "text:5E7",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:6C7",
+          "text": "32A",
+          "distance": 2.326
+        },
+        {
+          "id": "text:5CF",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.615
+        },
+        {
+          "id": "text:5EC",
+          "text": "IF2",
+          "distance": 2.676
+        },
+        {
+          "id": "text:6B2",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.738
+        }
+      ]
+    },
+    {
+      "block_id": "block:654",
+      "handle": "654",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77542362234898,
+      "y": 20.66641448957817,
+      "label_id": "text:65A",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96891513386153,
+      "label_y": 20.61885810499516,
+      "confidence": 0.934746,
+      "nearby_texts": [
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.271
+        },
+        {
+          "id": "text:673",
+          "text": "32A",
+          "distance": 1.116
+        },
+        {
+          "id": "text:64A",
+          "text": "5",
+          "distance": 2.163
+        },
+        {
+          "id": "text:650",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:6F0",
+          "text": "32A",
+          "distance": 2.326
+        },
+        {
+          "id": "text:6C0",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.615
+        },
+        {
+          "id": "text:65D",
+          "text": "SFAF1",
+          "distance": 2.677
+        },
+        {
+          "id": "text:6EB",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.867
+        }
+      ]
+    },
+    {
+      "block_id": "block:66D",
+      "handle": "66D",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55179051275708,
+      "y": 15.3292565283642,
+      "label_id": "text:665",
+      "label": "St-by",
+      "label_x": 24.99882137555041,
+      "label_y": 15.22094429070567,
+      "confidence": 0.850288,
+      "nearby_texts": [
+        {
+          "id": "text:665",
+          "text": "St-by",
+          "distance": 0.623
+        },
+        {
+          "id": "text:676",
+          "text": "32A",
+          "distance": 0.893
+        },
+        {
+          "id": "text:66C",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:7A3",
+          "text": "13",
+          "distance": 2.334
+        },
+        {
+          "id": "text:76A",
+          "text": "2x4+1x4",
+          "distance": 2.504
+        },
+        {
+          "id": "text:66B",
+          "text": "(3P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:666",
+          "text": "--",
+          "distance": 2.9
+        },
+        {
+          "id": "text:7A2",
+          "text": "12",
+          "distance": 3.378
+        }
+      ]
+    },
+    {
+      "block_id": "block:66F",
+      "handle": "66F",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539543587126,
+      "y": 15.32668331750174,
+      "label_id": "text:665",
+      "label": "St-by",
+      "label_x": 24.99882137555041,
+      "label_y": 15.22094429070567,
+      "confidence": 0.884963,
+      "nearby_texts": [
+        {
+          "id": "text:665",
+          "text": "St-by",
+          "distance": 0.478
+        },
+        {
+          "id": "text:676",
+          "text": "32A",
+          "distance": 1.091
+        },
+        {
+          "id": "text:7A3",
+          "text": "13",
+          "distance": 2.111
+        },
+        {
+          "id": "text:66C",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:76A",
+          "text": "2x4+1x4",
+          "distance": 2.487
+        },
+        {
+          "id": "text:666",
+          "text": "--",
+          "distance": 2.676
+        },
+        {
+          "id": "text:66B",
+          "text": "(3P+N)",
+          "distance": 3.038
+        },
+        {
+          "id": "text:7A2",
+          "text": "12",
+          "distance": 3.236
+        }
+      ]
+    },
+    {
+      "block_id": "block:679",
+      "handle": "679",
+      "block_name": "ds2x25",
+      "layer": "0",
+      "x": 41.87629140599974,
+      "y": 26.14431387507793,
+      "label_id": "text:469",
+      "label": "2",
+      "label_x": 41.85845965281495,
+      "label_y": 26.12137542275696,
+      "confidence": 0.977521,
+      "nearby_texts": [
+        {
+          "id": "text:469",
+          "text": "2",
+          "distance": 0.093
+        },
+        {
+          "id": "text:470",
+          "text": "25",
+          "distance": 0.492
+        },
+        {
+          "id": "text:623",
+          "text": "With overload relay",
+          "distance": 1.187
+        },
+        {
+          "id": "text:637",
+          "text": "A1",
+          "distance": 1.249
+        },
+        {
+          "id": "text:5FE",
+          "text": "Th",
+          "distance": 1.327
+        },
+        {
+          "id": "text:5F9",
+          "text": "C",
+          "distance": 1.377
+        },
+        {
+          "id": "text:608",
+          "text": "C",
+          "distance": 1.861
+        },
+        {
+          "id": "text:61C",
+          "text": "M",
+          "distance": 2.053
+        }
+      ]
+    },
+    {
+      "block_id": "block:67A",
+      "handle": "67A",
+      "block_name": "ds2x25",
+      "layer": "0",
+      "x": 41.87629140553408,
+      "y": 25.50731463935663,
+      "label_id": "text:475",
+      "label": "2",
+      "label_x": 41.858459652349296,
+      "label_y": 25.484376187035657,
+      "confidence": 0.977521,
+      "nearby_texts": [
+        {
+          "id": "text:475",
+          "text": "2",
+          "distance": 0.093
+        },
+        {
+          "id": "text:476",
+          "text": "25",
+          "distance": 0.492
+        },
+        {
+          "id": "text:61C",
+          "text": "M",
+          "distance": 0.736
+        },
+        {
+          "id": "text:635",
+          "text": "A1",
+          "distance": 1.249
+        },
+        {
+          "id": "text:616",
+          "text": "Th",
+          "distance": 1.327
+        },
+        {
+          "id": "text:611",
+          "text": "C",
+          "distance": 1.377
+        },
+        {
+          "id": "text:470",
+          "text": "25",
+          "distance": 2.058
+        },
+        {
+          "id": "text:637",
+          "text": "A1",
+          "distance": 2.239
+        }
+      ]
+    },
+    {
+      "block_id": "block:67B",
+      "handle": "67B",
+      "block_name": "cb3ph",
+      "layer": "0",
+      "x": 36.20529804903425,
+      "y": 17.76808888169908,
+      "label_id": "text:68C",
+      "label": "3xXY",
+      "label_x": 37.44798327016987,
+      "label_y": 17.79981342175015,
+      "confidence": 0.699592,
+      "nearby_texts": [
+        {
+          "id": "text:68C",
+          "text": "3xXY",
+          "distance": 1.249
+        },
+        {
+          "id": "text:68D",
+          "text": "(3P)",
+          "distance": 1.708
+        },
+        {
+          "id": "text:716",
+          "text": "FAF-04",
+          "distance": 2.872
+        },
+        {
+          "id": "text:733",
+          "text": "FAF-05",
+          "distance": 3.245
+        },
+        {
+          "id": "text:718",
+          "text": "K",
+          "distance": 3.931
+        },
+        {
+          "id": "text:735",
+          "text": "K",
+          "distance": 3.947
+        },
+        {
+          "id": "text:71A",
+          "text": "T",
+          "distance": 4.148
+        },
+        {
+          "id": "text:737",
+          "text": "T",
+          "distance": 4.163
+        }
+      ]
+    },
+    {
+      "block_id": "block:691",
+      "handle": "691",
+      "block_name": "a",
+      "layer": "0",
+      "x": 40.08655193693347,
+      "y": 17.76808888169908,
+      "label_id": "text:680",
+      "label": "C",
+      "label_x": 40.63533326064579,
+      "label_y": 17.72015386315034,
+      "confidence": 0.8602,
+      "nearby_texts": [
+        {
+          "id": "text:680",
+          "text": "C",
+          "distance": 0.581
+        },
+        {
+          "id": "text:696",
+          "text": "A1",
+          "distance": 0.718
+        },
+        {
+          "id": "text:678",
+          "text": "4\n25",
+          "distance": 1.729
+        },
+        {
+          "id": "text:689",
+          "text": "With overload relay",
+          "distance": 1.801
+        },
+        {
+          "id": "text:68D",
+          "text": "(3P)",
+          "distance": 2.205
+        },
+        {
+          "id": "text:68C",
+          "text": "3xXY",
+          "distance": 2.642
+        },
+        {
+          "id": "text:685",
+          "text": "VFD",
+          "distance": 3.168
+        },
+        {
+          "id": "text:6A4",
+          "text": "M",
+          "distance": 3.893
+        }
+      ]
+    },
+    {
+      "block_id": "block:6A6",
+      "handle": "6A6",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.5518767555558,
+      "y": 19.33405490692676,
+      "label_id": "text:65B",
+      "label": "2x4+1x4",
+      "label_x": 24.96887653100647,
+      "label_y": 19.28392531136488,
+      "confidence": 0.888724,
+      "nearby_texts": [
+        {
+          "id": "text:65B",
+          "text": "2x4+1x4",
+          "distance": 0.463
+        },
+        {
+          "id": "text:659",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:79D",
+          "text": "7",
+          "distance": 2.378
+        },
+        {
+          "id": "text:6EB",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.504
+        },
+        {
+          "id": "text:658",
+          "text": "(1P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:661",
+          "text": "FAF1",
+          "distance": 2.9
+        },
+        {
+          "id": "text:6F6",
+          "text": "2x4+1x4",
+          "distance": 2.901
+        },
+        {
+          "id": "text:6F5",
+          "text": " 300mA",
+          "distance": 3.249
+        }
+      ]
+    },
+    {
+      "block_id": "block:6A8",
+      "handle": "6A8",
+      "block_name": "A$C4FCF2A0A",
+      "layer": "0",
+      "x": 24.72287470813252,
+      "y": 20.08342012875219,
+      "label_id": "text:6EB",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.9689062751212,
+      "label_y": 19.95139170864568,
+      "confidence": 0.859888,
+      "nearby_texts": [
+        {
+          "id": "text:6EB",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.583
+        },
+        {
+          "id": "text:6F0",
+          "text": "32A",
+          "distance": 0.941
+        },
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.156
+        },
+        {
+          "id": "text:6E7",
+          "text": " 300mA",
+          "distance": 2.214
+        },
+        {
+          "id": "text:656",
+          "text": "6",
+          "distance": 2.272
+        },
+        {
+          "id": "text:6EC",
+          "text": "SFAF2",
+          "distance": 2.76
+        },
+        {
+          "id": "text:6E6",
+          "text": "(3P+N)",
+          "distance": 2.988
+        },
+        {
+          "id": "text:673",
+          "text": "32A",
+          "distance": 3.028
+        }
+      ]
+    },
+    {
+      "block_id": "block:6A9",
+      "handle": "6A9",
+      "block_name": "a",
+      "layer": "0",
+      "x": 24.31533654000022,
+      "y": 19.94575841592596,
+      "label_id": "text:6EB",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.9689062751212,
+      "label_y": 19.95139170864568,
+      "confidence": 0.842729,
+      "nearby_texts": [
+        {
+          "id": "text:6EB",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.654
+        },
+        {
+          "id": "text:6F0",
+          "text": "32A",
+          "distance": 0.92
+        },
+        {
+          "id": "text:6E7",
+          "text": " 300mA",
+          "distance": 1.834
+        },
+        {
+          "id": "text:6E6",
+          "text": "(3P+N)",
+          "distance": 2.6
+        },
+        {
+          "id": "text:656",
+          "text": "6",
+          "distance": 2.613
+        },
+        {
+          "id": "text:65B",
+          "text": "2x4+1x4",
+          "distance": 2.727
+        },
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.771
+        },
+        {
+          "id": "text:659",
+          "text": " 300mA",
+          "distance": 2.927
+        }
+      ]
+    },
+    {
+      "block_id": "block:6B1",
+      "handle": "6B1",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 22.00134728250996,
+      "label_id": "text:6B2",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96661943116568,
+      "label_y": 21.98588456162688,
+      "confidence": 0.951666,
+      "nearby_texts": [
+        {
+          "id": "text:6B2",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.201
+        },
+        {
+          "id": "text:6C7",
+          "text": "32A",
+          "distance": 1.116
+        },
+        {
+          "id": "text:5EB",
+          "text": "3",
+          "distance": 2.154
+        },
+        {
+          "id": "text:6B6",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:6C6",
+          "text": "32A",
+          "distance": 2.326
+        },
+        {
+          "id": "text:64D",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.615
+        },
+        {
+          "id": "text:6AF",
+          "text": "IF3",
+          "distance": 2.676
+        },
+        {
+          "id": "text:6C0",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.739
+        }
+      ]
+    },
+    {
+      "block_id": "block:6B7",
+      "handle": "6B7",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55192926398821,
+      "y": 22.00392049337243,
+      "label_id": "text:6B2",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96661943116568,
+      "label_y": 21.98588456162688,
+      "confidence": 0.898773,
+      "nearby_texts": [
+        {
+          "id": "text:6B2",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.421
+        },
+        {
+          "id": "text:6C7",
+          "text": "32A",
+          "distance": 0.922
+        },
+        {
+          "id": "text:6B6",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:6C6",
+          "text": "32A",
+          "distance": 2.252
+        },
+        {
+          "id": "text:5EB",
+          "text": "3",
+          "distance": 2.378
+        },
+        {
+          "id": "text:64D",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.631
+        },
+        {
+          "id": "text:6C0",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.774
+        },
+        {
+          "id": "text:6B5",
+          "text": "(3P+N)",
+          "distance": 2.815
+        }
+      ]
+    },
+    {
+      "block_id": "block:6BB",
+      "handle": "6BB",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55195865839131,
+      "y": 21.33645409690653,
+      "label_id": "text:6C0",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96895173902966,
+      "label_y": 21.31841816935194,
+      "confidence": 0.898227,
+      "nearby_texts": [
+        {
+          "id": "text:6C0",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.423
+        },
+        {
+          "id": "text:6C6",
+          "text": "32A",
+          "distance": 0.922
+        },
+        {
+          "id": "text:6BA",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:673",
+          "text": "32A",
+          "distance": 2.252
+        },
+        {
+          "id": "text:5EA",
+          "text": "4",
+          "distance": 2.378
+        },
+        {
+          "id": "text:6B2",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.631
+        },
+        {
+          "id": "text:6B9",
+          "text": "(3P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:6BD",
+          "text": "IF4",
+          "distance": 2.899
+        }
+      ]
+    },
+    {
+      "block_id": "block:6C1",
+      "handle": "6C1",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77539422794588,
+      "y": 21.33388088592765,
+      "label_id": "text:6C0",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.96895173902966,
+      "label_y": 21.31841816935194,
+      "confidence": 0.951132,
+      "nearby_texts": [
+        {
+          "id": "text:6C0",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.203
+        },
+        {
+          "id": "text:6C6",
+          "text": "32A",
+          "distance": 1.116
+        },
+        {
+          "id": "text:5EA",
+          "text": "4",
+          "distance": 2.154
+        },
+        {
+          "id": "text:6BA",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:673",
+          "text": "32A",
+          "distance": 2.326
+        },
+        {
+          "id": "text:6B2",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.615
+        },
+        {
+          "id": "text:6BD",
+          "text": "IF4",
+          "distance": 2.676
+        },
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.867
+        }
+      ]
+    },
+    {
+      "block_id": "block:6C8",
+      "handle": "6C8",
+      "block_name": "ds4x25",
+      "layer": "0",
+      "x": 41.77480638551869,
+      "y": 17.76808888169908,
+      "label_id": "text:678",
+      "label": "4\n25",
+      "label_x": 41.77480638551869,
+      "label_y": 17.861157991093627,
+      "confidence": 0.910471,
+      "nearby_texts": [
+        {
+          "id": "text:678",
+          "text": "4\n25",
+          "distance": 0.372
+        },
+        {
+          "id": "text:689",
+          "text": "With overload relay",
+          "distance": 0.726
+        },
+        {
+          "id": "text:696",
+          "text": "A1",
+          "distance": 1.014
+        },
+        {
+          "id": "text:680",
+          "text": "C",
+          "distance": 1.155
+        },
+        {
+          "id": "text:685",
+          "text": "VFD",
+          "distance": 2.281
+        },
+        {
+          "id": "text:6A4",
+          "text": "M",
+          "distance": 2.678
+        },
+        {
+          "id": "text:68D",
+          "text": "(3P)",
+          "distance": 3.887
+        },
+        {
+          "id": "text:68C",
+          "text": "3xXY",
+          "distance": 4.329
+        }
+      ]
+    },
+    {
+      "block_id": "block:6E8",
+      "handle": "6E8",
+      "block_name": "A$C17AA2362",
+      "layer": "0",
+      "x": 24.55197919405408,
+      "y": 20.00152130420756,
+      "label_id": "text:6EB",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.9689062751212,
+      "label_y": 19.95139170864568,
+      "confidence": 0.888739,
+      "nearby_texts": [
+        {
+          "id": "text:6EB",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.463
+        },
+        {
+          "id": "text:6F0",
+          "text": "32A",
+          "distance": 0.922
+        },
+        {
+          "id": "text:6E7",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:656",
+          "text": "6",
+          "distance": 2.386
+        },
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.504
+        },
+        {
+          "id": "text:6E6",
+          "text": "(3P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:6EC",
+          "text": "SFAF2",
+          "distance": 2.9
+        },
+        {
+          "id": "text:65B",
+          "text": "2x4+1x4",
+          "distance": 2.901
+        }
+      ]
+    },
+    {
+      "block_id": "block:6EA",
+      "handle": "6EA",
+      "block_name": "A$C0B96147B",
+      "layer": "0",
+      "x": 24.77541476360865,
+      "y": 19.99894809322868,
+      "label_id": "text:6EB",
+      "label": "2x(4x10+1x10)",
+      "label_x": 24.9689062751212,
+      "label_y": 19.95139170864568,
+      "confidence": 0.934746,
+      "nearby_texts": [
+        {
+          "id": "text:6EB",
+          "text": "2x(4x10+1x10)",
+          "distance": 0.271
+        },
+        {
+          "id": "text:6F0",
+          "text": "32A",
+          "distance": 1.116
+        },
+        {
+          "id": "text:656",
+          "text": "6",
+          "distance": 2.163
+        },
+        {
+          "id": "text:6E7",
+          "text": " 300mA",
+          "distance": 2.264
+        },
+        {
+          "id": "text:65A",
+          "text": "2x(4x10+1x10)",
+          "distance": 2.487
+        },
+        {
+          "id": "text:6EC",
+          "text": "SFAF2",
+          "distance": 2.677
+        },
+        {
+          "id": "text:65B",
+          "text": "2x4+1x4",
+          "distance": 2.867
+        },
+        {
+          "id": "text:6E6",
+          "text": "(3P+N)",
+          "distance": 3.038
+        }
+      ]
+    },
+    {
+      "block_id": "block:6FA",
+      "handle": "6FA",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 18.66658850964595,
+      "label_id": "text:6F6",
+      "label": "2x4+1x4",
+      "label_x": 24.96887653054081,
+      "label_y": 18.61645891408407,
+      "confidence": 0.888724,
+      "nearby_texts": [
+        {
+          "id": "text:6F6",
+          "text": "2x4+1x4",
+          "distance": 0.463
+        },
+        {
+          "id": "text:6F5",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:79E",
+          "text": "8",
+          "distance": 2.378
+        },
+        {
+          "id": "text:65B",
+          "text": "2x4+1x4",
+          "distance": 2.504
+        },
+        {
+          "id": "text:6F4",
+          "text": "(1P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:6F7",
+          "text": "FAF2",
+          "distance": 2.9
+        },
+        {
+          "id": "text:713",
+          "text": "2x4+1x4",
+          "distance": 2.901
+        },
+        {
+          "id": "text:712",
+          "text": " 300mA",
+          "distance": 3.249
+        }
+      ]
+    },
+    {
+      "block_id": "block:717",
+      "handle": "717",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 17.99912211236515,
+      "label_id": "text:713",
+      "label": "2x4+1x4",
+      "label_x": 24.96887653054081,
+      "label_y": 17.94899251680327,
+      "confidence": 0.888724,
+      "nearby_texts": [
+        {
+          "id": "text:713",
+          "text": "2x4+1x4",
+          "distance": 0.463
+        },
+        {
+          "id": "text:712",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:7A0",
+          "text": "9",
+          "distance": 2.378
+        },
+        {
+          "id": "text:6F6",
+          "text": "2x4+1x4",
+          "distance": 2.504
+        },
+        {
+          "id": "text:711",
+          "text": "(1P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:714",
+          "text": "FAF3",
+          "distance": 2.9
+        },
+        {
+          "id": "text:730",
+          "text": "2x4+1x4",
+          "distance": 2.901
+        },
+        {
+          "id": "text:72F",
+          "text": " 300mA",
+          "distance": 3.249
+        }
+      ]
+    },
+    {
+      "block_id": "block:734",
+      "handle": "734",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 17.33165571496793,
+      "label_id": "text:730",
+      "label": "2x4+1x4",
+      "label_x": 24.96887653054081,
+      "label_y": 17.28152611940605,
+      "confidence": 0.888724,
+      "nearby_texts": [
+        {
+          "id": "text:730",
+          "text": "2x4+1x4",
+          "distance": 0.463
+        },
+        {
+          "id": "text:72F",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:79F",
+          "text": "10",
+          "distance": 2.326
+        },
+        {
+          "id": "text:713",
+          "text": "2x4+1x4",
+          "distance": 2.504
+        },
+        {
+          "id": "text:72E",
+          "text": "(1P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:731",
+          "text": "FAF4",
+          "distance": 2.9
+        },
+        {
+          "id": "text:74D",
+          "text": "2x4+1x4",
+          "distance": 2.901
+        },
+        {
+          "id": "text:74C",
+          "text": " 300mA",
+          "distance": 3.249
+        }
+      ]
+    },
+    {
+      "block_id": "block:751",
+      "handle": "751",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 16.66418931768712,
+      "label_id": "text:74D",
+      "label": "2x4+1x4",
+      "label_x": 24.96887653054081,
+      "label_y": 16.61405972212524,
+      "confidence": 0.888724,
+      "nearby_texts": [
+        {
+          "id": "text:74D",
+          "text": "2x4+1x4",
+          "distance": 0.463
+        },
+        {
+          "id": "text:74C",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:7A1",
+          "text": "11",
+          "distance": 2.335
+        },
+        {
+          "id": "text:730",
+          "text": "2x4+1x4",
+          "distance": 2.504
+        },
+        {
+          "id": "text:74B",
+          "text": "(1P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:74E",
+          "text": "EF1",
+          "distance": 2.9
+        },
+        {
+          "id": "text:76A",
+          "text": "2x4+1x4",
+          "distance": 2.901
+        },
+        {
+          "id": "text:769",
+          "text": " 300mA",
+          "distance": 3.249
+        }
+      ]
+    },
+    {
+      "block_id": "block:76E",
+      "handle": "76E",
+      "block_name": "SSS",
+      "layer": "0",
+      "x": 24.55187675509013,
+      "y": 15.99672292040632,
+      "label_id": "text:76A",
+      "label": "2x4+1x4",
+      "label_x": 24.96887653054081,
+      "label_y": 15.94659332484444,
+      "confidence": 0.888724,
+      "nearby_texts": [
+        {
+          "id": "text:76A",
+          "text": "2x4+1x4",
+          "distance": 0.463
+        },
+        {
+          "id": "text:769",
+          "text": " 300mA",
+          "distance": 2.04
+        },
+        {
+          "id": "text:676",
+          "text": "32A",
+          "distance": 2.301
+        },
+        {
+          "id": "text:7A2",
+          "text": "12",
+          "distance": 2.335
+        },
+        {
+          "id": "text:74D",
+          "text": "2x4+1x4",
+          "distance": 2.504
+        },
+        {
+          "id": "text:768",
+          "text": "(1P+N)",
+          "distance": 2.815
+        },
+        {
+          "id": "text:76B",
+          "text": "EF2",
+          "distance": 2.9
+        },
+        {
+          "id": "text:665",
+          "text": "St-by",
+          "distance": 3.135
+        }
+      ]
+    }
+  ],
+  "associated_label_counts": {
+    "2": 2,
+    "2x(4x10+1x10)": 14,
+    "2x4+1x4": 6,
+    "3xXY": 2,
+    "4\n25": 1,
+    "4x63Amp": 2,
+    "C": 3,
+    "FIRE RATED": 2,
+    "St-by": 2
+  },
+  "unassociated_blocks": [
+    {
+      "id": "block:5CD",
+      "handle": "5CD",
+      "name": "A$C316535B4",
+      "layer": "0",
+      "x": 24.79495435034268,
+      "y": 26.33758426872519,
+      "attributes": {}
+    },
+    {
+      "id": "block:646",
+      "handle": "646",
+      "name": "A$C388C5F75",
+      "layer": "0",
+      "x": 26.36685682752513,
+      "y": 32.12693693903712,
+      "attributes": {}
+    }
+  ],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "text_cluster_radius": 15.0,
+  "text_clusters": [
+    {
+      "layer": "0",
+      "cx": 27.939,
+      "cy": 20.153,
+      "text_ids": [
+        "text:5A5",
+        "text:5A8",
+        "text:5AB",
+        "text:5AC",
+        "text:5AF",
+        "text:5B7",
+        "text:5B9",
+        "text:5BA",
+        "text:5BB",
+        "text:5BE",
+        "text:5BF",
+        "text:5C0",
+        "text:5C1",
+        "text:5C2",
+        "text:5C3",
+        "text:5C4",
+        "text:5C9",
+        "text:5CA",
+        "text:5CF",
+        "text:5D4",
+        "text:5D5",
+        "text:5DA",
+        "text:5DB",
+        "text:5E1",
+        "text:5E2",
+        "text:5E3",
+        "text:5E5",
+        "text:5E6",
+        "text:5E7",
+        "text:5EA",
+        "text:5EB",
+        "text:5EC",
+        "text:5ED",
+        "text:5F1",
+        "text:243",
+        "text:249",
+        "text:254",
+        "text:255",
+        "text:256",
+        "text:261",
+        "text:262",
+        "text:263",
+        "text:648",
+        "text:649",
+        "text:64A",
+        "text:64B",
+        "text:64C",
+        "text:64D",
+        "text:64E",
+        "text:64F",
+        "text:650",
+        "text:652",
+        "text:656",
+        "text:657",
+        "text:658",
+        "text:659",
+        "text:65A",
+        "text:65B",
+        "text:65D",
+        "text:65E",
+        "text:661",
+        "text:665",
+        "text:66A",
+        "text:66B",
+        "text:66C",
+        "text:66E",
+        "text:672",
+        "text:673",
+        "text:674",
+        "text:675",
+        "text:676",
+        "text:6AB",
+        "text:6AC",
+        "text:6AE",
+        "text:6AF",
+        "text:6B2",
+        "text:6B4",
+        "text:6B5",
+        "text:6B6",
+        "text:6B8",
+        "text:6B9",
+        "text:6BA",
+        "text:6BD",
+        "text:6BE",
+        "text:6BF",
+        "text:6C0",
+        "text:6C3",
+        "text:6C6",
+        "text:6C7",
+        "text:6DE",
+        "text:6E1",
+        "text:6E5",
+        "text:6E6",
+        "text:6E7",
+        "text:6E9",
+        "text:6EB",
+        "text:6EC",
+        "text:6F0",
+        "text:6F3",
+        "text:6F4",
+        "text:6F5",
+        "text:6F6",
+        "text:6F7",
+        "text:710",
+        "text:711",
+        "text:712",
+        "text:713",
+        "text:72D",
+        "text:72E",
+        "text:72F",
+        "text:730",
+        "text:74A",
+        "text:74B",
+        "text:74C",
+        "text:74D",
+        "text:767",
+        "text:768",
+        "text:769",
+        "text:76A",
+        "text:79D",
+        "text:79E",
+        "text:7A0",
+        "text:7A4",
+        "text:5A6",
+        "text:5E0",
+        "text:5EE",
+        "text:5EF",
+        "text:626",
+        "text:627",
+        "text:63D",
+        "text:63F",
+        "text:65C",
+        "text:65F",
+        "text:660",
+        "text:662",
+        "text:663",
+        "text:666",
+        "text:667",
+        "text:668",
+        "text:669",
+        "text:677",
+        "text:678",
+        "text:680",
+        "text:689",
+        "text:68C",
+        "text:68D",
+        "text:68E",
+        "text:696",
+        "text:699",
+        "text:69B",
+        "text:6B3",
+        "text:6C2",
+        "text:6C4",
+        "text:6C5",
+        "text:678",
+        "text:6C9",
+        "text:6CB",
+        "text:6CD",
+        "text:6D1",
+        "text:6DF",
+        "text:6E0",
+        "text:6E2",
+        "text:6E3",
+        "text:6ED",
+        "text:6EE",
+        "text:6EF",
+        "text:6F1",
+        "text:6F8",
+        "text:6F9",
+        "text:6FB",
+        "text:6FD",
+        "text:702",
+        "text:714",
+        "text:715",
+        "text:716",
+        "text:718",
+        "text:71A",
+        "text:71F",
+        "text:731",
+        "text:732",
+        "text:733",
+        "text:735",
+        "text:737",
+        "text:73C",
+        "text:74E",
+        "text:74F",
+        "text:750",
+        "text:752",
+        "text:754",
+        "text:759",
+        "text:76B",
+        "text:76C",
+        "text:76D",
+        "text:76F",
+        "text:771",
+        "text:776",
+        "text:783",
+        "text:788",
+        "text:78C",
+        "text:78D",
+        "text:78E",
+        "text:78F",
+        "text:790",
+        "text:793",
+        "text:794",
+        "text:795",
+        "text:796",
+        "text:797",
+        "text:798",
+        "text:799",
+        "text:79A",
+        "text:79B",
+        "text:79C",
+        "text:79F",
+        "text:7A1",
+        "text:7A2",
+        "text:7A3",
+        "text:685",
+        "text:694",
+        "text:695",
+        "text:5F9",
+        "text:5FE",
+        "text:608",
+        "text:611",
+        "text:616",
+        "text:61C",
+        "text:623",
+        "text:628",
+        "text:633",
+        "text:634",
+        "text:635",
+        "text:637",
+        "text:469",
+        "text:470",
+        "text:475",
+        "text:476",
+        "text:6A4"
+      ],
+      "texts": [
+        "DB-B2-FANS2",
+        "S",
+        "Ref.",
+        "Numb.",
+        "1",
+        "size mm²",
+        "MCB",
+        "B.C.: 6KA/400V",
+        "IEC/EN 60898",
+        "4x63Amp",
+        "ISOL.S.",
+        "EFFECTIVE",
+        "LOAD",
+        "CIRCUIT",
+        "VA",
+        "CONDUCTOR",
+        "IF1",
+        "2",
+        "2x(4x10+1x10)",
+        "COP",
+        "CTRL PANEL ",
+        "FACP CM",
+        "OVERRIDE",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "4",
+        "3",
+        "IF2",
+        "471",
+        "FIRE RATED ",
+        "Th",
+        "C",
+        "AUTO",
+        "OFF",
+        "MAN",
+        "ON",
+        "OFF",
+        "FAULT",
+        "4x40 Amp",
+        "Main breaker",
+        "5",
+        "MAGNETIC CIRCUIT BREAKER",
+        "MAGNETIC CIRCUIT BREAKER",
+        "2x(4x10+1x10)",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "MAGNETIC CIRCUIT BREAKER",
+        "6",
+        "2x20",
+        "(1P+N)",
+        " 300mA",
+        "2x(4x10+1x10)",
+        "2x4+1x4",
+        "SFAF1",
+        "2941",
+        "FAF1",
+        "St-by",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "MAGNETIC CIRCUIT BREAKER",
+        "R",
+        "32A",
+        "32A",
+        "32A",
+        "32A",
+        "TO ESMDB-B2",
+        "L=95 m",
+        "4cx16mm²+1cx16mm²",
+        "IF3",
+        "2x(4x10+1x10)",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "IF4",
+        "MAGNETIC CIRCUIT BREAKER",
+        "MAGNETIC CIRCUIT BREAKER",
+        "2x(4x10+1x10)",
+        "863",
+        "32A",
+        "32A",
+        "471",
+        "863",
+        "4x20",
+        "(3P+N)",
+        " 300mA",
+        "MAGNETIC CIRCUIT BREAKER",
+        "2x(4x10+1x10)",
+        "SFAF2",
+        "32A",
+        "2x20",
+        "(1P+N)",
+        " 300mA",
+        "2x4+1x4",
+        "FAF2",
+        "2x20",
+        "(1P+N)",
+        " 300mA",
+        "2x4+1x4",
+        "2x20",
+        "(1P+N)",
+        " 300mA",
+        "2x4+1x4",
+        "2x20",
+        "(1P+N)",
+        " 300mA",
+        "2x4+1x4",
+        "2x20",
+        "(1P+N)",
+        " 300mA",
+        "2x4+1x4",
+        "7",
+        "8",
+        "9",
+        "FIRE RATED CABLE",
+        "T",
+        "IF-01",
+        "471",
+        "471",
+        "3xXY",
+        "(3P)",
+        "MONITORING",
+        "Coordinate with the Fan supplier and smoke managment system strategy.",
+        "IF-01",
+        "2941",
+        "2941",
+        "200",
+        "SPARE",
+        "--",
+        "--",
+        "--",
+        "--",
+        "FAF-02",
+        "SFAF-02",
+        "C",
+        "With overload relay",
+        "3xXY",
+        "(3P)",
+        "3 CORE FR CABLE",
+        "A1",
+        "MONITORING",
+        "Coordinate with the Fan supplier and smoke managment system strategy.",
+        "IF-02",
+        "IF-02",
+        "863",
+        "863",
+        "4\n25",
+        "K",
+        "T",
+        "Contactors 1x10A",
+        "MTS",
+        "471",
+        "471",
+        "863",
+        "863",
+        "2941",
+        "2941",
+        "2941",
+        "SFAF-03",
+        "300",
+        "FAF-03",
+        "K",
+        "T",
+        "MTS",
+        "FAF3",
+        "100",
+        "FAF-04",
+        "K",
+        "T",
+        "MTS",
+        "FAF4",
+        "300",
+        "FAF-05",
+        "K",
+        "T",
+        "MTS",
+        "EF1",
+        "300",
+        "EF-05",
+        "K",
+        "T",
+        "MTS",
+        "EF2",
+        "300",
+        "EF-06",
+        "K",
+        "T",
+        "MTS",
+        "Contactors 1x10A",
+        "9050",
+        "9050",
+        "9150",
+        "9150",
+        "8950",
+        "8950",
+        ",",
+        "27150 VA",
+        "41 A/PH",
+        "27150 VA",
+        "41 A/PH",
+        ",",
+        "TOTAL CONNECTED LOAD",
+        "TOTAL DEMAND LOAD 100%%%",
+        "TOTAL CONNECTED 3PH LOAD",
+        "TOTAL DEMAND LOAD 3PH",
+        "10",
+        "11",
+        "12",
+        "13",
+        "VFD",
+        "FANS",
+        "CTRL PANEL",
+        "C",
+        "Th",
+        "C",
+        "C",
+        "Th",
+        "M",
+        "With overload relay",
+        "3 CORE FR CABLE",
+        "FANS",
+        "CTRL PANEL",
+        "A1",
+        "A1",
+        "2",
+        "25",
+        "2",
+        "25",
+        "M"
+      ]
+    },
+    {
+      "layer": "E-Text",
+      "cx": 12.448,
+      "cy": 6.482,
+      "text_ids": [
+        "text:7A6",
+        "text:7A7"
+      ],
+      "texts": [
+        "TO BE CHECKED WITH THE MECHANICAL CONTRACTOR",
+        "TO BE DEVIDED INTO TWO PANELS"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:5A5",
+      "layer": "0",
+      "x": 14.43728562503465,
+      "y": 25.77577687900484,
+      "height": 0.4851194963624741,
+      "text": "DB-B2-FANS2"
+    },
+    {
+      "id": "text:5A6",
+      "layer": "0",
+      "x": 30.7942464185261,
+      "y": 25.18206233166129,
+      "height": 0.2310092839821304,
+      "text": "T"
+    },
+    {
+      "id": "text:5A8",
+      "layer": "0",
+      "x": 29.28511765052907,
+      "y": 25.18206233166129,
+      "height": 0.2310092839821304,
+      "text": "S"
+    },
+    {
+      "id": "text:5AB",
+      "layer": "0",
+      "x": 27.65911557118751,
+      "y": 25.4410282978366,
+      "height": 0.2310092839821304,
+      "text": "Ref."
+    },
+    {
+      "id": "text:5AC",
+      "layer": "0",
+      "x": 26.9595555072964,
+      "y": 25.4410282978366,
+      "height": 0.2310092839821304,
+      "text": "Numb."
+    },
+    {
+      "id": "text:5AF",
+      "layer": "0",
+      "x": 26.92814291839831,
+      "y": 23.3162265708248,
+      "height": 0.2310092839821304,
+      "text": "1"
+    },
+    {
+      "id": "text:5B7",
+      "layer": "0",
+      "x": 25.93347722770058,
+      "y": 27.87536857808445,
+      "height": 0.1857796530647122,
+      "text": "size mm²"
+    },
+    {
+      "id": "text:5B9",
+      "layer": "0",
+      "x": 19.73765248119243,
+      "y": 24.68400113722746,
+      "height": 0.2310092839821304,
+      "text": "MCB"
+    },
+    {
+      "id": "text:5BA",
+      "layer": "0",
+      "x": 19.73465937807568,
+      "y": 24.39281076305051,
+      "height": 0.2310092839821304,
+      "text": "B.C.: 6KA/400V"
+    },
+    {
+      "id": "text:5BB",
+      "layer": "0",
+      "x": 19.73465937807568,
+      "y": 24.08141818044678,
+      "height": 0.2566769822023681,
+      "text": "IEC/EN 60898"
+    },
+    {
+      "id": "text:5BE",
+      "layer": "0",
+      "x": 15.33326946537353,
+      "y": 18.67539494678349,
+      "height": 0.2310092839821304,
+      "text": "4x63Amp"
+    },
+    {
+      "id": "text:5BF",
+      "layer": "0",
+      "x": 15.33326946537353,
+      "y": 18.29266399490152,
+      "height": 0.2310092839821304,
+      "text": "ISOL.S."
+    },
+    {
+      "id": "text:5C0",
+      "layer": "0",
+      "x": 29.23891856207855,
+      "y": 27.87536857808445,
+      "height": 0.2310092839821304,
+      "text": "EFFECTIVE"
+    },
+    {
+      "id": "text:5C1",
+      "layer": "0",
+      "x": 28.88913852966733,
+      "y": 27.87536857808445,
+      "height": 0.2310092839821304,
+      "text": "LOAD"
+    },
+    {
+      "id": "text:5C2",
+      "layer": "0",
+      "x": 27.24517237966292,
+      "y": 27.87536857808445,
+      "height": 0.2310092839821304,
+      "text": "CIRCUIT"
+    },
+    {
+      "id": "text:5C3",
+      "layer": "0",
+      "x": 28.53935849772178,
+      "y": 27.87536857808445,
+      "height": 0.2310092839821304,
+      "text": "VA"
+    },
+    {
+      "id": "text:5C4",
+      "layer": "0",
+      "x": 25.93938595581211,
+      "y": 27.88645666996454,
+      "height": 0.1857796530647122,
+      "text": "CONDUCTOR"
+    },
+    {
+      "id": "text:5C9",
+      "layer": "0",
+      "x": 27.45077773941092,
+      "y": 23.34832024826174,
+      "height": 0.2310092839821304,
+      "text": "IF1"
+    },
+    {
+      "id": "text:5CA",
+      "layer": "0",
+      "x": 26.92818139738746,
+      "y": 22.6487601765708,
+      "height": 0.2310092839821304,
+      "text": "2"
+    },
+    {
+      "id": "text:5CF",
+      "layer": "0",
+      "x": 24.96661943116568,
+      "y": 23.32081735490792,
+      "height": 0.2310092839821304,
+      "text": "2x(4x10+1x10)"
+    },
+    {
+      "id": "text:5D4",
+      "layer": "0",
+      "x": 23.22715375538327,
+      "y": 24.72706331448135,
+      "height": 0.10125,
+      "text": "COP"
+    },
+    {
+      "id": "text:5D5",
+      "layer": "0",
+      "x": 23.21274449595593,
+      "y": 24.54553132395231,
+      "height": 0.10125,
+      "text": "CTRL PANEL "
+    },
+    {
+      "id": "text:5DA",
+      "layer": "0",
+      "x": 23.22715375538327,
+      "y": 25.33830363078014,
+      "height": 0.10125,
+      "text": "FACP CM"
+    },
+    {
+      "id": "text:5DB",
+      "layer": "0",
+      "x": 23.21274449595593,
+      "y": 25.1567716402511,
+      "height": 0.10125,
+      "text": "OVERRIDE"
+    },
+    {
+      "id": "text:5E0",
+      "layer": "0",
+      "x": 32.28734631383203,
+      "y": 23.34898801807285,
+      "height": 0.2310092839821304,
+      "text": "IF-01"
+    },
+    {
+      "id": "text:5E1",
+      "layer": "0",
+      "x": 21.13631395076744,
+      "y": 23.37327817776677,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:5E2",
+      "layer": "0",
+      "x": 21.74064759363763,
+      "y": 23.37327817776677,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:5E3",
+      "layer": "0",
+      "x": 22.51668276650243,
+      "y": 23.37327817776677,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:5E5",
+      "layer": "0",
+      "x": 21.13634334517054,
+      "y": 22.70581178118446,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:5E6",
+      "layer": "0",
+      "x": 21.74067698804073,
+      "y": 22.70581178118446,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:5E7",
+      "layer": "0",
+      "x": 22.51671216090553,
+      "y": 22.70581178118446,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:5EA",
+      "layer": "0",
+      "x": 26.92818140157841,
+      "y": 21.31382738701505,
+      "height": 0.2310092839821304,
+      "text": "4"
+    },
+    {
+      "id": "text:5EB",
+      "layer": "0",
+      "x": 26.92818139925011,
+      "y": 21.98129378185113,
+      "height": 0.2310092839821304,
+      "text": "3"
+    },
+    {
+      "id": "text:5EC",
+      "layer": "0",
+      "x": 27.45077319921337,
+      "y": 22.68085385179584,
+      "height": 0.2310092839821304,
+      "text": "IF2"
+    },
+    {
+      "id": "text:5ED",
+      "layer": "0",
+      "x": 28.43362794316717,
+      "y": 23.31622661482979,
+      "height": 0.2310092839821304,
+      "text": "471"
+    },
+    {
+      "id": "text:5EE",
+      "layer": "0",
+      "x": 29.42194507236935,
+      "y": 23.31622702333116,
+      "height": 0.2310092839821304,
+      "text": "471"
+    },
+    {
+      "id": "text:5EF",
+      "layer": "0",
+      "x": 30.39746878075756,
+      "y": 23.31622690994264,
+      "height": 0.2310092839821304,
+      "text": "471"
+    },
+    {
+      "id": "text:5F1",
+      "layer": "0",
+      "x": 24.95217542316176,
+      "y": 23.67407176453126,
+      "height": 0.2310092839821304,
+      "text": "FIRE RATED "
+    },
+    {
+      "id": "text:5F9",
+      "layer": "0",
+      "x": 40.63560622523882,
+      "y": 25.99516680064117,
+      "height": 0.1009007999999999,
+      "text": "C"
+    },
+    {
+      "id": "text:5FE",
+      "layer": "0",
+      "x": 40.61277735338889,
+      "y": 26.24597031071753,
+      "height": 0.1009007999999999,
+      "text": "Th"
+    },
+    {
+      "id": "text:608",
+      "layer": "0",
+      "x": 40.63560622523882,
+      "y": 26.49096698367939,
+      "height": 0.1009007999999999,
+      "text": "C"
+    },
+    {
+      "id": "text:611",
+      "layer": "0",
+      "x": 40.63560622523882,
+      "y": 25.35816756491986,
+      "height": 0.1009007999999999,
+      "text": "C"
+    },
+    {
+      "id": "text:616",
+      "layer": "0",
+      "x": 40.61277735338889,
+      "y": 25.60897107499623,
+      "height": 0.1009007999999999,
+      "text": "Th"
+    },
+    {
+      "id": "text:61C",
+      "layer": "0",
+      "x": 42.36206733820372,
+      "y": 25.64566420224001,
+      "height": 0.1122490718961676,
+      "text": "M"
+    },
+    {
+      "id": "text:623",
+      "layer": "0",
+      "x": 41.6550771697738,
+      "y": 26.43594106084638,
+      "height": 0.1343999999999999,
+      "text": "With overload relay"
+    },
+    {
+      "id": "text:626",
+      "layer": "0",
+      "x": 37.44825623476289,
+      "y": 25.78012143758097,
+      "height": 0.1617064987874917,
+      "text": "3xXY"
+    },
+    {
+      "id": "text:627",
+      "layer": "0",
+      "x": 37.89593934140511,
+      "y": 25.8102582897569,
+      "height": 0.1131945491512442,
+      "text": "(3P)"
+    },
+    {
+      "id": "text:628",
+      "layer": "0",
+      "x": 40.21619372734212,
+      "y": 27.32431495220371,
+      "height": 0.1617064987874917,
+      "text": "3 CORE FR CABLE"
+    },
+    {
+      "id": "text:633",
+      "layer": "0",
+      "x": 41.66680091725074,
+      "y": 24.87083402621065,
+      "height": 0.1077999999999999,
+      "text": "FANS"
+    },
+    {
+      "id": "text:634",
+      "layer": "0",
+      "x": 41.52977727459155,
+      "y": 24.72142498051253,
+      "height": 0.1077999999999999,
+      "text": "CTRL PANEL"
+    },
+    {
+      "id": "text:635",
+      "layer": "0",
+      "x": 40.77915891924285,
+      "y": 25.35816756491986,
+      "height": 0.1009007999999999,
+      "text": "A1"
+    },
+    {
+      "id": "text:637",
+      "layer": "0",
+      "x": 40.77915891924285,
+      "y": 25.99516680064117,
+      "height": 0.1009007999999999,
+      "text": "A1"
+    },
+    {
+      "id": "text:63D",
+      "layer": "0",
+      "x": 39.81156982913025,
+      "y": 24.79427197885671,
+      "height": 0.1077999999999999,
+      "text": "MONITORING"
+    },
+    {
+      "id": "text:63F",
+      "layer": "0",
+      "x": 36.22435563815169,
+      "y": 23.94595630194963,
+      "height": 0.3023999999999998,
+      "text": "Coordinate with the Fan supplier and smoke managment system strategy."
+    },
+    {
+      "id": "text:243",
+      "layer": "0",
+      "x": 22.91443739769897,
+      "y": 31.46350252359501,
+      "height": 0.144144,
+      "text": "Th"
+    },
+    {
+      "id": "text:249",
+      "layer": "0",
+      "x": 22.947050072162927,
+      "y": 30.881903342927885,
+      "height": 0.144144,
+      "text": "C"
+    },
+    {
+      "id": "text:254",
+      "layer": "0",
+      "x": 22.74815078864116,
+      "y": 30.389975401093338,
+      "height": 0.053902166262445,
+      "text": "AUTO"
+    },
+    {
+      "id": "text:255",
+      "layer": "0",
+      "x": 22.92669194327549,
+      "y": 30.472671059419312,
+      "height": 0.053902166262445,
+      "text": "OFF"
+    },
+    {
+      "id": "text:256",
+      "layer": "0",
+      "x": 23.10523309790982,
+      "y": 30.389975401093338,
+      "height": 0.053902166262445,
+      "text": "MAN"
+    },
+    {
+      "id": "text:261",
+      "layer": "0",
+      "x": 22.89996596830837,
+      "y": 29.648682494391082,
+      "height": 0.0283269359250714,
+      "text": "ON"
+    },
+    {
+      "id": "text:262",
+      "layer": "0",
+      "x": 22.988110789699693,
+      "y": 29.648682494391082,
+      "height": 0.0283269359250714,
+      "text": "OFF"
+    },
+    {
+      "id": "text:263",
+      "layer": "0",
+      "x": 22.94589293329658,
+      "y": 29.83331623202251,
+      "height": 0.0169961615550429,
+      "text": "FAULT"
+    },
+    {
+      "id": "text:648",
+      "layer": "0",
+      "x": 9.960284515408503,
+      "y": 25.70909681062185,
+      "height": 0.4620185679642609,
+      "text": "4x40 Amp"
+    },
+    {
+      "id": "text:649",
+      "layer": "0",
+      "x": 9.960284515408503,
+      "y": 24.94363490685792,
+      "height": 0.4620185679642609,
+      "text": "Main breaker"
+    },
+    {
+      "id": "text:64A",
+      "layer": "0",
+      "x": 26.92818140390672,
+      "y": 20.61426732067921,
+      "height": 0.2310092839821304,
+      "text": "5"
+    },
+    {
+      "id": "text:64B",
+      "layer": "0",
+      "x": 21.13631395076744,
+      "y": 23.11085552613222,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:64C",
+      "layer": "0",
+      "x": 21.13634334517054,
+      "y": 22.44338912954991,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:64D",
+      "layer": "0",
+      "x": 24.96895173902966,
+      "y": 22.65335096263298,
+      "height": 0.2310092839821304,
+      "text": "2x(4x10+1x10)"
+    },
+    {
+      "id": "text:64E",
+      "layer": "0",
+      "x": 21.13637273957364,
+      "y": 20.70341259155393,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:64F",
+      "layer": "0",
+      "x": 21.74070638244383,
+      "y": 20.70341259155393,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:650",
+      "layer": "0",
+      "x": 22.51674155530863,
+      "y": 20.70341259155393,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:652",
+      "layer": "0",
+      "x": 21.13637273957364,
+      "y": 20.44098993991938,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:656",
+      "layer": "0",
+      "x": 26.92813294253655,
+      "y": 19.9468009240969,
+      "height": 0.2310092839821304,
+      "text": "6"
+    },
+    {
+      "id": "text:657",
+      "layer": "0",
+      "x": 21.13626144233503,
+      "y": 19.36847979804006,
+      "height": 0.2310092839821304,
+      "text": "2x20"
+    },
+    {
+      "id": "text:658",
+      "layer": "0",
+      "x": 21.74059508520521,
+      "y": 19.36847979804006,
+      "height": 0.2,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:659",
+      "layer": "0",
+      "x": 22.51663025807001,
+      "y": 19.36847979804006,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:65A",
+      "layer": "0",
+      "x": 24.96891513386153,
+      "y": 20.61885810499516,
+      "height": 0.2310092839821304,
+      "text": "2x(4x10+1x10)"
+    },
+    {
+      "id": "text:65B",
+      "layer": "0",
+      "x": 24.96887653100647,
+      "y": 19.28392531136488,
+      "height": 0.2310092839821304,
+      "text": "2x4+1x4"
+    },
+    {
+      "id": "text:65C",
+      "layer": "0",
+      "x": 32.28738025029533,
+      "y": 22.68152162323677,
+      "height": 0.2310092839821304,
+      "text": "IF-01"
+    },
+    {
+      "id": "text:65D",
+      "layer": "0",
+      "x": 27.45072990854614,
+      "y": 20.64636099590425,
+      "height": 0.2310092839821304,
+      "text": "SFAF1"
+    },
+    {
+      "id": "text:65E",
+      "layer": "0",
+      "x": 28.43358465436258,
+      "y": 20.61426736421854,
+      "height": 0.2310092839821304,
+      "text": "2941"
+    },
+    {
+      "id": "text:65F",
+      "layer": "0",
+      "x": 29.42190178356476,
+      "y": 20.61426777271991,
+      "height": 0.2310092839821304,
+      "text": "2941"
+    },
+    {
+      "id": "text:660",
+      "layer": "0",
+      "x": 30.39742549195297,
+      "y": 20.61426765933138,
+      "height": 0.2310092839821304,
+      "text": "2941"
+    },
+    {
+      "id": "text:661",
+      "layer": "0",
+      "x": 27.45069130522542,
+      "y": 19.31142820227397,
+      "height": 0.2310092839821304,
+      "text": "FAF1"
+    },
+    {
+      "id": "text:662",
+      "layer": "0",
+      "x": 28.43354605150752,
+      "y": 19.27933457058825,
+      "height": 0.2310092839821304,
+      "text": "200"
+    },
+    {
+      "id": "text:663",
+      "layer": "0",
+      "x": 32.28712516663008,
+      "y": 15.32505318099138,
+      "height": 0.2310092839821304,
+      "text": "SPARE"
+    },
+    {
+      "id": "text:665",
+      "layer": "0",
+      "x": 24.99882137555041,
+      "y": 15.22094429070567,
+      "height": 0.2310092839821304,
+      "text": "St-by"
+    },
+    {
+      "id": "text:666",
+      "layer": "0",
+      "x": 27.45055659919389,
+      "y": 15.30662982371141,
+      "height": 0.2310092839821304,
+      "text": "--"
+    },
+    {
+      "id": "text:667",
+      "layer": "0",
+      "x": 28.43344527961098,
+      "y": 15.2745361920257,
+      "height": 0.2310092839821304,
+      "text": "--"
+    },
+    {
+      "id": "text:668",
+      "layer": "0",
+      "x": 29.4217624083475,
+      "y": 15.27453660052706,
+      "height": 0.2310092839821304,
+      "text": "--"
+    },
+    {
+      "id": "text:669",
+      "layer": "0",
+      "x": 30.39728611673571,
+      "y": 15.27453648713854,
+      "height": 0.2310092839821304,
+      "text": "--"
+    },
+    {
+      "id": "text:66A",
+      "layer": "0",
+      "x": 21.13617519907065,
+      "y": 15.36368141947751,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:66B",
+      "layer": "0",
+      "x": 21.7405088424065,
+      "y": 15.36368141947751,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:66C",
+      "layer": "0",
+      "x": 22.51654401480563,
+      "y": 15.36368141947751,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:66E",
+      "layer": "0",
+      "x": 21.13617519907065,
+      "y": 15.10125876772654,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:672",
+      "layer": "0",
+      "x": 28.36659061315812,
+      "y": 25.18206233166129,
+      "height": 0.2310092839821304,
+      "text": "R"
+    },
+    {
+      "id": "text:673",
+      "layer": "0",
+      "x": 23.80731245422147,
+      "y": 20.80503147044656,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:674",
+      "layer": "0",
+      "x": 23.80725366541527,
+      "y": 22.80743066007708,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:675",
+      "layer": "0",
+      "x": 23.80728305981837,
+      "y": 23.47489705665939,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:676",
+      "layer": "0",
+      "x": 23.80716337508865,
+      "y": 15.4525428468638,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:677",
+      "layer": "0",
+      "x": 33.48057637003593,
+      "y": 19.32985155967035,
+      "height": 0.2310092839821304,
+      "text": "FAF-02"
+    },
+    {
+      "id": "text:678",
+      "layer": "0",
+      "x": 32.28720154858537,
+      "y": 20.66478435318422,
+      "height": 0.2310092839821304,
+      "text": "SFAF-02"
+    },
+    {
+      "id": "text:469",
+      "layer": "0",
+      "x": 41.85845965281495,
+      "y": 26.12137542275696,
+      "height": 0.05,
+      "text": "2"
+    },
+    {
+      "id": "text:470",
+      "layer": "0",
+      "x": 41.83517580113213,
+      "y": 26.02175447294052,
+      "height": 0.05,
+      "text": "25"
+    },
+    {
+      "id": "text:475",
+      "layer": "0",
+      "x": 41.858459652349296,
+      "y": 25.484376187035657,
+      "height": 0.05,
+      "text": "2"
+    },
+    {
+      "id": "text:476",
+      "layer": "0",
+      "x": 41.83517580066648,
+      "y": 25.384755237219217,
+      "height": 0.05,
+      "text": "25"
+    },
+    {
+      "id": "text:680",
+      "layer": "0",
+      "x": 40.63533326064579,
+      "y": 17.72015386315034,
+      "height": 0.1009007999999999,
+      "text": "C"
+    },
+    {
+      "id": "text:685",
+      "layer": "0",
+      "x": 42.36179437361069,
+      "y": 17.21713271476765,
+      "height": 0.1122490718961676,
+      "text": "VFD"
+    },
+    {
+      "id": "text:689",
+      "layer": "0",
+      "x": 41.73549874744721,
+      "y": 17.94929126482894,
+      "height": 0.1343999999999999,
+      "text": "With overload relay"
+    },
+    {
+      "id": "text:68C",
+      "layer": "0",
+      "x": 37.44798327016987,
+      "y": 17.79981342175015,
+      "height": 0.1617064987874917,
+      "text": "3xXY"
+    },
+    {
+      "id": "text:68D",
+      "layer": "0",
+      "x": 37.89566637681209,
+      "y": 17.82995027392608,
+      "height": 0.1131945491512442,
+      "text": "(3P)"
+    },
+    {
+      "id": "text:68E",
+      "layer": "0",
+      "x": 40.21592076274909,
+      "y": 19.04930201471289,
+      "height": 0.1617064987874917,
+      "text": "3 CORE FR CABLE"
+    },
+    {
+      "id": "text:694",
+      "layer": "0",
+      "x": 43.01154651505284,
+      "y": 16.59582108871982,
+      "height": 0.1077999999999999,
+      "text": "FANS"
+    },
+    {
+      "id": "text:695",
+      "layer": "0",
+      "x": 42.87452287239365,
+      "y": 16.4464120430217,
+      "height": 0.1077999999999999,
+      "text": "CTRL PANEL"
+    },
+    {
+      "id": "text:696",
+      "layer": "0",
+      "x": 40.77888595464982,
+      "y": 17.72015386315034,
+      "height": 0.1009007999999999,
+      "text": "A1"
+    },
+    {
+      "id": "text:699",
+      "layer": "0",
+      "x": 41.15631542693235,
+      "y": 16.51925904136588,
+      "height": 0.1077999999999999,
+      "text": "MONITORING"
+    },
+    {
+      "id": "text:69B",
+      "layer": "0",
+      "x": 36.22408267355867,
+      "y": 15.6709433644588,
+      "height": 0.3023999999999998,
+      "text": "Coordinate with the Fan supplier and smoke managment system strategy."
+    },
+    {
+      "id": "text:6A4",
+      "layer": "0",
+      "x": 43.29621084698819,
+      "y": 17.21713271476765,
+      "height": 0.1122490718961676,
+      "text": "M"
+    },
+    {
+      "id": "text:6AB",
+      "layer": "0",
+      "x": 7.879263952964621,
+      "y": 19.53479288560775,
+      "height": 0.465075421909013,
+      "text": "TO ESMDB-B2"
+    },
+    {
+      "id": "text:6AC",
+      "layer": "0",
+      "x": 7.879263952964621,
+      "y": 17.90167796502792,
+      "height": 0.2876046574480581,
+      "text": "L=95 m"
+    },
+    {
+      "id": "text:6AE",
+      "layer": "0",
+      "x": 7.879263952964621,
+      "y": 18.65865551874013,
+      "height": 0.4416946268147157,
+      "text": "4cx16mm²+1cx16mm²"
+    },
+    {
+      "id": "text:6AF",
+      "layer": "0",
+      "x": 27.45077773941092,
+      "y": 22.01338745498069,
+      "height": 0.2310092839821304,
+      "text": "IF3"
+    },
+    {
+      "id": "text:6B2",
+      "layer": "0",
+      "x": 24.96661943116568,
+      "y": 21.98588456162688,
+      "height": 0.2310092839821304,
+      "text": "2x(4x10+1x10)"
+    },
+    {
+      "id": "text:6B3",
+      "layer": "0",
+      "x": 32.28734631383203,
+      "y": 22.01405522479181,
+      "height": 0.2310092839821304,
+      "text": "IF-02"
+    },
+    {
+      "id": "text:6B4",
+      "layer": "0",
+      "x": 21.13631395076744,
+      "y": 22.03834538448573,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:6B5",
+      "layer": "0",
+      "x": 21.74064759363763,
+      "y": 22.03834538448573,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:6B6",
+      "layer": "0",
+      "x": 22.51668276650243,
+      "y": 22.03834538448573,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:6B8",
+      "layer": "0",
+      "x": 21.13634334517054,
+      "y": 21.37087898790342,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:6B9",
+      "layer": "0",
+      "x": 21.74067698804073,
+      "y": 21.37087898790342,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:6BA",
+      "layer": "0",
+      "x": 22.51671216090553,
+      "y": 21.37087898790342,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:6BD",
+      "layer": "0",
+      "x": 27.45077319921337,
+      "y": 21.3459210585148,
+      "height": 0.2310092839821304,
+      "text": "IF4"
+    },
+    {
+      "id": "text:6BE",
+      "layer": "0",
+      "x": 21.13631395076744,
+      "y": 21.77592273285118,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:6BF",
+      "layer": "0",
+      "x": 21.13634334517054,
+      "y": 21.10845633626887,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:6C0",
+      "layer": "0",
+      "x": 24.96895173902966,
+      "y": 21.31841816935194,
+      "height": 0.2310092839821304,
+      "text": "2x(4x10+1x10)"
+    },
+    {
+      "id": "text:6C2",
+      "layer": "0",
+      "x": 32.28738025029533,
+      "y": 21.34658882995573,
+      "height": 0.2310092839821304,
+      "text": "IF-02"
+    },
+    {
+      "id": "text:6C3",
+      "layer": "0",
+      "x": 28.43362794549547,
+      "y": 21.31382742671267,
+      "height": 0.2310092839821304,
+      "text": "863"
+    },
+    {
+      "id": "text:6C4",
+      "layer": "0",
+      "x": 29.421945074232,
+      "y": 21.31382783521403,
+      "height": 0.2310092839821304,
+      "text": "863"
+    },
+    {
+      "id": "text:6C5",
+      "layer": "0",
+      "x": 30.39746878262021,
+      "y": 21.31382772182551,
+      "height": 0.2310092839821304,
+      "text": "863"
+    },
+    {
+      "id": "text:6C6",
+      "layer": "0",
+      "x": 23.80725366541527,
+      "y": 21.47249786679604,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:6C7",
+      "layer": "0",
+      "x": 23.80728305981837,
+      "y": 22.13996426337835,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:678",
+      "layer": "0",
+      "x": 41.77480638551869,
+      "y": 17.861157991093627,
+      "height": 0.07,
+      "text": "4\n25"
+    },
+    {
+      "id": "text:6C9",
+      "layer": "0",
+      "x": 32.49951020221569,
+      "y": 19.43076624821843,
+      "height": 0.1177963047505901,
+      "text": "K"
+    },
+    {
+      "id": "text:6CB",
+      "layer": "0",
+      "x": 32.27031774598517,
+      "y": 19.43076624821843,
+      "height": 0.1177963047505901,
+      "text": "T"
+    },
+    {
+      "id": "text:6CD",
+      "layer": "0",
+      "x": 33.73160949920647,
+      "y": 19.99105260132783,
+      "height": 0.193037953436336,
+      "text": "Contactors 1x10A"
+    },
+    {
+      "id": "text:6D1",
+      "layer": "0",
+      "x": 31.86681702326395,
+      "y": 19.43076624821843,
+      "height": 0.1177963047505901,
+      "text": "MTS"
+    },
+    {
+      "id": "text:6DE",
+      "layer": "0",
+      "x": 28.43366187963046,
+      "y": 22.64876021999371,
+      "height": 0.2310092839821304,
+      "text": "471"
+    },
+    {
+      "id": "text:6DF",
+      "layer": "0",
+      "x": 29.42197900883265,
+      "y": 22.64876062849508,
+      "height": 0.2310092839821304,
+      "text": "471"
+    },
+    {
+      "id": "text:6E0",
+      "layer": "0",
+      "x": 30.39750271722086,
+      "y": 22.64876051510655,
+      "height": 0.2310092839821304,
+      "text": "471"
+    },
+    {
+      "id": "text:6E1",
+      "layer": "0",
+      "x": 28.43359400903218,
+      "y": 21.98129382143234,
+      "height": 0.2310092839821304,
+      "text": "863"
+    },
+    {
+      "id": "text:6E2",
+      "layer": "0",
+      "x": 29.4219111377687,
+      "y": 21.9812942299337,
+      "height": 0.2310092839821304,
+      "text": "863"
+    },
+    {
+      "id": "text:6E3",
+      "layer": "0",
+      "x": 30.39743484615691,
+      "y": 21.98129411654518,
+      "height": 0.2310092839821304,
+      "text": "863"
+    },
+    {
+      "id": "text:6E5",
+      "layer": "0",
+      "x": 21.13636388083331,
+      "y": 20.03594619520445,
+      "height": 0.2310092839821304,
+      "text": "4x20"
+    },
+    {
+      "id": "text:6E6",
+      "layer": "0",
+      "x": 21.7406975237035,
+      "y": 20.03594619520445,
+      "height": 0.2,
+      "text": "(3P+N)"
+    },
+    {
+      "id": "text:6E7",
+      "layer": "0",
+      "x": 22.5167326965683,
+      "y": 20.03594619520445,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:6E9",
+      "layer": "0",
+      "x": 21.13636388083331,
+      "y": 19.7735235435699,
+      "height": 0.17,
+      "text": "MAGNETIC CIRCUIT BREAKER"
+    },
+    {
+      "id": "text:6EB",
+      "layer": "0",
+      "x": 24.9689062751212,
+      "y": 19.95139170864568,
+      "height": 0.2310092839821304,
+      "text": "2x(4x10+1x10)"
+    },
+    {
+      "id": "text:6EC",
+      "layer": "0",
+      "x": 27.45072104980581,
+      "y": 19.97889459955477,
+      "height": 0.2310092839821304,
+      "text": "SFAF2"
+    },
+    {
+      "id": "text:6ED",
+      "layer": "0",
+      "x": 28.43357579562225,
+      "y": 19.94680096786906,
+      "height": 0.2310092839821304,
+      "text": "2941"
+    },
+    {
+      "id": "text:6EE",
+      "layer": "0",
+      "x": 29.42189292482443,
+      "y": 19.94680137637042,
+      "height": 0.2310092839821304,
+      "text": "2941"
+    },
+    {
+      "id": "text:6EF",
+      "layer": "0",
+      "x": 30.39741663321264,
+      "y": 19.9468012629819,
+      "height": 0.2310092839821304,
+      "text": "2941"
+    },
+    {
+      "id": "text:6F0",
+      "layer": "0",
+      "x": 23.80730359548114,
+      "y": 20.13756507409708,
+      "height": 0.12,
+      "text": "32A"
+    },
+    {
+      "id": "text:6F1",
+      "layer": "0",
+      "x": 32.28719268984504,
+      "y": 19.99731795683474,
+      "height": 0.2310092839821304,
+      "text": "SFAF-03"
+    },
+    {
+      "id": "text:6F3",
+      "layer": "0",
+      "x": 21.13626144186937,
+      "y": 18.70101340075926,
+      "height": 0.2310092839821304,
+      "text": "2x20"
+    },
+    {
+      "id": "text:6F4",
+      "layer": "0",
+      "x": 21.74059508473955,
+      "y": 18.70101340075926,
+      "height": 0.2,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:6F5",
+      "layer": "0",
+      "x": 22.51663025760435,
+      "y": 18.70101340075926,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:6F6",
+      "layer": "0",
+      "x": 24.96887653054081,
+      "y": 18.61645891408407,
+      "height": 0.2310092839821304,
+      "text": "2x4+1x4"
+    },
+    {
+      "id": "text:6F7",
+      "layer": "0",
+      "x": 27.45069130475976,
+      "y": 18.64396180499316,
+      "height": 0.2310092839821304,
+      "text": "FAF2"
+    },
+    {
+      "id": "text:6F8",
+      "layer": "0",
+      "x": 29.4218629991018,
+      "y": 18.61186817330745,
+      "height": 0.2310092839821304,
+      "text": "300"
+    },
+    {
+      "id": "text:6F9",
+      "layer": "0",
+      "x": 33.48057636957027,
+      "y": 18.66238516238955,
+      "height": 0.2310092839821304,
+      "text": "FAF-03"
+    },
+    {
+      "id": "text:6FB",
+      "layer": "0",
+      "x": 32.49951020175003,
+      "y": 18.76329985093762,
+      "height": 0.1177963047505901,
+      "text": "K"
+    },
+    {
+      "id": "text:6FD",
+      "layer": "0",
+      "x": 32.27031774551951,
+      "y": 18.76329985093762,
+      "height": 0.1177963047505901,
+      "text": "T"
+    },
+    {
+      "id": "text:702",
+      "layer": "0",
+      "x": 31.86681702279829,
+      "y": 18.76329985093762,
+      "height": 0.1177963047505901,
+      "text": "MTS"
+    },
+    {
+      "id": "text:710",
+      "layer": "0",
+      "x": 21.13626144186937,
+      "y": 18.03354700347845,
+      "height": 0.2310092839821304,
+      "text": "2x20"
+    },
+    {
+      "id": "text:711",
+      "layer": "0",
+      "x": 21.74059508473955,
+      "y": 18.03354700347845,
+      "height": 0.2,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:712",
+      "layer": "0",
+      "x": 22.51663025760435,
+      "y": 18.03354700347845,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:713",
+      "layer": "0",
+      "x": 24.96887653054081,
+      "y": 17.94899251680327,
+      "height": 0.2310092839821304,
+      "text": "2x4+1x4"
+    },
+    {
+      "id": "text:714",
+      "layer": "0",
+      "x": 27.45069130475976,
+      "y": 17.97649540771236,
+      "height": 0.2310092839821304,
+      "text": "FAF3"
+    },
+    {
+      "id": "text:715",
+      "layer": "0",
+      "x": 30.39737747109838,
+      "y": 17.94441282803164,
+      "height": 0.2310092839821304,
+      "text": "100"
+    },
+    {
+      "id": "text:716",
+      "layer": "0",
+      "x": 33.48057636957027,
+      "y": 17.99491876510874,
+      "height": 0.2310092839821304,
+      "text": "FAF-04"
+    },
+    {
+      "id": "text:718",
+      "layer": "0",
+      "x": 32.49951020175003,
+      "y": 18.09583345365682,
+      "height": 0.1177963047505901,
+      "text": "K"
+    },
+    {
+      "id": "text:71A",
+      "layer": "0",
+      "x": 32.27031774551951,
+      "y": 18.09583345365682,
+      "height": 0.1177963047505901,
+      "text": "T"
+    },
+    {
+      "id": "text:71F",
+      "layer": "0",
+      "x": 31.86681702279829,
+      "y": 18.09583345365682,
+      "height": 0.1177963047505901,
+      "text": "MTS"
+    },
+    {
+      "id": "text:72D",
+      "layer": "0",
+      "x": 21.13626144186937,
+      "y": 17.36608060608123,
+      "height": 0.2310092839821304,
+      "text": "2x20"
+    },
+    {
+      "id": "text:72E",
+      "layer": "0",
+      "x": 21.74059508473955,
+      "y": 17.36608060608123,
+      "height": 0.2,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:72F",
+      "layer": "0",
+      "x": 22.51663025760435,
+      "y": 17.36608060608123,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:730",
+      "layer": "0",
+      "x": 24.96887653054081,
+      "y": 17.28152611940605,
+      "height": 0.2310092839821304,
+      "text": "2x4+1x4"
+    },
+    {
+      "id": "text:731",
+      "layer": "0",
+      "x": 27.45069130475976,
+      "y": 17.30902901031514,
+      "height": 0.2310092839821304,
+      "text": "FAF4"
+    },
+    {
+      "id": "text:732",
+      "layer": "0",
+      "x": 28.43354605104186,
+      "y": 17.27693537862942,
+      "height": 0.2310092839821304,
+      "text": "300"
+    },
+    {
+      "id": "text:733",
+      "layer": "0",
+      "x": 33.48057636957027,
+      "y": 17.32745236771152,
+      "height": 0.2310092839821304,
+      "text": "FAF-05"
+    },
+    {
+      "id": "text:735",
+      "layer": "0",
+      "x": 32.49951020175003,
+      "y": 17.4283670562596,
+      "height": 0.1177963047505901,
+      "text": "K"
+    },
+    {
+      "id": "text:737",
+      "layer": "0",
+      "x": 32.27031774551951,
+      "y": 17.4283670562596,
+      "height": 0.1177963047505901,
+      "text": "T"
+    },
+    {
+      "id": "text:73C",
+      "layer": "0",
+      "x": 31.86681702279829,
+      "y": 17.4283670562596,
+      "height": 0.1177963047505901,
+      "text": "MTS"
+    },
+    {
+      "id": "text:74A",
+      "layer": "0",
+      "x": 21.13626144186937,
+      "y": 16.69861420880043,
+      "height": 0.2310092839821304,
+      "text": "2x20"
+    },
+    {
+      "id": "text:74B",
+      "layer": "0",
+      "x": 21.74059508473955,
+      "y": 16.69861420880043,
+      "height": 0.2,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:74C",
+      "layer": "0",
+      "x": 22.51663025760435,
+      "y": 16.69861420880043,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:74D",
+      "layer": "0",
+      "x": 24.96887653054081,
+      "y": 16.61405972212524,
+      "height": 0.2310092839821304,
+      "text": "2x4+1x4"
+    },
+    {
+      "id": "text:74E",
+      "layer": "0",
+      "x": 27.45069130475976,
+      "y": 16.64156261303433,
+      "height": 0.2310092839821304,
+      "text": "EF1"
+    },
+    {
+      "id": "text:74F",
+      "layer": "0",
+      "x": 29.42186291807674,
+      "y": 16.60946898134862,
+      "height": 0.2310092839821304,
+      "text": "300"
+    },
+    {
+      "id": "text:750",
+      "layer": "0",
+      "x": 33.48057636957027,
+      "y": 16.65998597043072,
+      "height": 0.2310092839821304,
+      "text": "EF-05"
+    },
+    {
+      "id": "text:752",
+      "layer": "0",
+      "x": 32.49951020175003,
+      "y": 16.76090065897879,
+      "height": 0.1177963047505901,
+      "text": "K"
+    },
+    {
+      "id": "text:754",
+      "layer": "0",
+      "x": 32.27031774551951,
+      "y": 16.76090065897879,
+      "height": 0.1177963047505901,
+      "text": "T"
+    },
+    {
+      "id": "text:759",
+      "layer": "0",
+      "x": 31.86681702279829,
+      "y": 16.76090065897879,
+      "height": 0.1177963047505901,
+      "text": "MTS"
+    },
+    {
+      "id": "text:767",
+      "layer": "0",
+      "x": 21.13626144186937,
+      "y": 16.03114781151962,
+      "height": 0.2310092839821304,
+      "text": "2x20"
+    },
+    {
+      "id": "text:768",
+      "layer": "0",
+      "x": 21.74059508473955,
+      "y": 16.03114781151962,
+      "height": 0.2,
+      "text": "(1P+N)"
+    },
+    {
+      "id": "text:769",
+      "layer": "0",
+      "x": 22.51663025760435,
+      "y": 16.03114781151962,
+      "height": 0.2,
+      "text": " 300mA"
+    },
+    {
+      "id": "text:76A",
+      "layer": "0",
+      "x": 24.96887653054081,
+      "y": 15.94659332484444,
+      "height": 0.2310092839821304,
+      "text": "2x4+1x4"
+    },
+    {
+      "id": "text:76B",
+      "layer": "0",
+      "x": 27.45069130475976,
+      "y": 15.97409621575353,
+      "height": 0.2310092839821304,
+      "text": "EF2"
+    },
+    {
+      "id": "text:76C",
+      "layer": "0",
+      "x": 30.39737434604548,
+      "y": 15.94200807409798,
+      "height": 0.2310092839821304,
+      "text": "300"
+    },
+    {
+      "id": "text:76D",
+      "layer": "0",
+      "x": 33.48057636957027,
+      "y": 15.99251957314991,
+      "height": 0.2310092839821304,
+      "text": "EF-06"
+    },
+    {
+      "id": "text:76F",
+      "layer": "0",
+      "x": 32.49951020175003,
+      "y": 16.09343426169799,
+      "height": 0.1177963047505901,
+      "text": "K"
+    },
+    {
+      "id": "text:771",
+      "layer": "0",
+      "x": 32.27031774551951,
+      "y": 16.09343426169799,
+      "height": 0.1177963047505901,
+      "text": "T"
+    },
+    {
+      "id": "text:776",
+      "layer": "0",
+      "x": 31.86681702279829,
+      "y": 16.09343426169799,
+      "height": 0.1177963047505901,
+      "text": "MTS"
+    },
+    {
+      "id": "text:783",
+      "layer": "0",
+      "x": 33.69171927695506,
+      "y": 15.42200382270821,
+      "height": 0.193037953436336,
+      "text": "Contactors 1x10A"
+    },
+    {
+      "id": "text:788",
+      "layer": "0",
+      "x": 28.37902822171681,
+      "y": 11.74230903184944,
+      "height": 0.2310092839821304,
+      "text": "9050"
+    },
+    {
+      "id": "text:78C",
+      "layer": "0",
+      "x": 28.36059314024978,
+      "y": 10.29472886312724,
+      "height": 0.2327072355376805,
+      "text": "9050"
+    },
+    {
+      "id": "text:78D",
+      "layer": "0",
+      "x": 29.36734497513034,
+      "y": 11.7423094403508,
+      "height": 0.2310092839821304,
+      "text": "9150"
+    },
+    {
+      "id": "text:78E",
+      "layer": "0",
+      "x": 29.3489098936633,
+      "y": 10.2947292716286,
+      "height": 0.2327072355376805,
+      "text": "9150"
+    },
+    {
+      "id": "text:78F",
+      "layer": "0",
+      "x": 30.3428683989995,
+      "y": 11.74230989984208,
+      "height": 0.2310092839821304,
+      "text": "8950"
+    },
+    {
+      "id": "text:790",
+      "layer": "0",
+      "x": 30.32443331753247,
+      "y": 10.29472973111988,
+      "height": 0.2327072355376805,
+      "text": "8950"
+    },
+    {
+      "id": "text:793",
+      "layer": "0",
+      "x": 29.75936317968525,
+      "y": 11.01299884957698,
+      "height": 0.2310092839821304,
+      "text": ","
+    },
+    {
+      "id": "text:794",
+      "layer": "0",
+      "x": 28.38095578563743,
+      "y": 11.01299824410089,
+      "height": 0.2310092839821304,
+      "text": "27150 VA"
+    },
+    {
+      "id": "text:795",
+      "layer": "0",
+      "x": 29.91600090836518,
+      "y": 9.578526033628442,
+      "height": 0.2310092839821304,
+      "text": "41 A/PH"
+    },
+    {
+      "id": "text:796",
+      "layer": "0",
+      "x": 28.38095646503724,
+      "y": 9.578525428268769,
+      "height": 0.2310092839821304,
+      "text": "27150 VA"
+    },
+    {
+      "id": "text:797",
+      "layer": "0",
+      "x": 29.91600022896536,
+      "y": 11.01299884957698,
+      "height": 0.2310092839821304,
+      "text": "41 A/PH"
+    },
+    {
+      "id": "text:798",
+      "layer": "0",
+      "x": 29.75936385908507,
+      "y": 9.578526033628442,
+      "height": 0.2310092839821304,
+      "text": ","
+    },
+    {
+      "id": "text:799",
+      "layer": "0",
+      "x": 24.6880830695235,
+      "y": 11.74801805448224,
+      "height": 0.2310092839821304,
+      "text": "TOTAL CONNECTED LOAD"
+    },
+    {
+      "id": "text:79A",
+      "layer": "0",
+      "x": 24.68423163717024,
+      "y": 10.30043788576004,
+      "height": 0.2327072355376805,
+      "text": "TOTAL DEMAND LOAD 100%%%"
+    },
+    {
+      "id": "text:79B",
+      "layer": "0",
+      "x": 24.68808341876947,
+      "y": 11.00663171622873,
+      "height": 0.2310092839821304,
+      "text": "TOTAL CONNECTED 3PH LOAD"
+    },
+    {
+      "id": "text:79C",
+      "layer": "0",
+      "x": 24.68423193379648,
+      "y": 9.583201727554844,
+      "height": 0.2327072355376805,
+      "text": "TOTAL DEMAND LOAD 3PH"
+    },
+    {
+      "id": "text:79D",
+      "layer": "0",
+      "x": 26.92814291839831,
+      "y": 19.31142819109809,
+      "height": 0.2310092839821304,
+      "text": "7"
+    },
+    {
+      "id": "text:79E",
+      "layer": "0",
+      "x": 26.92818139738746,
+      "y": 18.64396179684409,
+      "height": 0.2310092839821304,
+      "text": "8"
+    },
+    {
+      "id": "text:79F",
+      "layer": "0",
+      "x": 26.87623016408988,
+      "y": 17.30902900728834,
+      "height": 0.2310092839821304,
+      "text": "10"
+    },
+    {
+      "id": "text:7A0",
+      "layer": "0",
+      "x": 26.92818139925011,
+      "y": 17.97649540212442,
+      "height": 0.2310092839821304,
+      "text": "9"
+    },
+    {
+      "id": "text:7A1",
+      "layer": "0",
+      "x": 26.87623016641818,
+      "y": 16.6094689409525,
+      "height": 0.2310092839821304,
+      "text": "11"
+    },
+    {
+      "id": "text:7A2",
+      "layer": "0",
+      "x": 26.87618170504801,
+      "y": 15.94200254437019,
+      "height": 0.2310092839821304,
+      "text": "12"
+    },
+    {
+      "id": "text:7A3",
+      "layer": "0",
+      "x": 26.876174146434,
+      "y": 15.27498946311389,
+      "height": 0.2310092839821304,
+      "text": "13"
+    },
+    {
+      "id": "text:7A4",
+      "layer": "0",
+      "x": 7.876838402947115,
+      "y": 18.49160591415566,
+      "height": 0.3738860546824755,
+      "text": "FIRE RATED CABLE"
+    },
+    {
+      "id": "text:7A6",
+      "layer": "E-Text",
+      "x": 12.44849343377508,
+      "y": 7.313661846173638,
+      "height": 0.6000000000000001,
+      "text": "TO BE CHECKED WITH THE MECHANICAL CONTRACTOR"
+    },
+    {
+      "id": "text:7A7",
+      "layer": "E-Text",
+      "x": 12.44849343377508,
+      "y": 5.649702983633325,
+      "height": 0.6000000000000001,
+      "text": "TO BE DEVIDED INTO TWO PANELS"
+    }
+  ]
+}

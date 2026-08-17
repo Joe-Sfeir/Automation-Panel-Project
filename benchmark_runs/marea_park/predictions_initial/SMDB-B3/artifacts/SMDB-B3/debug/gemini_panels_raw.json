@@ -1,0 +1,162 @@
+{
+  "panels": [
+    {
+      "panel_ref": "SMDB-B3",
+      "components": [
+        {
+          "category": "SWITCH",
+          "label": "IS",
+          "poles": "4P",
+          "amps": "100",
+          "curve": "100",
+          "breaking_capacity": "100",
+          "sensitivity": "100",
+          "spd_type": "100",
+          "ct_ratio": "100",
+          "meter_accuracy": "100",
+          "cable_size": 10,
+          "load_label": "from MDB-B1",
+          "qty": 1,
+          "manufacturer": "100",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Incomer 4P 100A Isolating Switch",
+          "evidence_ids": [
+            "text:2FD",
+            "text:32D",
+            "text:330"
+          ]
+        },
+        {
+          "category": "FUSE_HOLDER",
+          "label": "FUSES",
+          "poles": "FUSES",
+          "amps": "FUSES",
+          "curve": "FUSES",
+          "breaking_capacity": "FUSES",
+          "sensitivity": "FUSES",
+          "spd_type": "FUSES",
+          "ct_ratio": "FUSES",
+          "meter_accuracy": "FUSES",
+          "cable_size": 0,
+          "load_label": "SPD Protection",
+          "qty": 1,
+          "manufacturer": "FUSES",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Fuses protecting the SPD",
+          "evidence_ids": [
+            "text:2F5"
+          ]
+        },
+        {
+          "category": "SPD",
+          "label": "SPD",
+          "poles": "SPD",
+          "amps": "SPD",
+          "curve": "SPD",
+          "breaking_capacity": "SPD",
+          "sensitivity": "SPD",
+          "spd_type": "Type 1+2 / Class B+C",
+          "ct_ratio": "SPD",
+          "meter_accuracy": "SPD",
+          "cable_size": 0,
+          "load_label": "Surge Protection",
+          "qty": 1,
+          "manufacturer": "SPD",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Type 1+2 Class B+C Surge Arrester connected to main busbar",
+          "evidence_ids": [
+            "text:2F5"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "MCCB BREAKER",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "32",
+          "breaking_capacity": "32",
+          "sensitivity": "32",
+          "spd_type": "32",
+          "ct_ratio": "32",
+          "meter_accuracy": "32",
+          "cable_size": 10,
+          "load_label": "DB-B3-CA1",
+          "qty": 1,
+          "manufacturer": "32",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4P 32A MCCB feeding DB-B3-CA1 with 4x10mm2+1x10mm2 cable",
+          "evidence_ids": [
+            "text:31C",
+            "text:31D",
+            "text:32B"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "MCCB BREAKER",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "32",
+          "breaking_capacity": "32",
+          "sensitivity": "32",
+          "spd_type": "32",
+          "ct_ratio": "32",
+          "meter_accuracy": "32",
+          "cable_size": 10,
+          "load_label": "DB-B3-CA2",
+          "qty": 1,
+          "manufacturer": "32",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "4P 32A MCCB feeding DB-B3-CA2 with 4x10mm2+1x10mm2 cable",
+          "evidence_ids": [
+            "text:328",
+            "text:329",
+            "text:32C"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "MCCB BREAKER",
+          "poles": "4P",
+          "amps": "32",
+          "curve": "32",
+          "breaking_capacity": "32",
+          "sensitivity": "32",
+          "spd_type": "32",
+          "ct_ratio": "32",
+          "meter_accuracy": "32",
+          "cable_size": 0,
+          "load_label": "spare",
+          "qty": 2,
+          "manufacturer": "32",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "2x 4P 32A MCCB spare outgoing breakers",
+          "evidence_ids": [
+            "text:306",
+            "text:313",
+            "text:32E",
+            "text:32F"
+          ]
+        }
+      ]
+    }
+  ]
+}

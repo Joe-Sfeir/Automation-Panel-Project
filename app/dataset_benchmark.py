@@ -56,6 +56,29 @@ def component_key(row: dict[str, Any]) -> tuple[str, ...]:
     return tuple(fields)
 
 
+def evaluation_layer(row: dict[str, Any]) -> str:
+    explicit = str(row.get("evaluation_layer", "") or "").strip()
+    if explicit:
+        return explicit
+    origin = str(row.get("origin", "") or "").lower()
+    if origin == "calculated_terminal_offer":
+        return "calculated_terminal"
+    if origin == "calculated_accessory_offer":
+        return "commercial_accessory"
+    if origin == "calculated_internal_accessory":
+        return "calculated_internal_accessory"
+    category = norm(row.get("category"))
+    if category in {"MCB", "MCCB", "RCCB", "RCBO", "SWITCH", "CONTACTOR"}:
+        return "source_power"
+    if category in {"SPD", "FUSEHOLDER"}:
+        return "protection_auxiliary"
+    if category in {"METER", "CT"}:
+        return "metering"
+    if category in {"PILOTLAMP", "RELAY", "SELECTORSWITCH", "TIMER", "PLC", "POWERSUPPLY"}:
+        return "control_engineering"
+    return "other"
+
+
 @dataclass
 class PanelScore:
     panel_reference: str
@@ -179,16 +202,19 @@ def evaluate_dataset(expected_offer: str | Path, predictions_dir: str | Path, ma
     expected_payload = json.loads(Path(expected_offer).read_text(encoding="utf-8"))
     expected_by_panel: dict[str, Counter] = {}
     expected_refs: dict[str, str] = {}
+    expected_by_layer: dict[str, dict[str, Counter]] = defaultdict(lambda: defaultdict(Counter))
     for panel in expected_payload.get("panels", []):
         key = panel_key(panel["reference"])
         expected_refs[key] = panel["reference"]
         counts = Counter()
         for row in panel.get("items", []):
+            expected_by_layer[evaluation_layer(row)][key][component_key(row)] += int(row.get("quantity", 0))
             if row.get("scope") == "sld_visible":
                 counts[component_key(row)] += int(row.get("quantity", 0))
         expected_by_panel[key] = counts
 
     predicted_by_panel: dict[str, Counter] = defaultdict(Counter)
+    predicted_by_layer: dict[str, dict[str, Counter]] = defaultdict(lambda: defaultdict(Counter))
     source_files: dict[str, str] = {}
     block_backed_rows = 0
     block_backed_agreeing_rows = 0
@@ -230,7 +256,11 @@ def evaluate_dataset(expected_offer: str | Path, predictions_dir: str | Path, ma
                 key = panel_key(panel.reference)
             source_files[key] = str(project_path)
             for component in panel.components:
-                predicted_by_panel[key][component_key(asdict(component))] += component.quantity
+                component_row = asdict(component)
+                component_spec = component_key(component_row)
+                if not str(component.origin or "").lower().startswith("engineering_"):
+                    predicted_by_panel[key][component_spec] += component.quantity
+                predicted_by_layer[evaluation_layer(component_row)][key][component_spec] += component.quantity
                 # A layout block may already have been cited by the model and
                 # therefore retain source="cad_entity".  Recognise it by its
                 # parseable device block name rather than the provenance label
@@ -257,17 +287,42 @@ def evaluate_dataset(expected_offer: str | Path, predictions_dir: str | Path, ma
                     deterministic_quantity = max((sum(values.values()) for values in by_layer.values()), default=0)
                     block_backed_rows += 1
                     block_backed_agreeing_rows += int(deterministic_quantity == component.quantity)
+            for terminal in panel.terminals:
+                terminal_row = {
+                    "category": "TERMINAL",
+                    "origin": "calculated_terminal_offer",
+                }
+                predicted_by_layer["calculated_terminal"][key][component_key(terminal_row)] += terminal.quantity
+            for accessory in panel.commercial_accessories:
+                accessory_row = {
+                    "category": "ENCLOSURE_ACCESSORY",
+                    "origin": accessory.origin,
+                    "evaluation_layer": (
+                        "calculated_internal_accessory"
+                        if accessory.origin == "calculated_internal_accessory"
+                        else "commercial_accessory"
+                    ),
+                }
+                predicted_by_layer[evaluation_layer(accessory_row)][key][component_key(accessory_row)] += accessory.quantity
 
     shared = sorted(expected_by_panel.keys() & predicted_by_panel.keys())
     scores = [_score(expected_refs[key], predicted_by_panel[key], expected_by_panel[key]) for key in shared]
     all_expected_keys = sorted(expected_by_panel)
     aggregate_metrics = _aggregate_for(all_expected_keys, predicted_by_panel, expected_by_panel)
+    layer_aggregates = {}
+    for layer, expected_layer in sorted(expected_by_layer.items()):
+        if not expected_layer:
+            continue
+        layer_aggregates[layer] = _aggregate_for(
+            sorted(expected_layer), predicted_by_layer.get(layer, {}), expected_layer
+        )
     tuning_keys = [panel_key(value) for value in manifest.get("tuning_panels", []) if panel_key(value) in expected_by_panel]
     holdout_keys = [panel_key(value) for value in manifest.get("holdout_panels", []) if panel_key(value) in expected_by_panel]
     return {
         "aggregate": aggregate_metrics["specification"],
         "category_aggregate": aggregate_metrics["category"],
         "field_aggregate": aggregate_metrics["fields"],
+        "layer_aggregates": layer_aggregates,
         "block_backed_quantity": {
             "agreeing_rows": block_backed_agreeing_rows,
             "evaluated_rows": block_backed_rows,

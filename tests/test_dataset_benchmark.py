@@ -2,7 +2,7 @@ from collections import Counter
 
 import json
 
-from app.dataset_benchmark import _field_metrics, _score, component_key, evaluate_dataset
+from app.dataset_benchmark import _field_metrics, _score, component_key, evaluation_layer, evaluate_dataset
 from app.domain import Component, Evidence, Panel, ProjectDocument, SourceDrawing
 from app.persistence import save_project
 
@@ -38,6 +38,13 @@ def test_field_metrics_do_not_turn_one_missing_field_into_a_total_row_failure():
     assert fields["amps"]["f1"] == 1.0
     assert fields["breaking_capacity"]["f1"] == 1.0
     assert fields["curve"]["recall"] == 0.0
+
+
+def test_evaluation_layers_separate_source_control_and_calculated_rows():
+    assert evaluation_layer({"category": "MCB"}) == "source_power"
+    assert evaluation_layer({"category": "TIMER"}) == "control_engineering"
+    assert evaluation_layer({"category": "OTHER", "origin": "calculated_terminal_offer"}) == "calculated_terminal"
+    assert evaluation_layer({"category": "OTHER", "origin": "calculated_internal_accessory"}) == "calculated_internal_accessory"
 
 
 def test_layout_schematic_conflict_is_not_counted_as_layout_quantity_failure(tmp_path):

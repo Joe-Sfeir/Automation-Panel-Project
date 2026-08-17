@@ -1,0 +1,211 @@
+{
+  "panels": [
+    {
+      "panel_ref": "EMDB-B1",
+      "components": [
+        {
+          "category": "SWITCH",
+          "label": "SWITCH DISCONNECTOR 4x400A AC23",
+          "poles": "4P",
+          "amps": "400A",
+          "curve": "AC23",
+          "breaking_capacity": "20kA",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 120,
+          "load_label": "FROM MDB-B1",
+          "qty": 1,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Main incomer switch disconnector 4x400A AC23 Icw=20kA from MDB-B1",
+          "evidence_ids": [
+            "text:41E",
+            "text:386"
+          ]
+        },
+        {
+          "category": "SWITCH",
+          "label": "AUTOMATIC TRANSFER SWITCH 4x250A AC3",
+          "poles": "4P",
+          "amps": "250A",
+          "curve": "AC3",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 0,
+          "load_label": "0",
+          "qty": 1,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Automatic transfer switch with contactors 4x250A AC3 featuring electrical & mechanical interlocks",
+          "evidence_ids": [
+            "text:3DC"
+          ]
+        },
+        {
+          "category": "SWITCH",
+          "label": "MANUAL CHANGE OVER SWITCH 4x250A AC23",
+          "poles": "4P",
+          "amps": "250A",
+          "curve": "AC23",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 120,
+          "load_label": "FROM TOTALIZING PANEL",
+          "qty": 1,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": true,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Manual changeover switch 4x250A AC23 with 3 positions and padlocking",
+          "evidence_ids": [
+            "text:3F4",
+            "text:382"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "MCCB BREAKER 4x100A",
+          "poles": "4P",
+          "amps": "100A",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 25,
+          "load_label": "ESMDB-B1, ESMDB-B2, ESMDB-B3",
+          "qty": 3,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Three outgoing 4x100A MCCBs feeding ESMDB-B1, ESMDB-B2, ESMDB-B3 via 4cx25mm2 fire rated cables",
+          "evidence_ids": [
+            "text:3A4",
+            "text:457",
+            "text:45D",
+            "text:455",
+            "text:45B",
+            "text:461"
+          ]
+        },
+        {
+          "category": "CT",
+          "label": "CURRENT TRANSFORMERS",
+          "poles": "0",
+          "amps": "0",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 0,
+          "load_label": "0",
+          "qty": 3,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Set of 3 current transformers for R, Y, B phases",
+          "evidence_ids": [
+            "text:3C6",
+            "text:3D6",
+            "text:3D7",
+            "text:3D8"
+          ]
+        },
+        {
+          "category": "METER",
+          "label": "DIGITAL POWER METER",
+          "poles": "0",
+          "amps": "0",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 0,
+          "load_label": "0",
+          "qty": 1,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Digital power meter connected to CTs",
+          "evidence_ids": [
+            "text:3C3"
+          ]
+        },
+        {
+          "category": "FUSE_HOLDER",
+          "label": "FUSES",
+          "poles": "0",
+          "amps": "0",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "0",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 0,
+          "load_label": "0",
+          "qty": 1,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "BOTH",
+          "ai_notes": "Protection fuses for surge protective device",
+          "evidence_ids": [
+            "text:396"
+          ]
+        },
+        {
+          "category": "SPD",
+          "label": "TYPE 1+2 / CLASS B+C",
+          "poles": "0",
+          "amps": "0",
+          "curve": "0",
+          "breaking_capacity": "0",
+          "sensitivity": "0",
+          "spd_type": "Type 1+2 / Class B+C",
+          "ct_ratio": "0",
+          "meter_accuracy": "0",
+          "cable_size": 0,
+          "load_label": "0",
+          "qty": 1,
+          "manufacturer": "0",
+          "has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.9,
+          "data_source": "BOTH",
+          "ai_notes": "Surge protection device Type 1+2 / Class B+C connected off busbar via fuses",
+          "evidence_ids": [
+            "text:396"
+          ]
+        }
+      ]
+    }
+  ]
+}

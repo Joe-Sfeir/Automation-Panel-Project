@@ -1,0 +1,346 @@
+{
+  "schematic_layers": [],
+  "physical_layout_layers": [],
+  "schematic_rating_groups": [],
+  "repeating_schematic_blocks": [],
+  "schematic_blocks": [],
+  "block_label_associations": [],
+  "associated_label_counts": {},
+  "unassociated_blocks": [],
+  "layout_block_groups": [],
+  "layout_device_groups": [],
+  "text_cluster_radius": 15.0,
+  "text_clusters": [
+    {
+      "layer": "E-Text",
+      "cx": 29.996,
+      "cy": 15.634,
+      "text_ids": [
+        "text:382",
+        "text:386",
+        "text:3DC",
+        "text:3F4",
+        "text:407",
+        "text:408",
+        "text:409",
+        "text:416",
+        "text:417",
+        "text:418",
+        "text:41E",
+        "text:42D",
+        "text:42E",
+        "text:42F",
+        "text:43C",
+        "text:43D",
+        "text:43E",
+        "text:3C3",
+        "text:3C6",
+        "text:3D6",
+        "text:3D7",
+        "text:3D8",
+        "text:396",
+        "text:457",
+        "text:45D",
+        "text:383",
+        "text:384",
+        "text:3A4",
+        "text:3A5",
+        "text:45B",
+        "text:461",
+        "text:455"
+      ],
+      "texts": [
+        "FROM TOTALIZING\nPANEL",
+        "FROM MDB-B1",
+        "AUTOMATIC TRANSFER SWITCH\nFEATURING CONTACTORS 4x250A, AC3, WITH \nELECTRICAL & MECHANICAL INTERLOCKS. ",
+        "MANUAL CHANGE OVER SWITCH\n4x250A, AC23, FEATURING 3 STABLE POSITIONS 0, I, II\nWITH PADLOCKING DEVICES FOR THE 3 POSITIONS.",
+        "B",
+        "Y",
+        "R",
+        "B",
+        "Y",
+        "R",
+        "SWITCH DISCONNECTOR\n4x400A AC23\nIcw=20kA (1Sec)",
+        "B",
+        "Y",
+        "R",
+        "B",
+        "Y",
+        "R",
+        "DIGITAL POWER\nMETER",
+        "CURRENT\nTRANSFORMERS",
+        "B",
+        "Y",
+        "R",
+        "FUSES",
+        "MCCB BREAKER\n4x100A, ",
+        "MCCB BREAKER\n4x100A, ",
+        "EMDB-B1",
+        "Dem.: 150.94kVA (WITH UTILIZATION FACTORS)",
+        "MCCB BREAKER\n4x100A, ",
+        "Con.: 150,94kVA",
+        "ESMDB-B2",
+        "ESMDB-B3",
+        "ESMDB-B1"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "text:382",
+      "layer": "E-Text",
+      "x": 32.52426441584805,
+      "y": 2.487863907121152,
+      "height": 0.15,
+      "text": "FROM TOTALIZING\nPANEL"
+    },
+    {
+      "id": "text:383",
+      "layer": "E-Text",
+      "x": 7.005606174125319,
+      "y": 17.94541346933323,
+      "height": 0.5,
+      "text": "EMDB-B1"
+    },
+    {
+      "id": "text:384",
+      "layer": "E-Text",
+      "x": 7.005606174125319,
+      "y": 16.64964206446524,
+      "height": 0.3,
+      "text": "Dem.: 150.94kVA (WITH UTILIZATION FACTORS)"
+    },
+    {
+      "id": "text:386",
+      "layer": "E-Text",
+      "x": 39.92481313052679,
+      "y": 2.77922785095501,
+      "height": 0.15,
+      "text": "FROM MDB-B1"
+    },
+    {
+      "id": "text:396",
+      "layer": "E-Text",
+      "x": 25.12766474730427,
+      "y": 19.07750848552308,
+      "height": 0.2,
+      "text": "FUSES"
+    },
+    {
+      "id": "text:3A4",
+      "layer": "E-Text",
+      "x": 9.485856968565827,
+      "y": 22.69273331749349,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x100A, "
+    },
+    {
+      "id": "text:3A5",
+      "layer": "E-Text",
+      "x": 7.005606174125319,
+      "y": 17.23915885714445,
+      "height": 0.3,
+      "text": "Con.: 150,94kVA"
+    },
+    {
+      "id": "text:3C3",
+      "layer": "E-Text",
+      "x": 32.90945568460131,
+      "y": 17.59727256802938,
+      "height": 0.2,
+      "text": "DIGITAL POWER\nMETER"
+    },
+    {
+      "id": "text:3C6",
+      "layer": "E-Text",
+      "x": 35.94303175213838,
+      "y": 18.74383548763211,
+      "height": 0.2,
+      "text": "CURRENT\nTRANSFORMERS"
+    },
+    {
+      "id": "text:3D6",
+      "layer": "E-Text",
+      "x": 35.43546326656917,
+      "y": 18.17417969333104,
+      "height": 0.1750000000000001,
+      "text": "B"
+    },
+    {
+      "id": "text:3D7",
+      "layer": "E-Text",
+      "x": 36.1735869926689,
+      "y": 18.17417969333104,
+      "height": 0.1750000000000001,
+      "text": "Y"
+    },
+    {
+      "id": "text:3D8",
+      "layer": "E-Text",
+      "x": 36.91171071876863,
+      "y": 18.17417969333104,
+      "height": 0.1750000000000001,
+      "text": "R"
+    },
+    {
+      "id": "text:3DC",
+      "layer": "E-Text",
+      "x": 40.61759885831827,
+      "y": 12.16859364078476,
+      "height": 0.2,
+      "text": "AUTOMATIC TRANSFER SWITCH\nFEATURING CONTACTORS 4x250A, AC3, WITH \nELECTRICAL & MECHANICAL INTERLOCKS. "
+    },
+    {
+      "id": "text:3F4",
+      "layer": "E-Text",
+      "x": 36.53909804125408,
+      "y": 15.8666427184325,
+      "height": 0.2,
+      "text": "MANUAL CHANGE OVER SWITCH\n4x250A, AC23, FEATURING 3 STABLE POSITIONS 0, I, II\nWITH PADLOCKING DEVICES FOR THE 3 POSITIONS."
+    },
+    {
+      "id": "text:407",
+      "layer": "E-Text",
+      "x": 33.37310580176393,
+      "y": 7.514620051249892,
+      "height": 0.1750000000000001,
+      "text": "B"
+    },
+    {
+      "id": "text:408",
+      "layer": "E-Text",
+      "x": 34.11122952786366,
+      "y": 7.514620051249892,
+      "height": 0.1750000000000001,
+      "text": "Y"
+    },
+    {
+      "id": "text:409",
+      "layer": "E-Text",
+      "x": 34.84935325396339,
+      "y": 7.514620051249892,
+      "height": 0.1750000000000001,
+      "text": "R"
+    },
+    {
+      "id": "text:416",
+      "layer": "E-Text",
+      "x": 37.89164235548208,
+      "y": 14.39143110229264,
+      "height": 0.1750000000000001,
+      "text": "B"
+    },
+    {
+      "id": "text:417",
+      "layer": "E-Text",
+      "x": 37.15351862938235,
+      "y": 14.39143110229264,
+      "height": 0.1750000000000001,
+      "text": "Y"
+    },
+    {
+      "id": "text:418",
+      "layer": "E-Text",
+      "x": 36.41539490328262,
+      "y": 14.39143110229264,
+      "height": 0.1750000000000001,
+      "text": "R"
+    },
+    {
+      "id": "text:41E",
+      "layer": "E-Text",
+      "x": 40.28117021371702,
+      "y": 9.15815028128776,
+      "height": 0.2,
+      "text": "SWITCH DISCONNECTOR\n4x400A AC23\nIcw=20kA (1Sec)"
+    },
+    {
+      "id": "text:42D",
+      "layer": "E-Text",
+      "x": 40.77365451690832,
+      "y": 10.85294978296946,
+      "height": 0.1750000000000001,
+      "text": "B"
+    },
+    {
+      "id": "text:42E",
+      "layer": "E-Text",
+      "x": 41.51177824300805,
+      "y": 10.85294978296946,
+      "height": 0.1750000000000001,
+      "text": "Y"
+    },
+    {
+      "id": "text:42F",
+      "layer": "E-Text",
+      "x": 42.24990196864212,
+      "y": 10.85294978296946,
+      "height": 0.1750000000000001,
+      "text": "R"
+    },
+    {
+      "id": "text:43C",
+      "layer": "E-Text",
+      "x": 40.77365451690832,
+      "y": 7.80598399508375,
+      "height": 0.1750000000000001,
+      "text": "B"
+    },
+    {
+      "id": "text:43D",
+      "layer": "E-Text",
+      "x": 41.51177824300805,
+      "y": 7.80598399508375,
+      "height": 0.1750000000000001,
+      "text": "Y"
+    },
+    {
+      "id": "text:43E",
+      "layer": "E-Text",
+      "x": 42.24990196864212,
+      "y": 7.80598399508375,
+      "height": 0.1750000000000001,
+      "text": "R"
+    },
+    {
+      "id": "text:455",
+      "layer": "E-Text",
+      "x": 9.120087140827422,
+      "y": 35.42877092200428,
+      "height": 0.4,
+      "text": "ESMDB-B1"
+    },
+    {
+      "id": "text:457",
+      "layer": "E-Text",
+      "x": 14.11613606347794,
+      "y": 22.69273331958897,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x100A, "
+    },
+    {
+      "id": "text:45B",
+      "layer": "E-Text",
+      "x": 13.75036623573953,
+      "y": 35.42877092409975,
+      "height": 0.4,
+      "text": "ESMDB-B2"
+    },
+    {
+      "id": "text:45D",
+      "layer": "E-Text",
+      "x": 18.74641515839005,
+      "y": 22.69273331749349,
+      "height": 0.2,
+      "text": "MCCB BREAKER\n4x100A, "
+    },
+    {
+      "id": "text:461",
+      "layer": "E-Text",
+      "x": 18.38064533065165,
+      "y": 35.42877092200428,
+      "height": 0.4,
+      "text": "ESMDB-B3"
+    }
+  ]
+}

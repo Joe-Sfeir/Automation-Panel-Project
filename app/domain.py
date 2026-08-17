@@ -186,6 +186,7 @@ class MatchResult:
 class PricingConfiguration:
     default_manufacturer: str = "SCHNEIDER"
     editions: dict[str, dict[str, Any]] = field(default_factory=dict)
+    family_preferences: dict[str, list[str]] = field(default_factory=dict)
     tva_rate: float = 0.11
     currency: str = "USD"
 

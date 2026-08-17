@@ -1,0 +1,96 @@
+{
+  "panels": [
+    {
+      "panel_ref": "ESMDB-B2",
+      "components": [
+        {
+          "category": "SWITCH",
+          "label": "IS",
+          "poles": "4P",
+          "amps": "100",
+          "curve": "-","breaking_capacity": "-","sensitivity": "-","spd_type": "-","ct_ratio": "-","meter_accuracy": "-","cable_size": 25,
+          "load_label": "-","qty": 1,
+          "manufacturer": "-","has_terminal": false,
+          "is_incomer": true,
+          "confidence": 1.0,
+          "data_source": "BOTH",
+          "ai_notes": "4P 100A isolator switch incoming from EMDB-B1 with 4x25mm2+1x16mm2 fire-rated cable.",
+          "evidence_ids": [
+            "text:32D",
+            "text:32A",
+            "text:32B"
+          ]
+        },
+        {
+          "category": "FUSE_HOLDER",
+          "label": "FUSES",
+          "poles": "-","amps": "-","curve": "-","breaking_capacity": "-","sensitivity": "-","spd_type": "-","ct_ratio": "-","meter_accuracy": "-","cable_size": 0,
+          "load_label": "-","qty": 1,
+          "manufacturer": "-","has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "data_source": "BOTH",
+          "ai_notes": "Fuses protecting SPD off busbar.",
+          "evidence_ids": [
+            "text:2F3"
+          ]
+        },
+        {
+          "category": "SPD",
+          "label": "TYPE 1+2 / CLASS B+C",
+          "poles": "-","amps": "-","curve": "-","breaking_capacity": "-","sensitivity": "-","spd_type": "Type 1+2",
+          "ct_ratio": "-","meter_accuracy": "-","cable_size": 0,
+          "load_label": "-","qty": 1,
+          "manufacturer": "-","has_terminal": false,
+          "is_incomer": false,
+          "confidence": 0.95,
+          "data_source": "IMAGE_ONLY",
+          "ai_notes": "Class B+C / Type 1+2 SPD connected to busbar.",
+          "evidence_ids": []
+        },
+        {
+          "category": "MCCB",
+          "label": "MCCB BREAKER",
+          "poles": "4P",
+          "amps": "63",
+          "curve": "-","breaking_capacity": "-","sensitivity": "-","spd_type": "-","ct_ratio": "-","meter_accuracy": "-","cable_size": 16,
+          "load_label": "DB-B2-FAN1, DB-B2-FAN2, DB-B2-FAN3",
+          "qty": 3,
+          "manufacturer": "-","has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "data_source": "BOTH",
+          "ai_notes": "Three 4P 63A MCCB outgoing breakers feeding fan DBs via 4cx16mm2+1cx16mm2 cables.",
+          "evidence_ids": [
+            "text:326",
+            "text:327",
+            "text:328",
+            "text:2FC",
+            "text:30B",
+            "text:324",
+            "text:318",
+            "text:31B"
+          ]
+        },
+        {
+          "category": "MCCB",
+          "label": "MCCB BREAKER",
+          "poles": "4P",
+          "amps": "63",
+          "curve": "-","breaking_capacity": "-","sensitivity": "-","spd_type": "-","ct_ratio": "-","meter_accuracy": "-","cable_size": 0,
+          "load_label": "spare",
+          "qty": 1,
+          "manufacturer": "-","has_terminal": false,
+          "is_incomer": false,
+          "confidence": 1.0,
+          "data_source": "BOTH",
+          "ai_notes": "One spare 4P 63A MCCB outgoing breaker.",
+          "evidence_ids": [
+            "text:329",
+            "text:312"
+          ]
+        }
+      ]
+    }
+  ]
+}
